@@ -10,7 +10,7 @@ New notes are at the top.
 
 Week number<br>and date | Topic theme and coverage | Graded work | Mark value
 --- | --- | --- | ---
-Week 2<br>Tue Jan 23<br>Thu Jan 25 | JavaScript libraries:<br>jQuery, Moment, Underscore | |
-[Week 1](../notes/week01)<br>Thu Jan 18 | Introduction to front-end development<br>Dev environment setup<br>Re-introduction to back-end web services | |
+Week 2<br>&bull; Tue Jan 23<br>&bull; Thu Jan 25 | JavaScript libraries:<br>jQuery, Moment, Underscore | |
+<button onclick='/bti425/notes/week01' class='btn'><b>Week 1</b></button><br>**[Week 1](../notes/week01)**<br>&bull; Thu Jan 18 | Introduction to front-end development<br>Dev environment setup<br>Re-introduction to back-end web services | |
 
 <br>
