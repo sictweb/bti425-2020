@@ -1,0 +1,28 @@
+
+Typographic character replacements
+==================================
+
+
+Typographic single quote
+’ replace with '
+
+
+Typographic double quote
+66 - “ - "
+99 - ” - "
+
+
+Elipsis
+… - ...
+
+
+Dash
+Em dash – replace with -
+
+
+In summary
+’ 
+“ 
+” 
+… 
+– 
