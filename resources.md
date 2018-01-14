@@ -29,8 +29,17 @@ Therefore, continue to use the content from the courses that you have successful
 * [Plunker](https://plnkr.co/)
 * [jsFiddle](https://jsfiddle.net/)
 * [jsBin](https://jsbin.com)
+* Other dev tools will be introduced as we make progress through the weekly topics
 
 You will need one or more devices. A College or personal desktop or laptop, and (likely) a personal mobile device (e.g. a smartphone).
+
+<br>
+
+**Use macOS or Linux**
+
+We expect the student to do their work on a computer that runs macOS (Mac OS X), Linux, or another Unix-like operating system. 
+
+If a student has a Windows-only computer, then plan to install a multiboot or virtualization environment that enables the installation of Linux.
 
 <br>
 
