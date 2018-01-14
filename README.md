@@ -29,7 +29,8 @@ The following table has links to course content:
 | [Learning resources](/bti425/resources) | A list of digital and physical resources that we’ll use during the course |
 | [Weekly schedule](/bti425/weekly-schedule) | Topics covered during the course, organized by week; includes test dates and assignment due dates |
 | [Graded work](/bti425/graded-work) | Information about graded work and values |
-| [Policies and standards](/bti425/policies-standards) | Policies & standards that govern conduct and expectations in the course |
+| [Course policies](/bti425/policies) | Course policies |
+| [Course standards](/bti425/standards) | Standards that govern conduct and expectations in the course |
 | [Course outline](https://ict.senecacollege.ca/course/bti425) | Official course outline from the College course outline system |
 
 <br>
