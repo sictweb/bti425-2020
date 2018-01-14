@@ -9,9 +9,6 @@ On this page, you will find the BTI425 Weekly Schedule for the Winter 2018 acade
 
 Please note that *the schedule may change*, and that it is your responsibility to know the current schedule.
 
-> This document is being edited.  
-> This notice will be removed when the edits are complete.
-
 <br>
 
 Week number<br>and date<br>(Tue, Thu) | Topic theme and coverage | Graded work | Mark value
