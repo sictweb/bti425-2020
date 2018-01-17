@@ -37,7 +37,7 @@ Web services can be developed on any web-connected technology platform, in any l
 
 Study this diagram to understand the differences, and then be prepared to explain them to someone else:
 
-![Web app vs. web service](../media/web-app-vs-web-svc-v1.png) 
+![Web app vs. web service](../media/web-app-vs-web-svc.png) 
 
 <br>
 
