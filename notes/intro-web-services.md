@@ -151,7 +151,7 @@ So, in summary, a resource's representation can vary to meet the needs of the we
 
 Every representation is defined by an internet media type.
 
-![Same resource, same URI, but different representations](../media/representations.png)
+![Same resource, same URI, but different representations](../media/different-representations.png)
 
 <br>
 
