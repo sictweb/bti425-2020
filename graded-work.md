@@ -27,7 +27,7 @@ We have planned six (6) assignments during the term.
 
 The assignments have a two-week lifetime. Most are independent of each other. 
 
-During the term, one (1) *late* assignment will be accepted within four (4) days of its due date. 
+During the term, one (1) *late* assignment will be accepted within four (4) days of its due date. Contact your professor to learn about the late-submission protocol. 
 
 Otherwise, if you do not submit an assignment by the due date, its grade is zero, and there is no opportunity to earn marks for a late submission.
 
@@ -46,7 +46,7 @@ Assignments - about 6 - 50%
 
 * Achieve an average of 50% or better for all assignments
 *	Achieve an average of 50% or better for all tests
-*	Achieve a weighted average of 50% or better for the course
+*	Achieve a weighted average of 50% or better for all graded work in the course
 
 <br>
 
@@ -82,7 +82,7 @@ However, as a general rule, we don't do due date extensions for assignments, for
 
 * A due date extension is disrespectful to other students in the course, because it tells them that the work they did to meet the due date doesn't have value.
 
-* Finally a due date extension is disrespectful to other professors and their courses, because it takes your attention away from their coursework while you are working on late work.
+* Finally, a due date extension is disrespectful to other professors and their courses, because it takes your attention away from their coursework while you are working on late work.
 
 Therefore, no due date extensions.
 
