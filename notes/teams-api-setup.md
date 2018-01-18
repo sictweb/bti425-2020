@@ -37,3 +37,4 @@ In the **teams-api** folder, the README.md has detailed setup (and usage) instru
 
 That will be your important task for today, in this first class session. If you don't get it all done today, then continue it outside of class.
 
+<br>
