@@ -22,7 +22,8 @@ Therefore, continue to use the content from the courses that you have successful
 
 ### Developer tools
 
-* [Visual Studio Code](https://code.visualstudio.com/)  
+* [Visual Studio Code](https://code.visualstudio.com/) (info, download)  
+   * [Getting started docs](https://code.visualstudio.com/docs)
 * Browsers (current versions of Chrome, Firefox, Safari, Opera, Edge)  
 * Browser dev tools  
 * HTTP inspector (e.g. [Postman](https://www.getpostman.com/))

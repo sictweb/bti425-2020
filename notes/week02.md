@@ -9,9 +9,13 @@ The theme for the next week or more is to continue to build client-side, browser
 
 We will also be introducing at SASS as a powerful and widely adopted CSS preprocessor / extension language.
 
+<br>
+
 **Topics:**
 
-[jQuery Continued...](jquery)
+[jQuery review](jquery-review)
+
+[jQuery continued](jquery)
 
 Handling Date/Time information using [Moment.js](moment)
 
