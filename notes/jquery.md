@@ -5,7 +5,7 @@ layout: default
 
 ## jQuery
 
-jQuery was introduced with itsvalue proposition as a the "swiss army knife" of the DOM, giving us everything we need to create dynamic HTML (ie: selecting elements, watching for / responding to events & updating the DOM).  We finished off by discussing how we can make Ajax requests using jQuery, for example:
+jQuery was introduced with its value proposition as a the "swiss army knife" of the DOM, giving us everything we need to create dynamic HTML (ie: selecting elements, watching for / responding to events & updating the DOM).  We finished off by discussing how we can make Ajax requests using jQuery, for example:
 
 ```js
 $.ajax({
