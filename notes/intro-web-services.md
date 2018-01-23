@@ -15,7 +15,7 @@ In this document, the authors have a number of goals:
 
 4. Promote the idea that we are building and working with a *distributed* computing system, that has two or more autonomous programs that pass messages (requests, responses) among the programs
 
-At this point in time, please review and study the [week 9 notes from the previous WEB322 course](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week9-class1/), so that you are in a position to build upon that knowledge and experience. 
+At this point in time, please review and study the [week 9 notes from the previous BTI325 course](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week9-class1/), so that you are in a position to build upon that knowledge and experience. 
 
 <br>
 
@@ -211,7 +211,7 @@ Therefore, if the interaction state of a (message exchange) session is important
 
 Now we can circle back to REST. It is an acronym for **RE**presentational **S**tate **T**ransfer.
 
-In the [week 9 notes](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week9-class1/) of the previous course, you were introduced to the term "REST API", where it was explained *"as a way to use the HTTP protocol with a standard message format to preform operations on data"*.
+In the [week 9 notes](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week9-class1/) of the previous course, you were introduced to the term "REST API", where it was explained *"as a way to use the HTTP protocol with a standard message format to perform operations on data"*.
 
 While that explanation is clear and understandable for a web programming student, it embeds a much deeper understanding that can come only through more learning and experience. If a student is serious about a career that includes web programming, then it is essential to study Roy Fielding's PhD dissertation from the year 2000, [Architectural Styles and the Design of Network-based Software Architectures](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm).
 
@@ -235,10 +235,10 @@ So, let's define "web API" as *an API to a web app or web service*.
 
 In this document, we have defined and explained a web service.
 
-We have been reminded of our brief introduction to web service programming in the previous WEB322 course.
+We have been reminded of our brief introduction to web service programming in the previous BTI325 course.
 
 Terminology was introduced, argued, and explained. 
 
-Now, you're ready to take the next step, and create web services that support the main focus of this WEB422 course, which is front end client-side browser apps. 
+Now, you're ready to take the next step, and create web services that support the main focus of this BTI425 course, which is front end client-side browser apps. 
 
 <br>
