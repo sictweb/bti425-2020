@@ -122,7 +122,7 @@ let htmlArr = $.parseHTML( "hello, <b>my name is</b> jQuery." ); // => 3 element
 
 jQuery has a very nice interface for handling form values.  The following sections illustrate how we can **get**, **set** and correctly **clear** the values of **text** / **password**, **checkbox**, **radiobutton**, **textarea** and **select (single / multiple)** elements.  
 
-If you’re following along with the “Code Samples” the following functionality is located in the **“week2/jQuery”** folder
+If you’re following along with the “Code Samples” the following functionality is located in the **“week2/jQuery-more”** folder
 
 <br>
 
@@ -265,7 +265,7 @@ $("#select2").val("");
 
 ## jQuery & Bootstrap
 
-The Bootstrap UI framework has become so instrumental in the construction of modern, responsive web apps; largety due to it's execellent design patterns, modern tooling and wealth of online resources and templates.  However, we have only really used it's CSS (and minimal) JavaScript capabilities.  In order to unlock Bootstrap's full potential as a UI/UX framework, is to familiarize ourselves with the interactive UI components and the jQuery API used to invoke/manipulate them.  
+The Bootstrap UI framework has become so instrumental in the construction of modern, responsive web apps; largely due to its execellent design patterns, modern tooling and wealth of online resources and templates.  However, we have only really used its CSS (and minimal) JavaScript capabilities.  In order to unlock Bootstrap's full potential as a UI/UX framework, is to familiarize ourselves with the interactive UI components and the jQuery API used to invoke/manipulate them.  
 
 As we have seen, we don't necessairly need to touch any JS code to make use of some of the interactive components.  The bootstrap framework uses jQuery in an unobtrusive way, by utalizing '**data-**' attributes, ie:
 
@@ -298,7 +298,7 @@ $('#myModal').modal({ // show the modal programmatically
 
 ### Button States
 
-Although, technically deprecated, the 'loading' and 'reset' button states are simple way to programmatically enable/disable a button while at the same time, changing it's text.  This is useful in cases where clicking the button makes an Ajax request and we wish to disable the button until the request has completed.
+Although, technically deprecated, the 'loading' and 'reset' button states are simple way to programmatically enable/disable a button while at the same time, changing its text.  This is useful in cases where clicking the button makes an Ajax request and we wish to disable the button until the request has completed.
 
 The 'toggle' state is not deprecated and provides a quick way to show a button as 'pressed'.   
 
