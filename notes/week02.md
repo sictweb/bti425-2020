@@ -1,9 +1,9 @@
 ---
-title: WEB422 Week 2
+title: BTI425 Week 2
 layout: default
 ---
 
-## WEB422 Week 2 Notes
+## BTI425 Week 2 Notes
 
 The theme for the next week or more is to continue to build client-side, browser-based development skills, using long-established libraries such as jQuery (continued coverage), Moment.js and Lodash.
 

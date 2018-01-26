@@ -5,10 +5,10 @@ layout: default
 
 ## BTI425 Assignment 1
 
-Purpose/objective of the assignment.
-
 > This document is being edited.  
 > This notice will be removed when the edits are complete.
+
+Purpose/objective of the assignment.
 
 <br>
 
