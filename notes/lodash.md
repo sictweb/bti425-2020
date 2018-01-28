@@ -72,7 +72,7 @@ See: [https://lodash.com/docs/4.17.4#findIndex](https://lodash.com/docs/4.17.4#f
 ```js
 let findIndex1 = _.findIndex(users, function(user) { 
     return user.user == 'fred'; 
-}); // => 1
+}); // => 0
 ```
 
 <br>
