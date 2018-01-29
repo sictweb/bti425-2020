@@ -208,9 +208,9 @@ Our `main.js` will obviously have a jQuery document-ready function. We suggest t
 
 The document-ready function calls the data-loading function. 
 
-Then, it goes through the array, and appends a new table row for each array item. And:
+Then, it goes through the array, and appends a new table row for each array item. Here:
 * Make sure that you include the identifier as a hidden `<td>` element
-* Format the birth date in a nice manner (maybe like you see in the example above)
+* Format the birthdate in a nice manner (maybe like you see in the example above)
 * Use some common sense when rendering some of the data, and think about its use and purpose (for example, should you display URL text, or render a hyperlink?)
 
 Finally, add a click handler for each row. What will its callback function do?
@@ -221,7 +221,47 @@ We want it to display the row's data in the right-side area. Notice that the dat
 
 #### Fetched data
 
-( more to come )
+On this page, you will fetch data from your Heroku-hosted Teams API, and then display it in an HTML Table. And, when a row is clicked, its data will appear in a "details" panel on the right side. (Very similar to the task above.)
+
+Here's an example of what you will create:
+
+![Fetched data](../media/a1/fetchedv2.png)
+
+<br>
+
+**Preparation**
+
+In the previous section, you created a page, grid, and table structure to hold the data. 
+
+Much of that work can be copy-pasted to this "fetched" page. A few of the table columns and identifiers will be different, but it will be similar. Take advantage of that to reduce your work. 
+
+<br>
+
+**Data**
+
+Where do we get the data? 
+
+Let's use your Heroku-hosted Teams API. The "employees" collection has some nice data to display. 
+
+<br>
+
+**Coding**
+
+Create a variable to hold the data. Its initial value will be an empty array. 
+
+In the document-ready function, add a jQuery `.ajax()` function, to fetch the "employees" data. 
+
+In its `.done()` function, append the nicely-formatted table rows. Here:
+* Use the value of the "Extension" property as the identifier; it appears to be a unique integer
+* Use some common sense wehen rendering the data, for example, the address properties
+* Format the hire data in a nice manner
+* Format the salary data in a nice manner
+
+The salary data is intended to be dollars. So, let's format it that way. Use the JavaScript `Intl.NumberFormat` object to help with this task. 
+
+Finally, add a click handler for each row. What will its callback function do?
+
+Similar to above, it will display the row's data in the right-side area. Again, just for fun, do a date calculation task, and show a couple of decimal digits. 
 
 <br>
 
