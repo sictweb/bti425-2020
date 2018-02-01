@@ -338,7 +338,37 @@ Test your work, and the data should render in the HTML Table.
 
 At this point, your table will not look like the example above. Let's refine and improve its appearance.
 
-( more to come - concat, calc, etc. )
+The **date** format should be better. Above, you formatted the date nicely, using the Moment.js library. (Make sure it's referenced on your HTML page.) We can do that here, too, but it's done a bit differently. 
+
+The Knockout data-binding syntax in the HTML page looks something like this:
+
+```html
+<td data-bind='text: birthdate'></td>
+````
+
+We can actually call a Moment.js function in the `data-bind` attribute. Interesting. The result looks something like this:
+
+```html
+<td data-bind='text: moment(birthdate).format("YYYY-MM-DD")'></td>
+````
+
+Notice that the actual property name (birthdate) is now an argument to the `moment()` function. (Then we chain the call to its `.format()` function.)
+
+This gives us a hint about how to handle the first name + last name situation. Yes, we can render a **full name** by using `span` element markup and two `data-bind` attributes. Is there a better way?
+
+We can write a new function to handle this, and then call it just like we call the "moment" function above. In your JavaScript, but outside of the document-ready function, create a new variable, which is a function that takes a couple of arguments. It will return the right string concatenation. Something like this:
+
+```js
+var lastFirstName = function (ln, fn) {
+    // return the string concatenation that meets your needs
+}
+```
+
+Then, like the "date" situation above, call this new function in the markup:
+
+```html
+<td data-bind="text: lastFirstName(lastname, firstname)"></td>
+```
 
 <br>
 
