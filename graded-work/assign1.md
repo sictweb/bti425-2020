@@ -277,7 +277,68 @@ Here's an example of what you will create:
 
 **Preparation**
 
+Above, you copied `index.html` to a new "local, with Knockout" page. Again, remove the jumbotron code. As appropriate, update the `<meta>` elements, and the visible page title. 
 
+Again, similar to the "local" data page, this new page will have an HTML Table on the left side of the content area. The table must have a header row, and a table body, which can be empty (until we fill it in below). 
+
+<br>
+
+**Data**
+
+You can re-use the code from your "local" page, which should give you an array of objects to work with. 
+
+<br>
+
+**Coding**
+
+As noted above in the "Data" section, you should have a variable which holds the data. 
+
+The following is the minimal essentials needed to make this work with Knockout. Remember from above, on the "local" page, you used JavaScript (jQuery) in a loop to render a table row for each object in the array. 
+
+Here, Knockout will do that. 
+
+Make sure that the Knockout library is referenced in a `<script>` element on the page. 
+
+First, write a `data-bind` attribute for the table body; its value can be something like "customers". (Soon, we will create the "customers" variable in our JavaScript code). 
+
+Next, create *one* (only) table row.
+
+Next, create cells for the table row that you want to render. Each will have a `data-bind` attribute. Something like this:
+
+```html
+<td data-bind='text: lastname'></td>
+````
+
+Notice that `lastname` is one of the property names in the object (in the array). 
+
+Now, let's write some JavaScript code. 
+
+Create a view model function. Something like this:
+
+```js
+function myvm() {
+    var self = this;
+    
+    // Assume that 'sortedDataLocal' is our array of customer objects
+    self.customers = sortedDataLocal;
+}
+```
+
+Finally, apply the bindings. Notice that we use `new` in the statement:
+
+```js
+ko.applyBindings(new myvm());
+```
+
+Test your work, and the data should render in the HTML Table. 
+
+<br>
+
+**Refine and improve**
+
+At this point, your table will not look like the example above. Let's refine and improve its appearance.
+
+( more to come - concat, calc, etc. )
 
 <br>
 
