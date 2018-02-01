@@ -267,7 +267,17 @@ Again, just for fun, do a date calculation task, and show a couple of decimal di
 
 #### Local data, with Knockout
 
-( more to come )
+Some of the tasks on this page are similar to the "local" data page, above. 
+
+Here's an example of what you will create:
+
+![Local data, with Knockout](../media/a1/localkov2.png)
+
+<br>
+
+**Preparation**
+
+
 
 <br>
 
