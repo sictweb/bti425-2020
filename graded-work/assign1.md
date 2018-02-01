@@ -374,7 +374,11 @@ Then, like the "date" situation above, call this new function in the markup:
 
 #### Fetched data, with Knockout
 
-( more to come )
+> Preliminary task list; will be finalized by noon on Friday, February 2
+
+Use the Teams API data  
+List of projects  
+Enable editing of project *name* and *description*  
 
 <br>
 
