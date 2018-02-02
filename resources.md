@@ -71,13 +71,16 @@ There are several required online resources:
 
 **Others:**
 
+* [Bootstrap (version 3) CSS documentation](https://getbootstrap.com/docs/3.3/css/)  
+Links to other topics (e.g. Getting started, etc.) are on that page
+
 * Official [Angular Documentation](https://angular.io/docs)
 
 * Angular CLI videos on YouTube, by [Codevolution](https://www.youtube.com/channel/UC80PWRj_ZU8Zu0HSMNVwKWw/videos)
 
 * Node Reference
   * [Node.js Documentation](https://nodejs.org/en/docs/)
-  * (Suggested) [nodejitsu](https://docs.nodejitsu.com/)<br><br>
+  * (Suggested) [nodejitsu](https://docs.nodejitsu.com/)
 
 * [Express.js Documentation](https://expressjs.com/en/4x/api.html)
 
@@ -109,7 +112,7 @@ Alternatives:
 * and many others...  
 
 **State management**  
-* [Our own "Teams" API](https://github.com/sictweb/web422)
+* [Our own "Teams" API](https://github.com/sictweb/bti425)
 * [JSON data API - jsonplaceholder](http://jsonplaceholder.typicode.com)  
 
 <!--**To be categorized**  
@@ -130,8 +133,40 @@ Was known as "Reactive Extensions"
 Make sure that you're in your project folder.  
 Then type this command: `code .`
 
-**IntelliSense**
+**Useful keyboard shortcuts**
 
-Trigger IntelliSense: `Ctrl+Space` 
+Trigger IntelliSense: `Control + Space` 
+
+Toggle comments on/off: `Command + /`
+
+Reformat document: `Shift + Option + Command + F`
+
+Show/hide left-side bar: `Command + B`
+
+Show/hide terminal: `Control + (back-tick)`
+
+Markdown preview pane toggle on/off: `Command + K, V`
+
+**Useful Emmet snippets**
+
+For most elements, just begin typing the element name, without the angle bracket.
+
+`.` Declare class(es), e.g. `div.row`
+
+`#` Declare unique identifier, e.g. `table#customers`
+
+`>` Child, e.g. `div>p`
+
+`*` Multiplier, e.g. `ul>li*5`
+
+`( )` Grouping, often used with multiplier
+
+`+` Sibling, e.g. `div>h3+p*3`
+
+`{blahblah}` Text content for an element, e.g. `h3{Hello, world!}`
+
+`[` Custom attribute, e.g. `span[data-bind`
+
+See the [Emmet cheat sheet](https://docs.emmet.io/cheat-sheet/) for full coverage.
 
 <br>
