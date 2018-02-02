@@ -5,9 +5,6 @@ layout: default
 
 ## BTI425 Assignment 1
 
-> This document is being edited.  
-> This notice will be removed when the edits are complete.
-
 The purpose or objective of the assignment is to get some experience with widely-used JavaScript libraries, including jQuery, Moment, Lodash, and Knockout. In addition, we will work with the Bootstrap framework. 
 
 Read/skim all of this document before you begin work.
@@ -389,7 +386,7 @@ Some of the tasks on this page are similar to the "fetched" data page, above.
 
 This page will display a list of projects from the Teams API. It will enable the user to edit the project *name* and *description*. Here's an example of what you will create:
 
-![Fetched data, with Knockout](../media/a1/fetchedkov2.png)
+![Fetched data, with Knockout](../media/a1/fetchedkov5.png)
 
 <br>
 
@@ -469,7 +466,7 @@ First, set the value (which is an empty array) of `self.projects` to be a [Knock
 
 This enables Knockout to update the UI if the value (content) of the array changes. Will it change? Yes. The array will start out empty, and then it will fill up with the fetched data. We want Knockout to detect this, and update the UI auto-magically. 
 
-Next, add some data-fetching code. A [really convenient jQuery function](http://api.jquery.com/jquery.getjson/) to use is `getJSON()`. 
+Next, add some data-fetching code. A [really convenient jQuery "shorthand" method](http://api.jquery.com/jquery.getjson/) to use is `getJSON()`. This method assumes GET, JSON data, and success. (If that doesn't meet your needs, then use the regular `ajax()` method.)
 
 ```js
 $.getJSON('https://path-to-your-teams-api.herokuapp.com/projects', function (data) {
@@ -481,13 +478,114 @@ $.getJSON('https://path-to-your-teams-api.herokuapp.com/projects', function (dat
 
 At this point in time, your page should load data. 
 
-( more to come )
+![Fetched data, with Knockout](../media/a1/fetchedkov2.png)
+
+<br>
+
+Now, we will enable project's *name* and *description* properties to be edited. Above, you created `<td>` elements with `data-bind` attributes. Replace those with plain `<td>` elements. Inside, we will add an HTML Forms control. 
+
+The project's *name* is usually a reasonably short value. A standard text box will work here. Its `data-bind` attribute will use [the "value" binding](http://knockoutjs.com/documentation/value-binding.html). 
+
+> All HTML Forms controls *must* use the Boostrap class `form-control`.  
+> When you do this, it draws nice-sized rounded-corner controls, with the correct font, etc. 
+
+The project's *description* is usually a longer value. A text area will work here. Its `data-bind` attribute will also use the "value" binding. 
+
+> A Bootstrap-styled `textarea` must have a `rows` attribute, but NOT a `columns` attribute. 
+> Its `form-control` class will cause it to fill the width allowed by its parent container.
+
+One more thing... We need a "save" button for each project. Add another column in both the `<thead>` and `<tbody>` elements. In the `<tbody>` element, add a `<button>` element. How is it configured?
+
+First, Bootstrap: The [buttons documentation](https://getbootstrap.com/docs/3.3/css/#buttons) tells us to add the `btn` class. Optionally, we can add another class to set the button's background colour (for example, `btn-default`). 
+
+Next: Knockout: On this page, we do NOT want our button and the HTML Forms fields to be enclosed by a `<form>` element. (In other words, it will NOT be a "submit" button.) Instead, we'll just write a JavaScript function to handle the button's "click" event. 
+
+The [Knockout "click" binding](http://knockoutjs.com/documentation/click-binding.html) documentation tells us to add a `data-bind` attribute to the button:
+
+```html
+data-bind="click: save"
+```
+
+(This is also demonstrated in Step 4 of the ["Loading and saving data" tutorial](http://learn.knockoutjs.com/#/?tutorial=loadingsaving) on the Knockout learning/tutorials web site.)
+
+Next, it tells us to edit the view model function. *Inside* the view model function, write another "save" function, which would look something like this for now:
+
+```js
+self.save = function(project) {
+	console.log(project);
+};
+```
+
+Show your page. Uh oh. It renders only one row. And, it throws an exception (as seen in the JavaScript console):
+
+![Fetched data, with Knockout](../media/a1/fetchedkov4.png)
+
+<br>
+
+![Fetched data, with Knockout](../media/a1/fetchedkov4error.png)
+
+<br>
+
+The problem is the [binding context](http://knockoutjs.com/documentation/binding-context.html). To briefly explain, the "save" button is looking for a JavaScript function named "save" in the current "location" (or context), which is the object (or row of data). The function is NOT found or located in this row of data. 
+
+Instead, the "save" function is in the *view model* object. From the perspective of the object (or row of data), the view model is its "parent" or "root". (Think in terms of hierarchies.)
+
+So, to fix this, we have to add the location of the "save" function to the `data-bind` attribute. Something like this (and either form will work here):
+
+```html
+<!-- Use this form... -->
+data-bind="click: $parent.save"
+<!-- ...or this form... -->
+data-bind="click: $root.save"
+```
+
+Save your work, and run your page again. At this point in time, your page should look like the following. Clicking one of the buttons should show the data inside the clicked object in the JavaScript console. 
+
+![Fetched data, with Knockout](../media/a1/fetchedkov3.png)
+
+<br>
+
+One final task... edit the "save" function to post the edited data back to the Teams API. Above, we had a simple `console.log()` statement. Replace that with a jQuery `.ajax()` statement, as discussed below
+
+When updating a resource, we use a [HTTP PUT](https://tools.ietf.org/html/rfc7231#section-4.3.4) request. It requires us to set the following in the request:
+* Request method, PUT
+* URL to the *specific* resource
+* A content type
+* Data, which (for our purposes, is the full/complete object that we are working with)
+
+In the Week 3 "knockout-Ajax" code example, there's an example of an HTTP PUT request, [starting on line 87](https://github.com/sictweb/bti425/blob/master/Week_03/knockout-Ajax/js/main.js#L87). 
+
+OK, good, that's helpful. In that code example, the "plainEmployee" object in line 90 is the data that is sent with the HTTP PUT request. In contrast, for our situation, we must send a "project" object.
+
+Just before we write the statement, let's look at the Teams API code. In its `server.js` source code file, [starting on line 153](https://github.com/sictweb/bti425/blob/master/Templates_and_solutions/teams-api/server.js#L153), we see the code for the function that listens for HTTP PUT requests to the `/project/:projectId` segment. 
+
+OK, now that we know where it's going, we have all we need to construct the statement, which will look similar to the following:
+
+```js
+// The project's identifier is in the _id property
+$.ajax({
+	url: `https://path-to-your-teams-api.herokuapp.com/project/${project._id}`,
+	type: "PUT",
+	data: JSON.stringify(project),
+	contentType: "application/json"
+})
+.done(function (data) {
+	console.log(data);
+})
+.fail(function (err) {
+	console.log('Unable to update the project');
+});
+```
+
+Run and test your code. Check the results in your JavaScript console. 
 
 <br>
 
 **Refine and improve**
 
-( more to come )
+The only code that needs fixing is the **date** format (as you have done before). Do that now. 
+
+The result should be similar to the screen capture at the beginning of this section. 
 
 <br>
 
