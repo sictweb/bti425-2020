@@ -103,7 +103,7 @@ Before continuing, add in the HTML for the `main.js` that will hold YOUR JavaScr
 
 **Page structure, and Bootstrap classes**
 
-If you are not accustomed to the task of creating a "page template", then this may be a bit tedious. Please be patient, as it will return benefits to you. (It's a good idea to start thinking systematically about the task of creating user interfaces.)
+If you are not accustomed to the task of creating a "page template", then this may be a bit tedious. Please be patient, as it will return benefits to you. (It's a good idea to start thinking systematically about the task of creating a user interfaces (UI)).
 
 There are many different guides and opinions about the "right" way to write your page's HTML code structure. Here, we will offer our suggestions and recommendations. (Other solutions are possible.)
 
@@ -269,7 +269,7 @@ Again, just for fun, do a date calculation task, and show a couple of decimal di
 
 Some of the tasks on this page are similar to the "local" data page, above. 
 
-Here's an example of what you will create:
+This page will display a list of customers. (It will NOT have a click event handler for a table row. It will simply display a list of customers.) Here's an example of what you will create:
 
 ![Local data, with Knockout](../media/a1/localkov2.png)
 
@@ -303,7 +303,7 @@ First, write a `data-bind` attribute for the table body; its value can be someth
 
 Next, create *one* (only) table row.
 
-Next, create cells for the table row that you want to render. Each will have a `data-bind` attribute. Something like this:
+Then, create cells for the table row that you want to render. Each will have a `data-bind` attribute. Something like this:
 
 ```html
 <td data-bind='text: lastname'></td>
@@ -313,7 +313,7 @@ Notice that `lastname` is one of the property names in the object (in the array)
 
 Now, let's write some JavaScript code. 
 
-Create a view model function. Something like this:
+Create a view model function, located in the document-ready function. Something like this:
 
 ```js
 function myvm() {
@@ -352,11 +352,11 @@ We can actually call a Moment.js function in the `data-bind` attribute. Interest
 <td data-bind='text: moment(birthdate).format("YYYY-MM-DD")'></td>
 ````
 
-Notice that the actual property name (birthdate) is now an argument to the `moment()` function. (Then we chain the call to its `.format()` function.)
+Notice that the actual property name (birthdate) is now an argument to the `moment()` function. Then we chain the call to its `.format()` function.
 
 This gives us a hint about how to handle the first name + last name situation. Yes, we can render a **full name** by using `span` element markup and two `data-bind` attributes. Is there a better way?
 
-We can write a new function to handle this, and then call it just like we call the "moment" function above. In your JavaScript, but outside of the document-ready function, create a new variable, which is a function that takes a couple of arguments. It will return the right string concatenation. Something like this:
+Well, we can write a *new* function to handle this, and then call it just like we call the "moment" function above. In your JavaScript, but outside of the document-ready function, create a new variable, which is a function that takes a couple of arguments. It will return the string concatenation that meets your needs. Something like this:
 
 ```js
 var lastFirstName = function (ln, fn) {
@@ -370,15 +370,124 @@ Then, like the "date" situation above, call this new function in the markup:
 <td data-bind="text: lastFirstName(lastname, firstname)"></td>
 ```
 
+Finally, the **addresses** column needs some love. In the image above, this column has three stacked lines of data, 1) the city, 2) an email address, and 3) a hyperlink to a web site. 
+
+We already know (from your earlier work) that this area will be formatted with HTML line break elements. How do we configure the hyperlink? Can we put a `data-bind` attribute as the value of the hyperlink's `href` attribute? No. 
+
+Knockout has a "attr" syntax for the `data-bind` attribute, [documented on this page](http://knockoutjs.com/documentation/attr-binding.html). So, when we code it, it will look something like this:
+
+```html
+<a data-bind="attr: { href: website }">Website</a>
+```
+Notice that "website" in `href: website` is the actual property name in the customer object. 
+
 <br>
 
 #### Fetched data, with Knockout
 
-> Preliminary task list; will be finalized by noon on Friday, February 2
+Some of the tasks on this page are similar to the "fetched" data page, above. 
 
-Use the Teams API data  
-List of projects  
-Enable editing of project *name* and *description*  
+This page will display a list of projects from the Teams API. It will enable the user to edit the project *name* and *description*. Here's an example of what you will create:
+
+![Fetched data, with Knockout](../media/a1/fetchedkov2.png)
+
+<br>
+
+**Preparation**
+
+As a general plan, here's what we must do in this section:
+1. GET "projects" data from your Teams API
+2. Render the data in an HTML Table
+3. Write a function that will PUT (update) a specific project on your Teams API
+4. Modify the markup and code to enable Knockout to handle a data update event (and call the update function)
+
+Let's get started.
+
+Above, you copied index.html to a new “fetched data, with Knockout” page. Again, remove the jumbotron code. As appropriate, update the <meta> elements, and the visible page title.
+
+Again, similar to the “fetched” data page, this new page will have an HTML Table. This time, it can fill the width of the viewport. The table must have a header row, and a table body, which can be empty (until we fill it in below).
+
+Be prepared to render four columns in the HTML Table. We will need the project identifier as a hidden column, and these three project columns:
+1. Name
+2. Start date
+3. Description
+
+Before continuing, let's adjust the column widths. As noted above, we want to enable editing of a project's *name* and *description* properties. If we don't adjust the widths now, the editing text boxes that get rendered will be unsuitable for our needs. 
+
+It turns out that we can use the familiar "col..." classes in an HTML Table. For example:
+
+```html
+<!-- Wow - can use col-*-* classes in a table!  -->
+<th class="col-md-3">Name</th>
+<th class="col-md-1">Start Date</th>
+<th class="col-md-8">Description</th>
+```
+
+<br>
+
+**Data**
+
+Use your Heroku-hosted Teams API again. The "projects" collection is what we need for this page. 
+
+<br>
+
+**Coding**
+
+As noted above, our general plan is to do the following:
+1. GET "projects" data from your Teams API
+2. Render the data in an HTML Table
+3. Write a function that will PUT (update) a specific project on your Teams API
+4. Modify the markup and code to enable Knockout to handle a data update event (and call the update function)
+
+Above (in the "local, with Knockout" section), you learned how to use Knockout to render a collection. Do the same tasks...
+
+Make sure that the Knockout library is referenced in a `<script>` element on the page.
+
+Write a `data-bind` attribute for the table body; its value can be something like "projects". (Soon, we will create the "projects" variable in our JavaScript code.)
+
+Next, create *one* (only) table row. 
+
+Then, create cells for the table row. Each will have a `data-bind` attribute. 
+
+Now, let's write some JavaScript code. 
+
+Create a view model function, located in the document-ready function. Initially, it will look very similar to the function you wrote above. 
+
+```js
+function myvm() {
+	var self = this;
+
+	self.projects = [];
+}
+```
+
+Apply the bindings, as you have done before. 
+
+What is missing? The "fetch data" task, to get the projects data from the Teams API. This coding task is an understandable add-on to what you already know. 
+
+First, set the value (which is an empty array) of `self.projects` to be a [Knockout observable array](http://knockoutjs.com/documentation/observableArrays.html). 
+
+This enables Knockout to update the UI if the value (content) of the array changes. Will it change? Yes. The array will start out empty, and then it will fill up with the fetched data. We want Knockout to detect this, and update the UI auto-magically. 
+
+Next, add some data-fetching code. A [really convenient jQuery function](http://api.jquery.com/jquery.getjson/) to use is `getJSON()`. 
+
+```js
+$.getJSON('https://path-to-your-teams-api.herokuapp.com/projects', function (data) {
+
+    // Set the value of the "projects" observable array to the incoming data
+    self.projects(data);
+})
+```
+
+At this point in time, your page should load data. 
+
+( more to come )
+
+<br>
+
+**Refine and improve**
+
+( more to come )
 
 <br>
 
