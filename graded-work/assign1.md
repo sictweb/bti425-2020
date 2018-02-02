@@ -292,11 +292,11 @@ As noted above in the "Data" section, you should have a variable which holds the
 
 The following is the minimal essentials needed to make this work with Knockout. Remember from above, on the "local" page, you used JavaScript (jQuery) in a loop to render a table row for each object in the array. 
 
-Here, Knockout will do that. 
+Here, Knockout will do that.
 
 Make sure that the Knockout library is referenced in a `<script>` element on the page. 
 
-First, write a `data-bind` attribute for the table body; its value can be something like "customers". (Soon, we will create the "customers" variable in our JavaScript code). 
+First, write a `data-bind` attribute for the table body. It uses [the "foreach" binding](http://knockoutjs.com/documentation/foreach-binding.html). Its value can be something like "customers". (Soon, we will create the "customers" variable in our JavaScript code). 
 
 Next, create *one* (only) table row.
 
