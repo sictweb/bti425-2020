@@ -482,9 +482,9 @@ At this point in time, your page should load data.
 
 <br>
 
-Now, we will enable project's *name* and *description* properties to be edited. Above, you created `<td>` elements with `data-bind` attributes. Replace those with plain `<td>` elements. Inside, we will add an HTML Forms control. 
+Now, we will enable project's *name* and *description* properties to be edited. Above, you created `<td>` elements with `data-bind` attributes. Replace those with plain `<td>` elements. Inside each, we will add an HTML Forms control. 
 
-The project's *name* is usually a reasonably short value. A standard text box will work here. Its `data-bind` attribute will use [the "value" binding](http://knockoutjs.com/documentation/value-binding.html). 
+The project's *name* is usually a reasonably short value. A standard text box will work OK here. Its `data-bind` attribute will use [the "value" binding](http://knockoutjs.com/documentation/value-binding.html). 
 
 > All HTML Forms controls *must* use the Boostrap class `form-control`.  
 > When you do this, it draws nice-sized rounded-corner controls, with the correct font, etc. 
@@ -508,7 +508,7 @@ data-bind="click: save"
 
 (This is also demonstrated in Step 4 of the ["Loading and saving data" tutorial](http://learn.knockoutjs.com/#/?tutorial=loadingsaving) on the Knockout learning/tutorials web site.)
 
-Next, it tells us to edit the view model function. *Inside* the view model function, write another "save" function, which would look something like this for now:
+Next, it tells us to edit the view model function. *Inside* the view model function, write another function named "save", which would look something like this for now:
 
 ```js
 self.save = function(project) {
@@ -526,11 +526,11 @@ Show your page. Uh oh. It renders only one row. And, it throws an exception (as 
 
 <br>
 
-The problem is the [binding context](http://knockoutjs.com/documentation/binding-context.html). To briefly explain, the "save" button is looking for a JavaScript function named "save" in the current "location" (or context), which is the object (or row of data). The function is NOT found or located in this row of data. 
+The problem is the [binding context](http://knockoutjs.com/documentation/binding-context.html). To briefly explain, the "save" button is looking for a JavaScript function named "save" in the current "location" (or context), which is the object (or row of data). The function is obviously NOT found or located in this row of data. 
 
-Instead, the "save" function is in the *view model* object. From the perspective of the object (or row of data), the view model is its "parent" or "root". (Think in terms of hierarchies.)
+Instead, the "save" function is located in the *view model* object. From the perspective of the object (or row of data), the view model is its "parent" or "root". (Think in terms of hierarchies.)
 
-So, to fix this, we have to add the location of the "save" function to the `data-bind` attribute. Something like this (and either form will work here):
+So, to fix this, we have to add the location of the "save" function to the `data-bind` attribute. Something like the following (either form will work here):
 
 ```html
 <!-- Use this form... -->
@@ -545,7 +545,7 @@ Save your work, and run your page again. At this point in time, your page should
 
 <br>
 
-One final task... edit the "save" function to post the edited data back to the Teams API. Above, we had a simple `console.log()` statement. Replace that with a jQuery `.ajax()` statement, as discussed below
+One final task... edit the "save" function to post the edited data back to the Teams API. Above, we had a simple `console.log()` statement. Replace that with a jQuery `.ajax()` statement, as discussed below.
 
 When updating a resource, we use a [HTTP PUT](https://tools.ietf.org/html/rfc7231#section-4.3.4) request. It requires us to set the following in the request:
 * Request method, PUT
