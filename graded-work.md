@@ -27,7 +27,7 @@ We have planned six (6) assignments during the term.
 
 The assignments have a two-week lifetime. Most are independent of each other. 
 
-During the term, one (1) *late* assignment will be accepted within three (3) days of its due date. (In other words, Wednesday at 6:00pm. The late-submission protocol works like this, assuming the one (1) late assignment privilege has not been used:
+During the term, one (1) *late* assignment will be accepted within three (3) days of its due date. (In other words, Wednesday at 6:00pm.) The late-submission protocol is as follows, assuming the one (1) late assignment privilege has not been used:
 1. Upload the work using Blackboard, and the link for the *NEXT* assignment. (The link accepts three uploads, so there will still be two uploads available for you to use when submitting the next assignment.) 
 2. Send me email, and tell me that it has been uploaded. 
 
