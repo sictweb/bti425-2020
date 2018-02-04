@@ -27,9 +27,13 @@ We have planned six (6) assignments during the term.
 
 The assignments have a two-week lifetime. Most are independent of each other. 
 
-During the term, one (1) *late* assignment will be accepted within four (4) days of its due date. Contact your professor to learn about the late-submission protocol. 
+During the term, one (1) *late* assignment will be accepted within three (3) days of its due date. (In other words, Wednesday at 6:00pm. The late-submission protocol works like this, assuming the one (1) late assignment privilege has not been used:
+1. Upload the work using Blackboard, and the link for the *NEXT* assignment. (The link accepts three uploads, so there will still be two uploads available for you to use when submitting the next assignment.) 
+2. Send me email, and tell me that it has been uploaded. 
 
 Otherwise, if you do not submit an assignment by the due date, its grade is zero, and there is no opportunity to earn marks for a late submission.
+
+If your assignment is not complete (for example, it's missing some features), you can still submit a partially-completed assignment by the due date, and earn part marks. 
 
 Each assignment will be worth 10% of your final course grade. The total value of all assignments will be 50%. At the end of the course, the lowest assignment result will be discarded, leaving your best five results.
 
