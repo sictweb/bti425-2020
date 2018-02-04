@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>BTI425 Assignment Checklist</title>
+    <meta charset="utf-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+    <style>
+        body {
+            padding: 1.0em;
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .checklist {
+            width: 100%;
+        }
+
+        tr td, tr th {
+            padding: 0.5em;
+            overflow: auto;
+        }
+
+        th {
+            font-size: 1.0em;
+            background-color: whitesmoke;
+        }
+
+        th, td {
+            border: 1px solid grey;
+        }
+
+        .col1 {
+            width: 40%;
+        }
+
+        .col5 {
+            width: 25%;
+        }
+
+        .col2, .col3, .col4 {
+            width: 7%;
+        }
+
+        .no-storage {
+            display: none;
+        }
+
+        @media print {
+            .no-print, .no-print * {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="alert alert-danger no-print no-storage" role="alert">
+        This browser doesn't support localStorage. Your progress will not be saved automatically!
+    </div>
+    <h4>BTI425 Winter 2017 Assignment 1 - <span id="studentName" contenteditable="true">name</span></h4>
+    <p>Programming assignment checklist - Work with JavaScript libraries</p>
+    <table class="checklist">
+        <tr>
+            <th class="col1">User interaction and appearance</th>
+            <th class="col2">Complete</th>
+            <th class="col3">Partial</th>
+            <th class="col4">Missing</th>
+            <th class="col5">Comments</th>
+        </tr>
+        <tr>
+            <td>Fiddler archive was included, and it tests all use cases, including error conditions</td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+        </tr>
+        <tr>
+            <td><p>A login is able to use both Music and Other apps</p></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+        </tr>
+        <tr>
+            <td><p>Using the Music app, Employees, gives expected results</p></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+        </tr>
+        <tr>
+            <td><p>Using the Other app, Values, gives expected results</p></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+        </tr>
+    </table>
+    <p>&nbsp;</p>
+    <table class="checklist">
+        <tr>
+            <th class="col1">Program design and coding</th>
+            <th class="col2">Complete</th>
+            <th class="col3">Partial</th>
+            <th class="col4">Missing</th>
+            <th class="col5">Comments</th>
+        </tr>
+        <tr>
+            <td><p>Student created their own new user account in code<br>Also created app claims (Role, OU, Task)</p></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+        </tr>
+        <tr>
+            <td><p>Customized database name, IAstudentname</p></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+        </tr>
+        <tr>
+            <td><p>Music and Other apps have the correct security pieces</p></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+        </tr>
+        <tr>
+            <td><p>Different use cases have different authorize attribute combinations</p></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+        </tr>
+        <tr>
+            <td><p>"Set supervisor" manager method has an extra check to match the supervisor with the security principal user</p></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+        </tr>
+        <tr>
+            <td>Good coding style, follows best practices</td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true">x</div></td>
+            <td><div contenteditable="true"></div></td>
+            <td><div contenteditable="true"></div></td>
+        </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>Other comments:</p>
+    <p id="comments" contenteditable="true"></p>
+    <p><button id="reset" class="btn btn-default no-print" type="reset" onclick="resetForm()">Reset</button></p>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script>
+        var delay = (function () {
+            var timer = 0;
+            return function (callback, ms) {
+                clearTimeout(timer);
+                timer = setTimeout(callback, ms);
+            };
+        })();
+
+        $('body').keyup(function () {
+            delay(function () {
+                saveOrRepopulate(true);
+            }, 3000);
+        });
+
+        $(document).ready(
+        function () {
+            if (typeof (Storage) !== "undefined") {
+                // Code for localStorage/sessionStorage.
+                $(".no-storage").hide();
+                saveOrRepopulate();
+            } else {
+                // Sorry! No Web Storage support..
+                $(".no-storage").show();
+                $("#reset").hide();
+            }
+        }
+        )
+
+        if (typeof (Storage) !== "undefined") {
+            function saveOrRepopulate(save) {
+                var form = [], firstLoad = false, oldForm, btiFormEmpty = false, originalEmpty = false;
+
+                console.log("local:");
+                console.log(localStorage);
+                //localStorage.originalValues = JSON.stringify(form);
+
+                if (!localStorage.btiForm || localStorage.btiForm === "[]") {
+                    btiFormEmpty = true;
+                }
+
+                if (!localStorage.originalValues || localStorage.originalValues === "[]") {
+                    originalEmpty = true;
+                }
+
+                if (!btiFormEmpty && !save) {
+                    oldForm = JSON.parse(localStorage.btiForm);
+                    $("#studentName").html(localStorage.studentName);
+                    $("#comments").html(localStorage.comments);
+                }
+
+                if (btiFormEmpty && originalEmpty) {
+                    firstLoad = true;
+                }
+
+                $(".checklist").each(function (tableI, table) {
+                    var rows = $(table).find("tr"), rowData = [];
+
+                    rows.each(function (rowI, row) {
+                        var cells = $(row).find("td"), cellData = [];
+
+                        cells.each(function (cellI, cell) {
+                            var divs = $(cell).find("div"), i, divData = [];
+
+                            for (i = 0; i < divs.length; i++) {
+                                if (save || firstLoad) {
+                                    divData.push($(divs[i]).html());
+                                    console.log("first/save");
+                                } else {
+                                    console.log("repopulating");
+                                    if (oldForm && oldForm[tableI] && oldForm[tableI][rowI] &&
+                                    oldForm[tableI][rowI][cellI] && oldForm[tableI][rowI][cellI][i]) {
+                                        $(divs[i]).html(oldForm[tableI][rowI][cellI][i]);
+                                    } else {
+                                        $(divs[i]).html("");
+                                    }
+                                }
+                            }
+
+                            cellData.push(divData)
+                        })
+
+                        rowData.push(cellData);
+
+                    });
+
+                    if (rowData) {
+                        form.push(rowData);
+                    }
+
+                });
+
+                if (firstLoad) {
+                    console.log("first load...");
+                    console.log(form);
+                    console.log("local original");
+                    console.log(localStorage.originalValues);
+                    localStorage.originalValues = JSON.stringify(form);
+                }
+
+                if (save) {
+                    localStorage.btiForm = JSON.stringify(form);
+                }
+
+                localStorage.studentName = $("#studentName").html();
+                localStorage.comments = $("#comments").html();
+            }
+
+            function resetForm() {
+                localStorage.btiForm = [];//localStorage.originalValues;
+
+                localStorage.studentName = "";
+                $("#studentName").html("name");
+
+                localStorage.comments = "";
+                $("#comments").html("");
+
+                saveOrRepopulate();
+            }
+        }
+    </script>
+</body>
+</html>
