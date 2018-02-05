@@ -5,7 +5,7 @@ layout: default
 
 ## Assignment 1 checklist
 
-Compare your work to this sample solution. You can click any image to view it full size. Use modifier key(s) to open it in its own tab/window.
+Compare your work to this sample solution. You can right-click any image and open it in its own tab/window to view it full-size.
 
 <br>
 
@@ -17,13 +17,13 @@ U1. Home page looks similar to the example, with your name, and a decent-looking
 
 <br>
 
-U2. Local data page looks similar to the example, and clicking a row displays some details for that customer
+U2. Local data page looks similar to the example, and clicking a row displays some details for that customer. Dates have nice formatting.
 
 ![U2](https://sictweb.github.io/bti425/media/a1/localv4.png)
 
 <br>
 
-U3. Fetched data page looks similar to the example, and clicking a row displays some details for that employee
+U3. Fetched data page looks similar to the example, and clicking a row displays some details for that employee. Dates have nice formatting. Salary number is formatted as dollars.
 
 ![U3](https://sictweb.github.io/bti425/media/a1/fetchedv3.png)
 
@@ -35,7 +35,7 @@ U4. Local data page, with Knockout, looks similar to the example.
 
 <br>
 
-U5. Fetched data page, with Knockout, looks similar to the example.
+U5. Fetched data page, with Knockout, looks similar to the example. Description property is in a `<textarea>` element.
 
 ![U5](https://sictweb.github.io/bti425/media/a1/fetchedkov5.png)
 
