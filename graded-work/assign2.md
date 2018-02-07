@@ -50,20 +50,45 @@ During the Thursday classes/sessions, your professor will help you *get started*
 
 ### Getting started
 
-Open a terminal window. In a suitable file system location, create a folder, probably named "assignment2", to hold your code. 
+Open a terminal window, and navigate to a suitable file system location. We will use the `create-react-app` program to create the folder and its generated code:
 
-TBA
+```
+create-react-app assignment2
+```
+
+After it completes, verify that it runs, by using the `npm start` command; it should show the "Welcome to React" view. You can close it, and shut down (Control+C) the process in your terminal window. 
 
 Prepare the rest of your dev environment:
 * Code editor
-* Browser for running your code
 * Browser developer tools (at a minimum, you'll probably be using the element inspector, and the JavaScript console)
+
+<br>
+
+#### Add links to Bootstrap CSS and plugins
+
+Edit `public/index.html`:
+1. Add the Bootstrap CSS library link element (CDN version) to the `<head>` element
+2. Add the jQuery and Bootstrap JavaScript script elements to the end of the `<body>` element
+
+<br>
+
+#### Get some "starter" source code files
+
+To help you get started with the appearance of the "Overview" view, we have created some "starter" source code files. On the GitHub code repository, in the `Templates_and_solutions` folder, locate the `a2-source` folder. Inside, there are two source code files. 
+
+The contents of `App.js` will *replace* the generated code in App.cs. 
+
+Similarly, the contents of `index.css` will *replace* the generated code in index.css. 
+
+After you save your work and restart the app (in your terminal window), the initial view will look similar to the following:
+
+![View, step 1](media/a2-overview-step1.png)
 
 <br>
 
 ### Doing the work
 
-TBA
+( more to come )
 
 <br>
 
