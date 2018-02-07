@@ -23,7 +23,7 @@ You will notice however, that `<App />` isn't defined in index.js and neither is
 
 In our current application (index.js file), we import the modules **React**, **ReactDOM**, **App** and **registerServiceWorker**.  We can discard the **registerServiceWorker** code for now (for more infomation see: [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)).  This should leave you with the following code:
 
-```js
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -42,7 +42,7 @@ Open up the "App.js" file and you will see that we require both the "React" and 
 
 If we wish to define our component in an external .js file and make it available to be imported in other files, we simply follow the pattern:
 
-```js
+```jsx
 import React, { Component } from 'react';
 // import whatever else you like here
 
@@ -99,7 +99,7 @@ Start by wiping out the boilerplate JSX code from within the **return** statemen
 
 Once you have removed the JSX code from the render() function in the App component, it should look like the following:
 
-```javascript
+```js
 class App extends Component {
   render() {
     return (
@@ -345,7 +345,7 @@ There is one caveat, however.  If we were to add our new component to our App (i
 
 The concern here is that React uses a unique ["key" property](https://reactjs.org/docs/lists-and-keys.html#keys) to help identify which elements of a list have been changed, added or removed. If we don't have an obvious key (ie, ".\_id" from our Teams API data), we can simply use the index for each element in the array.  For example, to address the above warning, we would change the "map" code from above to read: 
 
-```javascript
+```jsx
 {this.state.names.map((name, index) => {
     return (
         <li key={index} >{name}</li>
@@ -361,7 +361,7 @@ Fortunately for us, responding to events is relatively simple in React.
 
 For example; let's say that we want to extend our ListNames component to accept some user input and dynamically add new names to the list.  We can re-write the component to include a `<button>` element that invokes a "handleListItemAdd()" method of our ListNames Component:
 
-```javascript
+```jsx
 import React, { Component } from 'react';
 
 class ListNames extends Component {
@@ -420,7 +420,7 @@ The idea here is that when the **parent** state changes, so too should the **chi
 
 For example, take the two following components; "Inner" and "Outer".  "Outer" has "outerName" in it's state and passes it to the "Inner" component using the "name" property.  The "Inner" component uses this value to initialize it's own "innerName" property in it's own state.  After 2 seconds, the "Outer" component sets the "outerName" state to "Bob".  The expectation here is that the "innerName" should be updated as well, since innerName was initialized using "this.props.name":
 
-```javascript
+```jsx
 class Inner extends Component{
   constructor(props){
     super(props)
@@ -459,7 +459,7 @@ class Outer extends Component {
 
 Unfortunately, this is not the case.  If we wish to reflect the changes of "outerName" in our "Inner" component, we must reference it using "this.props", not "this.state".  The corrected version can be seen here:
 
-```javascript
+```jsx
 class Inner extends Component{
   render(){ // this.props.name IS updated to reflect the new name: "Bob"
     return <span>{this.props.name}</span>
@@ -489,3 +489,4 @@ class Outer extends Component {
 }
 ```
 
+<br>

@@ -8,7 +8,7 @@ layout: default
 > This document is being edited.  
 > This notice will be removed when the edits are complete.
 
-The purpose or objective of the assignment is to get some experience with (React). 
+The purpose or objective of the assignment is to get some experience with React. 
 
 Read/skim all of this document before you begin work.
 
@@ -26,7 +26,9 @@ Grade value: 10% of your final course grade
 
 ### Introduction to the problem to be solved
 
-We need (TBA). 
+We need a React app that will display data from the Teams API. The app will have multiple components, and support routing. When finished, the initial or landing-page view of the app will look similar to the following:
+
+![Initial view](media/a2-view-overview.png)
 
 <br> 
 
@@ -35,11 +37,14 @@ We need (TBA).
 Here's a brief list of specifications that you must implement:
 
 * Follow best practices, guidance, and recommendations
-* TBA
+* Continues to work with your Teams API, using an add-in named "axios" 
+* Has four component views, Overview, Projects, Teams, and Employees 
+* Viewing a component is implemented by routing
+* Display-only, we will not be updating or modifying the data
 
 More details are provided below, in the section titled **"Doing the work"**.
 
-During the Thursday class/session, your professor will help you *get started* and *make progress* on the assignment. 
+During the Thursday classes/sessions, your professor will help you *get started* and *make progress* on the assignment. 
 
 <br>
 
