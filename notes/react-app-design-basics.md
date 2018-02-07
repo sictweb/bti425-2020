@@ -5,11 +5,11 @@ layout: default
 
 ## Composing a Simple Page (Using Components)
 
-Now that we have learned all about Components in React (Stateful, Statless, Functional, etc).  It's time that we start using this knowledge to create something that resembles a real page using these ideas.
+Now that we have learned all about Components in React (Stateful, Stateless, Functional, etc).  It's time that we start using this knowledge to create something that resembles a real app that uses these ideas.
 
-To get started, create a **new app** using **create-react-app**.  Once this is complete follow the steps in the terminal to start the development server (ie: **npm start**).  This *should* open a new browser window to **http://localhost:3000**, but if it doesn't - proceed to open up that url now.
+To get started, create a *new app* (maybe named "comp1") using **create-react-app**.  Once this is complete follow the steps in the terminal to start the development server (ie: **npm start**).  This *should* open a new browser window to **http://localhost:3000**, but if it doesn't - proceed to open up that url now.
 
-Notice how the create-react-app tool has created a pretty cool start page for us already (you should remember this from last week).  However, now that we know a little bit more about how React is used to define and manage "Components", let's disect what's happening here and create our own start page.
+Notice how the create-react-app tool has created a start page for us already.  However, now that we know a little bit more about how React is used to define and manage "Components", let's disect what's happening here and create our own start page.
 
 Inside the **src/index.js** file is where everything really kicks off.  It's known as the "JavaScript entry point" for our application and it's where we will put our highest level component (ie: `<App />`.  As you can see, this is exactly what create-react-app has done for us:
 
@@ -19,7 +19,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 Here, we invoke the [ReactDom.render](https://reactjs.org/docs/react-dom.html#render) method to render our primary "App" element onto the main `<div>` element in `index.html`
 
-You will notice however, that `<App />` isn't defined in index.js and neither is `ReactDOM`.  References to the original source is included via ["import"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) statements at the top of the file.  This behaviour is defined in ES6 and it simply functions as a method for us to include modules from other files.  You can think of this as analogous to our "require" statements that we use when writing server code in Node.js.  
+You will notice however, that `<App />` isn't defined in index.js and neither is `ReactDOM`.  References to the original source is included via ["import"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) statements at the top of the file.  This behaviour is defined in ES6 and it simply is the way for us to include modules from other source code files.  You can think of this as analogous to our "require" statements that we use when writing server code in Node.js.  
 
 In our current application (index.js file), we import the modules **React**, **ReactDOM**, **App** and **registerServiceWorker**.  We can discard the **registerServiceWorker** code for now (for more infomation see: [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)).  This should leave you with the following code:
 
@@ -67,7 +67,7 @@ A simple way to start thinking about what components you'll need to develop your
 
 <br>
 
-#### Incorporating Bootstrap 3.3.7
+#### Incorporating Bootstrap
 
 For simpliity, we're simply going to include all of the relavent CDN links that we've been using in the past weeks, ie:
 
@@ -117,7 +117,7 @@ We now have a fresh canvas to start adding some Bootstrap code from the [Bootstr
   
 When you have completed adding the above elements, the App component should look something like this:
 
-```javascript
+```jsx
 import React, { Component } from 'react';
 import './App.css';
 
@@ -187,7 +187,7 @@ Looking at our page, there's plenty of areas that can be broken down into "Compo
 
 The code for the "navbar" will be recycled over and over again for every page in our app, so we should make it a Component. Using the code outlined above, we can move our "navbar" into a new "external" .js file (ie: "Navbar.js") using the code:
 
-```javascript
+```jsx
 import React, { Component } from 'react';
 
 class Navbar extends Component {
@@ -226,7 +226,7 @@ And if we want to reference it within our "App" component, we can use the JSX co
 
 Since both panels are virtually identical, we can easily justify splitting them into their own external "Panel" component (ie: Panel.js), using the code:
 
-```javascript
+```jsx
 import React, { Component } from 'react';
 
 class Panel extends Component {
@@ -304,7 +304,7 @@ The above code is great for generating code that does not repeat (ie, "render th
 
 To see how we can do this in React, let's add one more "stateful" component: **ListNames**.  This component does not accept any "props" but it does have an internal "state" that holds an array of names.  
 
-```javascript
+```jsx
 import React, { Component } from 'react';
 
 class ListNames extends Component {
@@ -328,7 +328,7 @@ export default ListNames;
 
 If we wish to render each name in it's own `<li>` element, we need to embed some JavaScript into our render() method to iterate over **this.state.names** and output the resulting element.  Fortunately, as we have seen, we can provide a valid JavaScript *expression* at any point in our JSX code.  Therefore, if we want to iterate over the names collection, we can make use of the [Array Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) Method to access each element in turn and output the related data.  For example, we can replace our `<li>TODO: ...</li>`: JSX with the following code.
 
-```javascript
+```jsx
 {this.state.names.map((name, index) => {
     return (
         <li>{name}</li>
