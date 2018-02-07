@@ -37,7 +37,7 @@ We need a React app that will display data from the Teams API. The app will have
 Here's a brief list of specifications that you must implement:
 
 * Follow best practices, guidance, and recommendations
-* Continues to work with your Teams API, using an add-in named "axios" 
+* Continues to work with your Teams API, using an HTTP request add-in named "axios" 
 * Has four component views, Overview, Projects, Teams, and Employees 
 * Viewing a component is implemented by routing
 * Display-only, we will not be updating or modifying the data
@@ -69,6 +69,28 @@ Prepare the rest of your dev environment:
 Edit `public/index.html`:
 1. Add the Bootstrap CSS library link element (CDN version) to the `<head>` element
 2. Add the jQuery and Bootstrap JavaScript script elements to the end of the `<body>` element
+
+<br>
+
+#### Add new packages
+
+This app will send requests to your Teams API. React has no built-in way to compose HTTP requests. The React designers leave that to us as programmers. We could use the native `XmlHttpRequest` object, the newer `fetch` API, or any of several libraries. For this assignment, let's use a well-known library named [axios](https://github.com/axios/axios). Using a terminal window (and located in the `assignment2` folder), add axios:
+
+```
+npm install --save axios
+```
+
+Some of the data in the Teams API is date-and-time oriented. Let's continue to use the [Moment.js](https://momentjs.com) library. In Assignment 1, we referred to it using a content delivery network (CDN). In this assignment, let's add the code:
+
+```
+npm install --save moment
+```
+
+Finally, we will be creating multiple components, and replacing a large area/rectangle on the view with content from the different components. This will be done with resource URLs, and a feature called routing. The base React library does not include routing; the React designers leave that to us as programmers. We will use the well-known [React Router](https://reacttraining.com/react-router/) library. Add the code:
+
+```
+npm install --save react-router-dom
+```
 
 <br>
 
@@ -128,8 +150,10 @@ Here’s how to submit your work, before the due date and time:
 
 2. Make a copy of the folder. (You will be uploading a zipped version of the copy.)
 
-3. Compress/zip the copied folder. The zip file SHOULD be less than 1MB in size. If it isn’t, you haven’t followed the instructions properly.
+3. Inside that folder, remove (delete) the `node_modules` folder. Your professor does NOT need that folder. 
 
-4. Login to My.Seneca. Open the course area. Click the “Assignments” link on the left-side navigator. Follow the link for this assignment. Submit/upload your zip file. The page will accept three submissions, so if you upload, then decide to fix something and upload again, you can do so.
+4. Compress/zip the copied folder. The zip file SHOULD be less than 1MB in size. If it isn’t, you haven’t followed the instructions properly.
+
+5. Login to My.Seneca. Open the course area. Click the “Assignments” link on the left-side navigator. Follow the link for this assignment. Submit/upload your zip file. The page will accept three submissions, so if you upload, then decide to fix something and upload again, you can do so.
 
 <br>
