@@ -99,7 +99,7 @@ npm install --save react-router-dom
 
 To help you get started with the appearance of the "Overview" view, we have created some "starter" source code files. On the GitHub code repository, in the `Templates_and_solutions` folder, locate the `a2-source` folder. Inside, there are two source code files. 
 
-The contents of `App.js` will *replace* the generated code in App.cs. 
+The contents of `App.js` from the repo will *replace* the generated code in `App.js` in the new app. 
 
 Similarly, the contents of `index.css` will *replace* the generated code in index.css. 
 
