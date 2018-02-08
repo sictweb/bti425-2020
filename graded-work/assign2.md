@@ -170,6 +170,8 @@ For the next while, we'll cut (take) code from `App.js` and paste it into the ap
 
 Take the `<nav>` element code from `App.js`, and paste it in the render function in the NavBar component, replacing the existing "hello world" `<div>` element. 
 
+Modify the navbar brand element by adding YOUR name (so that it's clearly visible when we use the app). 
+
 <br>
 
 **SideBar component**
