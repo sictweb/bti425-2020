@@ -278,6 +278,25 @@ In the table, render the employee name (nicely, in first name plus last name for
 
 **Overview component**
 
+Remember how the `App.js` looked, just after you pasted in the starter code from the GitHub repository. It rendered static content on an "overview" page. 
+
+Now it's time to transform its ideas into a proper overview *component*. 
+
+Above, you created the Overview component. Its render method returned a generic "hello world" div. Replace that with real code, as discussed next. 
+
+Review (again) the starter code for `App.js`. Notice how the overview content is organized. From top-to-bottom, it has the following elements:
+* h1 to hold the "Overview" title text 
+* div row, to hold the following panels...
+* div panel, to hold the projects info
+* div panel, to hold the teams info
+* div panel, to hold the employees info
+
+That's our plan. Write the markup now. The contents of the div panels can be empty at first. 
+
+Now, fill in the div panels. With more divs? No. With custom elements that match your component names! In other words, for example, `<ProjectsPanel>`. 
+
+When you do this - reference other components - you MUST ensure that you "import..." the component (by adding statements near the top of the source code file). 
+
 ( more to come )
 
 TBA
