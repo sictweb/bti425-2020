@@ -225,13 +225,13 @@ Now that we have the main container component partially done, replace the big bl
   )
 ```
 
-Later, we will modify ths again, but this will work for now. 
+Later, we will modify this again, but this will work for now. 
 
 <br>
 
 **ProjectsPanel component**
 
-Your tasks get more interesting and challenging now, and for the remainder of the assignment. Remember to refer to the notes and documentation. Don't use Stack Overflow. 
+Your tasks get more interesting and challenging now, and for the remainder of the assignment. Remember to refer to the notes and documentation (for React, add-in libraries, MDN for HTML, CSS, JavaScript, etc.). Don't use Stack Overflow. 
 
 This ProjectsPanel component will be the first one to include code for these three methods:
 * constructor()
@@ -254,24 +254,29 @@ Now, we can work on the `render()` method. The content will be rendered in a pan
 
 The number of days is a calculated value. Use the Moment.js library to generate an integer value. 
 
-In [the notes](https://sictweb.github.io/bti425/notes/react-app-design-basics#rendering-data-in-a-collection), you learned how to render data in a collection. That's what we will do here. 
-
+In [the notes](https://sictweb.github.io/bti425/notes/react-app-design-basics#rendering-data-in-a-collection), you learned how to render data in a collection. That's what we will do here. Follow the guidance in the notes, and in the documentation. 
 
 <br>
 
 **TeamsPanel component**
 
-TBA
+The guidance here will be similar to the ProjectsPanel above. Follow it, and make changes (logic, symbol names, etc.) where necessary and appropriate. 
+
+In the table, render the team name, and the number of employees on the team. 
 
 <br>
 
 **EmployeesPanel component**
 
-TBA
+The guidance here will be similar to the two panels above. Follow it, and make changes (logic, symbol names, etc.) where necessary and appropriate. 
+
+In the table, render the employee name (nicely, in first name plus last name format, and the employee's job/position/title. 
 
 <br>
 
 **Overview component**
+
+( more to come )
 
 TBA
 
@@ -289,7 +294,7 @@ TBA
 
 <br>
 
-#### Implement the results
+#### Implement routing
 
 TBA
 
