@@ -37,8 +37,8 @@ We need a React app that will display data from the Teams API. The app will have
 Here's a brief list of specifications that you must implement:
 
 * Follow best practices, guidance, and recommendations
-* Continues to work with your Teams API, using an HTTP request add-in named "axios" 
 * Has four data-oriented component views, Overview, Projects, Teams, and Employees 
+* Continues to work with your Teams API, using an HTTP request add-in named "axios" 
 * Has other structural views (nav header, sidebar, main container, not found)
 * Viewing a data-oriented component is implemented by routing
 * Display-only, we will not be updating or modifying the data
@@ -170,8 +170,6 @@ For the next while, we'll cut (take) code from `App.js` and paste it into the ap
 
 Take the `<nav>` element code from `App.js`, and paste it in the render function in the NavBar component, replacing the existing "hello world" `<div>` element. 
 
-> Suggestion: Back in `App.js`, add a comment to remind you that you cut out some code. 
-
 <br>
 
 **SideBar component**
@@ -215,13 +213,49 @@ Now that you know its organization, do some coding. Using the code in `App.js` t
 
 <br>
 
-( more to come )
+At this point in time, we can modify `App.js` again. 
+
+> Suggestion/tip: Before you do the next task, save the current markup in the render method. As you write the panel components below, copying the existing content will save you a bit of time when creating the panel markup structures.
+
+Now that we have the main container component partially done, replace the big block of code with a simpler return value. Something like this:
+
+```jsx
+  return (
+      <MainContainer />
+  )
+```
+
+Later, we will modify ths again, but this will work for now. 
 
 <br>
 
 **ProjectsPanel component**
 
-TBA
+Your tasks get more interesting and challenging now, and for the remainder of the assignment. Remember to refer to the notes and documentation. Don't use Stack Overflow. 
+
+This ProjectsPanel component will be the first one to include code for these three methods:
+* constructor()
+* componentDidMount()
+* render()
+
+It is also probably the first one to need more libraries. Near the top of the source code, right after the first "import React..." statement, add statements to import axios and moment.
+
+The `constructor()` method will define the component's local state/storage properties. We will need one, an empty array for the projects. 
+
+The `componentDidMount()` method will load the data into the projects array. How? It will fetch from your Teams API. This is where you will use the axios library. 
+
+Here's a typical pattern that will get you started:
+
+![Panel component example](../media/a2/component-panel-projects-example.png)
+
+<br>
+
+Now, we can work on the `render()` method. The content will be rendered in a panel, and it will be about one-third of the available width. Therefore, let's render only a couple of project properties. One will be the project name, and the other will be the number of days since the project was created. 
+
+The number of days is a calculated value. Use the Moment.js library to generate an integer value. 
+
+In [the notes](https://sictweb.github.io/bti425/notes/react-app-design-basics#rendering-data-in-a-collection), you learned how to render data in a collection. That's what we will do here. 
+
 
 <br>
 
