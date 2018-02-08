@@ -43,14 +43,44 @@ U5. Fetched data page, with Knockout, looks similar to the example. Description 
 
 ### Program design and coding
 
-C1. Page template code, top...
+C5. Local data: Table row loading example
 
-![C1](media/a1-c1-top.png)
-
-...and bottom...
-
-![C1](media/a1-c1-bottom.png)
+![C5](media/a1-c5-code.png)
 
 <br>
 
-C2. 
+C6. Local data: Click handling code example
+
+![C6](media/a1-c6-code-click.png)
+
+<br>
+
+C7. Fetched data: jQuery Ajax code example, top...
+
+![C7](media/a1-c7-fetch-code-top.png)
+
+...and bottom...
+
+![C7](media/a1-c7-fetch-code-bottom.png)
+
+<br>
+
+C8. Local data, with Knockout: HTML code example...
+
+![C8](media/a1-c8-ko-html.png)
+
+...and JavaScript code example...
+
+![C8](media/a1-c8-ko-code.png)
+
+<br>
+
+C9. Fetched data, with Knockout: HTML code example...
+
+![C9](media/a1-c9-ko-html.png)
+
+...and JavaScript code example...
+
+![C9](media/a1-c9-ko-code.png)
+
+<br>
