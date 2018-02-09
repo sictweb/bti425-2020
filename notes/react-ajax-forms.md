@@ -1,5 +1,5 @@
 ---
-title: React AJAX & forms
+title: React Ajax & forms
 layout: default
 ---
 
@@ -16,9 +16,11 @@ This will give us a complete introduction on using forms within and how we can u
 
 <br>
 
-## AJAX & Teams API
+## Ajax and the Teams API
 
-If a component is going to fetch data from an external API, such as our Teams API, it is typically done in the **"componentDidMount()"** lifecycle method in order to populate the component's "state" with the results.  In React there's nothing built in that supports making an AJAX request, however we have a number of 3rd party modules to choose from (ie: [axios](https://github.com/axios/axios), [superagent](https://github.com/visionmedia/superagent), [fetch](https://github.com/github/fetch), etc.).
+If a component is going to fetch data from an external API, such as our Teams API, it is typically done in the **"componentDidMount()"** lifecycle method in order to populate the component's "state" with the results.  
+
+In React there's nothing built in that supports making an Ajax request, however we have a number of JavaScript (e.g. XmlHttpRequest, the new fetch API) and third-party modules to choose from (e.g. [axios](https://github.com/axios/axios), [superagent](https://github.com/visionmedia/superagent), [fetch](https://github.com/github/fetch), etc.).
 
 For our purposes, we will go with "axios", since it works with the familiar **promise** pattern.  To add axios to the app, simply execute the command (after terminating the development server with ctrl+c)
 
@@ -31,6 +33,8 @@ Once it's installed, we simply have to "import" it wherever we wish to use it:
 ```javascript
 import axios from 'axios';
 ```
+
+<br>
 
 ### Fetching the Data
 
@@ -48,7 +52,10 @@ componentDidMount() {
 }
 ```
 
-### Putting it together - Week 5 Example Code
+<br>
 
-To see how we can put all the ideas from Week 5 together in a single React web application, we will be walking through the [Week 5 example](https://github.com/sictweb/web422/tree/master/Code%20Examples/week5) from our Github repo.  Here, we will see how we can load / modify "Employee" data, access different routes and render Bootstrap components in a structured, component-oriented manner.
+### Putting it together - Example Code
 
+To see how we can put all the ideas from Week 5 together in a single React web application, we will be walking through the [Week 5 example](https://github.com/sictweb/bti425/tree/master/Week_05) from our GitHub repo.  Here, we will see how we can load / modify "Employee" data, access different routes and render Bootstrap components in a structured, component-oriented manner.
+
+<br>
