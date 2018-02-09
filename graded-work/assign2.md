@@ -5,7 +5,8 @@ layout: default
 
 ## BTI425 Assignment 2
 
-> This document is being edited.  
+> This document is substantially complete, and ready to use.  
+> A few more images (screen capture samples etc.) will be added, and a few clean-up edits may happen.  
 > This notice will be removed when the edits are complete.
 
 The purpose or objective of the assignment is to get some experience with React. 
@@ -101,7 +102,7 @@ To help you get started with the appearance of the "Overview" view, we have crea
 
 The contents of `App.js` from the repo will *replace* the generated code in `App.js` in the new app. 
 
-Similarly, the contents of `index.css` will *replace* the generated code in index.css. 
+Similarly, the contents of `index.css` from the repo will *replace* the generated code in `index.css` in the new app. 
 
 After you save your work and restart the app (in your terminal window), the initial view will look similar to the following:
 
@@ -291,39 +292,97 @@ Review (again) the starter code for `App.js`. Notice how the overview content is
 * div panel, to hold the teams info
 * div panel, to hold the employees info
 
-That's our plan. Write the markup now. The contents of the div panels can be empty at first. 
+That's our plan. Write the markup now, using this organization to guide you. The contents of the div panels can be empty at first. The elements above are wrapped in an enclosing `<MainContainer>` element. 
 
-Now, fill in the div panels. With more divs? No. With custom elements that match your component names! In other words, for example, `<ProjectsPanel>`. 
+Now, fill in the div panels. With more divs? No. With *custom elements* that match your component names! In other words, for example, `<ProjectsPanel>`. 
 
 When you do this - reference other components - you MUST ensure that you "import..." the component (by adding statements near the top of the source code file). 
 
-( more to come )
-
-TBA
+One more thing: Now that you have harvested the layout code from `App.js`, what code does its render method return now? The custom element `<Overview />`. 
 
 <br>
 
 #### Add data-fetching to each component
 
-TBA
+Above, you should have added data-fetching capability to each panel in the overview component. If this was not done, then circle back and add that capability now. 
+
+Above, you created and configured a sidebar component. In our app, we want the bottom-right area of the view (below the navbar and to the right of the sidebar) to be replaced by a new view whenever a user clicks on one of the sidebar items. 
+
+Let's prepare for that now. Above, you created small-area components (ProjectsPanel, TeamsPanel, and EmployeesPanel), so that they could be placed inside the view that's managed by the overview component. Although we could use those here, we instead want larger and more detailed components. 
+
+Before continuing, use the technique you learned above to create and initially configure getting-started versions of three new components:
+* Projects
+* Teams
+* Employees
 
 <br>
 
-**(subsections)**
+**Configuring the new Projects component**
 
-TBA
+This task will be similar to what you did above in the ProjectsPanel section. In other words, a constructor method and a componentDidMount method will be added, and configured to fetch data from the Teams API. 
+
+The difference happens when rendering the table. You want to display more columns. 
+
+There is one more difference: The top-level element in the render method is `<MainContainer>`. 
+
+<br>
+
+**Configuring the new Teams and Employees components**
+
+As you would expect, this task will be similar to the task above (Projects). The only real differences are the fetched data and the rendered table columns. 
+
+<br>
+
+**Configuring the NotFound component**
+
+We will use this view if or when a route is not handled. (Obviously, more about routing is in the following major section.)
+
+Its render method will return a `<MainContainer>` element. Inside that, a suitable header (e.g. h2 maybe) and a bit of text to tell the user that the requested view was not found.
 
 <br>
 
 #### Implement routing
 
-TBA
+Some of this work is done in `index.js`:
+
+First, import the router module.
+
+```jsx
+import {BrowserRouter} from 'react-router-dom'
+```
+
+Then, in the render method, wrap the existing `<App />` element with a new `<BrowserRouter>` element. 
+
+Some of this work is done in `App.js`. It is similar to what you learned in the [React routing notes](https://sictweb.github.io/bti425/notes/react-routing#appjs):
+
+First, import some classes from the React Router package.
+
+```jsx
+import {Switch, Route} from 'react-router-dom';
+```
+
+Then, in the render method, create a switch-route hierarchy to implement the routing. Follow the guidance in the notes. 
 
 <br>
 
-**(subsections)**
+**Updating all `<a>` links to use routing instead**
 
-TBA
+Now, go back to every new (added) component, and look for `<a>` elements that are related to routing. The sidebar will need some work, but there may be others. 
+
+Next, in each component that needs attention, import the "link" class from React Router.
+
+```jsx
+import {Link} from 'react-router-dom';
+```
+
+Then, replace the link code:
+
+```html
+<!-- Old 'a' element... -->
+<a href='fooPath'>Foo</a>
+<!-- New 'Link' element... -->
+<Link to='fooPath'>Foo<Link>
+```
 
 <br>
 
