@@ -5,17 +5,17 @@ layout: default
 
 ## "Routing" in React
 
-One of the key components in creating a SPA (Single Page Application) is Routing.  When Routing is implemented using a framework like React, we will find that we can browse different URL's within our app without actually reloading the page.  In this case, the components of one URL are swapped out for the components of another, giving the illusion that we're navigating through multiple pages, when we're really just adding / removing components based on the browser URL / history.  Our User-Interface is in sync with the URL.
+One of the key components in creating a SPA (Single Page Application) is Routing.  When Routing is implemented using a framework like React, we will find that we can browse different URL's within our app without actually reloading the page.  In this case, the components of one URL are swapped out for the components of another, giving the illusion that we're navigating through multiple pages, when we're really just adding / removing components based on the browser URL / history.  Our user interface is in-sync with the URL.
 
-Recently, the major routing library used to achieve this in react; **React Router** has been updated to [version 4](https://reacttraining.com/react-router/):
+Recently, the most widely-used routing library used to achieve this in react; **React Router** has been updated to [version 4](https://reacttraining.com/react-router/):
 
 > Components are the heart of React's powerful, declarative programming model. React Router is a collection of navigational components that compose declaratively with your application. Whether you want to have bookmarkable URLs for your web app or a composable way to navigate in React Native, React Router works wherever React is rendering.
 
 <br>
 
-## Getting Started using React Router v4
+## Getting Started using React Router
 
-To start using the React Router library in our web app, we must first fetch react-router-dom using npm (once we have halted our debugging server using ctrl+c), ie:
+To start using the React Router library in our web app, we must first fetch react-router-dom using npm (once we have halted our debugging server using Control+C):
 
 ```
 npm install react-router-dom --save
@@ -23,7 +23,7 @@ npm install react-router-dom --save
 
 Now, let's say that we have 3 top-level components that represent 3 separate views, ie: **Home**, **Projects** and **Project**:
 
-```javascript
+```jsx
 class Home extends Component{
   render(){
     return <h1>Home Page</h1>
@@ -51,16 +51,16 @@ If we wish to conditionally render each of the above components (views) based on
 * "/projects" renders &lt;Projects /&gt;
 * "/project" renders &lt;Project /&gt;
 
-we need to modify our App.js file as well as our index.js file.
+We need to modify our App.js file as well as our index.js file.
 
 <br>
 
-### index.js
+### index.js changes
 
 * "import" the `<BrowserRouter>` Component using `import { BrowserRouter } from 'react-router-dom'` 
 * Update the ReactDom.render() method to wrap the `<App />` component in a `<BrowserRouter>` component:
 
-  ```javascript
+  ```jsx
   ReactDOM.render(
     <BrowserRouter>
         <App />
@@ -68,30 +68,32 @@ we need to modify our App.js file as well as our index.js file.
   , document.getElementById('root'));
   ```
 
-The above code specifies the type of router that we will be using in our `<App />` component.  This could be either [&lt;BrowserRouter&gt;](https://reacttraining.com/react-router/web/api/BrowserRouter) or [&lt;HashRouter&gt;](https://reacttraining.com/react-router/web/api/HashRouter) - here, we have decided to use `<BrowserRouter>`, as the Hash Router technique is only really intended to support legacy browsers.
+FYI, if you have to work with old obsolete legacy browser versions: The above code specifies the type of router that we will be using in our `<App />` component.  This could be either [&lt;BrowserRouter&gt;](https://reacttraining.com/react-router/web/api/BrowserRouter) or [&lt;HashRouter&gt;](https://reacttraining.com/react-router/web/api/HashRouter). The Hash Router technique is used to support legacy browsers.
 
 <br>
 
-### App.js
+### App.js changes
 
-* "import" the `<Route>` and `<Switch>` Components using `import { Route, Switch } from 'react-router-dom'`
-* Update the render() method of the "App" class to use the following JSX:
+Import the `<Route>` and `<Switch>` components:  
+`import { Route, Switch } from 'react-router-dom'`
 
-  ```javascript
-  <Switch>
-        <Route exact path='/' render={() => (
-                <Home />
-        )}/>
-        <Route exact path='/Projects' render={() => (
-                <Projects  />
-        )}/>
-        <Route exact path='/Project' render={() => (
-                <Project  />
-        )}/>
-  </Switch>
-  ```
+Update the render() method of the "App" class to use the following JSX:
+
+```jsx
+<Switch>
+    <Route exact path='/' render={() => (
+        <Home />
+    )}/>
+    <Route exact path='/Projects' render={() => (
+        <Projects  />
+    )}/>
+    <Route exact path='/Project' render={() => (
+        <Project  />
+    )}/>
+</Switch>
+```
   
-Here, we can define our routes explicitly using the ["Switch" component](https://reacttraining.com/react-router/web/api/Switch) with our 3 nested ["Route" components](https://reacttraining.com/react-router/web/api/Route).  Each of the routes have a "path" property which we use to define the target route, as well as a "render" property which defines which component will be rendered for that route.  
+Here, we can define our routes explicitly using the ["Switch" component](https://reacttraining.com/react-router/web/api/Switch) with our three nested ["Route" components](https://reacttraining.com/react-router/web/api/Route).  Each of the routes have a "path" property which we use to define the target route, as well as a "render" property which defines which component will be rendered for that route.  
 
 In all three above routes, we use the ["exact"](https://reacttraining.com/react-router/web/api/Route/exact-bool) because we want to match the route *exactly* (ie, we don't care about "/Project/1" yet, only "/Project") 
 
@@ -103,7 +105,7 @@ If we wish to pass a specific URL pattern to a given route, we can use the same 
 
 * Update the "Project" component's "render()" method to include a reference to an "id" property:
 
-  ```javascript
+  ```jsx
   render(){
     return <h1>Project {this.props.id} Page</h1>
   }
@@ -111,7 +113,7 @@ If we wish to pass a specific URL pattern to a given route, we can use the same 
 
 * Update the "Project" `<Route>` component:
 
-  ```javascript
+  ```jsx
   <Route path='/Project/:id' render={(props) => (
       <Project id={props.match.params.id} />
   )}/>
@@ -127,9 +129,9 @@ Using React Router, we can easily define a "Not Found" route - this is analagous
 
 To add a "Not Found" route, we simply need to add another route as a child to our `<Switch>` component defined in App.js.  This route will need to be **beneath** the other routes, so that it doesn't block any of our legitimate routes:
 
-```javascript
+```jsx
 <Route render={() => (
-        <h1>Not Found</h1>
+    <h1>Not Found</h1>
 )}/>
 ```
 
@@ -158,6 +160,8 @@ Sometimes, we wish to "redirect" the user to a different route and override the 
 
 React provides an intuitive way to achieve this, by providing a special [&lt;Redirect /&gt;](https://reacttraining.com/react-router/web/api/Redirect) component.  When rendered, it will redirect the client to the specified route using the following syntax (Note: the use of "push" will add the new route to the "history" stack):
 
-```
+```jsx
 <Redirect push to={"/newRoute"} />
 ```
+
+<br>
