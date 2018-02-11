@@ -13,6 +13,12 @@ Remember to frequently use the [learning resources](/bti425/resources).
 
 <br>
 
+**Test 2 is on Tuesday, February 13**
+
+The test questions are based on the React topics and learning experience, during last week *and* this week. 
+
+<br>
+
 **Topics:**
 
 [React App Structure / Organization (Simple Style Guide) & Creating Pages using Components](react-app-design-basics)

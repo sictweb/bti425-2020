@@ -134,7 +134,9 @@ import React, { Component } from 'react';
 // Declare your Component here
 class SomeComponent extends Component{
   render(){
-    return <div>Hello World</div>;
+    return (
+      <div>Hello World</div>
+    );
   }
 }
 
@@ -218,17 +220,38 @@ Now that you know its organization, do some coding. Using the code in `App.js` t
 
 At this point in time, we can modify `App.js` again. 
 
-> Suggestion/tip: Before you do the next task, save the current markup in the render method. As you write the panel components below, copying the existing content will save you a bit of time when creating the panel markup structures.
+> Suggestion/tip: Before you do the next task, save (or comment out) the current markup in the render method. As you write the panel components below, copying the existing content will save you a bit of time when creating the panel markup structures.
 
 Now that we have the main container component partially done, replace the big block of code with a simpler return value. Something like this:
 
 ```jsx
   return (
-      <MainContainer />
-  )
+      <MainContainer>
+      </MainContainer>
+  );
 ```
 
-Later, we will modify this again, but this will work for now. 
+Later, we will modify this again, but this will work for now. At this point in time, here's what the app looks like. Notice that all the panel details (i.e. info about projects, teams, and employees) has disappeared:
+
+![Main container code](media/a2-maincontainer-view-v2.png)
+
+<br>
+
+**Overview component, again**
+
+Let's return to the coding for the overview component again. When we last worked with it, its render method returned a hello world div. Let's change that, so that it will return placeholders for the panels. 
+
+First, replace the existing div with an empty div, which will be a container. 
+
+Next, add an `<h1>` element to hold the view's title, "Overview". The value of its class attribute will be "page-header". Remember that in JSX, the name of the HTML class attribute is transformed into "className". 
+
+Next, we need another div, and the value of its class attribute will be "row". Again, remember in JSX, "class" becomes "className". 
+
+Inside that div, we can add three more divs. Each will be one-third the width of the viewport (i.e. col-md-4). Inside each, add some placeholder text for each panel. 
+
+Back in `App.js`, import the overview component, and inside the MainContainer element, add the `<Overview />` element. Run the app, and the result may look something like this:
+
+![Main container code](media/a2-maincontainer-view-v3.png)
 
 <br>
 
