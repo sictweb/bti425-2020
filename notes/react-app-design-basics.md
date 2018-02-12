@@ -207,7 +207,7 @@ class Navbar extends Component {
 export default Navbar;
 ```
 
-Here, we have removed all of the "nav" code and placed it in it's own "Navbar" component, defined in "Navbar.js" (**src/Navbar.js**).  The static text has been removed in favour of accepting a "title" property to our new component.
+Here, we have removed all of the "nav" code and placed it in its own "Navbar" component, defined in "Navbar.js" (**src/Navbar.js**).  The static text has been removed in favour of accepting a "title" property to our new component.
 
 Now, if any other file wishes to use the component, they can simply "import" the module.  For example, to ensure that we can use it in our App.js file, we add the line:
 
@@ -247,7 +247,7 @@ class Panel extends Component {
 export default Panel;
 ```
 
-Here, we have removed all of the "panel" code and placed it in it's own component, defined in "Panel.js" (**src/Panel.js**).  The static title has been removed in favour of accepting a "title" property and the "content" of the panel is set up to render all components that rest inside the <Panel></Panel> element.  This is accomplished via a reserved property: **"children"**.
+Here, we have removed all of the "panel" code and placed it in its own component, defined in "Panel.js" (**src/Panel.js**).  The static title has been removed in favour of accepting a "title" property and the "content" of the panel is set up to render all components that rest inside the <Panel></Panel> element.  This is accomplished via a reserved property: **"children"**.
 
 Like our "Navbar" component, if any other file wishes to use the "Panel", they can simply "import" the module.  For example, to ensure that we can use it in our App.js file, we add the line:
 
@@ -326,7 +326,7 @@ class ListNames extends Component {
 export default ListNames;
 ```
 
-If we wish to render each name in it's own `<li>` element, we need to embed some JavaScript into our render() method to iterate over **this.state.names** and output the resulting element.  Fortunately, as we have seen, we can provide a valid JavaScript *expression* at any point in our JSX code.  Therefore, if we want to iterate over the names collection, we can make use of the [Array Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) Method to access each element in turn and output the related data.  For example, we can replace our `<li>TODO: ...</li>`: JSX with the following code.
+If we wish to render each name in its own `<li>` element, we need to embed some JavaScript into our render() method to iterate over **this.state.names** and output the resulting element.  Fortunately, as we have seen, we can provide a valid JavaScript *expression* at any point in our JSX code.  Therefore, if we want to iterate over the names collection, we can make use of the [Array Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) Method to access each element in turn and output the related data.  For example, we can replace our `<li>TODO: ...</li>`: JSX with the following code.
 
 ```jsx
 {this.state.names.map((name, index) => {
@@ -416,9 +416,9 @@ Also, we must to explicitly "bind" **this** to the handleListItemAdd method in t
 
 There is one stateful pattern that you may be tempted to try: setting the state of a child component via "props" to the "state" value of the parent.  
 
-The idea here is that when the **parent** state changes, so too should the **child** state.  Unfortunately, this does not occur, since each element has it's own state. Changes in the parent will not affect changes in the child, even if the value is passed via "props". 
+The idea here is that when the **parent** state changes, so too should the **child** state.  Unfortunately, this does not occur, since each element has its own state. Changes in the parent will not affect changes in the child, even if the value is passed via "props". 
 
-For example, take the two following components; "Inner" and "Outer".  "Outer" has "outerName" in it's state and passes it to the "Inner" component using the "name" property.  The "Inner" component uses this value to initialize it's own "innerName" property in it's own state.  After 2 seconds, the "Outer" component sets the "outerName" state to "Bob".  The expectation here is that the "innerName" should be updated as well, since innerName was initialized using "this.props.name":
+For example, take the two following components; "Inner" and "Outer".  "Outer" has "outerName" in its state and passes it to the "Inner" component using the "name" property.  The "Inner" component uses this value to initialize its own "innerName" property in its own state.  After 2 seconds, the "Outer" component sets the "outerName" state to "Bob".  The expectation here is that the "innerName" should be updated as well, since innerName was initialized using "this.props.name":
 
 ```jsx
 class Inner extends Component{

@@ -218,6 +218,10 @@ Now that you know its organization, do some coding. Using the code in `App.js` t
 
 <br>
 
+Recall from [the notes](https://sictweb.github.io/bti425/notes/react-app-design-basics#the-panels) and the [React documentation](https://reactjs.org/docs/jsx-in-depth.html#jsx-children) that `this.props.children` is a special property. It represents the content (elements and/or text) that are inside the tags. 
+
+To explain, this MainContainer component has content that is known now (the structural/layout divs, and the NavBar and SideBar components). However, it will have more content added in the future, dynamically. That's what `this.props.children` represents. 
+
 At this point in time, we can modify `App.js` again. 
 
 > Suggestion/tip: Before you do the next task, save (or comment out) the current markup in the render method. As you write the panel components below, copying the existing content will save you a bit of time when creating the panel markup structures.
@@ -234,6 +238,10 @@ Now that we have the main container component partially done, replace the big bl
 Later, we will modify this again, but this will work for now. At this point in time, here's what the app looks like. Notice that all the panel details (i.e. info about projects, teams, and employees) has disappeared:
 
 ![Main container view](media/a2-maincontainer-view-v2.png)
+
+<br>
+
+Returning to the discussion about `this.props.children`, this makes sense. There is no content (elements and/or text) inside the MainContainer tags. In the near future, there will be, when we add (for example) the custom `<Overview />` element. At that point in time, the Overview component will be in the `this.props.children` collection, and will render. Interesting, yes?
 
 <br>
 
@@ -331,11 +339,17 @@ Before continuing, use the technique you learned above to create and initially c
 
 **Configuring the new Projects component**
 
-This task will be similar to what you did above in the ProjectsPanel section. In other words, a constructor method and a componentDidMount method will be added, and configured to fetch data from the Teams API. 
+This task will be similar to what you did above in the ProjectsPanel section. In other words, a constructor method and a componentDidMount method will be added, and configured to fetch data from the Teams API. Much of that code can be reused as-is. 
 
-The difference happens when rendering the table. You want to display more columns. 
+The difference happens when rendering the table. You want to display more columns (and maybe size the columns nicely). 
 
-There is one more difference: The top-level element in the render method is `<MainContainer>`. 
+How can you see the result? We need to configure routing, but that will happen in the next major section. Until then, is there a quick way to view this component? 
+
+Yes. Edit `App.js`. Comment out the custom overview element, and add in this new `<Projects />` element. (Remember to import this new projects component too.)
+
+Run the app, and the result may look something like this:
+
+![Projects view](media/a2-projects-view-v1.png)
 
 <br>
 
@@ -355,22 +369,42 @@ Its render method will return a `<MainContainer>` element. Inside that, a suitab
 
 #### Implement routing
 
-Some of this work is done in `index.js`:
+Up until now, we were able to see the results of our work by manually editing `App.js`, and adding custom elements to show each view (overview, projects, teams, and employees). 
 
-First, import the router module.
+In this section, we will add and configure the *routing* feature. The initial work is done in `index.js` - import the router module.
 
 ```jsx
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 ```
 
 Then, in the render method, wrap the existing `<App />` element with a new `<BrowserRouter>` element. 
 
-Some of this work is done in `App.js`. It is similar to what you learned in the [React routing notes](https://sictweb.github.io/bti425/notes/react-routing#appjs):
+<br>
+
+**Changes in `App.js` and other components**
+
+Until now, the `App.js` render method looked something like this as you wrote code and tested the results:
+
+```jsx
+    return (
+      <MainContainer>
+          {/* <Overview /> */}
+          {/* <Projects /> */}
+          {/* <Teams /> */}
+          {/* <Employees /> */}
+          <NotFound />
+      </MainContainer>
+    );
+```
+
+This was OK, as it helped you learn, and helped you make progress in an incremental way. Now, we must **move** the wrapper component "MainContainer" to **each** of the other components (overview, projects, teams, employees, and not found). Do that now before continuing. (It is likely that you can just replace the top-level div element with the MainContainer custom element. Remember to import that component too.) 
+
+Return to editing `App.js`. The next task is similar to what you learned in the [React routing notes](https://sictweb.github.io/bti425/notes/react-routing#appjs):
 
 First, import some classes from the React Router package.
 
 ```jsx
-import {Switch, Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 ```
 
 Then, in the render method, create a switch-route hierarchy to implement the routing. Follow the guidance in the notes. 
