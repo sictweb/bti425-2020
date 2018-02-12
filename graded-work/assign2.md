@@ -5,10 +5,6 @@ layout: default
 
 ## BTI425 Assignment 2
 
-> This document is substantially complete, and ready to use.  
-> A few more images (screen capture samples etc.) will be added, and a few clean-up edits may happen.  
-> This notice will be removed when the edits are complete.
-
 The purpose or objective of the assignment is to get some experience with React. 
 
 Read/skim all of this document before you begin work.
@@ -192,7 +188,7 @@ Next, we're going to add some code that will highlight the "active" view. (We ar
 
 We are not yet done, because we do not actually want to hard-code these `<li>` items with the class. Instead, we want to programmatically determine which is active. How? By passing some data to the sidebar component, something that will indicate whether it should be active. (Again, we are preparing for a future task.) 
 
-Therefore, change the hard-coded class with a React expression. For example, here is the first `<li>` element from the sidebar, coded as an expression:
+Therefore, change the hard-coded class with a React expression. This will be done four times, one for each of overview, projects, teams, and employees. For example, here is the first `<li>` element from the sidebar, coded as an expression:
 
 ```jsx
 // As a conditional expression...
@@ -411,6 +407,50 @@ Then, in the render method, create a switch-route hierarchy to implement the rou
 
 <br>
 
+**Updating the SideBar with the active view**
+
+Notice that the highlighted value in the SideBar does not change when the view changes. Let's fix that now. 
+
+First, let's trace this all the way through. Start with the SideBar component. Remember above, you updated all four sidebar link `<a>` elements with a dynamic class name, for example:
+
+```jsx
+<li className={(this.props.highlight === 'Projects' ? 'active' : '')}><a href="/projects">Projects</a></li>
+```
+
+This code tells us that it is expecting the value of the "highlight" property to be *passed in*. Where is the code that passes in the value? Well, answer the question: What other component is the sidebar inside of? MainContainer. 
+
+Look at the code for MainContainer, and locate the `<SideBar >` element. Add an attribute named "highlight". Its value must be dynamic, because the main container component is *also* inside another component. (Actually, it's inside of *four* components, overview, projects, teams, and employees.) Let's assume that each of these components will pass in a value to MainContainer, which will pass on that value to SideBar.
+
+Let's use `this.props.sidebar` as the value for the "highlight" attribute. Its code may look something like the following:
+
+```jsx
+<SideBar highlight={this.props.sidebar} />
+```
+
+Finally, we must visit all four components that use the MainContainer component. Add an attribute named "sidebar" (which matches the property name used above). Its value will be a string. That's OK, because it's at the top of the calling hierarchy. The element in the Overview component may look something like the following:
+
+```jsx
+<MainContainer sidebar='Overview'>
+```
+
+After you do all four, the sidebar highlight should work. Above, we showed an in-progress "projects" view. Here is that view again, with the sidebar highlight working.
+
+![Projects view](media/a2-projects-view-v2.png)
+
+<br>
+
+Here is the "teams" view:
+
+![Teams view](media/a2-teams-view-v1.png)
+
+<br>
+
+Here is the "employees" view:
+
+![Employees view](media/a2-employees-view-v1.png)
+
+<br>
+
 **Updating all `<a>` links to use routing instead**
 
 Now, go back to every new (added) component, and look for `<a>` elements that are related to routing. The sidebar will need some work, but there may be others. 
@@ -418,7 +458,7 @@ Now, go back to every new (added) component, and look for `<a>` elements that ar
 Next, in each component that needs attention, import the "link" class from React Router.
 
 ```jsx
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 ```
 
 Then, replace the link code:

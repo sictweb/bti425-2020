@@ -11,6 +11,12 @@ Remember to frequently use the [learning resources](/bti425/resources).
 
 <br>
 
+**Test 1 is on Tuesday, January 30**
+
+The test questions are based on the topics and learning experience, during last week and this week.
+
+<br>
+
 **Topics:**
 
 This week, we will focus on the MVVM design pattern using [Knockout](knockout).
