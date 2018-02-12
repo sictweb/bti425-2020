@@ -233,7 +233,7 @@ Now that we have the main container component partially done, replace the big bl
 
 Later, we will modify this again, but this will work for now. At this point in time, here's what the app looks like. Notice that all the panel details (i.e. info about projects, teams, and employees) has disappeared:
 
-![Main container code](media/a2-maincontainer-view-v2.png)
+![Main container view](media/a2-maincontainer-view-v2.png)
 
 <br>
 
@@ -251,7 +251,7 @@ Inside that div, we can add three more divs. Each will be one-third the width of
 
 Back in `App.js`, import the overview component, and inside the MainContainer element, add the `<Overview />` element. Run the app, and the result may look something like this:
 
-![Main container code](media/a2-maincontainer-view-v3.png)
+![Main container view](media/a2-maincontainer-view-v3.png)
 
 <br>
 
@@ -266,7 +266,7 @@ This ProjectsPanel component will be the first one to include code for these thr
 
 It is also probably the first one to need more libraries. Near the top of the source code, right after the first "import React..." statement, add statements to import axios and moment.
 
-The `constructor()` method will define the component's local state/storage properties. We will need one, an empty array for the projects. 
+The `constructor()` method will define the component's local state/storage properties. We need one property, an empty array for the projects. 
 
 The `componentDidMount()` method will load the data into the projects array. How? It will fetch from your Teams API. This is where you will use the axios library. 
 
@@ -276,52 +276,41 @@ Here's a typical pattern that will get you started:
 
 <br>
 
-Now, we can work on the `render()` method. The content will be rendered in a panel, and it will be about one-third of the available width. Therefore, let's render only a couple of project properties. One will be the project name, and the other will be the number of days since the project was created. 
+Now, we can work on the `render()` method. The content will be rendered in a panel (use some of the code that was cut from `App.js`), and it will be about one-third of the available width. Therefore, let's render only a couple of project properties. One will be the project name, and the other will be the number of days since the project was created. 
 
 The number of days is a calculated value. Use the Moment.js library to generate an integer value. 
 
 In [the notes](https://sictweb.github.io/bti425/notes/react-app-design-basics#rendering-data-in-a-collection), you learned how to render data in a collection. That's what we will do here. Follow the guidance in the notes, and in the documentation. 
 
+Edit the overview component again. Import this projects panel component. Then, replace the placeholder text with the custom element `<ProjectsPanel />`. 
+
+Run the app, and the result may look something like this:
+
+![Main container view](media/a2-maincontainer-view-v4.png)
+
 <br>
 
 **TeamsPanel component**
 
-The guidance here will be similar to the ProjectsPanel above. Follow it, and make changes (logic, symbol names, etc.) where necessary and appropriate. 
+The guidance here will be similar to the ProjectsPanel above. Follow it, and make changes (logic, symbol names, elements, etc.) where necessary and appropriate. 
 
 In the table, render the team name, and the number of employees on the team. 
+
+Run the app, and the result may look something like this:
+
+![Main container view](media/a2-maincontainer-view-v5.png)
 
 <br>
 
 **EmployeesPanel component**
 
-The guidance here will be similar to the two panels above. Follow it, and make changes (logic, symbol names, etc.) where necessary and appropriate. 
+The guidance here will be similar to the two panels above. Follow it, and make changes (logic, symbol names, elements, etc.) where necessary and appropriate. 
 
 In the table, render the employee name (nicely, in first name plus last name format, and the employee's job/position/title. 
 
-<br>
+Run the app, and the result may look something like this:
 
-**Overview component**
-
-Remember how the `App.js` looked, just after you pasted in the starter code from the GitHub repository. It rendered static content on an "overview" page. 
-
-Now it's time to transform its ideas into a proper overview *component*. 
-
-Above, you created the Overview component. Its render method returned a generic "hello world" div. Replace that with real code, as discussed next. 
-
-Review (again) the starter code for `App.js`. Notice how the overview content is organized. From top-to-bottom, it has the following elements:
-* h1 to hold the "Overview" title text 
-* div row, to hold the following panels...
-* div panel, to hold the projects info
-* div panel, to hold the teams info
-* div panel, to hold the employees info
-
-That's our plan. Write the markup now, using this organization to guide you. The contents of the div panels can be empty at first. The elements above are wrapped in an enclosing `<MainContainer>` element. 
-
-Now, fill in the div panels. With more divs? No. With *custom elements* that match your component names! In other words, for example, `<ProjectsPanel>`. 
-
-When you do this - reference other components - you MUST ensure that you "import..." the component (by adding statements near the top of the source code file). 
-
-One more thing: Now that you have harvested the layout code from `App.js`, what code does its render method return now? The custom element `<Overview />`. 
+![Main container view](media/a2-maincontainer-view-v6.png)
 
 <br>
 
