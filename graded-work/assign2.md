@@ -472,6 +472,17 @@ Then, replace the link code:
 
 <br>
 
+**Add links to the bottom of each "panel"**
+
+One more task: At the bottom of each panel (ProjectsPanel, TeamsPanel, and EmployeesPanel), add a link to each panel's corresponding component route. (For example, the link at the bottom of the ProjectsPanel will link to the Projects component.)
+
+A styling tip or hint, the Bootstrap styles that transform a standard `<a>` (or `<Link...`) element into a nice button are as follows:
+* btn
+* btn-primary (or some other style, as appropriate to the situation)
+* form-control
+
+<br>
+
 ### Testing your work
 
 For this assignment, there is no external testing capability that can be used. 
