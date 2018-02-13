@@ -25,7 +25,7 @@ Grade value: 10% of your final course grade
 
 We need a React app that will display data from the Teams API. The app will have multiple components, and support routing. When finished, the initial or landing-page view of the app will look similar to the following:
 
-![Initial view](media/a2-view-overview.png)
+![Initial view](../media/a2/view-overview.png)
 
 <br> 
 
@@ -102,7 +102,7 @@ Similarly, the contents of `index.css` from the repo will *replace* the generate
 
 After you save your work and restart the app (in your terminal window), the initial view will look similar to the following:
 
-![View, step 1](media/a2-overview-step1.png)
+![View, step 1](../media/a2/overview-step1.png)
 
 <br>
 
@@ -210,7 +210,7 @@ Inside the "container" element, we will have the sidebar component, and then the
 
 Now that you know its organization, do some coding. Using the code in `App.js` to give you hints, write the code. Here's an example of what it may look like:
 
-![MainContainer code](media/a2-maincontainer-code-v1.png)
+![MainContainer code](../media/a2/maincontainer-code-v1.png)
 
 <br>
 
@@ -233,7 +233,7 @@ Now that we have the main container component partially done, replace the big bl
 
 Later, we will modify this again, but this will work for now. At this point in time, here's what the app looks like. Notice that all the panel details (i.e. info about projects, teams, and employees) has disappeared:
 
-![Main container view](media/a2-maincontainer-view-v2.png)
+![Main container view](../media/a2/maincontainer-view-v2.png)
 
 <br>
 
@@ -255,7 +255,7 @@ Inside that div, we can add three more divs. Each will be one-third the width of
 
 Back in `App.js`, import the overview component, and inside the MainContainer element, add the `<Overview />` element. Run the app, and the result may look something like this:
 
-![Main container view](media/a2-maincontainer-view-v3.png)
+![Main container view](../media/a2/maincontainer-view-v3.png)
 
 <br>
 
@@ -290,7 +290,7 @@ Edit the overview component again. Import this projects panel component. Then, r
 
 Run the app, and the result may look something like this:
 
-![Main container view](media/a2-maincontainer-view-v4.png)
+![Main container view](../media/a2/maincontainer-view-v4.png)
 
 <br>
 
@@ -302,7 +302,7 @@ In the table, render the team name, and the number of employees on the team.
 
 Run the app, and the result may look something like this:
 
-![Main container view](media/a2-maincontainer-view-v5.png)
+![Main container view](../media/a2/maincontainer-view-v5.png)
 
 <br>
 
@@ -314,7 +314,7 @@ In the table, render the employee name (nicely, in first name plus last name for
 
 Run the app, and the result may look something like this:
 
-![Main container view](media/a2-maincontainer-view-v6.png)
+![Main container view](../media/a2/maincontainer-view-v6.png)
 
 <br>
 
@@ -345,7 +345,7 @@ Yes. Edit `App.js`. Comment out the custom overview element, and add in this new
 
 Run the app, and the result may look something like this:
 
-![Projects view](media/a2-projects-view-v1.png)
+![Projects view](../media/a2/projects-view-v1.png)
 
 <br>
 
@@ -419,7 +419,7 @@ First, let's trace this all the way through. Start with the SideBar component. R
 
 This code tells us that it is expecting the value of the "highlight" property to be *passed in*. Where is the code that passes in the value? Well, answer the question: What other component is the sidebar inside of? MainContainer. 
 
-Look at the code for MainContainer, and locate the `<SideBar >` element. Add an attribute named "highlight". Its value must be dynamic, because the main container component is *also* inside another component. (Actually, it's inside of *four* components, overview, projects, teams, and employees.) Let's assume that each of these components will pass in a value to MainContainer, which will pass on that value to SideBar.
+Look at the code for MainContainer, and locate the `<SideBar />` element. Add an attribute named "highlight". Its value must be dynamic, because the main container component is *also* inside another component. (Actually, it's inside of *four* components, overview, projects, teams, and employees.) Let's assume that each of these components will pass in a value to MainContainer, which will pass on that value to SideBar.
 
 Let's use `this.props.sidebar` as the value for the "highlight" attribute. Its code may look something like the following:
 
@@ -435,19 +435,19 @@ Finally, we must visit all four components that use the MainContainer component.
 
 After you do all four, the sidebar highlight should work. Above, we showed an in-progress "projects" view. Here is that view again, with the sidebar highlight working.
 
-![Projects view](media/a2-projects-view-v2.png)
+![Projects view](../media/a2/projects-view-v2.png)
 
 <br>
 
 Here is the "teams" view:
 
-![Teams view](media/a2-teams-view-v1.png)
+![Teams view](../media/a2/teams-view-v1.png)
 
 <br>
 
 Here is the "employees" view:
 
-![Employees view](media/a2-employees-view-v1.png)
+![Employees view](../media/a2/employees-view-v1.png)
 
 <br>
 
