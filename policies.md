@@ -53,7 +53,7 @@ During a test, the use of reference material, or personal electronic devices, is
 
 ### Assignments and similar graded work
 
-During the term, one (1) *late* assignment will be accepted, within four (4) days of its due date and time. 
+During the term, one (1) *late* assignment will be accepted, within three (3) days of its due date and time. 
 
 Otherwise, an assignment is due on its assigned due date, at a specific time. If it is late, it will receive a grade of zero (0).
 

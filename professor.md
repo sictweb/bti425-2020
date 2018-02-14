@@ -1,17 +1,39 @@
 ---
-title: Course professor(s)
+title: Course outline addendum
 layout: default
 ---
 
-## Course professor(s)
+## BTI425 course outline addendum
+
+The official BTI425 course outline is avalable at [this School of ICT web site link](https://ict.senecacollege.ca/course/bti425). 
+
+The information below is the *course outline addendum* for the course.
+
+<br>
+
+### Faculty
 
 For the Winter 2017 term, Professor Peter McIntyre teaches the BTI425 course. 
 
-Web: [petermcintyre.ca](http://petermcintyre.ca)
+Info | Details
+--- | ---
+Web | [petermcintyre.ca](http://petermcintyre.ca)
+Email | peter.mcintyre -at- senecacollege.ca
+Office | DB2081 in the School of ICT office area<br>(Dahdaleh building, south end, second floor)
+Phone, address | [Available at this link](https://petermcintyre.com/welcome/contact/)
+Timetable | [Available at this link](https://petermcintyre.com/welcome/contact/)<br>(and shown below)
 
-Email: peter.mcintyre -at- senecacollege.ca
+<br>
 
-Office: DB2081 in the School of ICT office area (Dahdaleh building, south end, second floor)
+### Planned schedule of topics, tests, and assignments
+
+The planned scheule of topics, tests, and assignments is available on this page: [Weekly schedule](weekly-schedule). 
+
+<br>
+
+### Other information
+
+Please ensure that you are familiar with these [course policies and standards](https://sictweb.github.io/bti425/policies)
 
 <br>
 
