@@ -17,9 +17,9 @@ For the Winter 2017 term, Professor Peter McIntyre teaches the BTI425 course.
 
 Info | Details
 --- | ---
-Web | [petermcintyre.ca](http://petermcintyre.ca)
 Email | peter.mcintyre -at- senecacollege.ca
 Office | DB2081 in the School of ICT office area<br>(Dahdaleh building, south end, second floor)
+Web | [petermcintyre.ca](http://petermcintyre.ca)
 Phone, address | [Available at this link](https://petermcintyre.com/welcome/contact/)
 Timetable | [Available at this link](https://petermcintyre.com/welcome/contact/)<br>(and shown below)
 
@@ -27,13 +27,13 @@ Timetable | [Available at this link](https://petermcintyre.com/welcome/contact/)
 
 ### Planned schedule of topics, tests, and assignments
 
-The planned scheule of topics, tests, and assignments is available on this page: [Weekly schedule](weekly-schedule). 
+The planned scheule of topics, tests, and assignments is available on the [Weekly schedule](weekly-schedule) page. 
 
 <br>
 
 ### Other information
 
-Please ensure that you are familiar with these [course policies and standards](https://sictweb.github.io/bti425/policies)
+Please ensure that you are familiar with these [course policies and standards](https://sictweb.github.io/bti425/policies).
 
 <br>
 
