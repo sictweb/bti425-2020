@@ -5,8 +5,7 @@ layout: default
 
 ## Angular Components Introduction
 
-> This page is being edited.  
-> This notice will be removed when the edits are complete.  
+This document introduces "components". 
 
 <br>
 
@@ -73,9 +72,7 @@ ng serve --open
 
 ### Creating a Component from Scratch (Using "ng generate")
 
-Recall, from the Angular "Tour of Heroes" app, we can manually create a component using the following steps
-
-1. Stop the server listener in the integrated terminal (ctrl + c) and execute the command:
+Recall, from the Angular "Tour of Heroes" app, we can manually create a component using the following task:
 
 ```
 ng generate component foo --flat
@@ -151,7 +148,15 @@ Note:  We will save ["Two-way binding"](https://angular.io/guide/template-syntax
 <br>
 
 #### Quick Directive Overview
-[https://angular.io/guide/attribute-directives#directives-overview](https://angular.io/guide/attribute-directives#directives-overview)
+
+A *directive* is an Angular class. It interacts with HTML elements in the browser DOM. There are three kinds of directives:
+1. Components — directives with an HTML template
+2. Structural directives — they change the DOM layout by adding and removing DOM elements
+3. Attribute directives — change the appearance or behavior of an element
+
+Components are the most common kind of directive. 
+
+[Directives overview](https://angular.io/guide/attribute-directives#directives-overview)
 
 **Built In Directives**
 

@@ -14,9 +14,9 @@ New notes are at the top.
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
 **Week 8**<br>&bull; Tue Mar 13<br>&bull; Thu Mar 15 | Angular routing | **Assignment 3** due Mar 11, 10% | 
-**Week 7**<br>&bull; Tue Mar 6<br>&bull; Thu Mar 8 | Angular components | Test 3 on Mar 6, 10% | 
+**[Week 7](week07)**<br>&bull; Tue Mar 6<br>&bull; Thu Mar 8 | Angular components | Test 3 on Mar 6, 10% | 
 **Study week**<br>&bull; Mon Feb 26 to<br>&bull; Fri Mar 2 | Study week<br>No classes; College is open |  | 
-**Week 6**<br>&bull; Tue Feb 20<br>&bull; Thu Feb 22 | Angular introduction<br>Dev env setup | **[Assignment 2](../graded-work/assign2)** due Feb 18, 10% | 
+**[Week 6](week06)**<br>&bull; Tue Feb 20<br>&bull; Thu Feb 22 | Angular introduction<br>Dev env setup | **[Assignment 2](../graded-work/assign2)** due Feb 18, 10% | 
 **[Week 5](week05)**<br>&bull; Tue Feb 13<br>&bull; Thu Feb 15 | React, continued<br>Routing | Test 2 on Feb 13, 10% | 
 **[Week 4](week04)**<br>&bull; Tue Feb 6<br>&bull; Thu Feb 8 | React introduction<br>Components as an architectural design | **[Assignment 1](../graded-work/assign1)** due Feb 4, 10% | 
 **[Week 3](../notes/week03)**<br>&bull; Tue Jan 30<br>&bull; Thu Feb 1 | Modern front-end dev design patterns<br>The Knockout library | Test 1 on Jan 30, 10% | 
