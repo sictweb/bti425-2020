@@ -31,9 +31,9 @@ To get started, we will first do a quick review on how to create a new Angular p
 
 The detailed notes for the above topics can be found in:
 
-* [Angular Components Introduction](angular-components-intro): Here we discuss Components in detail, including how to get started using components / creating components from scratch, using "templates" in components, and writing attribute/structural directive.
+* [Angular Components Introduction](angular-components-intro): This document discusses Components in detail, including how to get started using components / creating components from scratch, using "templates" in components, and writing attribute/structural directive.
 
-* [Angular Components Example](angular-components-example): Here, we walk through a simple example of planning a view with multiple components from scratch.
+* [Angular Components Example](angular-components-example): This document guides us through a simple example, where we plan a view with multiple components from scratch.
 
 * [Angular Components Continued](angular-components-more): This document contains the important review topics for Angular Components including:
 
