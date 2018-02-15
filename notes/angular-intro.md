@@ -5,9 +5,6 @@ layout: default
 
 ## Introduction to Angular
 
-> This page is being edited.  
-> This notice will be removed when the edits are complete.  
-
 Recall the [React intro notes](react-intro). React was described as a *library for building user interfaces*. As you learned, it is actually a rich and vibrant ecosystem for client-side app building. 
 
 Angular is also a widely-used platform for building client-side apps. Like React, it's JavaScript-based, and assumes that it's targeting a browser or browser-like runtime on a device.
@@ -28,7 +25,7 @@ We will *not* cover its family predecessor, *Angular<u>JS</u>*. While this frame
 
 ### Relevant history
 
-In September 2009 - approximately 8 years ago (as of late 2017) - Misko Hevery of Google introduced AngularJS to the world, as a personal "side project". At the time, Hevery was motivated by the need to make client-side Ajax development work better. 
+In September 2009 - a long time ago in web years - Misko Hevery of Google introduced AngularJS to the world, as a personal "side project". At the time, Hevery was motivated by the need to make client-side Ajax development work better. 
 
 > The original product name was *Angular*.  
 > It started to become known as *AngularJS* sometime in late 2012 or early 2013.  
@@ -37,9 +34,9 @@ Its design and development approach were new and different. However, they proved
 
 Then, a series of typical and normal events happened in the early life of the platform. These included massive use in apps large and small, evolution at Google to current and future web topics, developer community feedback, and rapid improvement in the deployment ecosystem (HTML5, JavaScript engines, and browsers). 
 
-Obviously, work on "version 2" happened too. And, React happened, which contributed both subtle and overt competitive pressure.  It became apparent only a year after the original release that the successor was going to be a bit of a departure, and not simply an upgrade (with the implications of smoothness, compatibility, and so on). 
+Obviously, work on "version 2" happened too. And, React happened, which contributed both subtle and overt competitive pressure.  It became apparent only a year after the original release that the "version 2" successor was going to be a bit of a departure, and not simply an upgrade (with the assumed implications of smoothness, compatibility, and so on). 
 
-By mid-2013 or so, the community was buzzing about breaking changes and effectively a rewrite. Much thrashing, discussion, prototyping, and the goal to get the successor right led to the September 2014 unveiling of "Angular 2" (and the subsequent renaming of the original to "AngularJS"). Much more tumult happened before its official release in September 2016, including the choice of programming language. Angular can be considered a complete rewrite, and a clean cut away from AngularJS. 
+By mid-2013 or so, the community was buzzing about breaking changes and effectively a rewrite. Much thrashing, discussion, prototyping, and the goal to get it right led to the September 2014 unveiling of "Angular 2" (and the subsequent renaming of the original to "AngularJS"). Much more tumult happened before its official release in September 2016, including the choice of programming language. Angular must be considered a complete rewrite, and a clean cut away from AngularJS. 
 
 As a developer who is contemplating the design and coding of an app, the old and the new have a good amount to share in their philosophy and approach. However, in terms of the actual coding and organization of the app, including tooling, packaging, and deployment, the old and the new have little in common. While we will give some old-and-new comparisons in linked articles, we're not going to delve into them here. 
 
@@ -70,7 +67,7 @@ After the React topic coverage, you have a basis for understanding *modern* clie
 
 It all starts with *components*, introduced recently. The app is composed of a hierarchy of nested or contained components, and each encapsulates is visible content and appearance, its interaction code, and interfaces to other components and services. This is arguably the most important concept in Angular. 
 
-In code, the component architecture is driven by the design and coding environment of the TypeScript programming language. The organization of a folder to hold the component's source code, as well as the all the other bits have been influenced.
+In code, the component architecture is driven by the design and coding environment of the TypeScript programming language. The organization of a folder to hold the component's source code, as well as the all the other bits have been influenced as well.
 
 <br>
 

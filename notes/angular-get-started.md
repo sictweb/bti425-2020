@@ -5,9 +5,6 @@ layout: default
 
 ## Getting started with Angular
 
-> This page is being edited.  
-> This notice will be removed when the edits are complete.  
-
 The next part of our learning journey will depend on the excellent content that the Angular development team has published. 
 
 Get ready by visiting the [Angular home page](https://angular.io/), and read/scan the following content:

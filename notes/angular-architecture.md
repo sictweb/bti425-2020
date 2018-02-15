@@ -43,7 +43,7 @@ app.component.ts
 
 The purpose of the `.html` file should be apparent, after you inspect it:
 * It includes a chunk of HTML, and so it defines the appearance of the rectangle (the area of the UI)
-* It includes a *data binding* expression, `{{title}}`
+* It includes a *data binding* expression, `{% raw %}{{title}}{% endraw %}`
 
 Now, look at the `.ts` file. By convention, JavaScript source code files use the "js" filename extension. Here, by convention, TypeScript source code files use the "ts" filename extension. 
 
