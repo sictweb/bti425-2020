@@ -133,6 +133,10 @@ Was known as "Reactive Extensions"
 Make sure that you're in your project folder.  
 Then type this command: `code .`
 
+> Note: This assumes that your computer is configured to run this command. See the [Running VS Code on Mac](https://code.visualstudio.com/docs/setup/mac) to configure that feature. 
+
+<br>
+
 **Useful keyboard shortcuts**
 
 Trigger IntelliSense: `Control + Space` 
@@ -146,6 +150,8 @@ Show/hide left-side bar: `Command + B`
 Show/hide terminal: `Control + (back-tick)`
 
 Markdown preview pane toggle on/off: `Command + K, V`
+
+<br>
 
 **Useful Emmet snippets**
 

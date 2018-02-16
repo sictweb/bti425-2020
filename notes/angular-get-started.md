@@ -42,12 +42,16 @@ npm install -g @angular/cli
 Next, create a new app. Assuming that you want to create a new app (and folder) named "my-dream-app":
 
 ```text
-ng new my-dream-app
+ng new my-dream-app --routing -st
 ```
 
 > Note: "ng" is an Angular command.
 
 The process will create a new folder, with the code needed to get started.
+
+> Notes:  
+> The `--routing` option adds the code we need for "routing", which is a topic that will be covered soon. Adding routing now (when the new project is created) is a *best practice*.  
+> The `-st` option avoids adding "testing" code. We don't need that in the near future. 
 
 <br>
 
@@ -61,14 +65,12 @@ Therefore, start the server listener:
 
 ```text
 cd my-dream-app
-ng serve
+ng serve --open
 ```
 
-The server begins listening on HTTP port 4200. Open a browser to the [localhost port 4200 URL](http://localhost:4200/). 
+> Note: The `--open` option saves you time and effort.
 
-> Alternatively...  
-> You can start the server listener, *and* open a web browser, with one command:  
-> `ng serve --open`
+The server begins listening on HTTP port 4200. A browser tab/window should open, loading the resource [localhost port 4200 URL](http://localhost:4200/). 
 
 ![Server is running](../media/angular-server-process.png)
 
@@ -76,9 +78,7 @@ The server begins listening on HTTP port 4200. Open a browser to the [localhost 
 
 ### Edit the app
 
-Start Visual Studio Code. Open the "my-dream-app" folder. 
-
-Alternatively, you can use the command line. However, as you probably noticed in your Terminal window, the on-demand web server is blocking it from further interaction. So, open a new Terminal window (Shell > New Window). Then you can make "my-app" your current folder, and run the `code .` command (**Note**: this option requires you to have added 'code' to your PATH - see: [https://code.visualstudio.com/docs/setup/mac](https://code.visualstudio.com/docs/setup/mac)). 
+Edit the app, using Visual Studio Code.
 
 An easy edit, just to prove that you can do so, is to edit the `app.component.ts` file in the `src/app` folder. Change the text in the value of the "title" property. 
 
@@ -92,9 +92,9 @@ After you save your changes, switch over to the browser window. It should show t
 
 Return to the [GETTING STARTED](https://angular.io/guide/quickstart) documentation topic. 
 
-In the instructions above, we have taken you through the first few screenfuls. Now it's time to read/scan the remaining content on this page. 
+In the instructions above, we have taken you through the first few screenfuls. Now it's time to read/scan the remaining content on this page, starting with [Step 4](https://angular.io/guide/quickstart#first-component).
 
-Take your time. While you are doing this, inspect the source code in your editor (Visual Studio Code). 
+Take your time. While you are doing this, inspect the source code in your editor.
 
 Here are some of the highlights that you should be looking for:
 * The code for your app lives in the `src` folder
