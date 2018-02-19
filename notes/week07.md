@@ -21,27 +21,20 @@ The test questions are based on the Angular topics and learning experience, duri
 
 **Topics:**
 
-To get started, we will first do a quick review on how to create a new Angular project from scratch.  We will then focus on:
+The first two documents are repeated from the Week 6 coverage:
 
-* Discussing what exactly an Angular component is, at a high level
-* Creating components manually / using the Angular CLI
-* How to think about, and plan your components (this is similar to the thinking introduced in the "React" coverage)
-* An introduction to using "templates" in components
-* A brief discussion on attribute &amp; structural directives.
+[Angular Components Introduction](angular-components-intro): This document discusses Components in detail, including how to get started using components / creating components from scratch, using "templates" in components, and writing attribute/structural directives.
 
-The detailed notes for the above topics can be found in:
+[Angular Components Example](angular-components-example): This document guides us through a simple example ("animals"), where we plan a view with multiple components from scratch.
 
-* [Angular Components Introduction](angular-components-intro): This document discusses Components in detail, including how to get started using components / creating components from scratch, using "templates" in components, and writing attribute/structural directive.
+The next document is new this week:
 
-* [Angular Components Example](angular-components-example): This document guides us through a simple example, where we plan a view with multiple components from scratch.
-
-* [Angular Components Continued](angular-components-more): This document contains the important review topics for Angular Components including:
-
-  * Creating Components Using the Angular CLI
-  * Structure of an Angular Component
-  * Component / Template Data Binding
-  * Lifecycle Methods
-  * Component Interaction
-  * Angular Directives (Structural / Attribute)
+[Angular Components Continued](angular-components-more): This document contains the important review topics for Angular Components including:
+* Creating Components Using the Angular CLI
+* Structure of an Angular Component
+* Component / Template Data Binding
+* Lifecycle Methods
+* Component Interaction
+* Angular Directives (Structural / Attribute)
 
 <br>

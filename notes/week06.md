@@ -42,6 +42,12 @@ Next, follow along as you [get started with Angular](angular-get-started). Learn
 
 Then, we repeat or highlight some of [the important topics and concepts](angular-architecture) from the getting started guide and tutorials. 
 
-<br>
+= = = = = 
+
+The first in-depth topic set that we will study is *components*. Let's get started now with this topic:
+
+[Angular Components Introduction](angular-components-intro): This document discusses Components in detail, including how to get started using components / creating components from scratch, using "templates" in components, and writing attribute/structural directives.
+
+[Angular Components Example](angular-components-example): This document guides us through a simple example ("animals"), where we plan a view with multiple components from scratch.
 
 <br>
