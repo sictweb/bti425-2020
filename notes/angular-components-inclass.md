@@ -157,12 +157,18 @@ With that knowledge, let's edit the Customers component. We will be editing the 
 Our first task is to display a list of customers. Let's create an array property that will hold about 5 or 10 customers from your Mockaroo.com-generated data. For example, here's the statement that will create a 2-element array:
 
 ```js
-// copy the code into here
+// The data we want to display
+customers = [{ "id": 1, "firstname": "Ana", "lastname": "Lawfull", "city": "Strasbourg", "email": "alawfull0@imgur.com", "website": "http://nsw.gov.au/sed/accumsan.json", "birthdate": "1996-03-19T09:05:56Z", "credits": 6938 },
+{ "id": 2, "firstname": "Ondrea", "lastname": "Nuth", "city": "Nāgarpur", "email": "onuth1@last.fm", "website": "http://usa.gov/aliquet.xml", "birthdate": "1997-03-02T14:08:54Z", "credits": 4032 }];
 ```
 
 While that's OK, we really must create a *typed* array. Force the `customers` array to be *an array of type Customer*. You wrote the class above, so let's use it. This changes the statement slightly:
 
-(repeat, but with `: Customer[]` added)
+```js
+// The data we want to display
+customers: Customer[] = [{ "id": 1, "firstname": "Ana", "lastname": "Lawfull", "city": "Strasbourg", "email": "alawfull0@imgur.com", "website": "http://nsw.gov.au/sed/accumsan.json", "birthdate": "1996-03-19T09:05:56Z", "credits": 6938 },
+{ "id": 2, "firstname": "Ondrea", "lastname": "Nuth", "city": "Nāgarpur", "email": "onuth1@last.fm", "website": "http://usa.gov/aliquet.xml", "birthdate": "1997-03-02T14:08:54Z", "credits": 4032 }];
+```
 
 Uh oh, it doesn't know about the Customer class yet. We solve this by adding an "import" statement near the top:
 
@@ -176,14 +182,16 @@ import { Customer } from "./customer";
 
 Open the component's HTML template for editing. Create a Bootstrap row div, and inside that, a div that will be 3/4 of the total width. 
 
-Then, render a table. How? the `*ngFor` *structural directive* will do that for us. Similar to the "foreach" binding in Knockout, it will create elements for each item in a collection. Here's what it looks like:
+Then, render a table. Use the Bootstrap table and table-striped classes. It might be nice to use the table-hover class too.
+
+Now, render the rows. How? the `*ngFor` *structural directive* will do that for us. Similar to the "foreach" binding in Knockout, it will create elements for each item in a collection. Here's what it looks like:
 
 ```html
 <tbody>
   <tr *ngFor="let c of customers">
-    <td>{%raw%}c.lastname{%endraw%}</td>
-    <td>{%raw%}c.firstname{%endraw%}</td>
-    <td>{%raw%}c.city{%endraw%}</td>
+    <td>{%raw%}{{c.lastname}}{%endraw%}</td>
+    <td>{%raw%}{{c.firstname}}{%endraw%}</td>
+    <td>{%raw%}{{c.city}}{%endraw%}</td>
   </tr>
 </tbody>
 ```
@@ -196,7 +204,7 @@ Notice how the data items are rendered. The first and easiest way to do data bin
 
 Save your work, and run it. It should look like this:
 
-( pasted image here )
+![Table only](../media/ang-inclass1.png)
 
 <br>
 
@@ -275,6 +283,8 @@ It would be nice if the pointer shape changed to a "pointing finger" when hovere
 
 If you have the console running, you probably noticed an error message that complained about the value of selectedCust. You can fix that easily, using a few different ways. One way is to add a statement to the constructor method that initializes selectedCust to a new (empty) Customer object. 
 
+![Table only](../media/ang-inclass2.png)
+
 <br>
 
 ### Enable editing, version 1
@@ -300,7 +310,7 @@ Then, in the "imports" collection of the `@NgModule` decorator, add `FormsModule
 Replace the display-only detail elements with `<input>` elements, as suggested below:
 
 ```html
-<h3>Select a row</h3>
+<h3>Select a row, then edit</h3>
 <p>First name:<br>
 <input class="form-control" [(ngModel)]="selectedCust.firstname"</p>
 ```
@@ -316,6 +326,8 @@ Together, `[( )]` means "two-way" binding, in and out, to and from. That's what 
 On the right side of the equals sign is the expression. For this simple use case, it's simply the name of the property we want to render and enable editing for. 
 
 Save your work and run. It just works. Do some edits, and notice that the table updates as you type. Ridiculously easy. 
+
+![Table only](../media/ang-inclass3.png)
 
 <br>
 
@@ -336,6 +348,10 @@ In the top table, replace the interpolated bindings with an `<input>` element. T
 ```
 
 Again, ridiculously easy. 
+
+![Table only](../media/ang-inclass4.png)
+
+<br>
 
 Happy coding!
 
