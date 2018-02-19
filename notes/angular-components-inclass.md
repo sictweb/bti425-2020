@@ -252,11 +252,11 @@ Then add some elements to the new div. Use the interpolation binding technique y
 ```html
 <h3>Select a row</h3>
 <p>First name:<br>
-{%raw}{{ selectedCust.firstname }}{%endraw}</p>
+{%raw}{{ selectedCust.firstname }}{%endraw%}</p>
 <p>Last name:<br>
-{%raw}{{ selectedCust.lastname }}{%endraw}</p>
+{%raw}{{ selectedCust.lastname }}{%endraw%}</p>
 <p>City:<br>
-{%raw}{{ selectedCust.city }}{%endraw}</p>
+{%raw}{{ selectedCust.city }}{%endraw%}</p>
 ```
 
 That's it. Save your work, and run it. 
