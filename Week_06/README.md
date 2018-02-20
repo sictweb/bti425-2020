@@ -17,3 +17,10 @@ Get started with Angular components. Features:
 
 <br>
 
+### customers
+
+Another get started, from the Tuesday February 21 in-class session.
+
+Shows one of the strengths of Angular, which is easy UI updating. 
+
+<br>
