@@ -50,4 +50,6 @@ The first in-depth topic set that we will study is *components*. Let's get start
 
 [Angular Components Example](angular-components-example): This document guides us through a simple example ("animals"), where we plan a view with multiple components from scratch.
 
+In class on Tuesday, February 20, the professor started working with a project that shows a particular strength of Angular - easy and robust updates in the user interface. [Follow along in the notes](angular-components-inclass), and try to build it yourself. Then, download and study its code example from the GitHub repo.
+
 <br>
