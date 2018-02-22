@@ -13,7 +13,7 @@ New notes are at the top.
 
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
-**Week 8**<br>&bull; Tue Mar 13<br>&bull; Thu Mar 15 | Angular routing | **Assignment 3** due Mar 11, 10% | 
+**Week 8**<br>&bull; Tue Mar 13<br>&bull; Thu Mar 15 | Angular routing | **[Assignment 3](../graded-work/assign3)** due Mar 11, 10% | 
 **[Week 7](week07)**<br>&bull; Tue Mar 6<br>&bull; Thu Mar 8 | Angular components | Test 3 on Mar 6, 10% | 
 **Study week**<br>&bull; Mon Feb 26 to<br>&bull; Fri Mar 2 | Study week<br>No classes; College is open |  | 
 **[Week 6](week06)**<br>&bull; Tue Feb 20<br>&bull; Thu Feb 22 | Angular introduction<br>Dev env setup | **[Assignment 2](../graded-work/assign2)** due Feb 18, 10% | 
