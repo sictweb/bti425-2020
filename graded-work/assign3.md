@@ -158,16 +158,26 @@ At this point, your work may look something like this.
 
 #### Images
 
-Notice that the images in the copied markup are not rendering. The path is wrong. 
+Notice that the images in the copied markup are not rendering. The path is wrong. (Why? Look at the markup, and the file system, and think about it.)
 
 An Angular app has a folder named "assets" in the "src" folder. That's where we can put image assets. Therefore, copy the downloaded "images" folder to the "assets" folder. 
+
+The path value of each `<img>` element's `src` attribute will be wrong too. From the perspective of the markup in Angular components, the "src" folder is the root. Therefore, each path must be prefixed with the "assets" folder name. For example:  
+
+```
+assets/images/about/about.jpg
+```
+
+<br>
 
 > Tip:  
 > Learn how to use one or more bulk replace features of the editor.  
 > There are at least two such features:  
-> Edit > Replace in Files, or  
-> Select the text to be replaced, then right-click > Change All Occurrences  
+> 1 - Edit > Replace in Files, or  
+> 2 - Select the text to be replaced, then right-click > Change All Occurrences  
 > Each has its own considerations, so be sure to save before you do it, so that you can undo if things go wrong .
+
+<br>
 
 It's possible that the images won't show up right away. If not, switch to the Terminal, and reload the app. Or, make a change in one of the source code files (e.g. the App component's HTML template) and save again (which triggers the build/compile step).
 
