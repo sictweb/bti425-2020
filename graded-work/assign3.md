@@ -189,17 +189,27 @@ At this point, your work may look something like this.
 
 #### Other components, getting started
 
-The Themefisher Timer web site template obviously has a header, a footer, and a navigation bar. Create components for these areas. Then locate the downloaded markup that you can copy and paste into the new components. 
+The Themefisher Timer web site template obviously has a navigation bar (header), and a footer. Create components for these areas. Then locate the downloaded markup that you can cut and paste into the new components. 
+
+> Note:  
+> On Thursday, February 22, we noticed that the computers in DB3078 may return the following error message when the Angular CLI "generate" program is used:  
+> `Cannot read property 'NullLogger' of undefined`  
+> If you get that error message, then there may be a work-around. Use the following command to (temporarily?) update the Angular CLI version:  
+> `npm install --save @angular/cli@latest`  
+
+<br>
 
 For now, don't worry that the hyperlink targets are wrong.
 
-> Remember to add an academic honesty statement to the footer markup. 
+> Remember to add an academic honesty statement to the footer markup, replacing existing text as appropriate. Something like this:  
+> Copyright &copy; 2018 - Design and Developed by Peter McIntyre.  
+> This is my own work, and I have practiced academic honesty.
 
 <br>
 
 #### Content components
 
-The other downloaded HTML files have additional content that we can display. Create components for these content areas. 
+The other downloaded HTML files have additional content that we can display. Create components for these content areas. Select only one of the "blog..." pages to convert into a "Blog" component. Remember what you read and learned - when you create (generate) a component for a multi-word thing (that's joined by spaces or dashes), use a [Pascal case](https://en.wikipedia.org/wiki/Camel_case) name (e.g. "single-post.html" becomes a "SinglePost" component). 
 
 What about the content that's now in the App component (which was copied from the downloaded index.html)? Well, a suggested best practice is to create another component to hold that - maybe call it "Home". Then, cut-and-paste the markup from the App component to the new Home component.
 
@@ -229,6 +239,12 @@ We're going to use [on-page links](https://developer.mozilla.org/en-US/docs/Web/
 **(tentative) Animation**
 
 ( smooth scroll animation, to each component, and to the top)  
+( more to come )
+
+<br>
+
+#### Finishing touches (refinements)
+
 ( more to come )
 
 <br>
