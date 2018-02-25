@@ -36,7 +36,7 @@ The projects are separate and independent. They have nothing to do with each oth
 
 Here's an image that shows the top part of the view in project #1:
 
-![Project 1](https://via.placeholder.com/350x150)
+![Project 1](../media/a3/p1-front-v3.png)
 
 <br>
 
