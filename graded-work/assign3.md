@@ -10,7 +10,8 @@ The purpose or objective of the assignment is to become comfortable with Angular
 Read/skim all of this document before you begin work.
 
 > This page is being edited.  
-> And, some images still need to be added.  
+> The specifications for project #1 are complete.  
+> I plan to add the remaining specifications on Sunday, February 25.  
 > This notice will be removed when the edits are complete.  
 
 <br>
@@ -148,6 +149,9 @@ As you have learned, the App component's HTML template holds the markup that is 
 
 Locate the markup in the downloaded index.html file that is appropriate for the App component. (Think, and be critical - do you need the markup at the top that builds the nav menu? No, because we'll be creating a Navbar component in our app. Do you need the markup at the bottom that links to the JavaScript files? No, because we'll be using Angular as much as we can.)
 
+> Do you understand? The app does NOT need any external or additional JavaScript.  
+> The main goal of this project #1 is simple - convert or refactor a page-based web site into an app. Do not waste time (or get lost) on implementing arcane features of the downloaded content. 
+
 Replace the App component's markup with the downloaded markup. Save and view the results. If you see an empty page, then it is likely that there is a build/compile error, so check the console. 
 
 At this point, your work may look something like this. 
@@ -225,27 +229,95 @@ On refresh, you should have a *very* long view.
 
 #### Navigation, simple
 
-We're going to use [on-page links](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href) in the navigation bar component. Make those changes now.
+We're going to use [on-page links](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href) in the navigation bar component. 
+
+If you inspect the existing content from the downloaded index.html page, you will notice that it already has on-page links for the following targets: top-bar, hero-area, about, works, feature, call-to-action, and footer. Therefore, you cannot use those as identifiers in the components. Either edit the pasted content from the downloaded index.html, or use different names for the identifiers. 
+
+Make those changes now. Obviously, you will have to edit the links in the navigation bar component, and add or edit anchors in each targeted component. 
+
+Above, it was suggested that only one of the "blog" components is needed. When you do this, you must edit the "blog" nav menu choices to match what you did. 
 
 <br>
 
-**Fixed-position navigation bar**
+#### General suggestions for all pasted content
 
-( always at the top of the page )  
-( more to come )
+The *link targets* and *resource URLs* must be edited after content is pasted into the new components. 
+
+The *link targets* in the downloaded content point to actual `.html` files. They must be converted to on-page links to the component content. We must NOT reload the app. 
+
+The *resource URLs* for images and a few other resources point to locations that make sense for a page-based web site. They are not valid for an app. As noted above, a path that begins with something like `images/...` must be changed to something like `assets/images/...`. 
+
+> Remember:  
+> The "root" of the URL space in an Angular app is the `src` folder. 
 
 <br>
 
-**(tentative) Animation**
+**Watch for errors in the downloaded content**
 
-( smooth scroll animation, to each component, and to the top)  
-( more to come )
+As noted above, the downloaded content has a few errors in the markup, and you must fix them before the app works. Use the dev tools console to locate and fix the errors as you find them. 
 
 <br>
 
-#### Finishing touches (refinements)
+**Appearance enhancements**
 
-( more to come )
+There are a number of resources in the "plugins" folder of the downloaded content. They provide some appearance or user interaction enhancements. (It is worthwhile to briefly inspect some of them.) We suggest that you copy-paste the plugins folder into the app's "assets" folder, and then include links to them in the app's `index.html` file, in the `<head>` element. Make sure you edit the resource URL paths. 
+
+<br>
+
+**Footer content**
+
+We recommend that you page the "call to action" content in the footer component. 
+
+<br>
+
+**When you're done...**
+
+At this point, your work may look something like the following:
+
+Initial view, and the target of the "home" links:
+
+![Completed view](../media/a3/p1-front-v3.png)
+
+<br>
+
+About view:
+
+![About view](../media/a3/p1-about.png)
+
+<br>
+
+Service view:
+
+![Service view](../media/a3/p1-service.png)
+
+<br>
+
+Blog view:
+
+![Blog view](../media/a3/p1-blog.png)
+
+<br>
+
+Contact view:
+
+![Contact view](../media/a3/p1-contact.png)
+
+<br>
+
+Not found view:
+
+![Not found view](../media/a3/p1-not-found.png)
+
+<br>
+Gallery view:
+
+![Gallery view](../media/a3/p1-gallery.png)
+
+<br>
+
+Footer, at the bottom of the "contact" view:
+
+![Footer view](../media/a3/p1-footer.png)
 
 <br>
 
