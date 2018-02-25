@@ -11,7 +11,7 @@ Read/skim all of this document before you begin work.
 
 > This page is being edited.  
 > The specifications for project #1 are complete.  
-> I plan to add the remaining specifications on Sunday, February 25.  
+> I plan to add the remaining specifications by Monday, February 26.  
 > This notice will be removed when the edits are complete.  
 
 <br>
@@ -34,7 +34,7 @@ In this assignment, you will work on *two* projects:
 
 The projects are separate and independent. They have nothing to do with each other. 
 
-Here's an image that shows the top part of the view in project #1:
+Here's an image that shows the top part of the view in project #1. As with any image on this web site, you can open the image in a new tab/window to view it full-size:
 
 ![Project 1](../media/a3/p1-front-v3.png)
 
@@ -88,8 +88,6 @@ More details are provided below, in the section titled **"Doing the work"**.
 
 During the Thursday classes/sessions, your professor will help you *get started* and *make progress* on the assignment. 
 
-( more to come, maybe )
-
 <br>
 
 ### Getting started
@@ -105,13 +103,13 @@ This assignment work must not be the first time that you have attempted to work 
 Open a terminal window, and navigate to a suitable file system location. We will use the Angular CLI program to create the folder and its generated code for *both* projects:
 
 ```
-ng new a3-project1 --routing -st
+ng new a3-project1 --routing -st -sg
 ```
 
 And:
 
 ```
-ng new a3-project2 --routing -st
+ng new a3-project2 --routing -st -sg
 ```
 
 After the generation completes, verify that it runs, by separately navigating into each folder, and using the `ng serve --open` command in the newly-created folder. Each should build/compile, open a browser window/tab, and show the "welcome" view. 
@@ -237,6 +235,8 @@ Make those changes now. Obviously, you will have to edit the links in the naviga
 
 Above, it was suggested that only one of the "blog" components is needed. When you do this, you must edit the "blog" nav menu choices to match what you did. 
 
+In the downloaded content, the upper-left icon/image of the nav menu is a link to the home page (index.html). The icon/image is useless to us. You can replace that with your name as text. (And, as just described, change the link target to a component.)
+
 <br>
 
 #### General suggestions for all pasted content
@@ -323,7 +323,7 @@ Footer, at the bottom of the "contact" view:
 
 ### Doing the work, project #2 (components)
 
-As noted above, this project #2 enables you to work with local (in-memory) data and Angular components.
+As noted above, this project #2 enables you to work with local (in-memory) data and Angular components. It also enables you to begin working with *routing* and *services* in a light-touch manner. 
 
 ( more to come )
 

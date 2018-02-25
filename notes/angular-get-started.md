@@ -42,7 +42,7 @@ npm install -g @angular/cli
 Next, create a new app. Assuming that you want to create a new app (and folder) named "my-dream-app":
 
 ```text
-ng new my-dream-app --routing -st
+ng new my-dream-app --routing -st -sg
 ```
 
 > Note: "ng" is an Angular command.
@@ -51,7 +51,8 @@ The process will create a new folder, with the code needed to get started.
 
 > Notes:  
 > The `--routing` option adds the code we need for "routing", which is a topic that will be covered soon. Adding routing now (when the new project is created) is a *best practice*.  
-> The `-st` option avoids adding "testing" code. We don't need that in the near future. 
+> The `-st` option avoids adding "testing" code. We don't need that in the near future.  
+> The `-sg` option does not create a Git repository for the project. We don't need a repo in the near future.
 
 <br>
 

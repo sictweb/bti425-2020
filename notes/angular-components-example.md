@@ -32,7 +32,7 @@ For our example app, here's what we're trying to do. Each rectangle will (or cou
 At this point, we will assume that you are comfortable using the Angular CLI to create a new project. For example, this command will create a new "animals" project:
 
 ```
-ng new animals --routing -st
+ng new animals --routing -st -sg
 ```
   
 **Recall:** 
@@ -40,6 +40,8 @@ ng new animals --routing -st
 The `--routing` option adds the code we need for "routing", which is a topic that will be covered in detail next week. Adding routing now (when the new project is created) is a *best practice*. 
 
 The `-st` option does not add "testing" code. One of the effects is that it reduces the size of the project, and makes it slightly faster in the change detection and build processes.
+
+The `-sg` option does not create a Git repository for the project. That simplifies the configuration for us. 
 
 <br>
 

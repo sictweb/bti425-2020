@@ -14,7 +14,7 @@ Live coding demonstration.
 Create an app:
 
 ```
-ng new my-customers --routing -st
+ng new my-customers --routing -st -sg
 ```
 
 Open it in a code editor. Study the result. 
