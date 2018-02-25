@@ -323,16 +323,21 @@ Footer, at the bottom of the "contact" view:
 
 ### Doing the work, project #2 (components)
 
-As noted above, this project #2 enables you to work with local (in-memory) data and Angular components. It also enables you to begin working with *routing* and *services* in a light-touch manner. 
+As noted above, this project #2 enables you to work with local (in-memory) data and Angular components. It also enables you to begin working with *routing, services, and forms* in a very light-touch and guided manner. (Complete coverage of those topics happens in the coming weeks. )
 
-( more to come )
+The idea is this: 
+* You will work with your Mockaroo.com generated data
+* Components that implement [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) will be configured 
+* As a result, you'll get experience with components and a workflow, and get a preview of some upcoming Angular features
+
+Above, you had created an app for project #2 (a3-project2). Get your development environment ready to work with it now. 
 
 <br>
 
 #### Add links to Bootstrap CSS and plugins
 
 Edit `src/index.html`:
-1. Add the Bootstrap CSS library link element (CDN version) to the `<head>` element
+1. Add the Bootstrap CSS library link element (probably the CDN version) to the `<head>` element
 2. Add the jQuery and Bootstrap JavaScript script elements to the *end* of the `<body>` element
 
 ( name, displayed and metadata; academic honesty statement )

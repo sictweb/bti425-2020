@@ -95,7 +95,7 @@ As a wrap-up, rely on these course notes to guide your learning path, and refer 
 
 We can use the Angular CLI to add a service. In the example below, a service named "DataManager" is added to the app:
 
-`ng g s DataManager --module=app --spec false`
+`ng g s DataManager --module app --spec false`
 
 As you have seen when creating components, a CamelCase name is transformed into lower case with dash word separators, when it generates the source code files. 
 
