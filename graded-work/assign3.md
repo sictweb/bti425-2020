@@ -78,7 +78,7 @@ Here's a brief *and tentative* list of specifications that you must implement in
 * Local in-memory data, display and edit 
 * Master > detail paradigm, and data flow among components
 * Nested components would be nice to attempt
-* Some introductory coverage of routing 
+* Some introductory coverage of routing, services, and forms
 
 When you're thinking about the purpose of this project #2, you could think of it as a way to become skilled in the most essential Angular development task, which is working with components in general, and data in components specifically. 
 
@@ -346,19 +346,39 @@ Also, add `<meta>` tags for author and description, similar to those generated b
 
 #### Plan your components
 
-As always, we will need some kind of a heading and/or navigation menu. For this app, it's OK to use only a nav menu. We will need a footer too. 
+As always, we will need some kind of a heading and/or navigation menu. For this app, it's OK to use only a nav menu. We will need a footer too (for your academic honesty statement). 
 
 For content areas, we will need the following:
 * home, which is a landing view 
 * customers, which displays a list (table) of customers 
 * customer detail, info about one customer
-* customer add, to add a new customer to the collection
+* customer create, to add a new customer to the collection
 * customer edit, to edit customer details
 * (TBA) customer delete, to confirm the deletion of a customer
 
-Use the Angular CLI to generate components for each of them now. Remember, use CamelCase names if you are using multi-word names for components. 
+Use the Angular CLI to generate components for each of them now. Remember, use Pascal case names if you are using multi-word names for components. 
 
 Then, add their selectors to the app component's HTML template so that they appear when the app loads. 
+
+<br>
+
+**Refine the appearance**
+
+Before continuing, you should spend a few minutes and ensure that the appearance takes advantage of the standard Bootstrap classes (container, row, and so on). 
+
+Where is a good place (for now) to add the container class div?
+
+Should each component be in a row class div?
+
+And, is this now a good time to start collecting some code and coding tips that implement some common and best practices? You can re-use some of the code you wrote in Assignments 1 and 2, and refactor it if necessary for this Assignment 3, and for future assignments. 
+
+At this point in time, it is possible that your work may look like the following:
+
+![Home view, initial](../media/a3/p2-home-v1.png)
+
+<br>
+
+#### TBA
 
 ( more to come )
 
