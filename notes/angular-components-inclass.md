@@ -43,19 +43,20 @@ ng g c customers --flat
 
 > Remember: `--flat`` does not create a folder to hold the new component's source code files. 
 
-Finally, we need to write a code module that describes a "customer" - data or schema code, in other words. A common Angular pattern is to create a [TypeScript *interface*](https://www.typescriptlang.org/docs/handbook/interfaces.html):
+Finally, we need to write a code module that describes a "customer" - data or schema code, in other words. In an Angular app, we can use a class, or a [TypeScript *interface*](https://www.typescriptlang.org/docs/handbook/interfaces.html). Here, we will use a class:
 
 ```
-ng g interface customer --spec false
+ng g class customer --spec false
 ```
 
 > Note: the `--spec false` option does not create the additional file(s) used by the software testing system.
 
 > Note: in C++, you are probably familiar with an abstract base class, with pure virtual methods. In TypeScript, this is called an *interface*.  
 > You can create a new class instance that inherits from an interface. Similar to C++, you cannot directly create an instance of an abstract base class - you must create a new instance of an object (i.e. a class) that *inherits* from an abstract base class.  
-> The same concept applies to a TypeScript interface. 
+> The same concept applies to a TypeScript interface.  
+> Later in the course, we will create and use interfaces. 
 
-What properties do we write for the new "Customer" interface? Continue with the next task...
+What properties do we write for the new "Customer" class? Continue with the next task...
 
 <br>
 
@@ -69,9 +70,9 @@ Study the data in your file. Then, edit the new "Customer" interface, and add ma
 
 ### Getting started - TypeScript data/schema class design
 
-The code generator created an empty "Customer" interface. 
+The code generator created an empty "Customer" class. 
 
-As you would expect, a TypeScript interface can hold declarations (symbols) for state (properties) and behaviour (methods). Let's start with properties. 
+As you would expect, a TypeScript class can hold declarations (symbols) for state (properties) and behaviour (methods). Let's start with properties. 
 
 Property names are usually camelCase, and begin with a lower-case letter. Each property is typed. We'll use "string" and "number" for now. If your Mockaroo.com-generated data includes a date string, then it is a string. (Don't try to define it as a date object.) For example:
 
@@ -83,7 +84,7 @@ export class Customer {
 }
 ```
 
-Interfaces that describe the shape of objects typically do not have any or many methods. 
+Code modules (class or interface) that describe the shape of data / schema objects typically do not have any or many methods. 
 
 <br>
 
