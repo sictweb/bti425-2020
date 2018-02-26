@@ -475,9 +475,19 @@ Notice the pattern:
 
 In this or other components, if you need different things done, then 1) add method(s) to the data manager service, and 2) call the method(s) from a component. 
 
+After you edit the customers component HTML template, it's possible that your work will look something like this, if you're rendering the content as a table:
+
+![Customers view, initial](../media/a3/p2-customers-v1.png)
+
 <br>
 
-#### TBA
+#### Customer "detail" component
+
+The idea here is to enable the browser user to click (select) a row in the table, and then load a separate "customer detail" component that will display all the details. 
+
+To get started, implement the solution in the first part of the [Select an item, view its details](https://sictweb.github.io/bti425/notes/angular-components-inclass#select-an-item-view-its-details) section of the recent notes. You want to add a click handler, and write the click hander method. For now, the click handler method can do a console log and output the selected object. 
+
+What's different in this app, when compared to the in class example? There, we rendered content on the same view. Here, we want to implement routing, and view a component that's dedicated to showing customer detail. 
 
 ( more to come )
 
