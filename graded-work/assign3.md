@@ -481,13 +481,25 @@ After you edit the customers component HTML template, it's possible that your wo
 
 <br>
 
-#### Customer "detail" component
+#### Customer "detail" component, introduction
 
 The idea here is to enable the browser user to click (select) a row in the table, and then load a separate "customer detail" component that will display all the details. 
 
 To get started, implement the solution in the first part of the [Select an item, view its details](https://sictweb.github.io/bti425/notes/angular-components-inclass#select-an-item-view-its-details) section of the recent notes. You want to add a click handler, and write the click hander method. For now, the click handler method can do a console log and output the selected object. 
 
-What's different in this app, when compared to the in class example? There, we rendered content on the same view. Here, we want to implement routing, and view a component that's dedicated to showing customer detail. 
+What's different in this app, when compared to the in class example? There, we rendered content on the same view. Here, we want to implement routing, and view a component that's dedicated to showing customer detail. To complete this, we will briefly introduce:
+1. Input data for a component
+2. Routing
+
+<br>
+
+**Input data for a component**
+
+Above, you created a customer detail component. Open its code for editing. Import the customer class and the data manager class. 
+
+( more to come )
+
+**Routing**
 
 ( more to come )
 
