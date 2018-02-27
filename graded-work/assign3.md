@@ -458,19 +458,33 @@ getCustomers() {
 
 **Using the data manager service**
 
-As noted above, we add code to the constructor parameter in a component that will use the service. Before doing that, import the customer class and the service class. Then, edit the constructor method so that it looks something like this:
+As noted above, we add code to the constructor parameter in a component that will use the service. Before doing that, import the customer class and the service class. 
+
+Next, create a property for the service, so that we can use it throughout the component class.
+
+```ts
+m: DataManagerService;
+```
+
+> Note: Although you can use *any* name for the property, the professor often uses a short name "m" for "data manager". Easy to type and remember.
+
+Then, edit the constructor method so that it looks something like this:
 
 ```ts
 // Assuming that the component 
 // has a property/field named "customers"...
-constructor(private m: DataManagerService) {
+constructor(private service: DataManagerService) {
+  // Assign the value to the class property "m"
+  this.m = service;
+  // Fetch the customers from the service,
+  // and assign the value to the class property "customers"
   this.customers = m.getCustomers();
 }
 ```
 
-Notice the pattern:
-* The "private" modifier is used 
-* Although you can use *any* name for the identifier, the professor's preference is to use a short name ("m" for "data manager")
+Notice the pattern in the constructor code:
+* The "private" modifier is used in the parameter declaration
+* Although you can use *any* name for the identifier, the professor's often uses "service" here 
 * Then the type 
 
 In this or other components, if you need different things done, then 1) add method(s) to the data manager service, and 2) call the method(s) from a component. 
@@ -527,7 +541,19 @@ Notice a few things about the routes:
 * Routes for the components that do not need any input data are defined here (later we'll add to this list)
 * The sequence in which the routes appear matters - make sure that you place the empty route and the not found route at the end of the array
 
-( more to come )
+<br>
+
+**Edit the nav menu**
+
+In your recent React with routing work, you learned that the an `href` attribute was replaced with a routing-aware attribute. Same situation here. We replace the `href` attribute with a `routerLink` attribute. Here's an example:
+
+```html
+<a routerLink='/customers'>Customer list</a>
+```
+
+Notice that the path is an *absolute* path from the root of the URL space. It's probably a good aidea to adopt this convention. 
+
+Now, edit all the links in the nav menu, by replacing each `href` attribute with a `routerLink` attribute. Test your work.
 
 <br>
 
