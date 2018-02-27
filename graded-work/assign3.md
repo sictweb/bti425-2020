@@ -460,31 +460,21 @@ getCustomers() {
 
 As noted above, we add code to the constructor parameter in a component that will use the service. Before doing that, import the customer class and the service class. 
 
-Next, create a property for the service, so that we can use it throughout the component class.
-
-```ts
-m: DataManagerService;
-```
-
-> Note: Although you can use *any* name for the property, the professor often uses a short name "m" for "data manager". Easy to type and remember.
-
 Then, edit the constructor method so that it looks something like this:
 
 ```ts
 // Assuming that the component 
 // has a property/field named "customers"...
-constructor(private service: DataManagerService) {
-  // Assign the value to the class property "m"
-  this.m = service;
+constructor(private m: DataManagerService) {
   // Fetch the customers from the service,
   // and assign the value to the class property "customers"
-  this.customers = m.getCustomers();
+  this.customers = this.m.getCustomers();
 }
 ```
 
 Notice the pattern in the constructor code:
 * The "private" modifier is used in the parameter declaration
-* Although you can use *any* name for the identifier, the professor's often uses "service" here 
+* Although you can use *any* name for the identifier, the professor's often uses a short name "m" for "data manager" (easy to type and remember)
 * Then the type 
 
 In this or other components, if you need different things done, then 1) add method(s) to the data manager service, and 2) call the method(s) from a component. 
@@ -557,25 +547,97 @@ Now, edit all the links in the nav menu, by replacing each `href` attribute with
 
 <br>
 
+**Import the Router in any component that uses routing**
+
+In any component that uses routing (customers, customer detail, etc.), import the router:
+
+```ts
+import { Router } from '@angular/router';
+```
+
+It's also a good idea to inject it into the constructor. For example, in a component that needs both the data manager service *and* routing, the constructor could look like the following:
+
+```ts
+  constructor(
+    private m: DataManagerService,
+    private router: Router
+  ) {
+    // your constructor code goes here...
+```
+
+<br>
+
 #### Customer "detail" component, introduction
 
 The idea here is to enable the browser user to click (select) a row in the table, and then load a separate "customer detail" component that will display all the details. 
 
-To get started, implement the solution in the first part of the [Select an item, view its details](https://sictweb.github.io/bti425/notes/angular-components-inclass#select-an-item-view-its-details) section of the recent notes. You want to add a click handler, and write the click hander method. For now, the click handler method can do a console log and output the selected object. 
+To get started, implement the solution in the first part of the [Select an item, view its details](https://sictweb.github.io/bti425/notes/angular-components-inclass#select-an-item-view-its-details) section of the recent notes. You want to add a click handler, and write the click hander method. For now, the click handler method can do a console log and output the selected customer object. 
 
-What's different in this app, when compared to the in class example? There, we rendered content on the same view. Here, we want to implement routing, and view a component that's dedicated to showing customer detail. To complete this, we will briefly introduce:
-1. Input data for a component
-2. Routing
+What's different in this app, when compared to the in-class example? There, we rendered content on the same view. Here, we have implemented routing, and want to view a component that's dedicated to showing customer detail. We will pass information about the selected customer to the customer detail component. We do this by using a "route parameter" feature. 
 
 <br>
 
-**Input data for a component**
+**Write a new "get customer" method in the data manager service**
 
-Above, you created a customer detail component. Open its code for editing. Import the customer class and the data manager class. 
+Return to edit the data manager service code. Write a method to find the selected customer in the data manager service (using the [array find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method), and return it to the caller.
+
+<br>
+
+**Update the customers list component code**
+
+Above, you just coded a click handler to console log the selected customer object. This time, let's call the just-written data manager service method, and then *programmatically navigate* to the customer detail component. Something like this:
+
+![Programmatically navigate](../media/a3/p2-routing-to-detail.png)
+
+<br>
+
+**Route parameter, as input data for a component**
+
+Open the app routing module code for editing. Add a new route object to the "routes" array:
+
+```ts
+{ path: 'customerdetail/:id', component: CustomerDetailComponent },
+```
+
+Notice the format of the path. It has a *route parameter*, `/:id`. That will be a the identifier/number of the specific customer that we want to view. For example, `/customerdetail/123`. 
+
+Earlier, you created a customer detail component. Open its code for editing. Create a property to hold the data for the specific customer that we want to view.
+
+Import these classes. We need them to make things work. 
+* Customer 
+* Data manager service
+* The "Router" class (from `@angular/router`)
+* The "ActivatedRoute" class (also from `@angular/router`) 
+
+We will inject the last three into the constructor too. 
+
+THen, write the code that will 1) extract the customer identifier value from the URL parameter(s), and then 2) call into the data service to fetch the selected customer. Something like this:
+
+![Customer detail constructor](../media/a3/p2-routing-in-detail-constructor.png)
+
+<br>
+
+At this point in time, we have the selected customer data. Now, we want to display it. Open the customer detail component HTML template for editing. (Make sure the markup that you write is in a row class div, so that it looks OK. Also make sure the view has an info heading.)
+
+One way of displaying the selected customer's properties is to use a [definition list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl) element. In the `<dl>` tag, if you use the Boostrap "dl-horizontal" class, it will render a nice side-by-side list of customer properties and values. 
+
+![Customer detail](../media/a3/p2-customerdetail-v1.png)
+
+<br>
+
+It's a good idea to add a button, to navigate back to the list of customers. (Yes, the browser user could also use the "back" button.) Here's a getting-started implementation of the button markup:
+
+```html
+<button class="btn btn-default" (click)='this.router.navigate(["/customers"])'>Back to list</button>
+```
+
+<br>
 
 ( more to come )
 
-**Routing**
+<br>
+
+**TBA**
 
 ( more to come )
 
