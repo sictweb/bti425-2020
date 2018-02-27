@@ -346,7 +346,7 @@ Also, add `<meta>` tags for author and description, similar to those generated b
 
 #### Plan your components
 
-As always, we will need some kind of a heading and/or navigation menu. For this app, it's OK to use only a nav menu. We will need a footer too (for your academic honesty statement). 
+As always, we will need some kind of a heading and/or navigation menu. For this app, it's OK to use only a nav menu. We will need a footer too (for your academic honesty statement). And a "not found" component.  
 
 For content areas, we will need the following:
 * home, which is a landing view 
@@ -478,6 +478,56 @@ In this or other components, if you need different things done, then 1) add meth
 After you edit the customers component HTML template, it's possible that your work will look something like this, if you're rendering the content as a table:
 
 ![Customers view, initial](../media/a3/p2-customers-v1.png)
+
+<br>
+
+#### Brief introduction to routing
+
+At this point in time, you have a customer list component. Recall that you also have a "home" component. Let's introduce routing, so that a browser user can display each view by clicking on links in the nav menu. 
+
+This section is a *brief* introduction to routing, and it covers only the easy-to-do essentials. Later in the course, you will learn more about routing. Let's get started.
+
+<br>
+
+**Initialize routing**
+
+When you created this project, you included the `--routing` option on the `ng new...` command. That did a few things:
+1. It created an "app routing module", `app-routing.module.ts`
+2. In the app module `app.module.ts`, it imported the app routing module
+3. In the app component HTML template, it added a custom element, `<router-outlet>` 
+
+<br>
+
+**Edit the app component HTML template**
+
+Earlier, you added the custom elements to the app component HTML template, just to make them appear in the view. 
+
+Now, the router will do that job. So, remove the custom elements. The idea is that the router will inject/insert content from the routed component into the `<router-outlet>` element. After editing, it may look something like this:
+
+![Customers view, initial](../media/a3/p2-routing-app-markup.png)
+
+<br>
+
+**Add route descriptors to the app routing module**
+
+In an Angular app, route descriptors are added to the app routing module, `app-routing.module.ts`. It has a "routes" array, which starts out empty. *We* add route descriptors to this array, to map URL segments to components. 
+
+A route is an object ([see the docs](https://angular.io/api/router/Route)) with properties. Simple routed components need a *path* and *component* defined. Also, we always define an empty route, and a not found route.
+
+Before defining a route to a component, make sure that you import the component into the app routing module. 
+
+Let's start with a getting-started configuration for our project #2. (We will add a few more routes later.) The "routes" array will look something like this:
+
+![Customers view, initial](../media/a3/p2-routing-routes-v1.png)
+
+<br>
+
+Notice a few things about the routes:
+* The "home" landing page is included (makes sense, right?)
+* Routes for the components that do not need any input data are defined here (later we'll add to this list)
+* The sequence in which the routes appear matters - make sure that you place the empty route and the not found route at the end of the array
+
+( more to come )
 
 <br>
 
