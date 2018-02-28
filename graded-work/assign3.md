@@ -352,9 +352,9 @@ For content areas, we will need the following:
 * home, which is a landing view 
 * customers, which displays a list (table) of customers 
 * customer detail, info about one customer
+* customer delete, to confirm the deletion of a customer
 * customer create, to add a new customer to the collection
 * customer edit, to edit customer details
-* (TBA) customer delete, to confirm the deletion of a customer
 
 Use the Angular CLI to generate components for each of them now. Remember, use Pascal case names if you are using multi-word names for components. 
 
@@ -547,7 +547,7 @@ Now, edit all the links in the nav menu, by replacing each `href` attribute with
 
 <br>
 
-**Import the Router in any component that uses routing**
+**Import the Router into any component that uses routing**
 
 In any component that uses routing (customers, customer detail, etc.), import the router:
 
@@ -611,7 +611,7 @@ Import these classes. We need them to make things work.
 
 We will inject the last three into the constructor too. 
 
-THen, write the code that will 1) extract the customer identifier value from the URL parameter(s), and then 2) call into the data service to fetch the selected customer. Something like this:
+Then, write the code that will 1) extract the customer identifier value from the URL parameter(s), and then 2) call into the data service to fetch the selected customer. Something like this:
 
 ![Customer detail constructor](../media/a3/p2-routing-in-detail-constructor.png)
 
@@ -631,13 +631,48 @@ It's a good idea to add a button, to navigate back to the list of customers. (Ye
 <button class="btn btn-default" (click)='this.router.navigate(["/customers"])'>Back to list</button>
 ```
 
+Alternatively, you could put that code in a new class method, and simplify the button markup:
+
+```html
+<button class="btn btn-default" (click)='back()'>Back to list</button>
+```
+
 <br>
+
+#### Enable the browser user to delete a customer
+
+In this task, we will enable the browser user to delete a customer. First, we must think about and design the user interaction experience. One possible way is this:
+1. A customer is selected from the list
+2. It appears on the customer detail view
+3. A new button enables the browser user to signal their intent to delete the customer
+4. The button navigates to a new "confirm delete" view
+5. When confirmed, it navigates back to the list of customers
+
+Step 3:
+
+![Customer delete](../media/a3/p2-customerdelete-step1.png)
+
+<br>
+
+Step 4:
+
+![Customer delete confirm](../media/a3/p2-customerdelete-step2.png)
+
+<br>
+
+Let's get started. Open the customer detail component code and HTML template for editing. 
+
+<br>
+
+**New "delete" button**
+
+Add a new "delete" button to the view. 
 
 ( more to come )
 
 <br>
 
-**TBA**
+#### TBA
 
 ( more to come )
 
