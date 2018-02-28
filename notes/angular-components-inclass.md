@@ -64,7 +64,7 @@ What properties do we write for the new "Customer" class? Continue with the next
 
 In Assignment 1, you learned how to use the Mockaroo.com service to generate some data. Locate the data file that you used in your Assignment 1 (or return to Mockaroo.com and generate some new data). 
 
-Study the data in your file. Then, edit the new "Customer" interface, and add matching properties. 
+Study the data in your file. Then, edit the new "Customer" class, and add matching properties. 
 
 <br>
 
@@ -319,7 +319,7 @@ Replace the display-only detail elements with `<input>` elements, as suggested b
 ```html
 <h3>Select a row, then edit</h3>
 <p>First name:<br>
-<input class="form-control" [(ngModel)]="selectedCust.firstname"</p>
+<input class="form-control" [(ngModel)]="selectedCust.firstname"></p>
 ```
 
 The `ngModel` symbol represents the component's data model. In other words, its properties. (Remember, one of those properties is "selectedCust".)
