@@ -660,19 +660,35 @@ Step 4:
 
 <br>
 
-Let's get started. Open the customer detail component code and HTML template for editing. 
+Let's get started. 
 
 <br>
 
-**New "delete" button**
+**Customer detail, new "delete" button**
 
-Add a new "delete" button to the view. 
+Open the customer detail component code and HTML template for editing. Add a new "delete" button to the view. It will call a method that will ultimately navigate to the "customer delete" component. 
 
-( more to come )
+Then, write the method in the component class. It will navigate, passing on the customer identifier (number). You learned how to do that earlier (in the "customers" component). 
+
+If you want a coloured (and yes, you probably do), use one of the [Bootstrap button classes](https://getbootstrap.com/docs/3.3/css/#buttons). 
 
 <br>
 
-#### TBA
+**Customer delete component, and data manager service**
+
+Remember, all data management tasks will be done by the data manager service. Therefore, write a new method that will remove a specific customer from the collection. Think about this first; it's important to know, realize, and plan to use the customer identifier, which is guaranteed to be unique, and therefore the best way to identify the customer to be deleted. 
+
+Then, open the customer delete component code and HTML template for editing. 
+
+The screen capture image above suggests that the appearance of this view will be similar to the "customer detail" view. Yes, that's appropriate, and makes it copy-paste then modify task. 
+
+The component code will also have many of the same requirements as the "customer detail" code. The obvious difference is the button click handlers:
+* The "back" button will navigate back to the detail view 
+* The "delete" button will call the data manager service method, and then navigate back to the list of customers
+
+<br>
+
+#### Customer create task
 
 ( more to come )
 
