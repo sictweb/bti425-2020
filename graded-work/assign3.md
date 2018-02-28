@@ -9,11 +9,6 @@ The purpose or objective of the assignment is to become comfortable with Angular
 
 Read/skim all of this document before you begin work.
 
-> This page is being edited.  
-> The specifications for project #1 are complete.  
-> I plan to add the remaining specifications by Monday, February 26.  
-> This notice will be removed when the edits are complete.  
-
 <br>
 
 ### Due Date
@@ -77,7 +72,6 @@ Here's a brief *and tentative* list of specifications that you must implement in
 * Components, many
 * Local in-memory data, display and edit 
 * Master > detail paradigm, and data flow among components
-* Nested components would be nice to attempt
 * Some introductory coverage of routing, services, and forms
 
 When you're thinking about the purpose of this project #2, you could think of it as a way to become skilled in the most essential Angular development task, which is working with components in general, and data in components specifically. 
@@ -798,18 +792,36 @@ After clicking "Back to list".
 
 #### Edit a customer
 
-This task will blend many of the above techniques.
+This task will blend many of the above techniques. (Copy, paste, edit, write some new code.)
 
-( more to come )
+As above, make sure that there is a defined route object in the app router module. As with edit and delete, it will need a parameter to hold the customer identifier. 
+
+Next, we will need a way to activate that route. One way is to add another button (and method etc.) to the "customer detail" component. The idea is that a browser user is looking at the customer detail, and may want to edit it. 
+
+Next, go to the data manager service. It needs a method that will enable the customer edit task. Its logic can work like the following (because we're using an in-memory array/collection):
+1. Remove the old version of the customer from the array (you know how to do that from the "delete customer" task above)
+2. Add the new version of the customer to the array (again, you know how to do that from the "create customer" task above)
+3. Return the new version of the customer to the caller
+
+Then, we can work with the "customer edit" component code and HTML template. As a starting point, the appearance will be similar to the "customer create" component (with changes to the heading, buttons, etc.). So, you can probably copy-paste from its HTML template. Then, edit where appropriate. It should probably have another button that enables the browser user to effectively cancel the edit task by going back to the "customer detail" component/view. 
+
+Finally, we can edit the class code. Similar to the logic in the "create customer" task, it will call the data manager service method, and then navigate to the "customer detail" component/view. 
+
+The result may look like the following. Assume that we're editing the first name and city (to "Peter" and "Toronto"):
+
+![Customer edit, result 1](../media/a3/p2-customeredit-result1.png)
 
 <br>
 
-#### Possible - customer "card" component
+After saving, it shows the "detail" component/view:
 
-( new view/layout for a customer )
-( maybe three or four across )
+![Customer edit, result 2](../media/a3/p2-customeredit-result2.png)
 
-( more to come )
+<br>
+
+Notice the results on the customer list:
+
+![Customer edit, result 3](../media/a3/p2-customeredit-result3.png)
 
 <br>
 
