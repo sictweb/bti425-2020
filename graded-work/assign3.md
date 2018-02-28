@@ -11,6 +11,14 @@ Read/skim all of this document before you begin work.
 
 <br>
 
+Quick on-page links:
+
+Beginning of the "project 1 specifications" section - [project 1](https://sictweb.github.io/bti425/graded-work/assign3#doing-the-work-project-1-web-site-convert)
+
+Beginning of the "project 2 specifications" section - [project 2](https://sictweb.github.io/bti425/graded-work/assign3#doing-the-work-project-2-components)
+
+<br>
+
 ### Due Date
 
 Sunday, March 11, 2018, at 6:00pm ET
