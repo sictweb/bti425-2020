@@ -15,7 +15,7 @@ Once we are comfortable working with components, we can continue progressing thr
 
 **Test 3 is on Tuesday, March 6**
 
-The test questions are based on the Angular topics and learning experience, during last week *and* this week. 
+The test questions are based on the Angular topics and learning experience, during last week *and* this week. That includes some content from the current assignment too. 
 
 <br>
 
