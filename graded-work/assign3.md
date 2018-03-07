@@ -518,7 +518,7 @@ Now, the router will do that job. So, remove the custom elements. The idea is th
 
 In an Angular app, route descriptors are added to the app routing module, `app-routing.module.ts`. It has a "routes" array, which starts out empty. *We* add route descriptors to this array, to map URL segments to components. 
 
-A route is an object ([see the docs](https://angular.io/api/router/Route)) with properties. Simple routed components need a *path* and *component* defined. Also, we always define an empty route, and a not found route.
+A route is an object ([see the docs](https://angular.io/api/router/Route)) with properties. Simple routed components need a *path* and *component* defined. Also, we always define an *empty* route, and a *not found* route.
 
 Before defining a route to a component, make sure that you import the component into the app routing module. 
 
@@ -531,7 +531,7 @@ Let's start with a getting-started configuration for our project #2. (We will ad
 Notice a few things about the routes:
 * The "home" landing page is included (makes sense, right?)
 * Routes for the components that do not need any input data are defined here (later we'll add to this list)
-* The sequence in which the routes appear matters - make sure that you place the empty route and the not found route at the end of the array
+* The sequence in which the routes appear matters - make sure that you place the *empty* route and the *not found* route at the end of the array
 
 <br>
 
