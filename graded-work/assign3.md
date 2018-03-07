@@ -543,7 +543,7 @@ In your recent React with routing work, you learned that the an `href` attribute
 <a routerLink='/customers'>Customer list</a>
 ```
 
-Notice that the path is an *absolute* path from the root of the URL space. It's probably a good aidea to adopt this convention. 
+Notice that the path is an *absolute* path from the root of the URL space. It's probably a good idea to adopt this convention. 
 
 Now, edit all the links in the nav menu, by replacing each `href` attribute with a `routerLink` attribute. Test your work.
 
@@ -551,7 +551,7 @@ Now, edit all the links in the nav menu, by replacing each `href` attribute with
 
 **Import the Router into any component that uses routing**
 
-In any component that uses routing (customers, customer detail, etc.), import the router:
+In every component that uses routing (customers, customer detail, etc.), import the router:
 
 ```ts
 import { Router } from '@angular/router';
