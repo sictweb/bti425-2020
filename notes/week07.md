@@ -27,7 +27,7 @@ The first two documents are repeated from the Week 6 coverage:
 
 [Angular Components Example](angular-components-example): This document guides us through a simple example ("animals"), where we plan a view with multiple components from scratch.
 
-The next document is new this week:
+The next documents are new this week:
 
 [Angular Components Continued](angular-components-more): This document contains the important review topics for Angular Components including:
 * Creating Components Using the Angular CLI
@@ -36,5 +36,8 @@ The next document is new this week:
 * Lifecycle Methods
 * Component Interaction
 * Angular Directives (Structural / Attribute)
+
+[Angular date pipe](angular-date-pipe)  
+Describes how to use a built-in Angular feature to format dates on a view.
 
 <br>

@@ -51,7 +51,7 @@ Here's an image that shows the top part of the view in project #2:
 
 **New with this assignment - important**
 
-The first two assignments in this course included detailed how-to instructions. For this assignment, and future assignments, the instructions will be less detailed, with less guidance 
+The first two assignments in this course included detailed how-to instructions. For this assignment, and future assignments, the instructions will be less detailed, with less guidance. 
 
 As a result, you will have to apply recently-learned knowledge, acquire new knowledge (that's within the topic scope), and make some decisions on your own at times. 
 
