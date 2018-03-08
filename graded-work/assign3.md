@@ -45,7 +45,7 @@ Here's an image that shows the top part of the view in project #1. As with any i
 
 Here's an image that shows the top part of the view in project #2:
 
-![Project 2](https://via.placeholder.com/350x150)
+![Project 2](../media/a3/p2-front-v1.png)
 
 <br>
 
