@@ -52,7 +52,7 @@ In the component template, use the data pipe in the binding expression. For exam
 
 ```html
 <dt>Birth date</dt>
-<dd>{{ c.birthdate | date:'longDate' }}</dd>
+<dd>{%raw%}{{ c.birthdate | date:'longDate' }}{%endraw%}</dd>
 ```
 
 <br>
