@@ -27,6 +27,8 @@ Here are this week's notes:
 
 [Routing and parameters](angular-routing-parameters)
 
+<br> 
+
 Additional notes and documentation:
 
 [Adding Routing to an existing app](angular-routing-existing-app)

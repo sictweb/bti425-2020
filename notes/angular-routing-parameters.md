@@ -12,11 +12,9 @@ Recently, we learned how to define routes to enable navigation among components 
 
 Then, as we learned in Assignment 3 and in BTI325, there are ways to work with variable data within our routes, as a *route parameter*. In this document, we learn more about this technique, and learn another, *query parameter*. 
 
-The following explanations were based on the excellent [Rangle.io](https://rangle.io/) documentation for: 
-
-[Route Parameters](https://angular-2-training-book.rangle.io/handout/routing/routeparams.html), and 
-
-[Query Parameters](https://angular-2-training-book.rangle.io/handout/routing/query_params.html) 
+Some of the following content was based on the excellent [Rangle.io](https://rangle.io/) documentation for: 
+* [Route Parameters](https://angular-2-training-book.rangle.io/handout/routing/routeparams.html), and 
+* [Query Parameters](https://angular-2-training-book.rangle.io/handout/routing/query_params.html) 
 
 <br>
 
