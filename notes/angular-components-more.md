@@ -5,12 +5,9 @@ layout: default
 
 ## Angular Components Continued
 
-> This page is being edited.  
-> This notice will be removed when the edits are complete.  
-
 Before we move on to more advanced topics in Angular, it's important that we really understand some of the fundamental details about Components.  Since an Angular application is essentially a "tree of Angular components", we will continue to work with Components throughout the remainder of this course.  We will often circle back to some of these core concepts and expand upon them to add new functionality to our applications.
 
-For the next few sections, assume that we would like to create and work with two extremely trivial components: "RedBoxComponent" (&lt;app-red-box&gt;&lt;/app-red-box&gt;) and "BlueBoxComponent" (&lt;app-blue-box&gt;&lt;/app-blue-box&gt;).
+For the next few sections, assume that we would like to create and work with two extremely trivial components: "RedBoxComponent" (` <app-red-box> `) and "BlueBoxComponent" (` <app-blue-box> `).
 
 <br>
 
@@ -19,7 +16,7 @@ For the next few sections, assume that we would like to create and work with two
 To add one of our components, ie the "RedBox", we typically use the Angular CLI.  In this case, we wish to create a new component called "RedBox", so the command would be:
 
 ```
-ng generate component RedBox --flat
+ng g c RedBox --flat
 ```
 
 This would create the following 4 files in the src/app directory (Note: it will *not* create a new directory for the component - this is because the "flat" flag was used:
@@ -59,7 +56,7 @@ The angular CLI has automatically included some important code:
 
 * The "import" statement to access the ["Component"](https://angular.io/api/core/Component) decorator and the ["OnInit"](https://angular.io/api/core/OnInit) interface from @angular/core.
 
-* Default values for the @Component decorator, including the component "selector" (for element: &lt;app-red-box&gt;&lt;/app-red-box&gt;&lt;/app-red-box&gt;) and the urls for the newly added "template" (.html) / "style" (.css) files. 
+* Default values for the @Component decorator, including the component "selector" (for element ` <app-red-box> `) and the urls for the newly added "template" (.html) / "style" (.css) files. 
 
 * A class definition for our "RedBoxComponent" that implements the "OnInit" Lifecycle method (explained below), as well as provides a skeleton for a "constructor" method (used to initialize the fields of the class - optionally using dependant objects passed into the constructor when it's instantiated (see: ["Dependaency Injection"](https://angular.io/guide/dependency-injection) - this will be discussed further when we discuss "services"/"Providers")
 
@@ -95,7 +92,7 @@ We then decide that "BlueBoxComponent will be a child of the "RedBoxComponent", 
 
 ```html
 <app-red-box>
-<app-blue-box></app-blue-box>
+  <app-blue-box></app-blue-box>
 </app-red-box>
 ```
 
@@ -128,15 +125,37 @@ export class BlueBoxComponent implements OnInit {
 }
 ```
 
-Now the "BlueBoxComponent" can accept a string value as a property! To continue this discussion, we will refer to:
+Now the "BlueBoxComponent" can accept a string value as a property. To continue this discussion, we will refer to:
 
-**[Angular's official documentation on Component Interaction](https://angular.io/guide/component-interaction#component-interaction)**
+[Angular's official documentation on Component Interaction](https://angular.io/guide/component-interaction)
 
 <br>
 
-### Review: Angular Directives
+#### Passing string literals from one component to another
+
+If the value is static and can be entered in the component template, then we do not need a property in the component class. 
+
+For example, while composing the component template, assume that we already know that the message (from above) is "Hello, world!". We can pass this string literal to another component in any of three ways. The important thing to know is that the right side of the attribute-value pair must be an *expression*. If we enclose a string literal in quote-delimiters, it becomes an expression (magically) (well, not really magically).
+
+```html
+<app-blue-box message="Hello, world!"></app-blue-box>
+```
+
+```html
+<app-blue-box [message]="'Hello, world!'"></app-blue-box>
+```
+
+```html
+<app-blue-box message="{%raw%}{{ 'Hello, world!' }}{%endraw%}"></app-blue-box>
+```
+
+<br>
+
+### Skim the knowledge about Angular directives
 
 Before we move on to our next topic, it's important that we discuss Angular Directives:
 
 * [Attribute Directives / Directives Overview](https://angular.io/guide/attribute-directives#attribute-directives)
 * [Structural Directives](https://angular.io/guide/structural-directives#structural-directives)
+
+<br>

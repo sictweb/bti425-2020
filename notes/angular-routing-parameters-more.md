@@ -88,8 +88,6 @@ How? We use the *ActivatedRoute* service, in any component that needs to read ro
 2. Inject it into the constructor
 3. Read the parameter(s)
 
-<br>
-
 ##### 1. Import statement
 
 Here's the import statement:
@@ -97,8 +95,6 @@ Here's the import statement:
 ```ts
 import { ActivatedRoute } from '@angular/router';
 ```
-
-<br>
 
 ##### 2. Inject it into the constructor
 
@@ -114,8 +110,6 @@ constructor(
 
 ```
 
-<br>
-
 ##### 3. Read the parameter(s)
 
 Somewhere in your component class, you will have methods that will want to read and use the parameter(s). We must know the parameter name that was used in the section above ([Declaring routes...](#Declaring-routes-with-parameters)). 
@@ -129,29 +123,53 @@ let id = this.route.snapshot.params['id'];
 let p = this.m.getProduct(id);
 ```
 
-> Note: During the viewing of the component, if it is possible that the app's user will navigate to the same component/view but with a different parameter value, then this task becomes a bit more complicated. See [this note](angular-routing-parameters-more) for a possible solution. 
+> Note: During the viewing of the component, if it is possible that the app's user will navigate to the same component/view but with a different parameter value, then this task becomes a bit more complicated. See [this note](tba) for a possible solution. 
+
+```js
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+@Component({
+  selector: 'product-details',
+  template: `
+    <div>
+      Showing product details for product: {{id}}
+    </div>
+  `,
+})
+export class LoanDetailsPage implements OnInit, OnDestroy {
+  id: number;
+  private sub: any;
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+       this.id = +params['id']; // (+) converts string 'id' to a number
+
+       // In a real app: dispatch action to load the details here.
+    });
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+}
+```
+
+The reason that the **params** property on **ActivatedRoute** is an Observable is that the router may not recreate the component when navigating to the same component. In this case the parameter may change without the component being recreated.
 
 <br>
 
-### Query parameters
-
-( more to come )
-
-<br>
-
-<!--
-#### Passing optional parameters
+#### Passing Optional Parameters
 
 Query parameters allow you to pass optional parameters to a route such as pagination information.
-
 For example, on a route with a paginated list, the URL might look like the following to indicate that we've loaded the second page:
 
 ```
 localhost:3000/product-list?page=2
 ```
 The key difference between query parameters and route parameters is that route parameters are essential to determining route, whereas query parameters are optional.
-
-<br>
 
 ##### Passing Query Parameters
 
@@ -181,7 +199,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'product-list',
-  templateUrl: './product-list.component.html'
+  template: `<!-- Show product list -->`
 })
 export default class ProductList {
   constructor(
@@ -208,4 +226,17 @@ export default class ProductList {
 ```
 
 <br>
--->
+
+### Summary, and next actions
+
+In past weeks, we have had a good treatment of *components* and *routing*. The scenarios were simple, in that the goal was to package and display an area of the user interface. Multiple components were created and displayed. 
+
+This week, we learned how to add *services* to an app. This feature gets external (and internal) data and services involved in your app. 
+
+<br>
+
+**Next actions**
+
+In our [getting started example](angular-services-example) document, you will learn to enhance last week's routing example, by adding services. 
+
+<br>
