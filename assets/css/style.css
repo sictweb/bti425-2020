@@ -3,8 +3,8 @@
 
 @import 'jekyll-theme-cayman';
 
-@media screen and (max-width: 42em)
+/*@media screen and (max-width: 42em)
 .btn {
     display: inline-block;
     width: 45%;
-}
+}*/
