@@ -5,17 +5,35 @@ layout: default
 
 ## BTI425 Week 8 Notes
 
-> This page is being edited.  
-> This notice will be removed when the edits are complete.  
+Recall, the theme for the *remainder of the course* is to cover the Angular platform.  
 
-Angular routing
+During your work on Assignment 3, you had a very brief introduction to the essential *Angular routing* topics. Today, we will turn our full attention to Routing in Angular, specifically: 
 
-( more to come )
+* Examining the supporting documentation on Angular Routing
+* How to configure / use routing
+* Adding routing to an existing application
+* Planning components / routes
+* Configuring special components / routes (e.g. "Page not found").
 
 <br>
 
 **Topics:**
 
-( more to come )
+Here are this week's notes:
+
+[Angular Routing Introduction](angular-routing-intro)
+
+[The "getting started" example](angular-routing-example)
+
+[Routing and parameters](angular-routing-parameters)
+
+Additional notes and documentation:
+
+[Adding Routing to an existing app](angular-routing-existing-app)
+
+[The official Angular.io documentation](https://angular.io/docs) for these topics:
+* [Routing & Navigation](https://angular.io/guide/router)
+* [RouterOutlet](https://angular.io/api/router/RouterOutlet)
+* [RouterLink](https://angular.io/api/router/RouterLink)
 
 <br>

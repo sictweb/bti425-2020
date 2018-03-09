@@ -74,6 +74,7 @@ a {
   }
 
   @include small {
+    /* Did not like the full-width buttons, so we'll go three wide*/
     /*display: block;*/
     /*width: 100%;*/
     width: 30%;
