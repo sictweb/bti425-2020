@@ -25,17 +25,17 @@ For example, consider this URL segment (which has omitted the [scheme and host](
 /product-details/15
 ```
 
-The ` product-details ` segment would typically identify the component or view that is the navigation target. 
+The `product-details` segment would typically identify the component or view that is the navigation target. 
 
-The ` 15 ` segment *is the route parameter*. It is a variable piece of data - a value - that is calculated or determined by user interaction. The *product-details component* will extract that value, and do whatever it needs to (e.g. fetch the data for product 15) to render the view's content. 
+The `15` segment *is the route parameter*. It is a variable piece of data - a value - that is calculated or determined by user interaction. The *product-details component* will extract that value, and do whatever it needs to (e.g. fetch the data for product 15) to render the view's content. 
 
 <br>
 
 #### Declaring routes with parameters
 
-The syntax for a route parameter is familiar to anyone who has configured routes in the server-side Express.js framework. Simply prefix the variable or property name with a colon (` : `). 
+The syntax for a route parameter is familiar to anyone who has configured routes in the server-side Express.js framework. Simply prefix the variable or property name with a colon (`:`). 
 
-For example, look at the route object for ` product-details ` below:
+For example, look at the route object for `product-details` below:
 
 ```ts
 export const routes: Routes = [
@@ -51,7 +51,7 @@ export const routes: Routes = [
 
 #### Linking to parameterized routes
 
-As you have learned, we use the ` routerLink ` attribute in the ` <a> ` element when using routing. 
+As you have learned, we use the `routerLink` attribute in the `<a>` element when using routing. 
 
 In a ProductList component, we could display a list of products. Each product would have a link to the "product-details" route, and pass the product identifier:
 
@@ -117,7 +117,7 @@ constructor(
 
 Somewhere in your component class, you will have methods that will want to read and use the parameter(s). We must know the parameter name that was used in the section above ([Declaring routes...](#Declaring-routes-with-parameters)). 
 
-Continuing from above, assume that we want to read the parameter named ` id `. Here's how:
+Continuing from above, assume that we want to read the parameter named `id`. Here's how:
 
 ```ts
 // fetch a specific product...
@@ -134,7 +134,7 @@ let p = this.m.getProduct(id);
 
 Query parameters allow you to pass *optional* parameters to a route. 
 
-For example, consider a scenario in which we have a component that displays a long list of items (customers, products, whatever). If the component uses ` *ngFor ` to render the items, it will render *all* the items. So, if there are 1,000 items, it will render all 1,000. That might not deliver a good user experience. A common tactic is to "page" the results, by showing fewer items, and giving the user some controls to enable "paging" through the list if items, a group at a time. This technique is often called *pagination*. 
+For example, consider a scenario in which we have a component that displays a long list of items (customers, products, whatever). If the component uses `*ngFor` to render the items, it will render *all* the items. So, if there are 1,000 items, it will render all 1,000. That might not deliver a good user experience. A common tactic is to "page" the results, by showing fewer items, and giving the user some controls to enable "paging" through the list if items, a group at a time. This technique is often called *pagination*. 
 
 > Note - We plan to post a code example that shows a typical pagination experience. 
 
@@ -152,7 +152,7 @@ In summary, the key difference between query parameters and route parameters is 
 
 Use the **queryParams** directive, along with **routerLink**, to pass query parameters. 
 
-In the ` <a> ` element, both are used as attributes. For example:
+In the `<a>` element, both are used as attributes. For example:
 
 ```html
 <a [routerLink]="['product-list']" [queryParams]="{ page: 5 }">View page 5</a>
@@ -183,7 +183,7 @@ goToPage(pageNum) {
 
 Reading query parameters is similar to the technique discused above in the [reading route parameters](#reading-route-parameters) section. 
 
-Assume that we want to read the parameter named ` page `. Here's how:
+Assume that we want to read the parameter named `page`. Here's how:
 
 ```ts
 // fetch a subset of products...
