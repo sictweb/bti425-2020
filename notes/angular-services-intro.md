@@ -95,7 +95,9 @@ As a wrap-up, rely on these course notes to guide your learning path, and refer 
 
 We can use the Angular CLI to add a service. In the example below, a service named "DataManager" is added to the app:
 
-`ng g s DataManager --module app --spec false`
+```
+ng g s DataManager --module app --spec false
+```
 
 As you have seen when creating components, a CamelCase name is transformed into lower case with dash word separators, when it generates the source code files. 
 
@@ -211,8 +213,8 @@ This is what we will use in our getting-started examples. In its simplest usage,
  
 The ` get() ` function returns an *Observable*, to be explained in detail soon. In essence, it is a stream of asynchronous data. The data could be a single object, or a collection. (That's determined by the web service resource.)
 
-> The return type is actually a generic ` Observable `.  
-> The syntax is ` Observable<T> `, where ` T ` is a placeholder for a type.  
+> The return type is actually a generic `Observable`.  
+> The syntax is `Observable<T>`, where `T` is a placeholder for a type.  
 > Read/skim [the generics documentation](https://www.typescriptlang.org/docs/handbook/generics.html) for more coverage.  
 > Often, it is an observable of an array of something.  
 
@@ -220,11 +222,13 @@ For example, assume that the web service has a resource URL ` /users ` that will
 
 Next, assume that our data manager service is still responsible for the app's data. Its code will have a method that will call into the web service. For example, it may have a ` getUsers() ` method similar to this:
 
+{%raw%}
 ```js
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${this.url}/users`)
   }
 ```
+{%endraw%}
 
 Notice that the return type of the method is ` Observable<User[]> `. You can read this return type as an "observable of an array of User objects". 
 
