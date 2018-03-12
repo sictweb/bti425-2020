@@ -101,7 +101,7 @@ ng g s DataManager --module app --spec false
 
 As you have seen when creating components, a CamelCase name is transformed into lower case with dash word separators, when it generates the source code files. 
 
-A new source code file is created, named ` data-manager.service.ts `. Its contents:
+A new source code file is created, named `data-manager.service.ts`. Its contents:
 
 ```js
 import { Injectable } from '@angular/core';
@@ -230,7 +230,7 @@ Next, assume that our data manager service is still responsible for the app's da
 ```
 {%endraw%}
 
-Notice that the return type of the method is ` Observable<User[]> `. You can read this return type as an "observable of an array of User objects". 
+Notice that the return type of the method is `Observable<User[]>`. You can read this return type as an "observable of an array of User objects". 
 
 In any component class that is using the data manager service, we "subscribe" to the result by using the following code:
 
