@@ -5,9 +5,6 @@ layout: default
 
 ## Routing and parameters
 
-> This document is being edited.  
-> This notice will be removed when the edits are complete.  
-
 Recently, we learned how to define routes to enable navigation among components (views). 
 
 Then, as we learned in Assignment 3 and in BTI325, there are ways to work with variable data within our routes, as a *route parameter*. In this document, we learn more about this technique, and learn another, *query parameter*. 
@@ -34,7 +31,7 @@ The ` 15 ` segment *is the route parameter*. It is a variable piece of data - a 
 
 <br>
 
-### Declaring routes with parameters
+#### Declaring routes with parameters
 
 The syntax for a route parameter is familiar to anyone who has configured routes in the server-side Express.js framework. Simply prefix the variable or property name with a colon (` : `). 
 
@@ -52,7 +49,7 @@ export const routes: Routes = [
 
 <br>
 
-### Linking to parameterized routes
+#### Linking to parameterized routes
 
 As you have learned, we use the ` routerLink ` attribute in the ` <a> ` element when using routing. 
 
@@ -77,7 +74,7 @@ goToProductDetails(id) {
 
 <br>
 
-### Reading route parameters
+#### Reading route parameters
 
 In a component class, we can read or get the value(s) of route parameters. 
 
@@ -135,77 +132,66 @@ let p = this.m.getProduct(id);
 
 ### Query parameters
 
-( more to come )
+Query parameters allow you to pass *optional* parameters to a route. 
+
+For example, consider a scenario in which we have a component that displays a long list of items (customers, products, whatever). If the component uses ` *ngFor ` to render the items, it will render *all* the items. So, if there are 1,000 items, it will render all 1,000. That might not deliver a good user experience. A common tactic is to "page" the results, by showing fewer items, and giving the user some controls to enable "paging" through the list if items, a group at a time. This technique is often called *pagination*. 
+
+> Note - We plan to post a code example that shows a typical pagination experience. 
+
+A route with a paginated list may have a URL that looks similar to the following. It suggests that the user is viewing "page 3": 
+
+```
+localhost:3000/product-list?page=3
+```
+
+In summary, the key difference between query parameters and route parameters is that route parameters are *essential* to determining navigation, whereas query parameters are *optional*.
 
 <br>
 
-<!--
-#### Passing optional parameters
+#### Linking to routes with query parameters
 
-Query parameters allow you to pass optional parameters to a route such as pagination information.
+Use the **queryParams** directive, along with **routerLink**, to pass query parameters. 
 
-For example, on a route with a paginated list, the URL might look like the following to indicate that we've loaded the second page:
-
-```
-localhost:3000/product-list?page=2
-```
-The key difference between query parameters and route parameters is that route parameters are essential to determining route, whereas query parameters are optional.
-
-<br>
-
-##### Passing Query Parameters
-
-Use the **queryParams** directive along with **routerLink** to pass query parameters. For example:
+In the ` <a> ` element, both are used as attributes. For example:
 
 ```html
-<a [routerLink]="['product-list']" [queryParams]="{ page: 99 }">Go to Page 99</a>
+<a [routerLink]="['product-list']" [queryParams]="{ page: 5 }">View page 5</a>
 ```
+
+<br>
+
+> Read/skim the [RouterLink queryParams](https://angular.io/api/router/RouterLink#queryParams) property reference documentation for more info. 
+
+<br>
 
 Alternatively, we can navigate programmatically using the Router service:
 
 ```js
 goToPage(pageNum) {
-    this.router.navigate(['/product-list'], { queryParams: { page: pageNum } });
+  // assume that "pageNum" holds a page number value
+  this.router.navigate(['/product-list'], { queryParams: { page: pageNum } });
 }
 ```
 
 <br>
 
-##### Reading Query Parameters
-
-Similar to reading route parameters, the Router service returns an Observable we can subscribe to to read the query parameters:
-
-```js
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-
-@Component({
-  selector: 'product-list',
-  templateUrl: './product-list.component.html'
-})
-export default class ProductList {
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router) {}
-
-  ngOnInit() {
-    this.sub = this.route
-      .queryParams
-      .subscribe(params => {
-        // Defaults to 0 if no query param provided.
-        this.page = +params['page'] || 0;
-      });
-  }
-
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
-
-  nextPage() {
-    this.router.navigate(['product-list'], { queryParams: { page: this.page + 1 } });
-  }
-}
-```
+> Read/skim the [navigate()](https://angular.io/api/router/Router#navigate) method reference documentation for more info.
 
 <br>
--->
+
+#### Reading query parameters
+
+Reading query parameters is similar to the technique discused above in the [reading route parameters](#reading-route-parameters) section. 
+
+Assume that we want to read the parameter named ` page `. Here's how:
+
+```ts
+// fetch a subset of products...
+// assume that we have a data manager service named "m"
+let pg = this.route.snapshot.queryParams['page'];
+let products = this.m.getPageOfProducts(pg);
+```
+
+> Note: During the viewing of the component, if it is possible that the app's user will navigate to the same component/view but with a different parameter value, then this task becomes a bit more complicated. See [this note](angular-routing-parameters-more) for a possible solution. 
+
+<br>

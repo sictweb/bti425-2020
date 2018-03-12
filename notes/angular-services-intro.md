@@ -11,7 +11,7 @@ A service can be used by *any* of your app's components. Its use promotes a laye
 
 <br>
 
-**More about components, and the role of services**
+#### More about components, and the role of services
 
 Consider a scenario where an app has many components. Some of the components need to display data that's stored in a database on a server somewhere out there. The data could be fetched in a couple of ways:
 1. Wrong way - add the same data-handling code to each component (so that multiple components have the same repeated block of data-handling code)
@@ -23,7 +23,7 @@ Angular helps you follow these principles by making it easy to factor your appli
 
 <br>
 
-**Learning pathway**
+#### Learning pathway
 
 In recent weeks, you learned that a *component* is a code asset that manages an area of the user interface. Most often, an app's user interface has many components. 
 
@@ -85,7 +85,7 @@ The community has some quality documentation too. A technology that comes from t
 
 <br>
 
-**In summary...**
+#### To summarize the introduction...
 
 As a wrap-up, rely on these course notes to guide your learning path, and refer or link you out to other documentation sets. Following that path will enable you to make better use, in the future, of the supporting documentation introduced in this section. 
 
@@ -99,7 +99,7 @@ We can use the Angular CLI to add a service. In the example below, a service nam
 
 As you have seen when creating components, a CamelCase name is transformed into lower case with dash word separators, when it generates the source code files. 
 
-A new source code file is created, named `data-manager.service.ts`. Its contents:
+A new source code file is created, named ` data-manager.service.ts `. Its contents:
 
 ```js
 import { Injectable } from '@angular/core';
@@ -112,13 +112,13 @@ export class DataManagerService {
 }
 ```
 
-The `@Injectable()` decorator indicates that this service is intended to be "injected" into another component or service at runtime. We'll have more to say about "injection" soon. 
+The ` @Injectable() ` decorator indicates that this service is intended to be "injected" into another component or service at runtime. We'll have more to say about "injection" soon. 
 
 In the class code, we will add members: Properties to hold state information, and functions to perform tasks. 
 
-The Angular CLI "generate service" command also updated the app module (`app.module.ts`) source code, in two related and important ways:
-1. A new `import` statement near the top
-2. A declaration in the `providers` array of the `@NgModule` decorator
+The Angular CLI "generate service" command also updated the app module (` app.module.ts `) source code, in two related and important ways:
+1. A new ` import ` statement near the top
+2. A declaration in the ` providers ` array of the ` @NgModule ` decorator
 
 These updates enable the new service to be available to *every* component in the app. 
 
@@ -172,22 +172,24 @@ HttpClient is Angular's mechanism for communicating with a remote server over HT
 
 From the official documentation:
 
-> With `HttpClient`, `@angular/common/http` provides a simplified API for HTTP functionality for use with Angular applications, building on top of the `XMLHttpRequest` interface exposed by browsers. Additional benefits of `HttpClient` include testability support, strong typing of request and response objects, request and response interceptor support, and better error handling.
+> With ` HttpClient `, ` @angular/common/http ` provides a simplified API for HTTP functionality for use with Angular applications, building on top of the ` XMLHttpRequest ` interface exposed by browsers. Additional benefits of ` HttpClient ` include testability support, strong typing of request and response objects, request and response interceptor support, and better error handling.
 
 To make HttpClient available everywhere in the app:
-1. Open the root AppModule for editing (app.module.ts),  
+1. Open the root AppModule for editing (` app.module.ts `),  
 2. Import the **HttpClienModule** symbol from @angular/common/http,  
 3. Add it to the **@NgModule.imports** array.
 
 <br>
 
-**Important Note:**
+##### Important Note
 
-When trying to use **HttpClient** anywhere else in your application (ie: a service.ts file), be sure to *import* ***HttpClient*** (not HttpClientModule), ie:
+When trying to use **HttpClient** anywhere else in your application (e.g. a ` whatever.service.ts ` file), be sure to *import* ***HttpClient*** (and not HttpClientModule) into that service or component. For example:
 
 ```js
 import { HttpClient } from "@angular/common/http";
 ```
+
+<br>
 
 #### Asynchronous by nature
 
@@ -197,30 +199,44 @@ In our apps - in our components - the user interface must remain responsive. A c
 
 All the parts of our solutions will respect this requirement. In fact, you'll learn that the guidance will result in a flexible yet correct approach to handling interaction with a web service. 
 
+<br>
+
 #### The get() function
 
-[HttpClient](https://angular.io/api/common/http/HttpClient) includes a `get()` function. Guess what it does?
+[HttpClient](https://angular.io/api/common/http/HttpClient) includes a ` get() ` function. Guess what it does?
 
 This is what we will use in our getting-started examples. In its simplest usage, we do two things:
 1. Specify the shape of the data that we're expecting
 2. Specify the URL
  
-The `get()` function returns an *Observable*, to be explained in detail soon. In essence, it is a stream of asynchronous data. The data could be a single object, or a collection. (That's determined by the web service resource.)
+The ` get() ` function returns an *Observable*, to be explained in detail soon. In essence, it is a stream of asynchronous data. The data could be a single object, or a collection. (That's determined by the web service resource.)
 
-For example, you will work with a function, in a service (ie: "UserService"), that looks like the following. It will request a collection of "users" from a web service:
+> The return type is actually a generic ` Observable `.  
+> The syntax is ` Observable<T> `, where ` T ` is a placeholder for a type.  
+> Read/skim [the generics documentation](https://www.typescriptlang.org/docs/handbook/generics.html) for more coverage.  
+> Often, it is an observable of an array of something.  
+
+For example, assume that the web service has a resource URL ` /users ` that will deliver a collection of user objects. 
+
+Next, assume that our data manager service is still responsible for the app's data. Its code will have a method that will call into the web service. For example, it may have a ` getUsers() ` method similar to this:
 
 ```js
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${this.url}/users`)
   }
 ```
-We can then "subscribe" to the result by using the code (assuming we have injected the "UserService" as "userService"):
+
+Notice that the return type of the method is ` Observable<User[]> `. You can read this return type as an "observable of an array of User objects". 
+
+In any component class that is using the data manager service, we "subscribe" to the result by using the following code:
 
 ```js
-this.userService.getUsers().subscribe(users => this.users = users);
+// assume we have a local "this.users" property defined
+// and "this.m" is a reference to the data manager service
+this.m.getUsers().subscribe(users => this.users = users);
 ```
 
-In the component, the stream of data - a collection of users - will be transformed into a more familiar array object that we can immediately work with. 
+The result is that the stream of data - a collection of users - is transformed into a more familiar array object that we can immediately work with. 
 
 <br>
 
@@ -323,180 +339,6 @@ At this point, it's useful to visit the [Week 9 example](angular-services-exampl
 
 <br>
 
-### Review: Structural directives: \*ngFor and \*ngIf & Data binding
-
-Since we are now working with data more regularly, it makes sense to once again quickly touch (one-way) data binding syntax as well as the extremely useful **\*ngFor** and **\*ngIf** structural directives.  
-
-Recall, the following [Table outlining Data Binding Syntax](https://angular.io/guide/template-syntax#binding-targets).  Specifically:
-
-* [Property Binding](https://angular.io/guide/template-syntax#property-binding--property-) - Recall: we can use the [@Input decorator](https://angular.io/guide/template-syntax#declaring-input-and-output-properties) here to allow class properties to be written using "Property Binding" syntax
-* [Event Binding](https://angular.io/guide/template-syntax#event-binding---event-)
-* [Attribute Binding](https://angular.io/guide/template-syntax#attribute-binding)
-* [Class Binding](https://angular.io/guide/template-syntax#class-binding)
-* [Style Binding](https://angular.io/guide/template-syntax#style-binding)
-
-Additionally, the information for the \*ngFor & \*ngIf structural directives can be found at:
-
-* [\*ngFor](https://angular.io/guide/template-syntax#ngfor-microsyntax)
-* [\*ngIf](https://angular.io/guide/template-syntax#ngif)
-
-<br>
-
-### Routing Continued (Introducing "Parameters")
-
-Last week, we introduced a way to define simple routes (ie: display a specific Component when a route is matched / no route is matched, or redirect to a separate route altogether)  However, as we learned in WEB322, there are ways to capture variables within our routes, ie **Route** Parameters & **Query** Parameters.  
-
-The following explanations are from the excellent Rangle.io documentation for [Route Parameters](https://angular-2-training-book.rangle.io/handout/routing/routeparams.html) and [Query Parameters](https://angular-2-training-book.rangle.io/handout/routing/query_params.html) 
-
-<br>
-
-#### Route parameters
-
-##### Declaring Route Parameters
-
-The route for the component that displays the details for a specific product would need a route parameter for the ID of that product. We could implement this using the following Routes:
-
-```js
-export const routes: Routes = [
-  { path: '', redirectTo: 'product-list', pathMatch: 'full' },
-  { path: 'product-list', component: ProductList },
-  { path: 'product-details/:id', component: ProductDetails }
-];
-```
-
-Note `:id` in the path of the `product-details` route, which places the parameter in the path. For example, to see the product details page for product with ID 5, you must use the following URL: `localhost:4200/product-details/5`
-
-<br>
-
-##### Linking to Routes with Parameters
-
-In the ProductList component you could display a list of products. Each product would have a link to the product-details route, passing the ID of the product:
-{% raw %}
-```html
-<a *ngFor="let product of products"
-  [routerLink]="['/product-details', product.id]">
-  {{ product.name }}
-</a>
-```
-{% endraw %}
-
-Note that the routerLink directive passes an array which specifies the path and the route parameter. Alternatively we could navigate to the route programmatically:
-
-```js
-goToProductDetails(id) {
-  this.router.navigate(['/product-details', id]);
-}
-```
-
-<br>
-
-##### Reading Route Parameters
-
-The ProductDetails component must read the parameter, then load the product based on the ID given in the parameter.
-The ActivatedRoute service provides a params Observable which we can subscribe to to get the route parameters (see Observables).
-
-```js
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
-@Component({
-  selector: 'product-details',
-  template: `
-    <div>
-      Showing product details for product: {{id}}
-    </div>
-  `,
-})
-export class LoanDetailsPage implements OnInit, OnDestroy {
-  id: number;
-  private sub: any;
-
-  constructor(private route: ActivatedRoute) {}
-
-  ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
-       this.id = +params['id']; // (+) converts string 'id' to a number
-
-       // In a real app: dispatch action to load the details here.
-    });
-  }
-
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
-}
-```
-
-The reason that the **params** property on **ActivatedRoute** is an Observable is that the router may not recreate the component when navigating to the same component. In this case the parameter may change without the component being recreated.
-
-<br>
-
-#### Passing Optional Parameters
-
-Query parameters allow you to pass optional parameters to a route such as pagination information.
-For example, on a route with a paginated list, the URL might look like the following to indicate that we've loaded the second page:
-
-```
-localhost:3000/product-list?page=2
-```
-The key difference between query parameters and route parameters is that route parameters are essential to determining route, whereas query parameters are optional.
-
-##### Passing Query Parameters
-
-Use the **queryParams** directive along with **routerLink** to pass query parameters. For example:
-
-```html
-<a [routerLink]="['product-list']" [queryParams]="{ page: 99 }">Go to Page 99</a>
-```
-
-Alternatively, we can navigate programmatically using the Router service:
-
-```js
-goToPage(pageNum) {
-    this.router.navigate(['/product-list'], { queryParams: { page: pageNum } });
-}
-```
-
-<br>
-
-##### Reading Query Parameters
-
-Similar to reading route parameters, the Router service returns an Observable we can subscribe to to read the query parameters:
-
-```js
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-
-@Component({
-  selector: 'product-list',
-  template: `<!-- Show product list -->`
-})
-export default class ProductList {
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router) {}
-
-  ngOnInit() {
-    this.sub = this.route
-      .queryParams
-      .subscribe(params => {
-        // Defaults to 0 if no query param provided.
-        this.page = +params['page'] || 0;
-      });
-  }
-
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
-
-  nextPage() {
-    this.router.navigate(['product-list'], { queryParams: { page: this.page + 1 } });
-  }
-}
-```
-
-<br>
-
 ### Summary, and next actions
 
 In past weeks, we have had a good treatment of *components* and *routing*. The scenarios were simple, in that the goal was to package and display an area of the user interface. Multiple components were created and displayed. 
@@ -505,7 +347,7 @@ This week, we learned how to add *services* to an app. This feature gets externa
 
 <br>
 
-**Next actions**
+#### Next actions
 
 In our [getting started example](angular-services-example) document, you will learn to enhance last week's routing example, by adding services. 
 
