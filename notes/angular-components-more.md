@@ -7,7 +7,7 @@ layout: default
 
 Before we move on to more advanced topics in Angular, it's important that we really understand some of the fundamental details about Components.  Since an Angular application is essentially a "tree of Angular components", we will continue to work with Components throughout the remainder of this course.  We will often circle back to some of these core concepts and expand upon them to add new functionality to our applications.
 
-For the next few sections, assume that we would like to create and work with two extremely trivial components: "RedBoxComponent" (` <app-red-box> `) and "BlueBoxComponent" (` <app-blue-box> `).
+For the next few sections, assume that we would like to create and work with two extremely trivial components: "RedBoxComponent" (`<app-red-box>`) and "BlueBoxComponent" (`<app-blue-box>`).
 
 <br>
 
@@ -56,9 +56,9 @@ The angular CLI has automatically included some important code:
 
 * The "import" statement to access the ["Component"](https://angular.io/api/core/Component) decorator and the ["OnInit"](https://angular.io/api/core/OnInit) interface from @angular/core.
 
-* Default values for the @Component decorator, including the component "selector" (for element ` <app-red-box> `) and the urls for the newly added "template" (.html) / "style" (.css) files. 
+* Default values for the @Component decorator, including the component "selector" (for element `<app-red-box>`) and the urls for the newly added "template" (.html) and "style" (.css) files. 
 
-* A class definition for our "RedBoxComponent" that implements the "OnInit" Lifecycle method (explained below), as well as provides a skeleton for a "constructor" method (used to initialize the fields of the class - optionally using dependant objects passed into the constructor when it's instantiated (see: ["Dependaency Injection"](https://angular.io/guide/dependency-injection) - this will be discussed further when we discuss "services"/"Providers")
+* A class definition for our "RedBoxComponent" that implements the "OnInit" Lifecycle method (explained below), as well as provides a skeleton for a "constructor" method (used to initialize the fields of the class - optionally using dependant objects passed into the constructor when it's instantiated (see ["Dependency Injection"](https://angular.io/guide/dependency-injection) - this will be discussed further when we discuss "services").
 
 <br>
 
@@ -88,7 +88,7 @@ Now that we are familiar with the syntax of data binding (specifically property 
 
 For example, say we used the Angular CLI to create both the "RedBoxComponent" and the "BlueBoxComponent". 
 
-We then decide that "BlueBoxComponent will be a child of the "RedBoxComponent", ie: the "RedBoxComponent" template contains html to render the "BlueBoxComponent", and "BlueBoxComponent" will simply render plain text that is *passed to it* from the parent component - in this case &lt;app-red-box&gt;. This will form a parent-child relationship, with the "Red Box" being the parent:
+We then decide that "BlueBoxComponent will be a child of the "RedBoxComponent", ie: the "RedBoxComponent" template contains html to render the "BlueBoxComponent", and "BlueBoxComponent" will simply render plain text that is *passed to it* from the parent component - in this case `<app-red-box>`. This will form a parent-child relationship, with the "Red Box" being the parent:
 
 ```html
 <app-red-box>

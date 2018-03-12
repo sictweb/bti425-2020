@@ -13,7 +13,7 @@ In this document, you will learn how to add and use a service in an app. It's th
 
 Fetch the week 8 code example from [the course's GitHub code repository](https://github.com/sictweb/bti425). 
 
-Using Terminal, open the ` week8 ` folder. Then, run the ` npm update ` command (or ` npm install `) to refresh the modules. 
+Using Terminal, open the `week8` folder. Then, run the `npm update` command (or `npm install`) to refresh the modules. 
 
 Open the project for editing. Then, you can build and run the app. 
 
@@ -43,7 +43,7 @@ It created a new source code file, and it updated the app module.
 
 As stated above, the service's first task is to deliver a string array of names. 
 
-In Visual Studio Code, open the service's source code file (` data-manager.service.ts `) for editing. Notice that the ` DataManagerService ` class is empty, except for a constructor stub. 
+In Visual Studio Code, open the service's source code file (`data-manager.service.ts`) for editing. Notice that the `DataManagerService` class is empty, except for a constructor stub. 
 
 Let's do the following:
 1. Add an empty string array property
@@ -80,7 +80,7 @@ export class DataManagerService {
 }
 ```
 
-> Yes, we could have done all this work inside the ` getTeachers() ` function, but hey - we wanted to give you the typical experience of coding many members in a class. 
+> Yes, we could have done all this work inside the `getTeachers()` function, but hey - we wanted to give you the typical experience of coding many members in a class. 
 
 At this point, the code for the service is ready. Let's use it in a few components. 
 
@@ -92,7 +92,7 @@ The goal is to use the service in the start/home page (component) of the app. Us
 1. Add an import statement
 2. Add a parameter to the constructor
 
-Open the start/home component class file (` start.component.ts `) for editing. Add this import statement near the top:
+Open the start/home component class file (`start.component.ts`) for editing. Add this import statement near the top:
 
 ```js
 import { DataManagerService } from "./data-manager.service";
@@ -128,7 +128,7 @@ Then, in the `ngOnInit` function - and NOT the constructor function - we will ca
 
 Soon, we will adapt this pattern even more. In this simple example, the service is delivering the data immediately, from its own state. However, a more typical scenario is that the service is fetching from an external web service, and it may take time to complete the fetch. As a result, we will adapt the pattern to recognize this asynchronous behaviour.
 
-Back to the task at hand. At this point, our component has data in the `teachers` property. How can we render the data in the view? Open the component's HTML template (` start.component.html `) for editing. 
+Back to the task at hand. At this point, our component has data in the `teachers` property. How can we render the data in the view? Open the component's HTML template (`start.component.html`) for editing. 
 
 In the panel body div, add another element:
 
@@ -138,7 +138,7 @@ In the panel body div, add another element:
 ```
 {% endraw %}
 
-We're using simple read-only binding syntax, to extract the first element of the ` teachers ` array/collection. It should show this:
+We're using simple read-only binding syntax, to extract the first element of the `teachers` array/collection. It should show this:
 
 ![One name](../media/angular-services-render1.png)
 
@@ -155,9 +155,9 @@ Now we can improve its appearance, by rendering *all* names in the teacher array
 ```
 {% endraw %}
 
-> The use of the ` teachers ` symbol is meaningful and important:  
+> The use of the `teachers` symbol is meaningful and important:  
 > It *must* match a symbol name in the component class.  
-> (It does - it matches the ` teachers ` property.)
+> (It does - it matches the `teachers` property.)
 
 It should show this:
 
@@ -171,13 +171,13 @@ Let's do this work again, in another component, just to get some more practice. 
 
 Which component? It does not matter. Here/below, we will modify the "guide" (sidebar) component. 
 
-Open the component class (` guide.component.ts `) for editing. Then:
+Open the component class (`guide.component.ts`) for editing. Then:
 1. Add an import statement
 2. Add a parameter to the constructor
 3. Add a property to hold the data
 4. Fetch the data upon initialization
 
-Then, modify the HTML template (` guide.component.html `), to render the list of names. The result:
+Then, modify the HTML template (`guide.component.html`), to render the list of names. The result:
 
 ![All names](../media/angular-services-render3.png)
 
@@ -212,19 +212,19 @@ We blend all three together when working with a web service.
 
 #### Enable the app to use HTTP
 
-Open the app module (` app.module.ts `) for editing. Near the top, add this import statement:
+Open the app module (`app.module.ts`) for editing. Near the top, add this import statement:
 
 ```js
 import { HttpClientModule } from "@angular/common/http";
 ```
 
-Then, add the ` HttpClientModule ` to the ` imports ` collection in the ` @NgModule ` decorator.
+Then, add the `HttpClientModule` to the `imports` collection in the `@NgModule` decorator.
 
 This action will enable all services in the app to use HTTP (in other words, work with a web service). 
 
 ##### Important Note
 
-When trying to use **HttpClient** anywhere else in your application (e.g. a ` whatever.service.ts ` file), be sure to *import* ***HttpClient*** (and not HttpClientModule) into that service or component. For example:
+When trying to use **HttpClient** anywhere else in your application (e.g. a `whatever.service.ts` file), be sure to *import* ***HttpClient*** (and not HttpClientModule) into that service or component. For example:
 
 ```js
 import { HttpClient } from "@angular/common/http";
@@ -252,7 +252,7 @@ All return an array/collection of data.
 
 Now, write *view model* classes to match the data returned by the first two URLs above. We must do this when working with web services. Here's how:
 
-Create a new source code file named ` vm-typicode.ts `. Its name suggests that this source code file will define "view models for the typicode web service". In it, we will write several classes, which will allow us to work with "posts", "users", and "comments":
+Create a new source code file named `vm-typicode.ts`. Its name suggests that this source code file will define "view models for the typicode web service". In it, we will write several classes, which will allow us to work with "posts", "users", and "comments":
 
 ```js
 // View models for the typicode.com web service
@@ -352,7 +352,7 @@ Write a function for each web service resource that the app needs. Assume, as no
 
 #### Use the new function(s) in the service
 
-Let's do the work in a different component, "horse". We'll just push the existing content down. Open the horse component class (` horse.component.ts `) for editing. 
+Let's do the work in a different component, "horse". We'll just push the existing content down. Open the horse component class (`horse.component.ts`) for editing. 
 
 Import the service. 
 
@@ -366,7 +366,7 @@ Add a function that will call the service.
 
 We want to call this function when the component is loaded/initialized, so do that in the ngOnInit function code. 
 
-Finally, open the HTML template (` horse.component.html `) for editing. We want to push the existing content down. So, in the panel body, add these elements to the top:
+Finally, open the HTML template (`horse.component.html`) for editing. We want to push the existing content down. So, in the panel body, add these elements to the top:
 
 {% raw %}
 ```html
