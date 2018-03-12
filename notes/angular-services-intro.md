@@ -114,13 +114,13 @@ export class DataManagerService {
 }
 ```
 
-The ` @Injectable() ` decorator indicates that this service is intended to be "injected" into another component or service at runtime. We'll have more to say about "injection" soon. 
+The `@Injectable()` decorator indicates that this service is intended to be "injected" into another component or service at runtime. We'll have more to say about "injection" soon. 
 
 In the class code, we will add members: Properties to hold state information, and functions to perform tasks. 
 
-The Angular CLI "generate service" command also updated the app module (` app.module.ts `) source code, in two related and important ways:
-1. A new ` import ` statement near the top
-2. A declaration in the ` providers ` array of the ` @NgModule ` decorator
+The Angular CLI "generate service" command also updated the app module (`app.module.ts`) source code, in two related and important ways:
+1. A new `import` statement near the top
+2. A declaration in the `providers` array of the `@NgModule` decorator
 
 These updates enable the new service to be available to *every* component in the app. 
 
@@ -174,10 +174,10 @@ HttpClient is Angular's mechanism for communicating with a remote server over HT
 
 From the official documentation:
 
-> With ` HttpClient `, ` @angular/common/http ` provides a simplified API for HTTP functionality for use with Angular applications, building on top of the ` XMLHttpRequest ` interface exposed by browsers. Additional benefits of ` HttpClient ` include testability support, strong typing of request and response objects, request and response interceptor support, and better error handling.
+> With `HttpClient`, `@angular/common/http` provides a simplified API for HTTP functionality for use with Angular applications, building on top of the `XMLHttpRequest` interface exposed by browsers. Additional benefits of `HttpClient` include testability support, strong typing of request and response objects, request and response interceptor support, and better error handling.
 
 To make HttpClient available everywhere in the app:
-1. Open the root AppModule for editing (` app.module.ts `),  
+1. Open the root AppModule for editing (`app.module.ts`),  
 2. Import the **HttpClienModule** symbol from @angular/common/http,  
 3. Add it to the **@NgModule.imports** array.
 
@@ -185,7 +185,7 @@ To make HttpClient available everywhere in the app:
 
 ##### Important Note
 
-When trying to use **HttpClient** anywhere else in your application (e.g. a ` whatever.service.ts ` file), be sure to *import* ***HttpClient*** (and not HttpClientModule) into that service or component. For example:
+When trying to use **HttpClient** anywhere else in your application (e.g. a `whatever.service.ts` file), be sure to *import* ***HttpClient*** (and not HttpClientModule) into that service or component. For example:
 
 ```js
 import { HttpClient } from "@angular/common/http";
@@ -205,22 +205,22 @@ All the parts of our solutions will respect this requirement. In fact, you'll le
 
 #### The get() function
 
-[HttpClient](https://angular.io/api/common/http/HttpClient) includes a ` get() ` function. Guess what it does?
+[HttpClient](https://angular.io/api/common/http/HttpClient) includes a `get()` function. Guess what it does?
 
 This is what we will use in our getting-started examples. In its simplest usage, we do two things:
 1. Specify the shape of the data that we're expecting
 2. Specify the URL
  
-The ` get() ` function returns an *Observable*, to be explained in detail soon. In essence, it is a stream of asynchronous data. The data could be a single object, or a collection. (That's determined by the web service resource.)
+The `get()` function returns an *Observable*, to be explained in detail soon. In essence, it is a stream of asynchronous data. The data could be a single object, or a collection. (That's determined by the web service resource.)
 
 > The return type is actually a generic `Observable`.  
 > The syntax is `Observable<T>`, where `T` is a placeholder for a type.  
 > Read/skim [the generics documentation](https://www.typescriptlang.org/docs/handbook/generics.html) for more coverage.  
 > Often, it is an observable of an array of something.  
 
-For example, assume that the web service has a resource URL ` /users ` that will deliver a collection of user objects. 
+For example, assume that the web service has a resource URL `/users` that will deliver a collection of user objects. 
 
-Next, assume that our data manager service is still responsible for the app's data. Its code will have a method that will call into the web service. For example, it may have a ` getUsers() ` method similar to this:
+Next, assume that our data manager service is still responsible for the app's data. Its code will have a method that will call into the web service. For example, it may have a `getUsers()` method similar to this:
 
 {%raw%}
 ```js
