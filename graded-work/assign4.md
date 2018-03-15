@@ -114,6 +114,14 @@ For content areas, we will need the following:
 
 Use the Angular CLI to generate components for each of them now. Remember, use Pascal case names if you are using multi-word names for components. 
 
+> Note:  
+> Recently, we noticed that the computers in DB3078 may return the following error message when the Angular CLI "generate" program is used:  
+> `Cannot read property 'NullLogger' of undefined`  
+> If you get that error message, then there may be a work-around. Use the following command to update the Angular CLI version:  
+> `npm install --save @angular/cli@latest`  
+
+<br>
+
 Then, as a brief and quick test, add their selectors to the app component's HTML template so that they appear when the app loads. (Obviously, they won't stay there after the test. We just do it now to prove that the components work and they show up in the view.)
 
 <br>
