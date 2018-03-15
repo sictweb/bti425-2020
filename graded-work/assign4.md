@@ -34,8 +34,6 @@ In the previous assignment's "project #2", you learned just enough about routing
 
 We will work again with your *Teams API*. All of the methods that interact with the Teams API will be coded in a data manager service. You will learn to work with the [HttpClient](https://angular.io/api/common/http/HttpClient), a class that has methods which perform HTTP requests. The design and coding task will be quite different from the task of working with in-memory data. 
 
-<br>
-
 Here is an example of a typical view from the app, showing ( *to be described* ):
 
 ![TBA view](https://via.placeholder.com/350x150)
@@ -57,7 +55,7 @@ As first described in the previous assignment specifications, the how-to instruc
 Here's a brief list of specifications that you must implement:
 
 * Angular app, with multiple routed components 
-* Work with your Teams API 
+* Work with your Teams API, and implement some CRUD tasks 
 * Like Assignment 3 project #2, use HTML Forms elements with a very light touch
 
 > Notice - A full treatment of "forms" in Angular will happen in the near future, and be practiced in the next assignment.
@@ -240,12 +238,12 @@ In the [course notes](https://sictweb.github.io/bti425/notes/week09), the recipe
 
 4. For each use case, write a method that calls an HttpClient method on the web service. Almost always, the method will have a return value, an `Observable<T>` (where `T` is a class name; an object or an array). 
 
+5. In each component class, import the data manager service, and inject it (and any other services and features you need, e.g. route status) into the constructor. (Similar to what you did in Assignment 3 project #2.)
+
 > Study the "get one" responses from the Teams API.  
 > All successful responses appear to return a collection, with exactly ONE item in the collection.  
 > Therefore, a "get one employee" return value will be `Observable<Employee[]>`, same as "get all".  
 > An unsuccessful response returns HTTP 500, so we'll have to test for that. Maybe its result will be to force a navigation to the "not found" component. (Why? Think about it...)   
-
-5. In each component class, import the data manager service, and inject it (and any other services and features you need, e.g. route status) into the constructor. (Similar to what you did in Assignment 3 project #2.)
 
 <br>
 
