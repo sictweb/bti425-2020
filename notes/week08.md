@@ -17,6 +17,12 @@ During your work on Assignment 3, you had a very brief introduction to the essen
 
 <br>
 
+**Complete the checklist on Thursday, March 15**
+
+Bring your Assignment 3 projects (both) to the Thursday class session. You will review your work, and then complete and submit a checklist. 
+
+<br>
+
 **Topics:**
 
 Here are this week's notes:

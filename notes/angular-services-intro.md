@@ -178,7 +178,7 @@ From the official documentation:
 
 To make HttpClient available everywhere in the app:
 1. Open the root AppModule for editing (`app.module.ts`),  
-2. Import the **HttpClienModule** symbol from @angular/common/http,  
+2. Import the **HttpClientModule** symbol from @angular/common/http,  
 3. Add it to the **@NgModule.imports** array.
 
 <br>

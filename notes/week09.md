@@ -13,7 +13,7 @@ As we have seen in BTI325, a typical use case for a service is to provide an abs
 
 **Topics:**
 
-[Angular Service Introduction](angular-services-intro) - The core notes for this week.
+[Angular Service Introduction](angular-services-intro) - The topic notes for this week, with links to external authoritative resources.
 
 [Angular Service Example](angular-services-example) - A supporting example, explaining the "Code Example" for Week 9.
 
