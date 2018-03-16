@@ -90,6 +90,11 @@ Include the Bootstrap CSS library in your app.
 
 Add `<meta>` tags for author and description, similar to what you've done in previous assignments. 
 
+> New notice (on Fri Mar 16)...  
+> We have created a document that suggests [how to create the containment structure](https://github.com/sictweb/bti425/blob/master/Templates_and_solutions/containment-nav-content-footer.md) for an app that has nav, content, and footer areas. Just like this app.  
+> You may find it useful for this assignment, and for future work (as is or adapted).  
+> You're welcome.  
+
 <br>
 
 ### Doing the work
@@ -143,9 +148,9 @@ We have another few suggestions, about the appearance of the "log" component. Th
 
 If you have started to create a personal-use library of standard code snippets, you can use that code here (where appropriate). The code in your personal-use library can come from many sources, including your own work, course code examples, and other trustworthy sources. Be careful about attribution and academic honesty.  
 
-At this point in time, it is possible that your work may look like the following:
+At this point in time, it is possible that your work may look like the following. As always, right-click any image and open it in its own tab/window to view it full-size.
 
-![TBA view](https://via.placeholder.com/350x150)
+![Home view](../media/a4/home-v1.png)
 
 <br>
 
