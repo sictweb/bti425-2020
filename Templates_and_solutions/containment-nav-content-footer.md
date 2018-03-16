@@ -1,8 +1,3 @@
----
-title: Containment - viewport with nav, content area, and footer
-layout: default
----
-
 ## Containment - viewport with nav, content area, and footer
 
 This document is for Angular apps that use the routing feature, and the Bootstrap CSS rules.
