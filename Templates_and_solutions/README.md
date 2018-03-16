@@ -8,6 +8,15 @@ A fully-functional web service that can be used during the BTI425 course.
 
 <br>
 
+### Angular app containment structure how-to
+
+This document is for Angular apps that use the routing feature, and the Bootstrap CSS rules. It shows a suggested containment structure for a viewport that has these areas:
+* navigation 
+* main content views 
+* footer
+
+<br>
+
 ### template-to-week-3
 
 Source code files to make it easier and faster to get started on the topics covered during weeks 1, 2, and 3.
