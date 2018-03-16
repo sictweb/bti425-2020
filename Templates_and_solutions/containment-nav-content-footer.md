@@ -38,13 +38,13 @@ After a new app is generated, the `body` element contains the `app-root` element
 
 In the `head` element, add a link to the Bootstrap CSS style sheet. For those new to Angular, getting Bootstrap by linking to the content delivery network (CDN) is good enough. 
 
-Edit the title element. 
+Edit the `title` element. 
 
 Add `<meta>` tags for author and description. For example:
 
 ```html
 <meta name="author" content="Firstname Lastname">
-<meta name="description" content="Brief descriptio of the work">
+<meta name="description" content="Brief description of the work">
 ```
 
 <br>
