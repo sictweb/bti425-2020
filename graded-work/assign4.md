@@ -34,9 +34,9 @@ In the previous assignment's "project #2", you learned just enough about routing
 
 We will work again with your *Teams API*. All of the methods that interact with the Teams API will be coded in a data manager service. You will learn to work with the [HttpClient](https://angular.io/api/common/http/HttpClient), a class that has methods which perform HTTP requests. The design and coding task will be quite different from the task of working with in-memory data. 
 
-Here is an example of a typical view from the app, showing ( *to be described* ):
+Here is an example of a typical view from the app, showing the "project detail" view:
 
-![TBA view](https://via.placeholder.com/350x150)
+![Typical view](../media/a4/typical-view-v1.png)
 
 <br>
 
@@ -84,7 +84,8 @@ After the generation completes, verify that it runs. Prepare the rest of your de
 * Probably use another terminal window (so you can run code-generation commands)
 * Probably use one or two Finder windows/tabs (for graphical navigation and Quick Look viewing)
 * Code editor 
-* Browser developer tools (at a minimum, you'll probably be using the element inspector, and the JavaScript console)
+* Browser, and browser developer tools (at a minimum, you'll probably be using the element inspector, and the JavaScript console)
+* Reference notes, including the relevant course notes (current and past), and authoritative resources (e.g. Angular documentation, etc.)
 
 Include the Bootstrap CSS library in your app. 
 
@@ -225,7 +226,7 @@ Generate a service.
 
 The sequence of design, planning, and coding tasks are suggested by the work you did with the previous assignment's project #2. Here's the list, with a few new tasks to be done when we're working with a web service:
 1. Import the data / schema classes 
-2. For each entity collection, create a private field to hold the collection locally in memory
+2. Optionally, for each entity collection, create a private field to hold the collection locally in memory
 3. Optionally, code the method that will load each collection
 4. Write methods that implement the app's use cases
 
@@ -284,7 +285,11 @@ Most "display all" views will allow the user to select an item on the list, and 
 
 After completing this section, your "display all employees" view may look similar to the following:
 
-![TBA view](https://via.placeholder.com/350x150)
+![Employees list](../media/a4/employees-list-v1.png)
+
+<br>
+
+> Notice that the list is sorted. See the course notes for a discussion of how this could be done.
 
 <br>
 
@@ -294,7 +299,11 @@ While the coding experience for the employees component is fresh, maybe you shou
 
 After completing this section, your "display all projects" view may look similar to the following:
 
-![TBA view](https://via.placeholder.com/350x150)
+![Projects list](../media/a4/projects-list-v1.png)
+
+<br>
+
+> Notice that the list is sorted, and the [date has been nicely formatted](https://sictweb.github.io/bti425/notes/angular-date-pipe). 
 
 <br>
 
@@ -314,7 +323,7 @@ If the response is an error, we suggest a redirect to the "not found" component.
 
 After completing this section, your "display one employee" view may look similar to the following:
 
-![TBA view](https://via.placeholder.com/350x150)
+![Employee detail](../media/a4/employee-detail-v1.png)
 
 <br>
 
@@ -324,7 +333,7 @@ While the coding experience for the employee detail component is fresh, maybe yo
 
 After completing this section, your "display one project" view may look similar to the following:
 
-![TBA view](https://via.placeholder.com/350x150)
+![Project detail](../media/a4/project-detail-v1.png)
 
 <br>
 
