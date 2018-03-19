@@ -200,6 +200,18 @@ Write the markup in the component. Use the correct containment, and the correct 
 
 <br>
 
+##### Extra bonus - adding a "Select a position..." prompt
+
+If you want a "Select a position..." prompt as shown in the image above, here's how to do it. 
+
+Add an `option` item as the *first* element in the `select` element. Ensure its value is empty. For example:
+
+```html
+<option value=''>Select a position..."</option>
+```
+
+<br>
+
 #### In the "create" method, handle the selected item
 
 When the browser user clicks the "create new employee" button, the idea is that we send the data in the new employee object to an "employee add" method in the data manager service. 
