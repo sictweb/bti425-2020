@@ -346,7 +346,7 @@ Follow the theme of the previous section. The Assignment 3 project #2 [create ta
 
 After completing this section, your "create employee" view may look similar to the following:
 
-![TBA view](https://via.placeholder.com/350x150)
+![Employee create](../media/a4/employee-add-v1.png)
 
 <br>
 
@@ -356,12 +356,16 @@ Why are we doing this project edit task? Well, of all the data in the Teams API,
 
 The Assignment 3 project #2 [edit task](https://sictweb.github.io/bti425/graded-work/assign3#edit-a-customer) enabled you to transition the work done on the "create" component (especially the form code in the template) into an "edit" component. That advice is still valid here. 
 
+After completing this section, your "edit project" view may look similar to the following:
+
+![Project edit](../media/a4/project-edit-v1.png)
+
 <br>
 
 #### Log component 
 
-> The content in this section may take a day or two to complete.  
-> We want a few hours to possibly re-engineer part of it to make it a better and more re-usable experience. 
+> The content in this section will take a day or two to complete.  
+> We need a few more hours to possibly re-engineer part of it to make it a better and more re-usable experience. 
 
 As stated above, the right side of the content area will display an "activity log" of the user interaction tasks. 
 
