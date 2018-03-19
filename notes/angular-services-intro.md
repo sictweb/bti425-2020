@@ -250,7 +250,7 @@ The result is that the stream of data - a collection of users - is transformed i
 
 > "RxJS is a library for reactive programming using Observables, to make it easier to compose asynchronous or callback-based code."
 
-This sounds like exactly what we need - something to "make it easier to compose **asynchronous** code".  However, you might be thinking "we have that already, it's called a **Promise**".  This is true, Promises do help us manage asynchronous code; they do so by giving us an opportunity to perform a task / queue up a follow up Promise to be executed upon the completion or failure of the first piece of asynchronous code (Promise).  By writing functions that return promises, we can inforce an order of execution for asychronous code while avoiding the use of callbacks, which tend to lead to ["Callback Hell"](http://callbackhell.com/).
+This sounds like exactly what we need - something to "make it easier to compose **asynchronous** code".  However, you might be thinking "we have that already, it's called a **Promise**".  This is true, Promises do help us manage asynchronous code; they do so by giving us an opportunity to perform a task / queue up a follow up Promise to be executed upon the completion or failure of the first piece of asynchronous code (Promise).  By writing functions that return promises, we can enforce an order of execution for asychronous code while avoiding the use of callbacks, which tend to lead to ["Callback Hell"](http://callbackhell.com/).
 
 Observables on the other hand, allow us to watch (observe) the changing values of data over time and execute code when these changes occur.  For example:
 

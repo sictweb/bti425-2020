@@ -162,9 +162,9 @@ The app is ready for routing to be configured, because it was generated with the
 In the class session on Tuesday, March 13, we completed an exercise to identify the design, planning, and coding tasks that implement routing in an app. Here's the result:
 1. Decide which components will participate in routing
 2. Design and code your routes
-3. Decide which component(s) will hold the `<router-outlet>` element, and edit your code
-4. If it makes sense for your app, decide which component will hold the hyperlink elements, and edit your code 
-5. In each routed component class, edit the code to enable access to the routing state
+3. Decide which component(s) will hold the `<router-outlet>` element, and edit your code
+4. If it makes sense for your app, decide which component will hold the hyperlink elements, and edit your code 
+5. In each routed component class, edit the code to enable accessto the routing state
 6. Where appropriate, implement imperative (programmatic) navigation
 
 Here's some additional discussion on each of these. 
@@ -177,15 +177,15 @@ In the [Plan your components](#plan-your-components) section above, all except t
 
 Do that now. Ensure that the sequence is correct. And, ensure that you have routes to handle empty and not-found situations. 
 
-##### 3. Decide which component(s) will hold the `<router-outlet>` element, and edit your code
+##### 3. Decide which component(s) will hold the `<router-outlet>` element, and edit your code
 
 In the [Refine the structure and appearance](#refine-the-structure-and-appearance) section above, you should have already completed that task. 
 
-##### 4. If it makes sense for your app, decide which component will hold the hyperlink elements, and edit your code 
+##### 4. If it makes sense for your app, decide which component will hold the hyperlink elements, and edit your code 
 
 Yes, in this app, we have a nav component, so edit that now. 
 
-##### 5. In each routed component class, edit the code to enable access to the routing state
+##### 5. In each routed component class, edit the code to enable access to the routing state
 
 You can do that now, if you wish, by editing each of the routed components (their constructor method). Or, you can do that later. 
 

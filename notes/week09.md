@@ -23,4 +23,6 @@ The test questions are based on the Angular topics and learning experience, duri
 
 [Angular Service Example](angular-services-example) - A supporting example, explaining the "Code Example" for Week 9.
 
+[Angular service and the Teams API](angular-services-teams-api) - Information about using the Teams API from an Angular service.
+
 <br>

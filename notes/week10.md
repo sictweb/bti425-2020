@@ -14,6 +14,12 @@ Angular forms
 
 <br>
 
+**Complete the checklist on Thursday, March 29**
+
+Bring your Assignment 4 project to the Thursday class session. You will review your work, and then complete and submit a checklist. 
+
+<br>
+
 **Topics:**
 
 ( more to come )
