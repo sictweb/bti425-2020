@@ -84,11 +84,11 @@ The nav component template can be fairly standard across apps. The following wil
       <!-- Menu items -->
       <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-              <li>
-                  <a routerLink='/about' routerLinkActive='active'>About</a>
+              <li routerLinkActive='active'>
+                  <a routerLink='/about'>About</a>
               </li>
-              <li>
-                  <a routerLink='/contact' routerLinkActive='active'>Contact</a>
+              <li routerLinkActive='active'>
+                  <a routerLink='/contact'>Contact</a>
               </li>
               <!-- Add other menu items here -->
           </ul>
