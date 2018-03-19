@@ -11,6 +11,12 @@ As we have seen in BTI325, a typical use case for a service is to provide an abs
 
 <br>
 
+**Test 4 is on Tuesday, March 20**
+
+The test questions are based on the Angular topics and learning experience, during last week *and* this week. That includes some content from the current assignment too. 
+
+<br>
+
 **Topics:**
 
 [Angular Service Introduction](angular-services-intro) - The topic notes for this week, with links to external authoritative resources.
