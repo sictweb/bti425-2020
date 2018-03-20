@@ -32,7 +32,7 @@ Later, we will edit the service to implement a more complex and typical scenario
 In the [Adding a service to an app](angular-services-intro#adding-a-service-to-an-app) section of the "intro" notes, you learned how to add a service to an app. We used the Angular CLI:
 
 ```
-ng g s DataService --module app --spec false
+ng g s DataManager --module app --spec false
 ```
 
 It created a new source code file, and it updated the app module. 
