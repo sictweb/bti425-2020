@@ -207,7 +207,7 @@ If you want a "Select a position..." prompt as shown in the image above, here's 
 Add an `option` item as the *first* element in the `select` element. Ensure its value is empty. For example:
 
 ```html
-<option value=''>Select a position..."</option>
+<option value=''>Select a position...</option>
 ```
 
 <br>
