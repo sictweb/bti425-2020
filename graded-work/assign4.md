@@ -11,11 +11,6 @@ Read/skim all of this document before you begin work.
 
 While you are doing the work, if a *specific task* is not clear, or it seems to require an unreasonable amount of time to complete, contact your professor. 
 
-> This document is being edited.  
-> We intend to add images, and fix typos and explanations where required.  
-> Otherwise, it is substantially complete, and you can get started on it right away.  
-> This notice will be removed when the edits are complete.  
-
 <br>
 
 ### Due Date
@@ -397,25 +392,87 @@ Let's keep it simple: It needs a property to hold a date (of type Date), and a s
 
 ##### 2. In the data manager service, declare/define a collection/array to store the activity log items
 
-As described above, we are storing the activity log items in memory. Therefore, declare/define an array property. (Remember to initialize its value to an empty array in the constructor.)
+As described above, we are storing the activity log items in memory. Therefore, declare/define an array property of type activity log. (Remember to import, and also to initialize the property value to an empty array in the constructor.)
 
 <br>
 
 ##### 3. Then, declare/define an observable yet updateable package for the collection/array 
 
-Recently, you learned that an "observable" can be thought of as a packaging tactic for a value that you want to watch. From the 
+Recently, you learned that an "observable" can be thought of as a packaging tactic for a value that you want to watch. The return value of an HttpClient `get()` method (for example) is an observable. 
+
+This is the kind of thing that we want. In the activity log component (which will be coded soon), we will want to "subscribe" to the activity log data, so that new items appear automatically. 
+
+However, we cannot just use an observable. Instead, we must use a [Subject](http://reactivex.io/documentation/subject.html), which extends (inherits from) Observable. Its added feature is that we can update the package (i.e. the array of activity log items), and it will then notify the subscribers. So, read and write, in effect. 
+
+To use a `Subject` in our data manager service, import it:
+
+```ts
+import { Subject } from "rxjs/Subject";
+```
+
+Then, declare/define a suitable property to package the collection/array of activity log items:
+
+```ts
+activity: Subject<LogItem[]>;
+```
+
+Interestingly, in a component class, when we subscribe to this property, the return value of its `subscribe()` method is an `Observable<T>'. At least that part is familiar to us now.
 
 <br>
 
 ##### 4. Write an "add to activity log" method that can be called from any component
 
+Now we're ready to write a method that can be called from any component. Something like the following will work OK:
+
+```ts
+logAction(message: string) {
+  // There are at least a couple of ways to declare a log item
+  // Here's a straight-line simple way...
+  let action = new LogItem();
+  action.timestamp = new Date();
+  action.message = message;
+  // Assuming that "log" was declared/defined in task #2 above,
+  // add the new item to the beginning of the array
+  // (so that the most recent item is at the top of the list)
+  // (this will avoid the need to sort the array)
+  this.log.unshift(action);
+  // Trigger the notification functionality
+  this.activity.next(this.log);
+}
+```
+
 <br>
 
 ##### 5. Update the activity log component, so that it displays the activity log items
 
+Like the other components, it needs to know about the data manager service, and the data/schema class that it is working with. 
+
+It needs a property to hold the collection/array of activity log items. It will be the binding target for the code in the template. 
+
+As you have learned when working with the other components, call the `subscribe()` method in the `ngOnInit()` method. 
+
+```ts
+// Assuming "log" is a collection/array of activity log items...
+this.m.activity.subscribe(c => this.log = c);'
+```
+
+In the template, write elements that result in a nice pleasing display of log items. You should probably use the date pipe to make the date look better.
+
 <br>
 
 ##### 6. Call the method from your components
+
+In each component, add a statement that will call the method in the data manager service.
+
+```ts
+this.m.logAction('View PROJECTS LIST loaded.');
+```
+
+Which components should we call this method from? Where do we add this code? Well, we suggest that you call it in the component's constructor. And, call it from other parts of your logic and user interaction flow. Whatever makes sense for the current context. 
+
+After completing this section, the view - with the activity log - may look similar to the following. Notice that the area will scroll if the number of items exceeds its height:
+
+![Log view](../media/a4/log-view-v1.png)
 
 <br>
 
