@@ -367,17 +367,55 @@ After completing this section, your "edit project" view may look similar to the 
 > The content in this section will take a day or two to complete.  
 > We need a few more hours to possibly re-engineer part of it to make it a better and more re-usable experience. 
 
+For this part of the assignment, we thought we would build upon the recent knowledge of observables in an interesting way. 
+
 As stated above, the right side of the content area will display an "activity log" of the user interaction tasks. 
 
 What activity? Well, we're thinking of navigation activity, and data CRUD activity. Each activity will include a date-and-time value, and a short string that describes the activity. As the browser user interacts with the app, the activity log will show each activity. 
 
-( more to come )
-
-Please note that the activity log data will NOT saved/persisted in this app. Every time the app loads (which happens after each build/compile task), the data will be cleared. Therefore, do NOT expect the data to be saved. 
+Please note that the activity log data will NOT saved/persisted in this app. It will exist in-memory only. Every time the app loads (which happens after each build/compile task), the data will be cleared. Therefore, do NOT expect the data to be saved. 
 
 > Is it possible to save the data? Yes. One way would be to use HTML5 local or session storage. That would be pretty easy to implement. Another way would be to add logic to the web service. That would take much more effort. 
 
-( more to come ? )
+Here's what we will do to implement this feature:
+1. Write a data/schema class for an activity log item
+2. In the data manager service, declare/define a collection/array to store the activity log items
+3. Then, declare/define an observable yet updateable package for the collection/array 
+4. Write an "add to activity log" method that can be called from any component
+5. Update the activity log component, so that it displays the activity log items
+6. Call the method from your components
+
+<br>
+
+##### 1. Write a data/schema class for an activity log item
+
+Write the code for a data/schema class. It can be in a separate source code file, or in with the others if you chose to write all classes in one source code file. 
+
+Let's keep it simple: It needs a property to hold a date (of type Date), and a string for the activity. 
+
+<br>
+
+##### 2. In the data manager service, declare/define a collection/array to store the activity log items
+
+As described above, we are storing the activity log items in memory. Therefore, declare/define an array property. (Remember to initialize its value to an empty array in the constructor.)
+
+<br>
+
+##### 3. Then, declare/define an observable yet updateable package for the collection/array 
+
+Recently, you learned that an "observable" can be thought of as a packaging tactic for a value that you want to watch. From the 
+
+<br>
+
+##### 4. Write an "add to activity log" method that can be called from any component
+
+<br>
+
+##### 5. Update the activity log component, so that it displays the activity log items
+
+<br>
+
+##### 6. Call the method from your components
 
 <br>
 
