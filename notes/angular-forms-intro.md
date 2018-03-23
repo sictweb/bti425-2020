@@ -77,15 +77,15 @@ It also uses the bootstrap "forms" classes, ie "form-group" and "form-control" f
 <form action="/path/to/handler" method="post">
   <div class="form-group">
     <label for="name">Full Name:</label>
-    <input type="text" class="form-control" id="name" name="name" required autofocus>
+    <input type="text" class="form-control" name="name" required autofocus>
   </div>
   <div class="form-group">
     <label for="description">Description</label>
-    <textarea class="form-control" id="description" name="description"></textarea>
+    <textarea class="form-control" name="description"></textarea>
   </div>
   <div class="form-group">
     <label for="ownedTransportation">Owned Transportation</label>
-    <select multiple class="form-control" id="ownedTransportation" name="ownedTransportation">
+    <select multiple class="form-control" name="ownedTransportation">
       <option value="C">Car</option>
       <option value="B">Bus</option>
       <option value="M">Motorcycle</option>
@@ -94,19 +94,19 @@ It also uses the bootstrap "forms" classes, ie "form-group" and "form-control" f
   </div>
   <div class="form-group">
     <label for="favouriteTransportation">Favourite Transportation</label>
-    <select class="form-control" id="favouriteTransportation" name="favouriteTransportation">
+    <select class="form-control" name="favouriteTransportation">
       <option value="C">Car</option>
       <option value="B">Bus</option>
       <option value="M">Motorcycle</option>
       <option value="H">Helicopter</option>
     </select>
   </div>
-  <input type="checkbox" id="driverLicence" name="driverLicence" /> <label for="driverLicence">Driver's Licence</label><br />
+  <input type="checkbox" name="driverLicence" /> <label for="driverLicence">Driver's Licence</label><br />
   <div class="form-group">
     <h5>Vehicle Usage:</h5>
-    <input type="radio" id="vehicleUseBusiness" name="vehicleUse" value="business" /> <label for="vehicleUseBusiness"> Business</label><br />
-    <input type="radio" id="vehicleUsePleasure" name="vehicleUse" value="pleasure" /> <label for="vehicleUsePleasure"> Pleasure</label><br />
-    <input type="radio" id="vehicleUseOther" name="vehicleUse" value="other" /> <label for="vehicleUseOther"> Other</label><br />
+    <input type="radio" name="vehicleUse" value="business" /> <label for="vehicleUseBusiness"> Business</label><br />
+    <input type="radio" name="vehicleUse" value="pleasure" /> <label for="vehicleUsePleasure"> Pleasure</label><br />
+    <input type="radio" name="vehicleUse" value="other" /> <label for="vehicleUseOther"> Other</label><br />
   </div>
   <button class="btn btn-primary" type="submit">Create</button>
 </form>
@@ -114,7 +114,7 @@ It also uses the bootstrap "forms" classes, ie "form-group" and "form-control" f
 
 <br>
 
-It's likely that you have written hundreds of these forms. It's a very well-understood process. 
+It's possible that you have written hundreds of these forms. It's a very well-understood process. 
 
 <br>
 
@@ -220,7 +220,7 @@ For example, let's see how we can update each of our form element types in our "
 #### input (type="text")
 
 ```html
-<input type="text" class="form-control" id="name" name="name" [(ngModel)]="driverData.name" required autofocus>
+<input type="text" class="form-control" name="name" [(ngModel)]="driverData.name" required autofocus>
 ```
 
 Here, we simply add the "two-way" binding syntax with ngModel to reference the "driverData.name" property
@@ -230,7 +230,7 @@ Here, we simply add the "two-way" binding syntax with ngModel to reference the "
 #### textarea
 
 ```html
-<textarea class="form-control" id="description" name="description" [(ngModel)]="driverData.description"></textarea>
+<textarea class="form-control" name="description" [(ngModel)]="driverData.description"></textarea>
 ```
 
 This is very similar to the **input** example above, ie: we simply add the two-way data binding to ngModel with the correct Component property
@@ -240,14 +240,14 @@ This is very similar to the **input** example above, ie: we simply add the two-w
 #### select / select multiple
 {% raw %}
 ```html
-<select multiple class="form-control" id="ownedTransportation" name="ownedTransportation" [(ngModel)]="driverData.ownedTransportation">
+<select multiple class="form-control" name="ownedTransportation" [(ngModel)]="driverData.ownedTransportation">
         <option *ngFor = "let transportation of transportationList" [value]="transportation.value">{{transportation.text}}</option>
 </select>
 ```
 {% endraw %}
 {% raw %}
 ```html
-<select class="form-control" id="favouriteTransportation" name="favouriteTransportation" [(ngModel)]="driverData.favouriteTransportation">
+<select class="form-control" name="favouriteTransportation" [(ngModel)]="driverData.favouriteTransportation">
           <option *ngFor = "let transportation of transportationList" [value]="transportation.value">{{transportation.text}}</option>
 </select>
 ```
@@ -263,7 +263,7 @@ Since both the "ownedTransportation" and "favouriteTransportation properties use
 #### input (type="checkbox")
 
 ```html
-<input type="checkbox" id="driverLicence" name="driverLicence" [(ngModel)]="driverData.driverLicence" />
+<input type="checkbox" name="driverLicence" [(ngModel)]="driverData.driverLicence" />
 ```
 
 Once again, nothing special here.  We simply bind to ngModel as before.
@@ -273,9 +273,9 @@ Once again, nothing special here.  We simply bind to ngModel as before.
 #### input (type="radio")
 
 ```html
-<input type="radio" id="vehicleUseBusiness" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" value="business" /> <label for="vehicleUseBusiness"> Business</label><br />
-<input type="radio" id="vehicleUsePleasure" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" value="pleasure" /> <label for="vehicleUsePleasure"> Pleasure</label><br />
-<input type="radio" id="vehicleUseOther" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" value="other" /> <label for="vehicleUseOther"> Other</label><br />
+<input type="radio" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" value="business" /> <label for="vehicleUseBusiness"> Business</label><br />
+<input type="radio" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" value="pleasure" /> <label for="vehicleUsePleasure"> Pleasure</label><br />
+<input type="radio" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" value="other" /> <label for="vehicleUseOther"> Other</label><br />
 ```
 
 Here, we must place identical ngModel binding on each "radio" button with the same "name" attribute.
@@ -369,7 +369,7 @@ In addition to leveraging the native HTML5 validation attributes, we can also cr
 Basically, if we wish to display a message for a specific type of error, we make a template reference to the element we want using "ngModel" (same procedure as above), ie:
 
 ```html
-<input type="text" class="form-control" id="name" name="name" [(ngModel)]="driverData.name" required autofocus #name="ngModel">
+<input type="text" class="form-control" name="name" [(ngModel)]="driverData.name" required autofocus #name="ngModel">
 ```
 we can then access it's "error" property, ie: **name.error**.  For a quick glimpse at what error properties get applied, we can place the following diagnostic output somewhere near the "name" control:
 {% raw %}
