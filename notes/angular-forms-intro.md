@@ -75,40 +75,66 @@ It also uses the bootstrap "forms" classes, ie "form-group" and "form-control" f
 
 ```html
 <form action="/path/to/handler" method="post">
+
   <div class="form-group">
-    <label for="name">Full Name:</label>
-    <input type="text" class="form-control" name="name" required autofocus>
+    <label class="control-label" for="name">Full Name:</label>
+    <input type="text" class="form-control" id="name" name="name" required autofocus>
   </div>
+
   <div class="form-group">
-    <label for="description">Description</label>
-    <textarea class="form-control" name="description"></textarea>
+    <label class="control-label" for="description">Description:</label>
+    <textarea class="form-control" id="description" name="description" rows="6"></textarea>
   </div>
+
   <div class="form-group">
-    <label for="ownedTransportation">Owned Transportation</label>
-    <select multiple class="form-control" name="ownedTransportation">
+    <label class="control-label" for="ownedTransportation">Owned Transportation:</label>
+    <select multiple class="form-control" id="ownedTransportation" name="ownedTransportation">
       <option value="C">Car</option>
       <option value="B">Bus</option>
       <option value="M">Motorcycle</option>
       <option value="H">Helicopter</option>
     </select>
   </div>
+
   <div class="form-group">
-    <label for="favouriteTransportation">Favourite Transportation</label>
-    <select class="form-control" name="favouriteTransportation">
+    <label class="control-label" for="favouriteTransportation">Favourite Transportation:</label>
+    <select class="form-control" id="favouriteTransportation" name="favouriteTransportation">
       <option value="C">Car</option>
       <option value="B">Bus</option>
       <option value="M">Motorcycle</option>
       <option value="H">Helicopter</option>
     </select>
   </div>
-  <input type="checkbox" name="driverLicence" /> <label for="driverLicence">Driver's Licence</label><br />
+
   <div class="form-group">
-    <h5>Vehicle Usage:</h5>
-    <input type="radio" name="vehicleUse" value="business" /> <label for="vehicleUseBusiness"> Business</label><br />
-    <input type="radio" name="vehicleUse" value="pleasure" /> <label for="vehicleUsePleasure"> Pleasure</label><br />
-    <input type="radio" name="vehicleUse" value="other" /> <label for="vehicleUseOther"> Other</label><br />
+    <label for="" class="control-label">Has a driver's license?</label>
+    <div class="checkbox">
+      <label class="control-label" for="driverLicence">
+        <input type="checkbox" id="driverLicence" name="driverLicence" />Yes, if checked</label>
+    </div>
   </div>
+
+  <div class="form-group">
+    <label for="" class="control-label">Vehicle usage:</label>
+    <div class="radio">
+      <label class="control-label" for="vehicleUseBusiness">
+        <input type="radio" id="vehicleUseBusiness" name="vehicleUse" value="business" /> Business
+      </label>
+    </div>
+    <div class="radio">
+      <label class="control-label" for="vehicleUsePleasure">
+        <input type="radio" id="vehicleUsePleasure" name="vehicleUse" value="pleasure" /> Pleasure
+      </label>
+    </div>
+    <div class="radio">
+      <label class="control-label" for="vehicleUseOther">
+        <input type="radio" id="vehicleUseOther" name="vehicleUse" value="other" /> Other
+      </label>
+    </div>
+  </div>
+
   <button class="btn btn-primary" type="submit">Create</button>
+
 </form>
 ```
 
