@@ -416,6 +416,8 @@ Then, declare/define a suitable property to package the collection/array of acti
 activity: Subject<LogItem[]>;
 ```
 
+Remember to initialize the property's value (probably in the constructor). Set the value to a new instance, e.g. `new Subject<LogItem[]>()`. 
+
 Interestingly, in a component class, when we subscribe to this property, the return value of its `subscribe()` method is an `Observable<T>'. At least that part is familiar to us now.
 
 <br>
