@@ -5,21 +5,17 @@ layout: default
 
 ## BTI425 Assignment 5
 
-The purpose or objective of the assignment is to implement interactive forms for an app, an deploy it to a hosting service.
+The purpose or objective of the assignment is to implement interactive forms for an app, and then deploy it to a hosting service.
 
 > This document is being edited.  
 > This notice will be removed when the edits are complete.  
+> We expect to complete the edits by mid-day on Friday, March 30.  
+
+<br>
 
 Read/skim all of this document before you begin work.
 
-While you are doing the work, if a *specific task* is not clear, or it seems to require an unreasonable amount of time to complete, contact your professor. 
-
-**Ideas**
-
-[SO scope of local storage](https://stackoverflow.com/questions/9742395/scope-of-sessionstorage-and-localstorage) - saving content in the browser
-
-Google search words: angular route guard
-
+While you are doing the work, if a *specific task* is not clear, or it seems to require an unreasonable amount of time to complete, or it seems to require knowledge way beyond the content we've covered in the course, please don't hesistate to contact your professor. 
 
 <br>
 
@@ -35,10 +31,19 @@ Grade value: 10% of your final course grade
 
 ### Introduction to the problem to be solved
 
-In the previous two assignments, you learned just enough about forms to implement a few use cases. In this assignment, you'll go further. 
+In the previous two assignments, you learned just enough about forms to implement a few use cases. In this assignment, you'll go further, by correctly implementing some Angular *template-driven forms* techniques. We plan to cover a few scenarios (add new, and edit existing), while working with your Teams API. 
 
-More to come. Will likely have...
-* Locally-stored data, user accounts
+In addition, you will add a security-like feature to the app, by implementing locally-stored user accounts, and then coding an authentication view. This feature enables you to go back and protect the *add new* and *edit existing* use cases. 
+
+> Please note that this security-like feature is NOT suitable for production use.  
+> We are doing it simply as an illustration of what the feature could look like.  
+> Implementing the feature actually enables you to get a bit of experience with two technologies, 1) local storage in the browser, and 2) Angular route guards.  
+> In the near future, but outside the scope and delivery of this course, we hope to publish some guidance about implementing security in an Angular app.  
+
+Finally, you will deploy the app to a public host, so that you can deliver it to other devices (including, for example, your smartphone).  
+
+In summary:
+* Use locally-stored data, specifically user accounts
 * Interact with Teams API, specifically the Team entity, to do CRUD with that entity
 * Deploy to Heroku
 
@@ -58,8 +63,11 @@ As first described in the previous assignment specifications, the how-to instruc
 
 Here's a brief list of specifications that you must implement:
 
-* TBA
-* TBA
+* Design and use a class to hold a "user account"
+* Maintain, in local storage, a collection of user accounts
+* Code a component that enables authentication
+* For the Team entity (in your Teams API), support the full range of CRUD tasks, by more correctly using *template-driven forms* 
+* Deploy to a public host, and show that it can run correctly on devices (including your smartphone)
 
 More details are provided below, in the section titled **"Doing the work"**.
 
@@ -81,12 +89,12 @@ Open a terminal window, and navigate to a suitable file system location. We will
 ng new assignment5 --routing -st -sg
 ```
 
-After the generation completes, verify that it runs. Prepare the rest of your dev environment:
+After the app generation task completes, verify that the app runs. Then prepare the rest of your dev environment:
 * Probably use another terminal window (so you can run code-generation commands)
 * Probably use one or two Finder windows/tabs (for graphical navigation and Quick Look viewing)
 * Code editor 
 * Browser, and browser developer tools (at a minimum, you'll probably be using the element inspector, and the JavaScript console)
-* Reference notes, including the relevant course notes (current and past), and authoritative resources (e.g. Angular documentation, etc.)
+* Reference notes, including the relevant course notes (current and past), and authoritative resources (e.g. MDN, Angular documentation, etc.)
 
 Include the Bootstrap CSS library in your app. 
 
@@ -117,6 +125,7 @@ For content areas, we will need the following:
 * team view details
 * team create
 * maybe... team edit
+* maybe... team delete
 
 Use the Angular CLI to generate components for each of them now. Remember, use Pascal case names if you are using multi-word names for components. 
 
@@ -162,7 +171,7 @@ Here's some additional discussion on each of these.
 
 ##### 1. Decide which components will participate in routing
 
-( more to come )
+In this app, it's likely that all components (listed above) will participate in routing. 
 
 ##### 2. Design and code your routes
 
@@ -170,7 +179,7 @@ Do that now. Ensure that the sequence is correct. And, ensure that you have rout
 
 ##### 3. Decide which component(s) will hold the `<router-outlet>` element, and edit your code
 
-In the [Refine the structure and appearance](#refine-the-structure-and-appearance) section above, you should have already completed that task. 
+In the [Refine the structure and appearance](#refine-the-structure-and-appearance) section above, you should have already completed that task. (If you did it correctly, it's in the app component template.)
 
 ##### 4. If it makes sense for your app, decide which component will hold the hyperlink elements, and edit your code 
 
@@ -189,6 +198,8 @@ You can do that on demand later on (below), as you code the component.
 #### Let's prepare to get data involved
 
 In the previous assignments, we worked with in-memory data, and with data from your Teams API.
+
+Here, we will work with both. In addition, the in-memory data will be backed with local storage. 
 
 ( a bit different / more )
 
