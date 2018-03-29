@@ -121,15 +121,15 @@ As always, we will need some kind of a heading and/or navigation menu. For this 
 
 For content areas, we will need the following:
 * home (landing page)
-* account create
-* account view details
-* accounts list
-* login
+* user account create
+* user account view details
+* user accounts list
+* user login
 * teams list
 * team view details
 * team create
-* maybe... team edit
-* maybe... team delete
+* maybe/TBA... team edit
+* maybe/TBA... team delete
 
 Use the Angular CLI to generate components for each of them now. Remember, use Pascal case names if you are using multi-word names for components. 
 
