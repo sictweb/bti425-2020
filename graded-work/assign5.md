@@ -35,10 +35,14 @@ In the previous two assignments, you learned just enough about forms to implemen
 
 In addition, you will add a security-like feature to the app, by implementing locally-stored user accounts, and then coding an authentication view. This feature enables you to go back and protect the *add new* and *edit existing* use cases. 
 
-> Please note that this security-like feature is NOT suitable for production use.  
+> Please note that this app's security-like feature is **NOT suitable for production use**.  
+>  
 > We are doing it simply as an illustration of what the feature could look like.  
 > Implementing the feature actually enables you to get a bit of experience with two technologies, 1) local storage in the browser, and 2) Angular route guards.  
+>  
 > In the near future, but outside the scope and delivery of this course, we hope to publish some guidance about implementing security in an Angular app.  
+
+<br>
 
 Finally, you will deploy the app to a public host, so that you can deliver it to other devices (including, for example, your smartphone).  
 
@@ -107,7 +111,7 @@ Add `<meta>` tags for author and description, similar to what you've done in pre
 
 ### Doing the work
 
-( more to come )
+As you have read, there are two design-and-coding efforts, 1) CRUD with forms, and 2) the security-like feature. It does not matter which is done first. 
 
 <br>
 
@@ -199,19 +203,33 @@ You can do that on demand later on (below), as you code the component.
 
 In the previous assignments, we worked with in-memory data, and with data from your Teams API.
 
-Here, we will work with both. In addition, the in-memory data will be backed with local storage. 
+Here, we will work with both. In addition, the in-memory data will be backed with *local storage*. There are many kinds of local storage available, but we are going to use the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) object that's in every browser, and is a property of the browser's `Window` object. 
 
-( a bit different / more )
+We can store key-value pairs in local storage. Let's assume that both will be string type. Can we store objects (e.g. JavaScript objects and arrays)? Yes. We transform the object into JSON when saving/storing. When reading, we transform the string into JSON, which can then become the value of a variable or property. 
+
+While the official documentation ([linked above](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)) is OK, [this article by Craig Buckler](https://www.safaribooksonline.com/blog/2013/10/10/how-to-use-html5-local-storage/) covers all of the functionality we need. Read it, practice (before you need to use it), and then use it.
 
 <br>
 
 ##### Data / schema classes
 
-> TBA - must be reviewed and edited  
+At this point in modern life, every student has created many user accounts. Think of that scenario for a moment.
 
-Generate then write a class that has all the necessary data properties for an employee, and for a project. 
+> This list of properties is still being edited.  
+> It will likely be reformatted as a table with some guidance about types, UI/UX, and validation.  
 
-Incidentally, as you will learn, you must also write classes for team and position. Why? An employee object includes a reference to a position. And, a team object includes a reference to a "team lead" (which is an employee), and has a collection of "team members" (employee references). Etc.  
+Generate then write a class that has all the necessary data properties for a user account. We want good coverage of many HTML Form elements, and therefore HTML5 and Angular form features. At a minimum, the properties should include:
+* user name (which is an email address)
+* full name (or you can use separate fields for family name and given name(s))
+* date the account was created (which can be a string)
+* birth date of the user (ditto)
+* description (should allow lengthy text, a few hundred characters; the UI entry element will be a `<textarea>`)
+* kind of user (e.g. standard user, or a user account manager)
+* skills (which the user will select in the UI)
+
+Generate then write a class that has all the necessary data properties for a team. 
+
+Incidentally, as you will learn, you must also write classes for project, employee, and position. Why? A team object has a collection of projects, an employee object, and a collection of employees. An employee object includes a position. 
 
 > A note about writing data / schema classes: Obviously, it is possible to create a separate source code file to hold each class.  
 > Alternatively, it is also possible to create a single source code file to hold the code for *all* classes.  
@@ -263,225 +281,11 @@ In the [course notes](https://sictweb.github.io/bti425/notes/week09), the recipe
 
 <br>
 
-#### Employees component
+#### (TBA) component
 
 In this section, and in the other component-related sections that follow, we will perform the coding tasks in both the component (class and template) and the data manager service that will fulfill the use case. Sometimes there's no "straight line" approach, and it's necessary to go back-and-forth. 
 
-The "display all employees" task should be well-understood by now, as you have done it at least a few times now.  In summary:
-
-1. In the data manager service, write a method (maybe named `getEmployees`) that will fetch ALL employees from the Teams API. 
-
-2. In the employees component class, create a private field to hold the data we want.
-
-3. Call the data manager service method. The call must be in the `ngOnInit` method block, because we're ultimately working with a web service. 
-
-4. In the employees template, create the markup you want (e.g. an HTML Table) that will render the data. 
-
-Most "display all" views will allow the user to select an item on the list, and display its details. Therefore, as you have done before...
-
-5. Still in the employees template, add an event handler for the "select an item" idea. 
-
-6. Back in the employees class, create a private field to hold a selected employee. 
-
-7. Write a method that handles the "select an item" event. Its code will likely just navigate to the "employee-detail" component.
-
-After completing this section, your "display all employees" view may look similar to the following:
-
-![Employees list](../media/a4/employees-list-v1.png)
-
-<br>
-
-> Notice that the list is sorted. See the course notes for a discussion of how this could be done.
-
-<br>
-
-#### Projects component
-
-While the coding experience for the employees component is fresh, maybe you should do the same for the projects component. It too is a collection, so it can be rendered in some kind of list. 
-
-After completing this section, your "display all projects" view may look similar to the following:
-
-![Projects list](../media/a4/projects-list-v1.png)
-
-<br>
-
-> Notice that the list is sorted, and the [date has been nicely formatted](https://sictweb.github.io/bti425/notes/angular-date-pipe). 
-
-<br>
-
-#### Employee detail component
-
-Maybe you have noticed that the previous two tasks are very similar to the "display all customers" task that you did in Assignment 3 project #2. The notable difference is the slightly-different coding and usage of the service, which acknowledges the fact that we're working with data from a web service. 
-
-The good news is that the tasks for the other kinds of CRUD tasks - get one, add new, edit existing, and delete item - are also similar, no matter what the entity. (The difference is in the data, and the desired appearance etc. of the view.)
-
-As a result, you can refer to the guidance that begins in [this section](https://sictweb.github.io/bti425/graded-work/assign3#customer-detail-component-introduction) of Assignment 3 project #2 here, and in the following sections. 
-
-As stated above, the service coding and usage will be different. In the service, create a "get one" method. The method body will have to test for a success or error response.
-
-If the response is an array (with one object), return the object. In other words, unpackage the object that's inside the array, and return the object. It makes sense to do this kind of work in the data manager service, and not dump it on every component that uses it. The method's return type will be an `Observable<Employee>`, and not an array of employees. 
-
-If the response is an error, we suggest a redirect to the "not found" component. 
-
-After completing this section, your "display one employee" view may look similar to the following:
-
-![Employee detail](../media/a4/employee-detail-v1.png)
-
-<br>
-
-#### Project detail component
-
-While the coding experience for the employee detail component is fresh, maybe you should do the same for the project detail component.  
-
-After completing this section, your "display one project" view may look similar to the following:
-
-![Project detail](../media/a4/project-detail-v1.png)
-
-<br>
-
-#### Employee create component
-
-Follow the theme of the previous section. The Assignment 3 project #2 [create task](https://sictweb.github.io/bti425/graded-work/assign3#customer-create-task) enabled you to transition the work done on the "detail" component into a "create" component. That advice is still valid here. 
-
-> Note: As briefly discussed in the Tuesday, March 13 class session, modern browser validation does not seem to work. The reason offered was that the Angular Forms module disabled modern browser validation, so that it could replace or take over the validation job.  
-> The actual reason is a bit different and more complex than that. Let's leave the solution to our coverage of Angular Forms later in the course. For now, continue to "Specify the type of the input elements, to take advantage of modern browser features". While it won't do validation, it will still bring other benefits.  
-
-After completing this section, your "create employee" view may look similar to the following:
-
-![Employee create](../media/a4/employee-add-v1.png)
-
-<br>
-
-#### Project edit component
-
-Why are we doing this project edit task? Well, of all the data in the Teams API, the project data is the messiest and the most artificial of all the entity collections. It would be a great idea to be able to edit the projects. 
-
-The Assignment 3 project #2 [edit task](https://sictweb.github.io/bti425/graded-work/assign3#edit-a-customer) enabled you to transition the work done on the "create" component (especially the form code in the template) into an "edit" component. That advice is still valid here. 
-
-After completing this section, your "edit project" view may look similar to the following:
-
-![Project edit](../media/a4/project-edit-v1.png)
-
-<br>
-
-#### Log component 
-
-> The content in this section will take a day or two to complete.  
-> We need a few more hours to possibly re-engineer part of it to make it a better and more re-usable experience. 
-
-For this part of the assignment, we thought we would build upon the recent knowledge of observables in an interesting way. 
-
-As stated above, the right side of the content area will display an "activity log" of the user interaction tasks. 
-
-What activity? Well, we're thinking of navigation activity, and data CRUD activity. Each activity will include a date-and-time value, and a short string that describes the activity. As the browser user interacts with the app, the activity log will show each activity. 
-
-Please note that the activity log data will NOT saved/persisted in this app. It will exist in-memory only. Every time the app loads (which happens after each build/compile task), the data will be cleared. Therefore, do NOT expect the data to be saved. 
-
-> Is it possible to save the data? Yes. One way would be to use HTML5 local or session storage. That would be pretty easy to implement. Another way would be to add logic to the web service. That would take much more effort. 
-
-Here's what we will do to implement this feature:
-1. Write a data/schema class for an activity log item
-2. In the data manager service, declare/define a collection/array to store the activity log items
-3. Then, declare/define an observable yet updateable package for the collection/array 
-4. Write an "add to activity log" method that can be called from any component
-5. Update the activity log component, so that it displays the activity log items
-6. Call the method from your components
-
-<br>
-
-##### 1. Write a data/schema class for an activity log item
-
-Write the code for a data/schema class. It can be in a separate source code file, or in with the others if you chose to write all classes in one source code file. 
-
-Let's keep it simple: It needs a property to hold a date (of type Date), and a string for the activity. 
-
-<br>
-
-##### 2. In the data manager service, declare/define a collection/array to store the activity log items
-
-As described above, we are storing the activity log items in memory. Therefore, declare/define an array property of type activity log. (Remember to import, and also to initialize the property value to an empty array in the constructor.)
-
-<br>
-
-##### 3. Then, declare/define an observable yet updateable package for the collection/array 
-
-Recently, you learned that an "observable" can be thought of as a packaging tactic for a value that you want to watch. The return value of an HttpClient `get()` method (for example) is an observable. 
-
-This is the kind of thing that we want. In the activity log component (which will be coded soon), we will want to "subscribe" to the activity log data, so that new items appear automatically. 
-
-However, we cannot just use an observable. Instead, we must use a [Subject](http://reactivex.io/documentation/subject.html), which extends (inherits from) Observable. Its added feature is that we can update the package (i.e. the array of activity log items), and it will then notify the subscribers. So, read and write, in effect. 
-
-To use a `Subject` in our data manager service, import it:
-
-```ts
-import { Subject } from "rxjs/Subject";
-```
-
-Then, declare/define a suitable property to package the collection/array of activity log items:
-
-```ts
-activity: Subject<LogItem[]>;
-```
-
-Remember to initialize the property's value (probably in the constructor). Set the value to a new instance, e.g. `new Subject<LogItem[]>()`. 
-
-Interestingly, in a component class, when we subscribe to this property, the return value of its `subscribe()` method is an `Observable<T>'. At least that part is familiar to us now.
-
-<br>
-
-##### 4. Write an "add to activity log" method that can be called from any component
-
-Now we're ready to write a method that can be called from any component. Something like the following will work OK:
-
-```ts
-logAction(message: string) {
-  // There are at least a couple of ways to declare a log item
-  // Here's a straight-line simple way...
-  let action = new LogItem();
-  action.timestamp = new Date();
-  action.message = message;
-  // Assuming that "log" was declared/defined in task #2 above,
-  // add the new item to the beginning of the array
-  // (so that the most recent item is at the top of the list)
-  // (this will avoid the need to sort the array)
-  this.log.unshift(action);
-  // Trigger the notification functionality
-  this.activity.next(this.log);
-}
-```
-
-<br>
-
-##### 5. Update the activity log component, so that it displays the activity log items
-
-Like the other components, it needs to know about the data manager service, and the data/schema class that it is working with. 
-
-It needs a property to hold the collection/array of activity log items. It will be the binding target for the code in the template. 
-
-As you have learned when working with the other components, call the `subscribe()` method in the `ngOnInit()` method. 
-
-```ts
-// Assuming "log" is a collection/array of activity log items...
-this.m.activity.subscribe(c => this.log = c);'
-```
-
-In the template, write elements that result in a nice pleasing display of log items. You should probably use the date pipe to make the date look better.
-
-<br>
-
-##### 6. Call the method from your components
-
-In each component, add a statement that will call the method in the data manager service.
-
-```ts
-this.m.logAction('View PROJECTS LIST loaded.');
-```
-
-Which components should we call this method from? Where do we add this code? Well, we suggest that you call it in the component's constructor. And, call it from other parts of your logic and user interaction flow. Whatever makes sense for the current context. 
-
-After completing this section, the view - with the activity log - may look similar to the following. Notice that the area will scroll if the number of items exceeds its height:
-
-![Log view](../media/a4/log-view-v1.png)
+( more to come )
 
 <br>
 
