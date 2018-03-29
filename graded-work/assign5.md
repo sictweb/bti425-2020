@@ -67,8 +67,8 @@ As first described in the previous assignment specifications, the how-to instruc
 
 Here's a brief list of specifications that you must implement:
 
-* Design and use a class to hold a "user account"
-* Maintain, in local storage, a collection of user accounts
+* Design and use a class that describes a "user account"
+* Maintain, in the browser's local storage, a collection of user accounts
 * Code a component that enables authentication
 * For the Team entity (in your Teams API), support the full range of CRUD tasks, by more correctly using *template-driven forms* 
 * Deploy to a public host, and show that it can run correctly on devices (including your smartphone)
@@ -213,7 +213,7 @@ While the official documentation ([linked above](https://developer.mozilla.org/e
 
 ##### Data / schema classes
 
-At this point in modern life, every student has created many user accounts. Think of that scenario for a moment.
+At this point in modern life, every student has created many user accounts on various online properties. Think of that scenario for a moment.
 
 Generate then write a class that has all the necessary data properties for a user account. We want good coverage of many HTML Form elements, and therefore HTML5 and Angular form features. At a minimum, the class' properties should include the following:
 
@@ -224,8 +224,8 @@ Full name | string | Can be one property or two (i.e. family name and given name
 User birth date | string (ISO 8601 date) | | Text box (for a date) | Must be a date; required
 Date created | string (ISO 8601 date) | Date the account was created | Probably none; assigned in code | Must be a date; required (assigned in code)
 User kind/role | string | We will use only two constant strings, "standard" and "accountmanager" | Radio button group | Required
-PIN | number | [Personal identification number](https://en.wikipedia.org/wiki/Personal_identification_number) | Text box (for a number) | Required, range (min, max)
-Active | boolean | Is the user "active", or not? | Single check box | (no)
+PIN | number | [Personal identification number](https://en.wikipedia.org/wiki/Personal_identification_number), about 4 digits | Text box (for a number) | Required, range (min, max)
+Active | boolean | Is the user "active", or not? | Single check box | 
 
 <br>
 
@@ -246,7 +246,7 @@ Incidentally, as you will learn, you must also write classes for project, employ
 
 Generate a service. 
 
-The sequence of design, planning, and coding tasks are suggested by the work you did with the previous assignment's project #2. Here's the list, with a few new tasks to be done when we're working with a web service:
+The sequence of design, planning, and coding tasks are suggested by the work you did with previous assignment. Here's the list, with a few new tasks to be done when we're working with a web service:
 1. Import the data / schema classes 
 2. Optionally, for each entity collection, create a private field to hold the collection locally in memory
 3. Optionally, code the method that will load each collection
