@@ -215,17 +215,19 @@ While the official documentation ([linked above](https://developer.mozilla.org/e
 
 At this point in modern life, every student has created many user accounts. Think of that scenario for a moment.
 
-> This list of properties is still being edited.  
-> It will likely be reformatted as a table with some guidance about types, UI/UX, and validation.  
+Generate then write a class that has all the necessary data properties for a user account. We want good coverage of many HTML Form elements, and therefore HTML5 and Angular form features. At a minimum, the class' properties should include the following:
 
-Generate then write a class that has all the necessary data properties for a user account. We want good coverage of many HTML Form elements, and therefore HTML5 and Angular form features. At a minimum, the properties should include:
-* user name (which is an email address)
-* full name (or you can use separate fields for family name and given name(s))
-* date the account was created (which can be a string)
-* birth date of the user (ditto)
-* description (should allow lengthy text, a few hundred characters; the UI entry element will be a `<textarea>`)
-* kind of user (e.g. standard user, or a user account manager)
-* skills (which the user will select in the UI)
+Purpose | Suggested<br>type | More info | Likely<br>form element | Constraints
+--- | --- | --- | ---  | --- 
+User name | string | Email address | Text box | Must be an email address; length limits; required
+Full name | string | Can be one property or two (i.e. family name and given name(s)) | Text box | Length limits; required
+User birth date | string (ISO 8601 date) | | Text box (for a date) | Must be a date; required
+Date created | string (ISO 8601 date) | Date the account was created | Probably none; assigned in code | Must be a date; required (assigned in code)
+User kind/role | string | We will use only two constant strings, "standard" and "accountmanager" | Radio button group | Required
+PIN | number | [Personal identification number](https://en.wikipedia.org/wiki/Personal_identification_number) | Text box (for a number) | Required, range (min, max)
+Active | boolean | Is the user "active", or not? | Single check box | (no)
+
+<br>
 
 Generate then write a class that has all the necessary data properties for a team. 
 
