@@ -9,7 +9,6 @@ The purpose or objective of the assignment is to implement interactive forms for
 
 > This document is being edited.  
 > This notice will be removed when the edits are complete.  
-> We expect to complete the edits by mid-day on Friday, March 30.  
 
 <br>
 
@@ -48,12 +47,12 @@ Finally, you will deploy the app to a public host, so that you can deliver it to
 
 In summary:
 * Use locally-stored data, specifically user accounts
-* Interact with Teams API, specifically the Team entity, to do CRUD with that entity
+* Interact with Teams API, specifically the Team entity, to do create, read, and update tasks with that entity
 * Deploy to Heroku
 
-Here is an example of a typical view from the app, showing the "project detail" view:
+Here is an example of a typical view from the app, showing the "team detail" view:
 
-![TBA](https://via.placeholder.com/350x150)
+![Team detail](../media/a5/team-detail-v3.png)
 
 <br>
 
@@ -70,7 +69,7 @@ Here's a brief list of specifications that you must implement:
 * Design and use a class that describes a "user account"
 * Maintain, in the browser's local storage, a collection of user accounts
 * Code a component that enables authentication
-* For the Team entity (in your Teams API), support the full range of CRUD tasks, by more correctly using *template-driven forms* 
+* For the Team entity (in your Teams API), support create, read, and update tasks, by more correctly using *template-driven forms* 
 * Deploy to a public host, and show that it can run correctly on devices (including your smartphone)
 
 More details are provided below, in the section titled **"Doing the work"**.
@@ -111,7 +110,7 @@ Add `<meta>` tags for author and description, similar to what you've done in pre
 
 ### Doing the work
 
-As you have read, there are two design-and-coding efforts, 1) CRUD with forms, and 2) the security-like feature. It does not matter which is done first. 
+As you have read, there are two design-and-coding efforts, 1) create and update with forms, and 2) the security-like feature. It does not matter which is done first. 
 
 <br>
 
@@ -128,8 +127,7 @@ For content areas, we will need the following:
 * teams list
 * team view details
 * team create
-* maybe/TBA... team edit
-* maybe/TBA... team delete
+* team edit
 
 Use the Angular CLI to generate components for each of them now. Remember, use Pascal case names if you are using multi-word names for components. 
 
@@ -143,6 +141,10 @@ Use the Angular CLI to generate components for each of them now. Remember, use P
 
 Then, as a brief and quick test, add their selectors to the app component's HTML template so that they appear when the app loads. (Obviously, they won't stay there after the test. We just do it now to prove that the components work and they show up in the view.)
 
+At this point in time, it is possible that your work may look like the following. As always, right-click any image and open it in its own tab/window to view it full-size.
+
+![TBA](../media/a5/app-comp-with-temp-elements.png)
+
 <br>
 
 ##### Refine the structure and appearance
@@ -152,10 +154,6 @@ Before continuing, you should spend a few minutes and ensure that the viewport c
 The "home" component can display a bit of information about you, and a bit about the app. 
 
 If you have started to create a personal-use library of standard code snippets, you can use that code here (where appropriate). The code in your personal-use library can come from many sources, including your own work, course code examples, and other trustworthy sources. Be careful about attribution and academic honesty.  
-
-At this point in time, it is possible that your work may look like the following. As always, right-click any image and open it in its own tab/window to view it full-size.
-
-![TBA](https://via.placeholder.com/350x150)
 
 <br>
 
@@ -197,6 +195,10 @@ You can do that now, if you wish, by editing each of the routed components (thei
 
 You can do that on demand later on (below), as you code the component. 
 
+At this point in time, it is possible that your work may look like the following. 
+
+![TBA](../media/a5/home-view-v1.png)
+
 <br>
 
 #### Let's prepare to get data involved
@@ -230,6 +232,8 @@ Active | boolean | Is the user "active", or not? | Single check box |
 <br>
 
 Generate then write a class that has all the necessary data properties for a team. 
+
+> If you were happy with the data/schema classes that you wrote for the previous assignment, then you can use there here too.
 
 Incidentally, as you will learn, you must also write classes for project, employee, and position. Why? A team object has a collection of projects, an employee object, and a collection of employees. An employee object includes a position. 
 
@@ -283,11 +287,55 @@ In the [course notes](https://sictweb.github.io/bti425/notes/week09), the recipe
 
 <br>
 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# 
+# The area below is still being edited.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
 #### (TBA) component
 
 In this section, and in the other component-related sections that follow, we will perform the coding tasks in both the component (class and template) and the data manager service that will fulfill the use case. Sometimes there's no "straight line" approach, and it's necessary to go back-and-forth. 
 
 ( more to come )
+
+Team list image:
+team-list-v1
+
+Team detail:
+In constructor, must set all properties of team to prevent binding errors; the alternative is to NOT create a new empty team instance, and accept the errors
+
+Team detail images:
+Without detail - team-detail-v1
+With project and team member names - team-detail-v2
+
+Getting forms involved... forms module (in app module)
+Maybe this should go higher in the specs
+
+Make sure you add the styles too for form fields
+
+Team create, multi-step approach
+team-create-step1 - team name
+team-create-step2 - with validation
+step3 - validation for select-one
+
+
+
+
+
 
 <br>
 
