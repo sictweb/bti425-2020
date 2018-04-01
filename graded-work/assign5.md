@@ -287,6 +287,132 @@ In the [course notes](https://sictweb.github.io/bti425/notes/week09), the recipe
 
 <br>
 
+#### Prepare to use Angular template-driven forms
+
+This info is in the weekly class notes, and in the [Angular documentation](https://angular.io/guide/forms#revise-appmodulets). 
+
+Open the app module (`app.module.ts`) for editing. 
+
+Add the forms module to the import statements near the top:
+
+```ts
+import { FormsModule } from "@angular/forms";
+```
+
+Then, in the `@NgModule` decorator object, in the `imports` array, add the `FormsModule` module. 
+
+Finally, we suggest adding a few style rules to visually indicate form elements that are valid and invalid. In the `styles.css` file (in the project root), add these rules:
+
+```css
+/* Forms classes */
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+```
+
+<br>
+
+#### Team list component
+
+In this section, and in the other component-related sections that follow, we will perform the coding tasks in both the component (class and template) and the data manager service that will fulfill the use case. Sometimes there's no "straight line" approach, and it's necessary to go back-and-forth. 
+
+The "display all teams" task should be well-understood by now, as you have done it at least a few times now. In summary:
+
+In the data manager service, write a method (maybe named teamGetAll) that will fetch ALL teams from the Teams API.
+
+In the teams component class, create a property to hold the data we want.
+
+Call the data manager service method. The call must be in the ngOnInit method block, because we're ultimately working with a web service.
+
+In the teams template, create the markup you want (e.g. an HTML Table) that will render the data.
+
+Most "display all" views will allow the user to select an item on the list, and display its details. Therefore, as you have done before...
+
+Still in the teams template, add an event handler for the "select an item" idea.
+
+Back in the teams class, create a private field to hold a selected team.
+
+Write a method that handles the "select an item" event. Its code will likely just navigate to the "team detail" component.
+
+After completing this section, your "display all teams" view may look similar to the following:
+
+![Team list](../media/a5/team-list-v1.png)
+
+<br>
+
+#### Team detail component
+
+The "display item detail" task should be well-understood by now, as you have done it at least a few times now. In summary:
+
+In the data manager service, write a method (maybe named teamGetAll) that will fetch a specific team from the Teams API.
+
+In the "team detail" component class, create a property to hold the data we want.
+
+Call the data manager service method. The call must be in the ngOnInit method block, because we're ultimately working with a web service.
+
+In the "team detail" template, create the markup you want that will render the data (likely a definition list).
+
+After completing this section, your "display item detail" view may look similar to the following:
+
+![Team detail](../media/a5/team-detail-v1.png)
+
+<br>
+
+##### Preventing console errors during rending
+
+Assuming that you have followed the guidance above, specifically to create a property to hold the team data that comes back from the seb service, you may notice console errors that indicate undefined data, although the data does appear in the user interface. 
+
+The reason for this is the delay in getting the data. When the view is first rendered, the data is not available. However, it comes within a few seconds or sooner. 
+
+If this bothers you (and it probably should), one way to suppress the error messages is to initialize the property in the constructor. In other words, initialize the team property to a new instance of team. Then, for the reference properties (TeamLead, Employees, Projects), initialize them too. For example:
+
+```ts
+// This prevents a data binding error
+// Assume that "team" is a property that will hold the data
+// that comes back from the call to the web service
+this.team = new Team();
+this.team.TeamLead = new Employee();
+this.team.Projects = [];
+this.team.Employees = [];
+```
+
+<br>
+
+##### Rendering project and team member names
+
+Notice the "( coming soon )" placeholders for the projects and team members collections. We can fill those out now. 
+
+In the "team detail" template, add an `*ngFor` repeater to render the name of each project. In your professor's sample solution, a `<span>` element was used to repeatedly render the project name, followed by a `<br>`. 
+
+Do the same to render the team member (employee) names. 
+
+After completing this section, your "display item detail" view may look similar to the following:
+
+![Team detail](../media/a5/team-detail-v2.png)
+
+<br>
+
+### Team create component
+
+This will be a challenge. We suggest that you design, code, and test repeatedly. Make small-sized progressions.
+
+dd
+
+
+
+
+
+Team create, multi-step approach
+team-create-step1 - team name
+team-create-step2 - with validation
+step3 - validation for select-one
+
+
 
 <br>
 <br>
@@ -294,7 +420,6 @@ In the [course notes](https://sictweb.github.io/bti425/notes/week09), the recipe
 <br>
 <br>
 
-# 
 # The area below is still being edited.
 
 <br>
@@ -305,32 +430,6 @@ In the [course notes](https://sictweb.github.io/bti425/notes/week09), the recipe
 
 
 
-
-#### (TBA) component
-
-In this section, and in the other component-related sections that follow, we will perform the coding tasks in both the component (class and template) and the data manager service that will fulfill the use case. Sometimes there's no "straight line" approach, and it's necessary to go back-and-forth. 
-
-( more to come )
-
-Team list image:
-team-list-v1
-
-Team detail:
-In constructor, must set all properties of team to prevent binding errors; the alternative is to NOT create a new empty team instance, and accept the errors
-
-Team detail images:
-Without detail - team-detail-v1
-With project and team member names - team-detail-v2
-
-Getting forms involved... forms module (in app module)
-Maybe this should go higher in the specs
-
-Make sure you add the styles too for form fields
-
-Team create, multi-step approach
-team-create-step1 - team name
-team-create-step2 - with validation
-step3 - validation for select-one
 
 
 
