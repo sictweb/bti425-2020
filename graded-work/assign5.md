@@ -397,20 +397,302 @@ After completing this section, your "display item detail" view may look similar 
 
 <br>
 
-### Team create component
+#### Team create component
 
-This will be a challenge. We suggest that you design, code, and test repeatedly. Make small-sized progressions.
+This will be a challenge. We suggest that you design, code, and test repeatedly. Make incremental progress.
 
-dd
+Here is a suggested design-code-test approach for implementing a "create item" form.
+
+> Numbered list to be added
+
+Here is what we are attempting to do:
+
+![Team create](../media/a5/team-create-step5.png)
+
+<br>
+
+As you can see, the form has these form fields:
+1. A text box for the team name
+2. A drop-down list to select the team's leader (from the list of employees)
+3. A list box, multi-select, to select (Cmd+click or Ctrl+click) the team's members (from the list of employees)
+4. Another list box, multi-select, to select the team's projects (from the list of projects)
+
+<br>
+
+##### 1. Get started in the component class
+
+Like any component class, it needs imports, one or more constructor parameter, and one or more data properties. 
+
+It needs at least these imports:
+* Data manager service
+* Data / schema classes for all entities
+
+It needs at least this constructor parameter:
+* Data manager service
+
+If you want to user `router.navigate()` in this class, then you'll need the router injected. The alternative is to use a `routerLink` attribute in an `<a>` element in the template. 
+
+It needs at least these data properties:
+
+* A property of type Team, which starts empty, but gets filled in (by us) with the data entered by the user (this is the object that gets sent to the web service)
+
+* A property for the selected "team lead"; its data type will be string (because that's the `value` in the form element, in other words, a string with uniquely identifies the rendered item)
+
+* A property to hold an array of all Employee objects
+
+* A property to hold all selected "team members"; this will be an array of *strings* (again, in a `select option` hierarchy in a form, the `value` attribute in the `option` element is a string which uniquely identifies the rendered item)
+
+* A property to hold an array of Project objects
+
+* A property to hold all selected "team projects"; this will be an array of *strings* (same reason as above)
+
+<br>
+
+##### 2. Fetch the data that we need to render the form
+
+As you noticed above, we need the list of employees, and the list of projects, so that the user can complete their task. 
+
+Therefore, in the `onInit()` method, fetch the employees, and assign the result to the employees property. Fetch the projects, and assign the result to the projects property. 
+
+Yes, it would be nice to have the data sorted.
+
+<br>
+
+##### 3. Get started on the template, and "submit" handler
+
+Create the component's containment structure. We suggest this (and then you can modify it if you wish):
+
+```html
+<div class="row">
+  <h1>Create new team</h1>
+  <h4>Enter information, and click the create button</h4>
+  <div class='col-md-8 col-sm-12'>
+    <form (ngSubmit)='onSubmit()' #f='ngForm'>
+
+      <!-- Form elements go here -->
+
+      <a class="btn btn-default" routerLink='/teams'>Back to list</a>
+      <button class="btn btn-primary" type="submit" [disabled]='!f.form.valid'>Create</button>
+
+    </form>
+  </div>
+</div>      
+```
+
+A few comments about this containment structure:
+* On a wide viewport, the form will be about 2/3 the width
+* On a narrow viewport (i.e. a phone), the form will be full width
+* The `<form>` tag includes Angular-specific attributes
+* It includes a back button
+* The `submit` button includes an Angular-specific form validation check
+
+As you can see, there is a `<button type='submit'...` element. Look up at the opening `<form...` tag, at the `(ngSubmit)='onSubmit()'` attribute. That's the combination that will submit the user-entered data to the `onSubmit()` method in the component class. 
+
+Therefore, return to the component class, and write an `onSubmit()` method. For now, add this statement so that you can monitor your progress and success in the console:
+
+```ts
+// Assuming that "this.team" is a reference to the "Team" property
+console.log(this.team);
+```
+
+<br>
+
+##### 4. Plan the containment strategy for form elements
+
+For consistency, all form elements should use the same containment strategy. In general, use this:
+
+```html
+<div class="form-group">
+
+  <!-- Label for the element -->
+  <label class="control-label" for="name">Team Name:</label>
+
+  <!-- The element -->
+  <input class="form-control" id="name" name="name" >
+    <!-- Add more attributes as needed -->
+    <!-- Two-way binding -->
+    <!-- Template reference variable -->
+    <!-- HTML attributes that work (e.g. autofocus etc.) -->
+    <!-- Angular attributes -->
+
+  <!-- Validation error area -->
+  <div *ngIf='name.invalid && (name.dirty || name.touched)' class='alert alert-danger'>
+    <!-- The code below is situation-dependent - think before coding -->
+    <div *ngIf='name.errors.required'>Team Name is required, 3 to 50 characters</div>
+    <div *ngIf='name.errors.pattern'>Team Name must be at least 3 characters</div>
+  </div>
+
+</div>
+```
+
+<br>
+
+##### 5. Text box for the team name
+
+The form needs a text box for the team name. Its features:
+* Two-way binding to the team name
+* Template reference variable (to benefit the validation error message area)
+* Required
+* Autofocus
+* Placeholder text
+* Maximum length that's reasonable (50? 100?)
+* Minimum length that's reasonable (5?) (note that you must use the `pattern` attribute with a regex)
+
+After this task, your work may look like this:
+
+![Team create](../media/a5/team-create-step1.png)
+
+<br>
+
+Get the field to display and function correctly. Then you can go back and configure the template reference variable, and make the validation error message(s) appear. 
+
+After this task, your work may look like this:
+
+![Team create](../media/a5/team-create-step2.png)
+
+<br>
+
+##### 6. Drop-down list to select the team's leader (from the list of employees)
+
+The form needs a drop-down list for the team's leader. Its features:
+* Two-way binding to the selected team leader (employee)
+* Template reference variable (to benefit the validation error message area)
+* The `select` element is `required` 
+* The `option` elements are generated by `*ngFor` and the collection of employees
+
+It is common to configure a prompt for the user. We do not want the user to select the prompt however. Here's a strategy to show a non-selectable (and disappearing) prompt. Add this element just *before* the other `option` element:
+
+```html
+<!-- Assuming that "teamLead" is the name of the template reference variable -->
+<option *ngIf='teamLead.invalid && teamLead.pristine' value='' disabled>Select a team leader...</option>
+```
+
+Let's test its functionality. Back in the component class, add another `console.log` statement to show the value of the selected team leader (employee). Notice that the value is a string, and it is the employee identifier. 
+
+If this works for you, then you are ready to add it to the team property. Remember, the team property started out empty. It now has (or should have from above) the team name, and it is ready for the team lead. 
+
+In the employees collection, find the matching employee object, and assign it to the team's `TeamLead` property value. 
+
+Again, use `console.log` to confirm your progress.
+
+After this task, your work may look like this (the drop-down list is collapsed):
+
+![Team create](../media/a5/team-create-step3.png)
+
+<br>
+
+##### 7. List box, multi-select, to select the team's members (from the list of employees)
+
+The form needs a list box of employees, so that the user can select team members. Its features:
+* Two-way binding to the selected employees array
+* Template reference variable (to benefit the validation error message area)
+* The `select` element is `required`, and also allows `multiple`
+* Also, decide on the number of visible rows, and then add the `size` attribute
+* The `option` elements are generated by `*ngFor` and the collection of employees
+
+Similar to above, we can configure a prompt for the user. Here's a strategy to show a non-selectable (and disappearing) prompt. Add this element just *before* the other `option` element:
+
+```html
+<!-- Assuming that "teamMembers" is the name of the template reference variable -->
+<option *ngIf='teamMembers.invalid && teamMembers.pristine' value='' disabled>Select one or more team members...</option>
+```
+
+Let's test its functionality. Back in the component class, add another `console.log` statement to show the value of the selected team members. Notice that the value is an array of strings, and each one is the employee identifier. 
+
+If this works for you, then you are ready to add to the team property. At this point, your team property has (or should have from above) the team name, and the team lead (employee) object. 
+
+The coding strategy requires a bit of thought. At this point in time, we have this situation:
+
+1. The team property has an empty `Employees` array property.
+
+2. We have a collection of one or more string identifiers in the selected employees property.
+
+3. We have a complete collection of all employees in the employees property. 
+
+Essentially, what we need to do is this:
+
+```ts
+// For each string identifier in the selected employees property
+// Locate its matching employee in the all employees property
+// Add it to the team property's "Employees" array
+```
+
+Again, use `console.log` to confirm your progress.
+
+After this task, your work may look like this:
+
+![Team create](../media/a5/team-create-step4.png)
+
+<br>
+
+##### 8. List box, multi-select, to select the team's projects (from the list of projects)
+
+This task will be similar to #7 above. The form needs a list box of projects, so that the user can select the team's projects. Its features:
+* Two-way binding to the selected projects array
+* Template reference variable (to benefit the validation error message area)
+* The `select` element is `required`, and also allows `multiple`
+* Also, decide on the number of visible rows, and then add the `size` attribute
+* The `option` elements are generated by `*ngFor` and the collection of projects
+
+Similar to above, we can configure a prompt for the user. Here's a strategy to show a non-selectable (and disappearing) prompt. Add this element just *before* the other `option` element:
+
+```html
+<!-- Assuming that "teamProjects" is the name of the template reference variable -->
+<option *ngIf='teamProjects.invalid && teamProjects.pristine' value='' disabled>Select one or more projects...</option>
+```
+
+Let's test its functionality. Back in the component class, add another `console.log` statement to show the value of the selected projects. Notice that the value is an array of strings, and each one is the project identifier. 
+
+If this works for you, then you are ready to add to the team property. At this point, your team property has (or should have from above) the team name, the team lead (employee) object, and an array of one or more selected team member (employee) objects. 
+
+Like #7 above, the coding strategy requires a bit of thought. At this point in time, we have this situation:
+
+1. The team property has an empty `Projects` array property.
+
+2. We have a collection of one or more string identifiers in the selected projects property.
+
+3. We have a complete collection of all projects in the projects property. 
+
+Essentially, what we need to do is this:
+
+```ts
+// For each string identifier in the selected projects property
+// Locate its matching project in the all projects property
+// Add it to the team property's "Projects" array
+```
+
+Again, use `console.log` to confirm your progress.
+
+After this task, your work may look like this:
+
+![Team create](../media/a5/team-create-step5.png)
+
+<br>
+
+##### 9. Use the web service
+
+If your form is working correctly (as seen in `console.log` output), you're ready to use the web service. 
+
+In the data manager service, add a "team add" method. It accepts a `Team` object as a parameter, and returns an `Observable<any>`. 
+
+The method body will send a POST request to the web service. Its return type can be `<any>`. For now, we will not care about the return value. 
 
 
 
-
-
-Team create, multi-step approach
-team-create-step1 - team name
-team-create-step2 - with validation
-step3 - validation for select-one
+```ts
+  teamAdd(newItem: Team): Observable<any> {
+    return this.teamsApi.post<any>(`${this.url}teams`, newItem)
+    .pipe(map(wrapper => wrapper.message));
+    // the following works, kind of...
+    // it correctly returns just the identifier
+    // but it won't show up in the component
+    // .pipe(map(newItemId => {
+    //   newItemId = newItemId.message.replace('Team ','');
+    //   newItemId = newItemId.replace(' added successfully','');
+    //   console.log('new item id ' + newItemId);
+    // }));
+  }
+```
 
 
 
