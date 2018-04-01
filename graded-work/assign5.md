@@ -483,7 +483,7 @@ For consistency, all form elements should use the same containment strategy. In 
   <!-- Label for the element -->
   <label class="control-label" for="name">Team Name:</label>
 
-  <!-- The element -->
+  <!-- The element code goes here -->
   <input class="form-control" id="name" name="name" >
     <!-- Add more attributes as needed -->
     <!-- Two-way binding -->
@@ -724,7 +724,7 @@ Get started by copying the code from the "add team" component class and template
 
 <br>
 
-#### 2. Prepare the data for the form
+##### 2. Prepare the data for the form
 
 Before starting this task, remember that the component is initialized with an empty team object. Then, we must configure it with the data from the team being edited. 
 
