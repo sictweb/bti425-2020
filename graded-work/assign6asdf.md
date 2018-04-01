@@ -9,7 +9,6 @@ The purpose or objective of the assignment is to implement interactive forms for
 
 > This document is being edited.  
 > This notice will be removed when the edits are complete.  
-> Host deployment is the only section that needs editing. 
 
 <br>
 
@@ -33,9 +32,21 @@ Grade value: 10% of your final course grade
 
 In the previous two assignments, you learned just enough about forms to implement a few use cases. In this assignment, you'll go further, by correctly implementing some Angular *template-driven forms* techniques. We plan to cover a few scenarios (add new, and edit existing), while working with your Teams API. 
 
-Then, you will deploy the app to a public host, so that you can deliver it to other devices (including, for example, your smartphone).  
+In addition, you will add a security-like feature to the app, by implementing locally-stored user accounts, and then coding an authentication view. This feature enables you to go back and protect the *add new* and *edit existing* use cases. 
+
+> Please note that this app's security-like feature is **NOT suitable for production use**.  
+>  
+> We are doing it simply as an illustration of what the feature could look like.  
+> Implementing the feature actually enables you to get a bit of experience with two technologies, 1) local storage in the browser, and 2) Angular route guards.  
+>  
+> In the near future, but outside the scope and delivery of this course, we hope to publish some guidance about implementing security in an Angular app.  
+
+<br>
+
+Finally, you will deploy the app to a public host, so that you can deliver it to other devices (including, for example, your smartphone).  
 
 In summary:
+* Use locally-stored data, specifically user accounts
 * Interact with Teams API, specifically the Team entity, to do create, read, and update tasks with that entity
 * Deploy to Heroku
 
@@ -55,6 +66,9 @@ As first described in the previous assignment specifications, the how-to instruc
 
 Here's a brief list of specifications that you must implement:
 
+* Design and use a class that describes a "user account"
+* Maintain, in the browser's local storage, a collection of user accounts
+* Code a component that enables authentication
 * For the Team entity (in your Teams API), support create, read, and update tasks, by more correctly using *template-driven forms* 
 * Deploy to a public host, and show that it can run correctly on devices (including your smartphone)
 
@@ -96,7 +110,7 @@ Add `<meta>` tags for author and description, similar to what you've done in pre
 
 ### Doing the work
 
-Guidance is below. Please refer to past work and course resources. 
+As you have read, there are two design-and-coding efforts, 1) create and update with forms, and 2) the security-like feature. It does not matter which is done first. 
 
 <br>
 
@@ -106,6 +120,10 @@ As always, we will need some kind of a heading and/or navigation menu. For this 
 
 For content areas, we will need the following:
 * home (landing page)
+* user account create
+* user account view details
+* user accounts list
+* user login
 * teams list
 * team view details
 * team create
@@ -123,7 +141,7 @@ Use the Angular CLI to generate components for each of them now. Remember, use P
 
 Then, as a brief and quick test, add their selectors to the app component's HTML template so that they appear when the app loads. (Obviously, they won't stay there after the test. We just do it now to prove that the components work and they show up in the view.)
 
-At this point in time, it is possible that your work may look like the following. (Ignore the "account-" items.) As always, right-click any image and open it in its own tab/window to view it full-size.
+At this point in time, it is possible that your work may look like the following. As always, right-click any image and open it in its own tab/window to view it full-size.
 
 ![TBA](../media/a5/app-comp-with-temp-elements.png)
 
@@ -197,6 +215,22 @@ While the official documentation ([linked above](https://developer.mozilla.org/e
 
 ##### Data / schema classes
 
+At this point in modern life, every student has created many user accounts on various online properties. Think of that scenario for a moment.
+
+Generate then write a class that has all the necessary data properties for a user account. We want good coverage of many HTML Form elements, and therefore HTML5 and Angular form features. At a minimum, the class' properties should include the following:
+
+Purpose | Suggested<br>type | More info | Likely<br>form element | Constraints
+--- | --- | --- | ---  | --- 
+User name | string | Email address | Text box | Must be an email address; length limits; required
+Full name | string | Can be one property or two (i.e. family name and given name(s)) | Text box | Length limits; required
+User birth date | string (ISO 8601 date) | | Text box (for a date) | Must be a date; required
+Date created | string (ISO 8601 date) | Date the account was created | Probably none; assigned in code | Must be a date; required (assigned in code)
+User kind/role | string | We will use only two constant strings, "standard" and "accountmanager" | Radio button group | Required
+PIN | number | [Personal identification number](https://en.wikipedia.org/wiki/Personal_identification_number), about 4 digits | Text box (for a number) | Required, range (min, max)
+Active | boolean | Is the user "active", or not? | Single check box | 
+
+<br>
+
 Generate then write a class that has all the necessary data properties for a team. 
 
 > If you were happy with the data/schema classes that you wrote for the previous assignment, then you can use there here too.
@@ -218,7 +252,7 @@ Generate a service.
 
 The sequence of design, planning, and coding tasks are suggested by the work you did with previous assignment. Here's the list, with a few new tasks to be done when we're working with a web service:
 1. Import the data / schema classes 
-2. Optionally, for each entity collection, create a private field or property to hold the collection locally in memory
+2. Optionally, for each entity collection, create a private field to hold the collection locally in memory
 3. Optionally, code the method that will load each collection
 4. Write methods that implement the app's use cases
 
@@ -250,9 +284,6 @@ In the [course notes](https://sictweb.github.io/bti425/notes/week09), the recipe
 > All successful responses appear to return a collection, with exactly ONE item in the collection.  
 > Therefore, a "get one employee" return value will be `Observable<Employee[]>`, same as "get all".  
 > An unsuccessful response returns HTTP 500, so we'll have to test for that. Maybe its result will be to force a navigation to the "not found" component. (Why? Think about it...)   
->  
-> The response from a POST or PUT is a JSON object, in this format:  
-> { "message": "Employee abc123def456ghi789 successfully added" }
 
 <br>
 
@@ -332,7 +363,7 @@ After completing this section, your "display item detail" view may look similar 
 
 <br>
 
-##### Preventing console errors during rendering
+##### Preventing console errors during rending
 
 Assuming that you have followed the guidance above, specifically to create a property to hold the team data that comes back from the seb service, you may notice console errors that indicate undefined data, although the data does appear in the user interface. 
 
@@ -773,19 +804,6 @@ Logically, most of the work is the same as in the "add team" task (configure the
 However, before we configure the team's array properties (Employees and Projects), we must empty them. In other words, the NEW selections must replace the old selections. So, just before configuring each array property with the new selections, just clear it out (i.e. set its value to an empty array). 
 
 What should it do after it successfully edits the team? It may make the most sense to navigate to the detail view. There's one difference from the "add team" info above however. We do not have to extract the team identifier from the return result, because we already have that locally in the team object (e.g. `team._id`). So, we have all we need to navigate.
-
-<br>
-
-#### Host deployment
-
-> This section will be completed soon.  
-
-We anticipate that this section will ask you to do these tasks:
-1. Create a new Heroku app
-2. Build your Assignment 5 app for host deployment
-3. Create a server that will deliver the app to the public
-4. Deploy your app to Heroku
-5. Test with a laptop/desktop and a phone (with screen captures)
 
 <br>
 
