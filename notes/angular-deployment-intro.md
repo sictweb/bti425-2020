@@ -5,7 +5,9 @@ layout: default
 
 ## Angular Deployment Introduction
 
-Until now, we've been working with our web applications in a local environment.  We have relied on the frameworks (ie, the integrated "development servers" included in React / Angular) to execute our code on **localhost**.  However, sooner or later we will have to build and publish these applications so that they are available for the public / clients to use. Fortunately, Angular offers An extremely simple "build" process:
+Until now, we've been working with our web applications in a local environment.  We have relied on the frameworks (the integrated "development servers" included in React and Angular) to execute our code on *localhost*.  However, sooner or later we will have to build and publish these applications so that they are available for the public to use. 
+
+Fortunately, Angular offers an extremely simple "build" process.
 
 <br>
 
@@ -22,20 +24,19 @@ ng build
 ```
 
 * Copy everything within the output folder (**dist/*** by default) to a folder on the server.
-If you copy the files into a server sub-folder, append the build flag, --base-href and set the <base href> (in the index.html file) appropriately.
+If you copy the files into a server sub-folder, append the build flag, `--base-href` and set the `<base href...` (in the index.html file) appropriately.
 
+  For example, if the index.html is on the server at `/my/app/index.html`, set the base href to `<base href="/my/app/">`, and the build command is:
 
-  For example, if the index.html is on the server at /my/app/index.html, set the base href to <base href="/my/app/"> like this.
+  ```
+  ng build --base-href=/my/app/
+  ```
 
-```
-ng build --base-href=/my/app/
-```
-
-  You'll see that the <base href> is set properly in the generated dist/index.html.
+  You'll see that the `<base href...` is set properly in the generated dist/index.html.
   
-  If you copy to the server's root directory (*which we will be doing*), omit this step and leave the &lt;base href&gt; alone.
+  If you copy to the server's root directory (*which we will be doing*), omit this step and leave the `<base href...` alone.
   
-  Learn more about the role of &lt;base href&gt; [here](https://angular.io/guide/deployment#base-tag).
+  Learn more about the role of `<base href...` [here](https://angular.io/guide/deployment#base-tag).
 
 * Configure the server to *redirect requests for missing files to **index.html***
 
@@ -43,7 +44,7 @@ ng build --base-href=/my/app/
 
 ### Applying this to our "MEAN" Stack Heroku Deployment
 
-Recall, back in WEB322, we used Node.js with the Express module to create a web server (for a quick refresher, see the ["Getting Started with Heroku Guide"](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/getting-started-with-heroku/)).  In effect, we were able to create an extremely simple web server with the lines:
+Recall, back in BTI325, we used Node.js with the Express module to create a web server (for a quick refresher, see the ["Getting Started with Heroku Guide"](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/getting-started-with-heroku/)).  In effect, we were able to create an extremely simple web server with the following code:
 
 ```js
 var express = require("express");
@@ -108,7 +109,11 @@ However, there is a problem.  What if we try to access one of our Angular routes
 Cannot GET /lizard
 ```
 
-This is because we technically haven't configured a route on our server.js file to respond to a request for /lizard.  We're letting Angular handle this complexity.  To remedy this situation and place the routing **back** in the hands of the Angular router, we must add our familiar 404 middleware solution in our server.js file.  However, instead of sending an **error message** back to the user, we instead **redirect** them to our Angular application start page "index.html".  As you will recall from WEB322, this requires the use of the built-in "path" module:
+This is because we technically haven't configured a route on our server.js file to respond to a request for /lizard.  We're letting Angular handle this complexity.  
+
+To remedy this situation and place the routing **back** in the hands of the Angular router, we must add our familiar 404 middleware solution in our server.js file.  
+
+However, instead of sending an **error message** back to the user, we instead **redirect** them to our Angular application start page "index.html".  As you will recall from BTI325, this requires the use of the built-in "path" module:
 
 ```js
 var express = require("express");
@@ -134,7 +139,7 @@ app.listen(HTTP_PORT, function(){
 
 If we rebuild the server and try again, we will see that the routing does indeed work as expected.  The route is not found in our Express app, so it simply redirects to the Angular app with the route intact.  Even our Angular 404 handler will still work as expected.
 
-From here, we can push our Node/Express server to Heroku, just as we have done in WEB322!
+From here, we can push our Node/Express server to Heroku, just as we have done in BTI325!
 
 <br>
 
@@ -181,5 +186,4 @@ ng build --prod --build-optimizer
 
 See the [CLI Documentation](https://github.com/angular/angular-cli/wiki/build) for details about available build options and what they do.
 
-
-
+<br>
