@@ -7,12 +7,6 @@ layout: default
 
 The purpose or objective of the assignment is to implement interactive forms for an app, and then deploy it to a hosting service.
 
-> This document is being edited.  
-> This notice will be removed when the edits are complete.  
-> Host deployment is the only section that needs editing. 
-
-<br>
-
 Read/skim all of this document before you begin work.
 
 While you are doing the work, if a *specific task* is not clear, or it seems to require an unreasonable amount of time to complete, or it seems to require knowledge way beyond the content we've covered in the course, please don't hesistate to contact your professor. 
@@ -123,7 +117,7 @@ Use the Angular CLI to generate components for each of them now. Remember, use P
 
 Then, as a brief and quick test, add their selectors to the app component's HTML template so that they appear when the app loads. (Obviously, they won't stay there after the test. We just do it now to prove that the components work and they show up in the view.)
 
-At this point in time, it is possible that your work may look like the following. (Ignore the "account-" items.) As always, right-click any image and open it in its own tab/window to view it full-size.
+At this point in time, it is possible that your work may look like the following. (Ignore the "account-" and "team-delete" items.) As always, right-click any image and open it in its own tab/window to view it full-size.
 
 ![TBA](../media/a5/app-comp-with-temp-elements.png)
 
@@ -252,7 +246,7 @@ In the [course notes](https://sictweb.github.io/bti425/notes/week09), the recipe
 > An unsuccessful response returns HTTP 500, so we'll have to test for that. Maybe its result will be to force a navigation to the "not found" component. (Why? Think about it...)   
 >  
 > The response from a POST or PUT is a JSON object, in this format:  
-> { "message": "Employee abc123def456ghi789 successfully added" }
+> { "message": "Employee abc123def456ghi789 added successfully" }
 
 <br>
 
@@ -659,7 +653,7 @@ How will we know if it works? Look at your console. If no error message, it may 
 
 What should it do after it successfully adds a new team? There are several possible actions. One is to navigate to the list-of-teams view. That's easy to implement. Another is to navigate to the team detail view for the just-added team. This action can be done, but it requires more work. 
 
-Let's decide to navigate to the list-of-teams view. Add a function body to the `subscribe()` method to do this, as shown in the following example. 
+Let's decide to navigate to the list-of-teams view. Add a function body to the `subscribe()` method's arrow function to do this, as shown in the following example. 
 
 ```ts
 this.m.teamAdd(this.team).subscribe(res => {
@@ -778,14 +772,28 @@ What should it do after it successfully edits the team? It may make the most sen
 
 #### Host deployment
 
-> This section will be completed soon.  
+The [deployment document](angular-deployment-intro) covers this topic completely. It also takes you back to the [getting started with Heroku notes](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/getting-started-with-heroku/) from the previous course, BTI325. While writing this section of the assignment specifications, your professor followed the instructions, with a successful result. 
 
-We anticipate that this section will ask you to do these tasks:
-1. Create a new Heroku app
-2. Build your Assignment 5 app for host deployment
-3. Create a server that will deliver the app to the public
-4. Deploy your app to Heroku
-5. Test with a laptop/desktop and a phone (with screen captures)
+Here are the distinct instruction steps that were followed. Most are done in the Terminal app:
+1. Create a new folder (e.g. a5server)
+2. In that folder, create a folder named "public"
+3. And, create a file named "server.js"
+4. Build the Assignment 5 app for host deployment
+5. Copy the *contents* of the Assignment 5 "dist" folder to the new "public" folder
+6. Run the "npm init" command
+7. Install Express.js (npm install express)
+8. Run the "git init" command
+9. In VS Code, edit "server.js", paste in the *bottom* version of the server code from the [deployment notes](https://sictweb.github.io/bti425/notes/angular-deployment-intro)
+10. Still in VS Code, in the "source control" tool, enter a commit info message, and then commit
+11. Back in Terminal, login to Heroku (the "heroku login" command)
+12. Run the "heroku create" command
+13. Send your app to Heroku with the "git push heroku master" command
+
+Then open your app in a browser. 
+
+If you make changes to your app's code, commit again (in VS Code) and then "git push..." again.
+
+**Important**: Save a screen shot of your app running on a laptop or deskop computer. Also, save a screen shot of your app running on a smartphone. Copy them into your app's "assets" folder before you submit your work for grading. 
 
 <br>
 
