@@ -1,0 +1,9 @@
+/* Set padding to keep content from hitting the edges */
+.app-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Optional hover pointer change */
+div.radio>label:hover, div.radio>label>input:hover, div.checkbox>label:hover, div.checkbox>label>input:hover {
+  cursor: pointer;
+}
