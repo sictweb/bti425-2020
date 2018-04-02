@@ -50,7 +50,7 @@ It builds upon your experience with one-way read-only data binding (using `{%raw
 
 #### Reactive Forms
 
-This approach features more programming in the conmponent class, where each element of the form is explicitly declared, configured, and managed. 
+This approach features more programming in the component class, where each element of the form is explicitly declared, configured, and managed. 
 
 We will NOT work with Reactive Forms in this course. After understanding and working with Template-driven Forms, you will be able to learn what you need to, if or when you need to, work with Reactive Forms. 
 

@@ -171,7 +171,7 @@ You can do that now, if you wish, by editing each of the routed components (thei
 
 You can do that on demand later on (below), as you code the component. 
 
-At this point in time, it is possible that your work may look like the following. 
+At this point in time, it is possible that your work may look like the following. (Ignore the text about the security-like feature.) 
 
 ![TBA](../media/a5/home-view-v1.png)
 
@@ -179,13 +179,7 @@ At this point in time, it is possible that your work may look like the following
 
 #### Let's prepare to get data involved
 
-In the previous assignments, we worked with in-memory data, and with data from your Teams API.
-
-Here, we will work with both. In addition, the in-memory data will be backed with *local storage*. There are many kinds of local storage available, but we are going to use the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) object that's in every browser, and is a property of the browser's `Window` object. 
-
-We can store key-value pairs in local storage. Let's assume that both will be string type. Can we store objects (e.g. JavaScript objects and arrays)? Yes. We transform the object into JSON when saving/storing. When reading, we transform the string into JSON, which can then become the value of a variable or property. 
-
-While the official documentation ([linked above](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)) is OK, [this article by Craig Buckler](https://www.safaribooksonline.com/blog/2013/10/10/how-to-use-html5-local-storage/) covers all of the functionality we need. Read it, practice (before you need to use it), and then use it.
+As in the previous assignments, we will work with in-memory data, and with data from your Teams API.
 
 <br>
 
@@ -241,6 +235,7 @@ In the [course notes](https://sictweb.github.io/bti425/notes/week09), the recipe
 5. In each component class, import the data manager service, and inject it (and any other services and features you need, e.g. route status) into the constructor. (Similar to what you did in Assignment 3 project #2.)
 
 > Study the "get one" responses from the Teams API.  
+>  
 > All successful responses appear to return a collection, with exactly ONE item in the collection.  
 > Therefore, a "get one employee" return value will be `Observable<Employee[]>`, same as "get all".  
 > An unsuccessful response returns HTTP 500, so we'll have to test for that. Maybe its result will be to force a navigation to the "not found" component. (Why? Think about it...)   
