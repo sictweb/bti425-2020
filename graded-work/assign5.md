@@ -674,6 +674,10 @@ teamAdd(newItem: Team): Observable<any> {
     .pipe(map(wrapper => wrapper.message));
 ```
 
+> Remember...  
+> When you use an observable operator like "map", it must be imported, for example:  
+> `import { map } from 'rxjs/operators'`
+
 Back in the component class, remove the "Team " and " added successfully" substrings, leaving only the team identifier string.
 
 ```ts
