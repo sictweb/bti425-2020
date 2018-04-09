@@ -5,10 +5,7 @@ layout: default
 
 ## BTI425 Week 12 Notes
 
-> This document is being edited.  
-> This notice will be removed when the edits are complete.  
-
-( TBA )
+As we near the end of the course, we will discuss and implement some *security topics* in our apps. 
 
 <br>
 
@@ -16,12 +13,13 @@ layout: default
 
 Bring your Assignment 5 project to the Thursday class session. You will review your work, and then complete and submit a checklist. 
 
-> Notice: Thursday, April 12 is the last day to complete checklists for Assignments 1 through 5. Remember, to receive a grade for an assignment, you must complete and submit the paper checklists that are only available in-class during the Thursday class sessions. 
+> Notice: Next Thursday, April 19, will be the *last day* to complete the checklists for Assignments 1 through 5.  
+> Remember, to receive a grade for an assignment, you must complete and submit the paper checklists that are only available in-class during the Thursday class sessions. 
 
 <br>
 
 **Topics:**
 
-( TBA )
+[An introduction to security topics](security-intro)
 
 <br>
