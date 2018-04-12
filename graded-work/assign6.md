@@ -56,14 +56,14 @@ As you can see, the left side has your Angular apps, which run in a browser on a
 
 #### Before changes
 
-The next diagram has more detail about the middle "Heroku" part. It shows the presence, organization, and relationship of the code assets that make your Teams API work, *before we make any changes*. 
+The next diagram has more detail about the middle "Heroku" part of the diagram above. It shows the presence, organization, and relationship of the code assets that make your Teams API work, *before we make any changes*. 
 
 ![Teams API app](../media/a6/teams-api-before-changes.png)
 
 As you can see, the app - before changes - has three distinct areas:
 1. `server.js`, which is the apps entry point, and listener for requests 
 2. `data-service.js`, which is designed to interact with the database 
-3. Data/schema model classes, which defines the shape of the app's entities
+3. Data/schema model classes, which define the shape of the app's entities
 
 Read/skim the code in `server.js`, and you will see methods like...
 
@@ -91,7 +91,7 @@ There are several things to notice.
 
 First, the `server.js` code box has been enlarged to include "register" (a new account) and "login" methods. It also has new code that has a relationship to a new box of code, Passport.js. Similar to above, the relationship between the server/listener and Passport.js is shown as a short line with solid dots at each logical usage point.
 
-Second, notice `Passport.js`. This code is now brought in to handle authentication and some identity management tasks. 
+Second, notice `Passport.js`. This code is now brought in to handle authentication and some identity management tasks. Also notice its dots-and-line connector, indicating a relationship between some existing methods/functions in the listener with Passport.js code. 
 
 Third, notice a new "U" (for user accounts) data/schema model class. It defines the shape of a user account (i.e. username, password, possibly other claims such as family name, given name, birthdate, etc.). 
 
