@@ -7,6 +7,9 @@ layout: default
 
 For our purposes in this course, the *security topics* will introduce you to the security-related goals, terminology, and techniques for a web app. 
 
+> In a separate document, we will introduce infrastructure-based security topics, such as public key infrastructure and transport layer security.  
+> Those infrastructure-based topics are outside the scope of this document. 
+
 The overall goal is to protect a web app's usage and its data, making the app available for only its intended users. 
 
 > A "web app" is an app that is created with *web technologies*.  
