@@ -217,7 +217,7 @@ onSubmit(): void {
   <label class="control-label" for="teamLead">Team Leader:</label>
   <select name="teamLead" id="teamLead" #teamLead='ngModel' class="form-control" [(ngModel)]='selectedTeamLead' required>
     <option *ngIf='teamLead.invalid && teamLead.pristine' value='' disabled>Select a team leader...</option>
-    <option *ngFor='let e of employees' [value]="e._id">{{ e.LastName }}, {{ e.FirstName }}</option>
+    <option *ngFor='let e of employees' [value]="e._id">{%raw%}{{ e.LastName }}, {{ e.FirstName }}{%endraw%}</option>
   </select>
   <div *ngIf='teamLead.invalid && teamLead.touched' class='alert alert-danger'>
     <div *ngIf='teamLead.errors.required'>Must select a team leader</div>
@@ -236,7 +236,7 @@ onSubmit(): void {
     size="8" required>
     <option *ngIf='teamMembers.invalid && teamMembers.pristine' value='' disabled>Select one or more team members...</option>
     <!-- The ? suppresses error messages -->
-    <option *ngFor='let e of employees' [value]="e._id">{{ e.LastName }}, {{ e.FirstName }} - {{ e.Position?.PositionName }}</option>
+    <option *ngFor='let e of employees' [value]="e._id">{%raw%}{{ e.LastName }}, {{ e.FirstName }} - {{ e.Position?.PositionName }}{%endraw%}</option>
   </select>
   <div *ngIf='teamMembers.invalid && teamMembers.touched' class='alert alert-danger'>
     <div *ngIf='teamMembers.errors.required'>Must select one or more team members</div>
