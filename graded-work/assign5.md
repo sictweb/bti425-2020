@@ -401,7 +401,7 @@ It needs at least these data properties:
 
 * A property of type Team, which starts empty, but gets filled in (by us) with the data entered by the user (this is the object that gets sent to the web service)
 
-* A property for the selected "team lead"; its data type will be string (because that's the `value` in the form element, in other words, a string with uniquely identifies the rendered item)
+* A property for the selected "team lead"; its data type will be string (because that's the `value` in the form element, in other words, a string which uniquely identifies the rendered item)
 
 * A property to hold an array of all Employee objects
 
