@@ -44,9 +44,8 @@ That will be your important task for today, in this first class session. If you 
 ##### If your system does not yet have the Node.js app dev ecosystem
 
 1. Install Node.js (which also installs npm)
-2. Install Express.js
 3. Install MongoDB
-4. Install Robo 3T
+5. Install Robo 3T
 
 ##### If your system does not have the developer tools
 
@@ -69,7 +68,8 @@ That will be your important task for today, in this first class session. If you 
 ##### Configure GitHub Desktop
 
 (If it was just installed.)  
-1. ( enter/configure creds )
+1. Run GitHub Desktop, and open Preferences (Cmd+,) 
+2. Sign in with your GitHub credentials
 
 ##### If your system does not have the React tooling
 
@@ -90,16 +90,17 @@ That will be your important task for today, in this first class session. If you 
 1. Open Terminal; navigate to the desired location; create a folder to hold the server app's files; then in that folder...
 2. `touch server.js` to create a new empty file
 3. `npm init` which creates a `package.json` file 
-4. `npm express` to install Express.js
-5. `git init` to initialize git
-6. `code .` to begin editing the app in VS Code
-7. Enter simple program code into `server.js` 
-8. Open the VS Code left sidebar Source Control tool; type a brief message that describes the editing actions; press Cmd+Enter to commit
-9. In terminal, run the app locally, `node server.js`
-10. Stop the app if you have to, then `heroku login`
-11. Then, `heroku create`, which returns (displays) the app's URL
-12. Then, `git push heroku master` 
-13. In a browser, visit the URL (from #10 above) 
+4. `npm install express` to install Express.js
+5. `npm install mongoose` to install Mongoose
+6. `git init` to initialize git
+7. `code .` to begin editing the app in VS Code
+8. Enter simple program code into `server.js` 
+9. Open the VS Code left sidebar Source Control tool; type a brief message that describes the editing actions; press Cmd+Enter to commit
+10. In terminal, run the app locally, `node server.js`
+11. Stop the app if you have to, then `heroku login`
+12. Then, `heroku create`, which returns (displays) the app's URL
+13. Then, `git push heroku master` 
+14. In a browser, visit the URL (from #10 above) 
 
 ##### Updating your app locally and at Heroku
 
@@ -131,7 +132,7 @@ git push heroku master
 4. Run the command `show dbs` just to prove it's running
 5. Close the new Terminal window, and `Ctrl+C` to stop the database engine that's running
 
-##### Configuring your Heroku account
+##### Configuring your mLab account
 
 1. Create an account
 2. Login, and then view and get familiar with the "dashboard" that shows an empty list of "MongoDB Deployments" and "Environments"
@@ -147,7 +148,7 @@ In mLab, a "deployment" is a MongoDB that is listening for requests. Your localh
 
 You can use Robo 3T to view and manage your local *and* mLab-hosted databases. 
 
-##### Sending Teams API data to a new mLab deployment
+##### Sending the Teams API data to a new mLab deployment
 
 1. Locate the folder in your locally-saved Teams API project that holds the data (which is "API-data-restore")
 2. Locate the shell version of the connection string to the new mLab deployment
