@@ -83,7 +83,7 @@ The shape of the entities are defined in the data/schema classes (identified in 
 
 #### After changes
 
-The next diagram shows the new security code assets and their relationships. The diagram is similar to the "before changes" (above), but with more boxes-and-lines.
+The next diagram shows the new security code assets and their relationships. The diagram is similar to the "before changes" diagram (above), but with more boxes-and-lines.
 
 ![Teams API app](../media/a6/teams-api-after-security.png)
 
@@ -109,6 +109,15 @@ As first described in the previous assignment specifications, the how-to instruc
 
 > The following content will be edited.  
 > The goal is to complete editing by the end of Friday, April 13.  
+
+<br>
+
+Locate your Teams API app source code project folder  
+Ensure that it already works on Heroku + mLab  
+If it does not, contact your professor  
+FYI, the [Teams API setup](../notes/teams-api-setup) document has been updated with summarized point-form how-to instructions
+
+<br>
 
 Here's a brief list of specifications that you must implement:
 
