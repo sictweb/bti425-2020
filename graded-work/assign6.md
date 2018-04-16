@@ -107,36 +107,27 @@ As first described in the previous assignment specifications, the how-to instruc
 
 ### Specifications overview and work plan
 
-> The following content will be edited.  
-> The goal is to complete editing by the end of Friday, April 13.  
+In our context, we must:
+1. Add security features to the Teams API, and
+2. Add security features to an Angular app
 
-<br>
+The first point is fully-covered in a separate document that takes you through the tasks to [add security features to the Teams API](security-add-to-server). 
 
-Locate your Teams API app source code project folder  
-Ensure that it already works on Heroku + mLab  
-If it does not, contact your professor  
-FYI, the [Teams API setup](../notes/teams-api-setup) document has been updated with summarized point-form how-to instructions
+[Another document](security-add-to-app) focuses on the second point, to add the essential security features to an Angular app. 
 
-<br>
+To preview its functionality, it will do a few tasks:
 
-Here's a brief list of specifications that you must implement:
+* Implement a "login" user interface
 
-* TBA
-* TBA
+* After successful login, save the token in the app's memory
 
-Make no changes to the existing database on mLab. 
+* Implement the code to handle the token as part of a request to a web service
 
-Add a new database on mLab to hold the user accounts.
+* Implement the code to protect a route (in the Angular app)
 
-Modify the Teams API web service (`server.js`) to add security features (identity management, and authentication). 
+* In a view, display the standard "employees" collection (protected with a "route guard")
 
-Use Passport.js to help with these tasks (and then issue and validate tokens). 
-
-Create/configure an Angular app to use the security-aware Teams API web service. 
-
-Learn and configure route guard and HTTP interceptor class. 
-
-( more to come )
+* In a separate view, display the "employees raw" collection (which is not protected)
 
 More details are provided below, in the section titled **"Doing the work"**.
 
@@ -146,52 +137,86 @@ During the Thursday classes/sessions, your professor will help you *get started*
 
 ### Getting started
 
-Getting started includes a number of tasks:
-* Locating your Teams API code base and preparing it for modification 
-* Creating a new mLab deployment (i.e. a database) 
-* TBA
+As noted above, we must:
+1. Add security features to the Teams API, and
+2. Add security features to an Angular app
+
+The first point is fully-covered in a separate document that takes you through the tasks to [add security features to the Teams API](security-add-to-server). Complete that now.
+
+Welcome back.
+
+The [other document](security-add-to-app) focuses on the second point, to add the essential security features to an Angular app. 
 
 <br>
 
-#### Locating your Teams API code base
+#### Angular app (download, or create)
 
-( more to come )
+For this assignment, you can either use a professor-provided example app, or create a new app from scratch. Your choice. 
 
-<br>
+If you choose to use a professor-provided example app, then look for it in the `Templates_and_solutions` folder of the code repository. The "assignment6-base" folder holds the example app. Incidentally, the example app is a sample solution to the previous Assignment 5. 
 
-#### Creating a new mLab deployment
+After downloading the app, open a Terminal window, navigate to the project folder, and run the `npm install` command. 
 
-( more to come )
-
-<br>
-
-#### Creating an Angular app
-
-Open a terminal window, and navigate to a suitable file system location. We will use the Angular CLI program to create the folder and its generated code for the project:
+If you choose to create a new app from scratch, open a terminal window, and navigate to a suitable file system location. Use the Angular CLI program to create the folder and its generated code for the project:
 
 ```
 ng new assignment6 --routing -st -sg
 ```
 
-After the app generation task completes, verify that the app runs. Then prepare the rest of your dev environment:
+After either task completes, verify that the app runs. 
+
+Then, prepare the rest of your dev environment:
 * Probably use another terminal window (so you can run code-generation commands)
 * Probably use one or two Finder windows/tabs (for graphical navigation and Quick Look viewing)
 * Code editor 
 * Browser, and browser developer tools (at a minimum, you'll probably be using the element inspector, and the JavaScript console)
 * Reference notes, including the relevant course notes (current and past), and authoritative resources (e.g. MDN, Angular documentation, etc.)
 
-Include the Bootstrap CSS library in your app. 
+If necessary, include the Bootstrap CSS library in your app. 
 
 Add `<meta>` tags for author and description, similar to what you've done in previous assignments. 
-
-> We have created a document that suggests [how to create the containment structure](https://github.com/sictweb/bti425/blob/master/Templates_and_solutions/containment-nav-content-footer.md) for an app that has nav, content, and footer areas. Just like this app.  
-> You may find it useful for this assignment, and for future work (as is or adapted).  
 
 <br>
 
 ### Doing the work
 
-( more to come )
+In the overview above, a list of tasks was presented:
+* Implement a "login" user interface, and save a token
+* Implement the code to handle the token 
+* In a view, display the standard "employees" collection (protected)
+* In a separate view, display the "employees raw" collection (not protected)
+
+<br>
+
+#### Implement a "login" user interface, and save a token
+
+> More details will be filled in below.  
+> This will be done as soon as possible.  
+
+This app will use the security features in the Teams API.  
+We add a Login component.  
+Which needs data manager service code to call the web service.  
+And code to save the token that was delivered in the response.  
+
+<br>
+
+#### Implement the code to handle the token 
+
+Add "HTTP Interceptor" code to add a saved token to all requests.  
+
+<br>
+
+#### In a view, display the standard "employees" collection (protected)
+
+We add an Employees component.  
+Its route includes a "route guard".  
+The effect is that the task is protected locally AND at the web service. 
+
+<br>
+
+#### In a separate view, display the "employees raw" collection (not protected)
+
+We add an EmployeesRaw component. 
 
 <br>
 
