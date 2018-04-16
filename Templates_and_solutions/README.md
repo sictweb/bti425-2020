@@ -31,3 +31,11 @@ Includes index.html, main.js, and main.css source code files.
 If provided, this folder has example solutions for the programming assignments.
 
 <br>
+
+### assignment6-base
+
+This is an example solution for Assignment 5. 
+
+It can be used as a base for your work on Assignment 6.
+
+<br>
