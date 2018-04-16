@@ -153,7 +153,7 @@ The [other document](security-add-to-app) focuses on the second point, to add th
 
 For this assignment, you can either use a professor-provided example app, or create a new app from scratch. Your choice. 
 
-If you choose to use a professor-provided example app, then look for it in the `Templates_and_solutions` folder of the code repository. The "assignment6-base" folder holds the example app. Incidentally, the example app is a sample solution to the previous Assignment 5. 
+If you choose to use a professor-provided example app, then look for it in the `Templates_and_solutions` folder of the code repository. The "assignment6-base" zip file holds the example app. Incidentally, the example app is a sample solution to the previous Assignment 5. 
 
 After downloading the app, open a Terminal window, navigate to the project folder, and run the `npm install` command. 
 

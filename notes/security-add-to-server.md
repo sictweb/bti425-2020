@@ -117,7 +117,7 @@ Next, we will integrate these new parts into `server.js`, add some token-validat
 
 ### Edit `server.js` 
 
-There are several changes to be made. At certain points, there will be an opportunity to test. You can run the code locally if you wish. 
+There are several changes to be made. At certain points, there will be an opportunity to test. You can run the code locally if you wish (run `node server.js`, and test with a browser, and attempt to get/fetch various resources).
 
 <br>
 
