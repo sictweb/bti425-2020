@@ -19,9 +19,13 @@ The following is a simplified box-and-line drawing of the new and desired Teams 
 
 There are several things to notice. 
 
-First, the `server.js` code box has been enlarged to include "register" (a new account) and "login" methods. It also has new code that has a relationship to a new box of code, Passport.js. Similar to above, the relationship between the server/listener and Passport.js is shown as a short line with solid dots at each logical usage point.
+First, the `server.js` code box includes "register" (a new account) and "login" methods. It also has new code that has a relationship to a new box of code, Passport.js. Similar to above, the relationship between the server/listener and Passport.js is shown as a short line with solid dots at each logical usage point.
 
 Second, notice `Passport.js`. This code is now brought in to handle authentication and some identity management tasks. Also notice its dots-and-line connector, indicating a relationship between some existing methods/functions in the listener with Passport.js code. 
+
+> [Passport.js](https://www.passportjs.org/docs) is authentication middleware for Node.  
+> It is designed to authenticate requests.  
+> It works with other code as part of a larger security system.  
 
 Third, notice a new "U" (for user accounts) data/schema model class. It defines the shape of a user account (i.e. username, password, possibly other claims such as family name, given name, birthdate, etc.). 
 
@@ -79,7 +83,7 @@ Download it, and add it to your Teams API project.
 
 ### Write a user account schema 
 
-It should be obvious that the project needs a data/schema class that defines the shape of a user account. Using the existing code in the "models" folder as a guide, create a `user.js` source code file, and write code for a user. We want a few properties, and we want the user name to be unique. Here's some properties to get your design started:
+It should be obvious that the project needs a data/schema class that defines the shape of a user account. Using the existing code in the "models" folder as a guide, create a `user.js` source code file, and write code for a user account. We want a few properties, and we want the user name to be unique. Here's some properties to get your design started:
 
 * user name - unique (e.g. an email address probably)
 
@@ -141,9 +145,18 @@ At this point, we have defined and connected the user account storage and its ha
 
 Now, we will add the code that configures and initializes authentication. We are using the widely-used and well-respected Passport.js system. 
 
+First, add the Passport.js-related code to the project:
+
+```
+npm install passport
+npm install passport-jwt
+```
+
 Before (above) the code that declares the `app` constant, we must add the following code block:
 
 ![AuthN init and config](../media/sec-svr-code04.png)
+
+Notice the "JWT" initialism, which means "[JSON Web Tokens](https://jwt.io)". While we could use any packaging system for our app's tokens, we will suggest using JWT. We like its pitch as an open and standard way to securely represent claims. The code above configures and assumes JWT in our app. 
 
 Next, just after the code that declares the `app` constant and its two `use` method calls (use bodyParser and cors), add another call to use Passport.js:
 
@@ -161,7 +174,7 @@ At this point in time, if your code builds/compiles cleanly, and runs locally, t
 
 Next, test your work. How? Use [Postman](https://www.getpostman.com/). You probably used this app earlier in the term, or in a previous course. It enables you to compose HTTP requests in a nice-to-use graphical app. 
 
-Send a `GET` request to your Teams API "employees" collection. We just want to see that it still returns data correctly. 
+Send a `GET` request to your Teams API "employees" collection. We just want to confirm that it still returns data correctly. 
 
 <br>
 
