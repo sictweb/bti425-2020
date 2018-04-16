@@ -103,44 +103,96 @@ When you're done, it may look like the following example:
 
 At this point in time, in the context of the [security topics document](security-intro) we have done the following:
 
-( more to come )
+* Partially-implemented the *identity management* part. We have a user account schema, and a user accounts storage location on mLab. Some of the remaining *identity management* code is in the professor-provided `data-service-auth.js` code, and more will be added to `server.js`, described below. 
+
+* Partially-implemented the *authentication* part. We have added the `data-service-auth.js` source code file to the project, which includes the "login" code. 
+
+Next, we will integrate these new parts into `server.js`, add some token-validation *authentication* code, and add some *authorization* code. 
 
 <br>
 
 ### Edit `server.js` 
 
-( several changes )  
+There are several changes to be made. At certain points, there will be an opportunity to test. You can run the code locally if you wish. 
 
 <br>
 
-### Testing
+#### User account storage and handling code
 
-Use Postman.
+Locate the existing connection string. Below, add a new connection string to the new mLab deployment that will hold the user accounts database:
 
-> More to come.  
-> These images were quickly pasted, and will be explained.  
+![Connection string](../media/sec-svr-code01.png)
+
+Obviously, replace the text with the values you noted or saved above when you created the deployment. 
+
+Next, locate the existing declaration of the `dataService` constant. Below, add another declaration to the professor-supplied code module:
+
+![Data service for auth](../media/sec-svr-code02.png)
+
+Next, locate the existing declaration of the `data` constant that initializes the Mongoose connector to the Teams API data. Below, add another declaration to the user accounts data:
+
+![Mongoose init](../media/sec-svr-code03.png)
+
+At this point, we have defined and connected the user account storage and its handler. 
 
 <br>
 
-Register a new user account, for the "user account manager", headers
+#### Authentication and user account creation code
+
+Now, we will add the code that configures and initializes authentication. We are using the widely-used and well-respected Passport.js system. 
+
+Before (above) the code that declares the `app` constant, we must add the following code block:
+
+![AuthN init and config](../media/sec-svr-code04.png)
+
+Next, just after the code that declares the `app` constant and its two `use` method calls (use bodyParser and cors), add another call to use Passport.js:
+
+![AuthN use](../media/sec-svr-code05.png)
+
+Finally, add two new route handlers. One will listen for "register" (you know what that does), and the other will listen for "login" (and you know what that does too):
+
+![New routes](../media/sec-svr-code06.png)
+
+<br>
+
+### Checkpoint to test your work
+
+At this point in time, if your code builds/compiles cleanly, and runs locally, then push your updated project to Heroku. 
+
+Next, test your work. How? Use [Postman](https://www.getpostman.com/). You probably used this app earlier in the term, or in a previous course. It enables you to compose HTTP requests in a nice-to-use graphical app. 
+
+Send a `GET` request to your Teams API "employees" collection. We just want to see that it still returns data correctly. 
+
+<br>
+
+#### Register new user accounts
+
+Assuming that it does return data, we can test the "register" and "login" listeners. There are no existing user accounts, so we must create a few. 
+
+First, start the process to register a new user account, for the "user account manager". There are some very important request configuration items to note:
+* The request method will be `POST` 
+* The URL will be the `/register` route on your own Teams API
+* Add a new header, `Content-Type` is `application/json` 
 
 ![Register](../media/sec-pm-req-register-headers.png)
 
 <br>
 
-Body
+Next, compose the request body. We MUST send a well-formed object that matches the user account schema. However, study line 30 of the `data-service-auth.js` code module. It compares the supplied "password" with the supplied "password2". Hmmm, "password2" is *not* in the user account schema. 
+
+That is OK. It is simply a familiar "confirm password" field that is used only during the initial validation task. We obviously do not store/save "password2". However, we MUST include it as a property in our request body:
 
 ![Register](../media/sec-pm-req-register-body.png)
 
 <br>
 
-Response
+After sending the request, if successful, the response status will be "200 OK", and it will return a message stating that the user account was successfully registered. 
 
 ![Response](../media/sec-pm-res-register.png)
 
 <br>
 
-Another register
+Do it again, another few times. Use your own name, and that of a friend or family member. For example: 
 
 ![Register](../media/sec-pm-req-register-peter.png)
 
@@ -150,23 +202,46 @@ Another register
 
 <br>
 
-Login a user
+#### Login a user
+
+Now that you have user accounts, login with one or more of them. There are some very important request configuration items to note:
+* The request method will be `POST` 
+* The URL will be the `/login` route on your own Teams API
+* Add a new header, `Content-Type` is `application/json` 
+
+Next, compose the request body. We MUST send a well-formed object that has `userName` and `password` properties. Study the `checkUser()` function that begins on line 70 of the `data-service-auth.js` code module. 
+
+After sending the request, if successful, the response status will be "200 OK", and it will return a message stating that the login was successful. *And, it returns a token.* 
 
 ![Login](../media/sec-pm-req-login-arash.png)
 
 <br>
 
-Decode the token, initial paste 
+#### What is in the token?
+
+What is in the token? Well, copy it, and use the [JWT.io](https://jwt.io) service to decode it. 
+
+This is a two-step process. First, paste the token text into the left-side area. It will decode what it can, and show the results on the right side. Initially, it will show an error, "Invalid Signature". This is expected, because it does not yet know the secret key (on or near line 36 of `server.js`). 
 
 ![Decode](../media/sec-jwt-token-val-1.png)
 
 <br>
 
-After supplying the secret
+After pasting the secret key in the right-side textbox (in the "VERIFY SIGNATURE" area), it will be happier, and display a "Signature Verified" message. 
 
 ![Decode](../media/sec-jwt-token-val-2.png)
 
 <br>
+
+
+
+
+
+
+
+### Checkpoint to test your work
+
+At this point in time, if your code builds/compiles cleanly, and runs locally, then push your updated project to Heroku. 
 
 Requesting `/employees` without a token
 
