@@ -63,37 +63,64 @@ Assuming the task above was successful, we can continue with this task.
 
 As noted above, we want to create a separate database to hold the user accounts. Therefore, we must create another mLab deployment. If you want to review a summarized reminder of the overall procedure, [read this section](https://sictweb.github.io/bti425/notes/teams-api-setup#working-with-mlab) of the Teams API Setup document. 
 
-Save (and note) your credentials, and the MongoDB connection string. We will need that soon. 
+Save (and note) your credentials, and the MongoDB connection string. We will need these items soon. 
 
 <br>
 
 ### Add a teacher-provided code module
 
+In the diagram above, there is a `data-service-auth.js` box. Your professors have created that code module, and supplied it in the [security-topics](https://github.com/sictweb/bti425/tree/master/Templates_and_solutions/security-topics) folder of the code repository. 
+
+Download it, and add it to your Teams API project. 
+
+> Note that your project will not build/compile cleanly without errors, because the new code module references a user account schema that does not yet exist. You will code the schema in the next task. 
+
 <br>
 
 ### Write a user account schema 
+
+It should be obvious that the project needs a data/schema class that defines the shape of a user account. Using the existing code in the "models" folder as a guide, create a `user.js` source code file, and write code for a user. We want a few properties, and we want the user name to be unique. Here's some properties to get your design started:
+
+* user name - unique (e.g. an email address probably)
+
+* password
+
+* full name (e.g. Firstname Lastname) 
+
+* role (e.g a role claim, like "user account manager" or "student")
+
+For info and guidance, consult the Mongoose schema documentation, and the [schema types](http://mongoosejs.com/docs/schematypes.html#schematype-options) document.
+
+When you're done, it may look like the following example:
+
+![User account schema](../media/sec-svr-user-schema.png)
+
+> Note that your project will now probably build/compile cleanly without errors, because the new code module can now reference a user account schema.
+
+<br>
+
+**Checkpoint**
+
+At this point in time, in the context of the [security topics document](security-intro) we have done the following:
+
+( more to come )
 
 <br>
 
 ### Edit `server.js` 
 
-Big picture:
-* Prep the Heroku and mLab deployments
-* Add in the auth code
-* Add a user account schema
-* Edit server.js
+( several changes )  
 
-Locate your Teams API code base  
-Make a small change to the code base, and push it  
-Create a new mLab deployment  
-User account schema, [how-to link](http://mongoosejs.com/docs/schematypes.html#schematype-options)  
-
-
+<br>
 
 ### Testing
 
-Postman
+Use Postman.
 
+> More to come.  
+> These images were quickly pasted, and will be explained.  
+
+<br>
 
 Register a new user account, for the "user account manager", headers
 
