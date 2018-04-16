@@ -233,30 +233,58 @@ After pasting the secret key in the right-side textbox (in the "VERIFY SIGNATURE
 
 <br>
 
+### Edit `server.js`, continued...
 
+At this point, the *identity management* and the *authentication* parts have been configured and tested. 
 
+For the authentication part, only the *initial login and deliver a token* functionality has been tested. Let's add the *token validation* functionality now.
 
+While we could protect all of the routes, let's just protect one route for now, the `/employees` route. (The protection process is the same for ALL routes, so if you want to protect more, it's easy to do - just copy-paste some code.) 
 
+<br>
 
+#### Add token-validation functionality
+
+Locate the `app.get('/employees'...` function in `server.js`. 
+
+We add the functionality by *adding another argument to the function signature*. Study this before-and-after code snippet:
+
+![Token validation](../media/sec-svr-code07.png)
+
+If the request includes a valid token, the request processing will continue (and in this case, it will return an employees collection). If not valid, then HTTP 401 will be returned to the requestor (and this is done by the Passport.js code). 
+
+<br>
 
 ### Checkpoint to test your work
 
-At this point in time, if your code builds/compiles cleanly, and runs locally, then push your updated project to Heroku. 
+At this point in time, if your code builds/compiles cleanly, and runs locally, then push your updated project to Heroku again. 
 
-Requesting `/employees` without a token
+Then, use Postman again. Send another `GET` request for the `/employees` resource. This time, the response should be HTTP 401 Unauthorized, because we have not sent a token. 
 
 ![Employees](../media/sec-pm-req-emp-token-no.png)
 
 <br>
 
-Configuring the token in the authorization header
+Now, add a token to the request. That is done by adding an `Authorization` header. Very important, the *value* must be "JWT", a space, and the token text. 
 
 ![Employees](../media/sec-pm-req-emp-token-add-to-headers.png)
 
 <br>
 
-Requesting `/employees` WITH a token
+This time, the request should complete successfully. 
 
 ![Employees](../media/sec-pm-req-emp-token-yes.png)
+
+<br>
+
+### In summary
+
+In this document, you learned how to configure a security system for an existing web service. 
+
+We added *identity management* and *authentication* features to the app, by adding, coding, and configuring a number of code assets. 
+
+Your work was tested with the Postman app, and you learned how to include a token with a request. 
+
+In a separate document, you will learn how to code an Angular app that uses this now-secure Teams API. 
 
 <br>
