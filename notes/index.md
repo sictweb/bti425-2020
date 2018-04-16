@@ -14,8 +14,8 @@ New notes are at the top.
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
 **Week 14**<br>&bull; Tue Apr 24 | End of academic term<br>There is <b>no</b> class on Tue Apr 24 | **[Assignment 6](../graded-work/assign6)** due Apr 22, 10% | 
-**Week 13**<br>&bull; Tue Apr 17<br>&bull; Thu Apr 19 | App building topics | Test 6 on Apr 17, 10% | 
-**[Week 12](week12)**<br>&bull; Tue Apr 10<br>&bull; Thu Apr 12 | App building topics | **[Assignment 5](../graded-work/assign5)** due Apr 8, 10% | 
+**[Week 13](week13)**<br>&bull; Tue Apr 17<br>&bull; Thu Apr 19 | App building topics<br>(security topics) | Test 6 on Apr 17, 10% | 
+**[Week 12](week12)**<br>&bull; Tue Apr 10<br>&bull; Thu Apr 12 | App building topics<br>(security topics) | **[Assignment 5](../graded-work/assign5)** due Apr 8, 10% | 
 **[Week 11](week11)**<br>&bull; Tue Apr 3<br>&bull; Thu Apr 5 | App building topics | Test 5 on Apr 3, 10% | 
 **[Week 10](week10)**<br>&bull; Wed Mar 28 <br>(special day)<br>&bull; Thu Mar 29 | Angular forms | **[Assignment 4](../graded-work/assign4)** due Mar 25, 10% | 
 **[Week 9](week09)**<br>&bull; Tue Mar 20<br>&bull; Thu Mar 22 | Angular services | Test 4 on Mar 20, 10% | 
