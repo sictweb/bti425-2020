@@ -7,11 +7,6 @@ layout: default
 
 The purpose or objective of the assignment is to add security features to an Angular app and your Teams API.
 
-> This document is being edited.  
-> This notice will be removed when the edits are complete.  
-
-<br>
-
 Read/skim all of this document before you begin work.
 
 While you are doing the work, if a *specific task* is not clear, or it seems to require an unreasonable amount of time to complete, or it seems to require knowledge way beyond the content we've covered in the course, please don't hesistate to contact your professor. 
@@ -145,13 +140,17 @@ The first point is fully-covered in a separate document that takes you through t
 
 Welcome back.
 
-The [other document](security-add-to-app) focuses on the second point, to add the essential security features to an Angular app. 
+The [other document](security-add-to-app) focuses on the second point, to add the essential security features to an Angular app. Complete that now. 
+
+Welcome back. 
+
+We're done.
 
 <br>
 
-#### Angular app (download, or create)
+#### More info, Angular app (download, or create)
 
-For this assignment, you can either use a professor-provided example app, or create a new app from scratch. Your choice. 
+For this assignment, you can either use a professor-provided example app, or create a new app from scratch. Your choice. It may be easier to use the professor-provided app. 
 
 If you choose to use a professor-provided example app, then look for it in the `Templates_and_solutions` folder of the code repository. The "assignment6-base" zip file holds the example app. Incidentally, the example app is a sample solution to the previous Assignment 5. 
 
@@ -180,43 +179,7 @@ Add `<meta>` tags for author and description, similar to what you've done in pre
 
 ### Doing the work
 
-In the overview above, a list of tasks was presented:
-* Implement a "login" user interface, and save a token
-* Implement the code to handle the token 
-* In a view, display the standard "employees" collection (protected)
-* In a separate view, display the "employees raw" collection (not protected)
-
-<br>
-
-#### Implement a "login" user interface, and save a token
-
-> More details will be filled in below.  
-> This will be done as soon as possible.  
-
-This app will use the security features in the Teams API.  
-We add a Login component.  
-Which needs data manager service code to call the web service.  
-And code to save the token that was delivered in the response.  
-
-<br>
-
-#### Implement the code to handle the token 
-
-Add "HTTP Interceptor" code to add a saved token to all requests.  
-
-<br>
-
-#### In a view, display the standard "employees" collection (protected)
-
-We add an Employees component.  
-Its route includes a "route guard".  
-The effect is that the task is protected locally AND at the web service. 
-
-<br>
-
-#### In a separate view, display the "employees raw" collection (not protected)
-
-We add an EmployeesRaw component. 
+As noted above, the [add security to an app document](security-add-to-app) focuses on adding the essential security features to an Angular app. Use that for guidance.
 
 <br>
 

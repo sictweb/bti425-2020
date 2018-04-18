@@ -9,6 +9,8 @@ This document focuses on the work needed to add security features to an Angular 
 
 In the sections below, we will modify a sample solution for Assignment 5. The individual tasks can be done to any app. Some of the code can be copy/pasted, sometimes a whole file (or component file collection), and sometimes smaller amounts of code. 
 
+<br>
+
 ### Login task visualization
 
 The following visualization helps explain the login task:
