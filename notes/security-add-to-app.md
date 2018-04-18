@@ -18,20 +18,31 @@ In the sections below, we will modify a sample solution for Assignment 5. The in
 
 #### Login task visualization
 
-( more to come )
+The following visualization helps explain the login task:
 
-send creds to Teams API /login resource  
-if successful, save token to local storage  
+![Visualization - login](../media/sec-app-visualize-login.png)
+
+Here's the sequence:
+* Credentials are entered.  
+* The login component calls a method in the auth service.  
+* The auth service sends a POST request, with the credentials, to the Teams API.
+* If successful, a token response is delivered to the auth service, and then through to the login component. 
+* The token is saved to the browser's local storage.
+* A redirect happens (to somewhere). 
 
 <br>
 
 #### Request-handling visualization
 
-( more to come )
+The following visualization helps explain the request task:
 
-now different  
-guard involved  
-or token attached  
+![Visualization - request](../media/sec-app-visualize-request.png)
+
+Here's the sequence:
+* A component calls a method in the data manager service (it wants some data).
+* Assuming that it passes the guard, the request is allowed to go to the data manager service. 
+* The data manager service sends a request to the web service (its coding and approach does not change).
+* The HTTP Interceptor intercepts the request, fetches the token from the browser's local storage, and adds it to an "Authorization" header before passing on the request 
 
 <br>
 
