@@ -5,18 +5,11 @@ layout: default
 
 ## Add security features to an Angular app
 
-> This document is being edited.  
-> This notice will be removed when the edits are complete.  
-
-<br>
-
-### Overview of tasks
-
 This document focuses on the work needed to add security features to an Angular app. 
 
 In the sections below, we will modify a sample solution for Assignment 5. The individual tasks can be done to any app. Some of the code can be copy/pasted, sometimes a whole file (or component file collection), and sometimes smaller amounts of code. 
 
-#### Login task visualization
+### Login task visualization
 
 The following visualization helps explain the login task:
 
@@ -32,7 +25,7 @@ Here's the sequence:
 
 <br>
 
-#### Request-handling visualization
+### Request-handling visualization
 
 The following visualization helps explain the request task:
 
@@ -46,7 +39,7 @@ Here's the sequence:
 
 <br>
 
-#### Task preview
+### Task preview
 
 Here's a preview of the tasks to be done:
 1. Add the token-handling library and professor-provided code
@@ -57,7 +50,7 @@ Here's a preview of the tasks to be done:
 
 <br>
 
-### Getting started
+#### Getting started
 
 Fetch the "assignment6base.zip" from the [code repository](https://github.com/sictweb/bti425/tree/master/Templates_and_solutions). It is a sample solution for Assignment 5. Reminder, run `npm i` to install the packages it needs to run. 
 
