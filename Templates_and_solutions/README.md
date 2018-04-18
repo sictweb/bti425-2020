@@ -39,3 +39,12 @@ This is an example solution for Assignment 5.
 It can be used as a base for your work on Assignment 6.
 
 <br>
+
+### angularappsecuritycode
+
+Code that you can use in Assignment 6.
+
+Includes components for login and viewing a token.  
+Also includes essential services.  
+
+<br>
