@@ -61,7 +61,7 @@ As a second-year student, should you write your own identity management app? No.
 
 #### 2. Authentication
 
-Authentication is the process of presenting and validating credentials. There are two process workflows. One is followed when a user has not yet autheticated, and the other is followed when a user has been recently authenticated, and requests another resource. 
+Authentication is the process of presenting and validating credentials. There are two process workflows. One is followed when a user has not yet authenticated, and the other is followed when a user has been recently authenticated, and requests another resource. 
 
 <br>
 

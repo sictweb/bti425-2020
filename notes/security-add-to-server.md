@@ -77,7 +77,8 @@ In the diagram above, there is a `data-service-auth.js` box. Your professors hav
 
 Download it, and add it to your Teams API project. 
 
-> Note that your project will not build/compile cleanly without errors, because the new code module references a user account schema that does not yet exist. You will code the schema in the next task. 
+> Note that your project will not build/compile cleanly without errors, because the new code module references a user account schema that does not yet exist. You will code the schema in the next task.  
+> Yes, you must `npm install bcryptjs --save`, because we depend upon [that package](https://www.npmjs.com/package/bcryptjs). 
 
 <br>
 
