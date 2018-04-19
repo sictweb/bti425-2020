@@ -106,9 +106,9 @@ In our context, we must:
 1. Add security features to the Teams API, and
 2. Add security features to an Angular app
 
-The first point is fully-covered in a separate document that takes you through the tasks to [add security features to the Teams API](security-add-to-server). 
+The first point is fully-covered in a separate document that takes you through the tasks to [add security features to the Teams API](../notes/security-add-to-server). 
 
-[Another document](security-add-to-app) focuses on the second point, to add the essential security features to an Angular app. 
+[Another document](../notes/security-add-to-app) focuses on the second point, to add the essential security features to an Angular app. 
 
 To preview its functionality, it will do a few tasks:
 
@@ -136,11 +136,11 @@ As noted above, we must:
 1. Add security features to the Teams API, and
 2. Add security features to an Angular app
 
-The first point is fully-covered in a separate document that takes you through the tasks to [add security features to the Teams API](security-add-to-server). Complete that now.
+The first point is fully-covered in a separate document that takes you through the tasks to [add security features to the Teams API](../notes/security-add-to-server). Complete that now.
 
 Welcome back.
 
-The [other document](security-add-to-app) focuses on the second point, to add the essential security features to an Angular app. Complete that now. 
+The [other document](../notes/security-add-to-app) focuses on the second point, to add the essential security features to an Angular app. Complete that now. 
 
 Welcome back. 
 
@@ -179,7 +179,7 @@ Add `<meta>` tags for author and description, similar to what you've done in pre
 
 ### Doing the work
 
-As noted above, the [add security to an app document](security-add-to-app) focuses on adding the essential security features to an Angular app. Use that for guidance.
+As noted above, the [add security to an app document](../notes/security-add-to-app) focuses on adding the essential security features to an Angular app. Use that for guidance.
 
 <br>
 

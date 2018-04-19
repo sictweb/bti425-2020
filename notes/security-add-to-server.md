@@ -151,6 +151,7 @@ First, add the Passport.js-related code to the project:
 ```
 npm install passport
 npm install passport-jwt
+npm install jsonwebtoken
 ```
 
 Before (above) the code that declares the `app` constant, we must add the following code block:
