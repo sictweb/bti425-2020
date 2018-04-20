@@ -78,7 +78,6 @@ In the diagram above, there is a `data-service-auth.js` box. Your professors hav
 Download it, and add it to your Teams API project. 
 
 > Note that your project will not build/compile cleanly without errors, because the new code module references a user account schema that does not yet exist. You will code the schema in the next task.  
-> Yes, you must `npm install bcryptjs --save`, because we depend upon [that package](https://www.npmjs.com/package/bcryptjs). 
 
 <br>
 
@@ -100,7 +99,8 @@ When you're done, it may look like the following example:
 
 ![User account schema](../media/sec-svr-user-schema.png)
 
-> Note that your project will now probably build/compile cleanly without errors, because the new code module can now reference a user account schema.
+> Note that your project will now probably build/compile cleanly without errors, because the new code module can now reference a user account schema.  
+> It will not run, however, because there's more work to do. 
 
 <br>
 
@@ -138,6 +138,10 @@ Next, locate the existing declaration of the `data` constant that initializes th
 
 ![Mongoose init](../media/sec-svr-code03.png)
 
+Finally, locate the existing `data.connect()` method, near the bottom of the file. Before changes, it connects only to the Teams API database. Add another method call to the chain, which makes it *also* connect to the user accounts database:
+
+![Connect calls](../media/sec-svr-code08.png)
+
 At this point, we have defined and connected the user account storage and its handler. 
 
 <br>
@@ -152,6 +156,7 @@ First, add the Passport.js-related code to the project:
 npm install passport
 npm install passport-jwt
 npm install jsonwebtoken
+npm install bcryptjs
 ```
 
 Before (above) the code that declares the `app` constant, we must add the following code block:
