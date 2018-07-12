@@ -114,6 +114,20 @@ And:
 ng new a3-project2 --routing -st -sg
 ```
 
+**IMPORTANT NOTE:**
+
+The latest version of the Angular CLI confuses the `-st` and `-sg` options with the new `-s` and `-t` options, which indicate that we **do not** wish to have external template (.html) and style (.css) files.  
+
+If you have created an app using the above `ng new a3-project1 --routing -st -sg` command and your solution **does not contain app.component.html** then use the following command instead:
+
+```
+ng new a3-project1 --routing -S
+```
+
+This will skip the testing, while still keeping the .html &amp; .css files intact.  Unfortunately, it will still generate a .git directory inside your newly created "a3-project1" directory.  Simply remove the .git directory to avoid using git in our solution.
+
+<br>
+
 After the generation completes, verify that it runs, by separately navigating into each folder, and using the `ng serve --open` command in the newly-created folder. Each should build/compile, open a browser window/tab, and show the "welcome" view. 
 
 Prepare the rest of your dev environment:

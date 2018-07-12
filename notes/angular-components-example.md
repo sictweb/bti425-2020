@@ -43,6 +43,18 @@ The `-st` option does not add "testing" code. One of the effects is that it redu
 
 The `-sg` option does not create a Git repository for the project. That simplifies the configuration for us. 
 
+**IMPORTANT NOTE:**
+
+The latest version of the Angular CLI confuses the `-st` and `-sg` options with the new `-s` and `-t` options, which indicate that we **do not** wish to have external template (.html) and style (.css) files.  
+
+If you have created an app using the above `ng new animals --routing -st -sg` command and your solution **does not contain app.component.html** then use the following command instead:
+
+```
+ng new animals --routing -S
+```
+
+This will skip the testing, while still keeping the .html &amp; .css files intact.  Unfortunately, it will still generate a .git directory inside your newly created "animals" directory.  Simply remove the .git directory to avoid using git in our solution.
+
 <br>
 
 #### Adding the Bootstrap styles

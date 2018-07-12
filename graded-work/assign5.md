@@ -72,6 +72,20 @@ Open a terminal window, and navigate to a suitable file system location. We will
 ng new assignment5 --routing -st -sg
 ```
 
+**IMPORTANT NOTE:**
+
+The latest version of the Angular CLI confuses the `-st` and `-sg` options with the new `-s` and `-t` options, which indicate that we **do not** wish to have external template (.html) and style (.css) files.  
+
+If you have created an app using the above `ng new assignment5 --routing -st -sg` command and your solution **does not contain app.component.html** then use the following command instead:
+
+```
+ng new assignment5 --routing -S
+```
+
+This will skip the testing, while still keeping the .html &amp; .css files intact.  Unfortunately, it will still generate a .git directory inside your newly created "assignment5" directory.  Simply remove the .git directory to avoid using git in our solution.
+
+<br>
+
 After the app generation task completes, verify that the app runs. Then prepare the rest of your dev environment:
 * Probably use another terminal window (so you can run code-generation commands)
 * Probably use one or two Finder windows/tabs (for graphical navigation and Quick Look viewing)

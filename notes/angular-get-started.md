@@ -54,6 +54,17 @@ The process will create a new folder, with the code needed to get started.
 > The `-st` option avoids adding "testing" code. We don't need that in the near future.  
 > The `-sg` option does not create a Git repository for the project. We don't need a repo in the near future.
 
+**IMPORTANT NOTE:**
+
+The latest version of the Angular CLI confuses the `-st` and `-sg` options with the new `-s` and `-t` options, which indicate that we **do not** wish to have external template (.html) and style (.css) files.  
+
+If you have created an app using the above `ng new my-dream-app --routing -st -sg` command and your solution **does not contain app.component.html** then use the following command instead:
+
+```
+ng new my-dream-app --routing -S
+```
+
+This will skip the testing, while still keeping the .html &amp; .css files intact.  Unfortunately, it will still generate a .git directory inside your newly created "my-dream-app" directory.  Simply remove the .git directory to avoid using git in our solution.
 <br>
 
 ### Run the app
