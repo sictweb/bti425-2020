@@ -22,6 +22,18 @@ The first few steps are familiar. The last few seem like common sense, but if yo
 Using Angular CLI, generate a new project:  
 `ng new Testing --routing -sg -st`
 
+**IMPORTANT NOTE:**
+
+The latest version of the Angular CLI confuses the `-st` and `-sg` options with the new `-s` and `-t` options, which indicate that we **do not** wish to have external template (.html) and style (.css) files.  
+
+If you have created an app using the above `ng new Testing --routing -st -sg` command and your solution **does not contain app.component.html** then use the following command instead:
+
+```
+ng new Testing --routing -S
+```
+
+This will skip the testing, while still keeping the .html &amp;.css files intact.  Unfortunately, it will still generate a .git directory inside your newly created "Testing" directory.  Simply remove the .git directory to avoid using git in our solution.
+
 (For more information on the flags for the 'ng new' command, see: [https://github.com/angular/angular-cli/wiki/new#options](https://github.com/angular/angular-cli/wiki/new#options)
 
 In Terminal, navigate to the project's folder.
