@@ -162,6 +162,18 @@ If you choose to create a new app from scratch, open a terminal window, and navi
 ng new assignment6 --routing -st -sg
 ```
 
+**IMPORTANT NOTE:**
+
+The latest version of the Angular CLI confuses the `-st` and `-sg` options with the new `-s` and `-t` options, which indicate that we **do not** wish to have external template (.html) and style (.css) files.  
+
+If you have created an app using the above `ng new assignment6 --routing -st -sg` command and your solution **does not contain app.component.html** then use the following command instead:
+
+```
+ng new assignment6 --routing -S
+```
+
+This will skip the testing, while still keeping the .html &amp; .css files intact.  Unfortunately, it will still generate a .git directory inside your newly created "assignment6" directory.  Simply remove the .git directory to avoid using git in our solution.
+
 After either task completes, verify that the app runs. 
 
 Then, prepare the rest of your dev environment:

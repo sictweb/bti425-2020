@@ -17,6 +17,18 @@ Create an app:
 ng new my-customers --routing -st -sg
 ```
 
+**IMPORTANT NOTE:**
+
+The latest version of the Angular CLI confuses the `-st` and `-sg` options with the new `-s` and `-t` options, which indicate that we **do not** wish to have external template (.html) and style (.css) files.  
+
+If you have created an app using the above `ng new my-customers --routing -st -sg` command and your solution **does not contain app.component.html** then use the following command instead:
+
+```
+ng new my-customers --routing -S
+```
+
+This will skip the testing, while still keeping the .html &amp; .css files intact.  Unfortunately, it will still generate a .git directory inside your newly created "my-customers" directory.  Simply remove the .git directory to avoid using git in our solution.
+
 Open it in a code editor. Study the result. 
 
 Run the app, and view it in a browser. Open the browser dev tools, and show the console.

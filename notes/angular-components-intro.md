@@ -86,7 +86,7 @@ ng generate component foo --flat
 
 Using "ng generate" to create the "foo" component for us has saved us time by automating the following (necessary) steps:
 
-* Created the files: **foo.component.css**, **foo.component.html**, **foo.component.ts** (including the correct class, and "@Component" decorator to make use of the .html &amp; .css files / providing a default "app-" selector property) and lastly, **foo.component.spec.ts** (we can remove this file if we used the "-st" option when creating the project, since we are not interested in testing at the moment)
+* Created the files: **foo.component.css**, **foo.component.html**, **foo.component.ts** (including the correct class, and "@Component" decorator to make use of the .html &amp; .css files / providing a default "app-" selector property) and lastly, **foo.component.spec.ts** (we can remove this file if we used the "-st" (or "-S", if we're using the latest version of the Angular CLI) option when creating the project, since we are not interested in testing at the moment)
 
 * Added the correct "import" statement to app.module.ts, ie:
 
