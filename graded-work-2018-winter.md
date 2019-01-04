@@ -11,31 +11,21 @@ This page has details about the graded work in BTI425, for the current academic 
 
 ### Tests
 
-We have planned three (3) tests during the term.
+We have planned six (6) tests during the term.
 
-The duration of each test will be approximately 90 minutes. All tests will be hand-written. The total value of all tests will be 50%.
+The duration of each test will be 30 to 40 minutes. Each test will be worth 10% of your final course grade. All tests will be hand-written, and will happen sometime during the class timeslot. The total value of all tests will be 50%.
 
-Recognizing that it’s possible to have an "off day", the final grade calculation will examine the results of all tests, and discount the value or weighting of the lowest-graded test to 50%.
+If you miss a test, there is no opportunity to do a replacement test. However, absence due to illness or other reasons happen occasionally. As a result, you can miss a test, without suffering the loss of grades.
 
-**Still deciding** how to handle a missed test  
-And for what reasons (illness, with specific documentation)  
-It will be difficult to compose a brand-new test  
-We also want to be aware of test-avoidance behaviour  
-Alternatives to consider...  
-* Write test within 3 days (Mon for AB, Fri for C)  
-* Scrutinize it a bit more for evidence that the student asked others for the contents
+The effect of this policy will be extended to all students. At the end of the course, your lowest test result will be discarded, leaving your best five results.
 
 <br>
 
 ### Assignments
 
-We have planned three (3) assignments during the term.
+We have planned six (6) assignments during the term.
 
-Is there a "late policy"? Yes, here it is:
-
-Every student has 
-
-( accomm - how to handle )
+The assignments have a two-week lifetime. Most are independent of each other. 
 
 During the term, one (1) *late* assignment will be accepted within three (3) days of its due date. (In other words, Wednesday at 6:00pm.) The late-submission protocol is as follows, assuming the one (1) late assignment privilege has not been used:
 1. Upload the work using Blackboard, and the link for the *NEXT* assignment. (The link accepts three uploads, so there will still be two uploads available for you to use when submitting the next assignment.) 

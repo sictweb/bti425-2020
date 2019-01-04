@@ -1,5 +1,5 @@
 ---
-title: Course policies
+title: Course outline addendum
 layout: default
 ---
 
