@@ -25,7 +25,7 @@ If an illness or medical issue causes a student to miss a test, and wants the pr
 1. Notify the professor by email, before the test date-and-time, of the absence.
 2. Within 48 hours of the test date-and-time, obtain a diagnosis from a medical doctor (or equivalent), and obtain documentation that clearly states that academic performance was affected during the test date-and-time. 
 3. Send a digital version of the documentation (e.g. a photo or a scan) to the professor, and deliver the original (paper) documentation at the earliest convenient opportunity. 
-4. Do NOT communicate, in any form, with another registered BTI425 student about the contents of the test. 
+4. Do NOT communicate, in any way, with another registered BTI425 student about the contents of the test. 
 
 The professor will then consider your request for a remedy. If granted, the specifics of the remedy will be arranged, and will be customized to the situation. (For example, the remedy may be that the student writes the test within 72 hours of its original date-and-time. However, it is possible that there will be a different remedy.)
 
@@ -51,6 +51,14 @@ If your assignment is not complete (for example, it's missing some features), yo
 
 <br>
 
+### Promotion Policy
+
+* Achieve an average of 50% or better for all assignments
+*	Achieve an average of 50% or better for all tests
+*	Achieve a weighted average of 50% or better for all graded work in the course
+
+<br>
+
 ### Summary
 
 Tests - 3 in total - 50%  
@@ -59,14 +67,6 @@ Assignments - 3 in total - 50%
 This course does NOT have a final exam. 
 
 If you do not agree with this graded work plan, then please drop the course.
-
-<br>
-
-### Promotion Policy
-
-* Achieve an average of 50% or better for all assignments
-*	Achieve an average of 50% or better for all tests
-*	Achieve a weighted average of 50% or better for all graded work in the course
 
 <br>
 

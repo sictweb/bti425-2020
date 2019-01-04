@@ -11,7 +11,7 @@ In this document, the authors have a number of goals:
 
 2. Explain the roles of the requestor (the client) and the responder (the server
 
-3. Discuss how a client uses an XmlHttpRequest object to contact a server, and handle (typically) JSON data responses
+3. Discuss how a client uses an HTTP client object (e.g. XmlHttpRequest, or the fetch API) to contact a server, and handle (typically) JSON data responses
 
 4. Promote the idea that we are building and working with a *distributed* computing system, that has two or more autonomous programs that pass messages (requests, responses) among the programs
 
@@ -199,7 +199,7 @@ One of the characteristics of a web app or web service is that it can be used by
 
 Does the server keep track of the interaction state with each client? No. This responsibility is borne by the client app. This design feature is one of most important parts of the web.
 
-"Each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is kept entirely on the client." (Roy Fielding, [section 3.4.3](http://www.ics.uci.edu/~fielding/pubs/dissertation/net_arch_styles.htm#sec_3_4_3))
+"Each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is kept entirely on the client." (Roy Fielding, PhD thesis, [section 3.4.3](http://www.ics.uci.edu/~fielding/pubs/dissertation/net_arch_styles.htm#sec_3_4_3))
 
 The main point is that the server effectively treats every request as separate/discrete/atomic, and *does not* actively maintain any notion of a logical session over time. In other words, no interaction state maintenance or management is done at the server. 
 
