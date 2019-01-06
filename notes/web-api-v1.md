@@ -228,8 +228,8 @@ Next, if we assume that we pass in a simple JSON object with one key-value pair 
 let newItem = req.body.colourName;
 // Add another item to the array
 colours.push(newItem);
-// Return the result
-res.json({message: "added " + newItem + " as itemID " + colours.length});
+// Return the result; RFC 7231 tells us that it must return HTTP status 201
+res.status(201).json({message: "added " + newItem + " as itemID " + colours.length});
 ```
 
 <br>
