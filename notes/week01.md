@@ -42,7 +42,7 @@ This week's topics include:
 
 [Web services (re)introduction](/bti425/notes/intro-web-services)
 
-[Setting up the back end server based web API](/bti425/notes/teams-api-setup)
+Creating a web service (coming soon)
 
 <br>
 

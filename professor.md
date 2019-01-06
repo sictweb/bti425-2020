@@ -21,7 +21,7 @@ Email | peter.mcintyre -at- senecacollege.ca
 Office | DB2081 in the School of ICT office area<br>(Dahdaleh building, south end, second floor)
 Web | [petermcintyre.ca](http://petermcintyre.ca)
 Phone, address | [Available at this link](https://petermcintyre.com/welcome/contact/)
-Timetable | [Available at this link](https://petermcintyre.com/welcome/contact/)
+Timetable | [Available at this link](https://petermcintyre.com/welcome/timetable/)
 
 <br>
 
