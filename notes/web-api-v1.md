@@ -30,6 +30,8 @@ node --version
 npm --version
 ```
 
+<br>
+
 #### If your system does not have the developer tools
 
 1. Install git
@@ -37,21 +39,21 @@ npm --version
 3. Install more browsers (assume that Safari is already there; add Chrome, Firefox, and Opera)
 4. Install Visual Studio Code (aka VS Code)
 
+<br>
+
 #### Configure VS Code
 
 Do this only if it was just installed: Configure "`code .`" functionality [as described here](https://code.visualstudio.com/docs/setup/mac).
 
 <br>
 
-### Getting started
-
-To get started, configure your development environment, as described below. 
+### Create a project to hold the web service
 
 Using Terminal, navigate to the file system location that will hold the project. Create a new folder to hold the project. 
 
-Navigate into that folder. Create an empty `server.js' file. 
+Navigate into that folder. Create an empty `server.js` file. Create an empty `index.html` file. 
 
-Now, initialize it as a Node.js app:
+Now, initialize the folder as a Node.js app:
 
 ```bash
 npm init
@@ -80,6 +82,134 @@ node server.js
 It should respond with the console message, and then terminate. 
 
 <br>
+
+### Write a simple web server 
+
+Again, follow much of the technique used in BTI325 Week 9. 
+
+Our goal is to create an app that will handle these requests:
+* Get all
+* Get one
+* Add new
+* Edit existing
+* Delete item
+
+This goal will work for a web service that handles ANY kind of data. Obviously, a more complex data model will have more request handlers, but they all share the same core design, and handle these five - or variants of these five - requests. 
+
+The core getting-started code looks something like the following. It assumes it is working with a "user" object that has a first name and a last name (as string data). 
+
+```js
+// Setup
+const express = require("express");
+const path = require("path");
+const bodyParser = require('body-parser');
+const app = express();
+const HTTP_PORT = process.env.PORT || 8080;
+// Or use some other port number that you like better
+
+// Add support for incoming JSON entities
+app.use(bodyParser.json());
+
+// Deliver the app's home page to browser clients
+app.get("/", (req,res) => {
+    res.sendFile(path.join(__dirname, "/index.html"));
+});
+
+// Get all
+app.get("/api/items", (req, res) => {
+    res.json({message: "fetch all items"});
+});
+
+// Get one
+app.get("/api/items/:itemId", (req, res) => {
+    res.json({message: "get user with Id: " + req.params.itemId});
+});
+
+// Add new
+app.post("/api/items", (req, res) => {
+     res.json({message: "add a user item: " + req.body.firstName + " " + req.body.lastName});
+});
+
+// Edit existing
+app.put("/api/items/:itemId", (req, res) => {
+    res.json({message: "update user with Id: " + req.params.itemId + " to " + req.body.firstName + " " + req.body.lastName});
+});
+
+// Delete item
+app.delete("/api/items/:itemId", (req, res) => {
+     res.json({message: "delete user with Id: " + req.params.itemId});
+});
+
+// Resource not found (this should be at the end)
+app.use((req, res) => {
+  res.status(404).send("Resource not found");
+});
+
+// Tell the app to start listening for requests
+app.listen(HTTP_PORT, () => {
+    console.log("Ready to handle requests on port " + HTTP_PORT);
+});
+```
+
+<br>
+
+#### Edit `server.js` 
+
+Edit `server.js` so that it holds the code shown above. 
+
+<br>
+
+#### Make sure Express.js is installed into the project
+
+If you haven't done this yet, add Express.js:
+
+```bash
+npm install express
+```
+
+<br>
+
+#### Make a simple home page (HTML)
+
+Edit `index.html`. Use the `html:5` Emmet snippet to help with this task. 
+
+<br>
+
+#### Run the app
+
+In Terminal, run the app.
+
+Open a browser, and navigate to the root (home page). 
+
+Open Postman, and interact with the resources that begin with `/api/`. 
+
+<br>
+
+### Add some data (simple arrays)
+
+You obviously noticed that the server's functions were not really handling any data. The requests and responses were simple strings. We'll change that now, and use real data.
+
+We have to do two tasks:
+1. Add some data
+2. Edit the functions
+
+<br>
+
+#### Add the data
+
+Let's add a super-simple array of strings, for example the names of colours. At the bottom of the `server.js` file, create a variable to hold the data, something like this:
+
+```js
+// Array of strings
+var colours = [ 'Red', 'Green', 'Blue' ];
+```
+
+Change the "get all" function, and this time return the data.
+
+<mark>&nbsp;More to come&nbsp;</mark>
+
+
+
 
 Make a server, test it  
 
