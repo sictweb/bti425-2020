@@ -30,7 +30,7 @@ We'll build on the previous course's Ajax coverage with a *thorough survey* of f
 
 The first part of this course will ensure that you have your server-side development environment configured correctly. We will design, program, and then install and configure a data-rich project on the server, which will persist resources that can be used by some of the front end apps that we create during the course. A natural result will be that you will learn more about, and write code for, a web service (also known as a web API). In summary, you'll transition from writing server code that generates and delivers HTML, to server code that generates and delivers resources that are formatted as JSON. 
 
-The weekly notes will be organized and delivered as a collection of topic-themed documents. This page - "week01" - will simply guide you throught the topics in sequence. (Read [more about this organization scheme here](/bti425/notes/about).)
+The weekly notes will be organized and delivered as a collection of topic-themed documents. This page - "week01" - will simply guide you throught the topics in sequence. (Read [more about this organization scheme here](/notes/about).)
 
 <br>
 
@@ -38,9 +38,9 @@ The weekly notes will be organized and delivered as a collection of topic-themed
 
 This week's topics include: 
 
-[Welcome](welcome) to the BTI425 course
+[Welcome](/notes/welcome) to the BTI425 course
 
-[Web services (re)introduction](/bti425/notes/intro-web-services)
+[Web services (re)introduction](/notes/intro-web-services)
 
 Creating a web service (coming soon)
 
@@ -50,6 +50,6 @@ Creating a web service (coming soon)
 
 We expect the student to do their work on a computer that runs macOS (Mac OS X), Linux, or another Unix-like operating system. 
 
-If a student has a Windows-only computer, then plan to install an environment that enables the installation of Linux.
+If a student has a Windows 10 computer, then plan to install an environment that enables the installation of Linux.
 
 <br>
