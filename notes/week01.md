@@ -42,7 +42,7 @@ This week's topics include:
 
 [Web services (re)introduction](/notes/intro-web-services)
 
-Creating a web service (coming soon)
+[Creating a web service](/notes/web-api-v1)
 
 <br>
 

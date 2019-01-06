@@ -195,30 +195,47 @@ We have to do two tasks:
 
 <br>
 
-#### Add the data
+#### Add simple string data
 
 Let's add a super-simple array of strings, for example the names of colours. At the bottom of the `server.js` file, create a variable to hold the data, something like this:
 
 ```js
 // Array of strings
-var colours = [ 'Red', 'Green', 'Blue' ];
+var colours = [ 'Red', 'Green', 'Blue', 'Yellow', 'Aqua', 'Fuschia' ];
 ```
 
 Change the "get all" function, and this time return the data.
 
-<mark>&nbsp;More to come&nbsp;</mark>
+What about the other functions? Yes, they need some work. 
 
+If we assume that `itemId` is the array element or index, then we can code a "get one". For example, the function body looks like the following:
 
+```js
+// Extract the item identifier
+let itemId = req.params.itemId;
+// Make sure it's valid 
+if (itemId > colours.length) {
+  res.status(404).send("Resource not found");
+} else {
+  res.json(colours[req.params.itemId]);
+}
+```
 
+Next, if we assume that we pass in a simple JSON object with one key-value pair (and the key name is "colourName"), then we can code an "add new". For example, the function body looks like the following:
 
-Make a server, test it  
+```js
+// Extract the incoming data
+let newItem = req.body.colourName;
+// Add another item to the array
+colours.push(newItem);
+// Return the result
+res.json({message: "added " + newItem + " as itemID " + colours.length});
+```
 
-Generate some data 
-* array of strings
-* array of objects
-* generated single-entity collection
-* generated related entity collections
+<br>
 
+### Add some data (objects)
 
+We will leave this as an in-class hands-on task (in our computer-lab session). 
 
 <br>
