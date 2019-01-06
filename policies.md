@@ -1,23 +1,23 @@
 ---
-title: Course outline addendum
+title: Course policies
 layout: default
 ---
 
 ## Course policies
 
-The information below is intended for students in the courses that Peter McIntyre teaches. It is your responsibility to read, understand, and follow them.
+The information below is intended for students in the BTI425 course. It is your responsibility to read, understand, and follow them.
 
 <br>
 
 ### Information About Grades
 
-Your work will earn grades that that are fair and appropriate for the situation. Here's what you can expect for most of your work in my courses:
+Your work will earn grades that that are fair and appropriate for the situation. Here's what you can expect for most of your work:
 
 A - Excellent, top-quality work, which (typically) goes beyond normal expectations
 
 B - Good work, done with a good (i.e. higher than average) level of quality
 
-C - Satisfactory work, which meets specifications, of average quality
+C - Satisfactory work, which *meets the specifications*, and is of expected or average quality
 
 D - Work that is below expectations, but unfortunately is still enough to earn a passing grade
 
@@ -27,11 +27,11 @@ F - Unsatisfactory work
 
 As you can see, it is important to know that you will not earn an "A" simply for meeting a set of specifications. High grades are earned with work that is clearly better than expected.
 
-I do not like "D" grades. To me, a "D" is an "F". I personally consider a "C" to be a minimum pass, but College policies state that the threshold is lower. We're getting to the point in our human society where software is at the core of everything. And where *bad software can kill people*, and cause emotional and economic damage. As a result, my standards are higher, and yours should be too. Don't create crappy work that becomes part of a news story some day.
+We do not like "D" grades. To some people, a "D" is an "F". We consider a "C" to be a minimum pass, but College policies state that the threshold is lower. We're getting to the point in our human society where software is at the core of everything. And where *bad software can kill people*, and cause emotional and economic damage. As a result, our standards are higher, and yours should be too. Don't create crappy work that becomes part of a news story some day.
 
-I also consider that test-like work, where you are doing individual work, is a more reliable indicator of your capabilities than assignment-like work. As a result, test-like work has a higher value when making grading decisions.
+We also consider that test-like work, where you are doing individual work, to be a more reliable indicator of your capabilities than assignment-like work. As a result, test-like work has a higher value when making grading decisions.
 
-Finally, I would like to explain the grading process, because too many students ask "where did I lose marks?", or "why did you take marks off?". Those questions are not appropriate. Why? Let me ask *you* a question: Before you begin work (on a test or on an assignment), how many marks have you earned on that work? Again, *before you begin*. Well, the answer is zero. Therefore, the marks on a test or on an assignment are the *marks that you have earned, starting from zero*. I never "take marks off". And, you *earn* marks - you don't lose marks.
+Finally, we would like to explain the grading process, because too many students ask "where did I lose marks?", or "why did you take marks off?". Those questions are not appropriate. Why? Consider this question for you: Before you begin work (on a test or on an assignment), how many marks have you earned on that work? Again, *before you begin*. Well, the answer is zero, obviously. Therefore, the marks on a test or on an assignment are the *marks that you have earned, starting from zero*. We never "take marks off". And, you *earn* marks - you don't lose marks.
 
 <br>
 
@@ -41,11 +41,9 @@ Tests must be written when scheduled. You can’t simply write a test when it is
 
 If you are unable to write a test, what happens? 
 
-In this course, there is NO opportunity to attempt a replacement test. Therefore, it will receive a grade of zero (0).
+There is a [limited policy](graded-work#tests) detailed on the Graded Work info page. 
 
-A student can miss one of the tests without suffering the loss of grades, because the bottom test result is discarded just before the course's final grade is calculated.
-
-Graded work will not be re-marked. However, adding errors will be corrected on request.
+Tests will not be re-marked. However, adding errors will be corrected on request.
 
 During a test, the use of reference material, or personal electronic devices, is not permitted.
 
@@ -53,11 +51,11 @@ During a test, the use of reference material, or personal electronic devices, is
 
 ### Assignments and similar graded work
 
-During the term, one (1) *late* assignment will be accepted, within three (3) days of its due date and time. 
+Assignments are due on its assigned due date, at a specific time. You can't simply submit an assignment when it is convenient with you. 
 
-Otherwise, an assignment is due on its assigned due date, at a specific time. If it is late, it will receive a grade of zero (0).
+If you are unable to submit an assignment, what happens?
 
-Just before the course's final grade is calculated, the bottom assignment result is discarded. 
+There is a [limited policy](graded-work#assignments) detailed on the Graded Work info page. 
 
 <br>
 
