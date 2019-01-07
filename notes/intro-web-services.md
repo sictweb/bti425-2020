@@ -63,6 +63,14 @@ For *all* device platforms.
 
 <br>
 
+### How do I start learning web services?
+
+The course notes and your professor will guide you. However, you must learn (more) about HTTP. 
+
+In class, we will discuss some HTTP topics, recall your BTI325 experience, refer to the [overview on Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol), and the official specification series, [RFC 7230](https://tools.ietf.org/html/rfc7230) to RFC 7235, which replaced RFC 2616 in June 2014.
+
+<br>
+
 ### How do I learn to create web services?
 
 In the previous web programming course, you got started with this task in the [Week 9 coverage](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week9-class1/) (Ajax Review / Practical Ajax Programming). 

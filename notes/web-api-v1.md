@@ -217,7 +217,7 @@ let itemId = req.params.itemId;
 if (itemId > colours.length) {
   res.status(404).send("Resource not found");
 } else {
-  res.json(colours[req.params.itemId]);
+  res.json(colours[itemId]);
 }
 ```
 
