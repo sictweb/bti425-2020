@@ -7,7 +7,7 @@ layout: default
 
 The theme for the first week or more is to transition your success in the previous course to the new topics in this course.
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/resources).
 
 <br>
 
