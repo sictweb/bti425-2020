@@ -239,3 +239,92 @@ res.status(201).json({message: "added " + newItem + " as itemID " + colours.leng
 We will leave this as an in-class hands-on task (in our computer-lab session). 
 
 <br>
+
+#### Generate a substantial amount of data
+
+One of the new skills that a BTI425 student should add is the ability to generate and use a large amount of data. This is especially important for web programmers, because the result of the work we do is so visual in nature. It is always a good idea to use and show good solid credible data, instead of crappy placeholder data (e.g. abc, 123, foo, bar, etc.) that is so common in entry-level programming work. 
+
+Here, we will introduce you to the [Mockaroo service](https://mockaroo.com):
+
+> Need some mock data to test your app?  
+> Mockaroo lets you generate up to 1,000 rows of realistic test data in CSV, JSON, SQL, and Excel formats.
+
+Problem solved. 
+
+Generate some data. Make sure you configure enough fields to give you a rich variety of data. For the professor's in-class demonstration example, here are a few notable choices we made:
+* Birth date was within a range and in ISO 8601 format 
+* Credit score was an integer within a range
+* Rating was a number within a range with two decimal places
+* 150 rows were returned
+* Data format was JSON
+
+Here's a screen capture. (Right-click and then open it in a new tab/window to see it full size.) 
+
+![Mockaroo](/media/web-api-create-mock-data-v1.png)
+
+<br>
+
+#### Use the data in your web service
+
+The data comes to your system as a standard download. Open it for editing. Copy it. 
+
+In your code, similar to what you did above, assign the JSON as the value of a new variable.
+
+```js
+var people = // your pasted JSON goes here
+```
+
+Don't forget the statement's trailing semicolon. 
+
+Now you have a rich body of data, with which you can do the standard get all, get one, add new, edit existing, and delete item tasks. 
+
+<br>
+
+#### Update the code in the functions
+
+Obviously, the code in the functions needs updating, to work with the new data. 
+
+**Get all** is easy to fix. 
+
+If you want sorted data - for example by last name then first name - more work needs to be done. The built-in JavaScript array `sort()` function mutates the existing array. Maybe that's not such a good idea. Therefore, before sorting, copy the array to a new array, with something like this:
+
+```js
+var c = data.map(p => p);
+```
+
+Then, the "c" array can be mutated, with something like this:
+
+```js
+c.sort(function (a, b) {
+    return a.lastName.localeCompare(b.lastName) ||
+        a.firstName.localeCompare(b.firstName) || 0
+});
+```
+
+Finally, the sorted "c" array can be returned. 
+
+**Get one** is also relatively easy to fix. 
+
+Compared to the "colours" array above, where it was easy to "find" the value we wanted, this "people" array has *objects* as elements in the array. We want to support finding a matching identifier (i.e. the "id" field). 
+
+This needs a function (an arrow function, specifically). For example:
+
+```js
+var o = data.find(p => p.id == itemId);
+```
+
+Then, if "o" is "undefined", return HTTP 404. Otherwise return the object "o". 
+
+You can do **the others** on your own (i.e. add new, edit existing, delete item). Doing this will remind you of your work with JavaScript arrays, and enhance those skills. 
+
+Looking for a more challenging task?
+
+Try adding another function to handle a request for people with a high credit score (e.g. a `creditScore` value over 600). We can suggest the `filter()` function can help with that. 
+
+Then, try adding another function to return only the full names of the people objects. We suggest the `map()` function can help with that. (Bonus, sort the results.)
+
+Doing these additional tasks will prepare you for more interesting work with data and its transformations. 
+
+Enjoy!
+
+<br>
