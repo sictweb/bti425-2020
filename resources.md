@@ -178,3 +178,20 @@ For most elements, just begin typing the element name, without the angle bracket
 See the [Emmet cheat sheet](https://docs.emmet.io/cheat-sheet/) for full coverage.
 
 <br>
+
+### Other tooling tips
+
+What version of an npm package is installed?
+
+```bash
+# All globally-installed packages
+npm list -g
+
+# One specific globally-installed package
+npm list -g express
+
+# While in the root of a project, one specfic package
+npm list express
+```
+
+<br>

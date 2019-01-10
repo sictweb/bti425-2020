@@ -1,9 +1,99 @@
 ---
-title: Web API create, v1
+title: Web API create, v2
 layout: default
 ---
 
-## Web API design, create, deploy, and test, version 1
+## Web API design, create, deploy, and test, version 2
+
+The theme of this document is to design and create a simple web service that uses a database to persist the app's data.
+
+We will also deploy the web service to a public-facing host. We will continue to use the *Heroku* app hosting service, and the *MongoDB Atlas* database hosting service. 
+
+<br>
+
+### Confirm that your tooling is ready
+
+Before writing and running the app, confirm that your computer's tooling is ready. The College systems should be ready, but you may have to do some of these tasks if you want to use your own computer. 
+
+> Remember the cautions in the [welcome document](welcome#how-can-you-get-started):  
+> We expect you to use a Unix-like system to do your work.  
+> The College has hundreds of correctly-configured systems that are ready for use, so don't waste course time doing personal configuration tasks (do that on your own time).  
+
+<br>
+
+#### If your system does not yet have the MongoDB engine etc.
+
+You can run this command to learn whether the MongoDB engine is installed:
+
+```bash
+foo
+```
+
+<mark>verify</mark>
+
+If needed, install the community version of MongoDB.
+
+> Need a how-to reminder?  
+> See the BTI325 notes. <mark>need link</mark> 
+
+Also, install the Robo3T tool etc. 
+
+<br>
+
+#### If your system does not yet have the Heroku CLI
+
+You can run this command to learn whether the Heroku CLI engine is installed:
+
+```bash
+foo
+```
+
+<mark>verify</mark>
+
+Install Node.js (which also installs npm). Verify its status:
+
+
+<br>
+
+<mark>&nbsp;MongoDB version of an API</mark>
+
+Tentative plan:
+* FIRST phase of activity...
+* local MongoDB
+* understand dev env, (vs code, browser, terminal), add db engine running
+* mongo import
+* add a db service module
+* edit/update the server app 
+* shoot the web service to a hosted server (Heroku)
+* shoot the database to a hosted server (MongoDB Atlas)
+* test with Postman
+* SECOND phase of activity...
+* use mockaroo to create a related data set (must study the Teams API first to learn the connection-relation pattern)
+* mongo import
+* edit/update the server app
+* shoot both to hosted server destinations
+* test with Postman
+* THIRD phase of activity...
+* common set of pages to render content (all, one, etc.), each one using a set of functions stored in one js file 
+* vanila JS clients, XmlHttpRequest, and the new Fetch API
+* jQuery assisted
+* then look a bit at the value provided by add-on libraries
+
+Get the Azure example MEAN.js app  
+It may have or show an app architecture for the server
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+Delete the content below  
+<br>
+<br>
+<br>
+<br>
+<br>
 
 The theme of this document is to design and create a simple web service. 
 
