@@ -179,6 +179,36 @@ Later, you will probably learn how to work with non-text media types. From now o
 
 <br>
 
+
+**Get started with JSON**
+
+JSON is an initialism for <u>J</u>ava<u>S</u>cript <u>O</u>bject <u>N</u>otation.
+
+It is a lightweight data-interchange format. It is language-independent, however it uses conventions that were first suggested by the JavaScript object literal or initializer. JSON has become the *de facto* data-interchange format standard.
+
+Here’s an [overview of JSON](http://en.wikipedia.org/wiki/Json) from Wikipedia.
+
+Here’s the [official web site for JSON](http://json.org/), by Douglas Crockford.
+
+Although JSON is historically derived from JavaScript object literals, there are a few notable differences to programmers who are new to JSON:
+
+* In JSON, each property name must be surrounded by quotes (typically double-quotes). In pure JavaScript, this is optional. 
+
+* In JSON, there is no Date type. Dates are expressed as strings, almost always in ISO 8601 format. In contrast, JavaScript does have a Date object (not a *type*, but an *object*).
+
+While we're on the topic of data types, the property values will be any of about five types:
+1. string
+2. number (integer or decimal)
+3. object (i.e. { } )
+4. array (i.e. [ ] )
+5. null
+
+String values must be surrounded by quotes. 
+
+> The web services that you create in this course will rely on the JSON internet media type.
+
+<br>
+
 **State, data**
 
 Let's discuss *state* in this section of the notes, and in the next section. 

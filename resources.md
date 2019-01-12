@@ -34,6 +34,8 @@ Therefore, continue to use the content from the courses that you have successful
 
 You will need one or more devices. A College or personal desktop or laptop, and (likely) a personal mobile device (e.g. a smartphone).
 
+[This document](/notes/postman-intro) introduces you to Postman, and has how-to getting started info.
+
 <br>
 
 **Use macOS or Linux**

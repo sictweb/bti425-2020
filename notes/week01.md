@@ -44,6 +44,8 @@ This week's topics include:
 
 [Creating a web service](/notes/web-api-v1)
 
+[This document](/notes/postman-intro) introduces you to Postman, and has how-to getting started info.
+
 <br>
 
 **Reminder**
