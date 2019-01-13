@@ -183,6 +183,8 @@ See the [Emmet cheat sheet](https://docs.emmet.io/cheat-sheet/) for full coverag
 
 ### Other tooling tips
 
+#### npm 
+
 What version of an npm package is installed?
 
 ```bash
@@ -194,6 +196,23 @@ npm list -g express
 
 # While in the root of a project, one specfic package
 npm list express
+```
+
+<br>
+
+#### MongoDB
+
+Various commands:
+
+```bash
+# Is the database engine installed?
+mongod --version
+
+# Is the command shell installed?
+mongo --version
+
+# Start the database engine
+mongod --dbpath [path-to-database-folder]
 ```
 
 <br>
