@@ -14,11 +14,11 @@ Please note that *the schedule may change*, and that it is your responsibility t
 Week number<br>and Monday<br>start date | Topic theme and coverage | Graded work | Mark value
 --- | --- | --- | ---
 Week 1<br>Jan 7 | Dev environment setup<br>Re-introduction to back-end web services | |
-Week 2<br>Jan 14 | Some more web service work<br>Introduction to front-end development<br>Modern front-end dev design patterns<br>JavaScript libraries jQuery, Moment | |
+Week 2<br>Jan 14 | Some more web service work<br>Introduction to front-end development<br>JavaScript libraries jQuery, Moment | |
 Week 3<br>Jan 21 | React introduction<br>Components as an architectural design feature | | 
 Week 4<br>Jan 28 | React routing | Test 1 | 15%
 Week 5<br>Feb 4 | React services | Assign 1 | 15%
-Week 6<br>Feb 11 | Angular introduction<br>Dev env setup, sample app preview | |
+Week 6<br>Feb 11 | Angular introduction<br>Dev env setup, sample app preview<br>Modern front-end dev design patterns | |
 Week 7<br>Feb 18 | Monday is the Family Day holiday, no classes<br>Work on Assign 2 during the computer-lab session | |
 Study week<br>Feb 25 | (no in-class sessions) | |
 Week 8<br>Mar 4 | Components | Test 2 | 15%

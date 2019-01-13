@@ -14,7 +14,7 @@ New notes are at the top.
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
 **Week 3**<br>&bull; Mon Jan 21<br>&bull; Tue or Thu | React introduction<br>Components as an architectural design feature | | 
-**Week 2**<br>&bull; Mon Jan 14<br>&bull; Tue or Thu | Introduction to front-end development<br>JavaScript libraries jQuery, Moment |
+**[Week 2](week02)**<br>&bull; Mon Jan 14<br>&bull; Tue or Thu | Some more web service work<br>Introduction to front-end development<br>JavaScript libraries jQuery, Moment |
 **[Week 1](week01)**<br>&bull; Mon Jan 7<br>&bull; Tue or Thu | Dev environment setup<br>Re-introduction to back-end web services |
 **[Welcome](welcome)** | Welcome to the BTI425 course |
 

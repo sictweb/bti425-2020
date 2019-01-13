@@ -241,48 +241,38 @@ In this task phase 2, there are several sub-tasks:
 4. Deploy to Heroku
 5. Test with Postman
 
-<br>
+> The authors were delayed by a server configuration issue, and are unable to demonstrate this feature at this time.  
+> The issue has been resolved, and the how-to content will be restored to this section of the notes very soon. 
 
-<mark>&nbsp;(the remaining part of this doc is in progress, with more to come)&nbsp;</mark>
+<br>
 
 ### Task phase 3 - local database with related entities
 
-* THIRD phase of activity...
-* use mockaroo to create a related data set (must study the Teams API first to learn the connection-relation pattern)
-* mongo import
-* edit/update the server app
-* test with Postman
+<mark>&nbsp;This section is still being edited, and its content will be posted when complete.&nbsp;</mark>
+
+Preview: 
+* Use Mockaroo to create a collection with a "nested" property that is itself a collection of objects
+* MongoDB import
+* Create the server app (copy then edit the above app)
+* Test with Postman
 
 <br>
 
 ### Task phase 4 - deploy phase 3 to a public host
 
-* FOURTH phase of activity...
-* shoot both to hosted server destinations
-* test with Postman
+This task will be very similar to the previous task phase 2. 
+
+> Similar to above, the how-to content will be restored to this section after the server configuration issue is resolved. 
 
 <br>
 
-Then...
-* LAST phase of activity...
-* common set of pages to render content (all, one, etc.), each one using a set of functions stored in one js file 
-* vanila JS clients, XmlHttpRequest, and the new Fetch API
+### Task phase 5 - client HTML5 apps, interacting with the web service
+
+In this final task, we will write HTML5 client apps that interact with the web service. 
+
+More content will be posted before the computer-lab (second class session of the week). The plan is to cover these kinds of client apps:
+* JavaScript, using XmlHttpRequest
+* JavaScript, using the new Fetch API
 * jQuery assisted
-* then look a bit at the value provided by add-on libraries
 
-Get the Azure example MEAN.js app  
-It may have or show an app architecture for the server
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-Delete the content below  
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
