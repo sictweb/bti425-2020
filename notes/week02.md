@@ -20,7 +20,7 @@ The Moment library - which helps with date handling - will also be introduced.
 
 This week's topics include: 
 
-[Creating a hosted web service with a database](/notes/web-api-v1)
+[Creating a hosted web service with a database](/notes/web-api-v2)
 
 Simple apps that interact with a web service 
 
