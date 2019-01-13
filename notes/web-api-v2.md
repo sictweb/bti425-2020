@@ -23,6 +23,8 @@ Before writing and running the app, confirm that your computer's tooling is read
 
 #### If your system does not yet have the MongoDB engine etc.
 
+MongoDB is a database engine, and therefore provides persistent storage for apps. The database engine can run on your own computer for development and testing purposes, and it obviously runs in a publicly-hosted server environment. The database itself can be on your own computer, and it can be migrated or copied to the public host. 
+
 You can run this command to learn whether the MongoDB engine is installed:
 
 ```bash
@@ -36,11 +38,17 @@ If needed, install the community version of MongoDB.
 > Need a how-to reminder?  
 > See the BTI325 notes. <mark>need link</mark> 
 
+Robo3T is a graphical UI app that enables you as the developer to inspect and work with local or hosted MongoDB databases. 
+
 Also, install the Robo3T tool etc. 
 
 <br>
 
 #### If your system does not yet have the Heroku CLI
+
+Heroku is a public hosting service, for Node.js apps (like our web apps and web services). It offers no-cost hosting for developers with entry-level needs, so it is ideal for students.
+
+Heroku CLI is an app that enables developers to manage their Heroku account, and to deploy an app to the public host. 
 
 You can run this command to learn whether the Heroku CLI engine is installed:
 

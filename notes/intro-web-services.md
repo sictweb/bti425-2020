@@ -192,7 +192,7 @@ Here’s the [official web site for JSON](http://json.org/), by Douglas Crockfor
 
 Although JSON is historically derived from JavaScript object literals, there are a few notable differences to programmers who are new to JSON:
 
-* In JSON, each property name must be surrounded by quotes (typically double-quotes). In pure JavaScript, this is optional. 
+* In JSON, each property name must be surrounded by quotes (typically double-quotes). In pure JavaScript, this is optional for single-word property names. 
 
 * In JSON, there is no Date type. Dates are expressed as strings, almost always in ISO 8601 format. In contrast, JavaScript does have a Date object (not a *type*, but an *object*).
 

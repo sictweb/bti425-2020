@@ -41,7 +41,7 @@ To begin, open up the **week1/jQuery** folder and take a look at the index.html 
 ### {% raw %}The '$(function() { });' or '$(document).ready(function(){ });' functions{% endraw %}
 
 
-It stands to reason that any JavaScript code that deals with accessing elements in the DOM **must** be executed *after* the DOM is built.   It is for this reason that you will see most jQuery code residing in an anonymous function delcared as a parameter to either **$();** or **$(document.ready());**.  When the DOM is ready, the supplied anonymous ("callback") function will be executed, ensuring that any DOM operation within the function will be safe to use.
+It stands to reason that any JavaScript code that deals with accessing elements in the DOM **must** be executed *after* the DOM is built. It is for this reason that you will see most jQuery code residing in an anonymous function delcared as a parameter to either **$();** or **$(document.ready());**.  When the DOM is ready, the supplied anonymous ("callback") function will be executed, ensuring that any DOM operation within the function will be safe to use.
 
 <br>
 

@@ -76,3 +76,11 @@ The image below shows how to enter metadata for the fourth setting. Select the "
 ![Simple POST request, body](/media/postman-post-body.png)
 
 <br>
+
+### More about Postman
+
+The official help docs will enable you to become more comfortable. Go through these learning resources:
+
+[Getting started](https://learning.getpostman.com/getting-started/)
+
+<br>

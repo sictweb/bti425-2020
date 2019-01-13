@@ -11,7 +11,7 @@ Remember to frequently use the [learning resources](/resources).
 
 <br>
 
-**Previous course**
+### Previous course
 
 In the previous course (BTI325), you began to learn the principles and practices for creating simple web apps and services:
 * Most of the work was done on the server (generation, computation, etc.)
@@ -24,7 +24,7 @@ In the previous course, you had a taste of this with the Ajax coverage. That ena
 
 <br>
 
-**This course**
+### This course
 
 We'll build on the previous course's Ajax coverage with a *thorough survey* of front end development techniques and approaches, by covering a few widely-used libraries and frameworks. The destination will be a *thorough introduction* to a feature-rich application platform, Angular. 
 
@@ -34,7 +34,7 @@ The weekly notes will be organized and delivered as a collection of topic-themed
 
 <br>
 
-**Topics**
+### Topics
 
 This week's topics include: 
 
@@ -48,7 +48,7 @@ This week's topics include:
 
 <br>
 
-**Reminder**
+#### Reminder
 
 We expect the student to do their work on a computer that runs macOS (Mac OS X), Linux, or another Unix-like operating system. 
 
