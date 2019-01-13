@@ -228,18 +228,22 @@ mongodb --dbpath ./coursedbweek2
 
 Now we're ready... Start the app. Then, interact with it using Postman.
 
-<br>
+When you are satisfied, shut down the app, and shut down the database engine. 
 
-<mark>&nbsp;(the remaining part of this doc is in progress, with more to come)&nbsp;</mark>
+<br>
 
 ### Task phase 2 - deploy phase 1 to a public host
 
-* SECOND phase of activity...
-* shoot the web service to a hosted server (Heroku)
-* shoot the database to a hosted server (MongoDB Atlas)
-* test with Postman
+In this task phase 2, there are several sub-tasks:
+1. Move the database content to MongoDB Atlas
+2. Update the app, with the connection string info
+3. Prepare a new Heroku app
+4. Deploy to Heroku
+5. Test with Postman
 
 <br>
+
+<mark>&nbsp;(the remaining part of this doc is in progress, with more to come)&nbsp;</mark>
 
 ### Task phase 3 - local database with related entities
 
