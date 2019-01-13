@@ -5,9 +5,9 @@ layout: default
 
 ## Web API design, create, deploy, and test, version 2
 
-The theme of this document is to design and create a simple web service that uses a database to persist the app's data.
+The theme of this document is to design and create a simple web service that *uses a database* to persist the app's data.
 
-We will also deploy the web service to a public-facing host. We will continue to use the *Heroku* app hosting service, and the *MongoDB Atlas* database hosting service. 
+We will also deploy the web service to a public-facing host. We will continue to use the *Heroku* app hosting service, and the *MongoDB Atlas* database hosting service that you used in the predecessor web dev course. 
 
 <br>
 
@@ -18,6 +18,8 @@ Before writing and running the app, confirm that your computer's tooling is read
 > Remember the cautions in the [welcome document](welcome#how-can-you-get-started):  
 > We expect you to use a Unix-like system to do your work.  
 > The College has hundreds of correctly-configured systems that are ready for use, so don't waste course time doing personal configuration tasks (do that on your own time).  
+
+> If you are using the Windows Subsystem for Linux and therefore a Microsoft Store version of Linux (Ubuntu etc.), all your dev tooling will be Linux versions, and NOT Windows versions.
 
 <br>
 
@@ -42,7 +44,7 @@ If you need to, install the community version of MongoDB.
 > [MongoDB docs](https://docs.mongodb.com/manual/administration/install-community/)   
 > [Last term's web dev course notes](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week8-class1/)
 
-> Another note:  
+> Another reminder:  
 > If you are using the Windows Subsystem for Linux and therefore a Microsoft Store version of Linux (Ubuntu etc.), do the installation of MongoDB in Linux, and NOT in Windows.  
 > All your dev tooling will be Linux apps. 
 
@@ -110,27 +112,155 @@ heroku --version
 ```
 If you need to, [install git and the Heroku CLI](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/getting-started-with-heroku/). 
 
+~ ~ ~ ~ ~ 
+
+Now we're ready to do this week's tasks. They will be done incrementally. Start at the beginning, as later tasks will build on earlier tasks. 
+
 <br>
 
-<mark>&nbsp;MongoDB version of an API</mark>
+### Task phase 1 - one-entity local database
 
-Tentative plan:
-* FIRST phase of activity...
-* local MongoDB
-* understand dev env, (vs code, browser, terminal), add db engine running
-* mongo import
-* add a db service module
-* edit/update the server app 
+In this task phase 1, we will:
+* use the locally-installed MongoDB engine
+* generate data with Mockaroo
+* import the data into MongoDB
+* add database-related code to the app
+* run the database engine
+* run the app, and interact with it using Postman
+
+Ensure that your tooling is ready, and that your hosted service accounts are ready. 
+
+Create a folder (directory) to hold the database.
+
+> Suggestion:  
+> Create the folder as a peer to your app's folder.  
+> Maybe named `coursedbweek2`. 
+
+Attempt to start and run the database engine. Open a new Terminal window to do this, because you will need your other/existing Terminal window to run more commands. 
+
+```bash
+mongodb --dbpath ./coursedbweek2
+```
+
+This task should result in many console messages, and one of the later or final messages will tell you that it's ready; something like this:
+
+```
+2019-01-13T10:45:49.380-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+```
+
+<br>
+
+#### MongoDB import
+
+Generate some data, using the Mockaroo service. If you are happy with the data you generated (and downloaded) last week, you can use the same configuration, EXCEPT that you do NOT need an "id" field. (The database engine assigns an object identifier, and its field name is "_id".) 
+
+Then, move or copy the downloaded data to the same folder that holds your app's project folder and the database folder. 
+
+Run this command while in the same folder as your generated data file. 
+
+```bash
+mongoimport --db coursedbweek2 --collection person --file mockdataweek2.json --jsonArray
+```
+
+If successful, it will respond with something like this:
+
+```text
+2019-01-13T11:06:27.389-0500	connected to: localhost
+2019-01-13T11:06:27.460-0500	imported 200 documents
+```
+
+You can use the MongoDB shell or the Robo 3T tool to query the database. The following are shell commands after running `mongo`.
+
+Confirm that it sees your database:  
+
+```
+> show dbs
+```
+
+Use or set the context to your database:
+
+```
+> use coursedbweek2
+```
+
+Run a query:
+
+```
+> db.person.find()
+```
+
+For now, you can exit the shell (`Ctrl+C`) and shut down the database engine (also `Ctrl+C`). 
+
+<br>
+
+#### Add database-related code to the app
+
+For this task, do not use the apps that were created last week. Instead... 
+
+Create a new project (`npm init` etc.).
+
+Install Express.js and Mongoose into the project. 
+
+The project will have three (3) JavaScript source code files: 
+* `server.js` - the app's entry point 
+* `manager.js` - data service tasks (get, add, etc.) 
+* `schemas.js` - Mongoose "schema" code, to define the shape of the entities 
+
+Open the code example before continuing. Your professor will explain the code in class. 
+
+So far, it can handle requests for two resources:
+1. All persons 
+2. One specific person, using its (MongoDB) identifier
+
+<br>
+
+#### Start the database engine
+
+Almost ready... Start the database engine, so that it is listening, and ready to handle calls from the app:
+
+```bash
+mongodb --dbpath ./coursedbweek2
+```
+
+<br>
+
+#### Run the app, and interact with it using Postman
+
+Now we're ready... Start the app. Then, interact with it using Postman.
+
+<br>
+
+<mark>&nbsp;(the remaining part of this doc is in progress, with more to come)&nbsp;</mark>
+
+### Task phase 2 - deploy phase 1 to a public host
+
+* SECOND phase of activity...
 * shoot the web service to a hosted server (Heroku)
 * shoot the database to a hosted server (MongoDB Atlas)
 * test with Postman
-* SECOND phase of activity...
+
+<br>
+
+### Task phase 3 - local database with related entities
+
+* THIRD phase of activity...
 * use mockaroo to create a related data set (must study the Teams API first to learn the connection-relation pattern)
 * mongo import
 * edit/update the server app
+* test with Postman
+
+<br>
+
+### Task phase 4 - deploy phase 3 to a public host
+
+* FOURTH phase of activity...
 * shoot both to hosted server destinations
 * test with Postman
-* THIRD phase of activity...
+
+<br>
+
+Then...
+* LAST phase of activity...
 * common set of pages to render content (all, one, etc.), each one using a set of functions stored in one js file 
 * vanila JS clients, XmlHttpRequest, and the new Fetch API
 * jQuery assisted
