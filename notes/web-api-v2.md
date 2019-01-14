@@ -93,6 +93,8 @@ Use the same account that you used last term in the predecessor course. Alternat
 
 Confirm or ensure that you can login to your account.
 
+And, confirm that it has a sandbox with one cluster in it. Later (but soon), we will create a new database. 
+
 <br>
 
 #### If your system does not yet have the Heroku CLI
@@ -171,7 +173,7 @@ If successful, it will respond with something like this:
 
 You can use the MongoDB shell or the Robo 3T tool to query the database. The following are shell commands after running `mongo`.
 
-Confirm that it sees your database:  
+Confirm that your database is on the list of known databases:  
 
 ```
 > show dbs
@@ -183,7 +185,7 @@ Use or set the context to your database:
 > use coursedbweek2
 ```
 
-Run a query:
+Run a query (assuming "person" is one of the collections in the database):
 
 ```
 > db.person.find()
@@ -205,6 +207,9 @@ The project will have three (3) JavaScript source code files:
 * `server.js` - the app's entry point 
 * `manager.js` - data service tasks (get, add, etc.) 
 * `schemas.js` - Mongoose "schema" code, to define the shape of the entities 
+
+> Remember...  
+> Create and configure an `index.html` source code file, so that the app has a nice home/landing page. 
 
 Open the code example before continuing. Your professor will explain the code in class. 
 
@@ -243,6 +248,76 @@ In this task phase 2, there are several sub-tasks:
 
 > The authors were delayed by a server configuration issue, and are unable to demonstrate this feature at this time.  
 > The issue has been resolved, and the how-to content will be restored to this section of the notes very soon. 
+
+<br>
+
+#### Move the database content to MongoDB Atlas
+
+The [notes from the previous course](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week8-class1/) can be used to help complete this task. 
+
+In the Atlas console, on the Clusters panel, open the Security settings panel, which will show you a list of database users. We will be using a database user, in the "atlasAdmin" role, when we do the move (mongorestore) task soon. Make sure you note one of the users, and have its credentials. Optionally, you can create a new database user (maybe named "dbRestore") that can be used exclusively for this task. 
+
+> Tip - The Atlas console can suggest a password for a database user.  
+> Yes, that would be a good idea.  
+
+Next, we will prepare the data. While we could do an "import" task similar to what we did above (from the Mockaroo-generated JSON to MongoDB), we will not do that. Instead, we will do a "backup and restore" task. 
+
+MongoDB has a `mongodump` command that will "dump" the contents of an existing database, into a format that can be "restored" to a different server. Exactly what we want here. 
+
+Briefly [read/scan the docs](https://docs.mongodb.com/manual/reference/program/mongodump/) before continuing. Then, use the command:
+1. Make sure the local MongoDB database engine is running
+2. In another Terminal window, navigate to the location where you want the exported data folder
+3. Run the command, for example...  
+`mongodump --db coursedbweek2`
+
+As you have learned (from the docs), the command creates a folder named "dump". Inside, there is a sub-folder with the database name, and inside that, the exported BSON and JSON file(s). 
+
+After the "dump", you can shut down your local database server engine. 
+
+Return to the Atlas console. Select (open) your cluster. Then, select the Collections settings panel. We will create a new database. If you wish, you can use the same name as the one in your local database (something like coursedbweek2). You must specify or create a collection; as the previous course notes guided you, it can be named "tbd", and it can be deleted later (after the restore task). 
+
+After the new database has been created, select it in the Atlas console. Select the Command Line Tools settings panel. We need the "mongorestore" command text. Copy that, and paste it into an editor or a new TextEdit document/window (because we must edit it before we run the command). 
+
+Replace `<PASSWORD>` with an appopriate database user password. 
+
+Add two more options to the command text: 
+
+```text
+--db <NAME-OF-THE-DESTINATION-DATABASE>
+<NAME-OF-THE-LOCAL-FOLDER-THAT-HOLDS-THE-BSON-FILE(S)>
+```
+
+In a Terminal window, navigate to the folder that holds the sub-folder of BSON and JSON files (which is probably "dump"). 
+
+Then, copy the command text, and paste it into a Terminal window. Execute the command. If successful, it will tell you that it restored a number of records to the destination. 
+
+To verify, refresh the Atlas console, and select the database. It should now show the new collection. Select the collection, and it should show the records. 
+
+<br>
+
+#### Update the app, with the connection string info
+
+Still in the Atlas console, select the Command Line Tools settings panel again. We need a connection string. 
+
+Click on the "Connect Instructions" button, and then "Connect Your Application". Choose either a "Short SRV..." or a "Standard..." connection string. Copy the result. 
+
+Paste it into your web service project, into the `server.js` source code file, near the existing connection string statement. 
+
+Save the existing connection string statement, and then configure the new connection string. Two edits MUST be done:
+1. Your database user's password must be provided
+2. The `test` database name must be changed to match the actual target database on the MongoDB Atlas service 
+
+Run your local app (again). If it is working, the app will load successfully, and you will be able to interact with it, using Postman. 
+
+<br>
+
+#### Prepare a new Heroku app, deploy, and test
+
+In this subtask, we will send the now-working local project to Heroku, so that it can be publicly accessible. 
+
+Using the previous course's [Heroku how-to guidance/notes](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/getting-started-with-heroku/), create a new app. 
+
+Deploy the project to the new Heroku app. Finally, test with Postman. 
 
 <br>
 
