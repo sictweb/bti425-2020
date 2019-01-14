@@ -224,7 +224,7 @@ So far, it can handle requests for two resources:
 Almost ready... Start the database engine, so that it is listening, and ready to handle calls from the app:
 
 ```bash
-mongodb --dbpath ./coursedbweek2
+mongod --dbpath ./coursedbweek2
 ```
 
 <br>
