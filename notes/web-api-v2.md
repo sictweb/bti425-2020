@@ -141,7 +141,7 @@ Create a folder (directory) to hold the database.
 Attempt to start and run the database engine. Open a new Terminal window to do this, because you will need your other/existing Terminal window to run more commands. 
 
 ```bash
-mongodb --dbpath ./coursedbweek2
+mongod --dbpath ./coursedbweek2
 ```
 
 This task should result in many console messages, and one of the later or final messages will tell you that it's ready; something like this:
