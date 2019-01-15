@@ -1,7 +1,7 @@
 ## BTI425 course content (weekly notes etc.)
 
 The BTI425 course content is here:  
-[BTI425 course content](https://sictweb.github.io/bti425/)
+[BTI425 course content](https://bti425.ca)
 
 <br>
 

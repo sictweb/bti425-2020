@@ -1,53 +1,23 @@
 ## Week 2 code examples
 
-<br>
+Remember to run this command while in the directory/folder that has the `package.json` file:
 
-### jQuery
-
-Features:
-* How to include the (js) library
-* Some commonly-used selectors, and iterating over a selected element collection
-* Event handling using "on"
-* Some commonly used methods for DOM modification
+```
+npm i
+```
 
 <br>
 
-### jQuery-Ajax
+### JS-XMLHttpRequest
 
-Features:
-* Querying the Teams-API for data (employees) using Ajax
-* Updating the DOM with the results
-
-Note: Both examples include Bootstrap via the recommended CDN.
+Pure JavaScript in an HTML5 app.  
+Uses the XMLHttpRequest object to get data from a web service.
 
 <br>
 
-### jQuery-more
+### JS-Fetch
 
-Features:
-* Working with Bootstrap JavaScript components
-
-<br>
-
-### Lodash
-
-Features:
-* /Lodash is a collection of Lodash functions located in the main.js file
-* /Lodash-Ajax shows a data sorting / paging example using our Teams API and Lodash templates
-
-<br>
-
-### Moment.js
-
-Features:
-* /Moment is a collection of Moment.js functions located in the main.js file
-* /Moment-Ajax shows formatting of the Teams API date data using Moment.js
-
-<br>
-
-### Introduction to SASS
-
-Features:
-* Includes a package.json file with the "node-sass" dependency and a script to watch/compile a provided .scss file
+Pure JavaScript in an HTML5 app.  
+Uses the new Fetch API to get data from a web service.
 
 <br>
