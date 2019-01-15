@@ -22,7 +22,7 @@ This week's topics include:
 
 [Creating a hosted web service with a database](/notes/web-api-v2)
 
-Simple apps that interact with a web service 
+[Simple apps that interact with a web service](/notes/web-api-client-apps) 
 
 Handling Date/Time information using [Moment.js](moment)
 
