@@ -8,7 +8,8 @@ The BTI425 course content is here:
 
 ## BTI425 code examples
 
-Organized by week. Each "week" page has a README file that describes that week's code examples.
+Organized by week.  
+Each "week" page has a README file that describes that week's code examples.
 
 You can browse the code online.
 
