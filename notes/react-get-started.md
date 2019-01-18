@@ -43,7 +43,7 @@ The process will create a new folder, with the code needed to get started.
 
 A React app is a client-side front-end app. It does NOT have a server part to it. A browser user "pulls" a React app, by visiting a URL that is the "root" of the app. As you will learn later, the packaging and deployment process creates a bundle of files that are sent to the browser when the root of the app is requested for the first time. 
 
-That being said, all React developers - you included now - will [start](https://docs.npmjs.com/cli/start) an on-demand per-instance Node.js server, and listen on the app's URL. Then, from a browser, the app is pulled to the browser's memory, and is ready for use. 
+That being said, all React developers - you included now - will [start](https://docs.npmjs.com/cli/start) an on-demand per-instance [localhost](https://en.wikipedia.org/wiki/Localhost) Node.js server, and listen on the app's URL. Then, from a browser, the app is pulled *from* the localhost server, *to* the browser's memory, and is ready for use. 
 
 Therefore, start the server listener:
 
@@ -59,9 +59,29 @@ The server begins listening on HTTP port 3000. Depending on your computer's conf
 
 Start Visual Studio Code. Open the "my-app" folder. 
 
-Alternatively, you can use the command line. However, as you probably noticed in your Terminal window, the on-demand web server is blocking it from further interaction. So, open a new Terminal window (Shell > New Window). Then you can make "my-app" your current folder, and run the `code .` command (**Note**: this option requires you to have added 'code' to your PATH - see: [https://code.visualstudio.com/docs/setup/mac](https://code.visualstudio.com/docs/setup/mac)). 
+Alternatively, you can use the command line. However, as you probably noticed in your Terminal window, the on-demand web server is blocking it from further interaction. So, open a new Terminal window (Cmd+T, or Shell > New Window). Then you can make "my-app" your current folder, and run the `code .` command. 
 
-An easy edit, just to prove that you can do so, is to edit the `App.js` file in the `src` folder. Change the text in the HTML h2 element. After you save your changes, switch over to the browser window. It should show the new content. Behind the scenes, the Terminal process will regenerate the content, making changes where necessary to the deployment assets. As part of the process, the browser will refresh the visible content.
+An easy edit, just to prove that you can do so, is to edit the `App.js` file in the `src` folder. Add an HTML `p` element with some content. After you save your changes, switch over to the browser window. It should show the new content. Behind the scenes, the Terminal process will regenerate the content, making changes where necessary to the deployment assets. As part of the process, the browser will refresh the visible content.
+
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<mark>&nbsp;new topics&nbsp</mark>
+<br>
+<br>
+<br>
+<br>
+
+### New
+
+getting started page, all good recommendations
+
+Add React to a Website - demonstrate
+
+
 
 <br>
 
