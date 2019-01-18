@@ -44,3 +44,10 @@ Code is in `src/index.js`.
 As above, it ignores the "App" component code.  
 
 <br>
+
+### react-intro-05-components-props
+
+Code example from the React docs Main Concepts > Components and Props page.  
+Code is in `src/index.js`.  
+
+<br>
