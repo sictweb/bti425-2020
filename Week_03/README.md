@@ -36,3 +36,11 @@ Code is in `src/index.js`.
 As you can see, it ignores the "App" component code.  
 
 <br>
+
+### react-intro-04-render-elements
+
+Code example from the React docs Main Concepts > Rendering Elements page.  
+Code is in `src/index.js`.  
+As above, it ignores the "App" component code.  
+
+<br>
