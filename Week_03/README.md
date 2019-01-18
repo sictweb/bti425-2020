@@ -28,3 +28,11 @@ Minimal code is in `src/index.js`.
 > Run `npm start` to load it in a browser.
 
 <br>
+
+### react-intro-03-jsx
+
+Code example from the React docs Main Concepts > Introducing JSX page.  
+Code is in `src/index.js`.  
+As you can see, it ignores the "App" component code.  
+
+<br>
