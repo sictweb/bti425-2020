@@ -51,3 +51,10 @@ Code example from the React docs Main Concepts > Components and Props page.
 Code is in `src/index.js`.  
 
 <br>
+
+### react-intro-06-state-and-lifecycle
+
+Code example from the React docs Main Concepts > State and Lifecycle page.  
+Code is in `src/index.js`.  
+
+<br>
