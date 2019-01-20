@@ -79,3 +79,12 @@ Code example from the React docs Main Concepts > Lists and Keys page.
 Code is in `src/index.js`.  
 
 <br>
+
+### react-tania-walkthrough
+
+Code example from [Tania Rascia](https://www.taniarascia.com/getting-started-with-react/).  
+This app does the web API (aka web service) work differently.  
+We use the professor's public web service from last week.  
+Study the code in the `src` folder carefully.  
+
+<br>
