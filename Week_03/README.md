@@ -58,3 +58,10 @@ Code example from the React docs Main Concepts > State and Lifecycle page.
 Code is in `src/index.js`.  
 
 <br>
+
+### react-intro-06-handling-events
+
+Code example from the React docs Main Concepts > Handling Events page.  
+Code is in `src/index.js`.  
+
+<br>
