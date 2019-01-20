@@ -25,7 +25,7 @@ This week, we introduce a new way (for our students) to think about building an 
 
 To get started, read this [introduction to React](react-intro), and also follow its links to read or skim additional content. 
 
-Next, follow along as you get started with React (*link coming soon*). Learn how to install the developer bits, and generate a starter app. Then, start learning about its component-based architecture. Follow the tutorials. 
+Next, follow along as you get started with [React](react-get-started). Learn how to install the developer bits, and generate a starter app. Then, start learning about its component-based architecture. Follow the tutorials. 
 
 Then, we repeat or highlight some of [the important topics and concepts](react-architecture) from the getting started guide and tutorials. 
 
