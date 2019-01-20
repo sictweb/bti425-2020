@@ -8,14 +8,14 @@ npm i
 
 <br>
 
-### react-intro-01-add-to-page
+### react-intro-00-add-to-page
 
 Code example from the React docs Getting Started page.  
 Adds a React component to an existing HTML page.  
 
 <br>
 
-### react-intro-02-hello-world
+### react-intro-01-hello-world
 
 Code example from the React docs Main Concepts > Hello World page.  
 Minimal markup is in `public/index.html`.  
@@ -29,7 +29,7 @@ Minimal code is in `src/index.js`.
 
 <br>
 
-### react-intro-03-jsx
+### react-intro-02-jsx
 
 Code example from the React docs Main Concepts > Introducing JSX page.  
 Code is in `src/index.js`.  
@@ -37,7 +37,7 @@ As you can see, it ignores the "App" component code.
 
 <br>
 
-### react-intro-04-render-elements
+### react-intro-03-render-elements
 
 Code example from the React docs Main Concepts > Rendering Elements page.  
 Code is in `src/index.js`.  
@@ -45,14 +45,14 @@ As above, it ignores the "App" component code.
 
 <br>
 
-### react-intro-05-components-props
+### react-intro-04-components-props
 
 Code example from the React docs Main Concepts > Components and Props page.  
 Code is in `src/index.js`.  
 
 <br>
 
-### react-intro-06-state-and-lifecycle
+### react-intro-05-state-and-lifecycle
 
 Code example from the React docs Main Concepts > State and Lifecycle page.  
 Code is in `src/index.js`.  
