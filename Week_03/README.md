@@ -65,3 +65,17 @@ Code example from the React docs Main Concepts > Handling Events page.
 Code is in `src/index.js`.  
 
 <br>
+
+### react-intro-07-conditional-rendering
+
+Code example from the React docs Main Concepts > Conditional Rendering page.  
+Code is in `src/index.js`.  
+
+<br>
+
+### react-intro-08-lists-keys
+
+Code example from the React docs Main Concepts > Lists and Keys page.  
+Code is in `src/index.js`.  
+
+<br>
