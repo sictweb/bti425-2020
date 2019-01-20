@@ -35,6 +35,7 @@ If you want to run it on demand:
 
 ```text
 npx create-react-app <NEW-APP-NAME>
+```
 
 <br>
 
@@ -50,7 +51,9 @@ create-react-app new-app-1
 
 Alternatively, if you want to run it on demand, run this command:
 
+```text
 npx create-react-app new-app1
+```
 
 The process will create a new folder, with the code needed to get started.
 
