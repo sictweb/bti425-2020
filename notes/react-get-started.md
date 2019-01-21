@@ -77,11 +77,11 @@ The server begins listening on HTTP port 3000. Depending on your computer's conf
 
 ### Edit the app
 
-Start Visual Studio Code. Open the "my-app" folder. 
+Start Visual Studio Code, and open the folder that holds your project. 
 
-Alternatively, you can use the command line. However, as you probably noticed in your Terminal window, the on-demand web server is blocking it from further interaction. So, open a new Terminal window (Cmd+T, or Shell > New Window). Then you can make "my-app" your current folder, and run the `code .` command. 
+An easy edit, just to prove that you can do so, is to edit the `App.js` file in the `src` folder. Add an HTML `p` element with some content. After you save your changes, switch over to the browser window. It should show the new content. 
 
-An easy edit, just to prove that you can do so, is to edit the `App.js` file in the `src` folder. Add an HTML `p` element with some content. After you save your changes, switch over to the browser window. It should show the new content. Behind the scenes, the Terminal process will regenerate the content, making changes where necessary to the deployment assets. As part of the process, the browser will refresh the visible content.
+Behind the scenes, the Terminal process will regenerate the content, making changes where necessary to the deployment assets. As part of the process, the browser will refresh the visible content.
 
 <br>
 
