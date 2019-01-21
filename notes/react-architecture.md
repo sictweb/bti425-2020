@@ -57,9 +57,9 @@ This behaviour holds even through well-understood "navigation" actions, where th
 
 Again, as a summary, here are some notable new concepts and topics gleaned from the getting-started documentation set. 
 
-A component is a source code file, `<whatever>.js`. While HTML is a *markup* container, with embedded *JavaScript code*, React components turn that around. It is centered around JavaScript code. 
+A component is a source code file, `Whatever.js`. While HTML is a *markup* container, with embedded *JavaScript code*, React components turn that around. It is centered around JavaScript code. 
 
-A React app manages the DOM. We must abandon our previous vanilla or library-assisted JavaScript means of manipulating, traversing, and modifying the DOM, and give that task over to the app. We do that with the component architecture.
+A React app manages the DOM. We must abandon our previous pure or library-assisted JavaScript means of manipulating, traversing, and modifying the DOM, and give that task over to the app. We do that with the component architecture.
 
 A component has a well-defined organizational structure, and includes:
 * A function or a class 
@@ -78,3 +78,5 @@ The React development team has published a document that is obviously useful for
 Have a look at it. It's just another way of getting accustomned to the "new" way of thinking about app building.
 
 Happy coding!
+
+<br>

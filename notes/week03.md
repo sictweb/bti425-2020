@@ -5,7 +5,7 @@ layout: default
 
 ## BTI425 Week 3 Notes
 
-The theme for the next two weeks is to introduce you to learning and using **React**, a JavaScript library from Facebook, for building user interfaces. 
+The theme for the next three weeks is to introduce you to learning and using **React**, a JavaScript library from Facebook, for building user interfaces. 
 
 Remember to frequently use the [learning resources](/resources).
 
