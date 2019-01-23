@@ -13,7 +13,7 @@ On the top navigation menu, notice the [Docs](https://reactjs.org/docs/installat
 
 ![React web site](/media/react-docs-topics-install.png)
 
-![React web site](/media/react-docs-topics-install.png)
+![React web site](/media/react-docs-topics-main.png)
 
 <br>
 

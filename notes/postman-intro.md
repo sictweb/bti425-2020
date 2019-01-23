@@ -3,9 +3,6 @@ title: Postman intro
 layout: default
 ---
 
-<mark>Before publishing...</mark>  
-RFC URL  
-
 <br>
 
 ## Introduction to Postman
