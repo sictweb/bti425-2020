@@ -27,11 +27,20 @@ A few other points:
 
 * You must apply the learning - by writing software - to convince others. 
 
-* What content and activity do you have to cover while preparing for a test? Everything, and more. If you think that simply reading/scanning the few hundred words on these weekly notes pages is enough, you're doomed. You must think, analyze, and evaluate all topic content. Follow the links, and look up other referred-to topics. Go back to review/refresh topics covered in previous courses. Write code, study the code examples, and reproduce tutorial and code examples. Make some mistakes, find the solutions, and learn from the experience. 
+* What content and activity do you have to cover while preparing for a test? Everything, and more. If you think that simply reading/scanning the few hundred words on these weekly notes pages is enough, you're doomed. You must think, analyze, and evaluate all topic content. 
+  * Follow the links, and look up other referred-to topics. 
+
+  * Look up and learn related topics that interest you and spark your curiosity. 
+
+  * Go back to review/refresh topics covered in previous courses. 
+
+  * Write code, study the code examples, and reproduce tutorial and code examples. 
+
+  * Make some mistakes, find the solutions, and learn from the experience. 
 
 <br>
 
-**Topics:**
+**Topics this week:**
 
 React app structure and organization (simple style guide) and creating pages using components
 
