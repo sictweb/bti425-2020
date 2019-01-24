@@ -35,7 +35,7 @@ In the first web programming course, you learned the fundamentals of the JavaScr
 
 In the second web programming course, we got a server involved. A server enabled deployment at scale for many users, and persistent storage in a database. Content for browsers was often dynamically *generated* at the server. The bottom line is that the server was still controlling the app's state and workflow, and shipping HTML (and JavaScript and CSS) to the browser clients. 
 
-In the first part of this course, we started working with some JavaScript libraries (jQuery, Knockout) to enable client-side front-end rich app scenarios. For the most part, the role of the server didn't change too much, but we started using JavaScript to make things better. 
+In the first part of this course, we started working with JavaScript alone or with a library (jQuery) to enable client-side front-end rich app scenarios. For the most part, the role of the server didn't change too much, but we started using JavaScript to make things better. 
 
 With React (and then Angular), we keep the JavaScript part, and knowledge of the DOM structure, but we throw away most of the other knowledge about traditional web app development.
 
