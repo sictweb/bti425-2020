@@ -28,6 +28,7 @@ A few other points:
 * You must apply the learning - by writing software - to convince others. 
 
 * What content and activity do you have to cover while preparing for a test? Everything, and more. If you think that simply reading/scanning the few hundred words on these weekly notes pages is enough, you're doomed. You must think, analyze, and evaluate all topic content. 
+
   * Follow the links, and look up other referred-to topics. 
 
   * Look up and learn related topics that interest you and spark your curiosity. 
@@ -38,9 +39,13 @@ A few other points:
 
   * Make some mistakes, find the solutions, and learn from the experience. 
 
+  * If or when you need an answer to or explanation for something, ask your professor, or a fellow student who knows the answer. 
+
 <br>
 
 **Topics this week:**
+
+> Links will be activated soon. 
 
 React app structure and organization (simple style guide) and creating pages using components
 
