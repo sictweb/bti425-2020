@@ -1,21 +1,27 @@
 ---
-title: BTI425 Week 3
+title: BTI425 Week 4
 layout: default
 ---
 
-## BTI425 Week 3 Notes
+## BTI425 Week 4 Notes
 
-The theme for the next three weeks is to introduce you to learning and using **React**, a JavaScript library from Facebook, for building user interfaces. 
+The theme for the next two weeks is to introduce you to learning and using **React**, a JavaScript library from Facebook, for building user interfaces. 
 
-Remember to frequently use the [learning resources](/resources).
+Remember to frequently use the [learning resources](/bti425/resources).
 
 <br>
 
 **Topics:**
 
+This week:
 * Introduction to React
 * Getting started by creating a simple application
 * More about components (as an architectural design)
+
+Next week:
+* Routing
+* Communicating with our Teams API
+* Creating a simple single-page app (SPA) with multiple routes
 
 <br>
 
@@ -56,21 +62,21 @@ As suggested above, everything else a page needs (e.g. images, code, etc.) "repo
 
 Think of the front-end browser / client / end-user experience as a company - "The DOM Company". (DOM is document object model, as you know.) Its organization chart looks like this:
 
-![The old way](/media/boss-html-v1.png)
+![The old way](../media/boss-html-v1.png)
 
 <br>
 
-Recently, a big change happened at The DOM Company, driven by changes in the environment which showed a number of weaknesses in the in-charge HTML page. The big boss was demoted, and the more-capable JavaScript got promoted.
+A big change happened at The DOM Company. The big boss was demoted, and the more-capable JavaScript got promoted.
 
 In essence, the "old way" has been *blown up*:
 
-![BOOM!](/media/explosion.png)
+![BOOM!](../media/explosion.png)
 
 <br>
 
-Now, JavaScript is the big boss. It is now *in charge*. It runs the DOM, and deploys assets (HTML, images, more code, etc.) as determined by the user's flow through the app. The modern organization chart now looks like this:
+Now, JavaScript is the big boss. It is now *in charge*. It runs the DOM, and deploys assets (HTML, images, more code, etc.) as needed by the user's flow through the app. The modern organization chart now looks like this:
 
-![The old way](/media/boss-js-v1.png)
+![The old way](../media/boss-js-v1.png)
 
 <br>
 

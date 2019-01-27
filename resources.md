@@ -34,13 +34,17 @@ Therefore, continue to use the content from the courses that you have successful
 
 You will need one or more devices. A College or personal desktop or laptop, and (likely) a personal mobile device (e.g. a smartphone).
 
+[This document](/notes/postman-intro) introduces you to Postman, and has how-to getting started info.
+
 <br>
 
 **Use macOS or Linux**
 
 We expect the student to do their work on a computer that runs macOS (Mac OS X), Linux, or another Unix-like operating system. 
 
-If a student has a Windows-only computer, then plan to install a multiboot or virtualization environment that enables the installation of Linux.
+If a student has a Windows 10 computer, then plan to install one of the following: 
+* a multiboot or virtualization environment that enables the installation of Linux 
+* Windows Subsystem for Linux, and one of the distros from the Microsoft Store
 
 <br>
 
@@ -176,5 +180,41 @@ For most elements, just begin typing the element name, without the angle bracket
 `[` Custom attribute, e.g. `span[data-bind`
 
 See the [Emmet cheat sheet](https://docs.emmet.io/cheat-sheet/) for full coverage.
+
+<br>
+
+### Other tooling tips
+
+#### npm 
+
+What version of an npm package is installed?
+
+```bash
+# All globally-installed packages
+npm list -g
+
+# One specific globally-installed package
+npm list -g express
+
+# While in the root of a project, one specfic package
+npm list express
+```
+
+<br>
+
+#### MongoDB
+
+Various commands:
+
+```bash
+# Is the database engine installed?
+mongod --version
+
+# Is the command shell installed?
+mongo --version
+
+# Start the database engine
+mongod --dbpath [path-to-database-folder]
+```
 
 <br>

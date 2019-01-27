@@ -35,7 +35,7 @@ In the first web programming course, you learned the fundamentals of the JavaScr
 
 In the second web programming course, we got a server involved. A server enabled deployment at scale for many users, and persistent storage in a database. Content for browsers was often dynamically *generated* at the server. The bottom line is that the server was still controlling the app's state and workflow, and shipping HTML (and JavaScript and CSS) to the browser clients. 
 
-In the first part of this course, we started working with some JavaScript libraries (jQuery, Knockout) to enable client-side front-end rich app scenarios. For the most part, the role of the server didn't change too much, but we started using JavaScript to make things better. 
+In the first part of this course, we started working with JavaScript alone or with a library (jQuery) to enable client-side front-end rich app scenarios. For the most part, the role of the server didn't change too much, but we started using JavaScript to make things better. 
 
 With React (and then Angular), we keep the JavaScript part, and knowledge of the DOM structure, but we throw away most of the other knowledge about traditional web app development.
 
@@ -57,9 +57,9 @@ This behaviour holds even through well-understood "navigation" actions, where th
 
 Again, as a summary, here are some notable new concepts and topics gleaned from the getting-started documentation set. 
 
-A component is a source code file, `<whatever>.js`. While HTML is a *markup* container, with embedded *JavaScript code*, React components turn that around. It is centered around JavaScript code. 
+A component is a source code file, `Whatever.js`. While HTML is a *markup* container, with embedded *JavaScript code*, React components turn that around. It is centered around JavaScript code. 
 
-A React app manages the DOM. We must abandon our previous vanilla or library-assisted JavaScript means of manipulating, traversing, and modifying the DOM, and give that task over to the app. We do that with the component architecture.
+A React app manages the DOM. We must abandon our previous pure or library-assisted JavaScript means of manipulating, traversing, and modifying the DOM, and give that task over to the app. We do that with the component architecture.
 
 A component has a well-defined organizational structure, and includes:
 * A function or a class 
@@ -78,3 +78,5 @@ The React development team has published a document that is obviously useful for
 Have a look at it. It's just another way of getting accustomned to the "new" way of thinking about app building.
 
 Happy coding!
+
+<br>

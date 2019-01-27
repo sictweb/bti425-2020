@@ -1,0 +1,110 @@
+---
+---
+
+/* @import 'jekyll-theme-minimal'; */
+
+@import "{{ site.theme }}";
+
+.wrapper {
+  width:900px;
+}
+
+header {
+  width:150px;
+}
+
+section {
+  width:700px;
+}
+
+footer {
+  width:150px;
+}
+
+/* new items */
+
+.btn {
+  display: inline-block;
+  border: 1px solid lightblue;
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  width: 100px;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+
+  &:hover {
+    background-color: rgba(38, 124, 185, 0.1)
+  }
+}
+
+.active {
+  background-color: rgba(38, 124, 185, 0.3);
+}
+
+.border1 {
+  border: solid 1px black;
+  border-radius: 3px;
+  padding: 0.5rem;
+  margin-right: 2.0rem;
+}
+
+/* end of new items */
+
+@media print, screen and (max-width: 960px) {
+
+  header, section, footer {
+    float:none;
+    position:static;
+    width:auto;
+  }
+
+  header {
+    padding-right:160px;
+  }
+
+  .btn {
+    width: 20%;
+    padding: 0.5rem;
+    font-size: 1.0rem;
+  }
+
+}
+
+@media print, screen and (max-width: 720px) {
+
+  .btn {
+    /* display: block; */
+    width: 20%;
+    padding: 0.5rem;
+    font-size: 1.0rem;
+
+    /*
+    + .btn {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+    */
+  }
+
+  header {
+    padding: 0;
+  }
+}
+
+  @media print, screen and (max-width: 480px) {
+
+    .btn {
+      /* display: block; */
+      width: 40%;
+      /* padding: 0.6rem;
+      font-size: 1.2rem; */
+  
+      /*
+      + .btn {
+        margin-top: 1rem;
+        margin-left: 0;
+      }
+      */
+    }
+  }
+

@@ -5,22 +5,25 @@ layout: default
 
 ## BTI425 Week 2 Notes
 
-The theme for the next week or more is to continue to build client-side, browser-based development skills, using long-established libraries such as jQuery (continued coverage), Moment.js and Lodash.
+This week, we continue our two-week re-introduction to web services. We will work with a database, and then deploy a web service and its database to a public host. 
 
-We will also be introducing at SASS as a powerful and widely adopted CSS preprocessor / extension language.
+Then, a small number of JavaScript-based client apps will be created, to interact with the web service. The plan is to create these apps:
+* Using XmlHttpRequest 
+* Using jQuery
+* Using the new Fetch API
+
+The Moment library - which helps with date handling - will also be introduced. 
 
 <br>
 
-**Topics:**
+### Topics
 
-[jQuery review](jquery-review)
+This week's topics include: 
 
-[jQuery continued](jquery)
+[Creating a hosted web service with a database](/notes/web-api-v2)
+
+[Simple apps that interact with a web service](/notes/web-api-client-apps) 
 
 Handling Date/Time information using [Moment.js](moment)
-
-Helpful Utility Functions with [Lodash](lodash)
-
-[Introduction to SASS](sass)
 
 <br>

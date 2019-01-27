@@ -25,7 +25,7 @@ As the Facebook platform and code base matured into the 2010s, the underlying te
 
 ### What's different
 
-Until now, you have worked directly with the browser document object model (DOM). Changes were made by vanilla JavaScript, and then by jQuery or Knockout. 
+Until now, you have worked directly with the browser document object model (DOM). Changes were made by JavaScript code. 
 
 With React, we must change our thought process. The big difference is that we will not work directly with the DOM. Yes, our work will affect the rendered DOM, but we cannot use that conceptual model as a foundation for building and modifying the DOM. 
 
@@ -63,7 +63,7 @@ Notice the light green box (titled "Info container") surrounding the content bel
 
 Notice also the darker green box (titled "Current weather details"). That is also a component, with embedded components inside. 
 
-![Weather app](../media/react-components-weather.png)
+![Weather app](/media/react-components-weather.png)
 
 <br>
 
@@ -75,6 +75,6 @@ As a React app, each rectangle is a *component*. In contrast to the above, many 
 
 Notice the nesting of components.
 
-![Online store app](../media/react-components-shopping.png)
+![Online store app](/media/react-components-shopping.png)
 
 <br>

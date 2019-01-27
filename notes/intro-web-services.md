@@ -11,7 +11,7 @@ In this document, the authors have a number of goals:
 
 2. Explain the roles of the requestor (the client) and the responder (the server
 
-3. Discuss how a client uses an XmlHttpRequest object to contact a server, and handle (typically) JSON data responses
+3. Discuss how a client uses an HTTP client object (e.g. XmlHttpRequest, or the fetch API) to contact a server, and handle (typically) JSON data responses
 
 4. Promote the idea that we are building and working with a *distributed* computing system, that has two or more autonomous programs that pass messages (requests, responses) among the programs
 
@@ -60,6 +60,14 @@ Absolutely.
 Web services are *vital* for modern software architectures.
 
 For *all* device platforms. 
+
+<br>
+
+### How do I start learning web services?
+
+The course notes and your professor will guide you. However, you must learn (more) about HTTP. 
+
+In class, we will discuss some HTTP topics, recall your BTI325 experience, refer to the [overview on Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol), and the official specification series, [RFC 7230](https://tools.ietf.org/html/rfc7230) to RFC 7235, which replaced RFC 2616 in June 2014.
 
 <br>
 
@@ -171,6 +179,36 @@ Later, you will probably learn how to work with non-text media types. From now o
 
 <br>
 
+
+**Get started with JSON**
+
+JSON is an initialism for <u>J</u>ava<u>S</u>cript <u>O</u>bject <u>N</u>otation.
+
+It is a lightweight data-interchange format. It is language-independent, however it uses conventions that were first suggested by the JavaScript object literal or initializer. JSON has become the *de facto* data-interchange format standard.
+
+Here’s an [overview of JSON](http://en.wikipedia.org/wiki/Json) from Wikipedia.
+
+Here’s the [official web site for JSON](http://json.org/), by Douglas Crockford.
+
+Although JSON is historically derived from JavaScript object literals, there are a few notable differences to programmers who are new to JSON:
+
+* In JSON, each property name must be surrounded by quotes (typically double-quotes). In pure JavaScript, this is optional for single-word property names. 
+
+* In JSON, there is no Date type. Dates are expressed as strings, almost always in ISO 8601 format. In contrast, JavaScript does have a Date object (not a *type*, but an *object*).
+
+While we're on the topic of data types, the property values will be any of about five types:
+1. string
+2. number (integer or decimal)
+3. object (i.e. { } )
+4. array (i.e. [ ] )
+5. null
+
+String values must be surrounded by quotes. 
+
+> The web services that you create in this course will rely on the JSON internet media type.
+
+<br>
+
 **State, data**
 
 Let's discuss *state* in this section of the notes, and in the next section. 
@@ -199,7 +237,7 @@ One of the characteristics of a web app or web service is that it can be used by
 
 Does the server keep track of the interaction state with each client? No. This responsibility is borne by the client app. This design feature is one of most important parts of the web.
 
-"Each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is kept entirely on the client." (Roy Fielding, [section 3.4.3](http://www.ics.uci.edu/~fielding/pubs/dissertation/net_arch_styles.htm#sec_3_4_3))
+"Each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is kept entirely on the client." (Roy Fielding, PhD thesis, [section 3.4.3](http://www.ics.uci.edu/~fielding/pubs/dissertation/net_arch_styles.htm#sec_3_4_3))
 
 The main point is that the server effectively treats every request as separate/discrete/atomic, and *does not* actively maintain any notion of a logical session over time. In other words, no interaction state maintenance or management is done at the server. 
 
