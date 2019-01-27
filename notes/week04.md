@@ -5,7 +5,7 @@ layout: default
 
 ## BTI425 Week 4 Notes
 
-The theme for the next two weeks is to continue to develop our component-oriented web app development skills using React.  We will examine how we can organize our app by splitting up components into separate files and use HTML forms and Ajax to communicate with a back end web service.
+The theme for the next two weeks is to continue to develop our component-oriented web app development skills using React.  We will examine how we can organize our app by splitting up components into separate files and use HTML forms, and communicate with a back-end web service.
 
 <br>
 
@@ -45,15 +45,21 @@ A few other points:
 
 **Topics this week:**
 
+After last week's introduction to React and the component idea, we want to go further. 
+
+Now, we want to work with *many* components, in containment and replacement or navigation scenarios. We have seen the containment idea already, and to implement navigation, we will learn about *routing*. 
+
+Along the way, we will iterate more on two topics, forms, and communicating with a web service. 
+
 > Links will be activated soon. 
 
-React app structure and organization (simple style guide) and creating pages using components
+React app structure and component organization
 
-We will also learn about client-side routing and how we can use the React-Router package to create a SPA (Single-Page Application).
+[Routing](react-routing)
 
-Routing in React
+Forms
 
-Simple Forms and connecting to a web service
+Communicating with a web service
 
 Remember to frequently use the [learning resources](/resources).
 

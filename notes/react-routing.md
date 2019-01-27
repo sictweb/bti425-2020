@@ -5,15 +5,19 @@ layout: default
 
 ## "Routing" in React
 
-One of the key components in creating a SPA (Single Page Application) is Routing.  When Routing is implemented using a framework like React, we will find that we can browse different URL's within our app without actually reloading the page.  In this case, the components of one URL are swapped out for the components of another, giving the illusion that we're navigating through multiple pages, when we're really just adding / removing components based on the browser URL / history.  Our user interface is in-sync with the URL.
+One of the key components in creating a SPA (Single Page Application) is *routing*.
 
-Recently, the most widely-used routing library used to achieve this in react; **React Router** has been updated to [version 4](https://reacttraining.com/react-router/):
+Routing enables navigation among components. It replaces a browser's built-in or default "navigator" management (i.e. management of the URL/address bar), with its own functionality.
 
-> Components are the heart of React's powerful, declarative programming model. React Router is a collection of navigational components that compose declaratively with your application. Whether you want to have bookmarkable URLs for your web app or a composable way to navigate in React Native, React Router works wherever React is rendering.
+When the URL is changed, the desired component(s) are activated and displayed in the view. 
+
+While it is possible to create a router in (JavaScript) code, many developers use a widely-used library, [React Router](https://reacttraining.com/react-router/):
+
+> Components are the heart of React's powerful, declarative programming model. React Router is a collection of navigational components that compose declaratively with your application. Whether you want to have bookmarkable URLs for your web app or a composable way to navigate ... React Router works ...
 
 <br>
 
-## Getting Started using React Router
+### Getting Started using React Router
 
 To start using the React Router library in our web app, we must first fetch react-router-dom using npm (once we have halted our debugging server using Control+C):
 
