@@ -185,6 +185,12 @@ Use or set the context to your database:
 > use coursedbweek2
 ```
 
+What collections are in this database?
+
+```
+> show collections
+```
+
 Run a query (assuming "person" is one of the collections in the database):
 
 ```
