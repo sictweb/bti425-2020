@@ -74,6 +74,8 @@ There are several required online resources:
 * [Bootstrap (version 3) CSS documentation](https://getbootstrap.com/docs/3.3/css/)  
 Links to other topics (e.g. Getting started, etc.) are on that page
 
+* Third-party (formden) [Guide: Bootstrap Forms by Example](https://formden.com/bootstrap-form-guide/)
+
 * Official [Angular Documentation](https://angular.io/docs)
 
 * Angular CLI videos on YouTube, by [Codevolution](https://www.youtube.com/channel/UC80PWRj_ZU8Zu0HSMNVwKWw/videos)
