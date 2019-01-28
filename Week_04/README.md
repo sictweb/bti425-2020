@@ -17,8 +17,6 @@ This one has a more clearly-defined and obvious component and containment struct
 
 ### react-tania-containment
 
-A visualization of the containment structure of the "react-tania-updated" code example. 
-
-<img src="react-tania-containment.png" style="max-width: 20em;">
+A visualization (PNG image) that shows the containment structure of the elements rendered by the "react-tania-updated" code example. 
 
 <br>
