@@ -37,3 +37,13 @@ The React Router package was added. Then:
 * The nav menu `a` elements were changed to `Link` elements 
 
 <br>
+
+### react-ws-intro
+
+This code example uses the Fetch API to communicate with the `reqres.in` testing service.  
+It shows a typical approach to handling all common tasks when working with an entity collection. 
+
+> This code example is still being edited.  
+> More functionality will be added. 
+
+<br>
