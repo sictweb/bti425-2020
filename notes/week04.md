@@ -51,15 +51,18 @@ Now, we want to work with *many* components, in containment and replacement or n
 
 Along the way, we will iterate more on two topics, forms, and communicating with a web service. 
 
-> Links will be activated soon. 
+> More links will be activated soon. 
 
-React app structure and component organization
+Before we do the routing topic, we want to study two code examples, and learn the component concepts that they implement.  
+[React components](react-components)  
+The first code example (`react-app-layout`) shows how a typical viewport is organized, when composed with a number of sequentially-presented components.  
+The second code example (`react-tania-updated`) is (as its name suggests) an updated version of last week's Tania Rascia code example. It has a more clearly-defined and obvious component structure, using containment (aka nesting or embedding). 
 
-[Routing](react-routing)
+[Routing](react-routing) introduction, using the React Router package. 
 
-Forms
+Forms in React apps. 
 
-Communicating with a web service
+Communicating with a web service, with the Fetch API. 
 
 Remember to frequently use the [learning resources](/resources).
 
