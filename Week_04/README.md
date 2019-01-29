@@ -8,6 +8,13 @@ npm i
 
 <br>
 
+### react-app-layout
+
+Typical viewport that includes a number of sequentially-presented components.  
+Also includes a navigation menu example that we can build upon in the "routing" topic.  
+
+<br>
+
 ### react-tania-updated
 
 Updated "Tania" example from last week.  
