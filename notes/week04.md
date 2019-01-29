@@ -59,11 +59,14 @@ The second code example (`react-tania-updated`) is (as its name suggests) an upd
 [Routing](react-routing) introduction, using the React Router package.  
 Open the `react-router-intro` code example as you go through the document. 
 
-> The following will have links, which will be activated soon. 
+> The following linked document and code example is still being edited, and will be finished soon. 
+
+[Communicating with a web service](react-web-service-intro), with the Fetch API.  
+Open the `react-ws-intro` code example as you go through the document. 
+
+> The following will be linked, and will be activated soon. 
 
 Forms in React apps. 
-
-Communicating with a web service, with the Fetch API. 
 
 Remember to frequently use the [learning resources](/resources).
 
