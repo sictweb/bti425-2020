@@ -5,6 +5,7 @@ import UserList from './UserList';
 import UserDetail from './UserDetail';
 import UserEdit from './UserEdit';
 import UserDelete from './UserDelete';
+import UserCreate from './UserCreate';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={() => (<Home />)} />
           <Route exact path='/users' render={() => (<UserList />)} />
+          <Route exact path='/users/create' render={() => (<UserCreate />)} />
           <Route exact path='/users/detail/:id' render={(props) => (<UserDetail id={props.match.params.id} />)} />
           <Route exact path='/users/edit/:id' render={(props) => (<UserEdit id={props.match.params.id} />)} />
           <Route exact path='/users/delete/:id' render={(props) => (<UserDelete id={props.match.params.id} />)} />
