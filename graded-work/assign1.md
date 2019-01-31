@@ -17,7 +17,7 @@ While you are doing the work, if a *specific task* is not clear, or it seems to 
 
 ### Due Date
 
-Thursday, February 7, 2019, at 11:00pm ET
+Sunday, February 10, 2019, at 11:00pm ET
 
 Grade value: 15% of your final course grade
 
