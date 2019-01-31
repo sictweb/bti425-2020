@@ -66,6 +66,9 @@ Open the `react-ws-intro` code example as you go through the document.
 
 > The following will be linked, and will be activated soon. 
 
+There are "patterns" that should be followed when creating an interactive web app. While you probably have had some coverage in the past, the following document collects the patterns into one summary document, which can be used as best-practice guidance.  
+[HTML Form patterns](html-form-patterns)
+
 Forms in React apps. 
 
 Remember to frequently use the [learning resources](/resources).
