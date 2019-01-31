@@ -41,7 +41,7 @@ Finally, the app will be deployed to a public host (another Heroku endpoint), so
 
 Getting started includes generating a new project, and configuring your development environment. 
 
-Use `create-react-app` to generate a new project, probably named `assign`. 
+Use `create-react-app` to generate a new project, probably named `assign1`. 
 
 Make sure that your web service has been deployed to Heroku and Atlas, and make sure that you can interact with it correctly with Postman. This is important, because you must have confidence in the hosted app to make progress on the React app. 
 
