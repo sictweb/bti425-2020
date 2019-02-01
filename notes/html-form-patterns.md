@@ -74,7 +74,8 @@ The following sections briefly show how to implement these interactions. You can
 #### Delete item
 * aka "Delete"
 * URL is typically a collection name plus an identifier
-* two-step process, 1) data entry form, then submit, and 2) result page/view
+* two-step process, 1) data form, then submit, and 2) result page/view
+* the data form can be the content of the "Get one" ("Detail") component above
 * result of the DELETE is unimportant (we don't want to leak info) 
 * causes a redirect to the "List" page/view
 
