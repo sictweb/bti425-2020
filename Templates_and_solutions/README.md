@@ -18,3 +18,19 @@ First published on January 24, 2019.
 (It may be updated or modified to include fixes or improvements.)
 
 <br>
+
+### React layout examples/templates
+
+Published during Week 4 of the course.  
+As noted above, code can be copied, pasted, and adapted. 
+
+#### index-one-component
+
+A React `index.html` file, with a simple structure.  
+Uses the minimum Bootstrap classes to enable a decent appearance. 
+
+> Note - your app needs will be more sophisticated. 
+
+#### form-bootstrap-template-react
+
+Various code snippets, to render HTML Form elements, using Bootstrap classes to enable a decent appearance. 
