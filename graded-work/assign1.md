@@ -69,6 +69,13 @@ In the following sub-sections, we suggest that you do the initial coding work th
 
 We must have a consistent and functional visual layout. Therefore, the first task is to create a layout, or a structure. You can use the guidance in the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example (in the repo). Customize the "template" so that your name appears in the header area of the viewport. Make sure that there is a navigation scheme. And, on each component, include navigation links and/or buttons that enables the user to effectively use the app. 
 
+The "home page" component, as a landing page for the app, will simply state the app's purpose. *More importantly*, it will include two URLS:
+1. the URL to your Heroku-hosted (React) app 
+2. the URL to your Heroku-hosted (MEN) web service 
+
+> Your professor needs the URL to your hosted React app so that it can be tested on a standard computer browser and on a smartphone or tablet.  
+> The URL to your hosted web service is needed too, so that your professor can interact with it using Postman.
+
 <br>
 
 #### Components to support the app's purpose
@@ -170,9 +177,22 @@ For this assignment, there is no required external testing capability. Therefore
 
 <br>
 
+### Deploy the React app to Heroku
+
+[Follow the guidance in the course notes](/notes/react-heroku-deploy), and deploy the React app to a new Heroku app. 
+
+<br>
+
 ### Grading procedure
 
 Your professor will use a checklist during the grading process. The checklist will include items based on the assignment specifications. No, we will not distribute the checklist before the due date. 
+
+Here's some more comments on the grading procedure:
+* Part marks can be earned (it's not an all-or-nothing scheme)  
+* Some marks will be earned for the presence of the web service 
+* Each of the five interaction tasks will earn marks
+  * Some tasks could be "worth" more than others
+* Some marks will be earned for a deployed/hosted React app
 
 Please review (again) the [information about grades](https://bti425.ca/policies#information-about-grades). To repeat one of its points, you will not earn an "A" simply for meeting a set of specifications. High grades are earned with work that is clearly better than expected. Better work includes a range of "qualitative" measures, including code quality, app and/or UI appearance, organization, content formatting, building upon foundations, and so on. 
 
