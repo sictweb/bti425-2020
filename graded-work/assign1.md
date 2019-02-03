@@ -11,7 +11,9 @@ Read/skim all of this document before you begin work.
 
 While you are doing the work, if a *specific task* is not clear, or it seems to require an unreasonable amount of time to complete, or it seems to require knowledge way beyond the content we've covered in the course, please don't hesistate to contact your professor. 
 
-<mark>This document is being edited.<br>This notice will be removed when the edits are complete.</mark>
+> You should NOT have to search for or locate resources "out there" in an effort to complete this work.  
+> The resources provided in this course - notes, linked content, code examples - provide sufficient coverage. Review them frequently.  
+> If you think that you will find "the answer" to this assignment somewhere "out there", you're wrong. Use the course resources as your shortcut. 
 
 <br>
 
@@ -65,7 +67,7 @@ In the following sub-sections, we suggest that you do the initial coding work th
 
 #### Consistent layout 
 
-We must have a consistent and functional visual layout. Therefore, the first task is to create a layout, or a structure. You can use the guidance in the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example (in the repo). Customize the "template" so that your name appears in the header area of the viewport. 
+We must have a consistent and functional visual layout. Therefore, the first task is to create a layout, or a structure. You can use the guidance in the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example (in the repo). Customize the "template" so that your name appears in the header area of the viewport. Make sure that there is a navigation scheme. And, on each component, include navigation links and/or buttons that enables the user to effectively use the app. 
 
 <br>
 
@@ -85,15 +87,94 @@ As suggested by the guidance and topic coverage, configure and test the routing 
 
 ### Doing the work, detail
 
-<mark>More to come...</mark>
+In the following sub-sections, guidance will be given to enable you to iteratively and sucessfully complete each of the five interaction components. 
 
-> In the following sub-sections, guidance will be given to enable you to iteratively and sucessfully complete each of the five interaction components. 
+The following guidance assumes that your Heroku + Atlas hosted web service works, fully and completely. 
+
+> If you need some guidance to complete that task, review the [week 1](/notes/week01) and [week 2](/notes/week02) notes.  
+> Remember the [WebAPIv2-OneEntity](https://github.com/sictweb/bti425/tree/master/Week_02) code example too.  
+
+In your functions that make requests to the web service, make sure that you use the Fetch API. 
+
+<br>
+
+#### Get all
+
+This component should use a repeatable content container to display all objects. An HTML table is ideal for that purpose. In each table row, render links for detail (get one), edit, and delete. It would be nice to style the links as buttons. 
+
+Data will be fetched (from the web service) in the `componentDidMount()` function. 
+
+Here's what it could look like; this is an app that uses the reqres.in testing web service. 
+
+![Get all](media/a1-get-all.png)
+
+<br>
+
+#### Get one
+
+This component displays the data for one specific object. Use an appropriate content container scheme to hold the property names and values. 
+
+Data will be fetched (from the web service) in the `componentDidMount()` function. 
+
+It would be nice to use a *conditional rendering* tactic to nicely handle both the presence and the absence of an object. 
+
+Here's what it could look like; this is an app that uses the reqres.in testing web service. 
+
+![Get one](media/a1-get-one.png)
+
+<br>
+
+#### Add new
+
+This component displays an HTML Form that enables a user to enter and submit data. Use an appropriate content container scheme to implement this feature. Don't hesitate to review and use the info in the course notes about HTML Forms in React apps. 
+
+Data will be sent to the web service, in a "submit" button handler function. After a successful save, redirect to the "detail" (get one) component, so that the user sees the results of their "add new" work.
+
+Here's what it could look like; this is an app that uses the reqres.in testing web service. 
+
+![Add new](media/a1-add-new.png)
+
+<br>
+
+#### Edit existing
+
+You have learned that the visual part of this component will be similar to the "add new" component. The buttons are different. Also, you can decide which object properties are editable. (Do NOT allow the user to edit the MongoDB object identifier property, `_id`). 
+
+From a behaviour point of view, data for the object-to-be-edited will be fetched (from the web service) in the `componentDidMount()` function. 
+
+Then, data will be sent to the web service, in a "submit" button handler function. After a successful save, redirect to the "detail" (get one) component, so that the user sees the results of their "edit existing" work.
+
+Here's what it could look like; this is an app that uses the reqres.in testing web service. 
+
+![Edit existing](media/a1-edit-existing.png)
+
+<br>
+
+#### Delete item
+
+You have learned that the visual part of this component will be similar to the "get one" component. The buttons are different. 
+
+From a behaviour point of view, data for the object-to-be-deleted will be fetched (from the web service) in the `componentDidMount()` function. 
+
+Then, a "delete" request will be sent to the web service, in a "submit" button handler function. Then, redirect to the "list" (get all) component.
+
+Here's what it could look like; this is an app that uses the reqres.in testing web service. 
+
+![Delete item](media/a1-delete-item.png)
 
 <br>
 
 ### Testing your work
 
 For this assignment, there is no required external testing capability. Therefore, rely on your browser tools for this step. 
+
+<br>
+
+### Grading procedure
+
+Your professor will use a checklist during the grading process. The checklist will include items based on the assignment specifications. No, we will not distribute the checklist before the due date. 
+
+Please review (again) the [information about grades](https://bti425.ca/policies#information-about-grades). To repeat one of its points, you will not earn an "A" simply for meeting a set of specifications. High grades are earned with work that is clearly better than expected. Better work includes a range of "qualitative" measures, including code quality, app and/or UI appearance, organization, content formatting, building upon foundations, and so on. 
 
 <br>
 
@@ -109,25 +190,53 @@ SafeAssign compares your work with that of other current and past students, and 
 
 ### Submitting your work
 
-> This procedure will be modified.  
-> We need both the Node+Express web service and the React web app.  
+We need both the Node+Express web service and the React web app.  
 
 Here’s how to submit your work, before the due date and time:
+
+#### Node+Express web service
 
 1. Locate the folder that holds your project files. 
 
 2. Make a copy of the folder. (You will be uploading a zipped version of the copy.)
 
-3. Inside that folder, remove (delete) the `node_modules` folder. Your professor does NOT need that folder. 
+3. Inside that folder, remove (delete) the `node_modules` folder. Your professor does NOT need that folder. Also, if it has a `.git` folder, remove that too.
+
+4. Still in that folder, add a new folder named "MyCode". Copy these source code files to the "MyCode" folder:  
+**The JavaScript (JS) file that holds the "server" code**  
+**The JS file that holds the "manager" code**  
+**The JS file that holds the "schema" code**  
+For each of these files, change the file name extension to "txt".
+
+4. Compress/zip the copied folder. Maybe the name should be something like "webservice.zip". The zip file SHOULD be about 1MB in size. If it isn’t, you haven’t followed the instructions properly.
+
+#### React web app 
+
+1. Locate the folder that holds your project files. 
+
+2. Make a copy of the folder. (You will be uploading a zipped version of the copy.)
+
+3. Inside that folder, remove (delete) the `node_modules` folder. Your professor does NOT need that folder. Also, if it has a `.git` folder, remove that too.
 
 4. Still in that folder, add a new folder named "MyCode". Copy these source code files to the "MyCode" folder:  
 **App.js**  
-**TBA**  
-**TBA**  
+**The JS file that holds the "get all" component**  
+**The JS file that holds the "get one" component**  
+**The JS file that holds the "add new" component**  
+**The JS file that holds the "edit existing" component**  
+**The JS file that holds the "delete item" component**  
 For each of these files, change the file name extension to "txt".
 
-4. Compress/zip the copied folder. The zip file SHOULD be about 1MB in size. If it isn’t, you haven’t followed the instructions properly.
+4. Compress/zip the copied folder. Maybe the name should be something like "reactapp.zip". The zip file SHOULD be about 1MB in size. If it isn’t, you haven’t followed the instructions properly.
 
-5. Login to My.Seneca. Open the course area. Click the “Assignments” link on the left-side navigator. Follow the link for this assignment. Submit/upload your zip file. The page will accept three submissions, so if you upload, then decide to fix something and upload again, you can do so.
+#### Bundle both of them together
+
+Ideally, bundle both of the zip files from above into a single zip file, maybe named something like "assignment1.zip". Then...
+
+Login to My.Seneca.  
+Open the course area.  
+Click the “Assignments” link on the left-side navigator.  
+Follow the link for this assignment.  
+Submit/upload your zip file. The page will accept three submissions, so if you upload, then decide to fix something and upload again, you can do so.
 
 <br>
