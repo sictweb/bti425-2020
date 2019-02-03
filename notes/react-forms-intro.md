@@ -59,7 +59,9 @@ Here are a few other interesting things done while preparing this week's topic c
 #### Want a document title (for the tab)?
 
 In a component's `render()` method, set the document title:  
-`document.title('whatever');`
+```js
+document.title ='whatever';
+```
 
 <br>
 
@@ -90,10 +92,10 @@ this.props.history.push(`/users/detail/${result.id}`);
 
 Do the first two things above. 
 
-The third thing is this:
+The third thing is one of these statements:
 
 ```js
-// Redirect (assuming result.id is a value)
+// Redirect 
 this.props.history.goBack());
 // equivalent to...
 this.props.history.go(-1));
