@@ -17,4 +17,7 @@ There are "patterns" that should be followed when creating an interactive web ap
 While the advice in the previous document is general-purpose, and can be used on any kind of web app, there are some React-specific concepts and techniques that must be learned and implemented.  
 [Forms in React apps](react-forms-intro)
 
+When you're ready, you can deploy a React app to Heroku, so that it is on the public web. Then you can get the app on any device (computer, smartphone), and show others your work.  
+[Deploy React app to Heroku](react-heroku-deploy)
+
 <br>
