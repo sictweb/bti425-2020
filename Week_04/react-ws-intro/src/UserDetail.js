@@ -68,12 +68,12 @@ class UserDetail extends Component {
           </div>
 
         ) : (
-            <p>Requested user was not found</p>
+          <p>Requested user was not found</p>
           )}
 
         <hr />
         <p><Link className='btn btn-warning' to={`/users/edit/${u.id}`}>Edit</Link>&nbsp;&nbsp;
-                    <Link className='btn btn-default' to='/users'>Show list of users</Link></p>
+        <Link className='btn btn-default' to='/users'>Show list of users</Link></p>
       </div>
     );
   }

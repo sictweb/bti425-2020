@@ -13,6 +13,8 @@ class UserCreate extends Component {
 
   state = { name: '', job: '' };
 
+  url = "https://reqres.in/api/users";
+
   handleChange(e) {
     // https://medium.com/@tmkelly28/handling-multiple-form-inputs-in-react-c5eb83755d15
     // Bottom line, new ES6 feature, bracket notation, computed property names
@@ -32,10 +34,9 @@ class UserCreate extends Component {
     // Turn off default form handling
     //e.preventDefault();
 
-    const url = "https://reqres.in/api/users";
     const newUser = { 'name': this.state.name, 'job': this.state.job };
 
-    fetch(url, {
+    fetch(this.url, {
       method: 'POST',
       headers: { "Content-Type": 'application/json' },
       body: JSON.stringify(newUser)
@@ -94,10 +95,8 @@ class UserCreate extends Component {
           </div>
           <div className="form-group">
             <div className="col-md-offset-2 col-md-6">
-              {/* <input type="submit" value="Add User" className="btn btn-primary" />&nbsp;&nbsp; */}
-              {/* <input type="button" onClick={this.handleSubmit} value="Add User" className="btn btn-primary" />&nbsp;&nbsp; */}
               <button disabled={isDisabled} onClick={this.handleSubmit} className="btn btn-primary">Add User</button>&nbsp;&nbsp;
-                                <Link className='btn btn-default' to='/users'>Cancel</Link>
+              <Link className='btn btn-default' to='/users'>Cancel</Link>
             </div>
           </div>
         </div>

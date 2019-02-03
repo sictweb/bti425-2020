@@ -106,7 +106,7 @@ class UserDelete extends Component {
         <hr />
         <p>Confirm that this user should be deleted, or cancel to return to the list of users</p>
         <p><button onClick={this.handleSubmit} className="btn btn-danger">Confirm delete</button>&nbsp;&nbsp;
-                    <Link className='btn btn-default' to='/users'>Cancel</Link></p>
+        <Link className='btn btn-default' to='/users'>Cancel</Link></p>
       </div>
     );
   }

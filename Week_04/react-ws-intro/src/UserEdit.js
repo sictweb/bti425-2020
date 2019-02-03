@@ -130,7 +130,7 @@ class UserEdit extends Component {
             <div className="form-group">
               <div className="col-md-offset-2 col-md-6">
                 <button disabled={isDisabled} onClick={this.handleSubmit} className="btn btn-primary">Save</button>&nbsp;&nbsp;
-                                <Link className='btn btn-default' to='/users'>Cancel</Link>
+                <Link className='btn btn-default' to='/users'>Cancel</Link>
               </div>
             </div>
           </div>
