@@ -41,9 +41,6 @@ The React Router package was added. Then:
 ### react-ws-intro
 
 This code example uses the Fetch API to communicate with the `reqres.in` testing service.  
-It shows a typical approach to handling all common tasks when working with an entity collection. 
-
-> This code example is still being edited.  
-> More functionality will be added. 
+It shows a typical approach to handling all common interaction tasks when working with an entity collection. 
 
 <br>

@@ -4,24 +4,49 @@ import './App.css';
 
 class UserList extends Component {
 
+    // Class properties 
+    
     state = { users: [] };
 
-    componentDidMount() {
-        const url = "https://reqres.in/api/users?per_page=10";
+    url = "https://reqres.in/api/users?per_page=10";
 
-        fetch(url)
-            .then(result => result.json())
-            .then(result => {
-                // "result" is an object, with an array named "data"
-                // Study the shape of the data in the reqres.in service
-                this.setState({ users: result.data });
-            });
+    componentDidMount() {
+
+        // Get all
+        fetch(this.url)
+       .then(response => {
+           // Optional...
+           //this.setState({ httpStatusCode: response.status, httpStatusOk: response.ok });
+           if (response.ok) {
+               // Parse the response body as JSON
+               return response.json();
+           } else if (response.status === 404) {
+               // Not found 
+               throw Error('HTTP 404, Not found');
+           } else {
+               // Some other situation
+               throw Error(`HTTP ${response.status}, ${response.statusText}`);
+           }
+       })
+       .then(responseData => {
+           // "responseData" is an object; here, we're interested in its "data" property
+           // Study the shape of the data in the reqres.in service
+           this.setState({ users: responseData.data });
+           // Optional...
+           //console.log(responseData.data);
+       })
+       .catch(error => {
+           // Handles an error thrown above, as well as network general errors
+           console.log(error)
+       });
+
     }
 
     render() {
         return (
             <div>
-                <p>List of users, from the reqres.in service</p>
+                <h4>List of users, from the reqres.in service</h4>
+                <p><Link className='btn btn-default' to='/users/create'>Add a new user</Link></p>
                 <table className='table table-striped'>
                     <TableHeader />
                     <TableBody users={this.state.users} />
@@ -83,9 +108,9 @@ const TableRow = props => {
             <td>{u.first_name}</td>
             <td>{u.last_name}</td>
             <td><img src={u.avatar} alt='' className='imgInTable' /></td>
-            <td><Link className='btn btn-default' to={`users/detail/${u.id}`}>Details</Link>&nbsp;&nbsp;
-            <Link className='btn btn-warning' to={`users/edit/${u.id}`}>Edit</Link>&nbsp;&nbsp;
-            <Link className='btn btn-danger' to={`users/delete/${u.id}`}>Delete</Link></td>
+            <td><Link className='btn btn-default' to={`/users/detail/${u.id}`}>Details</Link>&nbsp;&nbsp;
+            <Link className='btn btn-warning' to={`/users/edit/${u.id}`}>Edit</Link>&nbsp;&nbsp;
+            <Link className='btn btn-danger' to={`/users/delete/${u.id}`}>Delete</Link></td>
         </tr>
     );
 }

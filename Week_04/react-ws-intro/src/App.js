@@ -64,6 +64,9 @@ const Navbar = () => {
             <Link to='/users'>User list</Link>
           </li>
           <li>
+            <Link to='/users/create'>Add a user</Link>
+          </li>
+          <li>
             <Link to='/othercontent'>Other content</Link>
           </li>
         </ul>
