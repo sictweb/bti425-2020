@@ -35,21 +35,59 @@ app.get("/", (req, res) => {
 // Get all
 app.get("/api/persons", (req, res) => {
   // Call the manager method
-  m.personGetAll().then((data) => {
-    res.json(data);
-  })
-    .catch((err) => {
-      res.status(500).json({ "message": err }).end();
+  m.personGetAll()
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      res.status(500).json({ "message": error });
     })
 });
 
 // Get one
 app.get("/api/persons/:personId", (req, res) => {
   // Call the manager method
-  m.personGetById(req.params.personId).then((data) => {
-    res.json(data);
-  })
-    .catch((err) => {
+  m.personGetById(req.params.personId)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});
+
+// Add new
+app.post("/api/persons", (req, res) => {
+  // Call the manager method
+  m.personAdd(req.body)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      res.status(500).json({ "message": error });
+    })
+});
+
+// Edit existing
+app.put("/api/persons/:personId", (req, res) => {
+  // Call the manager method
+  m.personEdit(req.body)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});
+
+// Delete item
+app.delete("/api/persons/:personId", (req, res) => {
+  // Call the manager method
+  m.personDelete(req.params.personId)
+    .then(() => {
+      res.status(204).end();
+    })
+    .catch(() => {
       res.status(404).json({ "message": "Resource not found" });
     })
 });
@@ -58,7 +96,7 @@ app.get("/api/persons/:personId", (req, res) => {
 // tell the app to start listening for requests
 m.connect().then(() => {
   app.listen(HTTP_PORT, () => { console.log("Ready to handle requests on port " + HTTP_PORT) });
-  })
+})
   .catch((err) => {
     console.log("Unable to start the server:\n" + err);
     process.exit();
