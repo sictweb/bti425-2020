@@ -31,6 +31,4 @@ Uses the minimum Bootstrap classes to enable a decent appearance.
 
 > Note - your app needs will be more sophisticated. 
 
-#### form-bootstrap-template-react
-
-Various code snippets, to render HTML Form elements, using Bootstrap classes to enable a decent appearance. 
+<br>
