@@ -5,7 +5,7 @@ layout: default
 
 ## BTI425 Week 4 Notes
 
-The theme for the next two weeks is to continue to develop our component-oriented web app development skills using React.  We will examine how we can organize our app by splitting up components into separate files and use HTML forms, and communicate with a back-end web service.
+The theme for the next two weeks is to continue to develop our component-oriented web app development skills using React.  We will examine how we can organize our app by splitting up components into separate files, use HTML Forms, and communicate with a back-end web service.
 
 <br>
 
@@ -43,7 +43,7 @@ A few other points:
 
 <br>
 
-**Topics this week:**
+### Topics this week
 
 After last week's introduction to React and the component idea, we want to go further. 
 
@@ -59,17 +59,10 @@ The second code example (`react-tania-updated`) is (as its name suggests) an upd
 [Routing](react-routing) introduction, using the React Router package.  
 Open the `react-router-intro` code example as you go through the document. 
 
-> The following linked document and code example is still being edited, and will be finished soon. 
-
 [Communicating with a web service](react-web-service-intro), with the Fetch API.  
 Open the `react-ws-intro` code example as you go through the document. 
 
-> The following will be linked, and will be activated soon. 
-
-There are "patterns" that should be followed when creating an interactive web app. While you probably have had some coverage in the past, the following document collects the patterns into one summary document, which can be used as best-practice guidance.  
-[HTML Form patterns](html-form-patterns)
-
-Forms in React apps. 
+> Coverage of "Forms" in React apps is moved to [Week 5](week5)
 
 Remember to frequently use the [learning resources](/resources).
 
