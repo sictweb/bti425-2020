@@ -67,20 +67,15 @@ In the following sub-sections, we suggest that you do the initial coding work th
 
 #### Consistent layout 
 
-We must have a consistent and functional visual layout. Therefore, the first task is to create a layout, or a structure. You can use the guidance in the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example (in the repo). Customize the "template" so that your name appears in the header area of the viewport. Make sure that there is a navigation scheme. And, on each component, include navigation links and/or buttons that enables the user to effectively use the app. 
-
-The "home page" component, as a landing page for the app, will simply state the app's purpose. *More importantly*, it will include two URLS:
-1. the URL to your Heroku-hosted (React) app 
-2. the URL to your Heroku-hosted (MEN) web service 
-
-> Your professor needs the URL to your hosted React app so that it can be tested on a standard computer browser and on a smartphone or tablet.  
-> The URL to your hosted web service is needed too, so that your professor can interact with it using Postman.
+We must have a consistent and functional visual layout. Therefore, the first task is to create a layout, or a structure. You can use the guidance in the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example (in the repo). Customize the "template" so that your name appears in the header area of the viewport. Make sure that there is a navigation scheme. 
 
 <br>
 
 #### Components to support the app's purpose
 
-As suggested by the guidance in the [HTML Form patterns](/notes/html-form-patterns) document and the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example, create source code files to hold components for each of the five kinds of interactions. 
+As suggested by the guidance in the [HTML Form patterns](/notes/html-form-patterns) document and the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example, create source code files to hold class components for each of the five kinds of interactions. 
+
+On each component, remember to include navigation links and/or buttons that enables the user to effectively use the app. 
 
 <br>
 
@@ -88,7 +83,14 @@ As suggested by the guidance in the [HTML Form patterns](/notes/html-form-patter
 
 As suggested by the guidance and topic coverage, configure and test the routing feature. Make sure that each of the five (interaction) components participate in routing. The app's navigation menu may have links for only the "list..." and "create..." choices, so test the routing by manually typing in the URLs. 
 
-> Remember to configure a "home" component and route, and a "not found" component and route. 
+Remember to configure a "home" component and route, and a "not found" component and route. 
+
+The "home page" component, as a landing page for the app, will simply state the app's purpose. *More importantly*, it will include two standard HTML hyperlinks:
+1. One is the URL to your Heroku-hosted (React) app 
+2. The other is the URL to your Heroku-hosted (MEN) web service 
+
+> Your professor needs the URL to your hosted React app so that it can be tested on a standard computer browser and on a smartphone or tablet.  
+> The URL to your hosted web service is needed too, so that your professor can interact with it using Postman.
 
 <br>
 
