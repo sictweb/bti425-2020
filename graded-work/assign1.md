@@ -80,7 +80,7 @@ The "home page" component, as a landing page for the app, will simply state the 
 
 #### Components to support the app's purpose
 
-As suggested by the guidance in the [HTML Forms patterns](/notes/html-forms-patterns) document and the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example, create source code files to hold components for each of the five kinds of interactions. 
+As suggested by the guidance in the [HTML Form patterns](/notes/html-form-patterns) document and the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example, create source code files to hold components for each of the five kinds of interactions. 
 
 <br>
 
