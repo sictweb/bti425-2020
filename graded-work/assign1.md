@@ -113,9 +113,9 @@ This component should use a repeatable content container to display all objects.
 
 Data will be fetched (from the web service) in the `componentDidMount()` function. 
 
-Here's what it could look like; this is an app that uses the reqres.in testing web service. 
+Here's what it could look like; this is from the professor's sample solution. 
 
-![Get all](media/a1-get-all.png)
+![Get all](media/a1-example-get-all.png)
 
 <br>
 
@@ -127,9 +127,9 @@ Data will be fetched (from the web service) in the `componentDidMount()` functio
 
 It would be nice to use a *conditional rendering* tactic to nicely handle both the presence and the absence of an object. 
 
-Here's what it could look like; this is an app that uses the reqres.in testing web service. 
+Here's what it could look like; this is from the professor's sample solution.
 
-![Get one](media/a1-get-one.png)
+![Get one](media/a1-example-get-one.png)
 
 <br>
 
@@ -139,9 +139,9 @@ This component displays an HTML Form that enables a user to enter and submit dat
 
 Data will be sent to the web service, in a "submit" button handler function. After a successful save, redirect to the "detail" (get one) component, so that the user sees the results of their "add new" work.
 
-Here's what it could look like; this is an app that uses the reqres.in testing web service. 
+Here's what it could look like; this is from the professor's sample solution.
 
-![Add new](media/a1-add-new.png)
+![Add new](media/a1-example-add-new.png)
 
 <br>
 
@@ -153,9 +153,9 @@ From a behaviour point of view, data for the object-to-be-edited will be fetched
 
 Then, data will be sent to the web service, in a "submit" button handler function. After a successful save, redirect to the "detail" (get one) component, so that the user sees the results of their "edit existing" work.
 
-Here's what it could look like; this is an app that uses the reqres.in testing web service. 
+Here's what it could look like; this is from the professor's sample solution.
 
-![Edit existing](media/a1-edit-existing.png)
+![Edit existing](media/a1-example-edit-existing.png)
 
 <br>
 
@@ -167,9 +167,9 @@ From a behaviour point of view, data for the object-to-be-deleted will be fetche
 
 Then, a "delete" request will be sent to the web service, in a "submit" button handler function. Then, redirect to the "list" (get all) component.
 
-Here's what it could look like; this is an app that uses the reqres.in testing web service. 
+Here's what it could look like; this is from the professor's sample solution.
 
-![Delete item](media/a1-delete-item.png)
+![Delete item](media/a1-example-delete-item.png)
 
 <br>
 
