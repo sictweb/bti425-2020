@@ -87,7 +87,7 @@ Remember to configure a "home" component and route, and a "not found" component 
 
 The "home page" component, as a landing page for the app, will simply state the app's purpose. *More importantly*, it will include two standard HTML hyperlinks:
 1. One is the URL to your Heroku-hosted (React) app 
-2. The other is the URL to your Heroku-hosted (MEN) web service 
+2. The other is the URL to your Heroku-hosted <u>M</u>ongoDB + <u>E</u>xpress.js + <u>N</u>ode.js (MEN) web service 
 
 > Your professor needs the URL to your hosted React app so that it can be tested on a standard computer browser and on a smartphone or tablet.  
 > The URL to your hosted web service is needed too, so that your professor can interact with it using Postman.
@@ -113,6 +113,8 @@ This component should use a repeatable content container to display all objects.
 
 Data will be fetched (from the web service) in the `componentDidMount()` function. 
 
+> Here, make sure that you know and understand the *shape* of the data that is coming in from the call to the web service. Match it to the shape of your local storage (state) property. 
+
 Here's what it could look like; this is from the professor's sample solution. 
 
 ![Get all](media/a1-example-get-all.png)
@@ -137,7 +139,11 @@ Here's what it could look like; this is from the professor's sample solution.
 
 This component displays an HTML Form that enables a user to enter and submit data. Use an appropriate content container scheme to implement this feature. Don't hesitate to review and use the info in the course notes about HTML Forms in React apps. 
 
+The form `<input>` elements must use the proper HTML5 types, so that they will render correctly (and use the right keyboard on mobile devices). 
+
 Data will be sent to the web service, in a "submit" button handler function. After a successful save, redirect to the "detail" (get one) component, so that the user sees the results of their "add new" work.
+
+> Again, make sure that you know and understand the *shape* of the data that the web service is expecting in an "add new" request. Then, send data that matches that shape. 
 
 Here's what it could look like; this is from the professor's sample solution.
 
@@ -151,7 +157,11 @@ You have learned that the visual part of this component will be similar to the "
 
 From a behaviour point of view, data for the object-to-be-edited will be fetched (from the web service) in the `componentDidMount()` function. 
 
+There are different strategies for showing/inserting the data-to-be-edited into the form elements. You may, or may not have to, use the `value` attribute. If you want to use that, please remember that its name in React JSX is `defaultValue`. 
+
 Then, data will be sent to the web service, in a "submit" button handler function. After a successful save, redirect to the "detail" (get one) component, so that the user sees the results of their "edit existing" work.
+
+> One more time... make sure that you know and understand the *shape* of the data that the web service is expecting in an "edit existing" request. Then, send data that matches that shape. 
 
 Here's what it could look like; this is from the professor's sample solution.
 
@@ -183,6 +193,11 @@ For this assignment, there is no required external testing capability. Therefore
 
 [Follow the guidance in the course notes](/notes/react-heroku-deploy), and deploy the React app to a new Heroku app. 
 
+> Remember to do as noted above...  
+> Update your home page component to include two standard HTML hyperlinks:  
+> 1. One is the URL to your Heroku-hosted (React) app  
+> 2. The other is the URL to your Heroku-hosted (MEN) web service 
+
 <br>
 
 ### Grading procedure
@@ -192,11 +207,11 @@ Your professor will use a checklist during the grading process. The checklist wi
 Here's some more comments on the grading procedure:
 * Part marks can be earned (it's not an all-or-nothing scheme)  
 * Some marks will be earned for the presence of the web service 
+* Some marks will be earned for a deployed/hosted React app
 * Each of the five interaction tasks will earn marks
   * Some tasks could be "worth" more than others
-* Some marks will be earned for a deployed/hosted React app
 
-Please review (again) the [information about grades](https://bti425.ca/policies#information-about-grades). To repeat one of its points, you will not earn an "A" simply for meeting a set of specifications. High grades are earned with work that is clearly better than expected. Better work includes a range of "qualitative" measures, including code quality, app and/or UI appearance, organization, content formatting, building upon foundations, and so on. 
+Please review (again) the [information about grades](https://bti425.ca/policies#information-about-grades). To repeat one of its points, you will not earn an "A" simply for meeting a set of specifications. High grades are earned with work that is clearly better than expected (by meeting the specs). Better work includes a range of "qualitative" measures, including code quality, app and/or UI appearance, organization, content formatting, building upon foundations, and so on. 
 
 <br>
 
