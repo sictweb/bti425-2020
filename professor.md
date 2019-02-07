@@ -30,7 +30,7 @@ For the Winter 2019 term, Professor **Tanvir Alam** teaches section **C** of the
 Info | Details
 --- | ---
 Email | tanvir.alam -at- senecacollege.ca
-Office | DB2091 in the School of ICT office area<br>(Dahdaleh building, south end, second floor)
+Office | DB2111 in the School of ICT office area<br>(Dahdaleh building, south end, second floor)
 Web | [Web site](https://scs.senecac.on.ca/~tanvir.alam/)
 Timetable | [Available at this link](https://scs.senecac.on.ca/~tanvir.alam/)
 

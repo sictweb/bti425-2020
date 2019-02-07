@@ -20,4 +20,7 @@ While the advice in the previous document is general-purpose, and can be used on
 When you're ready, you can deploy a React app to Heroku, so that it is on the public web. Then you can get the app on any device (computer, smartphone), and show others your work.  
 [Deploy React app to Heroku](react-heroku-deploy)
 
+During development, you can use debugging and inspection tools.  
+[React debugging introduction](react-debug-intro)
+
 <br>
