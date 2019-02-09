@@ -202,6 +202,20 @@ npm list express
 
 <br>
 
+#### Heroku and its CLI
+
+Heroku Dev Center, documentation:  
+[Heroku CLI Usage](https://devcenter.heroku.com/articles/using-the-cli)
+
+If you attempt to do this:  
+`git push heroku master`  
+...and it generates an error, then verify that your project knows its remote destination (i.e. its hosting Heroku app):  
+`git remote -v`  
+If it does know its remote destination, then you can set/fix it. [As described and shown here](https://devcenter.heroku.com/articles/git#creating-a-heroku-remote), this command will set the remote to an existing Heroku app named "foo-bar-app":  
+`heroku git:remote -a foo-bar-app`
+
+<br>
+
 #### MongoDB
 
 Various commands:

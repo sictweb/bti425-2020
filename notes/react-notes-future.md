@@ -65,3 +65,15 @@ The `start` script will build and package your app.
 Then deliver it to a new browser window/tab.  
 
 <br>
+
+### Validation
+
+Did not cover any of this in 2018 and 2019. 
+
+Here are some saved links:
+
+[Form valication (Learnetto)](https://learnetto.com/blog/how-to-do-simple-form-validation-in-reactjs)
+
+[React docs, add CSS class to component programmatically](https://reactjs.org/docs/faq-styling.html)
+
+<br>

@@ -37,6 +37,10 @@ The app will use React components to support the typical range of data service t
 
 Finally, the app will be deployed to a public host (another Heroku endpoint), so that you can deliver it to other devices (including, for example, your smartphone).  
 
+Here's a diagram that shows the relationships among your browser, the deployed React app, and the deployed web service. Right-click and open it in a new tab/window to view it full size. 
+
+<img style="max-width: 300px;" class="border1 img-responsive" alt="Relationships" title="Relationships" src="media/a1-app-hosting.png" />
+
 <br>
 
 ### Getting started
