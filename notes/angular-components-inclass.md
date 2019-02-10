@@ -11,29 +11,17 @@ Live coding demonstration.
 
 ### Create an app
 
-Create an app:
+Create a new Angular app:
 
 ```
-ng new my-customers --routing -st -sg
+ng new my-customers --routing -S -g
 ```
-
-**IMPORTANT NOTE:**
-
-The latest version of the Angular CLI confuses the `-st` and `-sg` options with the new `-s` and `-t` options, which indicate that we **do not** wish to have external template (.html) and style (.css) files.  
-
-If you have created an app using the above `ng new my-customers --routing -st -sg` command and your solution **does not contain app.component.html** then use the following command instead:
-
-```
-ng new my-customers --routing -S
-```
-
-This will skip the testing, while still keeping the .html &amp; .css files intact.  Unfortunately, it will still generate a .git directory inside your newly created "my-customers" directory.  Simply remove the .git directory to avoid using git in our solution.
 
 Open it in a code editor. Study the result. 
 
 Run the app, and view it in a browser. Open the browser dev tools, and show the console.
 
-Add the Bootstrap CSS rules from its CDN, and make sure that it is working.
+Edit the `index.html` file, to add the Bootstrap CSS rules from its CDN, and then make sure that it is working.
 
 <br>
 
@@ -42,28 +30,25 @@ Add the Bootstrap CSS rules from its CDN, and make sure that it is working.
 Create two components. We need a nice "header":
 
 ```
-ng g c header --flat
+ng g c header --flat -S
 ```
 
-> Remember: `g` is the abbreviation for "generate", and `c` is the abbreviation for "component". 
+> Remember: `g` is the abbreviation for "generate", and `c` is the abbreviation for "component".  
+> And: `--flat` does not create a folder to hold the new component's source code files, and `-S` does not create a test class file. 
 
 Next, we need a component that will display a list of customers:
 
 ```
-ng g c customers --flat
+ng g c customers --flat -S
 ```
-
-> Remember: `--flat`` does not create a folder to hold the new component's source code files. 
 
 Finally, we need to write a code module that describes a "customer" - data or schema code, in other words. In an Angular app, we can use a class, or a [TypeScript *interface*](https://www.typescriptlang.org/docs/handbook/interfaces.html). Here, we will use a class:
 
 ```
-ng g class customer --spec false
+ng g class customer -S
 ```
 
-> Note: the `--spec false` option does not create the additional file(s) used by the software testing system.
-
-> Note: in C++, you are probably familiar with an abstract base class, with pure virtual methods. In TypeScript, this is called an *interface*.  
+> Note and FYI: In C++, you are probably familiar with an abstract base class, with pure virtual methods. In TypeScript, this is called an *interface*.  
 > You can create a new class instance that inherits from an interface. Similar to C++, you cannot directly create an instance of an abstract base class - you must create a new instance of an object (i.e. a class) that *inherits* from an abstract base class.  
 > The same concept applies to a TypeScript interface.  
 > Later in the course, we will create and use interfaces. 

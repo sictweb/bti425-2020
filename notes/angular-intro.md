@@ -81,7 +81,7 @@ As a brief introduction and paraphrasing from the documentation:
 > 
 > The developer tools [transpile](https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/) TypeScript code into plain JavaScript.
 
-We're not going to obsess about the TypeScript differences from JavaScript. We're just going to simply begin using TypeScript, and incrementally and immediately explain anything that needs it.
+We're not going to obsess about the TypeScript differences from JavaScript. We're just going to simply begin using TypeScript, and incrementally and immediately explain anything that needs an explanation.
 
 <br>
 

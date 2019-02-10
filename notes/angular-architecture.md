@@ -46,8 +46,8 @@ Now, look at the `.ts` file. By convention, JavaScript source code files use the
 
 So the file contains our program code for the component. All components have the same structure:
 * "import" statement(s)
-* A "decorator" - `@Component()` - this is a probable ES2016 (the next! version of JavaScript) language feature, which adds features and functionality to another class
-* The "class" declaration, which holds program code
+* A "decorator" - `@Component()` - this is a probable future JavaScript language feature, which enables a library or framework to implement part of a class' behaviour; we pass in a configuration object
+* The "class" declaration, which holds the component's code
 
 That's the getting-started explanation. Components that do more will have more code - as you would expect - but this is how we can begin to understand.
 

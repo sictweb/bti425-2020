@@ -31,11 +31,9 @@ In summary, from the Angular documentation's Fundamentals > Architecture guide:
 
 ![Component code + template + metadata = a view](https://angular.io/generated/images/guide/architecture/template-metadata-component.png)
 
-How does the MVC (or MVVM) design patterns map to Angular? Well, in Angular:
-
-The *component* has the code for the *controller* and the *view model*. 
-
-The *template* has the code for the *view*. 
+If you are familiar with the MVC or MVVM design patterns, how do they map to Angular code? Well, in Angular:
+* The *component* has the code for the *controller* or the *view model*. 
+* The *template* has the code for the *view*. 
 
 <br>
 
@@ -50,12 +48,12 @@ Before we start writing components, we should get a new Angular project going.  
 3. Generate a new project (replace "my-dream-app" with the desired name of the project):
 
   ```
-  ng new my-dream-app --routing -st
+  ng new my-app-name --routing -S -g
   ```
   
->  **Note:**  
+>  **Remember:**  
 > The `--routing` option adds the code we need for "routing", which is a topic that will be covered in detail soon. Adding routing now (when the new project is created) is a *best practice*.  
-> The `-st` option does not add "testing" code. One of the effects is that it reduces the size of the project, and makes it slightly faster in the change detection and build processes.
+> The `-S` option does not add "testing" code, and the `-g` option does not add the git repo code. 
 
 <br>
 
@@ -64,7 +62,7 @@ Before we start writing components, we should get a new Angular project going.  
 5. Finally, run/start the app:
 
 ```
-cd my-dream-app
+cd my-app-name
 ng serve --open
 ```
 
@@ -74,33 +72,40 @@ ng serve --open
 
 Recall, from the Angular "Tour of Heroes" app, we can manually create a component using the following task:
 
-```
-ng generate component foo --flat
+```bash
+# Make sure you are in the project folder
+ng generate component foo --flat -S
+# You can use abbreviations too...
+# ng g c foo --flat -S
 ```
 
 > **Note:**  
-> The "--flat" flag will NOT create a folder to enclose the component's source code files. We'll use that for the first while, until the number of files in the app folder gets too unreasonable.  
+> The "--flat" flag will NOT create a folder to enclose the component's source code files. We'll use that for the first while, until the number of files in the app folder gets too numerous.  
 > Documentation for the `ng generate component` command is [here](https://github.com/angular/angular-cli/wiki/generate-component). 
 
 <br>
 
 Using "ng generate" to create the "foo" component for us has saved us time by automating the following (necessary) steps:
 
-* Created the files: **foo.component.css**, **foo.component.html**, **foo.component.ts** (including the correct class, and "@Component" decorator to make use of the .html &amp; .css files / providing a default "app-" selector property) and lastly, **foo.component.spec.ts** (we can remove this file if we used the "-st" (or "-S", if we're using the latest version of the Angular CLI) option when creating the project, since we are not interested in testing at the moment)
+* Created the files:  
+**foo.component.css**  
+**foo.component.html**  
+**foo.component.ts**  
+(including the correct class, and "@Component" decorator to make use of the .html &amp; .css files / providing a default "app-" selector property)
 
 * Added the correct "import" statement to app.module.ts, ie:
 
-```
+```js
 import { FooComponent } from './foo.component';
 ```
 
-* Added "FooComponent" to the "@NgModule" decoration in app.module.ts, ie:
+* Added "FooComponent" to the `@NgModule` decorator in `app.module.ts`:
 
 ```js
 @NgModule({
   declarations: [
     AppComponent,
-    FooComponent //Added!
+    FooComponent // Added!
   ],
   imports: [
     BrowserModule,
@@ -114,7 +119,7 @@ export class AppModule { }
 
 <br>
 
-### Including the New Component
+### Adding the new component to the view
 
 Recall the "selector" property that was automatically added, ie "app-foo".  This corresponds to the custom element `<app-foo></app-foo>` that we can use to render our newly created "foo" component.
 
@@ -147,10 +152,10 @@ Note:  We will save ["Two-way binding"](https://angular.io/guide/template-syntax
 
 <br>
 
-#### Quick Directive Overview
+#### Quick "directive" overview
 
 A *directive* is an Angular class. It interacts with HTML elements in the browser DOM. There are three kinds of directives:
-1. Components — directives with an HTML template
+1. Components — directives that have an HTML template
 2. Structural directives — they change the DOM layout by adding and removing DOM elements
 3. Attribute directives — change the appearance or behavior of an element
 
@@ -158,7 +163,7 @@ Components are the most common kind of directive.
 
 [Directives overview](https://angular.io/guide/attribute-directives#directives-overview)
 
-**Built In Directives**
+**Built-in directives**
 
 * [Built-in attribute directives](https://angular.io/guide/template-syntax#built-in-attribute-directives)
 * [Built-in structural directives](https://angular.io/guide/template-syntax#built-in-structural-directives) (ie, \*ngIf / \*ngFor, etc.)

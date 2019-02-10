@@ -13,9 +13,9 @@ This week, it's all about *getting started with Angular*. Then, beginning next w
 3. Services
 4. Forms
 
-After that, we'll put together a number of apps. 
+After that, we'll put together some apps. 
 
-Remember to frequently use the [learning resources](/web422/resources).
+Remember to frequently use the [learning resources](/resources).
 
 <br>
 

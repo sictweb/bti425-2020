@@ -13,7 +13,7 @@ Get ready by visiting the [Angular home page](https://angular.io/), and read/sca
 * The DOCS landing page
 * A few screenfuls of the GETTING STARTED page
 
-![Angular web site](../media/angular-web-site.png)
+![Angular web site](/media/angular-web-site.png)
 
 <br>
 
@@ -21,9 +21,9 @@ Get ready by visiting the [Angular home page](https://angular.io/), and read/sca
 
 As described in the GETTING STARTED installation notes, Angular is installed by using the Node Package Manager. 
 
-During the React topic coverage, you learned to install and use the *React app generator*. As you experienced, it adds a good amount of value to the dev process.
+During the React topic coverage, you learned to use and perhaps install the *React app generator*. As you experienced, it adds a good amount of value to the dev process.
 
-Angular has an app generator too, the [Angular CLI](https://cli.angular.io/). 
+Angular has an app generator too, the [Angular CLI](https://cli.angular.io/). It adds the `ng` command to your shell. 
 
 ![Angular CLI web site](../media/angular-cli-web-site.png)
 
@@ -41,50 +41,42 @@ npm install -g @angular/cli
 
 Next, create a new app. Assuming that you want to create a new app (and folder) named "my-dream-app":
 
-```text
-ng new my-dream-app --routing -st -sg
+```bash
+# upper and lower case use for the options is important
+ng new my-app-name --routing -S -g
 ```
-
-> Note: "ng" is an Angular command.
 
 The process will create a new folder, with the code needed to get started.
 
 > Notes:  
 > The `--routing` option adds the code we need for "routing", which is a topic that will be covered soon. Adding routing now (when the new project is created) is a *best practice*.  
-> The `-st` option avoids adding "testing" code. We don't need that in the near future.  
-> The `-sg` option does not create a Git repository for the project. We don't need a repo in the near future.
+> The `-S` option avoids adding "testing" code. We don't need that in the near future.  
+> The `-g` option does not create a Git repository for the project. We don't need a repo in the near future.
 
-**IMPORTANT NOTE:**
-
-The latest version of the Angular CLI confuses the `-st` and `-sg` options with the new `-s` and `-t` options, which indicate that we **do not** wish to have external template (.html) and style (.css) files.  
-
-If you have created an app using the above `ng new my-dream-app --routing -st -sg` command and your solution **does not contain app.component.html** then use the following command instead:
-
-```
-ng new my-dream-app --routing -S
-```
-
-This will skip the testing, while still keeping the .html &amp; .css files intact.  Unfortunately, it will still generate a .git directory inside your newly created "my-dream-app" directory.  Simply remove the .git directory to avoid using git in our solution.
 <br>
 
 ### Run the app
 
-An Angular app is a client-side front-end app. It does NOT have a server part to it. A browser user "pulls" an Angular app, by visiting a URL that is the "root" of the app. As you will learn later, the packaging and deployment process creates a bundle of files that are sent to the browser when the root of the app is requested for the first time. 
+Similar to a React app, an Angular app is a client-side front-end app. It does NOT have a server part to it. A browser user "pulls" an Angular app, by visiting a URL that is the "root" of the app. As you will learn later, the build, packaging, and deployment process creates a bundle of files that are sent to the browser when the root of the app is requested for the first time. 
 
-That being said, all Angular developers - you included now - will start an on-demand per-instance Node.js server, and listen on the app's URL. Then, from a browser, the app is pulled to the browser's memory, and is ready for use. 
+That being said, during development on your computer, will start an on-demand per-instance Node.js server, and listen on the app's URL. Then, from a browser, the app is pulled to the browser's memory, and is ready for use. 
 
 Therefore, start the server listener:
 
-```text
-cd my-dream-app
+```bash
+cd my-app-name
 ng serve --open
 ```
 
-> Note: The `--open` option saves you time and effort.
+> Note: The `--open` option opens a browser tab and loads the app. 
 
-The server begins listening on HTTP port 4200. A browser tab/window should open, loading the resource [localhost port 4200 URL](http://localhost:4200/). 
+The server begins listening on HTTP port 4200. 
 
 ![Server is running](../media/angular-server-process.png)
+
+<br>
+
+A browser tab/window should open, loading the resource [localhost port 4200 URL](http://localhost:4200/). 
 
 <br>
 
