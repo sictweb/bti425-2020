@@ -19,15 +19,15 @@ Remember to frequently use the [learning resources](/resources).
 
 <br>
 
-**Topics:**
+### Topics
 
-A number of them:
+A number of them today:
 * History
 * Orientation
 * Big ideas
 * Roadmap
 
-Getting started:
+Then, technical getting started topics:
 * Install
 * Edit cycle
 * TypeScript
@@ -44,12 +44,20 @@ Then, we repeat or highlight some of [the important topics and concepts](angular
 
 = = = = = 
 
+#### Code examples
+
+We have two code examples today:
+1. Animals - an Angular version of the multi-component React code example from week 4 
+2. Customers - the end result of the in-class demonstration 
+
+= = = = = 
+
 The first in-depth topic set that we will study is *components*. Let's get started now with this topic:
 
 [Angular Components Introduction](angular-components-intro): This document discusses Components in detail, including how to get started using components / creating components from scratch, using "templates" in components, and writing attribute/structural directives.
 
-[Angular Components Example](angular-components-example): This document guides us through a simple example ("animals"), where we plan a view with multiple components from scratch.
+[Angular Components Example](angular-components-example): This document guides us through a simple example ("animals"), where we plan a view with multiple components from scratch. Then, download and study its code example from the GitHub repo.
 
-In class on Tuesday, February 20, the professor started working with a project that shows a particular strength of Angular - easy and robust updates in the user interface. [Follow along in the notes](angular-components-inclass), and try to build it yourself. Then, download and study its code example from the GitHub repo.
+In class this week, the professor will demonstrate a project that shows a particular strength of Angular - easy and robust updates in the user interface. [Follow along in the notes](angular-components-inclass), and try to build it yourself. Then, download and study its code example from the GitHub repo.
 
 <br>
