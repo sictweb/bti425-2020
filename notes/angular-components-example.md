@@ -32,28 +32,16 @@ For our example app, here's what we're trying to do. Each rectangle will (or cou
 At this point, we will assume that you are comfortable using the Angular CLI to create a new project. For example, this command will create a new "animals" project:
 
 ```
-ng new animals --routing -st -sg
+ng new animals --routing -S -g
 ```
   
 **Recall:** 
   
 The `--routing` option adds the code we need for "routing", which is a topic that will be covered in detail next week. Adding routing now (when the new project is created) is a *best practice*. 
 
-The `-st` option does not add "testing" code. One of the effects is that it reduces the size of the project, and makes it slightly faster in the change detection and build processes.
+The `-S` option does not add "testing" code. One of the effects is that it reduces the size of the project, and makes it slightly faster in the change detection and build processes.
 
-The `-sg` option does not create a Git repository for the project. That simplifies the configuration for us. 
-
-**IMPORTANT NOTE:**
-
-The latest version of the Angular CLI confuses the `-st` and `-sg` options with the new `-s` and `-t` options, which indicate that we **do not** wish to have external template (.html) and style (.css) files.  
-
-If you have created an app using the above `ng new animals --routing -st -sg` command and your solution **does not contain app.component.html** then use the following command instead:
-
-```
-ng new animals --routing -S
-```
-
-This will skip the testing, while still keeping the .html &amp; .css files intact.  Unfortunately, it will still generate a .git directory inside your newly created "animals" directory.  Simply remove the .git directory to avoid using git in our solution.
+The `-g` option does not create a Git repository for the project. That simplifies the configuration for us. 
 
 <br>
 
@@ -65,13 +53,6 @@ We can add this framework by adding this now-familiar code to the `<head>` eleme
 
 ```html
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-```
-
-Optionally, add the following code to the bottom of the `<body>` element:
-
-```html
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 ```
 
 <br>
@@ -88,11 +69,11 @@ Create the app's basic structural components:
 This is done with Angular CLI commands:
 
 ```text
-ng g c header --flat
-ng g c navbar --flat
-ng g c content --flat
-ng g c sidebar --flat
-ng g c footer --flat
+ng g c header --flat -S
+ng g c navbar --flat -S
+ng g c content --flat -S
+ng g c sidebar --flat -S
+ng g c footer --flat -S
 ```
 
 To review, the `ng g c` command creates the component's source code files, and updates the app module (by adding import-related code). 
@@ -124,8 +105,8 @@ Create components to support routing:
 This is done with Angular CLI commands:
 
 ```text
-ng g c home --flat
-ng g c PageNotFound --flat
+ng g c home --flat -S
+ng g c PageNotFound --flat -S
 ```
 
 Notice the use of CamelCase on the "PageNotFound" name. The Angular CLI will parse that, and make the component's file name assets use lower case, with dash separators between the words. Nice.
@@ -144,11 +125,11 @@ Finally, create components to hold content; we'll use an *animals* theme:
 This is done with Angular CLI commands:
 
 ```text
-ng g c horse --flat
-ng g c lizard --flat
-ng g c bear --flat
-ng g c eagle --flat
-ng g c dolphin --flat
+ng g c horse --flat -S
+ng g c lizard --flat -S
+ng g c bear --flat -S
+ng g c eagle --flat -S
+ng g c dolphin --flat -S
 ```
 
 At this point, you can edit the HTML template content to meet your needs. For example, the "horse" component has this HTML template to render a Bootstrap 3 "Panel" (the text content is from Wikipedia, and the image is from a Google search):
@@ -168,7 +149,7 @@ At this point, you can edit the HTML template content to meet your needs. For ex
       to describe horses that have never been domesticated, such as the endangered Przewalski's horse, a separate subspecies,
       and the only remaining true wild horse. There is an extensive, specialized vocabulary used to describe equine-related
       concepts, covering everything from anatomy to life stages, size, colors, markings, breeds, locomotion, and behavior.</p>
-    <img src="http://ashs.com.au/images/New_Buttons-2017-03-24/StudBook3.png" alt="Horse" class="w-25">
+    <img src="https://www.telegraph.co.uk/content/dam/news/2016/09/03/suffolk_punch_trans_NvBQzQNjv4BqUbzvD9ouAAOpO_mEfvrdBVA0VtEYzfHXJUGqhmNiH34.jpg" alt="Horse" class="img-responsive">
   </div>
 </div>
 ```
