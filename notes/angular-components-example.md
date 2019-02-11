@@ -47,7 +47,7 @@ The `-g` option does not create a Git repository for the project. That simplifie
 
 #### Adding the Bootstrap styles
 
-As we have seen, a quick way to kickstart the style / structure of your project is to use the Bootstrap framework. (At the time of writing, Bootstrap version 3.3.7 is a good choice, however Bootstrap 4 is currently in Beta and is available as well.)
+As we have seen, a quick way to kickstart the style / structure of your project is to use the Bootstrap framework. (At the time of writing, Bootstrap version 3.3.7 is a good choice, as is version 3.4. Also, Bootstrap 4 is new, with many new things, and some breaking changes.)
 
 We can add this framework by adding this now-familiar code to the `<head>` element in the `src/index.html` file:
 
@@ -109,7 +109,7 @@ ng g c home --flat -S
 ng g c PageNotFound --flat -S
 ```
 
-Notice the use of CamelCase on the "PageNotFound" name. The Angular CLI will parse that, and make the component's file name assets use lower case, with dash separators between the words. Nice.
+Notice the use of PascalCase on the "PageNotFound" name. The Angular CLI will parse that, and make the component's file name assets use lower case, with dash separators between the words. Nice.
 
 <br> 
 

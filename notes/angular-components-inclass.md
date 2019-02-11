@@ -188,7 +188,7 @@ Open the component's HTML template for editing. Create a Bootstrap row div, and 
 
 Then, render a table. Use the Bootstrap table and table-striped classes. It might be nice to use the table-hover class too.
 
-Now, render the rows. How? the `*ngFor` *structural directive* will do that for us. Similar to the "foreach" binding in Knockout, it will create elements for each item in a collection. Here's what it looks like:
+Now, render the rows. How? the `*ngFor` *structural directive* will do that for us. Similar to the array `map()` functionality in React (JSX), it will create elements for each item in a collection. Here's what it looks like:
 
 ```html
 <tbody>
@@ -200,7 +200,7 @@ Now, render the rows. How? the `*ngFor` *structural directive* will do that for 
 </tbody>
 ```
 
-Notice how the data items are rendered. The first and easiest way to do data binding is *interpolation* binding, which uses a syntax similar to Handlebars, double curly braces. When rendering data that's in a component property, just write its name. Data flows from the component to the target. 
+Notice how the data items are rendered. The first and easiest way to do data binding is *interpolation* binding (read-only, for display), which uses a syntax similar to Handlebars, double curly braces. When rendering data that's in a component property, just write its name. Data flows from the component to the target. 
 
 <br>
 
@@ -223,7 +223,7 @@ Recall that your Assignment 1 work enabled a browser user to click a table row t
 
 #### Add a click handler
 
-Ridiculously easy, when compared to the pure JavaScript or assisted jQuery ways. For any element, we add an event handler with this syntax:
+An easy task, similar to React, and easier than the pure JavaScript or assisted jQuery ways. For any element, we add an event handler with this syntax:
 
 ```html
 ... (event-name)="methodName(optionalArguments)" ...
@@ -329,7 +329,7 @@ Together, `[( )]` means "two-way" binding, in and out, to and from. That's what 
 
 On the right side of the equals sign is the expression. For this simple use case, it's simply the name of the property we want to render and enable editing for. 
 
-Save your work and run. It just works. Do some edits, and notice that the table updates as you type. Ridiculously easy. 
+Save your work and run. It just works. Do some edits, and notice that the table updates as you type.  
 
 ![Table only](../media/ang-inclass3.png)
 
@@ -351,7 +351,7 @@ In the top table, replace the interpolated bindings with an `<input>` element. T
   <!-- etc. -->
 ```
 
-Again, ridiculously easy. 
+Again, easy. 
 
 ![Table only](../media/ang-inclass4.png)
 
