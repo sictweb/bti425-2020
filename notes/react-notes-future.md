@@ -7,6 +7,12 @@ layout: default
 
 <br>
 
+### State
+
+[Where to initialize state in React](https://daveceddia.com/where-initialize-state-react/)
+
+<br>
+
 ### Things to know, beginners
 
 Create a new project with the `create-react-app` script.  
