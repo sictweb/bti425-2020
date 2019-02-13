@@ -60,4 +60,6 @@ The first in-depth topic set that we will study is *components*. Let's get start
 
 In class this week, the professor will demonstrate a project that shows a particular strength of Angular - easy and robust updates in the user interface. [Follow along in the notes](angular-components-inclass), and try to build it yourself. Then, download and study its code example from the GitHub repo.
 
+In the computer-lab class, the professor will introduce *simple* routing for an Angular app. Then, each student will get some experience creating an app by completing a non-graded [hands-on exercise](week06-hands-on). 
+
 <br>

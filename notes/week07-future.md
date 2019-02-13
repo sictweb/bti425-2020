@@ -5,7 +5,7 @@ layout: default
 
 ## BTI425 Week 7 Notes
 
-Recall, the theme for the *remainder of the course* is to cover the Angular platform.  
+Remember, the theme for the *remainder of the course* is to cover the Angular platform.  
 
 Since Week 6 was spent with a quick introduction of the angular workflow (ie, bootstrapping an Angular app using "ng new", running the app with "ng serve" editing classes using typescript, etc), we can now focus our attention specifically on **components**, and how we can construct a view in Angular using components.
 
