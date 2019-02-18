@@ -13,7 +13,7 @@ New notes are at the top.
 
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
-**Week 8**<br>&bull; Mon Feb 4<br>&bull; Tue or Thu | More Angular<br>Routing | Test 2, 15%<br>on Mon Mar 4 | 
+**[Week 8](week08)**<br>&bull; Mon Mar 4<br>&bull; Tue or Thu | More Angular<br>Routing | Test 2, 15%<br>on Mon Mar 4 | 
 **Study Week**<br>Mon Feb 25<br>to Fri Mar 1 | No classes | | 
 **[Week 7](week07)**<br>&bull; Mon Feb 18<br>&bull; Tue or Thu | Monday is the Family Day holiday, no classes<br>Components continued<br>App building topics | | 
 **[Week 6](week06)**<br>&bull; Mon Feb 11<br>&bull; Tue or Thu | Angular introduction<br>Dev env setup<br>Components | | 
