@@ -166,7 +166,7 @@ Components are the most common kind of directive.
 **Built-in directives**
 
 * [Built-in attribute directives](https://angular.io/guide/template-syntax#built-in-attribute-directives)
-* [Built-in structural directives](https://angular.io/guide/template-syntax#built-in-structural-directives) e.g. `*ngIf`, `*ngFor`, etc.)
+* [Built-in structural directives](https://angular.io/guide/template-syntax#built-in-structural-directives) e.g. `ngIf`, `ngFor`, etc.)
 
 **Building a simple "attribute" directive**
 
