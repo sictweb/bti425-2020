@@ -61,7 +61,7 @@ There is a [limited policy](graded-work#assignments) detailed on the Graded Work
 
 ### Academic Honesty
 
-Please ensure that you follow Seneca College Academic Policy when you do your work. The following link, from the School of Information and Communications Technology website, has some helpful information: <a href="https://ict.senecacollege.ca/students/academic-honesty-policy" target="_blank" rel="noopener">School of ICT – Academic Honesty</a>
+Please ensure that you follow Seneca College Academic Policy when you do your work. The following link, from the School of Information and Communications Technology website, has some helpful information: <a href="https://ict.senecacollege.ca/students/academic-honesty-policy" target="_blank" rel="noopener">School of ICT - Academic Honesty</a>
 
 Submit your own work. 
 

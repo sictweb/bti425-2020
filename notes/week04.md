@@ -15,9 +15,9 @@ Test 1 is on Monday, January 28, 2019.
 
 All tests in this course are hand-written, in pen or pencil. Answer styles will vary, but we're mostly looking for short- to medium-length answers, and/or diagrams, and so on.
 
-No references or resources are permitted – "closed book, open brain". Device usage is not permitted. 
+No references or resources are permitted - "closed book, open brain". Device usage is not permitted. 
 
-The duration of each test will be approximately 80 to 90 minutes. Generally, about 4 minutes per question is allotted, which seems to work out OK. And, you will have some choice – you will be able to answer any "x" of "y" questions.
+The duration of each test will be approximately 80 to 90 minutes. Generally, about 4 minutes per question is allotted, which seems to work out OK. And, you will have some choice - you will be able to answer any "x" of "y" questions.
 
 The tested topics are mostly review-based, but will also include forward-looking topics for the current "week".  The forward-looking aspect encourages you to prepare for class, by reading and using the weekly content before the class. You will be tested on comprehension, understanding, and the application of new topics. The review-based aspect enables you to show that you have the foundational knowledge and understanding needed for current and future tasks.
 

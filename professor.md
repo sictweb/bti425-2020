@@ -62,7 +62,7 @@ From Peter McIntyre:
 >
 > While I will be somewhat available by email at other times, I will prefer to be available for help during the days and times discussed above. I will not commit to being available 24×7.  
 >
-> This may become important to you if you are facing a Thursday evening deadline for the assignment submission, and you discover that you want my help evening. I will almost certainly not be available. Therefore, you will be on your own, but you still must practice academic honesty. If you anticipate that this practice will be a problem for you, then set your own assignment due date deadline to better match my availability – for example, the Tuesday or Wednesday just before the Thursday deadline.
+> This may become important to you if you are facing a Thursday evening deadline for the assignment submission, and you discover that you want my help evening. I will almost certainly not be available. Therefore, you will be on your own, but you still must practice academic honesty. If you anticipate that this practice will be a problem for you, then set your own assignment due date deadline to better match my availability - for example, the Tuesday or Wednesday just before the Thursday deadline.
 
 <br>
 
@@ -78,6 +78,6 @@ From Tanvir Alam:
 >
 > While I will be somewhat available by email at other times, I will prefer to be available for help during the days and times discussed above. I will not commit to being available 24×7. Any email communication must come from your Seneca email.  
 >
-> This may become important to you if you are facing a Thursday evening deadline for the assignment submission, and you discover that you want my help during the evening. I will almost certainly not be available. Therefore, you will be on your own, but you still must practice academic honesty. If you anticipate that this practice will be a problem for you, then set your own assignment due date deadline to better match my availability – for example, the Monday or Tuesday just before a Thursday deadline.  
+> This may become important to you if you are facing a Thursday evening deadline for the assignment submission, and you discover that you want my help during the evening. I will almost certainly not be available. Therefore, you will be on your own, but you still must practice academic honesty. If you anticipate that this practice will be a problem for you, then set your own assignment due date deadline to better match my availability - for example, the Monday or Tuesday just before a Thursday deadline.  
 
 <br>
