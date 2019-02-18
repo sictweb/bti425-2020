@@ -94,7 +94,7 @@ courseNameInParent: string;
 Finally, open the template code, and render the result:
 
 ```html
-<p>{{ courseNameInParent }}</p>
+{% raw %}<p>{{ courseNameInParent }}</p>{% endraw %}
 ```
 
 In summary, to pass data from one component to another:

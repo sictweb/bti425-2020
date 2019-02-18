@@ -214,12 +214,12 @@ Open the person list component - template code - for editing. Add a table struct
 Then, dereference the contents of the "persons" collection (in the class code) with the following `*ngFor` directive, which makes a new `tr` element for each "person" object:
 
 ```html
-<tr *ngFor='let p of persons'>
+{% raw %}<tr *ngFor='let p of persons'>
   <td>{{ p.firstName + ' ' + p.lastName }}</td>
   <td>{{ p.birthDate }}</td>
   <td>{{ p.creditScore }}</td>
   <td>{{ p.rating }}</td>
-</tr>
+</tr>{% endraw %}
 ```
 
 <br>
@@ -229,7 +229,7 @@ Test. It should work. Yay!
 Can we do something about the appearance of the date? Yes, and an easy fix is really easy. Angular has a feature built in, [pipes](https://angular.io/guide/pipes), which can transform or format values. For us, the [date pipe](https://angular.io/api/common/DatePipe) is the one we want. Edit the cell:
 
 ```html
-<td>{{ p.birthDate | date }}</td>
+{% raw %}<td>{{ p.birthDate | date }}</td>{% endraw %}
 ```
 
 <br>
@@ -251,7 +251,7 @@ Eearlier, when you configured the router module, it's likely that you configured
 Now, edit the "get all" template code, and add another column in the table to hold a details link (which is styled to look like a button):
 
 ```html
-<td><a class="btn btn-default" href="/persons/{{ p._id }}">Detail</a></td>
+{% raw %}<td><a class="btn btn-default" href="/persons/{{ p._id }}">Detail</a></td>{% endraw %}
 ```
 
 Test, and it should look something like the following. When you hover over a button, it should render a link that matches a route object:
@@ -294,7 +294,7 @@ this.id = this.route.snapshot.paramMap.get("id");
 Finally, let's display it. You can add a simple `console.log()` statement, or a better way is to open the template code for editing, and adding a new element:
 
 ```html
-<p>The identifier from the URL is {{ id }}</p>
+{% raw %}<p>The identifier from the URL is {{ id }}</p>{% endraw %}
 ```
 
 Now, when you click/tap a button on the list of items, it will navigate to the "get one" component, and display the identifier of the item. 
