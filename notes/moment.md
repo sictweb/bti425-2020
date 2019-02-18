@@ -29,7 +29,7 @@ The following core pieces of functionality will provide a solid foundation for w
 let hireDate = "2010-11-07T04:00:00.000Z"; // Zsa zsa Mannering's hire date in our "Employees" Collection
 ```
 
-If you’re following along with the “Code Samples” the following functionality is located in the “week2/Moment” folder
+If you're following along with the "Code Samples" the following functionality is located in the "week2/Moment" folder
 
 <br>
 

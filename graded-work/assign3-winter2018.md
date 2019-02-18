@@ -857,7 +857,7 @@ Therefore, rely on your browser tools for this step. Soon, your professor will h
 
 ### Reminder about academic honesty
 
-You must comply with the College’s academic honesty policy.
+You must comply with the College's academic honesty policy.
 
 Although you may interact and collaborate with others, you must submit your own work.
 
@@ -865,7 +865,7 @@ Although you may interact and collaborate with others, you must submit your own 
 
 ### Submitting your work
 
-Here’s how to submit your work, before the due date and time:
+Here's how to submit your work, before the due date and time:
 
 1. Locate the folder that holds both project files. 
 
@@ -873,8 +873,8 @@ Here’s how to submit your work, before the due date and time:
 
 3. Inside each project's folder, remove (delete) the `node_modules` folder. Your professor does NOT need that folder. Also, in the project #1 app, in the `src/assets` folder, remove the `images` and `plugins` folders. Your professor does NOT need those folders either. 
 
-4. Compress/zip the copied folders. The zip file SHOULD be less than 1MB in size. If it isn’t, you haven’t followed the instructions properly.
+4. Compress/zip the copied folders. The zip file SHOULD be less than 1MB in size. If it isn't, you haven't followed the instructions properly.
 
-5. Login to My.Seneca. Open the course area. Click the “Assignments” link on the left-side navigator. Follow the link for this assignment. Submit/upload your zip file. The page will accept three submissions, so if you upload, then decide to fix something and upload again, you can do so.
+5. Login to My.Seneca. Open the course area. Click the "Assignments" link on the left-side navigator. Follow the link for this assignment. Submit/upload your zip file. The page will accept three submissions, so if you upload, then decide to fix something and upload again, you can do so.
 
 <br>

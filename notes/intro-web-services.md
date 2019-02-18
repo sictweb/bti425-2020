@@ -186,9 +186,9 @@ JSON is an initialism for <u>J</u>ava<u>S</u>cript <u>O</u>bject <u>N</u>otation
 
 It is a lightweight data-interchange format. It is language-independent, however it uses conventions that were first suggested by the JavaScript object literal or initializer. JSON has become the *de facto* data-interchange format standard.
 
-Here’s an [overview of JSON](http://en.wikipedia.org/wiki/Json) from Wikipedia.
+Here's an [overview of JSON](http://en.wikipedia.org/wiki/Json) from Wikipedia.
 
-Here’s the [official web site for JSON](http://json.org/), by Douglas Crockford.
+Here's the [official web site for JSON](http://json.org/), by Douglas Crockford.
 
 Although JSON is historically derived from JavaScript object literals, there are a few notable differences to programmers who are new to JSON:
 

@@ -400,9 +400,9 @@ As a general plan, here's what we must do in this section:
 
 Let's get started.
 
-Above, you copied index.html to a new “fetched data, with Knockout” page. Again, remove the jumbotron code. As appropriate, update the <meta> elements, and the visible page title.
+Above, you copied index.html to a new "fetched data, with Knockout" page. Again, remove the jumbotron code. As appropriate, update the <meta> elements, and the visible page title.
 
-Again, similar to the “fetched” data page, this new page will have an HTML Table. This time, it can fill the width of the viewport. The table must have a header row, and a table body, which can be empty (until we fill it in below).
+Again, similar to the "fetched" data page, this new page will have an HTML Table. This time, it can fill the width of the viewport. The table must have a header row, and a table body, which can be empty (until we fill it in below).
 
 Be prepared to render four columns in the HTML Table. We will need the project identifier as a hidden column, and these three project columns:
 1. Name
@@ -599,7 +599,7 @@ Therefore, rely on your browser tools for this step. Soon, your professor will h
 
 ### Reminder about academic honesty
 
-You must comply with the College’s academic honesty policy.
+You must comply with the College's academic honesty policy.
 
 Although you may interact and collaborate with others, you must submit your own work.
 
@@ -607,14 +607,14 @@ Although you may interact and collaborate with others, you must submit your own 
 
 ### Submitting your work
 
-Here’s how to submit your work, before the due date and time:
+Here's how to submit your work, before the due date and time:
 
 1. Locate the folder that holds your project files. 
 
 2. Make a copy of the folder. (You will be uploading a zipped version of the copy.)
 
-3. Compress/zip the copied folder. The zip file SHOULD be less than 1MB in size. If it isn’t, you haven’t followed the instructions properly.
+3. Compress/zip the copied folder. The zip file SHOULD be less than 1MB in size. If it isn't, you haven't followed the instructions properly.
 
-4. Login to My.Seneca. Open the course area. Click the “Assignments” link on the left-side navigator. Follow the link for this assignment. Submit/upload your zip file. The page will accept three submissions, so if you upload, then decide to fix something and upload again, you can do so.
+4. Login to My.Seneca. Open the course area. Click the "Assignments" link on the left-side navigator. Follow the link for this assignment. Submit/upload your zip file. The page will accept three submissions, so if you upload, then decide to fix something and upload again, you can do so.
 
 <br>

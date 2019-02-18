@@ -37,7 +37,7 @@ Finally, we would like to explain the grading process, because too many students
 
 ### Tests and similar graded work
 
-Tests must be written when scheduled. You can’t simply write a test when it is convenient with you.
+Tests must be written when scheduled. You can't simply write a test when it is convenient with you.
 
 If you are unable to write a test, what happens? 
 

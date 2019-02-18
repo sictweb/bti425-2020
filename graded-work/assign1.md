@@ -221,9 +221,9 @@ Please review (again) the [information about grades](https://bti425.ca/policies#
 
 ### Reminder about academic honesty
 
-You must comply with the College’s academic honesty policy. Although you may interact and collaborate with others, you must submit your own work.
+You must comply with the College's academic honesty policy. Although you may interact and collaborate with others, you must submit your own work.
 
-When you are ready to submit your work, you will copy some of the code in your project to plain text files, so that the My.Seneca/Blackboard “SafeAssign” tool can do its job. The next section will tell you which files to copy.
+When you are ready to submit your work, you will copy some of the code in your project to plain text files, so that the My.Seneca/Blackboard "SafeAssign" tool can do its job. The next section will tell you which files to copy.
 
 SafeAssign compares your work with that of other current and past students, and with existing works on the web. It uses techniques that are difficult to defeat. The overall goal is to identify copied work. 
 
@@ -233,7 +233,7 @@ SafeAssign compares your work with that of other current and past students, and 
 
 We need both the Node+Express web service and the React web app.  
 
-Here’s how to submit your work, before the due date and time:
+Here's how to submit your work, before the due date and time:
 
 #### Node+Express web service
 
@@ -249,7 +249,7 @@ Here’s how to submit your work, before the due date and time:
 **The JS file that holds the "schema" code**  
 For each of these files, change the file name extension to "txt".
 
-4. Compress/zip the copied folder. Maybe the name should be something like "webservice.zip". The zip file SHOULD be about 1MB in size. If it isn’t, you haven’t followed the instructions properly.
+4. Compress/zip the copied folder. Maybe the name should be something like "webservice.zip". The zip file SHOULD be about 1MB in size. If it isn't, you haven't followed the instructions properly.
 
 #### React web app 
 
@@ -268,7 +268,7 @@ For each of these files, change the file name extension to "txt".
 **The JS file that holds the "delete item" component**  
 For each of these files, change the file name extension to "txt".
 
-4. Compress/zip the copied folder. Maybe the name should be something like "reactapp.zip". The zip file SHOULD be about 1MB in size. If it isn’t, you haven’t followed the instructions properly.
+4. Compress/zip the copied folder. Maybe the name should be something like "reactapp.zip". The zip file SHOULD be about 1MB in size. If it isn't, you haven't followed the instructions properly.
 
 #### Bundle both of them together
 
@@ -276,7 +276,7 @@ Ideally, bundle both of the zip files from above into a single zip file, maybe n
 
 Login to My.Seneca.  
 Open the course area.  
-Click the “Assignments” link on the left-side navigator.  
+Click the "Assignments" link on the left-side navigator.  
 Follow the link for this assignment.  
 Submit/upload your zip file. The page will accept three submissions, so if you upload, then decide to fix something and upload again, you can do so.
 

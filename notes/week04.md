@@ -23,7 +23,7 @@ The tested topics are mostly review-based, but will also include forward-looking
 
 A few other points:
 
-* This is NOT a memorization course. This IS a learn and apply course. Simply reading, memorizing, and regurgitating words is not enough to convince anyone that you’re competent. 
+* This is NOT a memorization course. This IS a learn and apply course. Simply reading, memorizing, and regurgitating words is not enough to convince anyone that you're competent. 
 
 * You must apply the learning - by writing software - to convince others. 
 

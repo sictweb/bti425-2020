@@ -115,7 +115,7 @@ let htmlArr = $.parseHTML( "hello, <b>my name is</b> jQuery." ); // => 3 element
 
 jQuery has a very nice interface for handling form values.  The following sections illustrate how we can **get**, **set** and correctly **clear** the values of **text** / **password**, **checkbox**, **radiobutton**, **textarea** and **select (single / multiple)** elements.  
 
-If you’re following along with the “Code Samples” the following functionality is located in the **“week2/jQuery-more”** folder
+If you're following along with the "Code Samples" the following functionality is located in the **"week2/jQuery-more"** folder
 
 <br>
 
