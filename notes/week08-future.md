@@ -5,27 +5,32 @@ layout: default
 
 ## BTI425 Week 8 Notes
 
-Recall, the theme for the *remainder of the course* is to cover the Angular platform.  
-
-During your work on Assignment 3, you had a very brief introduction to the essential *Angular routing* topics. Today, we will turn our full attention to Routing in Angular, specifically: 
-
-* Examining the supporting documentation on Angular Routing
-* How to configure / use routing
-* Adding routing to an existing application
-* Planning components / routes
-* Configuring special components / routes (e.g. "Page not found").
+On Monday, we have Test 2. Then, in the other day's computer-lab session, we will cover a few more routing topics, and can begin work on Assignment 2. 
 
 <br>
 
-**Complete the checklist on Thursday, March 15**
+### Test info
 
-Bring your Assignment 3 projects (both) to the Thursday class session. You will review your work, and then complete and submit a checklist. 
+Test 2 is on Monday, March 4, 2019. 
+
+Please review the [information about tests](https://bti425.ca/notes/week04#test-info) from awhile ago. 
+
+You can expect test questions about topics covered since the last test, all the way to a small amount of questions about this week's forward-looking topics. Obviously, you must review the topics yourself, but in general, you can expect questions about:
+* React components, sequential and contained 
+* React routing 
+* React and working with a web service 
+* React and forms 
+* React deployment 
+* Angular platform overview
+* Angular components
+* Angular routing 
+* Angular simple service, and working with a web service 
 
 <br>
 
-**Topics:**
+### Topics
 
-Here are this week's notes:
+Highlights from the routing topic will be presented. 
 
 [Angular Routing Introduction](angular-routing-intro)
 
@@ -37,7 +42,7 @@ Here are this week's notes:
 
 Additional notes and documentation:
 
-[Adding Routing to an existing app](angular-routing-existing-app)
+[Adding Routing to an existing app](angular-routing-existing-app) (infrequently done)
 
 [The official Angular.io documentation](https://angular.io/docs) for these topics:
 * [Routing & Navigation](https://angular.io/guide/router)

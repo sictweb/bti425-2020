@@ -139,9 +139,9 @@ Now that we are comfortable adding new (simple) components, why don't we try cre
 
 ### Using "Templates" in your components
 
-From the example above, we have seen how we can add multiple components as children of a parent component.  However, these were simply "static" components (ie: their content is hardcoded into the .html).  If we wish our "template" (.html file) to reference values within its corresponding component, we need to reference them using the following techniques:
+From the example above, we have seen how we can add multiple components as children of a parent component.  However, these were simply "static" components (i.e. their content is hardcoded into the .html).  If we wish our "template" (.html file) to reference values within its corresponding component, we need to reference them using the following techniques:
 
-* [Interpolation](https://angular.io/guide/template-syntax#interpolation----)
+* [Interpolation](https://angular.io/guide/template-syntax#interpolation-)
 * [Template Expressions](https://angular.io/guide/template-syntax#template-expressions) / [Property Binding](https://angular.io/guide/template-syntax#property-binding--property-)
 * [Template Statements](https://angular.io/guide/template-syntax#template-statements)
 * [Attribute, class, and style bindings](https://angular.io/guide/template-syntax#attribute-class-and-style-bindings)
@@ -166,9 +166,11 @@ Components are the most common kind of directive.
 **Built-in directives**
 
 * [Built-in attribute directives](https://angular.io/guide/template-syntax#built-in-attribute-directives)
-* [Built-in structural directives](https://angular.io/guide/template-syntax#built-in-structural-directives) (ie, \*ngIf / \*ngFor, etc.)
+* [Built-in structural directives](https://angular.io/guide/template-syntax#built-in-structural-directives) e.g. `*ngIf`, `*ngFor`, etc.)
 
 **Building a simple "attribute" directive**
+
+A topic for more advanced scenarios:
 
 * [Build a simple attribute directive](https://angular.io/guide/attribute-directives#build-a-simple-attribute-directive)
 

@@ -5,9 +5,7 @@ layout: default
 
 ## Week 7 in-class hands-on exercise
 
-Goals or objectives: 
-* To an existing app, add the ability to work with a web service
-* Get started with form element interaction
+Goal or objective: To an existing app, add the ability to work with a web service
 
 <br>
 
@@ -15,7 +13,7 @@ Goals or objectives:
 
 Last week, you completed a hands-on exercise. This week, we build upon that work. Fetch your work from last week, or fetch the solution in the repo's *Templates and solutions* folder. 
 
-Today, the goal is to add the ability to work with a web service (your Assignment 1 web service). In addition, you will get started with form element interaction. 
+Today, the goal is to add the ability to work with a web service (your Assignment 1 web service). 
 
 <br>
 
@@ -35,10 +33,9 @@ Leave it running, and check it as you make changes. If the display goes blank/wh
 
 ### Make some components
 
-In this section, you will generate three new components:
+In this section, you will generate two new components:
 1. Person list (for "get all")
 2. Person detail (for "get one")
-3. Person add (for "add new")
 
 Remember, creating a component is best done as follows. First, make sure you're in the project folder. Then create three components.
 
@@ -54,7 +51,7 @@ ng g c xxx-name-of-new-component-xxx --flat -S
 
 <br>
 
-Regarding the existing nav menu, configure the router module, and add choices for the "get all" and "add new" use cases to the nav menu. Test your work. 
+Configure the router module, by adding route objects for the three new components. Regarding the existing nav menu, add choices for the "get all" use case. Test your work.
 
 <br>
 
@@ -101,6 +98,7 @@ In an Angular app, we MUST know the shape (i.e. the *type*) of the data we're wo
 To implement this requirement, TypeScript offers both a [class](https://www.typescriptlang.org/docs/handbook/classes.html) and an [interface](https://www.typescriptlang.org/docs/handbook/interfaces.html). How to decide?
 * Type-checking only? Use an interface
 * Type-checking AND implementation/behaviour? Use a class
+* Must create an instance? Use a class
 
 > Source: [Post by Todd Motto](https://toddmotto.com/classes-vs-interfaces-in-typescript)
 
@@ -115,7 +113,7 @@ export interface Person {
 }
 ```
 
-> Note: The question mark that follows the property name indicates that the value is optional. In other words, it can be null. It will be null in the "add new" use case, when we are sending new data, right?
+> Note: The question mark that follows the property name indicates that the value is optional. In other words, it can be null. 
 
 <br>
 
@@ -227,5 +225,142 @@ Then, dereference the contents of the "persons" collection (in the class code) w
 <br>
 
 Test. It should work. Yay!
+
+Can we do something about the appearance of the date? Yes, and an easy fix is really easy. Angular has a feature built in, [pipes](https://angular.io/guide/pipes), which can transform or format values. For us, the [date pipe](https://angular.io/api/common/DatePipe) is the one we want. Edit the cell:
+
+```html
+<td>{{ p.birthDate | date }}</td>
+```
+
+<br>
+
+### Implement the "get one" use case
+
+Now that we have learned the essentials, let's implement the "get one" use case. Parts of it will be familiar to the work done above, and also with the work you did in your React app. 
+
+<br>
+
+#### Setup tasks
+
+Eearlier, when you configured the router module, it's likely that you configured a route for the "get one" (detail) component, maybe using a path value that looked similar to what you had done in your React app:
+
+```ts
+{ path: 'persons/:id', component: PersonDetailComponent},
+```
+
+Now, edit the "get all" template code, and add another column in the table to hold a details link (which is styled to look like a button):
+
+```html
+<td><a class="btn btn-default" href="/persons/{{ p._id }}">Detail</a></td>
+```
+
+Test, and it should look something like the following. When you hover over a button, it should render a link that matches a route object:
+
+![List of items](/media/angular-week7-handson-1.png)
+
+<br>
+
+#### Work with the "get one" class code, initial 
+
+Our initial goal is simply to read and display the identifier that's part of the URL. Open the "get one" class code file for editing. We'll do these tasks:
+1. Add the ability to read the URL
+2. Extract the data we need from the URL
+3. Display it 
+
+We must import a module to get the ability to [read the URL](https://angular.io/guide/router#activated-route). Add this import statement:
+
+```ts
+import { ActivatedRoute } from "@angular/router";
+```
+
+Update the constructor signature, by adding an argument:
+
+```ts
+constructor(private route: ActivatedRoute) { }
+```
+
+Add a string property to the class, so that we can save/store the identifier data we will get from the URL:
+
+```ts
+id: string;
+```
+
+Next, in the `ngOnInit()` method, [extract the identifier from the URL](https://angular.io/guide/router#snapshot-the-no-observable-alternative), and save it:
+
+```ts
+this.id = this.route.snapshot.paramMap.get("id");
+```
+
+Finally, let's display it. You can add a simple `console.log()` statement, or a better way is to open the template code for editing, and adding a new element:
+
+```html
+<p>The identifier from the URL is {{ id }}</p>
+```
+
+Now, when you click/tap a button on the list of items, it will navigate to the "get one" component, and display the identifier of the item. 
+
+<br>
+
+#### Refine the functionality
+
+Now, our goal is to use the value of the identifier, and send another request to the web service. 
+
+Open the data model manager service for editing. We want to add a method that will do a "get one" request:
+
+```ts
+personsGetById(id: string): Observable<Person> {
+  return this.http.get<Person>(`${this.url}/${id}`);
+}
+```
+
+What is this code doing?
+* It has an argument for the item identifier
+* Its return type is an "Observable" of type "Person" (i.e. one single Person object)
+
+Now, open the "get one" class code for editing. Add these to the existing import statements:
+
+```ts
+import { Person } from "./dataModelClasses";
+import { DataModelManagerService } from './data-model-manager.service';
+```
+
+Declare a property that will hold the Person object.
+
+```ts
+person: Person;
+```
+
+Update the constructor signature, by adding an argument:
+
+```ts
+constructor(private route: ActivatedRoute, private m: DataModelManagerService) { }
+```
+
+Add the code to the `ngOnInit()` method:
+
+```ts
+this.m.personsGetById(this.id).subscribe(p => this.person = p);
+```
+
+What is this code doing?
+* It is calling the `subscribe()` method of the `personsGetById()` function's return value
+* This actually executes the "get" (fetch)
+* The (callback) function that we pass into the `subscribe()` method tells it how to handle the results (which is a single Person object)
+
+> If you want to see a bit of feedback in the console, replace that single-line statement with the following multi-line statement:
+> ```ts  
+> this.m.personsGetById(this.id).subscribe(p => {  
+>    console.log(p);  
+>    this.person = p;  
+> });  
+> ```
+
+Now, you're ready to edit the template code, to show or display the item's data. Open the template code for editing. Add suitable markup to render the values of the person object (e.g. a description list is often a good choice). 
+
+> Is your Person coded as an interface?  
+> Does your console show error messages like this?  
+> `ERROR TypeError: Cannot read property 'blah' of undefined`  
+> The reason is that the person property is declared but does not have data when the component first loads, so the error messages appear. The person property gets its data after a successful call to the service.  
+> We can fix this by making Person a class, and then creating a new empty instance in the component's constructor.  
 
 <br>
