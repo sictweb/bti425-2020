@@ -10,6 +10,13 @@ npm i
 
 <br>
 
+### Angular-hands-on-Week-6
+
+A solution for the Week 6 in-class hands-on exercise.  
+The topic was an introduction to routing among components.  
+
+<br>
+
 ### React class example/template
 
 Published during Week 3 of the course.  
