@@ -32,6 +32,15 @@ You can expect test questions about topics covered since the last test, all the 
 
 Highlights from the routing topic will be presented. 
 
-<mark>&nbsp;(coming soon)&nbsp;</mark>
+[Routing and URL parameters](https://bti425.ca/notes/week07-hands-on#implement-the-get-one-use-case)  
+This brief section explains how to implement routing with URL parameters.  
+
+[The official Angular.io documentation](https://angular.io/docs) for these topics:
+* [Routing & Navigation](https://angular.io/guide/router)
+* [RouterOutlet](https://angular.io/api/router/RouterOutlet)
+* [RouterLink](https://angular.io/api/router/RouterLink)
+
+[Adding Routing to an existing app](angular-routing-existing-app)  
+(This task is infrequently done.)
 
 <br>
