@@ -81,6 +81,8 @@ Google search words - fetch api wrapper
 
 [Routes](http://vsavkin.tumblr.com/post/146722301646/angular-router-empty-paths-componentless-routes) - Victor Savkin
 
+[Angular 6 URL parameters](https://medium.com/@christo8989/angular-6-url-parameters-860db789db85)
+
 <br>
 
 ### React related
