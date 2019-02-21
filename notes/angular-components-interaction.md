@@ -34,7 +34,7 @@ In the `app-component.html` template code, the "parent" element was added:
 <router-outlet></router-outlet>
 ```
 
-Then, in the `parent-component.html` template code the elements for each "child" were added. To make it look nice, they were contained in a Bootstrap row-and-panel structure:
+Then, in the `parent-component.html` template code, the elements for each "child" were added. To make it look nice, they were contained in a Bootstrap row-and-panel structure:
 
 ![Containment, version 1](/media/angular-comp-interact-contain-1.png)
 

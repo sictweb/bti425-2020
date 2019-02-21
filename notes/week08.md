@@ -30,7 +30,7 @@ You can expect test questions about topics covered since the last test, all the 
 
 ### Topics
 
-Highlights from the routing topic will be presented. 
+Highlights from the routing topic will be presented in the computer-lab class/session. 
 
 [Routing and URL parameters](https://bti425.ca/notes/week07-hands-on#implement-the-get-one-use-case)  
 This brief section explains how to implement routing with URL parameters.  
