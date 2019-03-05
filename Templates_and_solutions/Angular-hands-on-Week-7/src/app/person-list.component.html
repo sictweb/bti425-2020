@@ -1,0 +1,27 @@
+<h2>From the web service</h2>
+
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Birth date</th>
+        <th>Credit score</th>
+        <th>Rating</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- will replace the following with *ngFor -->
+      <tr *ngFor='let p of persons'>
+        <td>{{ p.firstName + ' ' + p.lastName }}</td>
+        <td>{{ p.birthDate | date }}</td>
+        <td>{{ p.creditScore }}</td>
+        <td>{{ p.rating }}</td>
+        <td><a class="btn btn-default" href="/persons/{{ p._id }}">Detail</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr>

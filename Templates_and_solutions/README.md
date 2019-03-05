@@ -10,6 +10,14 @@ npm i
 
 <br>
 
+### Angular-hands-on-Week-7
+
+A solution for the Week 7 in-class hands-on exercise.  
+The topic was fetching data from a web service.  
+It used the Week 6 hands-on exercise as a base, and then added the fetch feature.  
+
+<br>
+
 ### Angular-hands-on-Week-6
 
 A solution for the Week 6 in-class hands-on exercise.  
