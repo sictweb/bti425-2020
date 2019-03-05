@@ -44,3 +44,25 @@ This brief section explains how to implement routing with URL parameters.
 (This task is infrequently done.)
 
 <br>
+
+#### Begin work on Assignment 2
+
+[Assignment 2](/graded-work/assign2) has been posted. 
+
+Before beginning work on the assignment, your professor will discuss one of the data structures that will be used in the app. The highlights:
+* There will be a "students" collection
+* Each "student" document will have a number of descriptive properties
+* One its properties will be "credits", which will be a collection
+* Each "credit" document represents a course credit (code, name, grade, term)
+* As a result, the collection of "credit" documents will be *embedded* in a "student document 
+
+This organization scheme is discussed in the MongoDB documentation article:  
+[Model One-to-Many Relationships with Embedded Documents](https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/)
+
+> Note - that area of the documentation has other useful articles, some of which we will use during our work on Assignment 2. 
+
+Your professors will provide you with starter data that can be used in Assignment 2. Some of that data is ready now, and is located in the [week 8 folder](https://github.com/sictweb/bti425/tree/master/Week_08) of the code repo. Get the `assign-2-data-student-v1.json` data file and study it, comparing it to the description above. 
+
+The remaining time in the class/session can be used by you to get started on Assignment 2. 
+
+<br>
