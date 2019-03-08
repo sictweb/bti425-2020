@@ -22,7 +22,7 @@ Read about it here; it includes how-to info about installation and use:
 
 <br>
 
-#### React DevTools for Chrome browser
+### React DevTools for Chrome browser
 
 A Chrome browser *extension* can be added to support app inspection. The extension was created by the React team. 
 
