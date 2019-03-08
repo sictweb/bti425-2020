@@ -27,7 +27,7 @@ Today, we add more coverage of this important topic:
 
 <br>
 
-### Assignment 2 data structure topics
+### Assignment 2 continued
 
 As you know, [Assignment 2](/graded-work/assign2) has been posted. 
 

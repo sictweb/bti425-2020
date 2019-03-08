@@ -30,8 +30,11 @@ This *embedded documents* organization scheme is discussed in the MongoDB docume
 [Model One-to-Many Relationships with Embedded Documents](https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/)
 
 Use this design for the following scenarios or preferences: 
+
 * The query strategy will often or always want to fetch a document with all of its associated or related data 
+
 * The data in the sub-documents is typically stable and unchanging (almost archival in nature)
+
 * The amount of data in the sub-documents is relatively or contextually not too large 
 
 <br>
@@ -42,17 +45,32 @@ If your scenario is different, an alternative (and perhaps more familiar to thos
 [Model One-to-Many Relationships with Document References](https://docs.mongodb.com/manual/tutorial/model-referenced-one-to-many-relationships-between-documents/)
 
 Use this design for the following scenarios or preferences: 
+
 * Data repetition would be a bad idea (too much or whatever)
+
 * Data is for use in a frequently-updated transactional manner 
+
 * There is a flexible and unpredictable query strategy, where it is likely that each entity in the association or relation may be separately queried for whatever purpose 
 
 For the following discussion, assume that we're designing the structure of two associated or related entities. Into which entity do we add the reference? Here's some getting-started guidance (but your scenario may result in adjusted guidance):
+
 * The growth of the data in the association or relation determines where to store the reference
   * We're referring to general growth, or rate of growth
+
 * One of the entity collections in the association or relationship will typically naturally have many more items (by a large factor) than the other entity collection 
-* Therefore, store the reference in the entity collection with the most items 
+
+* Therefore, store the reference in the entity that's in the collection with the most items 
 
 For example, assume that each smartphone "maker" (e.g. Apple) will have a large number of smartphone "models" available for sale (e.g. iPhone Xs, iPhone Xr, iPhone 8, iPhone 7). In that situation, in the "model" entity, add a reference to the "maker". 
+
+What does the reference look like? Here's our guidance:
+
+* Its name should be based on the name of the associated or related collection, and end with "`Id`" (yes, there are other naming schemes possible, but start with this, and adjust when you have more experience)
+
+* Its value must be the MongoDB unique identifier (the 24-character ObjectId) of the associated or related object 
+
+* For example, assuming we're looking at a smartphone "models" object, it would include this reference:  
+`"makerId": "507f1f77bcf86cd799439011"`
 
 <br>
 
