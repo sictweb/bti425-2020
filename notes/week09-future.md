@@ -11,19 +11,17 @@ This week, we plan to cover some more "services" topics, and introduce "forms" t
 
 ### Topics
 
-Highlights from this week's topics will be presented in the computer-lab class/session. 
+Highlights from this week's topics: 
 
-
-
-
-
-
+A couple of weeks ago, we had a [brief and gentle introduction to an Angular service](https://bti425.ca/notes/angular-services-intro). Today, we add more coverage of this important topic. 
 
 [Angular Service Introduction](angular-services-intro) - The topic notes for this week, with links to external authoritative resources.
 
-[Angular Service Example](angular-services-example) - A supporting example, explaining the "Code Example" for Week 9.
+[Angular Service Example](angular-services-example) - A supporting code example.
 
 [Angular service and the Teams API](angular-services-teams-api) - Information about using the Teams API from an Angular service.
+
+[Angular Debugging Introduction](angular-debug-intro) - A brief introduction to debugging in Angular. 
 
 
 
