@@ -1,0 +1,10 @@
+<p>About</p>
+<p>List of users from reqres.in:</p>
+<ul>
+  <li *ngFor="let u of users">{{ u.first_name }} {{ u.last_name }} (id {{ u.id }})</li>
+</ul>
+<p>One specific user with identifier 5 from reqres.in:</p>
+<!-- Show this only if "user" has data -->
+<ul *ngIf="user">
+  <li>{{ user.first_name }} {{ user.last_name }}</li>
+</ul>
