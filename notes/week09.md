@@ -23,7 +23,9 @@ Today, we add more coverage of this important topic:
 
 [Angular Debugging Introduction](angular-debug-intro) - A brief introduction to debugging in Angular. 
 
-[Data assocations or relations introduction](data-assoc-intro) - helps you get started with this topic.
+[Data assocations or relations introduction](data-assoc-intro) - Helps you get started with this topic.
+
+[Angular template-driven forms introduction](angular-forms-intro) - How to get started with forms in Angular. 
 
 <br>
 
