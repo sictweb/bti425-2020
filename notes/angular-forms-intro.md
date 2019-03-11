@@ -21,9 +21,7 @@ As the [official Angular documentation](https://angular.io/guide/forms) states, 
 
 * Once the Angular app configured properly, we will add some data in a Component to be used with the form.
 
-* We will then show the changes required to the form as well as each of the standard form elements to "bind" our data (using "two-way" binding) and "submit" the form.
-
-* Finally, we will illustrate some of the special CSS classes Angular uses to automatically track the "state" of elements, ie: "untouched", "dirty", "invalid", etc.
+* Finally, we will show the changes required to the form as well as each of the standard form elements to "bind" our data (using "two-way" binding) and "submit" the form.
 
 Once this is compete, a brief summary of the highlights and dev tips are presented. 
 
@@ -44,13 +42,13 @@ In this course, we will work only with *Template-driven Forms*.
 
 This approach takes advantage of your knowledge of, and skills with an HTML template in a component. 
 
-It builds upon your experience with one-way read-only data binding (using `{%raw%}{{ curly braces syntax }}{%endraw%}`), by going further with two-way data binding. 
+It builds upon your experience with one-way read-only data binding (using `{%raw%}{{ curly braces syntax }}{%endraw%}`, or its square-bracket form for element attributes, `[value]='expression`), by going further with two-way data binding. 
 
 <br>
 
 #### Reactive Forms
 
-This approach features more programming in the component class, where each element of the form is explicitly declared, configured, and managed. 
+This approach features more programming in the component class, where each element of the form is explicitly declared, configured, and managed. This is done mostly in the (TypeScript) component class source code file. 
 
 We will NOT work with Reactive Forms in this course. After understanding and working with Template-driven Forms, you will be able to learn what you need to, if or when you need to, work with Reactive Forms. 
 
@@ -284,14 +282,14 @@ This is very similar to the **input** example above, ie: we simply add the two-w
 {% raw %}
 ```html
 <select multiple class="form-control" name="ownedTransportation" [(ngModel)]="driverData.ownedTransportation">
-        <option *ngFor = "let transportation of transportationList" [value]="transportation.value">{{ transportation.text }}</option>
+        <option *ngFor = "let t of transportationList" [value]="t.value">{{ t.text }}</option>
 </select>
 ```
 {% endraw %}
 {% raw %}
 ```html
 <select class="form-control" name="favouriteTransportation" [(ngModel)]="driverData.favouriteTransportation">
-          <option *ngFor = "let transportation of transportationList" [value]="transportation.value">{{ transportation.text }}</option>
+          <option *ngFor = "let t of transportationList" [value]="t.value">{{ t.text }}</option>
 </select>
 ```
 {% endraw %}
@@ -349,15 +347,35 @@ As a rule of thumb, whenever you would like to "read from" / "write to" a form u
 
 <br />
 
-### Handling the Form "Submission"
+### "Live" or *real time* data model updates
 
-Finally, all of our data for "Richard Hammond" should be correctly rendered in the form.  As a way to inspect/test that the two-way binding is working, you can add the following line somewhere below the form:
+Above, it was stated that we *always assume* that an Angular form is backed by a data model. 
+
+We write one or more classes in the component class source code file, which describe(s) the shape of the data on the form. 
+
+The data model appears as one or more objects - properties - in the component class. 
+
+The effect of two-way data binding is that data is *always* in sync, between the user interface (template) and the data model (code). 
+
+This realization is *very important*. Subtle, simple-sounding, but very important. 
+
+It means that we do not have to worry about losing data, moving data to-and-from the UI and code, and other similar data move/copy tasks. The binding just works, and we can rely on it. 
+
+It also means that we can perform tasks on the data "live" and in *real time*, as the user interacts with the form. We will do this in the near future. 
+
+From before, all of our data for "Richard Hammond" should be correctly rendered in the form.  As a way to inspect/test that the two-way binding is working, you can add the following line somewhere below the form:
 {% raw %}
 ```js
 {{ driverData | json }}
 ```
 {% endraw %}
 This will show you how your driverData "data model" is being updated with every change you make in the form!
+
+<br>
+
+### Handling the Form "Submission"
+
+What about a "submit" task? Do we need one? Typically, we do, as it's a way for the user to indicate that they are done with the form. 
 
 To handle a form submission event, we add the event handler "ngSubmit" to our `<form>` element:
 
