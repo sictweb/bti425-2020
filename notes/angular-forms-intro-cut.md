@@ -33,30 +33,11 @@ By passing a reference to the form into onSubmit, we gain access to the aggregat
 
 If we use the integrated Developer tools in the browser when testing our form, we will notice that there are CSS classes that get added or removed as we edit the data.  The below table (from the [documentation](https://angular.io/guide/forms#track-control-state-and-validity-with-ngmodel)) illustrates the meanings of each class added.
 
-<table>
-<tbody>
-<tr>
-<th>State</th>
-<th>Class if true</th>
-<th>Class if false</th>
-</tr>
-<tr>
-<td>The control has been visited.</td>
-<td>`ng-touched`</td>
-<td>`ng-untouched`</td>
-</tr>
-<tr>
-<td>The control's value has changed.</td>
-<td>`ng-dirty`</td>
-<td>`ng-pristine`</td>
-</tr>
-<tr>
-<td>The control's value is valid.</td>
-<td>`ng-valid`</td>
-<td>`ng-invalid`</td>
-</tr>
-</tbody>
-</table>
+State | Class if true | Class if false
+---|---|---
+The control has been visited | `ng-touched` | `ng-untouched`
+The control's value has changed | `ng-dirty` | `ng-pristine`
+The control's value is valid | `ng-valid` | `ng-invalid`
 
 By using CSS to track the "state" we can now *style* the elements that have not yet been visited / changed or are invalid,  to create a richer and more interactive user experience.
 
