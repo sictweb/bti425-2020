@@ -8,10 +8,10 @@ npm i
 
 <br>
 
-### assign-2-data-courses-available-v1
+### assign-2-data-courses-available-v2
 
 Data for the Assignment 2.  
-This is the "available courses" entity, version 2.  
+This is the "available courses" entity, *version 2*.  
 It shows the courses, sections (time, room, teacher), available in Fall 2018 and Winter 2019 terms.  
 It includes prerequisites, which we'll need in the logic.  
 
