@@ -1,0 +1,31 @@
+<h3>Delete user</h3>
+<p>Click/tap the Delete button, or go back to the list</p>
+<p>&nbsp;</p>
+
+<div class="row" *ngIf="user">
+  <div class="col-md-6 col-sm-6">
+    <dl class="dl-horizontal">
+      <dt>Identifier</dt>
+      <dd>{{ user.id }}</dd>
+      <dt>First name</dt>
+      <dd>{{ user.first_name }}</dd>
+      <dt>Last name</dt>
+      <dd>{{ user.last_name }}</dd>
+    </dl>
+  </div>
+  <div class="col-md-2 col-sm-4">
+    <img [src]="user.avatar" alt="" class="img-rounded img-responsive">
+  </div>
+</div>
+<div *ngIf="user">
+  <hr>
+  <form (ngSubmit)='userSave()' #f='ngForm'>
+    <button class="btn btn-danger" type="submit">Delete</button>&nbsp;
+    <a routerLink="/users" class="btn btn-default">Back to list</a>
+  </form>
+</div>
+
+<div *ngIf="!user">
+  <p>Requested user was not found</p>
+  <p><a routerLink="/users" class="btn btn-default">Back to list</a></p>
+</div>
