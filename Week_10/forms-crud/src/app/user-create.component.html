@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-8">
+    <h3>Create a new user</h3>
+    <p>Enter data, and click/tap the Save button</p>
+    <form (ngSubmit)='userSave()' #f='ngForm'>
+
+      <div class="form-group">
+        <label class="control-label" for="name">Name:</label>
+        <input class="form-control" name="name" [(ngModel)]="newUser.name" required autofocus>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="job">Job:</label>
+        <input class="form-control" name="job" [(ngModel)]="newUser.job" required autofocus>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Save</button>&nbsp;
+      <a routerLink="/users" class="btn btn-default">Back to list</a>
+
+    </form>
+  </div>
+  <div class="col-md-4">
+    <h4>Data being entered:</h4>
+    <p class="lead"><code>{{ newUser | json }}</code></p>
+    <h4>Result of the save task:</h4>
+    <p class="lead"><code>{{ newUserResult | json }}</code></p>
+  </div>
+</div>
