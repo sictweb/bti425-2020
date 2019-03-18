@@ -247,7 +247,7 @@ Here's how to submit your work, before the due date and time:
 **The JavaScript (JS) file that holds the "server" code**  
 **The JS file that holds the "manager" code**  
 **The JS file that holds the "schema" code**  
-For each of these files, change the file name extension to "txt".
+For each of these files in the MyCode folder, change the file name extension to "txt".
 
 4. Compress/zip the copied folder. Maybe the name should be something like "webservice.zip". The zip file SHOULD be about 1MB in size. If it isn't, you haven't followed the instructions properly.
 
@@ -266,7 +266,7 @@ For each of these files, change the file name extension to "txt".
 **The JS file that holds the "add new" component**  
 **The JS file that holds the "edit existing" component**  
 **The JS file that holds the "delete item" component**  
-For each of these files, change the file name extension to "txt".
+For each of these files in the MyCode folder, change the file name extension to "txt".
 
 4. Compress/zip the copied folder. Maybe the name should be something like "reactapp.zip". The zip file SHOULD be about 1MB in size. If it isn't, you haven't followed the instructions properly.
 
