@@ -5,7 +5,8 @@
 
 function personsGetAll() {
 
-    fetch('https://pam-coursedbintro.herokuapp.com/api/persons')
+    //fetch('https://pam-coursedbintro.herokuapp.com/api/persons')
+    fetch('https://pam-2019-a1webapi.herokuapp.com/api/persons')
         .then(response => response.json())
         .then(data => {
             buildTable(data);

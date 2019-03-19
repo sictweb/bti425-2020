@@ -191,7 +191,8 @@ function personsGetById(id) {
     }
 
     // configure the xhr object to fetch content
-    xhr.open('get', 'https://pam-coursedbintro.herokuapp.com/api/persons/' + id, true);
+    //xhr.open('get', 'https://pam-coursedbintro.herokuapp.com/api/persons/' + id, true);
+    xhr.open('get', 'https://pam-2019-a1webapi.herokuapp.com/api/persons/' + id, true);
 
     // fetch the access token from session storage in the browser's memory
     var token = sessionStorage.getItem('token');
