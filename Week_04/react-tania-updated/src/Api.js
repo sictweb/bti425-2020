@@ -10,7 +10,8 @@ class Api extends Component {
 
   // Code is invoked after the component is mounted/inserted into the DOM tree
   componentDidMount() {
-    const url = "https://pam-coursedbintro.herokuapp.com/api/persons";
+    //const url = "https://pam-coursedbintro.herokuapp.com/api/persons";
+    const url = "https://pam-2019-a1webapi.herokuapp.com/api/persons";
 
     fetch(url)
       .then(result => result.json())
