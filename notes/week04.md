@@ -62,7 +62,7 @@ Open the `react-router-intro` code example as you go through the document.
 [Communicating with a web service](react-web-service-intro), with the Fetch API.  
 Open the `react-ws-intro` code example as you go through the document. 
 
-> Coverage of "Forms" in React apps is moved to [Week 5](week5)
+> Coverage of "Forms" in React apps is moved to [Week 5](week05)
 
 Remember to frequently use the [learning resources](/resources).
 

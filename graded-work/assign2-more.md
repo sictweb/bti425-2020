@@ -1,41 +1,28 @@
 ---
-title: BTI425 Week 10
+title: Assignment 2 more
 layout: default
 ---
 
-## BTI425 Week 10 Notes
+## BTI425 Assignment 2 - more / future content
 
-This week, we will make progress with *forms* topics.  
-
-<br>
-
-### Topics
-
-Highlights from this week's topics: 
-
-Last week we were introduced to [Angular template-driven forms](angular-forms-intro). It's time to learn more. 
-
-> Remember our previous coverage of  
-> [HTML Form patterns](html-form-patterns). 
-
-The course's GitHub repo has a nice [code example](https://github.com/sictweb/bti425/tree/master/Week_10) that covers the typical CRUD tasks. 
-
-Then, we'll learn some techniques to improve the interaction experience users have with forms. And, we'll introduce data validation techniques. These topics are covered in this document:  
-[Introduction to Angular template-driven forms validation](angular-forms-validation-intro)
+It's possible that the following content may end up in the Assignment 2 specs.
 
 <br>
 
-### Assignment 2 continued
+### MongoDB Atlas work
 
-Also this week, continue working on [Assignment 2](/graded-work/assign2). 
+In the console, select the cluster to work with.
 
-Continue working on it. 
+The command line tools include an "import" command:
+
+Original:  
+```text
+mongoimport --host PeterBTI425Winter2019-shard-0/peterbti425winter2019-shard-00-00-ikjae.mongodb.net:27017,peterbti425winter2019-shard-00-01-ikjae.mongodb.net:27017,peterbti425winter2019-shard-00-02-ikjae.mongodb.net:27017 --ssl --username dbAdmin --password <PASSWORD> --authenticationDatabase admin --db <DATABASE> --collection <COLLECTION> --type <FILETYPE> --file <FILENAME>
+```
 
 <br>
 
-#### Checklist for today
-
-Sadly, the specs are not yet finished. Use the following to guide you as you do your work.
+### Tasks in sequence
 
 Get data from the Week 8 folder.  
 
@@ -73,4 +60,3 @@ Create these components (and add them to the routing feature):
 Modify the data model manager service. Add methods that will fetch the data needed by these new components.
 
 Modify each component. Your goal is to get the right data to display in each.
-

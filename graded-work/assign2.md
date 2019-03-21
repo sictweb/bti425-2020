@@ -21,8 +21,6 @@ While you are doing the work, if a *specific task* is not clear, or it seems to 
 
 Thursday, March 28, 2019, at 11:00pm ET
 
-> It is likely that there will be interim due dates, to encourage weekly work, and ensure that you are making progress. 
-
 Grade value: 25% of your final course grade
 
 *If you wish to submit the assignment before the due date and time, you can do that.*
