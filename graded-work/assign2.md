@@ -55,7 +55,7 @@ Right-click any image below to open it full-size in a new tab or window.
 
 The landing page of the app enables the user to view a menu of tasks. 
 
-![Home page](media/a2-start-view.png)
+<img class="border1" src="media/a2-start-view.png" alt="">
 
 <br>
 
@@ -85,7 +85,7 @@ On the left, a *customized* list of possible courses for that student is shown. 
 
 On the right, the selected courses appear in a timetable grid, and in a standard list format. 
 
-> Your professor will provide you with a ready-to-use component for each of these - grid and list. 
+> Your professor will provide you with a ready-to-use component for the grid and the list. 
 
 ![Cart start](media/a2-cart-start.png)
 
@@ -119,7 +119,15 @@ Getting started includes generating a new project, and configuring your developm
 
 Use `ng new...` to generate a new project, probably named `assign2`. 
 
+> Alternatively, make a copy of the repo's Week 10 `forms-validation-intro` code example, and modify that.
+
 Set up the rest of your dev environment (terminal windows, editor, browsers and tools). 
+
+<br>
+
+> <mark>&nbsp;Reminder from above&nbsp;</mark>  
+> This document is still being edited.  
+> This notice will be removed when the edits are done.  
 
 <br>
 
