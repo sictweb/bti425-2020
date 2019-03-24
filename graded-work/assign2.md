@@ -19,7 +19,7 @@ While you are doing the work, if a *specific task* is not clear, or it seems to 
 
 ### Due Date
 
-Thursday, March 28, 2019, at 11:00pm ET
+Sunday, March 31, 2019, at 11:00pm ET
 
 Grade value: 25% of your final course grade
 
@@ -34,15 +34,82 @@ As noted above, the purpose of objective of the assignment is to create a substa
 The theme of the app is to perform a task that's similar to the *new academic term course enrolment* process. Current students use the student center app to do this task. The professor team thought it would be interesting to implement some of this here. 
 
 > <mark>&nbsp;Important notice&nbsp;</mark>  
-> As discussed in class recently, this document will be updated during the next week or so.  
-> This is a new assignment, and the professors must build the infrastructure and an example solution from scratch. That work takes time, and will be completed as soon as we can.  
-> However, don't delay starting this app, as there will be lots to do.
+> This document is still being edited.  
+> This notice will be removed when the edits are done.  
 
 The app will be deployed to a public host (a Heroku endpoint), so that you can deliver it to other devices (including, for example, your smartphone).  
 
 Notably, the app will use a *new* web service, also posted to Heroku and Atlas. The web service should be your first work task and completion goal. 
 
 Looking to the future, it is possible that the final Assignment 3 will build upon the work done in this Assignment 2, by adding security-aware capabilities and safe-coding techniques. 
+
+<br>
+
+#### A guided tour of the app
+
+If you wish to interact with the app, the professor-created example solution is publicly available:
+
+[https://pam-2019-a2app.herokuapp.com](https://pam-2019-a2app.herokuapp.com)
+
+Right-click any image below to open it full-size in a new tab or window. 
+
+The landing page of the app enables the user to view a menu of tasks. 
+
+![Home page](media/a2-start-view.png)
+
+<br>
+
+A list of all possible courses (for all academic programs) can be viewed. 
+
+![Course list](media/a2-course-list.png)
+
+<br>
+
+A list of students can be viewed.
+
+![Student list](media/a2-student-list.png)
+
+<br>
+
+Select any student to view details and begin working with the enrolment task. Notice the "Tentative courses" list is empty. It is intended to show a list of selected courses that have not yet been added to the timetable. Also notice the empty "Confirmed courses" list. After viewing, click/tap the "Select courses" button. 
+
+![Student detail](media/a2-student-detail-start.png)
+
+<br>
+
+The "shopping cart" appears. 
+
+On the top, some task buttons are available. 
+
+On the left, a *customized* list of possible courses for that student is shown. It is built based on the student's prerequisites (from the course history). The add/remove button will add (or remove) a course to/from a "selected courses" list. 
+
+On the right, the selected courses appear in a timetable grid, and in a standard list format. 
+
+> Your professor will provide you with a ready-to-use component for each of these - grid and list. 
+
+![Cart start](media/a2-cart-start.png)
+
+<br>
+
+Interact with the list, and add/remove some courses. Notice that the selections appear on the right. 
+
+![Cart interaction](media/a2-cart-interaction.png)
+
+<br>
+
+After you're happy with the result, click/tap the "Save for later" button. It will do that, and show you a message. 
+
+![Cart save](media/a2-cart-saved-message-top.png)
+
+<br>
+
+When you're happy with the result, return to the student detail page, and the selected courses will appear. 
+
+![Student detail](media/a2-student-detail-after.png)
+
+<br>
+
+> The "confirm" task will be posted soon.
 
 <br>
 

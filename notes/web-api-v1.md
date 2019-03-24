@@ -301,9 +301,30 @@ c.sort(function (a, b) {
     return a.lastName.localeCompare(b.lastName) ||
         a.firstName.localeCompare(b.firstName) || 0
 });
+
+// or, using arrow function syntax...
+c.sort((a, b) => {
+    return a.lastName.localeCompare(b.lastName) ||
+        a.firstName.localeCompare(b.firstName) || 0
+});
 ```
 
 Finally, the sorted "c" array can be returned. 
+
+> Do you want to sort an array of numbers?  
+> The "compare" is an arithmetic subtraction compare.  
+> Look at the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) for more, but briefly:  
+> ```js
+> let numbers = [4, 2, 5, 1, 3];  
+> numbers.sort((a, b) => a - b);  
+> ```
+
+> Or, if the numbers were in a *property* of an array of objects:  
+> ```js
+> // assume the array "c" of people/person objects  
+> // and we want to sort on credit score
+> c.sort((a, b) => a.creditScore - b.creditScore);  
+> ```
 
 **Get one** is also relatively easy to fix. 
 
