@@ -33,10 +33,6 @@ As noted above, the purpose of objective of the assignment is to create a substa
 
 The theme of the app is to perform a task that's similar to the *new academic term course enrolment* process. Current students use the student center app to do this task. The professor team thought it would be interesting to implement some of this here. 
 
-> <mark>&nbsp;Important notice&nbsp;</mark>  
-> This document is still being edited.  
-> This notice will be removed when the edits are done.  
-
 The app will be deployed to a public host (a Heroku endpoint), so that you can deliver it to other devices (including, for example, your smartphone).  
 
 Notably, the app will use a *new* web service, also posted to Heroku and Atlas. The web service should be your first work task and completion goal. 
@@ -125,12 +121,6 @@ Set up the rest of your dev environment (terminal windows, editor, browsers and 
 
 <br>
 
-> <mark>&nbsp;Reminder from above&nbsp;</mark>  
-> This document is still being edited.  
-> This notice will be removed when the edits are done.  
-
-<br>
-
 ### Doing the work, initial 
 
 We work on two code bases:
@@ -174,7 +164,7 @@ As noted above, there are data files for "students" and "available courses".
 
 Import each JSON data file into a MongoDB Atlas collection. Use the command-line `mongoimport` program to do this task. Get the command text from the MongoDB Atlas console. We suggest that you paste the text into a text editor, so that you can edit and prepare the command before you attempt to execute it. 
 
-> Remember to add the ``--jsonArray` option to the command
+> Remember to add the `--jsonArray` option to the command
 
 <br>
 
@@ -297,9 +287,9 @@ The student detail component should probably show/list the course history credit
 
 This is the most interesting component, with new features. 
 
-Think of it as a "student detail" page, with special functionality. 
+Think of it as a kind of "student detail" page, but with special functionality. 
 
-As you can see in the example solution, it displays a list of courses that a student can select. It also offers tasks (save selections, confirm as timetable). 
+As you can see in the example solution, it displays data for a specific student, and a list of courses that a student can select. It also offers tasks (save selections, confirm as timetable). 
 
 On the right side of the example solution, a timetable "grid" shows the day-and-time of the selected courses. Below that, a list of selected courses appears. *Both these areas are components, and will be provided by your professors.* 
 
@@ -312,12 +302,25 @@ One decision we must make concerns routing. Assuming that the "student detail" c
 /student/detail/:id
 ```
 
-How should we get to the cart? Should we do the following? We know that it would work:
+How should we get to the cart? Should we do the following? We know that it would work (if we did the usual coding tasks):
 ```
 /student/cart/:id
 ```
 
-As an alternative, we are suggesting that we store the student object in the service, and use it to maintain "interaction state". This was discussed [early in the course](https://bti425.ca/notes/intro-web-services). 
+As an alternative, we are suggesting that we store the student object in the service, and use it to maintain "interaction state". This was discussed [early in the course](https://bti425.ca/notes/intro-web-services). The benefit is that we would have a simple URL like the following that does not expose any student-specific identifier/data:
+```
+/cart
+```
+
+How does this all work? Well, in point form, this is how we can do it:
+* Define a property in the service, to hold a student object 
+* When the student detail component loads (`ngOnInit`), it also saves/stores the student object to the property in the service 
+* When the cart component loads (`constructor`), it attempts to get the student object from the property in the service 
+* If successful, it copies it to a local "student" property 
+* Otherwise, it does a programmatic navigation to the student list
+
+> We could do the same task in the "student detail" component too.  
+> It's not required for the assignment, but it's something to think about.
 
 ##### Properties in the component 
 
@@ -335,17 +338,42 @@ A "courses selected" array is intended to hold the results of a user interaction
 
 > This collection starts out empty, and is filled in as a result of user interaction. 
 
-A property to hold the current student object is also needed. How do we get that object? That is described soon. 
+A property to hold the current student object is also needed, as described in the previous section. 
 
 ##### Initialization 
 
+As described earlier, we need the student object:
+* When the cart component loads (`constructor`), it attempts to get the student object from the property in the service 
+* If successful, it copies it to a local "student" property 
+* Otherwise, it does a programmatic navigation to the student list
+
+We also need the "courses possible" data, so we get this in `ngOnInit`. When the data comes in, we save it in the property. Then, we call a new function (that we must write) to filter the "courses possible" collection into a smaller "courses matched" collection that is customized for the specific student. 
+
+Do you think you need an algorithm to build the "courses matched" collection? If yes, try this:
+
+```js
+courseMatch(): void {
+
+  // For each possible course...
+    // Continue only if the enrol total is less than 4
+      // Do we have a course history credit for this course?
+      // If yes, continue
+        // Look for a match of ALL prereqs...
+        // If we have ALL prereqs in the course history...
+          // Add course to the "courses matched" collection
+
+  // Optional - clean up the time string by removing 
+  // the seconds data (e.g. 13:30:00 becomes 13:30)
+}
+```
+
+A comment about the "Look for match of ALL prereqs": The logic is a bit easier if we set a boolean "flag" (to "true") before we look at each prerequsite. Then, as we inspect each prerequisite, and we find one that's missing, we can change the "flag" to false. After finishing looking at all the prerequisites, the "flag" is used to determine whether we add the course to the "courses matched" collection.
+
+
 
 <br>  
 <br>  
 <br>  
-<mark>&nbsp;New content is being added here&nbsp;</mark>  
-In the near future, this part of the document will be updated.  
-Completion estimated to be Monday, March 25.  
 <br>  
 <br>  
 <br>  
