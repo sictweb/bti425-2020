@@ -34,7 +34,7 @@ This is the "student" entity, version 1.
 
 ~ ~ ~ ~ 
 
-Old content:
+Old content that was removed:
 
 ### assign-2-data-courses-available-v1
 
