@@ -369,7 +369,28 @@ courseMatch(): void {
 
 A comment about the "Look for match of ALL prereqs": The logic is a bit easier if we set a boolean "flag" (to "true") before we look at each prerequsite. Then, as we inspect each prerequisite, and we find one that's missing, we can change the "flag" to false. After finishing looking at all the prerequisites, the "flag" is used to determine whether we add the course to the "courses matched" collection.
 
+##### Task functions/methods
 
+The cart will have some functionality or behaviour. So, we must write some functions/methods. Make a plan to write at least these functions/methods, and we'll fill in the code soon:
+
+courseSelect
+* accepts a course object argument, and returns nothing 
+* its purpose is to handle the add/remove button task in the UI
+* as a result, it will copy the course object to the "courses selected" collection, or remove it 
+
+taskClear
+* accepts no argument, and returns nothing
+* its purpose is to clear/empty the "courses selected" collection
+
+taskSaveCart
+* TBA
+
+taskConfirmTimetable
+* TBA
+
+<br>
+
+<mark>&nbsp;( more to come )&nbsp;</mark>
 
 <br>  
 <br>  
