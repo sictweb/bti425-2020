@@ -61,19 +61,19 @@ The landing page of the app enables the user to view a menu of tasks.
 
 A list of all possible courses (for all academic programs) can be viewed. 
 
-![Course list](media/a2-course-list.png)
+<img class="border1" src="media/a2-course-list.png" alt="">
 
 <br>
 
 A list of students can be viewed.
 
-![Student list](media/a2-student-list.png)
+<img class="border1" src="media/a2-student-list.png" alt="">
 
 <br>
 
 Select any student to view details and begin working with the enrolment task. Notice the "Tentative courses" list is empty. It is intended to show a list of selected courses that have not yet been added to the timetable. Also notice the empty "Confirmed courses" list. After viewing, click/tap the "Select courses" button. 
 
-![Student detail](media/a2-student-detail-start.png)
+<img class="border1" src="media/a2-student-detail-start.png" alt="">
 
 <br>
 
@@ -87,25 +87,25 @@ On the right, the selected courses appear in a timetable grid, and in a standard
 
 > Your professor will provide you with a ready-to-use component for the grid and the list. 
 
-![Cart start](media/a2-cart-start.png)
+<img class="border1" src="media/a2-cart-start.png" alt="">
 
 <br>
 
 Interact with the list, and add/remove some courses. Notice that the selections appear on the right. 
 
-![Cart interaction](media/a2-cart-interaction.png)
+<img class="border1" src="media/a2-cart-interaction.png" alt="">
 
 <br>
 
 After you're happy with the result, click/tap the "Save for later" button. It will do that, and show you a message. 
 
-![Cart save](media/a2-cart-saved-message-top.png)
+<img class="border1" src="media/a2-cart-saved-message-top.png" alt="">
 
 <br>
 
 When you're happy with the result, return to the student detail page, and the selected courses will appear. 
 
-![Student detail](media/a2-student-detail-after.png)
+<img class="border1" src="media/a2-student-detail-after.png" alt="">
 
 <br>
 
@@ -133,6 +133,12 @@ Set up the rest of your dev environment (terminal windows, editor, browsers and 
 
 ### Doing the work, initial 
 
+We work on two code bases:
+1. The web service/API 
+2. The Angular web app 
+
+Before we do the web service/API work, get familiar with the data. 
+
 During Week 8, your goal should be to start getting comfortable with the assignment's data model. We will have multiple entity collections, with some related data. As a result, it will be more substantial than the single-entity web service that you built in Assignment 1. 
 
 To support this learning, get the `assign-2-data-student-v1.json` data file from the Week 8 folder of the code repository. Study its structure. Notice the following:
@@ -140,13 +146,53 @@ To support this learning, get the `assign-2-data-student-v1.json` data file from
 * Each "student" object has a number of data properties 
 * One of its properties is "credits", which is a collection of courses a student has passed (this is a "course history")
 
-Then, edit your new app to display the data in a simple table, as shown below. The contents of the JSON data file can be the value of a new class-level property - that's the easiest way to materialize the data without yet having to create a database or a web service. 
+Then, edit a component (new or existing) your Angular app to display the data in a simple table, as shown below. The contents of the JSON data file can be the value of a new class-level property - that's the easiest way to materialize the data without yet having to create a database or a web service. 
 
 ![Example](media/a2-display-data-students.png)
 
+After it shows the results you want, you can throw away this "testing" code.
+
+The Week 8 folder also includes courses-related data file, `assign-2-data-courses-available-v2.json`. Study its structure. Notice the following: 
+* It is a collection of "available course" objects 
+* Each "course" object has a number of data properties 
+* Data for both the "2018 Fall" and "2019 Winter" terms are included (although we will use only the "2019 Winter" items)
+* One of the properties is "prerequisite", which is a collection of strings that are course codes 
+
+Similar to above, it would be a good idea to work with the courses data. You could either show/display the data in an Angular component, or you could use Node.js. The code repo has a `a2dataquerytests.js` source code file that you can edit and execute at the command line. It will enable you to become familiar with the course data. 
+
 <br>
 
-> As suggested above, read/skim all of this document before you begin work. 
+### Web service/API starter tasks
+
+In this section, the web service/API starter tasks are discussed. 
+
+<br>
+
+#### Import each JSON data file into a MongoDB Atlas collection
+
+As noted above, there are data files for "students" and "available courses". 
+
+Import each JSON data file into a MongoDB Atlas collection. Use the command-line `mongoimport` program to do this task. Get the command text from the MongoDB Atlas console. We suggest that you paste the text into a text editor, so that you can edit and prepare the command before you attempt to execute it. 
+
+> Remember to add the ``--jsonArray` option to the command
+
+<br>
+
+#### Write a schema class for each collection
+
+> more to come
+
+<br>
+
+#### Add functions/methods to `server.js` and `manager.js` 
+
+> more to come 
+
+<br>
+
+### Angular web app starter tasks
+
+In this section, the Angular web app starter tasks are discussed. 
 
 <br>
 
@@ -154,11 +200,23 @@ Then, edit your new app to display the data in a simple table, as shown below. T
 
 We must have a consistent and functional visual layout. Therefore, the first task is to create a layout, or a structure. You can use the guidance in the [Angular component interaction](https://github.com/sictweb/bti425/tree/master/Week_07) code example (in the repo). Customize the "template" so that your name appears in the header area of the viewport. Make sure that there is a navigation scheme. 
 
+Also, make sure there is a "home" component, and a "not found" component. 
+
 <br>
 
 #### Components to support the app's purpose
 
-In the near future, this part of the document will be updated with guidance about the components needed by the app. More to come. 
+As suggested by the guided tour above, a number of components are needed. Here's what we suggest:
+
+* Course list - shows all available courses in a table/list 
+* Course detail - for one specific course 
+* Student list - shows all available students 
+* Student detail - for one specific student
+* Shopping cart - to enable selection of courses for a student
+
+> Your professors will provide three additional related components.  
+> They will enhance the shopping cart experience.  
+> More information is provided below. 
 
 <br>
 
@@ -168,9 +226,11 @@ As suggested by the guidance and topic coverage, configure and test the routing 
 
 Remember to configure a "home" component and route, and a "not found" component and route. 
 
-The "home page" component, as a landing page for the app, will simply state the app's purpose. *More importantly*, it will include two standard HTML hyperlinks:
+The "home page" component, as a landing page for the app, will state the app's purpose. *More importantly*, it will include two standard HTML hyperlinks:
 1. One is the URL to your Heroku-hosted (Angular) app 
 2. The other is the URL to your Heroku-hosted <u>M</u>ongoDB + <u>E</u>xpress.js + <u>N</u>ode.js (MEN) web service 
+
+Like the professor's publicly-posted example solution, we also suggest that you add two links to the home page. One link points to the student list. The other will be used for a future "login" task (and it can be rendered as a disabled button for now).
 
 > Your professor needs the URL to your hosted Angular app so that it can be tested on a standard computer browser and on a smartphone or tablet.  
 > The URL to your hosted web service is needed too, so that your professor can interact with it using Postman.
@@ -180,6 +240,8 @@ The "home page" component, as a landing page for the app, will simply state the 
 ### Doing the work, detail
 
 In the near future, this part of the document will be updated.
+
+<mark>&nbsp;New content is being added here&nbsp;</mark>
 
 <br>
 
