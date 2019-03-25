@@ -32,7 +32,7 @@ Third, notice a new "U" (for user accounts) data/schema model class. It defines 
 Finally, notice a new code box, `manager-auth.js`. It will include methods/functions that handle the authentication tasks, such as "registerUser" and "checkUser". For this course's introductory treatment of security topics, your teacher team has decided to isolate the identity management storage part in a separate database. This also happens to be a good practice, because of the sensitive nature of a database with user account data. 
 
 The work described below has four major tasks:
-1. Prepare your Heroku and mLab deployments
+1. Prepare your Heroku and MongoDB Atlas deployments
 2. Add a teacher-provided code module
 3. Write a user account schema 
 4. Edit `server.js` 
@@ -99,7 +99,7 @@ When you're done, it may look like the following example:
 
 At this point in time, in the context of the [security topics document](security-intro) we have done the following:
 
-* Partially-implemented the *identity management* part. We have a user account schema, and a user accounts storage location on mLab. Some of the remaining *identity management* code is in the professor-provided `manager-auth.js` code, and more will be added to `server.js`, described below. 
+* Partially-implemented the *identity management* part. We have a user account schema, and a user accounts storage location on MongoDB Atlas. Some of the remaining *identity management* code is in the professor-provided `manager-auth.js` code, and more will be added to `server.js`, described below. 
 
 * Partially-implemented the *authentication* part. We have added the `manager-auth.js` source code file to the project, which includes the "login" code. 
 

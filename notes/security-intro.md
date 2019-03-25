@@ -65,7 +65,7 @@ Authentication is the process of presenting and validating credentials. There ar
 
 <br>
 
-**Not yet authenticated**
+**First process workflow: Not yet authenticated**
 
 If a user has not been authenticated by the security system, then the user must present their credentials. For our purposes, this is typically done in two different ways:
 
@@ -77,7 +77,7 @@ For both ways, the user typically presents a *username* and a *password* as thei
 
 After the security system validates the credentials, the security system issues (delivers, returns) a package of data to the user: 
 
-1. If the user authenticated through a browser (with a "login user interface), then the package is a [cookie](https://en.wikipedia.org/wiki/HTTP_cookie) (or more specifically, an *authentication cookie*)
+1. If the user authenticated through a browser (with a "login" user interface), then the package is a [cookie](https://en.wikipedia.org/wiki/HTTP_cookie) (or more specifically, an *authentication cookie*)
 
 2. If the user authenticated through an HTTP client/requestor (programmatic interface), then the package is an [access token](https://en.wikipedia.org/wiki/Access_token) (often just referred to as a "token")
 
@@ -90,19 +90,22 @@ The cookie or token includes information about the issuer, descriptive informati
 > For a cookie, there is a defined standard.  
 > For a token, there is no single standard. However, there are a few widely-used approaches, which we will cover later. 
 
-A browser saves or stores the cookie in a secured manner. This is done automatically as a browser feature, and the user or programmer does not need to do any extra work to save the cookie, and then use the cookie again in the future. 
+A browser saves or stores the cookie in a secure manner. This is done automatically as a browser feature, and the user or programmer does not need to do any extra work to save the cookie, and then use the cookie again in the future. 
 
 In contrast, when using an HTTP client/requestor, the programmer *must* do extra work to save or store the token in the app (in memory and/or persisted) in a secured manner. 
 
 <br>
 
-**Has been recently authenticated**
+**The other process workflow: Has been recently authenticated**
 
 If a user was recently authenticated, and has a cookie or token that has not yet expired, then the user can present the cookie or token as their credentials. 
 
 When using a browser, assume the recently-autheticated user requests a different resource in the same app. The browser automatically fetches the cookie from its storage area, and includes it in the header of the request. 
 
 When using an HTTP client/requestor, *the programmer* must fetch the token from the app's storage area, and include it in the header of the request. 
+
+> Angular apps can work a bit differently.  
+> You'll learn now in the next few weeks.  
 
 In both situations, the listening app will notice the cookie or token in the request headers. It will then inspect and validate its contents.
 
