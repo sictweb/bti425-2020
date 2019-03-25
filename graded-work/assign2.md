@@ -272,6 +272,8 @@ As suggested by the guidance and topic coverage, configure and test the routing 
 
 Remember to configure a "home" component and route, and a "not found" component and route. 
 
+Make sure you think about then implement some appropriate navigation elements in your app. For example, a "list" view will probably include link elements to "details". And, a "details" view will probably include a link element to "go back" to the "list". This is a general statement, and your app needs may vary. 
+
 The "home page" component, as a landing page for the app, will state the app's purpose. *More importantly*, it will include two standard HTML hyperlinks:
 1. One is the URL to your Heroku-hosted (Angular) app 
 2. The other is the URL to your Heroku-hosted <u>M</u>ongoDB + <u>E</u>xpress.js + <u>N</u>ode.js (MEN) web service 
@@ -285,11 +287,27 @@ Like the professor's publicly-posted example solution, we also suggest that you 
 
 ### Doing the work, detail
 
-In the near future, this part of the document will be updated.
+As a follow-up to your recent work (above) with the web service/API, edit the components that will display students and courses, all (in a list) and one (as detail). 
 
-<mark>&nbsp;New content is being added here&nbsp;</mark>
+The student detail component should probably show/list the course history credits. It should also have a navigation element that will display the (shopping) "cart". (We'll discuss the "cart" component soon.)
 
 <br>
+
+#### Cart component
+
+This is the most interesting component, with new features. 
+
+
+<br>  
+<br>  
+<br>  
+<mark>&nbsp;New content is being added here&nbsp;</mark>  
+In the near future, this part of the document will be updated.  
+Completion estimated to be Monday, March 25.  
+<br>  
+<br>  
+<br>  
+
 
 ### Testing your work
 
