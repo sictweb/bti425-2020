@@ -180,13 +180,59 @@ Import each JSON data file into a MongoDB Atlas collection. Use the command-line
 
 #### Write a schema class for each collection
 
-> more to come
+The guidance now is to create a separate source code file for each Mongoose schema class. We suggest a naming convention for the source code files, by using a prefix "msc-" (the initials for Mongoose schema class). For example:
+```
+msc-student.js
+msc-course.js
+```
+
+The data members of both schema classes will be strings or numbers mostly. Make sure the properties that have date and time info are stored as strings. 
+
+Notice that the student data has an embedded collection of course history credits. Therefore, create another source code file to define a "credit" class:
+```
+msc-credit.js
+```
+
+In the student schema class, near the top, "require" the credit schema class like this:
+```js
+// Get the schema for the embedded/referenced document
+var Credit = require('./msc-credit');
+```
+
+Then, in the student schema class, the property can be defined like this:
+```js
+credits: [Credit]
+```
+
+In the `manager.js` code, when you define a constant for each schema class, you can "require" the student schema class, but you don't need to "require" the credit schema class, because it will be inherited by the above action.
+
+Notice that the course data has an embedded collection of prerequisite (course codes). The property can be defined as an array of type String.
 
 <br>
 
 #### Add functions/methods to `server.js` and `manager.js` 
 
-> more to come 
+We suggest that you create functions/methods that will deliver:
+* all students
+* one specific student, fetched by its unique MongoDB identifier
+* all courses
+* one specific course, as above 
+
+We also suggest that you create two additional functions/methods:
+* all courses in the BSD program in the Winter 2019 term 
+* all courses in the CPA program in the Winter 2019 term
+
+Doing this will enable a smaller result set to be delivered to the requestor. 
+
+Recently, you were introduced to the "get some, filtered" Mongoose query. You learned that you can pass a JavaScript object to the `find()` method; the object has name-value pairs that represent the filter criteria. For example, your code will end up looking something like this:
+```js
+Courses.find({ academicProgram: 'some-string', term: 'some-string' })
+  // This will find all that match BOTH criteria
+```
+
+Test your work using Postman, before moving on to the Angular app coding. 
+
+Then deploy the web service/API to Heroku. 
 
 <br>
 
@@ -206,7 +252,7 @@ Also, make sure there is a "home" component, and a "not found" component.
 
 #### Components to support the app's purpose
 
-As suggested by the guided tour above, a number of components are needed. Here's what we suggest:
+As suggested by the guided tour above, a number of components are needed. Create them now. Here's what we suggest:
 
 * Course list - shows all available courses in a table/list 
 * Course detail - for one specific course 
@@ -214,7 +260,7 @@ As suggested by the guided tour above, a number of components are needed. Here's
 * Student detail - for one specific student
 * Shopping cart - to enable selection of courses for a student
 
-> Your professors will provide three additional related components.  
+> Your professors will provide three additional cart-related components.  
 > They will enhance the shopping cart experience.  
 > More information is provided below. 
 
