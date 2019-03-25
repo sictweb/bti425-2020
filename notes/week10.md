@@ -29,8 +29,6 @@ Then, we'll learn some techniques to improve the interaction experience users ha
 
 Also this week, continue working on [Assignment 2](/graded-work/assign2). 
 
-Continue working on it. 
-
 <br>
 
 #### Checklist for today

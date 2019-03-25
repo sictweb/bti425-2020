@@ -143,7 +143,7 @@ So, to recap, the simplest scenario inspects the "lifetime" claim (often coded a
 
 <br>
 
-#### Claims, more information...
+### Claims, more information...
 
 There is a somewhat-official and fancy definition for claim, which is *"a statement that one subject makes about itself or another subject"*. A "statement" is descriptive information. A "subject" is a participant in the lifetime of an app, and it could be a human, a corporate body (i.e. organization), or a programmable object (e.g. a security system). 
 
@@ -165,7 +165,7 @@ How can we use claims? Now that you have an idea about the information that can 
 
 <br>
 
-##### Where are claims defined and stored?
+#### Where are claims defined and stored?
 
 For our purposes, the identity authority is responsible for this task. Each user account will have a *claims collection*. 
 
@@ -176,7 +176,7 @@ The decision about what claims to define and use is completely determined by the
 
 <br>
 
-##### Claims issuance
+#### Claims issuance
 
 After a successful authentication, the identity authority creates a cookie or token. That package of data includes the claims. As a result, any of the claims can be used in any way by any code on the execution path. 
 
@@ -184,6 +184,6 @@ After a successful authentication, the identity authority creates a cookie or to
 
 ### Further study
 
-In Assignment 6, we will attempt to implement a simplified security system. You will get exposure to enough to be able to go further in future courses. 
+In Assignment 3, we will attempt to add a simplified security system to the work done for Assignment 2. You will get exposure to enough to be able to go further in future courses. 
 
 <br>

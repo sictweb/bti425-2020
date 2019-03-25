@@ -7,7 +7,10 @@ layout: default
 
 This document focuses on the work needed to add security features to an Angular app. 
 
-In the sections below, we will modify a sample solution for Assignment 5. The individual tasks can be done to any app. Some of the code can be copy/pasted, sometimes a whole file (or component file collection), and sometimes smaller amounts of code. 
+In the sections below, we will modify a sample solution for an assignment in last year's version of the course. The individual tasks can be done to any app. Some of the code can be copy/pasted, sometimes a whole file (or component file collection), and sometimes smaller amounts of code. 
+
+> This document is being edited.  
+> This notice will be removed when the edits are complete.  
 
 <br>
 
