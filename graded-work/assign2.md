@@ -180,7 +180,7 @@ Import each JSON data file into a MongoDB Atlas collection. Use the command-line
 
 #### Write a schema class for each collection
 
-The guidance now is to create a separate source code file for each Mongoose schema class. We suggest a naming convention for the source code files, by using a prefix "msc-" (the initials for Mongoose schema class). For example:
+The guidance now is to create a separate source code file for each Mongoose schema class. We suggest a naming convention for the source code files, by using a prefix "msc-" (the initials for Mongoose schema class). That way, you can tell at a glance the purpose of the source code file. For example:
 ```
 msc-student.js
 msc-course.js
@@ -222,7 +222,7 @@ We also suggest that you create two additional functions/methods:
 * all courses in the BSD program in the Winter 2019 term 
 * all courses in the CPA program in the Winter 2019 term
 
-Doing this will enable a smaller result set to be delivered to the requestor. 
+Doing this will enable a smaller result set to be delivered to the requestor. How should this be coded?
 
 Recently, you were introduced to the "get some, filtered" Mongoose query. You learned that you can pass a JavaScript object to the `find()` method; the object has name-value pairs that represent the filter criteria. For example, your code will end up looking something like this:
 ```js
@@ -296,6 +296,48 @@ The student detail component should probably show/list the course history credit
 #### Cart component
 
 This is the most interesting component, with new features. 
+
+Think of it as a "student detail" page, with special functionality. 
+
+As you can see in the example solution, it displays a list of courses that a student can select. It also offers tasks (save selections, confirm as timetable). 
+
+On the right side of the example solution, a timetable "grid" shows the day-and-time of the selected courses. Below that, a list of selected courses appears. *Both these areas are components, and will be provided by your professors.* 
+
+Here is some guidance that will help you build this component. 
+
+##### Routing and the component
+
+One decision we must make concerns routing. Assuming that the "student detail" component is located here:
+```
+/student/detail/:id
+```
+
+How should we get to the cart? Should we do the following? We know that it would work:
+```
+/student/cart/:id
+```
+
+As an alternative, we are suggesting that we store the student object in the service, and use it to maintain "interaction state". This was discussed [early in the course](https://bti425.ca/notes/intro-web-services). 
+
+##### Properties in the component 
+
+We suggest creating three array properties. Each will hold a collection of course objects. 
+
+A "courses possible" array is intended to hold the results of a query to the service (and then on to the web API) for all Winter 2019 courses in an academic program. The contents of this array will NOT be displayed/rendered - it is used as in-memory data. 
+
+> This collection starts out empty, and is filled in as a result of a call (to the web API) made in the `ngOnInit` method. 
+
+A "courses matched" array is intended to hold the results of a matching task. Each item in the "courses possible" array will be inspected, and if it is determined that the student will be able to select the course, it is copied (i.e. push) to this "courses matched" array. The contents of this array WILL be rendered in the user interface. 
+
+> This collection starts out empty, and is filled in as a result of a call to a matching function, which we must write. 
+
+A "courses selected" array is intended to hold the results of a user interaction task. In the user interface, a user will select one of the displayed courses (from the "courses matched" collection above), and it will be copied to this "courses selected" array. 
+
+> This collection starts out empty, and is filled in as a result of user interaction. 
+
+A property to hold the current student object is also needed. How do we get that object? That is described soon. 
+
+##### Initialization 
 
 
 <br>  
