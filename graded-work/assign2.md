@@ -224,6 +224,10 @@ Test your work using Postman, before moving on to the Angular app coding.
 
 Then deploy the web service/API to Heroku. 
 
+> Later, we will add two more functions/methods:  
+> * save cart, to save a tentative selection of courses 
+> * save timetable, to confirm or commit, and update the enrol totals
+
 <br>
 
 ### Angular web app starter tasks
@@ -283,7 +287,7 @@ The student detail component should probably show/list the course history credit
 
 <br>
 
-#### Cart component
+### Cart component
 
 This is the most interesting component, with new features. 
 
@@ -295,7 +299,9 @@ On the right side of the example solution, a timetable "grid" shows the day-and-
 
 Here is some guidance that will help you build this component. 
 
-##### Routing and the component
+<br>
+
+#### Routing and the component
 
 One decision we must make concerns routing. Assuming that the "student detail" component is located here:
 ```
@@ -322,7 +328,9 @@ How does this all work? Well, in point form, this is how we can do it:
 > We could do the same task in the "student detail" component too.  
 > It's not required for the assignment, but it's something to think about.
 
-##### Properties in the component 
+<br>
+
+#### Properties in the component 
 
 We suggest creating three array properties. Each will hold a collection of course objects. 
 
@@ -340,7 +348,9 @@ A "courses selected" array is intended to hold the results of a user interaction
 
 A property to hold the current student object is also needed, as described in the previous section. 
 
-##### Initialization 
+<br>
+
+#### Initialization 
 
 As described earlier, we need the student object:
 * When the cart component loads (`constructor`), it attempts to get the student object from the property in the service 
@@ -367,26 +377,39 @@ courseMatch(): void {
 }
 ```
 
-A comment about the "Look for match of ALL prereqs": The logic is a bit easier if we set a boolean "flag" (to "true") before we look at each prerequsite. Then, as we inspect each prerequisite, and we find one that's missing, we can change the "flag" to false. After finishing looking at all the prerequisites, the "flag" is used to determine whether we add the course to the "courses matched" collection.
+A comment about the "Look for match of ALL prereqs": The logic may be a bit easier if we set a boolean "flag" (to "true") before we look at each prerequsite. Then, as we inspect each prerequisite, and we find one that's missing, we can change the "flag" to false. After finishing looking at all the prerequisites, the "flag" is used to determine whether we add the course to the "courses matched" collection.
 
-##### Task functions/methods
+<br>
+
+#### Task functions/methods
 
 The cart will have some functionality or behaviour. So, we must write some functions/methods. Make a plan to write at least these functions/methods, and we'll fill in the code soon:
 
 courseSelect
 * accepts a course object argument, and returns nothing 
-* its purpose is to handle the add/remove button task in the UI
+* its purpose is to handle each course add/remove button task in the UI
 * as a result, it will copy the course object to the "courses selected" collection, or remove it 
+
+taskSaveCart
+* accepts no argument, and returns nothing 
+* its purpose is to save the "courses selected" collection as the value of a "cartSaved" property in the in-memory student document
+* it also sends a request to the web API to save the collection to the value of the "cartSaved" property in the database student document
+
+> Soon, you will learn how to code the "save cart" web API method. 
 
 taskClear
 * accepts no argument, and returns nothing
-* its purpose is to clear/empty the "courses selected" collection
-
-taskSaveCart
-* TBA
+* its purpose is to clear/empty the "courses selected" collection 
+* and to clear/empty the value of the "cartSaved" property in the in-memory student document
+* it also sends a request to the web API to clear/empty the value of the "cartSaved" property in the database student document (it will use the same "save cart" web API method as above)
 
 taskConfirmTimetable
-* TBA
+* accepts no argument, and returns nothing
+* its purpose is to save the "courses selected" collection as the value of a "timetableSaved" property in the in-memory student document
+* it also sends a request to the web API to do a similar task; in addition, it updates the enrol total for each course selected 
+* finally, it clears the value of the "cartSaved" property in both the in-memory and database student documents 
+
+> Soon, you will learn how to code the "save timetable" web API method. 
 
 <br>
 
