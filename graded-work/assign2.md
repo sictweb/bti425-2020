@@ -254,9 +254,10 @@ As suggested by the guided tour above, a number of components are needed. Create
 * Student detail - for one specific student
 * Shopping cart - to enable selection of courses for a student
 
-> Your professors will provide three additional cart-related components.  
+> Your professors have provided three additional cart-related components.  
 > They will enhance the shopping cart experience.  
-> More information is provided below. 
+> More information is provided below.  
+> They can be copied from the course repo (Week 8 folder). 
 
 <br>
 
@@ -420,6 +421,9 @@ taskConfirmTimetable
 
 In the professors' [example solution](https://pam-2019-a2app.herokuapp.com), the cart template layout is configured as a Bootstrap row. The left side (list of matching courses for the student) is 7 Bootstrap grid columns wide (`col-md-7`), and the right side area that holds the grid and the list is 5 grid columns wide (`col-md-5`). (Yours does NOT have to look identical, but it should show enough to be informative and useful.)
 
+> The professors' example solution puts the left side list in a scrollable container. How?  
+> It's inside a `div`, with the height determined using the new `vh` (viewport height unit), and setting the y-axis overflow to auto. 
+
 The left side list is rendered from the "courses matched" array. 
 
 How did the example solution get the day name?  
@@ -442,7 +446,17 @@ The professor's example solution has some specific behaviour for the "course sel
 
 It's possible because - as you know - we can bind a value to an attribute of an element. The Bootstrap button classes include a green `btn-success` class, and a red `btn-danger` class. We want to use one of these, depending upon whether the course is already selected or not. 
 
-The Angular element attribute that we must use is `ngClass`, and not simply "class". 
+The Angular element attribute name that we must use is `ngClass`, and not simply "class". 
+
+The value will be provided by a *new* function/method that we add to the component class. We pass (as a parameter) the current row object to the function/method, which will check whether the current row object is already in the "courses selected" collection. If it is, we should show a red button (to signify stop/remove). If not, we should show a green button (to signify go/add). 
+
+Depending on how you want to code the markup, the function/method could return a boolean or a string (e.g. "btn btn-danger"). In the example markup below, the function/method returns a boolean. Notice the following: 
+* it has the familiar "click" event handler binding 
+* it composes the element's "class" attribute with a ternary operator
+
+```html
+<button [ngClass]="['btn', isCourseSelected(c) ? 'btn-danger' : 'btn-success']" (click)="courseSelect(c)">+ / -</button>
+```
 
 <br>
 
@@ -458,10 +472,31 @@ At this point in time, before continuing, your app should be able to do the foll
   * enable a course to be selected (and rendered)
   * enable the "courses selected" collection to be cleared
 
+It would also be nice to ensure that the professor-provided grid and list components work correctly.
 
 It would be a good idea to build and deploy the Angular app to Heroku. If there are problems, it is a better idea to fix them now, instead of waiting for the assignment's due date. 
 
 <br>
+
+### Save cart task, web API and Angular app
+
+Now it's time to enable the saving of the "courses selected" collection in the database, as a student's "tentative courses". 
+
+We need to do the following:
+* Add new properties to the (student) Mongoose schema 
+* Write PUT-handling functions in `server.js` and `manager.js` 
+* In the Angular app, write a service function/method (for PUT) that calls out to the web API 
+* Edit the "taskSave" function/method in the Angular app so that it calls the service function/method 
+
+<br>
+
+### Confirm timetable task, web API and Angular app
+
+Now it's time to enable the saving of the "courses selected" collection in the database, as a student's "confirmed courses". 
+
+<br>
+
+
 
 <mark>&nbsp;( more to come )&nbsp;</mark>
 
@@ -479,9 +514,9 @@ For this assignment, there is no required external testing capability. Therefore
 
 <br>
 
-### Deploy the Angular app to Heroku
+### Deploy the web API and the Angular app to Heroku
 
-> Note - Above, you will deploy the web service to Heroku and Atlas.
+> Note - Above, you have already deployed the web API to Heroku and Atlas.
 
 [Follow the guidance in the course notes](/notes/react-heroku-deploy), and deploy the Angular app to a new Heroku app. 
 
@@ -521,9 +556,13 @@ SafeAssign compares your work with that of other current and past students, and 
 
 We need both the Node+Express web service and the Angular web app.  
 
+<mark>We also need ALL your project files (and not just the txt files).</mark>
+
 Here's how to submit your work, before the due date and time:
 
-#### Node+Express web service
+<br>
+
+#### Node+Express web API
 
 1. Locate the folder that holds your project files. 
 
@@ -538,6 +577,8 @@ Here's how to submit your work, before the due date and time:
 For each of these files in the MyCode folder, change the file name extension to "txt".
 
 4. Compress/zip the copied folder. Maybe the name should be something like "assign2webservice.zip". The zip file SHOULD be about 1MB in size. If it isn't, you haven't followed the instructions properly.
+
+<br>
 
 #### Angular web app 
 
