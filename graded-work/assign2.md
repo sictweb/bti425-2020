@@ -490,9 +490,88 @@ We need to do the following:
 
 <br>
 
+#### Mongoose schema work 
+
+To enable saving of courses selected or confirmed, we need more properties in each student document. One of the nice features of a NoSQL document database store like MongoDB is that it allows - without errors - documents that have different shapes. This enables us to start out with the "student" schema you wrote a couple of weeks ago, and then add to that schema when we need to. 
+
+Open the Mongoose schema class for "student".  
+Require the "course" schema source code file (perhaps as `var Course...`)  
+Add another property to the schema:  
+`coursesSaved: [Course]` 
+
+While you're there, we will need one more property, for the "confirm timetable" task that's described in a later section. We suggest:  
+`coursesConfirmed: [Course]` 
+
+Test your work, by confirming that your existing students "get all" and "get one" methods work, and deliver the data you expect. You will probably notice that the results will not include any name-value pair for the new "coursesSaved" property, because it's empty. 
+
+<br>
+
+#### Web API functions in `server.js` and `manager.js`
+
+In a [code example in the Week 2 repo](https://github.com/sictweb/bti425/tree/610d5964b03b962625d688c246c80a57a6688331/Week_02/WebAPIv2-OneEntity), and in other code that you have written since, the pattern for all five typical CRUD tasks (get all, get one, add new, edit existing, delete item) is demonstrated. 
+
+For this "save cart" task, we need a PUT handler. We will be updating a "student" document, by setting the value of its just-added "coursesSaved" property to an array (collection) of "courses selected". That array is passed in all the way from the Angular app (the component, then to the service) to the web API (first to the `server.js` function and then to this function). 
+
+Start working with the `manager.js` function. It will handle the "edit existing" use case for a student. Maybe name it "studentCartSave". 
+
+The function needs TWO arguments:
+1. The student's identifier (which is the MongoDB long string)  
+2. The data for the update task (which is an array of course objects) 
+
+Before calling the Mongoose `findByIdAndUpdate()` method, we MUST package the data for the update task. Why? It is passed in as an *array of course objects*. It's not good enough, because it does not identify the property that we want to update. 
+
+The data passed to the `findByIdAndUpdate()` function must be a (JavaScript) *object*, and NOT an array. The object must have one or more name-value pairs, with properties to be updated (along with their data values). Solution? Wrap the array data as an object, something like this:  
+
+```js
+var wrappedItem = { "coursesSaved": passed-in-array };
+```
+
+The rest of the logic will be similar to past examples, but we recommend returning a simple string (e.g. "Cart saved") as the `resolve()` argument, and NOT the item. 
+
+Continue by working on the `server.js` function. 
+
+From past examples or your own code, you are familar with the coding of a PUT handler in `server.js`. Therefore, copy/paste/create a new method. We suggest the route will be something like this:
+
+```
+/api/students/:id/cart/save
+```
+
+The rest of the logic will be similar to past examples, but we recommend returning a JavaScript object that matches the one in the `.catch()` error handler; its message text can be something simple like "Cart saved". In other words, don't return the "data". 
+
+<br>
+
+#### Angular app, service function/method
+
+In [code examples in the Week 10 repo](https://github.com/sictweb/bti425/tree/master/Week_10), and in other code that you have written since, the pattern for all five typical CRUD tasks (get all, get one, add new, edit existing, delete item) is demonstrated. 
+
+We need a service function/method that will call the web API function that was just completed above. It will be a PUT handler. It will handle the "edit existing" use case for a student. Maybe name it "studentCartSave". 
+
+The function needs TWO arguments:
+1. The student's identifier (which is the MongoDB long string)  
+2. The data for the update task (which is an array of course objects) 
+
+It will return - and this is important - an observable of any:  
+`Observable<any>` 
+
+The return value will be that simple object that was seen above, e.g.:  
+`{ "message": "Cart saved" }`
+
+<br>
+
+#### Angular app, cart component code
+
+(coming soon)
+
+<br>
+
 ### Confirm timetable task, web API and Angular app
 
 Now it's time to enable the saving of the "courses selected" collection in the database, as a student's "confirmed courses". 
+
+> <mark>Notice:</mark>  
+> The professors will provide the code for the web API `manager.js` function.  
+> It is still being composed and tested.  
+> We will update this section of the document after the code gets posted.  
 
 <br>
 
