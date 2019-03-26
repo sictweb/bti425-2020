@@ -81,7 +81,7 @@ On the left, a *customized* list of possible courses for that student is shown. 
 
 On the right, the selected courses appear in a timetable grid, and in a standard list format. 
 
-> Your professor will provide you with a ready-to-use component for the grid and the list. 
+> Ready-to-use components for the grid and the list have been posted in the [course code repo in the Week 8 folder](https://github.com/sictweb/bti425/tree/master/Week_08) (alongside the other Assignment 2 content). 
 
 <img class="border1" src="media/a2-cart-start.png" alt="">
 
@@ -283,11 +283,11 @@ Like the professor's publicly-posted example solution, we also suggest that you 
 
 As a follow-up to your recent work (above) with the web service/API, edit the components that will display students and courses, all (in a list) and one (as detail). 
 
-The student detail component should probably show/list the course history credits. It should also have a navigation element that will display the (shopping) "cart". (We'll discuss the "cart" component soon.)
+The student detail component should probably show/list the course history credits. It should also have a navigation element that will display the (shopping) "cart". (Look at the professors' example solution for inspiration. Yours does NOT have to look identical, but it should show enough to be informative and useful.) 
 
 <br>
 
-### Cart component
+### Cart component, class code
 
 This is the most interesting component, with new features. 
 
@@ -346,7 +346,7 @@ A "courses selected" array is intended to hold the results of a user interaction
 
 > This collection starts out empty, and is filled in as a result of user interaction. 
 
-A property to hold the current student object is also needed, as described in the previous section. 
+A property to hold the current "student" object is also needed, as described in the previous section. 
 
 <br>
 
@@ -403,6 +403,9 @@ taskClear
 * and to clear/empty the value of the "cartSaved" property in the in-memory student document
 * it also sends a request to the web API to clear/empty the value of the "cartSaved" property in the database student document (it will use the same "save cart" web API method as above)
 
+> Suggestion - The initial "testing" version of your method can simply clear/empty the "courses selected" collection, without calling the web API.  
+> That functionality will enable you to test the basic behaviour. 
+
 taskConfirmTimetable
 * accepts no argument, and returns nothing
 * its purpose is to save the "courses selected" collection as the value of a "timetableSaved" property in the in-memory student document
@@ -410,6 +413,53 @@ taskConfirmTimetable
 * finally, it clears the value of the "cartSaved" property in both the in-memory and database student documents 
 
 > Soon, you will learn how to code the "save timetable" web API method. 
+
+<br>
+
+#### Cart component, template code
+
+In the professors' [example solution](https://pam-2019-a2app.herokuapp.com), the cart template layout is configured as a Bootstrap row. The left side (list of matching courses for the student) is 7 Bootstrap grid columns wide (`col-md-7`), and the right side area that holds the grid and the list is 5 grid columns wide (`col-md-5`). (Yours does NOT have to look identical, but it should show enough to be informative and useful.)
+
+The left side list is rendered from the "courses matched" array. 
+
+How did the example solution get the day name?  
+By using a series of conditional elements, for example:  
+```html  
+<span *ngIf="c.classMon == 'Y'">Monday</span>
+``` 
+
+The right side area is rendered by adding these elements inside the `div` container:
+```html
+<app-cart-selected-grid [coursesSelected]="coursesSelected"></app-cart-selected-grid>
+<app-cart-selected-list [coursesSelected]="coursesSelected"></app-cart-selected-list>
+```
+
+<br>
+
+**Add/remove button**
+
+The professor's example solution has some specific behaviour for the "course select" task. How is that done? 
+
+It's possible because - as you know - we can bind a value to an attribute of an element. The Bootstrap button classes include a green `btn-success` class, and a red `btn-danger` class. We want to use one of these, depending upon whether the course is already selected or not. 
+
+The Angular element attribute that we must use is `ngClass`, and not simply "class". 
+
+<br>
+
+#### Checkpoint - testing your work
+
+At this point in time, before continuing, your app should be able to do the following:
+* display a list of all students 
+* display one specific selected student
+* display a list of all courses 
+* display one specific selected course
+* enable the getting started "shopping cart" functionality...
+  * display matching courses for the selected student 
+  * enable a course to be selected (and rendered)
+  * enable the "courses selected" collection to be cleared
+
+
+It would be a good idea to build and deploy the Angular app to Heroku. If there are problems, it is a better idea to fix them now, instead of waiting for the assignment's due date. 
 
 <br>
 
