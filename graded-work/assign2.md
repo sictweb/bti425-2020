@@ -27,6 +27,30 @@ Grade value: 25% of your final course grade
 
 <br>
 
+### Quick links
+
+This is a long document. Here are links to some sections:
+
+[Screen shots of the professor's example solution](#a-guided-tour-of-the-app) 
+
+[Getting started](#getting-started)
+
+[Web service/API starter tasks](#web-serviceapi-starter-tasks)
+
+[Angular web app starter tasks](#angular-web-app-starter-tasks)
+
+[Save cart task](#save-cart-task-web-api-and-angular-app)
+
+[Clear cart task](#clear-cart-task-web-api-and-angular-app)
+
+[Confirm timetable task](#confirm-timetable-task-web-api-and-angular-app)
+
+[Deploy the web API and Angular app to Heroku](#deploy-the-web-api-and-the-angular-app-to-heroku)
+
+[Submitting your work](#submitting-your-work)
+
+<br>
+
 ### Overview and purpose
 
 As noted above, the purpose of objective of the assignment is to create a substantial Angular app that has good coverage of the topics since we started working with this app dev platform. 
@@ -478,6 +502,12 @@ It would be a good idea to build and deploy the Angular app to Heroku. If there 
 
 <br>
 
+#### What now? Finish the cart save, clear, and confirm functionality
+
+In the sections below, the cart *save*, *clear*, and *confirm* functionality is briefly described. 
+
+<br>
+
 ### Save cart task, web API and Angular app
 
 Now it's time to enable the saving of the "courses selected" collection in the database, as a student's "tentative courses". 
@@ -485,7 +515,8 @@ Now it's time to enable the saving of the "courses selected" collection in the d
 We need to do the following:
 * Add new properties to the (student) Mongoose schema 
 * Write PUT-handling functions in `server.js` and `manager.js` 
-* In the Angular app, write a service function/method (for PUT) that calls out to the web API 
+* In the Angular app, add the new properties to the (student) data model class
+* Write an Angular service function/method (for PUT) that calls out to the web API 
 * Edit the "taskSave" function/method in the Angular app so that it calls the service function/method 
 
 <br>
@@ -540,6 +571,15 @@ The rest of the logic will be similar to past examples, but we recommend returni
 
 <br>
 
+#### Angular app, add properties to student class
+
+To match what you did above (for the Mongoose schema), open the "student" data model class for editing. Add BOTH new properties that match the names from above. They will be *optional*, e.g.  
+```js
+coursesSaved?: Course[];
+```
+
+<br>
+
 #### Angular app, service function/method
 
 In [code examples in the Week 10 repo](https://github.com/sictweb/bti425/tree/master/Week_10), and in other code that you have written since, the pattern for all five typical CRUD tasks (get all, get one, add new, edit existing, delete item) is demonstrated. 
@@ -551,8 +591,7 @@ The function needs TWO arguments:
 2. The data for the update task (which is an array of course objects) 
 
 It will return - and this is important - an observable of any:  
-`Observable<any>` 
-
+`Observable<any>`  
 The return value will be that simple object that was seen above, e.g.:  
 `{ "message": "Cart saved" }`
 
@@ -560,7 +599,25 @@ The return value will be that simple object that was seen above, e.g.:
 
 #### Angular app, cart component code
 
-(coming soon)
+This method is fairly simple, and should probably do two things:
+1. Set the value of the student's "coursesSaved" property to the "courses selected" array 
+2. Call the Angular service method, passing in the student identifier and the "courses selected" array 
+
+What must you "subscribe" to? Well, the web API returns a simple object with one property ("message") with some text. We suggest that you display that in (bind it to) the user interface. 
+
+<br>
+
+### Clear cart task, web API and Angular app
+
+This should be a short section, because the task will use the code written for the "save cart" task. 
+
+The only real difference here is that we want to pass an *empty* array as a parameter to the "save cart" service method. The remaining code in the chain should work correctly. 
+
+The cart component function/method code is fairly simple, and should probably do two things:
+1. Set the value of the student's "coursesSaved" property to an empty array 
+2. Call the Angular service method, passing in the student identifier and an empty array 
+
+Optionally, if you want to change the "Cart saved" message that appears in the user interface to "Cart cleared" (or something like that), go ahead. 
 
 <br>
 
@@ -573,19 +630,47 @@ Now it's time to enable the saving of the "courses selected" collection in the d
 > It is still being composed and tested.  
 > We will update this section of the document after the code gets posted.  
 
+This task will have the following steps:
+* Confirm the readiness of the (student) Mongoose schema 
+* Write/add PUT-handling functions in `server.js` and `manager.js` 
+* Write an Angular service function/method (for PUT) that calls out to the web API 
+* Edit the "taskConfirm" function/method in the Angular app so that it calls the service function/method 
+
+#### Mongoose schema work
+
+Above, you should have added a new property to the (student) Mongoose schema to hold the "coursesConfirmed" data. 
+
 <br>
 
+#### Web API functions in `server.js` and `manager.js` 
 
+As noted above, the course professors will provide code for the Web API `manager.js` function as soon as we can. It will be ready-to-use. 
 
-<mark>&nbsp;( more to come )&nbsp;</mark>
+If you want to write the `server.js` function and then comment it out until you get the professors' code, then the function will do a similar task to the "cart save" task. There will probably be a couple of differences: 
+* Obviously, the route will be different  
+(instead of `...cart/save` it will be `.../cart/confirmed`) 
+* The response message will be something like "Timetable confirmed" 
 
-<br>  
-<br>  
-<br>  
-<br>  
-<br>  
-<br>  
+<br>
 
+#### Angular app, service function/method
+
+Similar to above, a new service method is needed. It will be almost the same as the "cart save" code, but will call out to a different web API URL. 
+
+It should also update the values of the in-memory (and perhaps the service property) student object...
+* Add the "courses selected" collection as the value of the new coursesConfirmed property 
+* Clear the coursesSaved property 
+
+<br>
+
+#### Angular app, cart component code 
+
+This method is fairly simple, and should probably do a few things:
+1. Set the value of the student's "coursesSaved" property to an empty array
+2. Set the value of the student's "coursesConfirmed" property to the "courses selected" array
+2. Call the Angular service method, passing in the student identifier and the "courses selected" array 
+
+<br>
 
 ### Testing your work
 
@@ -635,7 +720,7 @@ SafeAssign compares your work with that of other current and past students, and 
 
 We need both the Node+Express web service and the Angular web app.  
 
-<mark>We also need ALL your project files (and not just the txt files).</mark>
+<mark>We need ALL your project files (and not just the txt files).</mark>
 
 Here's how to submit your work, before the due date and time:
 
@@ -669,8 +754,10 @@ For each of these files in the MyCode folder, change the file name extension to 
 
 4. Still in that folder, add a new folder named "MyCode". Copy these source code files to the "MyCode" folder:  
 **App.js**  
-**The JS file that holds the (to be determined) component**  
-**( more to come )**  
+**The TS file that holds the "student detail" component code**  
+**The TS file that holds the data model classes**  
+**The TS file that holds the data model manager service class**  
+**The TS file that holds the "shopping cart" component code"**  
 For each of these files in the MyCode folder, change the file name extension to "txt".
 
 4. Compress/zip the copied folder. Maybe the name should be something like "assign2app.zip". The zip file SHOULD be about 1MB in size. If it isn't, you haven't followed the instructions properly.
