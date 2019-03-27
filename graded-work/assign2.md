@@ -27,15 +27,35 @@ Grade value: 25% of your final course grade
 
 <br>
 
+### Quick links
+
+This is a long document. Here are links to some sections:
+
+[Screen shots of the professor's example solution](#a-guided-tour-of-the-app) 
+
+[Getting started](#getting-started)
+
+[Web service/API starter tasks](#web-serviceapi-starter-tasks)
+
+[Angular web app starter tasks](#angular-web-app-starter-tasks)
+
+[Save cart task](#save-cart-task-web-api-and-angular-app)
+
+[Clear cart task](#clear-cart-task-web-api-and-angular-app)
+
+[Confirm timetable task](#confirm-timetable-task-web-api-and-angular-app)
+
+[Deploy the web API and Angular app to Heroku](#deploy-the-web-api-and-the-angular-app-to-heroku)
+
+[Submitting your work](#submitting-your-work)
+
+<br>
+
 ### Overview and purpose
 
 As noted above, the purpose of objective of the assignment is to create a substantial Angular app that has good coverage of the topics since we started working with this app dev platform. 
 
 The theme of the app is to perform a task that's similar to the *new academic term course enrolment* process. Current students use the student center app to do this task. The professor team thought it would be interesting to implement some of this here. 
-
-> <mark>&nbsp;Important notice&nbsp;</mark>  
-> This document is still being edited.  
-> This notice will be removed when the edits are done.  
 
 The app will be deployed to a public host (a Heroku endpoint), so that you can deliver it to other devices (including, for example, your smartphone).  
 
@@ -85,7 +105,7 @@ On the left, a *customized* list of possible courses for that student is shown. 
 
 On the right, the selected courses appear in a timetable grid, and in a standard list format. 
 
-> Your professor will provide you with a ready-to-use component for the grid and the list. 
+> Ready-to-use components for the grid and the list have been posted in the [course code repo in the Week 8 folder](https://github.com/sictweb/bti425/tree/master/Week_08) (alongside the other Assignment 2 content). 
 
 <img class="border1" src="media/a2-cart-start.png" alt="">
 
@@ -122,12 +142,6 @@ Use `ng new...` to generate a new project, probably named `assign2`.
 > Alternatively, make a copy of the repo's Week 10 `forms-validation-intro` code example, and modify that.
 
 Set up the rest of your dev environment (terminal windows, editor, browsers and tools). 
-
-<br>
-
-> <mark>&nbsp;Reminder from above&nbsp;</mark>  
-> This document is still being edited.  
-> This notice will be removed when the edits are done.  
 
 <br>
 
@@ -174,7 +188,7 @@ As noted above, there are data files for "students" and "available courses".
 
 Import each JSON data file into a MongoDB Atlas collection. Use the command-line `mongoimport` program to do this task. Get the command text from the MongoDB Atlas console. We suggest that you paste the text into a text editor, so that you can edit and prepare the command before you attempt to execute it. 
 
-> Remember to add the ``--jsonArray` option to the command
+> Remember to add the `--jsonArray` option to the command
 
 <br>
 
@@ -234,6 +248,10 @@ Test your work using Postman, before moving on to the Angular app coding.
 
 Then deploy the web service/API to Heroku. 
 
+> Later, we will add two more functions/methods:  
+> * save cart, to save a tentative selection of courses 
+> * save timetable, to confirm or commit, and update the enrol totals
+
 <br>
 
 ### Angular web app starter tasks
@@ -260,9 +278,10 @@ As suggested by the guided tour above, a number of components are needed. Create
 * Student detail - for one specific student
 * Shopping cart - to enable selection of courses for a student
 
-> Your professors will provide three additional cart-related components.  
+> Your professors have provided three additional cart-related components.  
 > They will enhance the shopping cart experience.  
-> More information is provided below. 
+> More information is provided below.  
+> They can be copied from the course repo (Week 8 folder). 
 
 <br>
 
@@ -289,37 +308,54 @@ Like the professor's publicly-posted example solution, we also suggest that you 
 
 As a follow-up to your recent work (above) with the web service/API, edit the components that will display students and courses, all (in a list) and one (as detail). 
 
-The student detail component should probably show/list the course history credits. It should also have a navigation element that will display the (shopping) "cart". (We'll discuss the "cart" component soon.)
+The student detail component should probably show/list the course history credits. It should also have a navigation element that will display the (shopping) "cart". (Look at the professors' example solution for inspiration. Yours does NOT have to look identical, but it should show enough to be informative and useful.) 
 
 <br>
 
-#### Cart component
+### Cart component, class code
 
 This is the most interesting component, with new features. 
 
-Think of it as a "student detail" page, with special functionality. 
+Think of it as a kind of "student detail" page, but with special functionality. 
 
-As you can see in the example solution, it displays a list of courses that a student can select. It also offers tasks (save selections, confirm as timetable). 
+As you can see in the example solution, it displays data for a specific student, and a list of courses that a student can select. It also offers tasks (save selections, confirm as timetable). 
 
 On the right side of the example solution, a timetable "grid" shows the day-and-time of the selected courses. Below that, a list of selected courses appears. *Both these areas are components, and will be provided by your professors.* 
 
 Here is some guidance that will help you build this component. 
 
-##### Routing and the component
+<br>
+
+#### Routing and the component
 
 One decision we must make concerns routing. Assuming that the "student detail" component is located here:
 ```
 /student/detail/:id
 ```
 
-How should we get to the cart? Should we do the following? We know that it would work:
+How should we get to the cart? Should we do the following? We know that it would work (if we did the usual coding tasks):
 ```
 /student/cart/:id
 ```
 
-As an alternative, we are suggesting that we store the student object in the service, and use it to maintain "interaction state". This was discussed [early in the course](https://bti425.ca/notes/intro-web-services). 
+As an alternative, we are suggesting that we store the student object in the service, and use it to maintain "interaction state". This was discussed [early in the course](https://bti425.ca/notes/intro-web-services). The benefit is that we would have a simple URL like the following that does not expose any student-specific identifier/data:
+```
+/cart
+```
 
-##### Properties in the component 
+How does this all work? Well, in point form, this is how we can do it:
+* Define a property in the service, to hold a student object 
+* When the student detail component loads (`ngOnInit`), it also saves/stores the student object to the property in the service 
+* When the cart component loads (`constructor`), it attempts to get the student object from the property in the service 
+* If successful, it copies it to a local "student" property 
+* Otherwise, it does a programmatic navigation to the student list
+
+> We could do the same task in the "student detail" component too.  
+> It's not required for the assignment, but it's something to think about.
+
+<br>
+
+#### Properties in the component 
 
 We suggest creating three array properties. Each will hold a collection of course objects. 
 
@@ -335,21 +371,306 @@ A "courses selected" array is intended to hold the results of a user interaction
 
 > This collection starts out empty, and is filled in as a result of user interaction. 
 
-A property to hold the current student object is also needed. How do we get that object? That is described soon. 
+A property to hold the current "student" object is also needed, as described in the previous section. 
 
-##### Initialization 
+<br>
 
+#### Initialization 
 
-<br>  
-<br>  
-<br>  
-<mark>&nbsp;New content is being added here&nbsp;</mark>  
-In the near future, this part of the document will be updated.  
-Completion estimated to be Monday, March 25.  
-<br>  
-<br>  
-<br>  
+As described earlier, we need the student object:
+* When the cart component loads (`constructor`), it attempts to get the student object from the property in the service 
+* If successful, it copies it to a local "student" property 
+* Otherwise, it does a programmatic navigation to the student list
 
+We also need the "courses possible" data, so we get this in `ngOnInit`. When the data comes in, we save it in the property. Then, we call a new function (that we must write) to filter the "courses possible" collection into a smaller "courses matched" collection that is customized for the specific student. 
+
+Do you think you need an algorithm to build the "courses matched" collection? If yes, try this:
+
+```js
+courseMatch(): void {
+
+  // For each possible course...
+    // Continue only if the enrol total is less than 4
+      // Do we have a course history credit for this course?
+      // If yes, continue
+        // Look for a match of ALL prereqs...
+        // If we have ALL prereqs in the course history...
+          // Add course to the "courses matched" collection
+
+  // Optional - clean up the time string by removing 
+  // the seconds data (e.g. 13:30:00 becomes 13:30)
+}
+```
+
+A comment about the "Look for match of ALL prereqs": The logic may be a bit easier if we set a boolean "flag" (to "true") before we look at each prerequsite. Then, as we inspect each prerequisite, and we find one that's missing, we can change the "flag" to false. After finishing looking at all the prerequisites, the "flag" is used to determine whether we add the course to the "courses matched" collection.
+
+<br>
+
+#### Task functions/methods
+
+The cart will have some functionality or behaviour. So, we must write some functions/methods. Make a plan to write at least these functions/methods, and we'll fill in the code soon:
+
+courseSelect
+* accepts a course object argument, and returns nothing 
+* its purpose is to handle each course add/remove button task in the UI
+* as a result, it will copy the course object to the "courses selected" collection, or remove it 
+
+taskSaveCart
+* accepts no argument, and returns nothing 
+* its purpose is to save the "courses selected" collection as the value of a "cartSaved" property in the in-memory student document
+* it also sends a request to the web API to save the collection to the value of the "cartSaved" property in the database student document
+
+> Soon, you will learn how to code the "save cart" web API method. 
+
+taskClear
+* accepts no argument, and returns nothing
+* its purpose is to clear/empty the "courses selected" collection 
+* and to clear/empty the value of the "cartSaved" property in the in-memory student document
+* it also sends a request to the web API to clear/empty the value of the "cartSaved" property in the database student document (it will use the same "save cart" web API method as above)
+
+> Suggestion - The initial "testing" version of your method can simply clear/empty the "courses selected" collection, without calling the web API.  
+> That functionality will enable you to test the basic behaviour. 
+
+taskConfirmTimetable
+* accepts no argument, and returns nothing
+* its purpose is to save the "courses selected" collection as the value of a "timetableSaved" property in the in-memory student document
+* it also sends a request to the web API to do a similar task; in addition, it updates the enrol total for each course selected 
+* finally, it clears the value of the "cartSaved" property in both the in-memory and database student documents 
+
+> Soon, you will learn how to code the "save timetable" web API method. 
+
+<br>
+
+#### Cart component, template code
+
+In the professors' [example solution](https://pam-2019-a2app.herokuapp.com), the cart template layout is configured as a Bootstrap row. The left side (list of matching courses for the student) is 7 Bootstrap grid columns wide (`col-md-7`), and the right side area that holds the grid and the list is 5 grid columns wide (`col-md-5`). (Yours does NOT have to look identical, but it should show enough to be informative and useful.)
+
+> The professors' example solution puts the left side list in a scrollable container. How?  
+> It's inside a `div`, with the height determined using the new `vh` (viewport height unit), and setting the y-axis overflow to auto. 
+
+The left side list is rendered from the "courses matched" array. 
+
+How did the example solution get the day name?  
+By using a series of conditional elements, for example:  
+```html  
+<span *ngIf="c.classMon == 'Y'">Monday</span>
+``` 
+
+The right side area is rendered by adding these elements inside the `div` container:
+```html
+<app-cart-selected-grid [coursesSelected]="coursesSelected"></app-cart-selected-grid>
+<app-cart-selected-list [coursesSelected]="coursesSelected"></app-cart-selected-list>
+```
+
+<br>
+
+**Add/remove button**
+
+The professor's example solution has some specific behaviour for the "course select" task. How is that done? 
+
+It's possible because - as you know - we can bind a value to an attribute of an element. The Bootstrap button classes include a green `btn-success` class, and a red `btn-danger` class. We want to use one of these, depending upon whether the course is already selected or not. 
+
+The Angular element attribute name that we must use is `ngClass`, and not simply "class". 
+
+The value will be provided by a *new* function/method that we add to the component class. We pass (as a parameter) the current row object to the function/method, which will check whether the current row object is already in the "courses selected" collection. If it is, we should show a red button (to signify stop/remove). If not, we should show a green button (to signify go/add). 
+
+Depending on how you want to code the markup, the function/method could return a boolean or a string (e.g. "btn btn-danger"). In the example markup below, the function/method returns a boolean. Notice the following: 
+* it has the familiar "click" event handler binding 
+* it composes the element's "class" attribute with a ternary operator
+
+```html
+<button [ngClass]="['btn', isCourseSelected(c) ? 'btn-danger' : 'btn-success']" (click)="courseSelect(c)">+ / -</button>
+```
+
+<br>
+
+#### Checkpoint - testing your work
+
+At this point in time, before continuing, your app should be able to do the following:
+* display a list of all students 
+* display one specific selected student
+* display a list of all courses 
+* display one specific selected course
+* enable the getting started "shopping cart" functionality...
+  * display matching courses for the selected student 
+  * enable a course to be selected (and rendered)
+  * enable the "courses selected" collection to be cleared
+
+It would also be nice to ensure that the professor-provided grid and list components work correctly.
+
+It would be a good idea to build and deploy the Angular app to Heroku. If there are problems, it is a better idea to fix them now, instead of waiting for the assignment's due date. 
+
+<br>
+
+#### What now? Finish the cart save, clear, and confirm functionality
+
+In the sections below, the cart *save*, *clear*, and *confirm* functionality is briefly described. 
+
+<br>
+
+### Save cart task, web API and Angular app
+
+Now it's time to enable the saving of the "courses selected" collection in the database, as a student's "tentative courses". 
+
+We need to do the following:
+* Add new properties to the (student) Mongoose schema 
+* Write PUT-handling functions in `server.js` and `manager.js` 
+* In the Angular app, add the new properties to the (student) data model class
+* Write an Angular service function/method (for PUT) that calls out to the web API 
+* Edit the "taskSave" function/method in the Angular app so that it calls the service function/method 
+
+<br>
+
+#### Mongoose schema work 
+
+To enable saving of courses selected or confirmed, we need more properties in each student document. One of the nice features of a NoSQL document database store like MongoDB is that it allows - without errors - documents that have different shapes. This enables us to start out with the "student" schema you wrote a couple of weeks ago, and then add to that schema when we need to. 
+
+Open the Mongoose schema class for "student".  
+Require the "course" schema source code file (perhaps as `var Course...`)  
+Add another property to the schema:  
+`coursesSaved: [Course]` 
+
+While you're there, we will need one more property, for the "confirm timetable" task that's described in a later section. We suggest:  
+`coursesConfirmed: [Course]` 
+
+Test your work, by confirming that your existing students "get all" and "get one" methods work, and deliver the data you expect. You will probably notice that the results will not include any name-value pair for the new "coursesSaved" property, because it's empty. 
+
+<br>
+
+#### Web API functions in `server.js` and `manager.js`
+
+In a [code example in the Week 2 repo](https://github.com/sictweb/bti425/tree/610d5964b03b962625d688c246c80a57a6688331/Week_02/WebAPIv2-OneEntity), and in other code that you have written since, the pattern for all five typical CRUD tasks (get all, get one, add new, edit existing, delete item) is demonstrated. 
+
+For this "save cart" task, we need a PUT handler. We will be updating a "student" document, by setting the value of its just-added "coursesSaved" property to an array (collection) of "courses selected". That array is passed in all the way from the Angular app (the component, then to the service) to the web API (first to the `server.js` function and then to this function). 
+
+Start working with the `manager.js` function. It will handle the "edit existing" use case for a student. Maybe name it "studentCartSave". 
+
+The function needs TWO arguments:
+1. The student's identifier (which is the MongoDB long string)  
+2. The data for the update task (which is an array of course objects) 
+
+Before calling the Mongoose `findByIdAndUpdate()` method, we MUST package the data for the update task. Why? It is passed in as an *array of course objects*. It's not good enough, because it does not identify the property that we want to update. 
+
+The data passed to the `findByIdAndUpdate()` function must be a (JavaScript) *object*, and NOT an array. The object must have one or more name-value pairs, with properties to be updated (along with their data values). Solution? Wrap the array data as an object, something like this:  
+
+```js
+var wrappedItem = { "coursesSaved": passed-in-array };
+```
+
+The rest of the logic will be similar to past examples, but we recommend returning a simple string (e.g. "Cart saved") as the `resolve()` argument, and NOT the item. 
+
+Continue by working on the `server.js` function. 
+
+From past examples or your own code, you are familar with the coding of a PUT handler in `server.js`. Therefore, copy/paste/create a new method. We suggest the route will be something like this:
+
+```
+/api/students/:id/cart/save
+```
+
+The rest of the logic will be similar to past examples, but we recommend returning a JavaScript object that matches the one in the `.catch()` error handler; its message text can be something simple like "Cart saved". In other words, don't return the "data". 
+
+<br>
+
+#### Angular app, add properties to student class
+
+To match what you did above (for the Mongoose schema), open the "student" data model class for editing. Add BOTH new properties that match the names from above. They will be *optional*, e.g.  
+```js
+coursesSaved?: Course[];
+```
+
+<br>
+
+#### Angular app, service function/method
+
+In [code examples in the Week 10 repo](https://github.com/sictweb/bti425/tree/master/Week_10), and in other code that you have written since, the pattern for all five typical CRUD tasks (get all, get one, add new, edit existing, delete item) is demonstrated. 
+
+We need a service function/method that will call the web API function that was just completed above. It will be a PUT handler. It will handle the "edit existing" use case for a student. Maybe name it "studentCartSave". 
+
+The function needs TWO arguments:
+1. The student's identifier (which is the MongoDB long string)  
+2. The data for the update task (which is an array of course objects) 
+
+It will return - and this is important - an observable of any:  
+`Observable<any>`  
+The return value will be that simple object that was seen above, e.g.:  
+`{ "message": "Cart saved" }`
+
+<br>
+
+#### Angular app, cart component code
+
+This method is fairly simple, and should probably do two things:
+1. Set the value of the student's "coursesSaved" property to the "courses selected" array 
+2. Call the Angular service method, passing in the student identifier and the "courses selected" array 
+
+What must you "subscribe" to? Well, the web API returns a simple object with one property ("message") with some text. We suggest that you display that in (bind it to) the user interface. 
+
+<br>
+
+### Clear cart task, web API and Angular app
+
+This should be a short section, because the task will use the code written for the "save cart" task. 
+
+The only real difference here is that we want to pass an *empty* array as a parameter to the "save cart" service method. The remaining code in the chain should work correctly. 
+
+The cart component function/method code is fairly simple, and should probably do two things:
+1. Set the value of the student's "coursesSaved" property to an empty array 
+2. Call the Angular service method, passing in the student identifier and an empty array 
+
+Optionally, if you want to change the "Cart saved" message that appears in the user interface to "Cart cleared" (or something like that), go ahead. 
+
+<br>
+
+### Confirm timetable task, web API and Angular app
+
+Now it's time to enable the saving of the "courses selected" collection in the database, as a student's "confirmed courses". 
+
+> <mark>Notice:</mark>  
+> The professors will provide the code for the web API `manager.js` function.  
+> It is still being composed and tested.  
+> We will update this section of the document after the code gets posted.  
+
+This task will have the following steps:
+* Confirm the readiness of the (student) Mongoose schema 
+* Write/add PUT-handling functions in `server.js` and `manager.js` 
+* Write an Angular service function/method (for PUT) that calls out to the web API 
+* Edit the "taskConfirm" function/method in the Angular app so that it calls the service function/method 
+
+#### Mongoose schema work
+
+Above, you should have added a new property to the (student) Mongoose schema to hold the "coursesConfirmed" data. 
+
+<br>
+
+#### Web API functions in `server.js` and `manager.js` 
+
+As noted above, the course professors will provide code for the Web API `manager.js` function as soon as we can. It will be ready-to-use. 
+
+If you want to write the `server.js` function and then comment it out until you get the professors' code, then the function will do a similar task to the "cart save" task. There will probably be a couple of differences: 
+* Obviously, the route will be different  
+(instead of `...cart/save` it will be `.../cart/confirmed`) 
+* The response message will be something like "Timetable confirmed" 
+
+<br>
+
+#### Angular app, service function/method
+
+Similar to above, a new service method is needed. It will be almost the same as the "cart save" code, but will call out to a different web API URL. 
+
+It should also update the values of the in-memory (and perhaps the service property) student object...
+* Add the "courses selected" collection as the value of the new coursesConfirmed property 
+* Clear the coursesSaved property 
+
+<br>
+
+#### Angular app, cart component code 
+
+This method is fairly simple, and should probably do a few things:
+1. Set the value of the student's "coursesSaved" property to an empty array
+2. Set the value of the student's "coursesConfirmed" property to the "courses selected" array
+2. Call the Angular service method, passing in the student identifier and the "courses selected" array 
+
+<br>
 
 ### Testing your work
 
@@ -357,9 +678,9 @@ For this assignment, there is no required external testing capability. Therefore
 
 <br>
 
-### Deploy the Angular app to Heroku
+### Deploy the web API and the Angular app to Heroku
 
-> Note - Above, you will deploy the web service to Heroku and Atlas.
+> Note - Above, you have already deployed the web API to Heroku and Atlas.
 
 [Follow the guidance in the course notes](/notes/react-heroku-deploy), and deploy the Angular app to a new Heroku app. 
 
@@ -399,9 +720,13 @@ SafeAssign compares your work with that of other current and past students, and 
 
 We need both the Node+Express web service and the Angular web app.  
 
+<mark>We need ALL your project files (and not just the txt files).</mark>
+
 Here's how to submit your work, before the due date and time:
 
-#### Node+Express web service
+<br>
+
+#### Node+Express web API
 
 1. Locate the folder that holds your project files. 
 
@@ -417,6 +742,8 @@ For each of these files in the MyCode folder, change the file name extension to 
 
 4. Compress/zip the copied folder. Maybe the name should be something like "assign2webservice.zip". The zip file SHOULD be about 1MB in size. If it isn't, you haven't followed the instructions properly.
 
+<br>
+
 #### Angular web app 
 
 1. Locate the folder that holds your project files. 
@@ -427,8 +754,10 @@ For each of these files in the MyCode folder, change the file name extension to 
 
 4. Still in that folder, add a new folder named "MyCode". Copy these source code files to the "MyCode" folder:  
 **App.js**  
-**The JS file that holds the (to be determined) component**  
-**( more to come )**  
+**The TS file that holds the "student detail" component code**  
+**The TS file that holds the data model classes**  
+**The TS file that holds the data model manager service class**  
+**The TS file that holds the "shopping cart" component code"**  
 For each of these files in the MyCode folder, change the file name extension to "txt".
 
 4. Compress/zip the copied folder. Maybe the name should be something like "assign2app.zip". The zip file SHOULD be about 1MB in size. If it isn't, you haven't followed the instructions properly.
