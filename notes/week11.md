@@ -19,6 +19,11 @@ Highlights from this week's topics:
 
 [Add security features to an app](security-add-to-app) 
 
+~ ~ ~ 
+
+Here's how to [deploy an Angular app to Heroku](angular-heroku-deploy).  
+The process is similar to the one you used to deploy a React app.
+
 <br>
 
 ### Assignment 2 continued
