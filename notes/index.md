@@ -13,7 +13,8 @@ New notes are at the top.
 
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
-**Week 12**<br>&bull; Mon Apr 1<br>&bull; Tue or Thu | More Angular<br>Security topics | Test 3, 20%<br>on Mon Apr 1 | 
+**Week 13**<br>&bull; Mon Apr 8<br>&bull; Tue or Thu | More Angular<br>Security topics | Assign 3, 10%<br>on Thu Apr 11 | 
+**[Week 12](week12)**<br>&bull; Mon Apr 1<br>&bull; Tue or Thu | More Angular<br>Security topics | Test 3, 20%<br>on Mon Apr 1 | 
 **[Week 11](week11)**<br>&bull; Mon Mar 25<br>&bull; Tue or Thu | Security introduction<br>Assignment 2 help | [Assign 2](/graded-work/assign2), 25%<br>Due on Sun Mar 31 | 
 **[Week 10](week10)**<br>&bull; Mon Mar 18<br>&bull; Tue or Thu | More Angular<br>Forms topics | | 
 **[Week 9](week09)**<br>&bull; Mon Mar 11<br>&bull; Tue or Thu | More Angular<br>Services, Forms intro | | 
