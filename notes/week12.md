@@ -11,7 +11,7 @@ On Monday, we have Test 3. Then, in the other day's computer-lab session, we wil
 
 ### Test info
 
-Test 3 is on Monday, April, 2019. 
+Test 3 is on Monday, April 1, 2019. 
 
 Please review the [information about tests](https://bti425.ca/notes/week04#test-info) from awhile ago. 
 
