@@ -462,6 +462,8 @@ The right side area is rendered by adding these elements inside the `div` contai
 <app-cart-selected-list [coursesSelected]="coursesSelected"></app-cart-selected-list>
 ```
 
+In other words, the grid and list components are *child* components of the cart *parent*. 
+
 <br>
 
 **Add/remove button**
@@ -682,10 +684,10 @@ For this assignment, there is no required external testing capability. Therefore
 
 > Note - Above, you have already deployed the web API to Heroku and Atlas.
 
-[Follow the guidance in the course notes](/notes/react-heroku-deploy), and deploy the Angular app to a new Heroku app. 
+[Follow the guidance in the course notes](/notes/angular-heroku-deploy), and deploy the Angular app to a new Heroku app. 
 
 > Remember to do as noted above...  
-> Update your home page component to include two standard HTML hyperlinks:  
+> Update your app's home page component to include two standard HTML hyperlinks:  
 > 1. One is the URL to your Heroku-hosted (Angular) app  
 > 2. The other is the URL to your Heroku-hosted (MEN) web service 
 
