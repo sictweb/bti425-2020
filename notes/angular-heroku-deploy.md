@@ -87,3 +87,11 @@ git push heroku master
 ```
 
 <br>
+
+### Diagram 
+
+Here is a diagram of the app hosting configuration. Right-click to open it in a new tab/window and view it full size. 
+
+<img src="/media/app-hosting-angular-v1.png" alt="" class="border1" />
+
+<br>
