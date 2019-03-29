@@ -227,6 +227,21 @@ this.m.getUsers().subscribe(users => this.users = users);
 
 The result is that the stream of data - a collection of users, which comes in asynchronously - is transformed into a more familiar array object that we can immediately work with. 
 
+Additional note... If you must do multiple tasks in the function that's passed to the `.subscribe()` method, then write the function as a multi-line [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions); for example: 
+
+```js
+// Assume we have a local "this.users" property already defined,
+// and "this.m" is a reference to the data modelmanager service
+this.m.getUsers().subscribe(users => {
+  // Save the result
+  this.users = users;
+  // Do some other task (call a function)
+  doOtherTask();
+  // etc. 
+});
+```
+
+
 <br>
 
 ### Observable (from RxJS)

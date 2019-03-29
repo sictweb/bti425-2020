@@ -34,6 +34,9 @@ Another difference comes out of the first big difference. In summary, we typical
 > Change the "submit" `<button>` to an `<input type='submit'`.  
 > Must always call `e.preventDefault()` in the "submit" event handler. 
 
+> General HTML Forms reference info:  
+> Review the docs about [HTML forms](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms) and [native form widgets](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets). 
+
 <br>
 
 ### Summary of guidance

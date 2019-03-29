@@ -20,9 +20,10 @@ You can expect test questions about topics covered since the last test, all the 
 * Angular components
 * Angular routing 
 * Angular simple service, and working with a web service 
+* Web service techniques for CRUD and query 
 * Angular template-driven forms
 * General form building topics and validation techniques
-* Working with data 
+* Understanding data shapes and schemas, and associated/related data
 * App coding as a result of your work on Assignment 2
 * Introduction to security topics 
 

@@ -57,3 +57,11 @@ During this course's week 2, you had another opportunity to deploy a Node+Expres
 Now, you have another opportunity. [Follow the guidance again](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/getting-started-with-heroku/), and deploy the package you created in the previous section. 
 
 <br>
+
+### Diagram 
+
+Here is a diagram of the app hosting configuration. Right-click to open it in a new tab/window and view it full size. 
+
+<img src="/media/app-hosting-react-v1.png" alt="" class="border1" />
+
+<br>

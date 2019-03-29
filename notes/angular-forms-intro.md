@@ -140,6 +140,9 @@ It also uses the bootstrap "forms" classes, ie "form-group" and "form-control" f
 
 It's possible that you have written hundreds of these forms. It's a very well-understood process. 
 
+> Reference info:  
+> Review the docs about [HTML forms](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms) and [native form widgets](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets). 
+
 <br>
 
 ### Get the code example
@@ -224,7 +227,52 @@ To briefly explain, we define a "Driver" class that will represent the type of d
 
 <br>
 
-### "Binding" the data / Form Events
+### Data binding between the *model* and *form*, introduction
+
+We have three ways to bind the data model to form elements/widgets:
+1. One way, from *model* to *form* 
+2. One way, from *form* to *model* 
+3. Two way
+
+This topic is covered in [more detail in the Angular docs](https://angular.io/guide/template-syntax#binding-syntax-an-overview).
+
+<br>
+
+#### 1. One way, from *model* to *form* 
+
+Assume we have a property in the data model that must appear in the view. In the past, to display it, you typically used *interpolation* syntax:  
+`{{ foo.barText }}`
+
+However, to bind to a form element/widget, we must use the other square-brackets format. For example, set the element's `title` attribute text:  
+```html
+<input [title]="foo.barText" ...`
+```
+
+> The value of the binding can be a data property, or an expression, or a call to a method in the component. 
+
+<br>
+
+#### 2. One way, from *form* to *model* 
+
+Typically used to handle an event (click, change, focus, blur, etc.) that happens in a form element/widget. Use the parenthesis format. The value of the binding is typically a method in the component. For example, to detect when an element/widget has received focus:  
+```html
+<input (focus)="fooStartBar() ...`
+```
+
+<br>
+
+#### 3. Two way
+
+Typically used to bind the *value* of the form element/widget with a property in the data model. For example, this will bind an input element/widget with a property, so that changes to either will be bound and synchronized:  
+```html
+<input [(ngModel)]="foo.barText" ...`
+```
+
+> The value of the binding can be a data property, or an expression, or a call to a method in the component. 
+
+<br>
+
+### More about two-way data binding
 
 After coding the component, we can begin to update the original "standard" HTML form to work directly with the data, using "two-way binding" syntax:
 

@@ -35,9 +35,9 @@ Read about it here; it includes how-to info about installation and use:
 
 ### Other techniques
 
-Everyone knows and uses `console.log()`. Yes, that's still valid. There are other techniques that are useful in the Angular environment.
+Everyone knows and uses `console.log()`. Yes, that's still valid. 
 
-Some of this was taken from an article titled [A Guide to Debugging Angular Applications](https://medium.com/front-end-weekly/a-guide-to-debugging-angular-applications-5a36bd88b4cf).
+There are other techniques that are useful in the Angular environment. Some of the following was taken from an article titled [A Guide to Debugging Angular Applications](https://medium.com/front-end-weekly/a-guide-to-debugging-angular-applications-5a36bd88b4cf).
 
 <br>
 

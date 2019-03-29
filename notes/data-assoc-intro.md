@@ -52,6 +52,10 @@ Use this design for the following scenarios or preferences:
 
 * There is a flexible and unpredictable query strategy, where it is likely that each entity in the association or relation may be separately queried for whatever purpose 
 
+<br>
+
+#### Which entity gets the document reference?
+
 For the following discussion, assume that we're designing the structure of two associated or related entities. Into which entity do we add the reference? Here's some getting-started guidance (but your scenario may result in adjusted guidance):
 
 * The growth of the data in the association or relation determines where to store the reference
@@ -63,7 +67,11 @@ For the following discussion, assume that we're designing the structure of two a
 
 For example, assume that each smartphone "maker" (e.g. Apple) will have a large number of smartphone "models" available for sale (e.g. iPhone Xs, iPhone Xr, iPhone 8, iPhone 7). In that situation, in the "model" entity, add a reference to the "maker". 
 
-What does the reference look like? Here's our guidance:
+<br>
+
+#### What does the reference look like? 
+
+What does the reference look like? What is its format and data type? Here's our guidance:
 
 * Its name should be based on the name of the associated or related collection, and end with "`Id`" (yes, there are other naming schemes possible, but start with this, and adjust when you have more experience)
 
@@ -88,6 +96,6 @@ Next, assume that you want to query for all, some, or one "model" from a specifi
 1. The "maker" identifier (and you must have that beforehand) 
 2. If desired, the "models" matching criteria that meets your need (e.g. screen size larger than 4.0 inches) 
 
-Finally, a variation on the previous query, assume that you want the "maker" data *included* in the result, when querying the "models" collection. Well, the query must include a command that will *de-reference* the associated or related "maker" for each "models" item returned. We'll see that in the code example. 
+Finally, a variation on the previous query, assume that you want the "maker" data *included* in the result, when querying the "models" collection. Well, the query must include a command that will *de-reference* the associated or related "maker" for each "models" item returned. We'll see that in a future code example. 
 
 <br>
