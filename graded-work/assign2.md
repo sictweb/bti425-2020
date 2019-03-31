@@ -160,9 +160,7 @@ To support this learning, get the `assign-2-data-student-v1.json` data file from
 * Each "student" object has a number of data properties 
 * One of its properties is "credits", which is a collection of courses a student has passed (this is a "course history")
 
-Then, edit a component (new or existing) your Angular app to display the data in a simple table, as shown below. The contents of the JSON data file can be the value of a new class-level property - that's the easiest way to materialize the data without yet having to create a database or a web service. 
-
-![Example](media/a2-display-data-students.png)
+Then, edit a component (new or existing) your Angular app to display the data in a simple table. The contents of the JSON data file can be the value of a new class-level property - that's the easiest way to materialize the data without yet having to create a database or a web service. 
 
 After it shows the results you want, you can throw away this "testing" code.
 
@@ -397,8 +395,10 @@ courseMatch(): void {
         // If we have ALL prereqs in the course history...
           // Add course to the "courses matched" collection
 
-  // Optional - clean up the time string by removing 
+  // Recommended- clean up the time string by removing 
   // the seconds data (e.g. 13:30:00 becomes 13:30)
+  // (the professor-provided grid and list components)
+  // depend on this cleanup
 }
 ```
 
@@ -571,6 +571,8 @@ From past examples or your own code, you are familar with the coding of a PUT ha
 
 The rest of the logic will be similar to past examples, but we recommend returning a JavaScript object that matches the one in the `.catch()` error handler; its message text can be something simple like "Cart saved". In other words, don't return the "data". 
 
+Remember to publish your updated web API to Heroku.
+
 <br>
 
 #### Angular app, add properties to student class
@@ -627,10 +629,9 @@ Optionally, if you want to change the "Cart saved" message that appears in the u
 
 Now it's time to enable the saving of the "courses selected" collection in the database, as a student's "confirmed courses". 
 
-> <mark>Notice:</mark>  
-> The professors will provide the code for the web API `manager.js` function.  
-> It is still being composed and tested.  
-> We will update this section of the document after the code gets posted.  
+> Your professors have provided the code for the web API `manager.js` function.  
+> More information is provided below.  
+> It can be copied from the course repo (Week 8 folder). 
 
 This task will have the following steps:
 * Confirm the readiness of the (student) Mongoose schema 
@@ -646,12 +647,14 @@ Above, you should have added a new property to the (student) Mongoose schema to 
 
 #### Web API functions in `server.js` and `manager.js` 
 
-As noted above, the course professors will provide code for the Web API `manager.js` function as soon as we can. It will be ready-to-use. 
+As noted above, the course professors have provided code for the Web API `manager.js` function. It is ready-to-use. 
 
 If you want to write the `server.js` function and then comment it out until you get the professors' code, then the function will do a similar task to the "cart save" task. There will probably be a couple of differences: 
 * Obviously, the route will be different  
 (instead of `...cart/save` it will be `.../cart/confirmed`) 
 * The response message will be something like "Timetable confirmed" 
+
+Remember to publish your updated web API to Heroku.
 
 <br>
 
@@ -756,9 +759,9 @@ For each of these files in the MyCode folder, change the file name extension to 
 
 4. Still in that folder, add a new folder named "MyCode". Copy these source code files to the "MyCode" folder:  
 **App.js**  
-**The TS file that holds the "student detail" component code**  
 **The TS file that holds the data model classes**  
 **The TS file that holds the data model manager service class**  
+**The TS file that holds the "student detail" component code**  
 **The TS file that holds the "shopping cart" component code"**  
 For each of these files in the MyCode folder, change the file name extension to "txt".
 
