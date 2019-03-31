@@ -8,6 +8,18 @@ npm i
 
 <br>
 
+### confirm-cart-courses-function-v1 
+
+Professor-provided function for your web API `manager.js` code.  
+It will update a student's next-term "confirmed courses" from a collection of courses.  
+It also updates the "enrol total" for each course in the collection.  
+
+We suggest that you read/skim the code to learn what it does and how to use it.  
+
+The code has been tested, but not widely tested. If it does not work for you, then contact Peter McIntyre, and include enough troubleshooting info to enable a search for a fix.
+
+<br>
+
 ### assign-2-grid-and-list-components (version 1)
 
 Professor-provided grid and list components for the cart template.  
