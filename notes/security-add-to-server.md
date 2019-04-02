@@ -21,7 +21,7 @@ There are several things to notice.
 
 First, the `server.js` code box includes "register" (a new account) and "login" methods. It also has new code that has a relationship to a new box of code, Passport.js. Similar to above, the relationship between the server/listener and Passport.js is shown as a red line  that connects at each logical usage point.
 
-Second, notice `Passport.js`. This code is now brought in to handle authentication and some identity management tasks. Also notice its red line connector, indicating a relationship between some existing methods/functions in the listener with Passport.js code. 
+Second, notice `Passport.js`. This code is brought in to handle authentication and some identity management tasks. Also notice its red line connector, indicating a relationship between some existing methods/functions in the listener with Passport.js code. 
 
 > [Passport.js](https://www.passportjs.org/docs) is authentication middleware for Node.  
 > It is designed to authenticate requests.  
@@ -29,7 +29,10 @@ Second, notice `Passport.js`. This code is now brought in to handle authenticati
 
 Third, notice a new "U" (for user accounts) data/schema model class. It defines the shape of a user account (i.e. username, password, possibly other claims such as family name, given name, birthdate, etc.). 
 
-Finally, notice a new code box, `manager-auth.js`. It will include methods/functions that handle the authentication tasks, such as "registerUser" and "checkUser". For this course's introductory treatment of security topics, your teacher team has decided to isolate the identity management storage part in a separate database. This also happens to be a good practice, because of the sensitive nature of a database with user account data. 
+Finally, notice a new code box, `manager-auth.js`. It will include methods/functions that handle the authentication tasks, such as "registerUser" and "checkUser". 
+
+> For this course's introductory treatment of security topics, your teacher team has decided to store user account data in the database we have been using.  
+> In a future course, you may learn to isolate the identity management storage part in a separate database. This approach is a good practice, because of the sensitive nature of a database with user account data. 
 
 The work described below has four major tasks:
 1. Prepare your Heroku and MongoDB Atlas deployments
@@ -40,6 +43,21 @@ The work described below has four major tasks:
 <br>
 
 ### Prepare your Heroku and MongoDB Atlas deployments
+
+<mark>&nbsp;This content is being edited&nbsp;</mark>
+
+User accounts
+* Start with the Students collection/json
+* Map it out to a new structure
+
+<br>
+<br>
+<br>
+More to come  
+<br>
+<br>
+<br>
+
 
 In this task, there are two sub-tasks to be done:
 1. Ensure that you can update your Heroku deployment
