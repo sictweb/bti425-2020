@@ -87,3 +87,21 @@ app.post("/api/useraccounts/login", (req, res) => {
       res.status(400).json({ "message": msg });
     });
 });
+
+
+
+
+// ############################################################
+// How to protect a function in "server.js"?
+// Add a "passport authenticate" handler to the .get() method chain, as seen below
+
+// Example of a function that is NOT protected
+// All requests will succeed
+app.get("/api/products", (req, res) => {
+
+// Example of a protected function
+// Only requests that include a token will succeed
+app.get("/api/products", passport.authenticate('jwt', { session: false }), (req, res) => {
+
+// Reminder... the token is added to the request header, for example...
+Authorization: JWT very-long-string-token-123abc... 

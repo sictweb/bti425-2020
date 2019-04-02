@@ -28,3 +28,27 @@ Functions that handle requests for user account activation, creation, and login.
 Add these functions to your `server.js` source code file.  
 
 <br>
+
+### Sending requests to the web API
+
+Some requests will require an access (security) token. 
+
+After a successful login, the response will include a value for a token. The value is a very long string. 
+
+This token must be included in a request header, formatted as follows:
+
+```
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI... etc. 
+```
+
+When using Postman:
+
+The header "KEY" is "Authorization". 
+
+The header "VALUE" is "JWT", then a space, then the very long string. 
+
+Requests that are successful will deliver the results that you want. 
+
+Unsuccessful requests will deliver HTTP 401. 
+
+<br>
