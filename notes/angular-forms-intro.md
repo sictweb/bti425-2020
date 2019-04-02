@@ -245,7 +245,7 @@ Assume we have a property in the data model that must appear in the view. In the
 
 However, to bind to a form element/widget, we must use the other square-brackets format. For example, set the element's `title` attribute text:  
 ```html
-<input [title]="foo.barText" ...`
+<input [title]="foo.barText" ...
 ```
 
 > The value of the binding can be a data property, or an expression, or a call to a method in the component. 
@@ -256,7 +256,7 @@ However, to bind to a form element/widget, we must use the other square-brackets
 
 Typically used to handle an event (click, change, focus, blur, etc.) that happens in a form element/widget. Use the parenthesis format. The value of the binding is typically a method in the component. For example, to detect when an element/widget has received focus:  
 ```html
-<input (focus)="fooStartBar() ...`
+<input (focus)="fooStartBar() ...
 ```
 
 <br>
@@ -265,7 +265,7 @@ Typically used to handle an event (click, change, focus, blur, etc.) that happen
 
 Typically used to bind the *value* of the form element/widget with a property in the data model. For example, this will bind an input element/widget with a property, so that changes to either will be bound and synchronized:  
 ```html
-<input [(ngModel)]="foo.barText" ...`
+<input [(ngModel)]="foo.barText" ...
 ```
 
 > The value of the binding can be a data property, or an expression, or a call to a method in the component. 
@@ -289,7 +289,7 @@ After coding the component, we can begin to update the original "standard" HTML 
 The target of the two-way binding is the **NgModel** directive. Every time we have a form element that we wish to "bind" to our data model, we use the syntax:
 
 ```html
-[(ngModel)]='componentProperty'
+[(ngModel)]="componentProperty"
 ```
 
 For example, let's see how we can update each of our form element types in our "Simple" form using this syntax, paired with the "DriverComponent" data:

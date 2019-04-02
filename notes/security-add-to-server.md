@@ -1,9 +1,9 @@
 ---
-title: Add security features to web service
+title: Add security features to a web API
 layout: default
 ---
 
-## Add security features to web service
+## Add security features to a web API
 
 After learning something about [security topics](security-intro), we are ready to write some code. 
 
@@ -11,7 +11,7 @@ In our context, we must:
 1. Add security features to the web service/API, and
 2. Add security features to an Angular app
 
-This document focuses on the first point, adding security features to the web service/API. A [separate document](security-add-to-app) focuses on the second point. 
+This document focuses on the first task, adding security features to the web service/API. A [separate document](security-add-to-app) focuses on the second task. 
 
 The following is a simplified box-and-line drawing of the new and desired configuration. It shows the new security-related code assets and their relationships.
 
@@ -31,20 +31,96 @@ Third, notice a new "U" (for user accounts) data/schema model class. It defines 
 
 Finally, notice a new code box, `manager-auth.js`. It will include methods/functions that handle the authentication tasks, such as "registerUser" and "checkUser". 
 
-> For this course's introductory treatment of security topics, your teacher team has decided to store user account data in the database we have been using.  
-> In a future course, you may learn to isolate the identity management storage part in a separate database. This approach is a good practice, because of the sensitive nature of a database with user account data. 
+> For this course's introductory treatment of security topics, your teacher team has decided to store user account data in the existing database that we have been using.  
+> In a future course, you may learn to isolate the identity management storage part in a separate database. This alternative approach is a good practice, because of the sensitive nature of a database with user account data. 
 
-The work described below has four major tasks:
+The work described below has several major tasks:
 1. Prepare your Heroku and MongoDB Atlas deployments
-2. Add a teacher-provided code module
-3. Write a user account schema 
-4. Edit `server.js` 
+2. Write a user account schema 
+3. Test/check that you can fetch the new data
+4. Add some new security code
 
 <br>
 
 ### Prepare your Heroku and MongoDB Atlas deployments
 
-<mark>&nbsp;This content is being edited&nbsp;</mark>
+In our database, we must create a new collection to hold the user accounts. Typically, we will do a few tasks:
+* Decide on the design (shape) of a user account 
+* Write JSON for one or two user accounts that you can use while you write code
+* Import these user accounts into MongoDB
+
+> In [Assignment 3](/graded-work/assign3), we will do this in a slightly different way.  
+> The professor team has provided user account data for all of Assignment 2's students. That's the data that we will import into MongoDB. 
+
+<br>
+
+#### Design (shape) of a user account 
+
+While there is no design standard for a user account, you probably realize that it should have properties for user name, password, role, and so on. Think about some typical and useful properties, and include them in your design. 
+
+<br>
+
+#### Write JSON for some user accounts
+
+Instead of starting with an empty database collection of user accounts, it would be a good idea to "seed" the collection with "starter" user accounts. 
+
+Write JSON for one or two user accounts. One of the user accounts should be for you, the programmer. Its initial password can be empty or any text; either will be replaced later an "account activation" task. 
+
+<br>
+
+#### Import into MongoDB
+
+Now, you're ready to import the "seed" data into MongoDB. 
+
+> See the [Assignment 3](/graded-work/assign3) specs for a reminder of the `mongoimport` process. 
+
+<br>
+
+### Web API work, initial
+
+The goal in this section is to prepare the web API code to fetch and deliver the new user account data. 
+
+Write a new schema for the user account. 
+
+One of the *important features* of the schema is that the login name - often known as the user name - must be unique within the collection. In the schema class, a unique property is defined in this way:
+
+```js
+userName: { type: String, unique: true },
+```
+
+Next, we will add code that will enable you to use Postman to request user account data.
+
+<br>
+
+#### manager.js work
+
+In the `manager.js` source code file:
+
+1. Add the new schema constant (like the others). 
+
+2. In the main function, add a new collection property. 
+
+3. In its "connect" function member, in `db.once`, add the code to initialize the new property. 
+
+4. Add a function that will fetch and return all user accounts. 
+
+<br>
+
+#### server.js work 
+
+In the `server.js` source code file:
+
+1. Add a function that will listen for a request, and then call the `manager.js` function that you just added above. 
+
+2. Run the web API. Test with Postman, until successful. 
+
+While you are still here, you should add (and test) "get one by identifier" functions to both `server.js` and `manager.js`. 
+
+<br>
+
+
+
+<mark>&nbsp;The content below is being edited&nbsp;</mark>
 
 User accounts
 * Start with the Students collection/json
@@ -59,24 +135,6 @@ More to come
 <br>
 
 
-In this task, there are two sub-tasks to be done:
-1. Ensure that you can update your Heroku deployment
-2. Add a "users" collection to your MongoDB Atlas deployment
-
-<br>
-
-#### Ensure that you can update your Heroku deployment
-
-Recently, you have made changes to your web service/API, in support of your work on Assignments 1 and 2. Soon, we'll be adding more functionality. 
-
-<br>
-
-#### Prepare to add a "users" collection to the database
-
-As noted above, we want to create a new collection to hold the user accounts. 
-
-> Ideally, we should create a new database for security assets.  
-> However, we will defer that until a future course. 
 
 <br>
 
@@ -87,6 +145,9 @@ In the diagram above, there is a `manager-auth.js` box. Your professors have cre
 Download it, and add it to your web service/API project. 
 
 > Note that your project will not build/compile cleanly without errors, because the new code module references a user account schema that does not yet exist. You will code the schema in the next task.  
+
+> Dependency  
+> user account schema name 
 
 <br>
 

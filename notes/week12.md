@@ -38,3 +38,9 @@ You can expect test questions about topics covered since the last test, all the 
 [Add security features to an app](security-add-to-app) 
 
 <br>
+
+### Assignment 3 is available
+
+This week, begin working on [Assignment 3](/graded-work/assign3). 
+
+<br>
