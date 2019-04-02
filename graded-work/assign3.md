@@ -40,7 +40,7 @@ As noted above, the purpose of objective of the assignment is to add security fe
 Both apps - the web API, and the Angular app - will be modified. 
 
 > Notice:  
-> This document is being edited.  
+> <mark>This document is being edited.</mark>  
 > This notice will be removed when the edits are complete.  
 
 <br>
