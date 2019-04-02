@@ -49,7 +49,8 @@ Both apps - the web API, and the Angular app - will be modified.
 
 If you wish to interact with the app, the professor-created example solution is publicly available:
 
-> Not sure whether there will be an "...a3app..."
+> Notice:  
+> Your professors have not yet deccided whether this app will continue as is, or be replaced by an "...a3app..."
 
 [https://pam-2019-a2app.herokuapp.com](https://pam-2019-a2app.herokuapp.com)
 
@@ -57,7 +58,7 @@ Right-click any image below to open it full-size in a new tab or window.
 
 The landing page of the app enables the user to view a menu of tasks. 
 
-> The following will be replaced
+> The following image will be replaced.
 
 <img class="border1" src="media/a2-start-view.png" alt="">
 

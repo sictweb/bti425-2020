@@ -29,16 +29,21 @@ Second, notice `Passport.js`. This code is brought in to handle authentication a
 
 Third, notice a new "U" (for user accounts) data/schema model class. It defines the shape of a user account (i.e. username, password, possibly other claims such as family name, given name, birthdate, etc.). 
 
-Finally, notice a new code box, `manager-auth.js`. It will include methods/functions that handle the authentication tasks, such as "registerUser" and "checkUser". 
+Finally, notice a new code box, `manager-auth.js`. It will include methods/functions that handle the authentication tasks, including user account activation, creation, and login. 
 
-> For this course's introductory treatment of security topics, your teacher team has decided to store user account data in the existing database that we have been using.  
+> For this course's introductory treatment of security topics, your professor team has decided to add these authentication methods/functions to the existing `manager.js` source code file.  
+> In a future course, you may learn to isolate these into a separate source code file. 
+
+> Similarly, your professor team has decided to store user account data in the existing database that we have been using.  
 > In a future course, you may learn to isolate the identity management storage part in a separate database. This alternative approach is a good practice, because of the sensitive nature of a database with user account data. 
 
 The work described below has several major tasks:
 1. Prepare your Heroku and MongoDB Atlas deployments
 2. Write a user account schema 
 3. Test/check that you can fetch the new data
-4. Add some new security code
+4. Add some new security code to `manager.js` 
+5. Add some new security code to `server.js` 
+6. Incrementally test your work 
 
 <br>
 
