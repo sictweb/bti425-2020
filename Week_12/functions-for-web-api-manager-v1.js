@@ -104,7 +104,7 @@ useraccountsLogin: function (userData) {
           // Compare password with stored value
           let isPasswordMatch = bcrypt.compareSync(userData.password, item.password);
           if (isPasswordMatch) {
-            return resolve('Login was successful');
+            return resolve(item);
           }
           else {
             return reject('Login was not successful');
