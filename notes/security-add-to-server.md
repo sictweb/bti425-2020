@@ -133,7 +133,7 @@ Get the code from the Week 12 folder on the code example repo.
 
 #### manager.js work
 
-Before pasting the professors' code, use a terminal window, and install some security packages to the project:
+Before pasting the professors' code, use a terminal window, and install some security packages to the project. Some introductory information about these security packages will be provided later in this document. 
 
 ```text
 npm i bcryptjs
@@ -265,7 +265,7 @@ This time, the request should complete successfully.
 
 <br>
 
-### In summary
+### Summary of the work done to this point
 
 In this document, you learned how to configure a security system for an existing web service. 
 
@@ -274,5 +274,42 @@ We added *identity management* and *authentication* features to the app, by addi
 Your work was tested with the Postman app, and you learned how to include a token with a request. 
 
 In a separate document, you will learn how to code an Angular app that uses this now-secure web API. 
+
+<br>
+
+### More information - security packages
+
+In this section, we present more information about the security packages:
+* `bcryptjs` 
+* `jsonwebtoken` 
+* `passport` and `passport-jwt`
+
+<br>
+
+#### Password storage and `bcryptjs` 
+
+We must NOT ever store plain-text passwords in an identity managements system. NEVER. 
+
+Identity management systems typically transform a password into a string value that cannot be decrypted. It's a one-way transformation. In other words, it is not possible to extract a password from the transformed string value. 
+
+So, how do we create this transformed string value? While there are several approaches, we will use a [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) approach for our JavaScript + Node.js environment. 
+
+<mark>&nbsp;( more to come )</mark>
+
+<br>
+
+#### Access tokens and authentication
+
+(This section will describe [JSON Web Tokens](https://jwt.io)). 
+
+<mark>&nbsp;( more to come )</mark>
+
+<br>
+
+#### Authentication "middleware" code
+
+(This section will describe [Passport](http://www.passportjs.org)).
+
+<mark>&nbsp;( more to come )</mark>
 
 <br>
