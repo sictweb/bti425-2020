@@ -294,14 +294,49 @@ Identity management systems typically transform a password into a string value t
 
 So, how do we create this transformed string value? While there are several approaches, we will use a [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) approach for our JavaScript + Node.js environment. 
 
+The [bcrypt.js package](https://www.npmjs.com/package/bcryptjs) is added to the web API code base. We use its functions in two ways, in the `manager.js` code:
+1. Transform a plain-text password into a [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) which can be stored in a database  
+2. Compare a plain-text password to a hashed-and-stored password 
 
-<mark>&nbsp;( more to come )</mark>
+**Transform plain-text password into a hash**
+
+When transforming a plain-text password into a hash, the `hash` or `hashSync` functions need a [salt](https://en.wikipedia.org/wiki/Salt_(cryptography)) value, which protects the hash from [rainbow table](https://en.wikipedia.org/wiki/Rainbow_table) attacks. There are two commonly-used forms of the `hash` or `hashSync` functions:
+
+```js
+// Two code statements
+// ===================
+// Generate a "salt" value
+var salt = bcrypt.genSaltSync(10);
+// Hash the result
+var hash = bcrypt.hashSync(incomingPassword, salt);
+
+// One code statement
+// ==================
+// Generate the "salt" as part of the hash function
+var hash = bcrypt.hashSync(incomingPassword, 10);
+```
+
+**Compare a plain-text password to a hashed-and-stored password**
+
+In a login (authentication) function, the `compare` or `compareSync` functions return a boolean true/false value. For example:
+
+```js
+// Compare incoming password with stored password
+let isPasswordMatch = 
+  bcrypt.compareSync(incomingPassword, storedPassword);
+```
 
 <br>
 
 #### Access tokens and authentication
 
-(This section will describe [JSON Web Tokens](https://jwt.io)). 
+In the [security topics introduction](https://bti425.ca/notes/security-intro.html), you learned that an access token is a package of data that includes information about the token issuer, descriptive information about the user (other than secret information), and information about the cookie or token lifetime. In other words, the package of data includes *claims*. 
+
+What is the format or content of the token? In our course, we are using the Internet-standard ([RFC 7519](https://tools.ietf.org/html/rfc7519)) JSON Web Token. 
+
+We use the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) package to create the token. 
+
+[JSON Web Token](https://jwt.io)
 
 <mark>&nbsp;( more to come )</mark>
 
