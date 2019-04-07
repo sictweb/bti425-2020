@@ -294,6 +294,7 @@ Identity management systems typically transform a password into a string value t
 
 So, how do we create this transformed string value? While there are several approaches, we will use a [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) approach for our JavaScript + Node.js environment. 
 
+
 <mark>&nbsp;( more to come )</mark>
 
 <br>
