@@ -7,23 +7,18 @@ layout: default
 
 This document focuses on the work needed to add security features to an Angular app. 
 
-In the sections below, we will modify a sample solution for an assignment in last year's version of the course. The individual tasks can be done to any app. Some of the code can be copy/pasted, sometimes a whole file (or component file collection), and sometimes smaller amounts of code. 
-
-> This document is being edited.  
-> This notice will be removed when the edits are complete.  
-
 <br>
 
 ### Login task visualization
 
 The following visualization helps explain the login task:
 
-![Visualization - login](../media/sec-app-visualize-login.png)
+![Visualization - login](../media/sec-app-visualize-login-2019.png)
 
 Here's the sequence:
 * Credentials are entered.  
 * The login component calls a method in the auth service.  
-* The auth service sends a POST request, with the credentials, to the Teams API.
+* The auth service sends a POST request, with the credentials, to the web API.
 * If successful, a token response is delivered to the auth service, and then through to the login component. 
 * The token is saved to the browser's local storage.
 * A redirect happens (to somewhere). 
@@ -34,13 +29,13 @@ Here's the sequence:
 
 The following visualization helps explain the request task:
 
-![Visualization - request](../media/sec-app-visualize-request.png)
+![Visualization - request](../media/sec-app-visualize-request-2019.png)
 
 Here's the sequence:
-* A component calls a method in the data manager service (it wants some data).
+* A component calls a method in the data manager service (because it wants some data from the web API).
 * Assuming that it passes the guard, the request is allowed to go to the data manager service. 
-* The data manager service sends a request to the web service (its coding and approach does not change).
-* The HTTP Interceptor intercepts the request, fetches the token from the browser's local storage, and adds it to an "Authorization" header before passing on the request 
+* The data manager service sends a request to the web service (its coding and design approach does not change).
+* The *HTTP Interceptor* intercepts the request, fetches the token from the browser's local storage, and adds it to an "Authorization" header before passing on the request 
 
 <br>
 
@@ -48,30 +43,28 @@ Here's the sequence:
 
 Here's a preview of the tasks to be done:
 1. Add the token-handling library and professor-provided code
-1. Add services for authentication tasks
-1. Integrate the authentication services into the app
-1. Code and test the login view
-1. Add components for viewing employees
+2. Add services for authentication tasks
+3. Integrate the authentication services into the app
+4. Code and test the login view
+5. Add components for viewing employees
 
 <br>
 
 #### Getting started
 
-Fetch the "assignment6base.zip" from the [code repository](https://github.com/sictweb/bti425/tree/master/Templates_and_solutions). It is a sample solution for Assignment 5. Reminder, run `npm i` to install the packages it needs to run. 
-
-Before attempting to load the app, edit the URL to your Teams API, in the data manager service class. Then, run the app, and it should load and run successfully, and enable you to view the list of teams. However, the "create team" may not work completely, because you have protected the `/employees` route at the Teams API (when you added security to that app). 
+Fetch the code for the Angular app from the Week 12 folder in the course's code example repo. 
 
 <br>
 
 ### Add the token-handling library and professor-provided code
 
-The Teams API web service works with JSON Web Tokens (JWT). Add support for JWT to this Angular app:
+Your web API is configured to use with JSON Web Tokens (JWT). In a Terminal window, add support for JWT to this Angular app:
 
 ```
 npm i @auth0/angular-jwt
 ```
 
-We must edit the app module to complete the JWT integration. Import it:
+Then, we must edit the app module to complete the JWT integration. Import it:
 
 ```ts
 import { JwtModule } from "@auth0/angular-jwt";
@@ -104,7 +97,7 @@ Finally, in the `imports` array of the `@NgModule` decorator, add the `JwtModule
 
 <br>
 
-Your professor team has created some code modules that perform some of the authentication tasks. The code is in "angularappscuritycode.zip" from the [code repository](https://github.com/sictweb/bti425/tree/master/Templates_and_solutions). 
+Your professor team has created some code modules that perform some of the authentication tasks. The code is in the repo.
 
 <br>
 
@@ -114,27 +107,29 @@ The  *token view* component enables the user to view the contents of a token (th
 
 ![Token view](../media/sec-app-token-view-v1.png)
 
-The three `token-view.component.*` files (ts, html, css) can be copied into your project's `src/app` folder. This component works as-is, without any edits required. 
+The three `token-view.component.*` files (ts, html, css) can be copied into your project's `src/app` folder. This component works as-is, without any edits required. However, you must integrate it:
 
-> Then, edit the app module, to `import` the component, and add it to the `declarations` array.  
-> Also, add a route now, and then edit the nav component so that we can easily use the token view component via the menu.  
-> Note that this component will not view correctly, but it will after we complete an integration task, below. 
+* Edit the app module, to `import` the component, and add it to the `declarations` array.  
 
-The *login* component enables the user to login (authenticate). Here's what the user interface looks like (when loaded):
+* Add a route now, and then edit the nav component so that we can easily use the token view component via the menu.  
+
+Note that this component will not view correctly yet, but it will after we complete an integration task, done below. 
+
+The *login* component enables the user to login (authenticate). Here's what the user interface will look like (when configured and loaded):
 
 ![Login](../media/sec-app-login-v1.png)
 
 The three `login.component.*` files can be copied too. This component's class has a partially-implemented `login()` method, which you will edit later. 
 
-> Then, edit the app module, to `import` the component, and add it to the `declarations` array.  
-> Also, add a route now, and then edit the nav component so that we can easily use the login component via the menu.  
-> Note that this component will not view correctly, but it will after we complete an integration task, below. 
+> As done above, edit the app module, and then edit the nav component menu. 
+
+Note that this component will not view correctly yet (as above)...
 
 <br>
 
 ### Add services for authentication tasks
 
-There are *three* new services. In the "angularappsecuritycode.zip" file, you will find source code for all three. One needs to be edited by you, and the other two are code-complete.
+There are *three* new services. In the repo, you will find source code for all three. One needs to be edited by you, and the other two are code-complete.
 
 Copy these code modules into your `src/app` folder:
 * `auth.service.ts`
@@ -159,7 +154,7 @@ import { AuthService } from './auth.service';
 
 Then, add it to the `providers` array in the `@NgModule` decorator. 
 
-Now, open the auth service code for editing. Update the value of the URL, which will be your Teams API. Then, study the methods, to learn what this service does. 
+Now, open the auth service code for editing. Update the value of the URL, which will be your web API. Then, study the methods, to learn what this service does. 
 
 As noted above, the other two services are code-complete, and just need to be integrated into the app. 
 
@@ -201,45 +196,25 @@ Then, add it to the `providers` array in the `@NgModule` decorator, in the follo
   ],
 ```
 
-At this point, the app should run without errors. It should:
-* Display a list of teams
-* Partially render the "create a team" view
-* Display the token view
-* Display the login view
+At this point, the app should run without errors.
 
 <br>
 
 ### Code and test the login view
 
-Open the login component class for editing. Notice that the `onSubmit()` method is mostly empty, except for an algorithm. 
+Open the login component class for editing. Notice that the `onSubmit()` method is mostly empty, except for an algorithm (as code comments). 
 
 Use it to guide you to complete the coding task. 
 
-After you do so successfully, the token view will show you the contents of the token that you get back from your Teams API. 
+After you do so successfully, the token view will show you the contents of the token that you get back from your web API. 
 
 <br>
 
-### Add components for viewing employees
+### Protect a component
 
-Using the Angular CLI, generate two components. 
+Select a component that you wish to protect. 
 
-One component (maybe named "EmployeesOpen") will display a list of employees from the Teams API `/employees-raw` resource. The idea is that this component can be viewed with or without being authenticated. 
-
-Go ahead and code it now. You have previous experience coding this kind of component. 
-
-> Tip - Use your own code, or copy-paste the code from the existing team list component, and edit the contents to match the needs of the data.  
-> Tip - Add a route now, and then edit the nav component so that we can easily use the menu.  
-> Tip - You will need another data manager service method to fetch from the `/employees-raw` resource. 
-
-Here's what it may look like when you're done:
-
-![Employees open](../media/sec-app-emp-open-v1.png)
-
-<br>
-
-The other component (maybe named "EmployeesProtected") will display a list of employees from the `/employees` resource. 
-
-> Tip - Ditto above. 
+> For example, in Assignment 2, we want to protect the student detail component. 
 
 Next, we will add code to "protect" the route to this component with a "guard". How? Open the app module for editing. Import the guard:
 
@@ -251,21 +226,17 @@ Then, modify the route object to add a `canActivate` property:
 
 ```ts
 // other routes above
-{ path: 'employees/protected', component: EmpProtComponent, canActivate: [GuardAuthService] },
+{ path: 'students/:id/detail', component: StudentDetailComponent, canActivate: [GuardAuthService] },
 // other routes below
 ```
 
-If authenticated, the user will see the list of employees. If not, the user will be redirected to the login view. 
-
-Here's what it may look like when you're done:
-
-![Employees protected](../media/sec-app-emp-prot-v1.png)
+If authenticated, the user will see the student detail view. If not, the user will be redirected to the login view. 
 
 <br>
 
 ### Summary
 
-In this document, you learned how to add security features to an Angular app, which works with a secure Teams API. 
+In this document, you learned how to add security features to an Angular app, which works with a secure web API. 
 
 We added a number of code modules, which can be re-used and edited for other Angular apps. 
 

@@ -55,7 +55,7 @@ In our database, we must create a new collection to hold the user accounts. Typi
 * Import these user accounts into MongoDB
 
 > In [Assignment 3](/graded-work/assign3), we will do this in a slightly different way.  
-> The professor team has provided user account data for all of Assignment 2's students. That's the data that we will import into MongoDB. 
+> The professor team has provided user account data for all student objects in Assignment 2. That's the data that we will import into MongoDB. 
 
 <br>
 
@@ -279,7 +279,7 @@ In a separate document, you will learn how to code an Angular app that uses this
 
 ### More information - security packages
 
-In this section, we present more information about the security packages:
+In this section, we present more details about the security packages:
 * `bcryptjs` 
 * `jsonwebtoken` 
 * `passport` and `passport-jwt`
@@ -294,7 +294,7 @@ Identity management systems typically transform a password into a string value t
 
 So, how do we create this transformed string value? While there are several approaches, we will use a [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) approach for our JavaScript + Node.js environment. 
 
-The [bcrypt.js package](https://www.npmjs.com/package/bcryptjs) is added to the web API code base. We use its functions in two ways, in the `manager.js` code:
+The [bcrypt.js package](https://www.npmjs.com/package/bcryptjs) (from Daniel Wirtz) is added to the web API code base. We use its functions in two ways, in the `manager.js` code:
 1. Transform a plain-text password into a [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) which can be stored in a database  
 2. Compare a plain-text password to a hashed-and-stored password 
 
@@ -328,24 +328,54 @@ let isPasswordMatch =
 
 <br>
 
-#### Access tokens and authentication
+#### Access token
 
-In the [security topics introduction](https://bti425.ca/notes/security-intro.html), you learned that an access token is a package of data that includes information about the token issuer, descriptive information about the user (other than secret information), and information about the cookie or token lifetime. In other words, the package of data includes *claims*. 
+In the [security topics introduction](https://bti425.ca/notes/security-intro.html), we learned that an access token is a package of data that includes information about the token issuer, descriptive information about the user (other than secret information), and information about the cookie or token lifetime. In other words, the package of data includes *claims*. 
 
-What is the format or content of the token? In our course, we are using the Internet-standard ([RFC 7519](https://tools.ietf.org/html/rfc7519)) JSON Web Token. 
+What is the format or content of the token? In our course, we are using the [Internet-standard (RFC 7519)](https://tools.ietf.org/html/rfc7519) JSON Web Token (JWT). 
 
-We use the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) package to create the token. 
-
-[JSON Web Token](https://jwt.io)
-
-<mark>&nbsp;( more to come )</mark>
+In the next section, we will learn how to create a token, and how to validate a token. 
 
 <br>
 
 #### Authentication "middleware" code
 
-(This section will describe [Passport](http://www.passportjs.org)).
+Recently, we learned that there are two authentication process workflows: 
+1. Not yet authenticated 
+2. Been authenticated and has a token
 
-<mark>&nbsp;( more to come )</mark>
+**Not yet authenticated**
+
+A "login" function pair (in `server.js` and `manager.js`) work together to accept credentials in a request, and then validate them by comparing to values in the database. If successful, we want to return a token to the requestor. 
+
+We use the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) package (from Auth0) to create the token, in `server.js`. The package has a `.sign()` function that creates a JWT. It needs data for two paramters:
+1. An object, which contains the desired claims and JWT options 
+2. A password 
+
+The function will return a long string value as the token, which can be returned to the requestor. (The requestor must persist that token, and include it in future requests to the web API.)
+
+**Been authenticated and has a token**
+
+Consider a scenario where an incoming request for a resource in the web API includes a token. 
+
+> Note, reminder:  
+> The request has a header that looks like this...  
+> Authorization: JWT big-long-string-token-blah-blah-blah
+
+In `server.js`, we can use *middleware* to look at a request, and if the request includes a token, the middleware can extract-and-validate the token. We add this middleware to each function that needs to be protected. 
+
+In this course, we will use popular and widely-used [Passport](http://www.passportjs.org) packages (from Jared Hanson at Auth0) as the middleware. Specifically, we need the base [passport](https://www.npmjs.com/package/passport) package, and a plug-in for JWT named [passport-jwt](https://www.npmjs.com/package/passport-jwt). 
+
+After some setup, configuration, and initialization, we add another parameter to an Express.js route listener function, which does this token extract-and-validate task. For example:
+
+```js
+app.get(
+  "/api/products", 
+  passport.authenticate('jwt', { session: false }), 
+  (req, res) => {
+    // etc.
+```
+
+If the extract-and-validate task is successful, then the statements in the function's body are executed. However, if unsuccessful, the `app.get` function will return [HTTP 401](https://tools.ietf.org/html/rfc7235#section-3). 
 
 <br>
