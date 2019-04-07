@@ -8,6 +8,14 @@ npm i
 
 <br>
 
+### code-for-angular-app-v1
+
+Code assets for your Angular app in Assignment 3.  
+Follow the guidance in the notes.  
+You will have to edit the "login" component code.  
+
+<br>
+
 ### assign-3-data-user-accounts-v1.json
 
 User accounts for the students in Assignment 2.  
