@@ -27,40 +27,11 @@ Grade value: 10% of your final course grade
 
 <br>
 
-### Quick links
-
-> Not sure whether this section will be needed
-
-<br>
-
 ### Overview and purpose
 
 As noted above, the purpose of objective of the assignment is to add security features to the work done on the previous assignment. 
 
 Both apps - the web API, and the Angular app - will be modified. 
-
-> Notice:  
-> <mark>This document is being edited.</mark>  
-> This notice will be removed when the edits are complete.  
-
-<br>
-
-#### A guided tour of the changes
-
-If you wish to interact with the app, the professor-created example solution is publicly available:
-
-> Notice:  
-> Your professors have not yet deccided whether this app will continue as is, or be replaced by an "...a3app..."
-
-[https://pam-2019-a2app.herokuapp.com](https://pam-2019-a2app.herokuapp.com)
-
-Right-click any image below to open it full-size in a new tab or window. 
-
-The landing page of the app enables the user to view a menu of tasks. 
-
-> The following image will be replaced.
-
-<img class="border1" src="media/a2-start-view.png" alt="">
 
 <br>
 
@@ -127,42 +98,136 @@ Test with Postman. On routes that are protected, the response will be [HTTP 401]
 
 <br>
 
+#### New function pair needed in `server.js` and `manager.js` 
+
+One additional task that needs to be done in the web API - we need a new function pair to "get one" student by its user name (which is the email address). We need that for the "login" task, done soon in the Angular app. 
+
+> Why?  
+> A successful login task gets a token, which has information about the user.  
+> This is "user account" information, and NOT "student" information.  
+> The piece of data that's common between the two objects is the user name (email address).  
+
+In `server.js`, add another "get one" student function. It will look almost the same as the existing get-one-by-identifier function. We suggest that its route be something like this:
+```
+/api/students/username/:username
+```
+
+The manager method that it should call can be something like this:
+```js
+m.studentsGetByUsername(req.params.username)
+// etc.
+```
+
+In `manager.js`, add another "get one" student function member. It will look almost the same as the existing get-one-by-identifier function. However, its "find..." method will probably be something like this:
+```js
+Students.findOne({ email: username }, (error, item) => {
+  // etc.
+```
+
+
+<br>
+
 ### Angular web app security starter tasks
 
-In this section, the Angular web app starter tasks, for security, are discussed. 
+In this section, the Angular web app starter tasks, for security, are discussed. The tasks will be very similar to those in the ["add security features to an Angular app" document](https://bti425.ca/notes/security-add-to-app). 
+
+Do those tasks now. 
+
+<br>
+
+#### Data model manager service work
+
+Before doing component work, we must add a new method to our Angular service that will call the new "get one" student by user name (email address). 
+
+This new method will look almost the same as the existing "get one" student method. The only difference is the data being passed along (e.g. username) and the URL (which must match what you did above). 
 
 <br>
 
 #### App startup and landing/home page planning 
 
-> More to come
+If you did the tasks above, your app has a login component and a token view component (as well as the security services). 
+
+We will change the app's behaviour, so that we do not use the list of students. Therefore, we can remove the student list and cart items from the navigation menu (now or later). 
 
 <br>
 
-#### Components to support the app's purpose
+#### Login component and student detail component work
+
+At this point in time, we assume that you have used Postman to "activate" one or more user accounts. Use those credentials as you complete and test the login component. 
+
+Starter code (HTML) is provided in the template. Adapt it for use as an Angular template-driven form, by adding the necessary binding logic, and data validation. We want both text fields to be required, and probably have between 6 and 50 or so characters. The user name (email address) must also look like an email address. (Use the HTML pattern attribute and a regular expression to help with that.) 
+
+When our app runs in a browser, we have access to a [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) object. Read/skim its notable features and usage before continuing. In our app, we will use localStorage to read and write the token. Here's some typical usage scenarios:
+
+```js
+// Save/write data item in localStorage
+localStorage.setItem('name-of-item', 'data-to-be-saved');
+
+// Get/read data item from localStorage
+let thing = localStorage.getItem('name-of-item');
+
+// Clear/remove data item from localStorage
+localStorage.removeItem('name-of-item');
+```
+
+This code should help you complete the login component code. 
+
+What should we do after a successful login? Yes, the algorithm (code comments) in the professor-provided component suggested that we "Navigate to a landing/info view (home page?)". However, we should really navigate to our student detail component. 
+
+In its current form, the student detail component requires a parameter, the student's MongoDB identifier. We do not have that data. However, we do have the user name (email address). Let's use that as the parameter. The navigation will look something like this:
+
+```js
+// Assuming that "data" is the variable name 
+// in the "...subscribe(data => {" method call
+
+// Go to this student's detail page
+let tokenDecoded = this.jwtHelper.decodeToken(data.token);
+this.router.navigate(['/students/detail/', tokenDecoded.userName]);
+```
+
+Now, we must edit the student detail component, so that it works with a user name, instead of the MongoDB identifier. Somewhere in (or associated with) the `ngOnInit()` method, we will call the new method we just added to the Angular service, passing on the user name (email address). 
+
+> Depending on the design and implementation of your student detail component, you may have one or many edits to make. 
+
+<br>
+
+### New components to support account activation and creation
 
 As suggested by the guided tour above, a few new components are needed. Create them now. Here's what we suggest:
 
 * User account activate 
-* User account creation 
-* Login 
+* User account create
 
 Update your landing/home component template with links (as buttons) that navigate to each of these new components.
 
-Maybe...
-* User account password change
+Both will be similar. Start working on the "user account activate" component first. After it's done and tested, you can copy its code (template and JavaScript), and edit as necessary. 
 
 <br>
 
-#### Routing
+#### User account activate
 
-Configure and test the routing feature for the new components. 
+The purpose of this component is to enable a user account to be activated, using a nice user interface. (Previously, you used Postman to activate a user account.)
+
+This will display an Angular form, with the following elements:
+* Text input, user name 
+* Text (password) input, for password
+* Text (password) input, for confirm password
+* Select-option (dropdown), for role
+  * You can statically provide three or more roles as strings (use values that make sense in the context of the app) 
+
+Make sure the form looks appropriate, and does the essential data validation. 
+
+It will need a data model manager method, to call out to the web API. 
 
 <br>
 
-### Doing the work, detail
+#### User account create
 
-> More to come 
+The purpose of this component is to enable a NEW user account to be created. 
+
+The form will be similar to the "user account activate" task, but it needs one more text input, for "full name". 
+
+This too will need a data model manager method, to call out to the web API. 
 
 <br>
 
