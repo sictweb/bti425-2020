@@ -21,6 +21,9 @@ While you are doing the work, if a *specific task* is not clear, or it seems to 
 
 Thursday, April 11, 2019, at 11:00pm ET
 
+> However, it can be a few days late, with no penalty.  
+> The upload link will be open until Sunday, April 14, at 11:00pm ET.  
+
 Grade value: 10% of your final course grade
 
 *If you wish to submit the assignment before the due date and time, you can do that.*
