@@ -143,41 +143,38 @@ Then type this command: `code .`
 
 <br>
 
-**Useful keyboard shortcuts**
+**Useful keyboard shortcuts (macOS)**
 
-Trigger IntelliSense: `Control + Space` 
+Task | Keyboard shortcut
+--- | ---
+Trigger IntelliSense | `Control + Space` 
+Toggle comments on/off | `Command + /`
+Reformat document| `Shift + Option + Command + F`
+Show/hide left-side bar| `Command + B`
+Show/hide terminal| `Control + (back-tick)`
+Markdown preview pane toggle on/off| `Command + K, V`
 
-Toggle comments on/off: `Command + /`
-
-Reformat document: `Shift + Option + Command + F`
-
-Show/hide left-side bar: `Command + B`
-
-Show/hide terminal: `Control + (back-tick)`
-
-Markdown preview pane toggle on/off: `Command + K, V`
+A full list of keyboard shortcuts in a nice printable format is here:
+* For [macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) 
+* For [Linux](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf) 
+* For [Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) 
 
 <br>
 
-**Useful Emmet snippets**
+**Useful Emmet snippets for HTML**
 
 For most elements, just begin typing the element name, without the angle bracket.
 
-`.` Declare class(es), e.g. `div.row`
-
-`#` Declare unique identifier, e.g. `table#customers`
-
-`>` Child, e.g. `div>p`
-
-`*` Multiplier, e.g. `ul>li*5`
-
-`( )` Grouping, often used with multiplier
-
-`+` Sibling, e.g. `div>h3+p*3`
-
-`{blahblah}` Text content for an element, e.g. `h3{Hello, world!}`
-
-`[` Custom attribute, e.g. `span[data-bind`
+Emmet snippet | Task
+--- | ---
+`.` | Declare class(es), e.g. `div.row`
+`#` | Declare unique identifier, e.g. `table#customers`
+`>` | Child, e.g. `div>p`
+`*` | Multiplier, e.g. `ul>li*5`
+`( )` |Grouping, often used with multiplier
+`+` |Sibling, e.g. `div>h3+p*3`
+`{blahblah}` | Text content for an element, e.g. `h3{Hello, world!}`
+`[` |Custom attribute, e.g. `span[data-bind`
 
 See the [Emmet cheat sheet](https://docs.emmet.io/cheat-sheet/) for full coverage.
 
