@@ -293,7 +293,7 @@ Make sure you think about then implement some appropriate navigation elements in
 
 The "home page" component, as a landing page for the app, will state the app's purpose. *More importantly*, it will include two standard HTML hyperlinks:
 1. One is the URL to your Heroku-hosted (Angular) app 
-2. The other is the URL to your Heroku-hosted <u>M</u>ongoDB + <u>E</u>xpress.js + <u>N</u>ode.js (MEN) web service 
+2. The other is the URL to your Heroku-hosted MongoDB <u>d</u>atabase + <u>E</u>xpress.js + <u>N</u>ode.js (DEN) web service 
 
 Like the professor's publicly-posted example solution, we also suggest that you add two links to the home page. One link points to the student list. The other will be used for a future "login" task (and it can be rendered as a disabled button for now).
 
@@ -692,7 +692,7 @@ For this assignment, there is no required external testing capability. Therefore
 > Remember to do as noted above...  
 > Update your app's home page component to include two standard HTML hyperlinks:  
 > 1. One is the URL to your Heroku-hosted (Angular) app  
-> 2. The other is the URL to your Heroku-hosted (MEN) web service 
+> 2. The other is the URL to your Heroku-hosted (DEN) web service 
 
 <br>
 

@@ -91,7 +91,7 @@ Remember to configure a "home" component and route, and a "not found" component 
 
 The "home page" component, as a landing page for the app, will simply state the app's purpose. *More importantly*, it will include two standard HTML hyperlinks:
 1. One is the URL to your Heroku-hosted (React) app 
-2. The other is the URL to your Heroku-hosted <u>M</u>ongoDB + <u>E</u>xpress.js + <u>N</u>ode.js (MEN) web service 
+2. The other is the URL to your Heroku-hosted MongoDB <u>d</u>atabase + <u>E</u>xpress.js + <u>N</u>ode.js (DEN) web service 
 
 > Your professor needs the URL to your hosted React app so that it can be tested on a standard computer browser and on a smartphone or tablet.  
 > The URL to your hosted web service is needed too, so that your professor can interact with it using Postman.
@@ -200,7 +200,7 @@ For this assignment, there is no required external testing capability. Therefore
 > Remember to do as noted above...  
 > Update your home page component to include two standard HTML hyperlinks:  
 > 1. One is the URL to your Heroku-hosted (React) app  
-> 2. The other is the URL to your Heroku-hosted (MEN) web service 
+> 2. The other is the URL to your Heroku-hosted (DEN) web service 
 
 <br>
 

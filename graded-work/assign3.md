@@ -249,7 +249,7 @@ For this assignment, there is no required external testing capability. Therefore
 > Remember to do as noted above...  
 > Update your app's home page component to include two standard HTML hyperlinks:  
 > 1. One is the URL to your Heroku-hosted (Angular) app  
-> 2. The other is the URL to your Heroku-hosted (MEN) web service 
+> 2. The other is the URL to your Heroku-hosted (DEN) web service 
 
 <br>
 
