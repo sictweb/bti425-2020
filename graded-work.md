@@ -5,7 +5,7 @@ layout: default
 
 ## Graded work
 
-This page has details about the graded work in BTI425, for the current Winter 2019 academic term.
+This page has details about the graded work in BTI425, for the current Winter 2020 academic term.
 
 <br>
 
