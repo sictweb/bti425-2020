@@ -84,27 +84,27 @@ Class/sessions are important. This is not a distance education (online) course. 
 
 ### What do we expect from you?
 
-Before the Monday class, we expect you to prepare. This means:
+Before the Friday class (in the classroom), we expect you to prepare. This means:
 * Read and study the class notes page
 * Read and study the linked documents
 * Make your own notes, including questions that you have
 
 In other words, do not come into the classroom expecting somehow to soak up knowledge like a sponge. You need to prepare before class, so that you understand the topics and their context.
 
-In the Tuesday or Thursday class (in the computer-lab), we expect you to be an engaged and actively-learning participant. This means:
+In the Tuesday class (in the computer-lab), we expect you to be an engaged and actively-learning participant. This means:
 * Listening effectively
 * Asking and answering questions
 * Writing notes
 * Doing the in-class exercises and activities
 
-Before the Tuesday/Thursday class/session of the week, we also expect you to prepare for the class. This means:
+Before the Tuesday class/session of the week, we also expect you to prepare for the class. This means:
 * Being prepared to split your time between new topic learning, and working hands-on with the topic or the current assignment
 * Asking and answering questions
 * Writing notes
 * Read and study the current assignment
 * Practice its contents, and/or get started on its contents
 
-Regarding the workload, it will simply not be possible to confine this course's learning experience to the scheduled four periods per week. We expect you to spend some of the Tuesday/Thursday in-class time working on the assignments, but you must spend time out-of-class to complete the work.
+Regarding the workload, it will simply not be possible to confine this course's learning experience to the scheduled four periods per week. We expect you to spend some of the Tuesday in-class time working on the assignments, but you must spend time out-of-class to complete the work.
 
 That being said, you will encounter problems and delays. Please follow a general rule: If you cannot solve the problem within 20 to 30 minutes, then stop and set it aside. Seek help from your professor, during class time, or during the designated help time or office hours. Alternatively, seek help from a classmate *who knows the solution* to the problem. 
 
