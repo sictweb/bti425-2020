@@ -5,9 +5,9 @@ layout: default
 
 ## Notes
 
-The table below has links to the daily class notes for the Winter 2020 term.  
+The table below has links to the daily class notes for the Winter 2020 term.  New notes are at the top.
 
-New notes are at the top.
+Our "week" consists of a Friday lecture, and a Tuesday computer-lab. 
 
 <br>
 

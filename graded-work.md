@@ -29,7 +29,7 @@ The policy is very limited. It is designed to recognize a single *legitimate* il
 
 If an illness or medical issue causes a student to miss a test, and wants the professor to consider a remedy, then the student must follow this procedure:
 1. Notify the professor by email, before the test date-and-time, of the absence.
-2. Within 48 hours of the test date-and-time, obtain a diagnosis from a medical doctor , and obtain documentation that clearly states that academic performance was affected during the test date-and-time. 
+2. Within 48 hours of the test date-and-time, obtain a diagnosis from a medical doctor (licensed for practice in Ontario), and obtain documentation that clearly states that your academic performance was affected during the test date-and-time. 
 3. Send a digital version of the documentation (e.g. a photo or a scan) to the professor, and deliver the original (paper) documentation at the earliest convenient opportunity. 
 4. Do NOT communicate, in any way, with another registered BTI425 student about the contents of the test. 
 
