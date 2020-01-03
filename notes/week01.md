@@ -36,11 +36,13 @@ The weekly notes will be organized and delivered as a collection of topic-themed
 
 <br>
 
-### Friday plan
+### Tuesday plan
 
 New topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/standards#taking-notes-in-class). 
 
 * [Welcome](/notes/welcome) to the BTI425 course
+
+* [Developer tools](dev-tools) used in this course
 
 * [Web services (re)introduction](/notes/intro-web-services)
 
@@ -48,20 +50,14 @@ New topic presentation, discussions, and demonstrations. While some brief notes 
 
 * [This document](/notes/postman-intro) introduces you to Postman, and has how-to getting started info.
 
-During the breaks, please get up and move around. It's important for your health, and for mental performance. 
-
 <br>
 
 ### Code examples
 
 The course's GitHub repo has code examples for many topics and techniques. You can download a zip of the code repo, or clone it. 
-* TBA
-
-<br>
-
-### Tuesday plan
-
-After the professor introduces the course and its first topic set, work on the assignment task. 
+* Web API v4 - essential interaction
+* Web API v5 - data is an array of strings
+* Web API v6 - data model manager 
 
 <br>
 
@@ -69,6 +65,6 @@ After the professor introduces the course and its first topic set, work on the a
 
 We expect the student to do their work on a computer that runs macOS (Mac OS X), Linux, or another Unix-like operating system. 
 
-If a student has a Windows 10 computer, then plan to install an environment that enables the installation of Linux.
+If a student has a Windows 10 computer, then plan to install an environment that enables the installation of Linux. We recommend Windows Subsystem for Linux (WSL) and Ubuntu version 18.04 from the Microsoft Store. 
 
 <br>
