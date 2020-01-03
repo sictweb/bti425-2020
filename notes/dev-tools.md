@@ -96,7 +96,7 @@ As you know, when you delete a folder (using Finder or File Explorer), the folde
 Why does this matter to us? Well, a typical Node.js + Express.js, or React, or Angular app has thousands of files and is hundreds of megabytes in size. If you create and then discard five (for example) apps per week, then a month later, you have a huge amount of wasted storage space, which takes a long time to actually delete (it can be minutes). 
 
 Therefore, if you want to immediately and permanently delete an old/dead/unneeded app folder:
-* On macOS Finder, use Option+delete (instead of delete on its own)
+* On macOS Finder, use Option+Command+delete (instead of delete on its own)
 * On Windows 10 File Explorer, use Shift+delete (instead of delete on its own)
 
 <br>
