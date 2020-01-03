@@ -10,10 +10,7 @@ layout: default
 
 This week, we continue our two-week re-introduction to web services. We will work with a database, and then deploy a web service and its database to a public host. 
 
-Then, a small number of JavaScript-based client apps will be created, to interact with the web service. The plan is to create these apps:
-* Using XmlHttpRequest 
-* Using jQuery
-* Using the new Fetch API
+Then, a small number of JavaScript-based client apps will be created, to interact with the web service. Although we will discuss the original XmlHttpRequest object and the jQuery library, we'll prefer to use the new-ish Fetch API. 
 
 The Moment library - which helps with date handling - will also be introduced. 
 
@@ -44,7 +41,7 @@ The course's GitHub repo has code examples for many topics and techniques. You c
 
 ### Tuesday plan
 
-After the professor introduces the course and its first topic set, work on the assignment task. 
+After the professor introduces the course and its first topic set, work on the programming assignment task. 
 
 <br>
 
@@ -52,6 +49,6 @@ After the professor introduces the course and its first topic set, work on the a
 
 We expect the student to do their work on a computer that runs macOS (Mac OS X), Linux, or another Unix-like operating system. 
 
-If a student has a Windows 10 computer, then plan to install an environment that enables the installation of Linux.
+If a student has a Windows 10 computer, then plan to install an environment that enables the installation of Linux. We recommend Windows Subsystem for Linux (WSL) and Ubuntu version 18.04 from the Microsoft Store.
 
 <br>

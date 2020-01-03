@@ -43,7 +43,7 @@ npm --version
 
 #### Configure VS Code
 
-Do this only if it was just installed: Configure "`code .`" functionality [as described here](https://code.visualstudio.com/docs/setup/mac).
+Do this only if it was just or recently installed: Configure "`code .`" functionality [as described here](https://code.visualstudio.com/docs/setup/mac).
 
 <br>
 
@@ -51,7 +51,7 @@ Do this only if it was just installed: Configure "`code .`" functionality [as de
 
 Using Terminal, navigate to the file system location that will hold the project. Create a new folder to hold the project. 
 
-Navigate into that folder. Create an empty `server.js` file. Create an empty `index.html` file. 
+Navigate into that folder. Create an empty `server.js` file. Create an empty `index.html` file. It's also a good idea to create an empty `README.md` file.
 
 Now, initialize the folder as a Node.js app:
 
@@ -60,6 +60,12 @@ npm init
 ```
 
 Make sure you specify `server.js` as its entry point. Add your name as the author name, and add a description if you wish. The other settings can stay at the suggested default values. 
+
+Add Express.js:
+
+```bash
+npm install express
+```
 
 Now, edit the project.
 
@@ -85,9 +91,7 @@ It should respond with the console message, and then terminate.
 
 ### Write a simple web server 
 
-Again, follow much of the technique used in BTI325 Week 9. 
-
-Our goal is to create an app that will handle these requests:
+Follow much of the technique used in BTI325 Week 9. Our goal is to create an app that will handle these requests:
 * Get all
 * Get one
 * Add new
@@ -95,6 +99,8 @@ Our goal is to create an app that will handle these requests:
 * Delete item
 
 This goal will work for a web service that handles ANY kind of data. Obviously, a more complex data model will have more request handlers, but they all share the same core design, and handle these five - or variants of these five - requests. 
+
+> See the course's code repository for ready-to-use (and edit) templates. 
 
 The core getting-started code looks something like the following. It assumes it is working with a "user" object that has a first name and a last name (as string data). 
 
@@ -117,27 +123,34 @@ app.get("/", (req,res) => {
 
 // Get all
 app.get("/api/items", (req, res) => {
-    res.json({message: "fetch all items"});
+    res.json({ message: "fetch all items" });
 });
 
 // Get one
 app.get("/api/items/:itemId", (req, res) => {
-    res.json({message: "get user with Id: " + req.params.itemId});
+  res.json({ message: `get user with identifier: ${req.params.id}` });
 });
 
 // Add new
+// This route expects a JSON object in the body, e.g. { "firstName": "Peter", "lastName": "McIntyre" }
 app.post("/api/items", (req, res) => {
-     res.json({message: "add a user item: " + req.body.firstName + " " + req.body.lastName});
+  // MUST return HTTP 201
+  res.status(201).json({ message: `added a new item: ${req.body.firstName} ${req.body.lastName}` });
 });
 
 // Edit existing
-app.put("/api/items/:itemId", (req, res) => {
-    res.json({message: "update user with Id: " + req.params.itemId + " to " + req.body.firstName + " " + req.body.lastName});
+// This route expects a JSON object in the body, e.g. { "id": 123, "firstName": "Peter", "lastName": "McIntyre" }
+app.put("/api/items/:id", (req, res) => {
+  res.json({ message: `updated item with identifier: ${req.params.id} to ${req.body.firstName} ${req.body.lastName}` });
 });
 
 // Delete item
-app.delete("/api/items/:itemId", (req, res) => {
-     res.json({message: "delete user with Id: " + req.params.itemId});
+app.delete("/api/items/:id", (req, res) => {
+  // MUST return HTTP 204
+  res.status(200).json({ "message": `deleted user with identifier: ${req.params.id}` });
+
+  // In a real app, do not send body data, instead just send...
+  //res.status(204).end();
 });
 
 // Resource not found (this should be at the end)
@@ -156,16 +169,6 @@ app.listen(HTTP_PORT, () => {
 #### Edit `server.js` 
 
 Edit `server.js` so that it holds the code shown above. 
-
-<br>
-
-#### Make sure Express.js is installed into the project
-
-If you haven't done this yet, add Express.js:
-
-```bash
-npm install express
-```
 
 <br>
 
@@ -199,7 +202,7 @@ We have to do two tasks:
 
 #### Add simple string data
 
-Let's add a super-simple array of strings, for example the names of colours. At the bottom of the `server.js` file, create a variable to hold the data, something like this:
+Let's add a super-simple array of strings, for example the names of colours. Somewhere in the `server.js` file, create a variable to hold the data, something like this:
 
 ```js
 // Array of strings
@@ -226,12 +229,12 @@ if (itemId > colours.length) {
 Next, if we assume that we pass in a simple JSON object with one key-value pair (and the key name is "colourName"), then we can code an "add new". For example, the function body looks like the following:
 
 ```js
-// Extract the incoming data
+// Extract the incoming data from { "colourName": "Purple" }
 let newItem = req.body.colourName;
 // Add another item to the array
 colours.push(newItem);
 // Return the result; RFC 7231 tells us that it must return HTTP status 201
-res.status(201).json({message: "added " + newItem + " as itemID " + colours.length});
+res.status(201).json({ message: `added ${newItem} as item identifier ${colours.length}` });
 ```
 
 <br>
@@ -246,7 +249,7 @@ We will leave this as an in-class hands-on task (in our computer-lab session).
 
 One of the new skills that a BTI425 student should add is the ability to generate and use a large amount of data. This is especially important for web programmers, because the result of the work we do is so visual in nature. It is always a good idea to use and show good solid credible data, instead of crappy placeholder data (e.g. abc, 123, foo, bar, etc.) that is so common in entry-level programming work. 
 
-Here, we will introduce you to the [Mockaroo service](https://mockaroo.com):
+Here, we will introduce you to, or remind you about, the [Mockaroo service](https://mockaroo.com):
 
 > Need some mock data to test your app?  
 > Mockaroo lets you generate up to 1,000 rows of realistic test data in CSV, JSON, SQL, and Excel formats.

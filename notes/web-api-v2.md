@@ -23,11 +23,19 @@ Before writing and running the app, confirm that your computer's tooling is read
 
 <br>
 
-#### If your system does not yet have the MongoDB engine etc.
+#### If your computer does not yet have the MongoDB engine etc.
 
-MongoDB is a database engine, and therefore provides persistent storage for apps. The database engine can run on your own computer for development and testing purposes, and it obviously runs in a publicly-hosted server environment. The database itself can be on your own computer, and it can be migrated or copied to the public host. 
+MongoDB is a database engine, and therefore provides persistent storage for apps. The database engine can run on your own computer for development and testing purposes, and it obviously runs in a publicly-hosted server environment. The database *data* can be on your own computer, and it can be migrated or copied to the public host. 
 
-You can run commands to learn whether MongoDB is installed:
+> Of interest...   
+>  
+> A server-based app that has a <u>d</u>atabase (typically MongoDB) and <u>E</u>xpress.js added to a <u>N</u>ode.js base, can be described as a *DEN app*, an acronym based on their initial letters.  
+>  
+> You may be familiar with a *MEAN app* (or the "MEAN stack"). While it was convenient terminology, it was also a bit inaccurate, because there were always two apps involved - a client app ("A" for Angular), and a server app ("M" for MongoDB, "E" for Express.js, and "N" for Node.js).  
+>  
+> For modern web service development, we have changed the "M" initial to a more-generic "D" for database. 
+
+You can run commands to learn whether MongoDB is installed on your computer:
 
 ```bash
 # Is the database engine installed?
@@ -42,17 +50,14 @@ If you need to, install the community version of MongoDB.
 > Need a how-to reminder?  
 > One or both of these will help:  
 > [MongoDB docs](https://docs.mongodb.com/manual/administration/install-community/)   
-> [Last term's web dev course notes](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week8-class1/)
 
 > Another reminder:  
 > If you are using the Windows Subsystem for Linux and therefore a Microsoft Store version of Linux (Ubuntu etc.), do the installation of MongoDB in Linux, and NOT in Windows.  
-> All your dev tooling will be Linux apps. 
+> Except for the native GUI apps (e.g. VS Code etc.), *all" your dev tooling (Node.js etc., and MongoDB etc.) will be Unix/Linux apps. 
 
 <br>
 
-Robo 3T is a graphical UI app that enables you as the developer to inspect and work with local (or hosted) MongoDB databases. 
-
-If you need to, install the Robo 3T tool. 
+MongoDB Compass (Community edition) is a graphical UI app that enables you as the developer to inspect and work with local (or hosted) MongoDB databases. If you need to, install it. 
 
 <br>
 
