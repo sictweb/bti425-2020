@@ -57,7 +57,7 @@ New topic presentation, discussions, and demonstrations. While some brief notes 
 The course's GitHub repo has code examples for many topics and techniques. You can download a zip of the code repo, or clone it. 
 * Web API v4 - essential interaction
 * Web API v5 - data is an array of strings
-* Web API v6 - data model manager 
+* Web API v6 - data model manager and an array of objects 
 
 <br>
 

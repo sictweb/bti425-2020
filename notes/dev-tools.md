@@ -7,6 +7,8 @@ layout: default
 
 This document is a summary of the developer tools used in this course. 
 
+This information was most recently updated in January 2020.
+
 <br>
 
 ### Web dev work is done on a Unix
@@ -27,11 +29,12 @@ Task | macOS<br>app | Windows 10 + WSL<br>app
 --- | --- | ---
 File system GUI | Finder | File Explorer
 File system CLI | Terminal | Terminal on **Ubuntu**
+Command line | Terminal | "cmd" on **Windows**
 Editor | Visual Studio Code | Visual Studio Code<br>installed on **Windows**
 Node.js<br>React tools<br>Angular tools | Install these on macOS | Install these on **Ubuntu**
-MongoDB engine<br>MongoDB shell | Install these on macOS | Install these on **Ubuntu**
+MongoDB engine<br>MongoDB shell | Install these on macOS | Install these on **Windows**
 Database inspector<br>and editor | MongoDB Compass | MongoDB Compass<br>installed on **Windows**
-Web browser(s)<br>including dev tools,<br>debugger | Chrome<br>Firefox<br>Opera<br>Safari | Chrome<br>Firefox<br>Opera<br>Edge 
+Web browser(s)<br>including dev tools,<br>debugger | All on macOS...<br>Chrome<br>Firefox<br>Opera<br>Safari | All on Windows...<br>Chrome<br>Firefox<br>Opera<br>Edge 
 HTTP inspector | Postman | Postman<br>installed on **Windows**
 Data generator | [mockaroo.com](https://mockaroo.com)<br>online | [mockaroo.com](https://mockaroo.com)<br>online
 
@@ -79,9 +82,9 @@ Also in your Documents folder, create a folder to hold your apps, maybe named `d
 
 After Ubuntu (on WSL on Windows 10) is installed, a typical Unix-style file system is available. Whe you open a terminal, your present working directory (pwd) is your user's home directory (e.g. `/home/peter`). 
 
-This area is NOT visible from the host operating system, Windows 10. However, it is an ideal location for your database folders. Therefore, for each database, we suggest that you create a folder that has a "db-" prefix, so that you can easily and quickly identify them when you display a list of items in a folder. For example, `db-company`. 
+This area is NOT visible from the host operating system, Windows 10. This is a problem, because we want to use GUI apps (Visual Studio Code, File Explorer) and Ubuntu apps (Node.js, React, Angular) when we work on an app.
 
-Where should you store the apps that you're working on? In an area that's visible from BOTH Ubuntu and the host operating system. Here's our suggestions:
+So where should you store the apps that you're working on? In an area that's visible from BOTH Ubuntu and the host operating system. Here's our suggestions:
 
 Using File Explorer, create a new folder (maybe named `dev`) in the root of drive C:. In other words, `c:\dev`. Inside that folder, we will be creating separate multiple apps (web APIs, React apps, Angular apps, etc.). 
 
@@ -89,7 +92,15 @@ That `c:\dev` folder will be visible from Ubuntu as `/mnt/c/dev`.
 
 <br>
 
-#### Deleting old or unneeded app/projecct folders 
+#### Install and run MongoDB on Windows 10 
+
+Although it is technically possible to install and run MongoDB on Ubuntu on WSL on Windows 10, it is [officially not supported](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#platform-support). 
+
+Instead, you can install it on Windows. [This document](dev-tools-mongodb-windows) will help with that task.
+
+<br>
+
+#### Deleting old or unneeded app/project folders 
 
 As you know, when you delete a folder (using Finder or File Explorer), the folder is just "marked" as deleted, and is then managed by the operating system's Trash folder (Unix) or Recycle Bin folder (Windows 10). Later, you can "empty" the Trash folder, which actually and permanently deletes the contents. 
 
