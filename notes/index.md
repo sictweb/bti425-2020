@@ -7,7 +7,7 @@ layout: default
 
 The table below has links to the daily class notes for the Winter 2020 term.  New notes are at the top. Our "week" consists of a Friday lecture, and a Tuesday computer-lab. 
 
-All tests on Tuesdays. All assignments are due on Tuesdays.
+All tests on Tuesdays. All assignments are due on Tuesdays. 
 
 <br>
 
