@@ -13,8 +13,8 @@ All tests on Tuesdays. All assignments are due on Tuesdays.
 
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
-**Week 3**<br>&bull; Fri Jan 17<br>&bull; Tue Jan 21 | React introduction<br>Components as an app design feature |
-**Week 2**<br>&bull; Fri Jan 10<br>&bull; Tue Jan 14 | More web service work<br>Introduction to front-end development<br>JavaScript libraries jQuery, Moment |
+**Week 3**<br>&bull; Fri Jan 17<br>&bull; Tue Jan 21 | Front end dev principles<br>React introduction<br>Components as an app design feature |
+**[Week 2](week02)**<br>[&bull; Fri Jan 10<br>&bull; Tue Jan 14](week02) | More web service work, using a database<br>Client apps |
 **[Week 1](week01)**<br>[&bull; Tue Jan 7](week01) | Dev and deployment environment setup<br>Re-introduction to back-end web services |
 **[Welcome](welcome)** | Welcome to the BTI425 course |
 

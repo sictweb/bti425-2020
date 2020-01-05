@@ -10,7 +10,7 @@ layout: default
 
 This week, we continue our two-week re-introduction to web services. We will work with a database, and then deploy a web service and its database to a public host. 
 
-Then, a small number of JavaScript-based client apps will be created, to interact with the web service. Although we will discuss the original XmlHttpRequest object and the jQuery library, we'll prefer to use the new-ish Fetch API. 
+Then, a small number of JavaScript-based client apps will be created, to interact with the web service. Although we will briefly discuss the original XmlHttpRequest object and the jQuery library, we'll prefer to use the new-ish Fetch API. 
 
 The Moment library - which helps with date handling - will also be introduced. 
 
@@ -24,7 +24,7 @@ New topic presentation, discussions, and demonstrations. While some brief notes 
 
 * [Creating a hosted web service with a database](/notes/web-api-v2)
 
-* [Simple apps that interact with a web service](/notes/web-api-client-apps) 
+* [Simple apps that interact with a web API](/notes/web-api-client-apps) 
 
 * Handling Date/Time information using [Moment.js](moment)
 
@@ -35,7 +35,9 @@ During the breaks, please get up and move around. It's important for your health
 ### Code examples
 
 The course's GitHub repo has code examples for many topics and techniques. You can download a zip of the code repo, or clone it. 
-* TBA
+* Web API v7 - data managed by database engine
+* Client HTML5 - client app, for a web browser 
+* Client CLI - client app, for Node.js
 
 <br>
 
