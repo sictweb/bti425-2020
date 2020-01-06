@@ -70,6 +70,14 @@ From Tanvir Alam:
 
 > I am obviously available during our course time slots on Friday and Tuesday.  
 >  
-> (more coming soon)
+> During the Friday (lecture) class, I will have limited free time.  
+>
+> During the Tuesday (computer-lab) class, I will have substantial free time. Tuesdays will be the best day to get one-on-one help from me.  
+>
+> I plan to have drop-in help time on Tuesdays from 3:20pm to 5:05pm, in the School of SDDS office area.  
+>
+> While I will be somewhat available by email at other times, I will prefer to be available for help during the days and times discussed above. I will not commit to being available 24×7.  
+>
+> This may become important to you if you are facing a Tuesday evening deadline for the assignment submission, and you discover that you want my help during the evening. I will almost certainly not be available. Therefore, you will be on your own, but you still must practice academic honesty. If you anticipate that this practice will be a problem for you, then set your own assignment due date deadline to better match my availability - for example, the Friday or Monday just before the Tuesday deadline.
 
 <br>
