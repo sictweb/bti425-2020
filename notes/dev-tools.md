@@ -47,12 +47,13 @@ As you can see from the summary, you will be using GUI versions of the following
 * Code editor
 * Database inspector and editor
 * Browsers
+* HTTP inspector
 
-The dev tools (Node.js etc.) and the database engine and shell are installed on a Unix. DO NOT install these on Windows. 
+DO NOT install the dev tools (Node.js, Express.js etc.) on Windows. 
 
 <br>
 
-#### Using terminal windows
+#### Using terminal (CLI) windows
 
 Do not hesitate to use multiple terminal windows. During development, your professor typically uses a minimum of three, but often about five are opened. Each is opened at a different folder, and therefore is used for different purposes:
 * One or more is focused on the parent folder of the current app
@@ -66,7 +67,7 @@ If you're hesitating because you're uncomfortable with a Unix CLI, then get over
 
 If you're thinking that the terminal area of Visual Studio Code is enough for you, then that's inefficient, confining, and often awkward, when compared to using real terminal windows. 
 
-Professional software developers use multiple terminal windows, and are comfortable and skilled doing so. Just do the right thing. 
+Professional software developers use multiple terminal windows on a Unix, and are comfortable and skilled doing so. Just do the right thing. 
 
 <br>
 

@@ -20,7 +20,7 @@ Remember to frequently use the [learning resources](/resources).
 
 ### Friday plan
 
-New topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/standards#taking-notes-in-class). 
+New topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/standards#taking-notes-in-class-and-before-class-as-you-prepare). 
 
 * [Creating a hosted web service with a database](/notes/web-api-v2)
 

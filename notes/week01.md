@@ -30,7 +30,7 @@ In the previous course, you had a taste of this with the Ajax coverage. That ena
 
 We'll build on the previous course's Ajax coverage with a survey of front end development techniques and approaches, by covering a few widely-used libraries and frameworks, and then spending a few weeks with React. The destination will be a *thorough introduction* to a feature-rich application platform, Angular. 
 
-The first part of this course will ensure that you have your server-side development and deployment (hosting) environment configured correctly. We will design, program, and then install and configure a data-rich project on the server, which will persist resources that can be used by some of the front end apps that we create during the course. A natural result will be that you will learn more about, and write code for, a web service (also known as a web API). In summary, you'll transition from writing server code that generates and delivers HTML, to server code that generates and delivers resources that are formatted as JSON. 
+The first part of this course will ensure that you have your server-side development and deployment (hosting) environment configured correctly. We will design, program, and then install and configure one or more data-rich project on the server, which will persist resources that can be used by some of the front end apps that we create during the course. A natural result will be that you will learn more about, and write code for, a web service (also known as a web API). In summary, you'll transition from writing server code that generates and delivers HTML, to server code that generates and delivers resources that are formatted as JSON. 
 
 The weekly notes will be organized and delivered as a collection of topic-themed documents. This page - "week01" - will simply guide you throught the topics in sequence. (Read [more about this organization scheme here](/notes/about).)
 
@@ -38,7 +38,7 @@ The weekly notes will be organized and delivered as a collection of topic-themed
 
 ### Tuesday plan
 
-New topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/standards#taking-notes-in-class). 
+New topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/standards#taking-notes-in-class-and-before-class-as-you-prepare). 
 
 * [Welcome](/notes/welcome) to the BTI425 course
 
