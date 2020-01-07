@@ -13,11 +13,11 @@ Coming into this course, we assume that you have knowledge of and experience in:
 
 In this BTI425 course, we build upon that knowledge. 
 
-First, you will learn the foundations of client-side browser-based programming. We explore a range of frameworks and libraries.
+First, you will learn more about creating web services (also known as web APIs). 
 
-Then, you will learn the foundations of the Angular app development platform. 
+Next, you're introduced to the principles of modern client-side browser-based app programming. In this part of the course, you will learn the foundations of the React app development platform. 
 
-Finally, you will learn more about Angular, while building rich and functional client-side browser-based apps.
+Finally, you will learn the foundations and more about Angular, while building rich and functional client-side browser-based apps.
 
 <br>
 
