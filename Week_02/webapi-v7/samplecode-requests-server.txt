@@ -1,0 +1,66 @@
+
+// Use the following as request handling functions
+// Copy then paste then edit
+// Assume an entity named "Person"
+// and manager.js functions that handle the data service operations
+
+
+// Get all
+app.get("/api/persons", (req, res) => {
+  // Call the manager method
+  m.personGetAll()
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      res.status(500).json({ "message": error });
+    })
+});
+
+// Get one
+app.get("/api/persons/:personId", (req, res) => {
+  // Call the manager method
+  m.personGetById(req.params.personId)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});
+
+// Add new
+app.post("/api/persons", (req, res) => {
+  // Call the manager method
+  m.personAdd(req.body)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      res.status(500).json({ "message": error });
+    })
+});
+
+// Edit existing
+app.put("/api/persons/:personId", (req, res) => {
+  // Call the manager method
+  m.personEdit(req.body)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});
+
+// Delete item
+app.delete("/api/persons/:personId", (req, res) => {
+  // Call the manager method
+  m.personDelete(req.params.personId)
+    .then(() => {
+      res.status(204).end();
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});

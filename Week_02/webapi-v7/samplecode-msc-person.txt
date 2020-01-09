@@ -1,0 +1,24 @@
+
+// Use the following as request handling functions
+// Copy then paste then edit
+// Assume an entity named "Person"
+// and server.js functions that handle the HTTP requests
+
+// Setup
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+// Entity schema
+
+var personSchema = new Schema({
+  firstName: String,
+  lastName: String,
+  birthDate: Date,
+  email: String,
+  url: String,
+  creditScore: Number,
+  rating: Number
+});
+
+// Make schema available to the application
+module.exports = personSchema;

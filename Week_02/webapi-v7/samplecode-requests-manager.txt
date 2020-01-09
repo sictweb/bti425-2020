@@ -1,0 +1,111 @@
+
+// Use the following as data service functions
+// Copy then paste then edit
+// Assume an entity named "Person" (schema is in msc-schema.txt)
+// and server.js functions that handle the HTTP requests
+
+// Assume that these functions are wrapped in a 'module.exports' statement
+
+module.exports = function (mongoDBConnectionString) {
+
+  // Collection properties, which are created upon connection to the database
+  let Person;
+
+  return {
+
+    // connect: function() { ...
+    // Add the following function members below the "connect" function member
+
+
+    // ############################################################
+    // Person requests
+
+    personGetAll: function () {
+      return new Promise(function (resolve, reject) {
+
+        // Fetch all documents
+        Person.find()
+          .sort({ lastName: 'asc', firstName: 'asc' })
+          .exec((error, items) => {
+            if (error) {
+              // Query error
+              return reject(error.message);
+            }
+            // Found, a collection will be returned
+            return resolve(items);
+          });
+      })
+    },
+
+    personGetById: function (itemId) {
+      return new Promise(function (resolve, reject) {
+
+        // Find one specific document
+        Person.findById(itemId, (error, item) => {
+          if (error) {
+            // Find/match is not found
+            return reject(error.message);
+          }
+          // Check for an item
+          if (item) {
+            // Found, one object will be returned
+            return resolve(item);
+          } else {
+            return reject('Not found');
+          }
+        });
+      })
+    },
+
+    personAdd: function (newItem) {
+      return new Promise(function (resolve, reject) {
+
+        Person.create(newItem, (error, item) => {
+          if (error) {
+            // Cannot add item
+            return reject(error.message);
+          }
+          //Added object will be returned
+          return resolve(item);
+        });
+      })
+    },
+
+    personEdit: function (newItem) {
+      return new Promise(function (resolve, reject) {
+
+        Person.findByIdAndUpdate(newItem._id, newItem, { new: true }, (error, item) => {
+          if (error) {
+            // Cannot edit item
+            return reject(error.message);
+          }
+          // Check for an item
+          if (item) {
+            // Edited object will be returned
+            return resolve(item);
+          } else {
+            return reject('Not found');
+          }
+
+        });
+      })
+    },
+
+    personDelete: function (itemId) {
+      return new Promise(function (resolve, reject) {
+
+        Person.findByIdAndRemove(itemId, (error) => {
+          if (error) {
+            // Cannot delete item
+            return reject(error.message);
+          }
+          // Return success, but don't leak info
+          return resolve();
+        })
+      })
+    }
+
+  } // return
+
+
+} // module.exports
