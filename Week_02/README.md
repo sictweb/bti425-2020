@@ -23,3 +23,18 @@ Methods that support get all, get one, add new, edit existing, and delete item.
 This app uses a data model manager (<code>manager.js</code>) to handle data service tasks.  
 
 <br>
+
+### Client requestor in a Node.js app 
+
+Implements the Fetch API in the a Node.js app, using the `node-fetch` package.  
+It expects that you have a local web API running.  
+
+<br>
+
+### Client requestor in the browser 
+
+Implements the Fetch API in the browser's JavaScript engine.  
+It works with a hosted web API that the professor created.  
+There may be a delay in fetching data from the web API, as the host isn't always running.  
+
+<br>

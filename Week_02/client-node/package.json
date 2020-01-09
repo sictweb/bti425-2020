@@ -1,0 +1,15 @@
+{
+  "name": "client-node",
+  "version": "1.0.0",
+  "description": "Client app to call the web API, as a Node.js app",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node client.js"
+  },
+  "author": "Peter McIntyre",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
