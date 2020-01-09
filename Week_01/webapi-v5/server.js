@@ -26,6 +26,37 @@ var colours = ['Red', 'Green', 'Blue', 'Yellow', 'Aqua', 'Fuschia'];
 
 
 // ################################################################################
+// Deliver the app's home page to browser clients
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "/index.html"));
+});
+
+
+
+// ################################################################################
+// Resources available in this web API
+
+app.get("/api", (req, res) => {
+  // Here are the resources that are available for users of this web API...
+  // YOU MUST EDIT THIS COLLECTION
+  const links = [];
+  // This app's resources...
+  links.push({ "rel": "collection", "href": "/api/items", "methods": "GET,POST" });
+  // Example resources...
+  links.push({ "rel": "collection", "href": "/api/customers", "methods": "GET,POST" });
+  links.push({ "rel": "collection", "href": "/api/employees", "methods": "GET,POST" });
+  const linkObject = { 
+    "links": links, 
+    "apiVersion": "1.0", 
+    "apiName": "Web API example version 5" 
+  };
+  res.json(linkObject);
+});
+
+
+
+// ################################################################################
 // Request handlers for data entities (listeners)
 
 // Get all
@@ -79,6 +110,15 @@ app.delete("/api/items/:id", (req, res) => {
     // MUST return HTTP 204
     res.status(204).end();
   }
+});
+
+
+
+// ################################################################################
+// Resource not found (this should be at the end)
+
+app.use((req, res) => {
+  res.status(404).send("Resource not found");
 });
 
 
