@@ -87,9 +87,10 @@ Class/sessions are important. This is not a distance education (online) course. 
 Before the Friday class (in the classroom), we expect you to prepare. This means:
 * Read and study the class notes page
 * Read and study the linked documents
+* Read and study the code examples, and then run them on a device (yours or one at the College), and then attempt to re-create all or part of each code example 
 * Make your own notes, including questions that you have
 
-In other words, do not come into the classroom expecting somehow to soak up knowledge like a sponge. You need to prepare before class, so that you understand the topics and their context.
+In other words, do not come into the classroom expecting somehow to learn, by listening only, that week's topics. You need to prepare before class, so that you understand the topics and their context. 
 
 In the Tuesday class (in the computer-lab), we expect you to be an engaged and actively-learning participant. This means:
 * Listening effectively
