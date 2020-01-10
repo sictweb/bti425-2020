@@ -130,16 +130,17 @@ In this task phase 1, we will:
 
 Ensure that your tooling is ready, and that your hosted service accounts are ready. 
 
-Create a folder (directory) to hold the database.
+Create a folder (directory) to hold the database. This folder is actually a *container* for one or more databases. More about this will be discussed in class. 
 
 > Suggestion:  
-> Create the folder as a peer to your app's folder.  
-> Maybe named `db-courseweek2`. 
+> Create the folder (container) as a peer to your app's folder.  
+> Maybe named `db-local`.  
+> This name represents work that you do while you learn the topics in this course. The databases that you create in this container are for work in progress, testing, and so on.  
 
 Attempt to start and run the database engine. Open a new Terminal window to do this, because you will need your other/existing Terminal window to run more commands. 
 
 ```bash
-mongod --dbpath ./db-courseweek2
+mongod --dbpath ./db-local
 ```
 
 This task should result in many console messages, and one of the later or final messages will tell you that it's ready; something like this:
@@ -159,7 +160,7 @@ Then, move or copy the downloaded data to the same folder that holds your app's 
 Run this command while in the same folder as your generated data file. 
 
 ```bash
-mongoimport --db db-courseweek2 --collection person --file mockdataweek2.json --jsonArray
+mongoimport --db db-local --collection person --file mockdataweek2.json --jsonArray
 ```
 
 If successful, it will respond with something like this:
@@ -180,7 +181,7 @@ Confirm that your database is on the list of known databases:
 Use or set the context to your database:
 
 ```
-> use db-courseweek2
+> use db-local
 ```
 
 What collections are in this database?
@@ -196,6 +197,10 @@ Run a query (assuming "person" is one of the collections in the database):
 ```
 
 For now, you can exit the shell (`Ctrl+C`) and shut down the database engine (also `Ctrl+C`). 
+
+> FYI...  
+> You can also use the MongoDB Compass GUI app to import.  
+> The professor will discuss this in class. 
 
 <br>
 
@@ -217,10 +222,6 @@ The project will have three (3) JavaScript source code files:
 
 Open the code example before continuing. Your professor will explain the code in class. 
 
-So far, it can handle requests for two resources:
-1. All persons 
-2. One specific person, using its (MongoDB) identifier
-
 <br>
 
 #### Start the database engine
@@ -228,7 +229,7 @@ So far, it can handle requests for two resources:
 Almost ready... Start the database engine, so that it is listening, and ready to handle calls from the app:
 
 ```bash
-mongod --dbpath ./db-courseweek2
+mongod --dbpath ./db-local
 ```
 
 <br>
@@ -267,7 +268,7 @@ Briefly [read/scan the docs](https://docs.mongodb.com/manual/reference/program/m
 1. Make sure the local MongoDB database engine is running
 2. In another Terminal window, navigate to the location where you want the exported data folder
 3. Run the command, for example...  
-`mongodump --db db-courseweek2`
+`mongodump --db db-local`
 
 As you have learned (from the docs), the command creates a folder named "dump". Inside, there is a sub-folder with the database name, and inside that, the exported BSON and JSON file(s). 
 
