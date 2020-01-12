@@ -33,23 +33,21 @@ As it states in the code comments, "The build step will place the bundled script
 
 In the first web programming course, you learned the fundamentals of the JavaScript programming language. Then, you applied to the browser document object model (DOM), while learning HTML and CSS. As part of the learning process, you created web client solutions for typical and common scenarios. 
 
-In the second web programming course, we got a server involved. A server enabled deployment at scale for many users, and persistent storage in a database. Content for browsers was often dynamically *generated* at the server. The bottom line is that the server was still controlling the app's state and workflow, and shipping HTML (and JavaScript and CSS) to the browser clients. 
+In the second web programming course, we got a server involved. A server enabled public access to your work, deployment at scale for many users, and persistent storage in a database. Content for browsers was typically dynamically *generated* at the server. The bottom line is that the server was still controlling the app's state and workflow, and shipping HTML (and JavaScript and CSS) to the browser clients. 
 
-In the first part of this course, we started working with JavaScript alone or with a library (jQuery) to enable client-side front-end rich app scenarios. For the most part, the role of the server didn't change too much, but we started using JavaScript to make things better. 
+In the first part of this course, we learned more about and implemented web APIs that are installed on a server. These web APIs do not deliver HTML (and JavaScript and CSS) to requesters, they deliver data, typically formatted as JSON. Then, we saw a few client requesters that used the Fetch API to interact with the web API. 
 
-With React (and then Angular), we keep the JavaScript part, and knowledge of the DOM structure, but we throw away most of the other knowledge about traditional web app development.
-
-Really? Yes.
+With React (and then Angular), we focus on JavaScript client development, rely on our knowledge of the DOM (and HTML and CSS), and interact with a web API when we need to. 
 
 **What's different**
 
 A React app runs in the browser (or in a browser-like object on a device). Fully. Completely. 
 
-Yes, the browser must fetch the app's code from a URL (typically at a server), but the server's role is minimal. It does not do any computation or code generation. It delivers the root page and the app bundle in a way similar to any other static resource that it might deliver to any user. 
+Yes, the browser must fetch the app's code from a URL (typically at a server), but the server's role is minimal. It does not do any computation or code generation. It just delivers the root page and the app bundle in a way similar to any other static resource that it might deliver to any user. 
 
-The React app that runs in the browser has an often-sizeable memory footprint. The app is stateful. In other words, as the content the user sees changes and adapts, the app is managing its memory and displayed content on its own, without any server involvement. (Well, that's not exactly true; if the app needs data, it will make a call to a web service/API to do that.) 
+The React app that runs in the browser has an often-sizeable memory footprint. The app is stateful. In other words, as the content the user sees changes and adapts, the app is managing its memory and displayed content on its own, without any server involvement. (Well, that's not exactly true; if the app needs data, it will make a call to a web API.) 
 
-This behaviour holds even through well-understood "navigation" actions, where the user navigates to a new URL. As you will learn, one of the React app's features is "routing", which manages resource URLs. It's important to realize, however, that the app remains in memory, and the browser repaints the window to match the user's navigation intention. There's no page reload/refresh, in the traditional server-fetched sense. 
+This behaviour holds even through well-understood "navigation" actions, where the user navigates to a new URL. As you will learn, one of a React app's add-on features is "routing", which manages resource URLs. It's important to realize, however, that the app remains in memory, and the browser renders the window to match the user's navigation intention. There's no page reload/refresh, in the traditional server-fetched sense. 
 
 <br>
 
@@ -59,11 +57,11 @@ Again, as a summary, here are some notable new concepts and topics gleaned from 
 
 A component is a source code file, `Whatever.js`. While HTML is a *markup* container, with embedded *JavaScript code*, React components turn that around. It is centered around JavaScript code. 
 
-A React app manages the DOM. We must abandon our previous pure or library-assisted JavaScript means of manipulating, traversing, and modifying the DOM, and give that task over to the app. We do that with the component architecture.
+A React app manages the DOM. We must abandon our previous pure or library-assisted JavaScript means of manipulating, traversing, and modifying the DOM, and give that task over to the app. No more `Document.querySelector()` calls. 
 
 A component has a well-defined organizational structure, and includes:
 * A function or a class 
-* A ReactDOM.render function call that updates the DOM
+* A `ReactDOM.render` function call that updates the DOM
 * State management, if needed
 * Event handling, if needed
 

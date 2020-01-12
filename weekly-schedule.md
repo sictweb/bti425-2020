@@ -19,7 +19,7 @@ Week 1<br>&bull; Tue Jan 7 | Dev environment setup<br>Re-introduction to back-en
 Week 2<br>&bull; Fri Jan 10<br>&bull; Tue Jan 14 | Some more web service work<br>Introduction to front-end development<br>JavaScript libraries jQuery, Moment | |
 Week 3<br>&bull; Fri Jan 17<br>&bull; Tue Jan 21 | React introduction<br>Components as an architectural design feature | | 
 Week 4<br>&bull; Fri Jan 24<br>&bull; Tue Jan 28 | React routing | Test 1 | 15%
-Week 5<br>&bull; Fri Jan 31<br>&bull; Tue Feb 4 | React services | Assign 1 | 15%
+Week 5<br>&bull; Fri Jan 31<br>&bull; Tue Feb 4 | React forms | Assign 1 | 15%
 Week 6<br>&bull; Fri Feb 7<br>Tue Feb 11 | Angular introduction<br>Dev env setup, sample app preview<br>Modern front-end dev design patterns | |
 Week 7<br>&bull; Fri Feb 14 <span style="color: red;">&hearts;</span><br>&bull; Tue Feb 18 | Components | |
 Study week<br>Feb 24 to 28 | (no in-class sessions) | |

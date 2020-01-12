@@ -5,17 +5,17 @@ layout: default
 
 ## Introduction to React
 
-Our last topic stop before we get to Angular is **React**. We will plan to work with React this week and next.
+**React** is a widely-used JavaScript library for building user interfaces. In terms of mindshare for front-end development, React, Vue, and Angular have almost all of it. 
 
-React is a widely-used JavaScript library for building user interfaces. In terms of mindshare for front-end development, React and Angular have almost all of it. 
-
-For us, React will be very useful, as a way to introduce *component*-oriented architecture when developing apps. 
+For us, React will be very useful, as a good way to introduce *component*-oriented architecture when developing apps. During this course, the goal is to become familiar and comfortable with React, but you will not get the time and coverage to become a React expert. 
 
 <br>
 
 ### Relevant history
 
-It all starts with Facebook, which is a web app that has worldwide reach, and about two *billion* users, according to Facebook and [other metrics](https://en.wikipedia.org/wiki/List_of_virtual_communities_with_more_than_100_million_active_users). 
+It all starts with Facebook, which is a web app that has worldwide reach, and about two *billion* users, according to Facebook and [other metrics](https://en.wikipedia.org/wiki/List_of_virtual_communities_with_more_than_1_million_users). 
+
+> Instagram is another online property that uses React.
 
 At scale, the app that the user interacts with must offer good-enough performance, and worthwhile features and functionality. React is the front-end engine for these, on both browser and mobile device platforms.
 
@@ -31,11 +31,13 @@ With React, we must change our thought process. The big difference is that we wi
 
 What specifically is different? In React, we build the user interface with *components*. 
 
-A component is a JavaScript code container. It includes user interface declarations (markup), and JavaScript code for logic, state management, and communication. The component is responsible for an area (e.g. a rectangle) in the user interface, including rendering and interaction. A component can hold other components, and/or be embedded in a "parent" component. 
+A component is a JavaScript code container. It includes user interface declarations (markup), and JavaScript code for logic, state management, and communication. The component is responsible for an area (e.g. a rectangle) in the user interface, including rendering and interaction. 
 
-This completely changes the architecture and code design of all parts of the app. Until now, we have used a *page-first* approach to app design, where the task to be done, and the workflow to be followed, was designed around a set of pages. Each page used JavaScript to add functionality and user interaction. The browser and the HTML document was at the center of our app-building efforts.
+A component can hold other components, and/or be embedded in a "parent" component. A component can be added or removed from the user interface. 
 
-In React, it's different. We use an *app-first* design approach, and build the app with components. The HTML document remains only as the default deployment target, in a browser or browser-like object on a device. React handles the DOM building and modification tasks. 
+This [component idea](component-idea) completely changes the architecture and code design of all parts of the app. Until now, we have used a *page-first* approach to app design, where the task to be done, and the workflow to be followed, was designed around a set of pages. Each page used JavaScript to add functionality and user interaction. The browser and the HTML document was at the center of our app-building efforts.
+
+In React, it's different. We use an *app-first* design approach, and build the app with components. The HTML document remains only as the default deployment target, becoming a host for components, in a browser or browser-like object on a device. React handles the DOM building and modification tasks. 
 
 In addition, React apps also work on iOS and Android platforms, by using the [React Native](https://facebook.github.io/react-native/) libraries. 
 
