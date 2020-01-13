@@ -5,7 +5,7 @@ layout: default
 
 ## BTI425 Assignment 1
 
-The purpose or objective of the assignment is to create a React app.
+The purpose or objective of the assignment is to create a React app that interacts with a web API.
 
 Read/skim all of this document before you begin work.
 
@@ -33,7 +33,7 @@ As noted above, the purpose of objective of the assignment is to create a web AP
 
 The web API will be posted to Heroku and Atlas, and provides the data for the React app. 
 
-The React app will use components to support the typical range of data service tasks (get, add, edit, delete). It will be deployed to a public host (Heroku), so that you can deliver it to other devices (including, for example, your smartphone).  
+The React app will use components to support the typical range of data service tasks (get, add, edit, delete). It will also be deployed to a public host (Heroku), so that you can deliver it to other devices (including, for example, your smartphone).  
 
 Here's a diagram that shows the relationships among your browser, the deployed React app, and the deployed web API. Right-click and open it in a new tab/window to view it full size. 
 
@@ -41,26 +41,64 @@ Here's a diagram that shows the relationships among your browser, the deployed R
 
 <br>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<mark>Used car store<br>The "edit" task will be "buy car"<br>Need empty fields for buyer name, contact info, date (auto gen), price paid
-</mark>
-<br>
-<br>
-<br>
-<br>
+### Getting started, web API
+
+Use `npm init` to initialize a new folder, probably named `a1-web-api`. Alternatively, use a code example from the repo as a base for your project work. 
+
 <br>
 
-### Getting started
+#### Data and schema 
+
+We will be working with familiar automobile or vehicle data in this Assignment 1. Some of the course's code examples have used a "cars" entity, which is similar to - but different from - what we want. 
+
+Use [Mockaroo](https://mockaroo.com) to generate a data set of at least 150 items. At a minimum, the schema must include the following fields, each configured with an appropriate data type: 
+* car make 
+* car model
+* car year
+* MSRP (constrain to a reasonable value)
+* photo (generated URL)
+
+One of the data service tasks that we will support in both the web API and the React app is the *edit* task. What we'll do is think about the edit as a car purchase procedure. Therefore, when you specify the Mockaroo field listfor the vehicle entity, add these additional fields that will be filled in by the *edit* task. Each can use the Mockaroo type "Blank", which will generate a null type and value (that's OK for now):
+* purchase date 
+* purchaser's name (one field is OK enough for this)
+* purchaser's email address 
+* price paid
+
+We suggest that you add another two fields that seem interesting to you and that would be relevant to vehicle data. (Have a look at the data types; there's 143 or more of them, and surely a few of them will interest you.)
+
+Remember to generate the JSON two ways, with and without the "array" checkbox selected. (An array result is good for use in a JavaScript app, and a non-array result is good for importing into MongoDB.)
+
+Before using the generated data, use a text or code editor to change the "http://" scheme prefix to "https://". Mockaroo generates the non-secure URL, but we want to store and use secure URLs. 
+
+When you are working with the MongoDB database engine:
+* create a database named `db-a1` (database for Assignment 1)
+* in `db-a1`, create a collection named `vehicles` 
+* import the generated JSON
+
+<br>
+
+#### Data service tasks 
+
+We'll support all five familiar tasks:
+* get all (should the results be sorted? if yes, how?)
+* get one
+* add new
+* edit existing
+* delete item
+
+Write the code to make this happen. 
+
+When complete, deploy to MongoDB Atlas. 
+
+<br>
+
+### Getting started, React app
 
 Getting started includes generating a new project, and configuring your development environment. 
 
-Use `create-react-app` to generate a new project, probably named `assign1`. 
+Use `create-react-app` to generate a new project, probably named `a1-app`. 
 
-Make sure that your web service has been deployed to Heroku and Atlas, and make sure that you can interact with it correctly with Postman. This is important, because you must have confidence in the hosted app to make progress on the React app. 
+Make sure that your web API has been deployed to Heroku and Atlas, and make sure that you can interact with it correctly with Postman. This is important, because you must have confidence in the hosted app to make progress on the React app. 
 
 Set up the rest of your dev environment (terminal windows, editor, browsers and tools). 
 
@@ -71,7 +109,7 @@ Set up the rest of your dev environment (terminal windows, editor, browsers and 
 As noted above, the app will support the typical range of data service tasks (get, add, edit, delete). As a result, all the topics covered in weeks 3, 4, and 5 will be implemented in the app:
 * Multiple components 
 * Routing
-* Working with a web service
+* Working with a web API
 * Forms 
 
 In the following sub-sections, we suggest that you do the initial coding work that will prepare you to make progress on each of the detailed areas. 
@@ -82,7 +120,11 @@ In the following sub-sections, we suggest that you do the initial coding work th
 
 #### Consistent layout 
 
-We must have a consistent and functional visual layout. Therefore, the first task is to create a layout, or a structure. You can use the guidance in the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example (in the repo). Customize the "template" so that your name appears in the header area of the viewport. Make sure that there is a navigation scheme. 
+We must have a consistent and functional visual layout. Therefore, the first task is to create a layout, or a structure. You can use the guidance in the code example found in the repo. 
+
+> To be posted. 
+
+Customize the "template" so that your name appears in the header area of the viewport. Make sure that there is a navigation scheme. 
 
 <br>
 
@@ -102,10 +144,10 @@ Remember to configure a "home" component and route, and a "not found" component 
 
 The "home page" component, as a landing page for the app, will simply state the app's purpose. *More importantly*, it will include two standard HTML hyperlinks:
 1. One is the URL to your Heroku-hosted (React) app 
-2. The other is the URL to your Heroku-hosted MongoDB <u>d</u>atabase + <u>E</u>xpress.js + <u>N</u>ode.js (DEN) web service 
+2. The other is the URL to your Heroku-hosted MongoDB <u>d</u>atabase + <u>E</u>xpress.js + <u>N</u>ode.js (DEN) web API 
 
 > Your professor needs the URL to your hosted React app so that it can be tested on a standard computer browser and on a smartphone or tablet.  
-> The URL to your hosted web service is needed too, so that your professor can interact with it using Postman.
+> The URL to your hosted web API is needed too, so that your professor can interact with it using Postman.
 
 <br>
 
@@ -113,12 +155,11 @@ The "home page" component, as a landing page for the app, will simply state the 
 
 In the following sub-sections, guidance will be given to enable you to iteratively and sucessfully complete each of the five interaction components. 
 
-The following guidance assumes that your Heroku + Atlas hosted web service works, fully and completely. 
+The following guidance assumes that your Heroku + Atlas hosted web API works, fully and completely. 
 
-> If you need some guidance to complete that task, review the [week 1](/notes/week01) and [week 2](/notes/week02) notes.  
-> Remember the [WebAPIv2-OneEntity](https://github.com/sictweb/bti425/tree/master/Week_02) code example too.  
+> If you need some guidance to complete that task, review the [week 1](/notes/week01) and [week 2](/notes/week02) notes and code examples.  
 
-In your functions that make requests to the web service, make sure that you use the Fetch API. 
+In your functions that make requests to the web API, make sure that you use the Fetch API. 
 
 <br>
 
@@ -126,11 +167,13 @@ In your functions that make requests to the web service, make sure that you use 
 
 This component should use a repeatable content container to display all objects. An HTML table is ideal for that purpose. In each table row, render links for detail (get one), edit, and delete. It would be nice to style the links as buttons. 
 
-Data will be fetched (from the web service) in the `componentDidMount()` function. 
+Data will be fetched (from the web API) in the `componentDidMount()` function. 
 
-> Here, make sure that you know and understand the *shape* of the data that is coming in from the call to the web service. Match it to the shape of your local storage (state) property. 
+> Here, make sure that you know and understand the *shape* of the data that is coming in from the call to the web API. Match it to the shape of your local storage (state) property. 
 
 Here's what it could look like; this is from the professor's sample solution. 
+
+<mark>(placeholder image; will be replaced when the professor completes the sample solution)</mark>
 
 ![Get all](media/a1-example-get-all.png)
 
@@ -140,11 +183,13 @@ Here's what it could look like; this is from the professor's sample solution.
 
 This component displays the data for one specific object. Use an appropriate content container scheme to hold the property names and values. 
 
-Data will be fetched (from the web service) in the `componentDidMount()` function. 
+Data will be fetched (from the web API) in the `componentDidMount()` function. 
 
 It would be nice to use a *conditional rendering* tactic to nicely handle both the presence and the absence of an object. 
 
 Here's what it could look like; this is from the professor's sample solution.
+
+<mark>(placeholder image; will be replaced when the professor completes the sample solution)</mark>
 
 ![Get one](media/a1-example-get-one.png)
 
@@ -156,11 +201,13 @@ This component displays an HTML Form that enables a user to enter and submit dat
 
 The form `<input>` elements must use the proper HTML5 types, so that they will render correctly (and use the right keyboard on mobile devices). 
 
-Data will be sent to the web service, in a "submit" button handler function. After a successful save, redirect to the "detail" (get one) component, so that the user sees the results of their "add new" work.
+Data will be sent to the web API, in a "submit" button handler function. After a successful save, redirect to the "detail" (get one) component, so that the user sees the results of their "add new" work.
 
-> Again, make sure that you know and understand the *shape* of the data that the web service is expecting in an "add new" request. Then, send data that matches that shape. 
+> Again, make sure that you know and understand the *shape* of the data that the web API is expecting in an "add new" request. Then, send data that matches that shape. 
 
 Here's what it could look like; this is from the professor's sample solution.
+
+<mark>(placeholder image; will be replaced when the professor completes the sample solution)</mark>
 
 ![Add new](media/a1-example-add-new.png)
 
@@ -170,15 +217,21 @@ Here's what it could look like; this is from the professor's sample solution.
 
 You have learned that the visual part of this component will be similar to the "add new" component. The buttons are different. Also, you can decide which object properties are editable. (Do NOT allow the user to edit the MongoDB object identifier property, `_id`). 
 
-From a behaviour point of view, data for the object-to-be-edited will be fetched (from the web service) in the `componentDidMount()` function. 
+From a behaviour point of view, data for the object-to-be-edited will be fetched (from the web API) in the `componentDidMount()` function. 
 
 There are different strategies for showing/inserting the data-to-be-edited into the form elements. You may, or may not have to, use the `value` attribute. If you want to use that, please remember that its name in React JSX is `defaultValue`. 
 
-Then, data will be sent to the web service, in a "submit" button handler function. After a successful save, redirect to the "detail" (get one) component, so that the user sees the results of their "edit existing" work.
+Then, data will be sent to the web API, in a "submit" button handler function. After a successful save, redirect to the "detail" (get one) component, so that the user sees the results of their "edit existing" work.
 
-> One more time... make sure that you know and understand the *shape* of the data that the web service is expecting in an "edit existing" request. Then, send data that matches that shape. 
+> One more time... make sure that you know and understand the *shape* of the data that the web API is expecting in an "edit existing" request. Then, send data that matches that shape. 
+
+> This *edit* task is simulating a car "purchase" transaction.  
+> Therefore, do NOT permit any of the original field values to be edited.  
+> Allow/enable editing only on the "purchase"-related fields. 
 
 Here's what it could look like; this is from the professor's sample solution.
+
+<mark>(placeholder image; will be replaced when the professor completes the sample solution)</mark>
 
 ![Edit existing](media/a1-example-edit-existing.png)
 
@@ -188,11 +241,13 @@ Here's what it could look like; this is from the professor's sample solution.
 
 You have learned that the visual part of this component will be similar to the "get one" component. The buttons are different. 
 
-From a behaviour point of view, data for the object-to-be-deleted will be fetched (from the web service) in the `componentDidMount()` function. 
+From a behaviour point of view, data for the object-to-be-deleted will be fetched (from the web API) in the `componentDidMount()` function. 
 
-Then, a "delete" request will be sent to the web service, in a "submit" button handler function. Then, redirect to the "list" (get all) component.
+Then, a "delete" request will be sent to the web API, in a "submit" button handler function. Then, redirect to the "list" (get all) component.
 
 Here's what it could look like; this is from the professor's sample solution.
+
+<mark>(placeholder image; will be replaced when the professor completes the sample solution)</mark>
 
 ![Delete item](media/a1-example-delete-item.png)
 
@@ -211,7 +266,7 @@ For this assignment, there is no required external testing capability. Therefore
 > Remember to do as noted above...  
 > Update your home page component to include two standard HTML hyperlinks:  
 > 1. One is the URL to your Heroku-hosted (React) app  
-> 2. The other is the URL to your Heroku-hosted (DEN) web service 
+> 2. The other is the URL to your Heroku-hosted (DEN) web API 
 
 <br>
 
@@ -221,7 +276,7 @@ Your professor will use a checklist during the grading process. The checklist wi
 
 Here's some more comments on the grading procedure:
 * Part marks can be earned (it's not an all-or-nothing scheme)  
-* Some marks will be earned for the presence of the web service 
+* Some marks will be earned for the presence of the web API 
 * Some marks will be earned for a deployed/hosted React app
 * Each of the five interaction tasks will earn marks
   * Some tasks could be "worth" more than others
@@ -242,11 +297,11 @@ SafeAssign compares your work with that of other current and past students, and 
 
 ### Submitting your work
 
-We need both the Node+Express web service and the React web app.  
+We need both the Node+Express web API and the React web app.  
 
 Here's how to submit your work, before the due date and time:
 
-#### Node+Express web service
+#### Node+Express web API
 
 1. Locate the folder that holds your project files. 
 
@@ -260,7 +315,7 @@ Here's how to submit your work, before the due date and time:
 **The JS file that holds the "schema" code**  
 For each of these files in the MyCode folder, change the file name extension to "txt".
 
-4. Compress/zip the copied folder. Maybe the name should be something like "webservice.zip". The zip file SHOULD be about 1MB in size. If it isn't, you haven't followed the instructions properly.
+4. Compress/zip the copied folder. Maybe the name should be something like "webapi.zip". The zip file SHOULD be about 1MB in size. If it isn't, you haven't followed the instructions properly.
 
 #### React web app 
 
