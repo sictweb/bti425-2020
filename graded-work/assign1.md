@@ -58,7 +58,7 @@ Use [Mockaroo](https://mockaroo.com) to generate a data set of at least 150 item
 * MSRP (constrain to a reasonable value)
 * photo (generated URL)
 
-One of the data service tasks that we will support in both the web API and the React app is the *edit* task. What we'll do is think about the edit as a car purchase procedure. Therefore, when you specify the Mockaroo field listfor the vehicle entity, add these additional fields that will be filled in by the *edit* task. Each can use the Mockaroo type "Blank", which will generate a null type and value (that's OK for now):
+One of the data service tasks that we will support in both the web API and the React app is the *edit* task. What we'll do is think about the edit as a car purchase procedure. Therefore, when you specify the Mockaroo field list for the vehicle entity, add these additional fields that will be filled in by the *edit* task. Each can use the Mockaroo type "Blank", which will generate a null type and value (that's OK for now):
 * purchase date 
 * purchaser's name (one field is OK enough for this)
 * purchaser's email address 
@@ -68,7 +68,7 @@ We suggest that you add another two fields that seem interesting to you and that
 
 Remember to generate the JSON two ways, with and without the "array" checkbox selected. (An array result is good for use in a JavaScript app, and a non-array result is good for importing into MongoDB.)
 
-Before using the generated data, use a text or code editor to change the "http://" scheme prefix to "https://". Mockaroo generates the non-secure URL, but we want to store and use secure URLs. 
+Before using the generated data, use a text or code editor to change the image URL "http://" scheme prefix to "https://". Mockaroo generates the non-secure URL, but we want to store and use secure URLs. 
 
 When you are working with the MongoDB database engine:
 * create a database named `db-a1` (database for Assignment 1)
