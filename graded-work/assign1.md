@@ -55,6 +55,7 @@ Use [Mockaroo](https://mockaroo.com) to generate a data set of at least 150 item
 * car make 
 * car model
 * car year
+* VIN (vehicle identification number)
 * MSRP (constrain to a reasonable value)
 * photo (generated URL)
 
