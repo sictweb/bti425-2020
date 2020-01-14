@@ -317,10 +317,8 @@ In this subtask, we will send the now-working local project to Heroku, so that i
 
 Create a new Heroku app. Deploy the project to the new Heroku app. Finally, test with Postman. 
 
-<br>
-
-### Task phase 3 - client HTML5 apps, interacting with the web service
-
-In this final task, we will write Node.js and HTML5 client apps that interact with the web service. The plan is to use the Fetch API. 
+> In the previous web programming course,  
+> you may have used the [Heroku Guide](https://web322.ca/getting-started-with-heroku),  
+> which can remind you about Heroku deployment. 
 
 <br>
