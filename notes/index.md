@@ -13,7 +13,7 @@ All tests on Tuesdays. All assignments are due on Tuesdays.
 
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
-**Week 5**<br>&bull; Fri Jan 31<br>&bull; Tue Feb 4 | React and forms<br>App building topics | Assign 1, 15%<br>Due on Tue Feb 4 | 
+**Week 5**<br>&bull; Fri Jan 31<br>&bull; Tue Feb 4 | React and forms<br>App building topics | [Assign 1](/graded-work/assign1), 15%<br>Due on Tue Feb 4 | 
 **Week 4**<br>&bull; Fri Jan 24<br>&bull; Tue Jan 28 | React and routing<br>App building topics | Test 1, 15%<br>on Mon Jan 28 | 
 **[Week 3](week03)**<br>[&bull; Fri Jan 17<br>&bull; Tue Jan 21](week03) | Front end dev principles<br>React introduction<br>Components as an app design feature |
 **[Week 2](week02)**<br>[&bull; Fri Jan 10<br>&bull; Tue Jan 14](week02) | More web service work, using a database<br>Client apps |
@@ -26,7 +26,7 @@ Week number<br>and date | Topic theme and coverage | Graded work, mark value
 
 Assignment | Theme | Value | Released | Due Date
 --- | --- | --- | --- | ---
-Assign 1 | React app | 15% | January 14 | February 4 at 11:00pm 
+[Assign 1](/graded-work/assign1) | React app | 15% | January 14 | February 4 at 11:00pm 
 Assign 2 | Angular app,<br>including the Forms topic | 25% | February 18 | March 24 at 11:00pm 
 Assign 3 | Angular app,<br>add security features | 10% | March 24 | April 7 at 11:00pm
 
