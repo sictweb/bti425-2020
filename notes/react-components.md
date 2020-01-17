@@ -29,7 +29,7 @@ The "Navbar" is a well-understood navigation menu. We will use that as a base fo
 
 > For this app, you will notice that the components use the "[function component](https://reactjs.org/docs/components-and-props.html#function-and-class-components)" declaration style, and goes one step further by using the modern JavaScript "arrow function" style.  
 > And, you will notice that all components are declared/defined in the `src/App.js` source code file, and not in separate files.  
-> This approach works for this simple non-interactive illustrative example. However, your future apps will likely use "[class components](https://reactjs.org/docs/components-and-props.html#function-and-class-components)" declaration style, because they will need more state and functionality. 
+> This approach works for this simple non-interactive illustrative example. However, your future apps will also use "[class components](https://reactjs.org/docs/components-and-props.html#function-and-class-components)" declaration style, because they will need state management and more functionality. 
 
 > When studying (and rebuilding) the code example, if something needs to be understood or explained, consult the [Bootstrap documentation](https://getbootstrap.com/docs/3.4/css/), and/or ask your professor. 
 
