@@ -25,16 +25,19 @@ As described in the getting-started documentation, a React app can be created on
 
 ### Create an app
 
-[The documentation](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) shows how to generate a new React app named "hello": 
+[The React documentation](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) shows how to generate a new React app named "hello": 
 
 ```bash
 npx create-react-app hello
 ```
 
-The command will create a new folder, with the code needed to get started.
+This dev tool will create a new folder, with the code needed to get started.
 
+The `create-react-app` dev tool has [its own documentation web site](https://create-react-app.dev/docs/getting-started), which has content that will be useful during our course work with React. 
+
+> Note:  
 > When using the A2534 Mac mini computers:  
-> Use this command instead (without "`npx`"):  
+> Use this command (without "`npx`") to create a new React app:  
 > `create-react-app hello`
 
 <br>
