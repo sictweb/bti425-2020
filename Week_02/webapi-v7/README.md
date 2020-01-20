@@ -51,8 +51,6 @@ Now, open the project in your code editor.
 
 Update the `databasename` text in `manager.js` (near line 44). 
 
-Generate the value for `jwtOptions.secretOrKey` in `server.js` (near line 54).
-
 Start/run the server.  
 Test with Postman.
 
