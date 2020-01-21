@@ -32,9 +32,20 @@ Before we do the routing topic, we want to study two code examples, and learn th
 [Communicating with a web service](react-web-service-intro), with the Fetch API.  
 * Open the `react-ws-intro` code example as you go through the document. 
 
-> Full coverage of "Forms" in React apps is moved to [Week 5](week05)
+We will also have a light touch today on [HTML Forms](react-forms-intro) in React apps. 
+
+> Full coverage of "Forms" in React apps is in [Week 5](week05)
 
 Remember to frequently use the [learning resources](/resources).
+
+<br>
+
+### Code examples
+
+The course's GitHub repo has code examples for many topics and techniques. You can download a zip of the code repo, or clone it. 
+* React app layout, typical 
+* Tania, updated component organization 
+* Router introduction
 
 <br>
 

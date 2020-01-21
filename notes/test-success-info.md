@@ -59,7 +59,7 @@ The following advice is for every student in the course. It will also work for o
 
 Prepare before every class. Your professor expects you to have read and studied the notes, including the linked and recommended readings. You must perform some learning activities before class. You don't need your professor to verbally dictate content that you can consume better and more efficiently on your own. Therefore, make it a habit to prepare before class.
 
-Readings are important. It is impossible to learn what you need to learn in this course, by simply listening to your professor talk for several minutes each week. It is also impossible to learn what you need to learn simply by writing code, and ignoring all of the good advice and best practices that are communicated to you through the readings.
+Readings are important. It is impossible to learn what you need to learn in this course, by simply listening to your professor talk for several minutes each week. It is also impossible to learn what you need to learn only by writing code, and ignoring all of the good advice and best practices that are communicated to you through the content delivery process.
 
 The way you work through the content is important. Don't just move your eyes over the content, with the support of a partially-engaged and distracted brain. Instead, read critically, focus and concentrate, and think as you read. 
 * Read the difficult or challenging topics out loud (with your speaking voice!), or ask a friend or family member to read the content aloud. 

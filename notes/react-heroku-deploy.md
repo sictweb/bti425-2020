@@ -17,18 +17,18 @@ Now that we have some React experience, why don't we actually "build" the applic
 
 As noted above, we've been learning and practicing our React skills in a controlled, "development" environment.  Once we're happy with the end result, we can actually "build" the application, which will generate a much smaller footprint, and make it hosting-ready.
 
-If you take a look at the generated `package.json` file, you will see that the `"scripts"` property contains our initial `"start"` script (ie: **npm start**), as well as a number of *other* scripts that we can invoke.  The one we're most interested in here, is the `"build"` script (ie: **npm run build**).  Once executed, this script initiates a "build" process that creates a highly optomized "production" build of our code in a new folder called "build".
+If you take a look at the generated `package.json` file, you will see that the `scripts` property contains our initial `start` script (ie: **npm start**), as well as a number of *other* scripts that we can invoke.  The one we're most interested in here, is the `build` script (i.e. `npm run build`).  Once executed, this script initiates a "build" process that creates a highly optomized "production" build of our code in a new folder called "build".
 
 Try executing this command by following the steps below:
 
-* Stop the "development server" currently running using **ctrl + c**
-* Execute the command **"npm run build"**
+* Stop the "development server" that's currently running 
+* Execute the command `npm run build`
 
-Once this process is complete, open the newly created "build" folder.  You will see that there's only a handful of files now, most notably, an "**index.html**" file and a "**static**" folder containing 2 sub-folders: "**js**" and "**css**" which contain your bundled JavaScript &amp; CSS files respectfully. If you take a look at `index.html`, you will see that it's a small skeleton that references your .js file.
+Once this process is complete, open the newly created "build" folder.  You will see that there's only a handful of files now, most notably, an `index.html` file and a `static` folder containing two or three sub-folders: `js`, `css`, and maybe `media` which contain your bundled JavaScript CSS files, and maybe media (images etc.). If you take a look at `index.html`, you will see that it's a small skeleton that references the bundle/package JavaScript files.
 
 Now, all we need to run this in a "production" environment, is a static web server.  Fortunately for us, we know exactly how to create one using Node.js and Express.js.
 
-Recall [from the previous level-3 web dev course](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week4-class1/), a **server.js** file has the following code:
+Recall [from the previous level-3 web dev course](https://web322.ca/notes/week04), a minimal `server.js` file has the following code, which serves content statically from the "public" folder:
 
 ```javascript
 var express = require("express");
@@ -37,8 +37,8 @@ var HTTP_PORT = process.env.PORT || 8080
 
 app.use(express.static("public"));
 
-app.listen(HTTP_PORT, ()=>{
-    console.log("Ready to handle requests on port " + HTTP_PORT);
+app.listen(HTTP_PORT, () => {
+  console.log("Ready to handle requests on port " + HTTP_PORT);
 });
 ```
 
@@ -54,7 +54,7 @@ Remember: the server is only serving up static files to **build** the applicatio
 
 During this course's week 2, you had another opportunity to deploy a Node+Express app to a new Heroku app.
 
-Now, you have another opportunity. [Follow the guidance again](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/getting-started-with-heroku/), and deploy the package you created in the previous section. 
+Now, you have another opportunity. [Follow the guidance again](https://web322.ca/getting-started-with-heroku), and deploy the package you created in the previous section. 
 
 <br>
 
