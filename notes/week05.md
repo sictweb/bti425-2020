@@ -35,7 +35,7 @@ Remember to frequently use the [learning resources](/resources).
 ### Code examples
 
 The course's GitHub repo has code examples for many topics and techniques. You can download a zip of the code repo, or clone it. 
-* TBA
+* Form template code, React, using Bootstrap v3
 
 <br>
 
