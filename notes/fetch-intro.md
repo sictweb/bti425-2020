@@ -41,10 +41,8 @@ GET /api/users/4 HTTP/1.1
 User-Agent: PostmanRuntime/7.21.0
 Accept: */*
 Cache-Control: no-cache
-Postman-Token: 872b2975-966e-4c84-b589-61a720746624
 Host: reqres.in
 Accept-Encoding: gzip, deflate
-Cookie: __cfduid=d146689fc4cada2094dec07e0cfb4e4fe1579718744
 Connection: keep-alive
 ```
 
