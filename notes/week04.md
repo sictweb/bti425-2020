@@ -32,7 +32,9 @@ Before we do the routing topic, we want to study two code examples, and learn th
 [Communicating with a web service](react-web-service-intro), with the Fetch API.  
 * Open the `react-ws-intro` code example as you go through the document. 
 
-We will also have a light touch today on [HTML Forms](react-forms-intro) in React apps. 
+An introduction to (or reminder about) the [Fetch API is in this document](fetch-intro). 
+
+We will also have a very light touch today on using [HTML Forms](react-forms-intro) in React apps. 
 
 > Full coverage of "Forms" in React apps is in [Week 5](week05)
 
@@ -46,12 +48,13 @@ The course's GitHub repo has code examples for many topics and techniques. You c
 * React app layout, typical 
 * Tania, updated component organization 
 * Router introduction
+* Using a web API in a React app 
 
 <br>
 
 ### Tuesday plan
 
-Test 1 is on Tuesday, January 28, 2020, and 80 minutes have been alotted for the test. At the beginning of the class time, the professor will be available to answer questions about course content, and then we will begin the test. 
+Test 1 is on Tuesday, January 28, 2020, and up to 80 minutes have been alotted for the test. At the beginning of the class time, the professor will be available to answer questions about course content, and then we will begin the test. 
 
 [This document](test-success-info) has more information about the test.
 

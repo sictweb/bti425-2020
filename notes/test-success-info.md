@@ -15,7 +15,7 @@ All tests in this course are hand-written, in pen or pencil. Answer styles will 
 
 No references or resources are permitted - "closed book, open brain". Device usage is not permitted. 
 
-Tests are done during the Tuesday sessions, in the computer-lab room, at or near the beginning of the timeslot. 
+Tests are done during the Tuesday sessions, in the computer-lab room, at or near the beginning of the timeslot. Your professor expects you to remain in the room until you complete and submit your test - therefore, before the test begins, do whatever you need to do, so that you don't have to ask to leave the room during the timeslot. 
 
 The duration of each test will vary. Generally, about 4 minutes per question is allotted, which seems to work out OK. And, you will have some choice - you will be able to answer any "x" of "y" questions.
 
