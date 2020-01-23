@@ -88,7 +88,22 @@ the value of the Promise is the response object
 * If not ("rejected"), typically because of a network error,  
 the value of the Promise is an [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object 
 
-What does a typical GET request look like? The simplest and happy-case version is as follows:
+What does a typical GET request look like? 
+
+The simplest and happy-case version (response is OK and delivers a JSON object or array) is as follows:
+
+```js
+// URL
+const url = 'https://reqres.in/api/users/4';
+
+// Execute the fetch
+fetch(url)
+  .then(response => response.json())
+  .then(responseData => console.log(responseData))
+  .catch(error => console.log(error));
+```
+
+A more realistic version, with some error-checking, is as follows:
 
 ```js
 // Variable to hold the result of the fetch
@@ -101,7 +116,7 @@ const url = 'https://reqres.in/api/users/4';
 fetch(url)
   .then(response => {
     // Promise was resolved successfully
-    if (response.ok) {
+    if (response.ok && response.headers.get('content-type').startsWith('application/json')) {
       return response.json();
     } else if (response.status === 404) {
       // Not found 
@@ -112,7 +127,7 @@ fetch(url)
     }
   })
   .then(responseData => {
-    // Response was HTTP 200 OK, and the body data was
+    // Response was HTTP 200 to 299, and the body data was
     // extracted and passed in to the responseData parameter
     // You must inspect the shape of the data object/collection 
     // and then use what you want or need
@@ -150,5 +165,25 @@ fetch(url, requestOptions)
 ```
 
 For more information, view and use the code in the ["react-ws-intro" code example](https://github.com/sictweb/bti425/tree/master/Week_04) in the course's code example repo. 
+
+<br>
+
+### MDN reference 
+
+Here are links to the relevant reference documents.
+
+[Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+
+[.fetch()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) method
+
+[Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) interface
+
+[Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) interface
+
+[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+[Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
+
+Promise [.then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method
 
 <br>
