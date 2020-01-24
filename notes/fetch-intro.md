@@ -29,8 +29,11 @@ The return value of a fetch request is a [Promise](https://developer.mozilla.org
 
 ### Request and response example
 
-In this section, we will show the raw request and response for a GET request to this URL:  
+In this section, we will show the raw (unformatted) request and response for a GET request to this URL:  
 `https://reqres.in/api/users/4`
+
+> FYI, the content shown below was copied from the [Postman Console](https://learning.getpostman.com/docs/postman/launching-postman/navigating-postman/#postman-console).  
+> Another useful tool.
 
 <br>
 
@@ -151,8 +154,8 @@ const bodyData = { /* define an object here or earlier */ };
 
 // Request options
 var requestOptions = {
-  method: 'POST,
-  headers: { "Content-Type": 'application/json' },
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify(bodyData);
 };
 

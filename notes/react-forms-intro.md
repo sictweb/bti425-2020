@@ -13,6 +13,9 @@ Yes, really - read the docs. Now.
 
 Welcome back. 
 
+> Also.. general HTML Forms reference info:  
+> Review the docs about [HTML forms](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms) and [native form widgets](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets). 
+
 <br>
 
 ### Useful concepts and topics, and their implementation
@@ -35,20 +38,17 @@ Another difference comes out of the first big difference. In summary, we typical
 > Change the "submit" `<button>` to an `<input type='submit'`.  
 > Must always call `e.preventDefault()` in the "submit" event handler. 
 
-> General HTML Forms reference info:  
-> Review the docs about [HTML forms](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms) and [native form widgets](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets). 
-
 <br>
 
 ### Summary of guidance
 
-Write a `handleChange` function. Write code for each form element (or code that will work for all form elements).
+Write a general-purpose `handleChange` function, and then write code for each form element (or code that will work for all form elements).
 
 Write a `handleSubmit` function, to handle a "submit" `<button>`. 
 
 In the constructor:
-* Create state properties to hold the form element data.
 * Bind the two functions (above) to `this`. 
+* Create state properties to hold the form element data.
 
 In the markup of each form element, add the `handleChange` handler.
 
@@ -69,7 +69,7 @@ document.title ='whatever';
 
 <br>
 
-#### How to "redirect"
+#### How to "redirect" reminder
 
 First, import the React Router `withRouter` component.
 

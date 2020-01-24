@@ -9,6 +9,9 @@ When a component must fetch data from a web service (web API), it is typically d
 
 As you saw in the `react-tania-walkthrough` code example, we use the new Fetch API to interact with a web service. 
 
+> If you want a refresher about using the Fetch API,  
+> look at [this document](fetch-intro).
+
 These examples uses the familiar [https://reqres.in](https://reqres.in) testing service. The code example `react-ws-intro` uses the following code in a fully-working app. 
 
 <br>
