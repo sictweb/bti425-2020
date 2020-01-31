@@ -43,7 +43,7 @@ The course's GitHub repo has code examples for many topics and techniques. You c
 
 ### Tuesday plan
 
-*Tuesday, February 4, 2020* 
+*Tuesday, February 4* 
 
 The recent Test 1 will be returned to students. We will also review many of the example answers. 
 
