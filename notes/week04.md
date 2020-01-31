@@ -14,6 +14,8 @@ The theme for the next two weeks is to continue to develop our component-oriente
 
 ### Friday plan
 
+*Friday, January 24* 
+
 After last week's introduction to React and the component idea, we will go further. 
 
 Now, we want to work with *many* components, in containment and replacement or navigation scenarios. We have seen the containment idea already, and to implement navigation, we will learn about *routing*. 
@@ -53,6 +55,8 @@ The course's GitHub repo has code examples for many topics and techniques. You c
 <br>
 
 ### Tuesday plan
+
+*Tuesday, January 28* 
 
 Test 1 is on Tuesday, January 28, 2020, and up to 80 minutes have been alotted for the test. At the beginning of the class time, the professor will be available to answer questions about course content, and then we will begin the test. 
 

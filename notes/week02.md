@@ -20,6 +20,8 @@ Remember to frequently use the [learning resources](/resources).
 
 ### Friday plan
 
+*Friday, January 10* 
+
 New topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/standards#taking-notes-in-class-and-before-class-as-you-prepare). 
 
 * [Creating a hosted web service with a database](/notes/web-api-v2)
@@ -42,6 +44,8 @@ The course's GitHub repo has code examples for many topics and techniques. You c
 <br>
 
 ### Tuesday plan
+
+*Tuesday, January 14*
 
 After the professor introduces the course and its first topic set, work on the programming assignment task. 
 

@@ -14,6 +14,8 @@ The theme for this week is to continue to develop our component-oriented web app
 
 ### Friday plan
 
+*Friday, January 31* 
+
 There are "patterns" that should be followed when creating an interactive web app. While you probably have had some coverage in the past, the following document collects the patterns into one summary document, which can be used as best-practice guidance.  
 [HTML Form patterns](html-form-patterns)
 
@@ -40,6 +42,8 @@ The course's GitHub repo has code examples for many topics and techniques. You c
 <br>
 
 ### Tuesday plan
+
+*Tuesday, February 4, 2020* 
 
 The recent Test 1 will be returned to students. We will also review many of the example answers. 
 
