@@ -41,10 +41,8 @@ The course's GitHub repo has code examples for many topics and techniques. You c
 
 ### Tuesday plan
 
-Test 1 is on Tuesday, January 28, 2020, and 80 minutes have been alotted for the test. At the beginning of the class time, the professor will be available to answer questions about course content, and then we will begin the test. 
+The recent Test 1 will be returned to students. We will also review many of the example answers. 
 
-[This document](test-success-info) has more information about the test.
-
-There are three sections of the BTI425 course. All sections have Test 1 on the same day. The test will be different for each section. You are *EXPECTED* to behave with academic integrity - *DO NOT* communicate, in any way, with another BTI425 student about the content of the test.
+Then, there will be time to work on the current programming assignment, and get help from the professor if you need or want help. 
 
 <br>
