@@ -19,7 +19,7 @@ We must clarify something before continuing, and it's important.
 
 In this course, you will learn *Angular*, the current and future platform for client-side app building.  
 
-We will *not* cover its family predecessor, *Angular<u>JS</u>*. While this framework is still being maintained, it is likely that it will not receive any more significant upgrades in the future. It is simply not the focus of improvement efforts any longer.
+We will *not* cover its family ancestor, *Angular<u>JS</u>*. While this framework is still being maintained, it is likely that it will not receive any more significant upgrades in the future. It is simply not the focus of improvement efforts any longer.
 
 <br>
 
@@ -36,7 +36,7 @@ Then, a series of typical and normal events happened in the early life of the pl
 
 Obviously, work on "version 2" happened too. And, React happened, which contributed both subtle and overt competitive pressure.  It became apparent only a year after the original release that the "version 2" successor was going to be a bit of a departure, and not simply an upgrade (with the assumed implications of smoothness, compatibility, and so on). 
 
-By mid-2013 or so, the community was buzzing about breaking changes and effectively a rewrite. Much thrashing, discussion, prototyping, and the goal to get it right led to the September 2014 unveiling of "Angular 2" (and the subsequent renaming of the original to "AngularJS"). Much more tumult happened before its official release in September 2016, including the choice of programming language. Angular must be considered a complete rewrite, and a clean cut away from AngularJS. 
+By mid-2013 or so, the community was buzzing about breaking changes and the next Angular version being effectively a rewrite. Much thrashing, discussion, prototyping, and the goal to get it right led to the September 2014 unveiling of "Angular 2" (and the subsequent renaming of the original to "AngularJS"). Much more tumult happened before its official release in September 2016, including the choice of programming language. The new Angular must be considered a complete rewrite, and a clean break away from AngularJS. 
 
 As a developer who is contemplating the design and coding of an app, the old and the new have a good amount to share in their philosophy and approach. However, in terms of the actual coding and organization of the app, including tooling, packaging, and deployment, the old and the new have little in common. While we will give some old-and-new comparisons in linked articles, we're not going to delve into them here. 
 
@@ -55,7 +55,7 @@ There are many similarities, including:
 Here are a few differences:
 * Some argue that React is more focused to only building UIs
 * Angular describes itself as a *complete app dev platform* 
-* Angular's programming language is TypeScript
+* Angular's default programming language is TypeScript
 
 Similar to React, the big difference from legacy-style client-side programming is that we will not work directly with the DOM. Yes, our work will affect the rendered DOM, but we cannot use that conceptual model as a foundation for building and modifying the DOM. 
 
@@ -95,10 +95,10 @@ In the "old days", programmers targeted *operating systems*. We wrote *for Windo
 
 ### Value proposition of client-side front end dev
 
-Cory House wrote a very good article:
-[Here's Why Client-side Rendering Won](https://medium.freecodecamp.org/heres-why-client-side-rendering-won-46a349fadb52) (Medium ) 
+Cory House wrote a very good article a few years ago:  
+[Here's Why Client-side Rendering Won](https://medium.freecodecamp.org/heres-why-client-side-rendering-won-46a349fadb52) (on Medium) 
 
-Paraphrasing and summarizing:
+Paraphrasing and summarizing, client-side front end dev "won", because it offered these massive advantages:
 * No full page load
 * Lazy loading
 * Rich iteractions

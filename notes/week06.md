@@ -10,13 +10,11 @@ layout: default
 
 The theme for the *remainder of the course* is to cover the Angular platform.  
 
-This week, it's all about *getting started with Angular*. Then, beginning next week, we'll do a weekly deep dive into these important app dev topic areas:
+This week, it's all about *getting started with Angular*. Then, beginning next week, we'll do a weekly deep dive into these important Angular topic areas:
 1. Components
 2. Routing
 3. Services
 4. Forms
-
-After that, we'll put together some apps. 
 
 <br>
 
@@ -24,15 +22,15 @@ After that, we'll put together some apps.
 
 *Friday, February 7* 
 
-A number of them today:
+A number of getting started topics today:
 * History
 * Orientation
 * Big ideas
 * Roadmap
 
-Then, technical getting started topics:
+Then, some technical coverage:
 * Install
-* Edit cycle
+* Edit-run cycle
 * TypeScript
 * Architecture
 * Components
@@ -44,8 +42,6 @@ To get started, read this [introduction to Angular](angular-intro), and also fol
 Next, follow along as you [get started with Angular](angular-get-started). Learn how to install the developer bits, and generate a starter app. Then, start learning about its architecture. Follow the tutorials. 
 
 Then, we repeat or highlight some of [the important topics and concepts](angular-architecture) from the getting started guide and tutorials. 
-
-<br>
 
 Remember to frequently use the [learning resources](/resources).
 
