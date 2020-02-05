@@ -16,7 +16,7 @@ We have planned three (3) tests during the term.
 Test | Theme | Value | Date
 --- | --- | --- | ---
 Test 1 | Web service and React topics | 15% | January 28 
-Test 2 | Angular topics (up to Routing) | 15% | March 3 
+Test 2 | Forms, and Angular topics (up to Routing) | 15% | March 3 
 Test 3 | Angular topics (up to Security) | 20% | March 31
 
 The duration of each test will be approximately 90 minutes. All tests will be hand-written, with no references or resources allowed. The total value of all tests will be 50% of the final course grade.
