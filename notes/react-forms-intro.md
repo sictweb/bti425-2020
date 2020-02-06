@@ -39,6 +39,20 @@ Another difference comes out of the first big difference. In summary, we typical
 
 <br>
 
+### Visualization, a form in React
+
+The following is a minimally-edited `App.js` that has an `input` form element and an element that simply displays the content entered in the `input` form element. 
+
+The code with the <span style='background-color: cyan'>blue</span> highlight (background) is for Bootstrap 3 to do its job. 
+
+The code with the <span style='background-color: yellow'>yellow</span> highlight is the class' state property. 
+
+The code with the <span style='background-color: lime'>green</span> highlight is the class' state property. 
+
+![React form code](/media/react-form-code.png)
+
+<br>
+
 ### Summary of guidance
 
 Write a `handleChange` function. Write code for each form element (or code that will work for all form elements).
