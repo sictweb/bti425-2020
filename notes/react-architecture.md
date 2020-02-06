@@ -39,7 +39,7 @@ In the first part of this course, we learned more about and implemented web APIs
 
 With React (and then Angular), we focus on JavaScript client development, rely on our knowledge of the DOM (and HTML and CSS), and interact with a web API when we need to. 
 
-**What's different**
+#### What's different
 
 A React app runs in the browser (or in a browser-like object on a device). Fully. Completely. 
 
@@ -48,6 +48,26 @@ Yes, the browser must fetch the app's code from a URL (typically at a server), b
 The React app that runs in the browser has an often-sizeable memory footprint. The app is stateful. In other words, as the content the user sees changes and adapts, the app is managing its memory and displayed content on its own, without any server involvement. (Well, that's not exactly true; if the app needs data, it will make a call to a web API.) 
 
 This behaviour holds even through well-understood "navigation" actions, where the user navigates to a new URL. As you will learn, one of a React app's add-on features is "routing", which manages resource URLs. It's important to realize, however, that the app remains in memory, and the browser renders the window to match the user's navigation intention. There's no page reload/refresh, in the traditional server-fetched sense. 
+
+<br>
+
+#### Summary of differences
+
+There are at least two kinds of differences between React development and traditional page-centered web dev:
+1. The developer's view of React code assets
+2. How a React app starts 
+
+This table summarizes #1, the developer's view of React code assets:
+
+File system structure | Dev activities | Deployed app file system structure
+--- | --- | ---
+`public` folder<br>&bull; `index.html`<br>`src` folder<br>&bull; our code | `code .`<br>(edit code)<br>`npm start`<br>(edit code) | `index.html`<br>`static` folder<br>&bull; `.js`<br>&bull; `.css`<br>&bull; `media
+
+This table summarizes #2, how a React app starts:
+
+Startup during dev | Startup when deployed
+--- | ---
+`public/index.html` loads<br>then...<br>`src/index.js` loads<br>&bull; setup React<br>&bull; import the first component | `index.html` loads<br>&bull; references to `css` files<br>&bull; IIFE<br>&bull; references to `js` files<br>&nbsp;
 
 <br>
 

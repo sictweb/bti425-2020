@@ -38,6 +38,8 @@ The weekly notes will be organized and delivered as a collection of topic-themed
 
 ### Tuesday plan
 
+*Tuesday, January 7*
+
 New topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/standards#taking-notes-in-class-and-before-class-as-you-prepare). 
 
 * [Welcome](/notes/welcome) to the BTI425 course

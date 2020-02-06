@@ -25,13 +25,20 @@ As described in the getting-started documentation, a React app can be created on
 
 ### Create an app
 
-[The documentation](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) shows how to generate a new React app named "hello": 
+[The React documentation](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) shows how to generate a new React app named "hello": 
 
 ```bash
 npx create-react-app hello
 ```
 
-The command will create a new folder, with the code needed to get started.
+This dev tool will create a new folder, with the code needed to get started.
+
+The `create-react-app` dev tool has [its own documentation web site](https://create-react-app.dev/docs/getting-started), which has content that will be useful during our course work with React. 
+
+> Note:  
+> When using the A2534 Mac mini computers:  
+> Use this command (without "`npx`") to create a new React app:  
+> `create-react-app hello`
 
 <br>
 
@@ -73,13 +80,98 @@ In addition, spend a few hours (before, during, and after class) to go through t
 * MAIN CONCEPTS
   * Topic 1 (Hello World) through to Topic 8 (Lists and Keys)
 
-And, try coding them yourself. 
+And, try coding them yourself. The easiest way is to edit `src/index.js`. 
 
 The course code example repository has working solutions for each of these. All except the first one is an app, which means that you will have to re-install the app's packages before you start/run the app:
 
 ```bash
 npm i
 ```
+
+<br>
+
+#### Topic highlights - 1. Hello World
+
+In this section, and in the following sections, we highlight some of the information and experiences:
+
+The `ReactDOM.render` function renders an element in a container. 
+
+#### Topic highlights - 2. Introducing JSX
+
+JSX is a syntax extension to JavaScript. Created by the React team.  
+JSX produces React elements. Typical syntax is:  
+`const element = <h1>Hello, {name}</h1>`  
+The right side of this statement can be static HTML, or it can include expressions (as shown above). The expression can be a variable name or function call.  
+Attribute values can come from an expression; do not combine its curly braces with quotes.  
+Can use an empty element (i.e. without a closing tag).  
+Can also define an element with nested children.  
+
+#### Topic highlights - 3. Rendering Elements
+
+React apps typically have one "root" element, defined in the app's `index.html` source code.  
+We render our React elements in this "root":  
+`ReactDOM.render(<p>Hello, world!</p>, document.getElementById('root'));`  
+A React element can be one of the standard HTML elements, or it could be a component (covered in the next section).  
+React elements are immutable once created. (We learn soon how to handle updates and re-rendering).  
+In the DOM, React updates only the affected content. The entire viewport is NOT re-rendered.  
+
+#### Topic highlights - 4. Components and Props
+
+As a React beginner, components are the MOST IMPORTANT IDEA that you must learn.  
+There are two types of components:  
+1. Function component  
+2. Class component  
+
+Function components must return a React element (and that's typically all they do).  
+Class components have additional features: 
+* Can maintain their own state 
+* Must include a single `render()` method (along with other code if necessary), which *returns* a React element
+* Can include a `constructor()` method to initialize state and your event handlers 
+* Can include "lifecycle" methods that are automatically called during the lifecycle of the component 
+* Can include any other members (e.g. variables, functions that do things, functions that are event-handlers, etc.)  
+
+Component names MUST begin with an upper-case letter.  
+A component can have data passed into it as initial values. This is known as "props" (i.e. properties).  
+`props` is an object. Can be simple, can be complex.  
+Props are read-only. If an incoming value must change, then copy a `props` value to a variable (or some other state container).  
+A component can include other component(s) in their output.  
+
+#### Topic highlights - 4. State and Lifecycle
+
+Must write a *class component* to get access to state and lifecycle features.  
+Can convert a *function component* to a *class component*.  
+Inside a class component, must now refer to "props" as `this.props`.  
+We now have access to another mutable storage area, `this.state`.  
+Can define state keys-and-values in a constructor function.  
+Elsewhere, can access a state value by its key.  
+Can also update a state value with the `setState()` function.  
+The most-used lifecycle method is `componentDidMount()`.  
+State is local, and is not passed to child components.  
+If that behaviour is needed, pass state as props.  
+
+#### Topic highlights - 6. Handling Events 
+
+We do not use `addEventListener` to DOM elements.  
+React events (in elements) use [camelCase](https://en.wikipedia.org/wiki/Camel_case) names.  
+For example, `<button onclick=` becomes `<button onClick=`.  
+The value of the event (i.e. the handler) is a function, and NOT a string.  
+For example, `<button onclick="login()">` becomes `<button onClick={login}>`.  
+In the constructor, bind the event handler function.  
+Can pass one or more parameters to the function. If passing the event as a parameter, use a specific syntax.  
+
+#### Topic highlights - 7. Conditional Rendering
+
+Use `if` or `? :` or `&&` to render elements based on state or logic.  
+If an element's logic returns `null`, then it will not render.  
+
+#### Topic highlights - 8. Lists and Keys
+
+Use the JavaScript `map()` function to create a collection (array) of repeating elements.  
+Great for lists, tables, and select-option form controls.  
+If you must identify or use each repeating element, use keys to give the elements a stable identity.  
+If your data source has a stable identifier, then use that as the value for the key.  
+Otherwise, and if the repeating element collection (array) is immutable, you can use the array's index as a key. (Not really recommended.)  
+See [the code](https://reactjs.org/docs/lists-and-keys.html#extracting-components-with-keys) for the right way to use keys.  
 
 <br>
 

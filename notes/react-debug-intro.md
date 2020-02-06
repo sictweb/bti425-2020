@@ -27,7 +27,7 @@ Read about it here; it includes how-to info about installation and use:
 A Chrome browser *extension* can be added to support app inspection. The extension was created by the React team. 
 
 Read about it here; it includes how-to info about installation and use:  
-[React Developer Tools](https://github.com/facebook/react-devtools#react-developer-tools-)
+[React Developer Tools](https://reactjs.org/blog/2019/08/15/new-react-devtools.html)
 
 
 <br>

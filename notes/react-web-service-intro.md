@@ -7,7 +7,10 @@ layout: default
 
 When a component must fetch data from a web service (web API), it is typically done in the `componentDidMount()` lifecycle method.  
 
-As you saw in last week's `react-tania-walkthrough` code example, we use the new Fetch API to interact with a web service. 
+As you saw in the `react-tania-walkthrough` code example, we use the new Fetch API to interact with a web service. 
+
+> If you want a refresher about using the Fetch API,  
+> look at [this document](fetch-intro).
 
 These examples uses the familiar [https://reqres.in](https://reqres.in) testing service. The code example `react-ws-intro` uses the following code in a fully-working app. 
 
@@ -15,7 +18,7 @@ These examples uses the familiar [https://reqres.in](https://reqres.in) testing 
 
 ### Use HTTP GET
 
-*Get all* (or get some, filtered) and *get one* are similar. The differences include the URL and the kind of response. 
+*Get all* (or get some, filtered) and *get one* are similar. The differences include the URL and the kind of response (object, or an array of objects). 
 
 <br>
 

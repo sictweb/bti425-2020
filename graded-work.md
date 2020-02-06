@@ -16,7 +16,7 @@ We have planned three (3) tests during the term.
 Test | Theme | Value | Date
 --- | --- | --- | ---
 Test 1 | Web service and React topics | 15% | January 28 
-Test 2 | Angular topics (up to Routing) | 15% | March 3 
+Test 2 | Forms, and Angular topics (up to Routing) | 15% | March 3 
 Test 3 | Angular topics (up to Security) | 20% | March 31
 
 The duration of each test will be approximately 90 minutes. All tests will be hand-written, with no references or resources allowed. The total value of all tests will be 50% of the final course grade.
@@ -117,5 +117,33 @@ However, as a general rule, we don't do due date extensions for assignments, for
 * Finally, a due date extension is disrespectful to other professors and their courses, because it takes your attention away from their coursework while you are working on late work in another course.
 
 Therefore, no due date extensions.
+
+<br>
+
+### Test grading annotations
+
+For Professor McIntyre's students, the following is an explanation of the annotations made on your written test papers. 
+
+Not all annotations will be found on your test paper.
+
+Annotation | Explanation
+--- | ---
+![Annotation](media/ta-one-mark.png) | One mark<br>(multi-mark questions may have more than one of these)
+![Annotation](media/ta-one-mark-almost.png) | Almost one mark<br>Multiple "minus" annotations may result in a 1/2-mark decrease
+![Annotation](media/ta-one-half-mark.png) | One-half mark
+![Annotation](media/ta-one-half-mark-minus.png) | Almost one-half mark<br>(same comment as above)
+![Annotation](media/ta-one-half-mark-plus.png) | A bit more than one-half mark<br>Multiple "plus" annotations may result in a 1/2-mark increase
+![Annotation](media/ta-zero-mark.png) | Zero mark
+![Annotation](media/ta-answer-ignored.png) | This answer was ignored
+![Annotation](media/ta-ok-accepted.png) | Your answer is accepted, although it may not match the expected answer
+![Annotation](media/ta-not-accepted.png) | Your answer is not accepted, as it is wrong or answers a different question
+![Annotation](media/ta-clarify.png) | The answer must be clarified for any number of reasons 
+![Annotation](media/ta-unknown-meaning.png) | Cannot determine what the meaning is
+![Annotation](media/ta-agree-somewhat.png) | Somewhat agree with the answer (or part thereof), but it isn't fully correct
+![Annotation](media/ta-cannot-read.png) | Cannot read your writing/printing
+![Annotation](media/ta-more-needed.png)<br>-or-<br>![Annotation](media/ta-not-enough.png) | More explanation is needed to earn full marks for the question
+![Annotation](media/ta-concept-mixup.png) | Concept or implementation mix-up with another topic that is close / related / similar 
+![Annotation](media/ta-word-choice.png) | Word choice problem - use another word / term / phrase 
+![Annotation](media/ta-good-answer.png) | Good quality answer
 
 <br>

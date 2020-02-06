@@ -16,6 +16,8 @@ Remember to frequently use the [learning resources](/resources).
 
 ### Friday plan
 
+*Friday, January 17* 
+
 A reminder - new topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/standards#taking-notes-in-class-and-before-class-as-you-prepare). 
 
 This week, we introduce a new way (for our students) to think about building an web app: [Component-based architecture](component-idea). 
@@ -37,6 +39,8 @@ The course's GitHub repo has code examples for many topics and techniques. You c
 <br>
 
 ### Tuesday plan
+
+*Tuesday, January 21* 
 
 It is possible that leftover topic highlights will be presented at the beginning of the session. Next, the professor will guide you to get started with the week's new dev tools. Then, there will be time to work on the programming assignment task. 
 
