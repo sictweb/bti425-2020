@@ -7,7 +7,12 @@ layout: default
 
 This document is intended to be a light summary of the concepts and principles of the Angular architecture. 
 
-The authoritative source is the excellent "Architecture" section in the FUNDAMENTALS section of the Angular documentation. This content *complements* the official docs - it does *not* replace it. Make sure that you open and go through both.
+> In early February 2020, the Angular team released a new version.  
+> The documentation was updated too.  
+> Our College computers do not yet have the update.  
+> Therefore, on the documentation page, on the left-side navigator at the bottom, choose to use a documentation version 7 or 8. 
+
+The authoritative source is the excellent "[Architecture](https://v8.angular.io/guide/architecture)" section in the FUNDAMENTALS section of the Angular documentation. This content *complements* the official docs - it does *not* replace it. Make sure that you open and go through both.
 
 ![Angular FUNDAMENTALS > Architecture](../media/angular-docs-fundamentals.png)
 

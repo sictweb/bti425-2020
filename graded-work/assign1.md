@@ -29,7 +29,7 @@ Grade value: 15% of your final course grade
 
 ### Overview and purpose
 
-As noted above, the purpose of objective of the assignment is to create a web API and a React app that has good coverage of the topics in the first five weeks of the course. 
+As noted above, the purpose or objective of the assignment is to create a web API and a React app that has good coverage of the topics in the first five weeks of the course. 
 
 The web API will be posted to Heroku and Atlas, and provides the data for the React app. 
 

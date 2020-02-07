@@ -17,23 +17,24 @@ Get ready by visiting the [Angular home page](https://angular.io/), and read/sca
 
 <br>
 
-### Installation
+### Installation (setup)
 
-As described in the GETTING STARTED installation notes, Angular is installed by using the Node Package Manager. 
+As described in the SETUP notes, the [Angular CLI](https://cli.angular.io/) package is used to create projects, generate code, and enable development. It adds the `ng` command to your shell. 
 
-During the React topic coverage, you learned to use and perhaps install the *React app generator*. As you experienced, it adds a good amount of value to the dev process.
-
-Angular has an app generator too, the [Angular CLI](https://cli.angular.io/). It adds the `ng` command to your shell. 
-
-![Angular CLI web site](../media/angular-cli-web-site.png)
-
-<br>
-
-Install Angular CLI on your computer:
+Install Angular CLI on your computer with this command:
 
 ```text
 npm install -g @angular/cli
 ```
+
+The [Angular CLI documentation](https://angular.io/cli) explains how to do many tasks, including: 
+* [Create a new](https://angular.io/cli/new) Angular project (app)
+* Generate the code files for a [new component](https://angular.io/cli/generate) 
+* [Run the app](https://angular.io/cli/serve) on localhost 
+
+<br>
+
+![Angular CLI web site](../media/angular-cli-web-site.png)
 
 <br>
 
@@ -102,7 +103,7 @@ Take your time. While you are doing this, inspect the source code in your editor
 
 Here are some of the highlights that you should be looking for:
 * The code for your app lives in the `src` folder
-* The generator creates a `src/app` folder, with code assets for the "app" component
+* The "ng new" generator creates a `src/app` folder, with code assets for the "app" component
 * Later (but soon), we will use the Angular CLI to create another component in the `src` folder
 * There are a number of files and folders that perform specific tasks for the app, and/or help you as the programmer
 
