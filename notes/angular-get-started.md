@@ -34,7 +34,7 @@ The [Angular CLI documentation](https://angular.io/cli) explains how to do many 
 
 <br>
 
-![Angular CLI web site](../media/angular-cli-web-site.png)
+<img src="../media/angular-cli-web-site.png" class="border1" alt="Angular CLI web site" />
 
 <br>
 
