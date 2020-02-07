@@ -41,6 +41,8 @@ To get started, read this [introduction to Angular](angular-intro), and also fol
 
 Next, follow along as you [get started with Angular](angular-get-started). Learn how to install the developer bits, and generate a starter app. Then, start learning about its architecture. Follow the tutorials. 
 
+In class (on Friday), we'll do a hands-on example [that is documented](angular-intro-inclass) - re-create this on your own. 
+
 Then, we repeat or highlight some of [the important topics and concepts](angular-architecture) from the getting started guide and tutorials. 
 
 Remember to frequently use the [learning resources](/resources).

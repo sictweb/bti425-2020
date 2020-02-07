@@ -93,6 +93,14 @@ After you save your changes, switch over to the browser window. It should show t
 
 <br>
 
+### Understanding app startup
+
+The following image shows how a new generated Angular app starts up. It shows the code and markup connections.
+
+<img class="border1" src="../media/angular-app-startup-code.png" alt="Angular app startup code">
+
+<br>
+
 ### Work through some documentation topics
 
 Return to the [GETTING STARTED](https://angular.io/guide/quickstart) documentation topic. 
