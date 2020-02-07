@@ -51,7 +51,7 @@ Add that component to the app root component, just below the recently-added body
 
 Why did we name it "io"? It will do *input* and *output*, otherwise known as data binding. 
 
-First, locate and edit the component's program code. Declare a class property to hold your name. In TypeScript, this is done like this:
+First, let's do *output*. Locate and edit the component's program code. Declare a class property to hold your name. In TypeScript, this is done like this:
 ```ts
 myName: String;
 ```
@@ -68,5 +68,31 @@ How do we display the value? Locate and edit the component's markup template.
 ```
 
 Notice the double-curly-brace container, which is a bit different than what you've seen in React and in JavaScript string interpolation. 
+
+Next, let's do *input* (i.e. getting input from the user). Before continuing, comment out the code in the constructor (so that the displayed name is blank or empty). 
+
+Then, we must prepare the app for user input. We will use the Angular "template forms" capability (which you will learn more about later). Locate and open the `app.module.ts` source code file (which has app-wide settings). Near the top, add forms-handling to the app:
+```ts
+import { FormsModule } from "@angular/forms";
+```
+
+Further down, in the "imports" array, add the forms module, so that it looks like this:
+```ts
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+```
+
+Next, return to editing the "io" markup template. Add this new code above the other code. Notice the value of the `[(ngModel)]` attribute - it MUST match the property name in the "io" program code. This technique performs two-way *data binding*. 
+
+```html
+<p>Enter your name:</p>
+<p><input [(ngModel)]="myName" type="text"></p>
+```
+<br>
+
+Happy coding!
 
 <br>
