@@ -10,10 +10,12 @@ npm i
 
 ### friday
 
-Get started with Angular. 
+Get started with Angular. The result of the in-class demonstration.
 
 Features:
-* TBA
+* Commented code in the templates (.html) and code files (.ts) 
+* Multiple components, containment 
+* One-way incoming and two-way data binding
 
 <br>
 

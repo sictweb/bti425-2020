@@ -1,0 +1,10 @@
+<div style="text-align:center">
+  <hr>
+  <br>
+  <p>Enter your name below:</p>
+  <!-- Two-way data binding -->
+  <p><input type="text" [(ngModel)]="myName" style="text-align:center"></p>
+  <br>
+  <!-- One-way (incoming) data binding -->
+  <p>The result - my name is...<br>{{myName}}</p>
+</div>
