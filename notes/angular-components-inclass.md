@@ -59,7 +59,7 @@ What properties do we write for the new "Customer" class? Continue with the next
 
 ### Get the data
 
-In Assignment 1, you learned how to use the Mockaroo.com service to generate some data. Locate the data file that you used in your Assignment 1 (or return to Mockaroo.com and generate some new data). 
+In Assignment 1, you learned how to use the Mockaroo.com service to generate some data. Return to Mockaroo.com and generate some new data for some customers. 
 
 Study the data in your file. Then, edit the new "Customer" class, and add matching properties. 
 

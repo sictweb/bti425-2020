@@ -11,7 +11,7 @@ Goal or objective: To an existing app, add the ability to work with a web servic
 
 ### Overview
 
-Last week, you completed a hands-on exercise. This week, we build upon that work. Fetch your work from last week, or fetch the solution in the repo's *Templates and solutions* folder. 
+Last week, you completed a hands-on exercise. This week, we build upon that work. Fetch your work from last week, or fetch the solution in the repo folder. 
 
 Today, the goal is to add the ability to work with a web service (your Assignment 1 web service). 
 

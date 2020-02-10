@@ -53,9 +53,9 @@ Remember to frequently use the [learning resources](/resources).
 
 The course's GitHub repo has code examples for many topics and techniques. You can download a zip of the code repo, or clone it. 
 
-We have two code examples today:
-1. Animals - an Angular version of the multi-component React "router introduction" code example from week 4 
-2. Customers - the end result of the in-class demonstration 
+We have code examples today:
+1. Friday - a new simple Angular app 
+2. In-class - the end result of the hands-on in-class exercise
 
 <br>
 
@@ -63,6 +63,6 @@ We have two code examples today:
 
 *Tuesday, February 11* 
 
-We will do an in-class task, in which you will create a new Angular app, and learn through hands-on experience. 
+We will do an [in-class task](week06-in-class), in which you will create a new Angular app, and learn through hands-on experience. 
 
 <br>

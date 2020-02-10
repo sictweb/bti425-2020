@@ -11,23 +11,33 @@ This document introduces "components".
 
 ### What is an Angular component?
 
-The following was summarized from Angular Docs > Fundamentals > [Architecture](https://angular.io/guide/architecture#components)
+The following was summarized from Angular Docs > Fundamentals > [Angular Concepts](https://angular.io/guide/architecture#components)
 
-A *component* controls a patch of screen (display, UI surface, rectangle) called a *view*. 
+A *component* controls an area of the user interface, called a *view*. 
 
-As code, a component is a class, with a decorator.
+As code, a component is a class, with a "decorator".
 
 The class is JavaScript, specifically TypeScript. It includes all the code needed for the the component's *behaviour* during its lifetime.
 
-A decorator is a function that modifies a class. It has one parameter, which is an object composed of configuration information as key-value pairs. This object is *metadata*, and the Angular runtime uses the metadata when initializing the component. 
+A decorator is a function that modifies a class; see the example below. It has one parameter, which is an object composed of configuration information as key-value pairs. This object is *metadata*, and the Angular runtime uses the metadata when initializing the component. 
+
+```ts
+@Component({
+  selector: 'app-customers',
+  templateUrl: './customers.component.html',
+  styleUrls: ['./customers.component.css']
+})
+export class CustomersComponent implements OnInit {
+  // etc.
+  ```
 
 One of the decorator's properties is a *template*, defines the *appearance* of the component. The template includes HTML, or the name of an HTML file. By definition, HTML is the language of the Angular template. Almost all HTML elements are valid in a template, except for these: `html`, `body`, `base`, and `script`.
 
 Another decorator property is the *selector*. Its value is the name of the custom HTML element in the *parent* template that becomes the component. 
 
-In summary, from the Angular documentation's Fundamentals > Architecture guide:
+In summary, from the Angular documentation's Fundamentals > Angular Concepts guide:
 
-*The template, metadata, and component together describe a view.*
+*Together, a component and template define an Angular view.*
 
 ![Component code + template + metadata = a view](https://angular.io/generated/images/guide/architecture/template-metadata-component.png)
 

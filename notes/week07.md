@@ -14,6 +14,8 @@ This week, we will learn and experience the Angular app-building process. The fi
 
 ### Friday plan
 
+*Friday, February 14* 
+
 The first in-depth topic set that we will study is *components*. Let's get started now with this topic:
 
 [Angular Components Introduction](angular-components-intro): This document discusses Components in detail, including how to get started using components / creating components from scratch, using "templates" in components, and writing attribute/structural directives.
@@ -34,8 +36,6 @@ Remember to frequently use the [learning resources](/resources).
 
 ### Code examples
 
-The course's GitHub repo has code examples for many topics and techniques. You can download a zip of the code repo, or clone it. 
-
 We have two code examples today:
 1. Animals - an Angular version of the multi-component React "router introduction" code example from week 4 
 2. Customers - the end result of the in-class demonstration 
@@ -44,8 +44,8 @@ We have two code examples today:
 
 ### Tuesday plan
 
-*Tuesday, February 11* 
+*Tuesday, February 18* 
 
-We will do an in-class task, in which you will create a new Angular app, and learn through hands-on experience. 
+We will do an [in-class task](week07-in-class), in which you will learn through hands-on experience. 
 
 <br>

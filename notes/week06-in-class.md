@@ -67,14 +67,14 @@ ng g c xxx-name-of-new-component-xxx --flat -S
 <br>
 
 > Remember the tip from the notes:  
-> If you're creating a component that should have a multi-word name, use Pascal Case. For example:  
+> If you're creating a component that has a multi-word name, use Pascal Case. For example:  
 > ```ng g c AboutMe --flat -S```
 
 <br>
 
 We also need a simple nav menu. Generate a component for that ("nav", or "navbar", "navmain", "NavBar", "NavMain", etc.). 
 
-Fetch the HTML markup from the repo's "Templates and solutions" folder - the `nav-base` code is good enough for us to work with now - and paste it into the nav menu's HTML template. Then, edit the links so that there's one main link (home), and two others (about me and contact me). 
+Fetch the HTML markup from the example solution in the repo's current week folder - the `nav-base` code is good enough for us to work with now - and paste it into the nav menu's HTML template. Then, edit the links so that there's one main link (home), and two others (about me and contact me). 
 
 Finally, we need a "not found" component, so generate one. 
 
@@ -104,14 +104,14 @@ Update the page contents with better info.
 
 On each page, add a top-level `div` element, with an `id` attribute that matches whatever you wrote for the nav menu's `a` element's `href` attribute. 
 
-The home page can hold some text content. [Generate some *lorem ipsum*](https://www.lipsum.com/) text, and paste it in. 
+The *home page* can hold some text content. Use the Emmet ["lorem ipsum" generator](https://docs.emmet.io/abbreviations/lorem-ipsum/),  or [generate some *lorem ipsum*](https://www.lipsum.com/) text from a web app, and paste it in. 
 
-The about me page can include a large heading with your name, and an image. Link to an image from one of these (or other) services:
+The *about me* page can include a large heading with your name, and an image. Link to an image from one of these (or other) services:
 * [placeholder.com](https://placeholder.com/)
 * [placekitten.com](https://placekitten.com/)
 * [lorempixel.com](http://lorempixel.com/)
 
-The contact me page can include some contact info for you.
+The *contact me* page can include some contact info for you.
 
 <br>
 
