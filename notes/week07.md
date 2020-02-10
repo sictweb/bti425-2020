@@ -26,10 +26,6 @@ In class this week, the professor will demonstrate a project that shows a partic
 
 [Angular component interaction](angular-components-interaction) describes how to do containment, and pass values from "parent" to "child".
 
-In the computer-lab class, the professor will [introduce *simple* routing](angular-routing-intro) for an Angular app. Then, each student will get some experience creating an app by completing a non-graded [hands-on exercise](week06-hands-on). 
-
-<br>
-
 Remember to frequently use the [learning resources](/resources).
 
 <br>
