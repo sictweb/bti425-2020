@@ -8,24 +8,17 @@ npm i
 
 <br>
 
-### animals
+### friday
 
-Get started with Angular components. 
+Get started with Angular. 
 
 Features:
-* Bootstrap styling
-* Common structural (page layout) components
-* Lots of content components!
+* TBA
 
 <br>
 
-### customers
+### in-class
 
-Another "get started" example, an enhanced result of the in-class demonstration. 
-
-Shows one of the strengths of Angular, which is easy UI updating.
-* `ngFor` to repeat an element 
-* Data binding, incoming 
-* Data binding, two-way 
+An example solution to the Tuesday in-class exercise. 
 
 <br>
