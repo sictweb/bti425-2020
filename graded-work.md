@@ -25,7 +25,7 @@ Recognizing that it's possible to have an "off day", the final grade calculation
 
 Is there a "missed test policy"? Yes; here it is:
 
-The policy is very limited. It is designed to recognize a single *legitimate* illness or medical issue that a severely and negatively affects academic performance during the date-and-time of the test. 
+The policy is very limited. It is designed to recognize a single *legitimate* illness or medical issue that severely and negatively affects academic performance during the date-and-time of the test. 
 
 If an illness or medical issue causes a student to miss a test, and wants the professor to consider a remedy, then the student must follow this procedure:
 1. Notify the professor by email, before the test date-and-time, of the absence.
