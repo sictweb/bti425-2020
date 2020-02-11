@@ -21,6 +21,13 @@ Features:
 
 ### in-class
 
-An example solution to the Tuesday in-class exercise. 
+An example solution to the Tuesday in-class exercise.  
+Shows the result just before *routing* is configured. 
+
+<br>
+
+### in-class-with-routing
+
+Based on the above, this example solution shows the result after *routing* is configured. 
 
 <br>
