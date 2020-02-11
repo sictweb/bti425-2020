@@ -68,12 +68,15 @@ Create the app's basic structural components:
 
 This is done with Angular CLI commands:
 
-```text
+```bash
 ng g c header --flat -S
 ng g c navbar --flat -S
 ng g c content --flat -S
 ng g c sidebar --flat -S
 ng g c footer --flat -S
+
+# If your ng version is 9 or later, omit -S...
+ng g c header --flat
 ```
 
 To review, the `ng g c` command creates the component's source code files, and updates the app module (by adding import-related code). 

@@ -62,6 +62,9 @@ Remember, creating a component is best done as follows. First, make sure you're 
 
 ```bash
 ng g c xxx-name-of-new-component-xxx --flat -S
+
+# If your ng version is 9 or later, omit -S...
+ng g c xxx-name-of-new-component-xxx --flat
 ```
 
 <br>

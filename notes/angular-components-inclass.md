@@ -29,8 +29,11 @@ Edit the `index.html` file, to add the Bootstrap CSS rules from its CDN, and the
 
 Create two components. We need a nice "header":
 
-```
+```bash
 ng g c header --flat -S
+
+# If your ng version is 9 or later, omit -S...
+ng g c header --flat
 ```
 
 > Remember: `g` is the abbreviation for "generate", and `c` is the abbreviation for "component".  

@@ -87,6 +87,9 @@ Recall, from the Angular "Tour of Heroes" app, we can manually create a componen
 ng generate component foo --flat -S
 # You can use abbreviations too...
 # ng g c foo --flat -S
+
+# If your ng version is 9 or later, omit -S...
+# ng g c foo --flat
 ```
 
 > **Note:**  

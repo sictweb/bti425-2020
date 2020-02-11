@@ -36,8 +36,12 @@ Notice the contents of the `body` element. Don't change it, just notice its cont
 In the editor, locate and edit the "app root" component files, `app.component.html` (the UI / markup template), and `app.component.ts` (the program code). Replace some content, and notice that the browser-displayed app shows the changes.
 
 Now, we will generate and display a new component. In the terminal, do this:
-```
+
+```bash
 ng g c body --flat -S
+
+# If your ng version is 9 or later, omit -S...
+ng g c body --flat
 ```
 
 Notice the generated files. Let's add that new component to the app root component. (Put it inside a `div`.) Notice that the browser-displayed app shows the changes. 
