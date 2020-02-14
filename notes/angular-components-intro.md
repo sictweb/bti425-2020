@@ -146,7 +146,11 @@ You should now see the text "foo works" at the bottom of the default "start" pag
 
 Now that we are comfortable adding new (simple) components, why don't we try creating a view using *multiple* components.  
 
-> The content for this discussion can be found in ["Angular Components Example"](angular-components-example)
+> We will return to this document soon...  
+>  
+> Let's do some hands-on coding, and create an app that has multiple components.  
+>  
+> The content for this discussion can be found in the ["Angular Components Example"](angular-components-example) document. Open that now. 
 
 <br>
 
@@ -155,13 +159,13 @@ Now that we are comfortable adding new (simple) components, why don't we try cre
 From the example above, we have seen how we can add multiple components as children of a parent component.  However, these were simply "static" components (i.e. their content is hardcoded into the .html).  If we wish our "template" (.html file) to reference values within its corresponding component, we need to reference them using the following techniques:
 
 * [Interpolation](https://angular.io/guide/template-syntax#interpolation-)
-* [Template Expressions](https://angular.io/guide/template-syntax#template-expressions) / [Property Binding](https://angular.io/guide/template-syntax#property-binding--property)
+* [Template Expressions](https://angular.io/guide/template-syntax#template-expressions) / [Property Binding](https://angular.io/guide/template-syntax#property-binding-property)
 * [Template Statements](https://angular.io/guide/template-syntax#template-statements)
 * [Attribute, class, and style bindings](https://angular.io/guide/template-syntax#attribute-class-and-style-bindings)
 
 Essentially, the above logic is really referring to specific types of ["Binding Syntax"](https://angular.io/guide/template-syntax#binding-syntax-an-overview). 
 
-Note:  We will save ["Two-way binding"](https://angular.io/guide/template-syntax#two-way-binding-) until we discuss forms in Angular.
+Note:  We will delay in-depth coverage of ["two-way binding"](https://angular.io/guide/template-syntax#two-way-binding-) until we discuss forms in Angular.
 
 <br>
 
