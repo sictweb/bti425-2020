@@ -13,9 +13,10 @@ All tests on Tuesdays. All assignments are due on Tuesdays.
 
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
-**Week 8 (Tue)**<br>&bull; Tue Mar 3 | Test 2 is on Tuesday, March 3 | Test 2, 15%<br>on Tue Mar 3| 
+**Week 9**<br>&bull; Fri Mar 6<br>&bull; Tue Mar 10 | Services | Assign 2, 25%<br>Due on Tue Mar 24| 
+**[Week 8 (Tue)](week08)**<br>[&bull; Tue Mar 3](week08) | Test 2 is on Tuesday, March 3 | Test 2, 15%<br>on Tue Mar 3| 
 **Study week**<br>Mon Feb 24 to<br>Fri Feb 28 | (no in-class sessions) | | 
-**Week 8 (Fri)**<br>&bull; Fri Feb 21 | Routing | | 
+**[Week 8 (Fri)](week08)**<br>[&bull; Fri Feb 21](week08) | Routing | | 
 **[Week 7](week07)**<br>[&bull; Fri Feb 14 <span style="color: red;">&hearts;</span><br>&bull; Tue Feb 18](week07) | Components | | 
 **[Week 6](week06)**<br>[&bull; Fri Feb 7<br>&bull; Tue Feb 11](week06) | Angular introduction<br>Dev env setup<br>Components intro | | 
 **[Week 5](week05)**<br>[&bull; Fri Jan 31<br>&bull; Tue Feb 4](week05) | React and forms<br>App building topics | [Assign 1](/graded-work/assign1), 15%<br>Due on Tue Feb 4 | 
