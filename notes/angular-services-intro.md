@@ -11,7 +11,7 @@ This document will enable you to get started with a simple Angular service. Late
 
 ### Angular "service" 
 
-In Angular, a *service* is a class that provides value and functionality to your app's components. You can think of this in the same way as `server.js` in your Heroku-deployed MongoDB + Express.js + Node.js web service. 
+In Angular, a *service* is a class that provides value and functionality to your app's components. You can think of this as a technique for writing code that can be used in MANY of your app's components. Often, a service is a *data provider*, which can manage interaction with a web API. 
 
 > Read the Angular documentation topic about an [introduction to services](https://angular.io/guide/architecture-services). 
 
@@ -67,7 +67,7 @@ Then, in the component's class code, `m` is a reference to the service. When Ang
 
 #### Can I see this in action?
 
-Yes, complete the work in this week's non-graded "[hands on](https://bti425.ca/notes/week07-hands-on)" exercise. 
+Yes, complete the work in this week's non-graded "[in-class](https://bti425.ca/notes/week07-in-class)" exercise. 
 
 In a later class, we will cover services in more depth. 
 
