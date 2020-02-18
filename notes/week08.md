@@ -34,7 +34,7 @@ Remember to frequently use the [learning resources](/resources).
 ### Code examples
 
 This week's code examples:
-1. TBA
+1. Routing scenarios
 
 <br>
 
@@ -42,7 +42,7 @@ This week's code examples:
 
 *Tuesday, March 3 (after study week)* 
 
-Test 2 is on Tuesday, March 3, 2020, and approximately 708 to 80 minutes have been alotted for the test. At the beginning of the class time, the professor will be available to answer questions about course content, and then we will begin the test. 
+Test 2 is on Tuesday, March 3, 2020, and approximately 70 to 80 minutes have been alotted for the test. At the beginning of the class time, the professor will be available to answer questions about course content, and then we will begin the test. 
 
 You can expect test questions about topics covered since the last test, all the way to this week's topics. Obviously, you must review the topics yourself, but in general, you can expect questions about:
 * React and working with a web API
@@ -51,7 +51,7 @@ You can expect test questions about topics covered since the last test, all the 
 * Angular platform overview
 * Angular components
 * Angular routing 
-* Angular simple service, and working with a web API
+* Angular simple service, and working with a web API (a *very* light touch, based on the [Week 7 in-class exercise](week07-in-class))
 
 [This document](test-success-info) has more information about the test.
 
