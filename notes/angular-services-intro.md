@@ -61,13 +61,13 @@ Second, update the constructor signature, by adding an argument:
 constructor(private m: DataModelManagerService) {
 ```
 
-Then, in the component's class code, `m` is a reference to the service. When Angular creates your component's instance in memory, it also creates the service instance in memory (if it's not there already), and "injects" the service reference into the component. 
+Then, in the component's class code, `m` (for "manager") is a reference to the service. When Angular creates your component's instance in memory, it also creates the service instance in memory (if it's not there already), and "injects" the service reference into the component. 
 
 <br>
 
 #### Can I see this in action?
 
-Yes, complete the work in this week's non-graded "[in-class](https://bti425.ca/notes/week07-in-class)" exercise. 
+Yes, complete the work in the Week 7 non-graded "[in-class](https://bti425.ca/notes/week07-in-class)" exercise. 
 
 In a later class, we will cover services in more depth. 
 
