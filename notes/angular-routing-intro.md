@@ -74,11 +74,11 @@ This route object assumes the following:
 
 #### Configuring a navigation-aware link
 
-In the UI - in a nav menu or in some other link (or link that looks like a button) - we want to navigate to a component. Similar to React - where the `a` element had a special attribute, Angular has a special attribute. 
+In the UI - in a nav menu or in some other link (or link that looks like a button) - we want to navigate to a component. Similar to React, but different. In React, we *replaced* the `a` element with a `Link` element (and its `to` attribute). In Angular, we still use the `a` element, but instead of using the `href` attribute, we use a *replacement attribute* named `routerLink`. 
 
 Prepare to edit an existing `a` element. Replace the `href` attribute:
 * The new attribute is named `routerLink` 
-* Its value is a root-relative path (which means that it begins with `/` a sash), that matches the value of the `path` attribute in the route objects (above)
+* Its value is a root-relative path (which means that it begins with `/` a slash), that matches the value of the `path` attribute in the route objects (above)
 
 For example:
 

@@ -94,7 +94,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 <br>
 
-#### Write interface
+#### Write an interface
 
 In an Angular app, we MUST know the shape (i.e. the *type*) of the data we're working with, including data from a web service. 
 
@@ -105,7 +105,9 @@ To implement this requirement, TypeScript offers both a [class](https://www.type
 
 > Source: [Post by Todd Motto](https://toddmotto.com/classes-vs-interfaces-in-typescript)
 
-In terminal, create a source code file named `dataModelClasses.ts` (in the `src/app` folder obviously). Open and study the shape of the responses from your web service. Open the new file for editing. Carefully write the interface code that describes the shape of one "person" object. It will look something like this:
+In terminal, create a source code file named `dataModelClasses.ts` (in the `src/app` folder obviously). We will use this source code file to hold interfaces and classes for ALL data model classes in our app. 
+
+Open and study the shape of the responses from your web service. Open the new file for editing. Carefully write the interface code that describes the shape of one "person" object. It will look something like this:
 
 ```ts
 export interface Person {
@@ -120,7 +122,7 @@ export interface Person {
 
 <br>
 
-#### Write service
+#### Write a service
 
 Use the Angular CLI to generate a service. For example:
 
@@ -162,7 +164,7 @@ What is this code doing?
 
 What's an "Observable"? For us, and for now, and our web service interaction, you can think of it as a kind of *Promise* that better serves the needs of Angular apps. [This note](https://angular.io/guide/comparing-observables#observables-compared-to-promises) has more information.
 
-> There is an active proposal to add Observable to the next version of the JavaScript language. 
+> FYI - There is an active proposal to add Observable to the next version of the JavaScript language. 
 
 <br>
 
@@ -189,7 +191,7 @@ constructor(private m: DataModelManagerService) {
 
 In React, we added code to a `componentDidMount()` method, which fetched data from a web service. Here, we do someting similar. 
 
-Add the code to the `ngOnInit()` method:
+Add code to the `ngOnInit()` method:
 
 ```ts
 this.m.personsGetAll().subscribe(p => this.persons = p);
@@ -254,7 +256,7 @@ Eearlier, when you configured the router module, it's likely that you configured
 Now, edit the "get all" template code, and add another column in the table to hold a details link (which is styled to look like a button):
 
 ```html
-{% raw %}<td><a class="btn btn-default" href="/persons/{{ p._id }}">Detail</a></td>{% endraw %}
+{% raw %}<td><a class="btn btn-default" routerLink="/persons/{{ p._id }}">Detail</a></td>{% endraw %}
 ```
 
 Test, and it should look something like the following. When you hover over a button, it should render a link that matches a route object:
