@@ -32,9 +32,10 @@ Remember to frequently use the [learning resources](/resources).
 
 ### Code examples
 
-We have two code examples today:
+This week's code examples:
 1. Animals - an Angular version of the multi-component React "router introduction" code example from week 4 
 2. Customers - the end result of the in-class demonstration 
+3. Interaction - passing data to an embedded component 
 
 <br>
 
