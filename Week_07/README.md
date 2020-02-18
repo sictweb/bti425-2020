@@ -29,3 +29,9 @@ Shows one of the strengths of Angular, which is easy UI updating.
 * Data binding, two-way 
 
 <br>
+
+### component-interaction
+
+Shows how to pass data from a parent component to a child component. 
+
+<br>
