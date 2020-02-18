@@ -9,7 +9,7 @@ In React, you learned about *contained components*, in the `react-tania-updated`
 
 Specifically, you learned how to pass a value from a parent component (`App.js`) to a child component (`Table.js`). In the child component, the passed-in value was available in the `props` property. 
 
-In this note, you will learn how it's done in Angular. Open the `angular-component-interaction` code example as you work your way through this content.
+In this note, you will learn how it's done in Angular. Open the `component-interaction` code example as you work your way through this content.
 
 <br>
 
@@ -122,8 +122,85 @@ If all goes well, this shows the result. The yellow-background content is the pa
 
 <br>
 
-### Summary
+#### Learn more
 
 [There's much more to this topic](https://angular.io/guide/component-interaction), but you now have enough knowledge to use it. 
+
+<br>
+
+### Summary of interaction patterns
+
+Some of this is nicely covered in the Angular docs section titled [Binding syntax: an overview](https://angular.io/guide/template-syntax#binding-syntax-an-overview).
+
+For the following, assume that the component has a property named `info` and a method named `getInfo()` etc. For example:
+
+```ts
+info: string = "Peter";
+photo: string = "https://example.com/people/123";
+
+getInfo(): string {
+  return "Peter";
+}
+
+doSomething() {
+  // Some task (no return value)
+}
+```
+
+Here's a brief summary of data display, usage, and interaction patterns. 
+
+<br>
+
+#### Display data in an element
+
+Interpolation:
+
+```html
+<h3>Customer name is {% raw %}{{ info }}{% endraw %}</h3>
+<!-- or... -->
+<h3>Customer name is {% raw %}{{ getInfo() }}{% endraw %}</h3>
+```
+
+<br>
+
+#### Use data in an element
+
+Property binding:
+
+```html
+<img [src]="photo" alt="Customer photo">
+```
+
+<br>
+
+#### Pass data to a component
+
+```html
+<app-child [infoInChild]="info"></app-child>
+```
+
+<br>
+
+#### Handle an event in an element
+
+Template statement:
+
+```html
+<div (mouseover)="doSomething()">
+<!-- or... -->
+<div (click)="doSomething()">
+<!-- or... -->
+<div (click)="doSomething($event)">
+```
+
+<br>
+
+#### Two-way binding in a form 
+
+Two-way binding:
+
+```html
+<input [(ngModel)]="info" required placeholder="Customer name">
+```
 
 <br>
