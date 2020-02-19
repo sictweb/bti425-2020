@@ -11,7 +11,9 @@ This document discusses some introductory data assocations or relations topics.
 
 ### Associated or related data 
 
-Let's talk more about associated or related data. Almost always, an entity collection will be somehow associated or related to another entity collection. The kinds of associations or relationships can include the following: 
+Let's talk more about associated or related data. 
+
+Almost always, an entity collection will be somehow associated or related to another entity collection. The kinds of associations or relationships can include the following: 
 * One to many (probably the best-known and best-understood)
 * One to one
 * Many to many
