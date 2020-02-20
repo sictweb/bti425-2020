@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-8">
+    <h3>Create a new vehicle</h3>
+    <p>Enter data, and click/tap the Save button</p>
+    <form (ngSubmit)='save()'>
+
+      <div class="form-group">
+        <label class="control-label" for="make">Make:</label>
+        <input class="form-control" id="make" name="make" [(ngModel)]="vehicle.make" required autofocus>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="model">Model:</label>
+        <input class="form-control" id="model" name="model" [(ngModel)]="vehicle.model" required>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="year">Year:</label>
+        <input class="form-control" id="year" name="year" [(ngModel)]="vehicle.year" type="number">
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="msrp">MSRP:</label>
+        <input class="form-control" id="msrp" name="msrp" [(ngModel)]="vehicle.msrp" type="number">
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="photo">Photo URL:</label>
+        <input class="form-control" id="photo" name="photo" [(ngModel)]="vehicle.photo" required>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="description">Description:</label>
+        <input class="form-control" id="description" name="description" [(ngModel)]="vehicle.description" required>
+      </div>
+
+      <br>
+      <button class="btn btn-primary" type="submit">Save</button>&nbsp;
+      <a routerLink="/vehicles" class="btn btn-default">Back to list</a>&nbsp;
+      <span class="text-danger">{{ formError }}</span>
+
+    </form>
+  </div>
+  <div class="col-md-4">
+    <br>
+    <p class="bg-warning">The content below MUST NOT appear in a shipping or production app. It is here only to help you
+      as you are programming the app.</p>
+    <br>
+    <h4>Data being entered (in JSON format):</h4>
+    <p class="lead"><code>{{ vehicle | json }}</code></p>
+    <h4>Image preview:</h4>
+    <img [src]="vehicle.photo" alt="Vehicle" class="responsive">
+  </div>
+</div>

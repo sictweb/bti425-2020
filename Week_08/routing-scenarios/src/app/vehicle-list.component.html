@@ -1,0 +1,28 @@
+<h3>Vehicle list</h3>
+<p><a class='btn btn-default' routerLink='/vehicles/create'>Add a new vehicle</a></p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>MSRP</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let v of vehicles">
+      <td>{{ v.make }}</td>
+      <td>{{ v.model }}</td>
+      <td>{{ v.year }}</td>
+      <td>$ {{ v.msrp.toLocaleString() }}</td>
+      <td><img [src]="v.photo" alt="Vehicle"></td>
+      <td>
+        <a routerLink="/vehicles/detail/{{ v.id }}" class="btn btn-default">Detail</a>&nbsp;
+        <a routerLink="/vehicles/edit/{{ v.id }}" class="btn btn-warning">Edit</a>&nbsp;
+        <a routerLink="/vehicles/delete/{{ v.id }}" class="btn btn-danger">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
