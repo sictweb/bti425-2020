@@ -240,10 +240,10 @@ This topic is covered in [more detail in the Angular docs](https://angular.io/gu
 
 #### 1. One way, from *model* to *form* 
 
-Assume we have a property in the data model that must appear in the view. In the past, to display it, you typically used *interpolation* syntax:  
-`{{ foo.barText }}`
+Assume we have a property in the data model that must appear in the view. In the past, to display it *as content in an element*, you typically used *interpolation* syntax:  
+`{%raw%}{{ foo.barText }}{%endraw%}`
 
-However, to bind to a form element/widget, we must use the other square-brackets format. For example, set the element's `title` attribute text:  
+However, to bind *to an attribute* of a form element/widget, we must use the other square-brackets format. For example, set the element's `title` attribute text:  
 ```html
 <input [title]="foo.barText" ...
 ```
