@@ -13,7 +13,8 @@ All tests on Tuesdays. All assignments are due on Tuesdays.
 
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
-**Week 9**<br>&bull; Fri Mar 6<br>&bull; Tue Mar 10 | Services | Assign 2, 25%<br>Due on Tue Mar 24| 
+**Week 10**<br>&bull; Fri Mar 13<br>&bull; Tue Mar 17 | Forms | Assign 2, 25%<br>Due on Tue Mar 24 | 
+**Week 9**<br>&bull; Fri Mar 6<br>&bull; Tue Mar 10 | Services | | 
 **[Week 8 (Tue)](week08)**<br>[&bull; Tue Mar 3](week08) | Test 2 is on Tuesday, March 3 | Test 2, 15%<br>on Tue Mar 3| 
 **Study week**<br>Mon Feb 24 to<br>Fri Feb 28 | (no in-class sessions) | | 
 **[Week 8 (Fri)](week08)**<br>[&bull; Fri Feb 21](week08) | Routing | | 
@@ -33,7 +34,7 @@ Week number<br>and date | Topic theme and coverage | Graded work, mark value
 Assignment | Theme | Value | Released | Due Date
 --- | --- | --- | --- | ---
 [Assign 1](/graded-work/assign1) | React app | 15% | January 14 | February 4 at 11:00pm 
-Assign 2 | Angular app,<br>including the Forms topic | 25% | February 18 | March 24 at 11:00pm 
+Assign 2 | Angular app,<br>including the Forms topic | 25% | February 24<br>(approx.) | March 24 at 11:00pm 
 Assign 3 | Angular app,<br>add security features | 10% | March 24 | April 7 at 11:00pm
 
 For general info about the assignments, visit the [graded work page](/graded-work). 
