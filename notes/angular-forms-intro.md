@@ -5,7 +5,7 @@ layout: default
 
 ## Angular forms introduction
 
-In recent weeks, we have had a straight-line topic treatment of components, routing, and services. However, we have mostly avoided the topic of *user interaction*, but now it's time to do that, now that we have a good foundation on which to build. 
+In recent weeks, we have had a straight-line topic treatment of components, routing, and services. However, we have only lightly covered the topic of *user interaction*, but now it's time to do that better, now that we have a good foundation on which to build. 
 
 As the [official Angular documentation](https://angular.io/guide/forms) states, "Forms are the mainstay of business applications. You use forms to log in, submit a help request, place an order, book a flight, schedule a meeting, and perform countless other data-entry tasks."
 
@@ -62,7 +62,7 @@ As above, we will NOT work with Dynamic Forms in this course. After understandin
 
 <br>
 
-### "Standard" HTML Form, *without* Angular
+### Starting point - "standard" HTML Form, *without* Angular
 
 Here's a simple form, in pure HTML5, which features all of the most typical form elements, ie:
 * input (type: "text", "checkbox", "radio")
@@ -166,7 +166,7 @@ Next, we *always assume* that an Angular form is backed by a data model. For typ
 
 For example, consider the following component class.  It contains all the data that is required to populate our "standard" HTML form, including some classes that define the "shape" of the data model, as well as some sample data that we can use to "bind" to our form:
 
-```js
+```ts
 import { Component, OnInit } from '@angular/core';
 
 class Driver{

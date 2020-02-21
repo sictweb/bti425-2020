@@ -44,7 +44,9 @@ Then, add the `HttpClientModule` to the `imports` collection in the `@NgModule` 
 
 This action will enable all services in the app to use HTTP (in other words, work with a web service). 
 
-##### Important Note
+<br>
+
+**Important Note**
 
 When trying to use **HttpClient** anywhere else in your application (e.g. a `whatever.service.ts` file), be sure to *import* ***HttpClient*** (and not HttpClientModule) into that service or component. For example:
 
@@ -143,7 +145,7 @@ We need the view model classes to enable the model binder to correctly create th
 
 <br>
 
-##### Suggestion - create a "url" string field
+**Suggestion - create a "url" string field**
 
 Suggestion - create a "url" string field, to hold the long and constant part of the URL to the web service. Doing this will make it easy to create a concatenated string that includes the segment we want. 
 
@@ -153,7 +155,7 @@ Suggestion - create a "url" string field, to hold the long and constant part of 
 
 <br>
 
-##### Write a function for each web service resource
+**Write a function for each web service resource**
 
 Write a function for each web service resource that the app needs. Assume, as noted above, that we want posts, comments, and users.
 

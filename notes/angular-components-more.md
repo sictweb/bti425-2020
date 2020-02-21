@@ -58,7 +58,7 @@ The angular CLI has automatically included some important code:
 
 * Default values for the @Component decorator, including the component "selector" (for element `<app-red-box>`) and the urls for the newly added "template" (.html) and "style" (.css) files. 
 
-* A class definition for our "RedBoxComponent" that implements the "OnInit" Lifecycle method (explained below), as well as provides a skeleton for a "constructor" method (used to initialize the fields of the class - optionally using dependant objects passed into the constructor when it's instantiated (see ["Dependency Injection"](https://angular.io/guide/dependency-injection) - this will be discussed further when we discuss "services").
+* A class definition for our "RedBoxComponent" that implements the "OnInit" Lifecycle method (explained below), as well as provides a skeleton for a "constructor" method (used to initialize the fields of the class - optionally using dependent objects passed into the constructor when it's instantiated (see ["Dependency Injection"](https://angular.io/guide/dependency-injection) - this will be discussed further when we discuss "services").
 
 <br>
 

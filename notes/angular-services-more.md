@@ -83,13 +83,13 @@ The community has some quality documentation too. A technology that comes from t
 
 As you have lerned, use the Angular CLI to add a service. In the example below, a service named "DataModelManager" is added to the app:
 
-```
-ng g s DataModelManager --flat --S
+```bash
+ng g s DataManager --flat --S
 ```
 
-As you have seen when creating components, a *camelCase* or *PascalCase* name is transformed into lower case with "dash" (-) word separators, when it generates the source code files. 
+As you have seen when creating components, a *PascalCase* name is transformed into lower case with "dash" (-) word separators, when it generates the source code files. 
 
-A new source code file is created, named `data-model-manager.service.ts`. Its contents:
+A new source code file is created, named `data-manager.service.ts`. Its contents:
 
 ```js
 import { Injectable } from '@angular/core';
@@ -97,7 +97,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class DataModelManagerService {
+export class DataManagerService {
 
   constructor() { }
 }
@@ -241,7 +241,6 @@ this.m.getUsers().subscribe(users => {
 });
 ```
 
-
 <br>
 
 ### Observable (from RxJS)
@@ -250,8 +249,6 @@ this.m.getUsers().subscribe(users => {
 
 From [the documentation](https://rxjs-dev.firebaseapp.com/):  
 > RxJS is a library for reactive programming using Observables, to make it easier to compose asynchronous or callback-based code.
-
-<br>
 
 Above, we suggested that you can think of an `Observable` as a kind of *Promise* that better serves the needs of Angular apps. That's a good starting point. 
 

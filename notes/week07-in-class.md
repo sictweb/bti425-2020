@@ -105,7 +105,12 @@ To implement this requirement, TypeScript offers both a [class](https://www.type
 
 > Source: [Post by Todd Motto](https://toddmotto.com/classes-vs-interfaces-in-typescript)
 
-In terminal, create a source code file named `dataModelClasses.ts` (in the `src/app` folder obviously). We will use this source code file to hold interfaces and classes for ALL data model classes in our app. 
+In terminal, create a source code file named `data-classes.ts` (in the `src/app` folder obviously). Alternatively, use the generator:
+```bash
+ng g class DataClasses --flat
+```
+
+We will use this source code file to hold interfaces and classes for ALL data model classes in our app that are used in multiple components. 
 
 Open and study the shape of the responses from your web service. Open the new file for editing. Carefully write the interface code that describes the shape of one "person" object. It will look something like this:
 
@@ -134,7 +139,7 @@ Open it for editing. Add these to the existing import statement(s):
 
 ```ts
 import { HttpClient } from "@angular/common/http";
-import { Person } from "./dataModelClasses";
+import { Person } from "./data-classes";
 import { Observable } from 'rxjs';
 ```
 
@@ -173,8 +178,8 @@ What's an "Observable"? For us, and for now, and our web service interaction, yo
 Open the person list component - class code - for editing. Add these to the existing import statement(s):
 
 ```ts
-import { Person } from "./dataModelClasses";
-import { DataModelManagerService } from './data-model-manager.service';
+import { Person } from "./data-classes";
+import { DataManagerService } from './data-manager.service';
 ```
 
 Declare a property that will hold the collection of Person objects. This propery will be accessible in the (HTML) template code. 
@@ -186,7 +191,7 @@ persons: Person[];
 Update the constructor signature, by adding an argument:
 
 ```ts
-constructor(private m: DataModelManagerService) {
+constructor(private m: DataManagerService) {
 ```
 
 In React, we added code to a `componentDidMount()` method, which fetched data from a web service. Here, we do someting similar. 
@@ -325,8 +330,8 @@ What is this code doing?
 Now, open the "get one" class code for editing. Add these to the existing import statements:
 
 ```ts
-import { Person } from "./dataModelClasses";
-import { DataModelManagerService } from './data-model-manager.service';
+import { Person } from "./data-classes";
+import { DataManagerService } from './data-manager.service';
 ```
 
 Declare a property that will hold the Person object.
@@ -338,7 +343,7 @@ person: Person;
 Update the constructor signature, by adding an argument:
 
 ```ts
-constructor(private route: ActivatedRoute, private m: DataModelManagerService) { }
+constructor(private route: ActivatedRoute, private m: DataManagerService) { }
 ```
 
 Add the code to the `ngOnInit()` method:
