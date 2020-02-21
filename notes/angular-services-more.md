@@ -73,7 +73,7 @@ In summary, some of this content will be useful in the near future.
 
 The community has some quality documentation too. A technology that comes from the community is *Observable*, which is part of the Reactive Extensions project (RxJS). Some links:
 
-[Reactive Extensions project home](http://reactivex.io/rxjs/)
+[Reactive Extensions project home](https://rxjs-dev.firebaseapp.com/)
 
 [Rangle.io Angular Training Book, Observables topic](https://angular-2-training-book.rangle.io/handout/observables/)
 

@@ -17,7 +17,7 @@ Recently, you learned to configure the `<form>` element in a very specific way:
 <form (ngSubmit)='userSave()' #f='ngForm'>
 ```
 
-In an Angular (HTML) template, an attribute that begins with a hash symbol (aka pound sign character) is a *template reference variable*. In the [Angular docs](https://angular.io/guide/template-syntax#template-reference-variables--var-), it states:
+In an Angular (HTML) template, an attribute that begins with a hash symbol (# aka pound sign character) is a *template reference variable*. In the [Angular docs](https://angular.io/guide/template-syntax#template-reference-variables--var-), it states:
 
 > A **template reference variable** is often a reference to a DOM element within a template.  
 > It can also be a reference to an Angular component or directive or a web component.  
@@ -94,8 +94,9 @@ For #3, we need access to the element later on in the template. The guidance or 
 Here's what it looks like after the changes:
 
 ```html
-<input class="form-control" id="name" name="name" [(ngModel)]="newUser.name" required minlength="3"
-          maxlength="100" #name="ngModel" autofocus>
+<input class="form-control" id="name" name="name" 
+  [(ngModel)]="newUser.name" required minlength="3"
+  maxlength="100" #name="ngModel" autofocus>
 ```
 
 Now what? Let's add some UI to show an error, as you saw in the Angular docs:

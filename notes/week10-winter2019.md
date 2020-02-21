@@ -72,3 +72,4 @@ Modify the data model manager service. Add methods that will fetch the data need
 
 Modify each component. Your goal is to get the right data to display in each.
 
+<br>
