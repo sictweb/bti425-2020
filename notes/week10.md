@@ -18,7 +18,7 @@ This week, we will make progress with *forms* topics.
 
 Highlights from this week's topics: 
 
-Last week we were introduced to [Angular template-driven forms](angular-forms-intro). It's time to learn more. 
+Recently, we were introduced to [Angular template-driven forms](angular-forms-intro). It's time to learn more. 
 
 > Remember our previous coverage of  
 > [HTML Form patterns](html-form-patterns). 
