@@ -159,7 +159,7 @@ From the official documentation:
 
 > The `HttpClient` in `@angular/common/http` offers a simplified client HTTP API for Angular applications that rests on the `XMLHttpRequest` interface exposed by browsers. Additional benefits of `HttpClient` include testability features, typed request and response objects, request and response interception, `Observable` apis, and streamlined error handling.
 
-The guidance is that a *service* is the usage home for HttpClient. Avoid using HttpClient in a component. 
+The guidance is that a *service* is the usage home for HttpClient. Avoid using HttpClient in a component if it's possible that the request will be used in more than one component. 
 
 An [HttpClient](https://angular.io/api/common/http/HttpClient) instance has several methods that you would expect. Most allow us to specify a return type variable (`<T>`).  All will accept a `url` parameter. When using most of them, you will typically also add an `options` parameter: 
 * `get<T>()` - sends a GET request (and expects a specific return type)
