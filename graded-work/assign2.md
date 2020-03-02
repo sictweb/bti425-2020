@@ -36,20 +36,21 @@ As noted above, the purpose or objective of the assignment is to create a web AP
 
 The app's purpose is to define or translate the English-language terminology we use in the computer programming courses in the School of SDDS, for use by all students, whether or not English is a student's first language. 
 
-We have so many students who are learning English and computer programming at the same time, and that is a challenging combination. The technical terminology is often unclear and complicated, and sometimes ambiguous. For example, when we say "asynchronous", what does it clearly mean in English, as well as in a student's first language?
+We have so many students who are learning English and computer programming at the same time, and that is a challenging combination. The technical terminology is often unclear, complicated, and sometimes isn't explained well. For example, when we say "asynchronous", what does it clearly mean in English, as well as in a student's first language?
 
 The general functionality of the user app will likely include:
-* View and browse a list of all terms 
+* View and browse a list of all terms
+* Search for a term 
 * View details about a term, and its meaning in English and in a student's preferred or first language 
 * Add a new term, including the English definition/data, and a definition/data in another language
 * For an existing English term, add a definition/data in another language 
 * For an existing term (English or other), add another definition/data
 
-In summary, the app would have some of the utility of a dictionary, Wikipedia, and other resources. 
+In summary, the app would have some of the utility of a dictionary, Wikipedia, and other resources (including this course's notes and learning resources). 
 
-A web API will hold the data for the app. To enable scale and crowd-sourcing of data, the professors will also publish a web API that will be designed to aggregate (with your programming work) the terms that each student creates in their own app, for the benefit of ALL students.
+A web API will hold the data for the app. To enable scale and crowd-sourcing of data, the professors will also publish a web API that will be designed to aggregate (with some programming work done by you) the terms that each student creates in their own app, for the benefit of ALL students.
 
-The web API will be posted to Heroku and Atlas, and provides the data for the Angular app. The Angular app will also be deployed to a public host (Heroku), so that you can deliver it to other devices (including, for example, your smartphone).  
+The web API will be posted to Heroku and Atlas, and will provide the data for the Angular app. The Angular app will also be deployed to a public host (Heroku), so that you can deliver it to other devices (including, for example, your smartphone).  
 
 Here's a diagram that shows the relationships among your browser, the deployed Angular app, and the deployed web API. Right-click and open it in a new tab/window to view it full size. 
 
@@ -101,7 +102,7 @@ If you need a reminder about working with the MongoDB database engine, we sugges
 
 For each collection, the web API will support all five familiar tasks:
 * get all 
-* get one
+* get one (by identifier, and also by other fields)
 * add new
 * edit existing
 * delete item
