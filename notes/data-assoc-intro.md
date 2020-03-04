@@ -26,16 +26,20 @@ Over time, we'll discuss these, but to get started, we'll probably end up using 
 
 ### Embedded documents 
 
-In a Week 8 class/session, you learned about *embedded documents* as one way to compose a MongoDB-stored document that has an embedded "sub-document". For example, a "student" document has a collection of (course history) "credit" sub-documents. 
+In a Week 9 class/session, you learned about *embedded documents* as one way to compose a MongoDB-stored document that has an embedded "sub-document". For example, a "term" (word) document has a collection of "definition" sub-documents. 
 
 This *embedded documents* organization scheme is discussed in the MongoDB documentation article:  
 [Model One-to-Many Relationships with Embedded Documents](https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/)
+
+As you would expect, the *document* will be described by a Mongoose schema in your web API. 
+
+In addition, the *sub-document* will *also* be desribed by a Mongoose schema in your web API. 
 
 Use this design for the following scenarios or preferences: 
 
 * The query strategy will often or always want to fetch a document with all of its associated or related data 
 
-* The data in the sub-documents is typically stable and unchanging (almost archival in nature)
+* The data in the sub-documents is typically stable and unchanging; almost archival in nature
 
 * The amount of data in the sub-documents is relatively or contextually not too large 
 
@@ -48,9 +52,9 @@ If your scenario is different, an alternative (and perhaps more familiar to thos
 
 Use this design for the following scenarios or preferences: 
 
-* Data repetition would be a bad idea (too much or whatever)
+* Data repetition would be a bad idea (too much for example)
 
-* Data is for use in a frequently-updated transactional manner 
+* Data used in a frequently-updated transactional manner 
 
 * There is a flexible and unpredictable query strategy, where it is likely that each entity in the association or relation may be separately queried for whatever purpose 
 
@@ -79,8 +83,17 @@ What does the reference look like? What is its format and data type? Here's our 
 
 * Its value must be the MongoDB unique identifier (the 24-character ObjectId) of the associated or related object 
 
-* For example, assuming we're looking at a smartphone "models" object, it would include this reference:  
+For example, assume that we're looking at a smartphone "models" object (from above). In the MongoDB itself, the reference looks like this:  
+`makerId: ObjectId("507f1f77bcf86cd799439011")`
+
+When delivered to a requestor, as JSON, the reference looks like this:  
 `"makerId": "507f1f77bcf86cd799439011"`
+
+<br>
+
+#### Can I see an example? 
+
+A [how-to document](data-assoc-doc-ref-how-to) has been prepared to support this topic. 
 
 <br>
 
@@ -98,6 +111,12 @@ Next, assume that you want to query for all, some, or one "model" from a specifi
 1. The "maker" identifier (and you must have that beforehand) 
 2. If desired, the "models" matching criteria that meets your need (e.g. screen size larger than 4.0 inches) 
 
-Finally, a variation on the previous query, assume that you want the "maker" data *included* in the result, when querying the "models" collection. Well, the query must include a command that will *de-reference* the associated or related "maker" for each "models" item returned. We'll see that in a future code example. 
+In a variation on the previous query, assume that you want the "maker" data *included* in the result, when querying the "models" collection. Well, the query must include a command (`populate()`) that will *de-reference* the associated or related "maker" for each "models" item returned. We'll see that in a future code example. 
+
+Finally, assume that you want to query for one "maker" including all (or some of) its "models". This is a two-step query, and each result is returned separately. (You can then do whatever you want in your code - including combining them into a new data structure.) Here's the two-step query strategy:
+1. Fetch the specifically-desired "maker". 
+2. Using the "maker" identifier, fetch all (or some) matching "models". 
+
+Happy coding!
 
 <br>

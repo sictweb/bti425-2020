@@ -28,11 +28,13 @@ Today, we add more coverage of this important topic:
 
 And then...
 
+[Data assocations or relations introduction](data-assoc-intro) - Helps you get started with this topic.
+
+In the computer-lab class...
+
 [Angular Debugging Introduction](angular-debug-intro) - A brief introduction to debugging in Angular. 
 
-[Angular template-driven forms introduction](angular-forms-intro) - How to get started with forms in Angular. 
-
-[Data assocations or relations introduction](data-assoc-intro) - Helps you get started with this topic.
+[Angular template-driven forms introduction](angular-forms-intro) - The highlights of how to get started with forms in Angular. (Forms will be more fully covered next week.) 
 
 Remember to frequently use the [learning resources](/resources).
 
