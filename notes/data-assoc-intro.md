@@ -83,10 +83,10 @@ What does the reference look like? What is its format and data type? Here's our 
 
 * Its value must be the MongoDB unique identifier (the 24-character ObjectId) of the associated or related object 
 
-For example, assume that we're looking at a smartphone "models" object (from above). In the MongoDB itself, the reference looks like this:  
+For example, assume that we're looking at a smartphone "models" object (from above). In the MongoDB database itself, when using the Compass tool, the reference looks like this:  
 `makerId: ObjectId("507f1f77bcf86cd799439011")`
 
-When delivered to a requestor, as JSON, the reference looks like this:  
+When delivered to a requestor, as JSON (via a web API), the reference looks like this:  
 `"makerId": "507f1f77bcf86cd799439011"`
 
 <br>
