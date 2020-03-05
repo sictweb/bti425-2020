@@ -1,0 +1,75 @@
+<p>This page shows ten (10) items from different typicode collections. Scroll down.</p>
+<hr>
+
+<h3>Typicode "Post" list</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>User identifier</th>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of posts">
+      <td>{{ p.id }}</td>
+      <td>{{ p.userId }}</td>
+      <td>{{ p.title }}</td>
+      <td>{{ p.body }}</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<hr>
+
+<h3>Typicode "Comment" list</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>Post identifier</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of comments">
+      <td>{{ c.id }}</td>
+      <td>{{ c.postId }}</td>
+      <td>{{ c.email }}</td>
+      <td>{{ c.name }}</td>
+      <td>{{ c.body }}</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<hr>
+
+<h3>Typicode "User" list</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Username, email, website</th>
+      <th>Address</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td>{{ u.id }}</td>
+      <td>{{ u.name }}</td>
+      <td>{{ u.phone }}</td>
+      <td>U: {{ u.username }}<br>E: {{ u.email }}<br>W: 
+        <a href="{{ 'https://' + u.website }}" target="_blank">Website</a></td>
+      <td>{{ u.address.street }}<br>{{ u.address.city }}<br>{{ u.address.zipcode }}</td>
+      <td>{{ u.company.name }}<br>{{ u.company.catchPhrase }}<br>We {{ u.company.bs }}</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<hr>
