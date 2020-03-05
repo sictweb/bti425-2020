@@ -11,11 +11,9 @@ In this document, you will learn how to add and use a service in an app. We'll u
 
 ### Getting started
 
-<mark>maybe</mark>
+Start with the template, version 2, from [the course's GitHub code repository](https://github.com/sictweb/bti425). 
 
-Fetch the week 9 code example from [the course's GitHub code repository](https://github.com/sictweb/bti425). 
-
-Refresh the modules (`npm i`). Open the project for editing. Then, you can build and run the app. 
+FYI, a solution is published in the Week 9 folder.
 
 <br>
 
@@ -48,7 +46,7 @@ This action will enable all services and components in the app to work with a we
 
 **Important Note**
 
-When trying to use **HttpClient** anywhere else in your application (e.g. a `whatever.service.ts` file), be sure to *import* ***HttpClient*** (and not HttpClientModule) into that service or component. For example:
+When using **HttpClient** anywhere else in your application (e.g. a `whatever.service.ts` file), be sure to *import* ***HttpClient*** (and not HttpClientModule) into that service or component. For example:
 
 ```js
 import { HttpClient } from "@angular/common/http";
@@ -74,7 +72,9 @@ All return an array/collection of data.
 
 #### Write view model classes to match the data
 
-Now, write *view model* classes to match the data returned by the first two URLs above. We must do this when working with web services. Here's how:
+Now, write *view model* classes to match the data returned by the first two URLs above. We must do this when working with web API. Here's how:
+
+Work with the web API. Study the *shapes* of the data in the responses, and the data that must be sent for add and edit requests. 
 
 Create a new source code file named `data-classes.ts`. In it, we will write several classes, which will allow us to work with "posts", "users", and "comments":
 
