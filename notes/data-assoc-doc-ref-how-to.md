@@ -3,7 +3,7 @@ title: Document reference how-to
 layout: default
 ---
 
-## Data associations or relations...<br>*Document reference* how-to
+## Data associations or relations...<br>*document reference* how-to
 
 This document enables the reader to begin learning how to design and implement *document references* as a data organization scheme in a MongoDB database. 
 

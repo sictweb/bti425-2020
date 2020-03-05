@@ -24,7 +24,7 @@ Today, we add more coverage of this important topic:
 
 [More Angular service coverage](angular-services-more) - Adds on to the introductory content.
 
-[Angular Service Example](angular-services-example) - A supporting code example, posted in the repo.
+[Angular service example](angular-services-example) - A supporting code example, posted in the repo.
 
 And then...
 
