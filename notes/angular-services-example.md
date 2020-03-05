@@ -5,11 +5,13 @@ layout: default
 
 ## Angular services example
 
-In this document, you will learn how to add and use a service in an app. It's the app that was worked on in the past few weeks, as we learned more about components and routing. Here, we will make the changes to support and use services. 
+In this document, you will learn how to add and use a service in an app. We'll use the Angular app template version 1 as a base or starter app. Then, we will make the changes to support and use services. 
 
 <br>
 
 ### Getting started
+
+<mark>maybe</mark>
 
 Fetch the week 9 code example from [the course's GitHub code repository](https://github.com/sictweb/bti425). 
 
@@ -19,9 +21,7 @@ Refresh the modules (`npm i`). Open the project for editing. Then, you can build
 
 ### Working with a web service
 
-In the "getting started" example above, the service created its data in memory, as part of its initialization process. 
-
-We want to add on to this functionality with another typical scenario - using a web service that's external (and outside) this app. In this section, we use a public web API that deliver simple data without fuss or muss. 
+We want to use a web service that's external to (and outside of) this app. In this section, we use a public read-write web API. 
 
 When compared to the simple "getting started" example above, there are three new or additional interrelated concepts and techniques that we are interested in:
 1. HttpClient 
@@ -34,15 +34,15 @@ We blend all three together when working with a web service.
 
 #### Enable the app to use HTTP
 
-Open the app module (`app.module.ts`) for editing. Near the top, add this import statement:
+Open the app module (`app.module.ts`) for editing. Near the top, below the BrowserModule import, add this import statement:
 
 ```js
 import { HttpClientModule } from "@angular/common/http";
 ```
 
-Then, add the `HttpClientModule` to the `imports` collection in the `@NgModule` decorator.
+Then, add the `HttpClientModule` to the `imports` collection in the `@NgModule` decorator, below the BrowserModule.
 
-This action will enable all services in the app to use HTTP (in other words, work with a web service). 
+This action will enable all services and components in the app to work with a web API. 
 
 <br>
 
@@ -76,7 +76,7 @@ All return an array/collection of data.
 
 Now, write *view model* classes to match the data returned by the first two URLs above. We must do this when working with web services. Here's how:
 
-Create a new source code file named `vm-typicode.ts`. Its name suggests that this source code file will define "view models for the typicode web service". In it, we will write several classes, which will allow us to work with "posts", "users", and "comments":
+Create a new source code file named `data-classes.ts`. In it, we will write several classes, which will allow us to work with "posts", "users", and "comments":
 
 ```js
 // View models for the typicode.com web service
@@ -136,18 +136,18 @@ Open the service for editing. Add the following near the top:
 ```js
 import { Observable } from "rxjs/Observable";
 
-import { Post, Comment, Geo, Address, Company, User } from "./vm-typicode";
+import { Post, Comment, Geo, Address, Company, User } from "./data-classes";
 ```
 
-We need `Observable`, because that's the type of the web service get/fetch result. 
+We need `Observable`, because that's the type of the web API get/fetch result. 
 
 We need the view model classes to enable the model binder to correctly create the arrays/collections. 
 
 <br>
 
-**Suggestion - create a "url" string field**
+**Recommendation - create a "base url" string field**
 
-Suggestion - create a "url" string field, to hold the long and constant part of the URL to the web service. Doing this will make it easy to create a concatenated string that includes the segment we want. 
+Recommendation - create a "base url" string field, to hold the long and constant part of the URL to the web service. Doing this will make it easy to create a concatenated string that includes the segment we want. 
 
 ```js
   private url = "http://jsonplaceholder.typicode.com";
@@ -176,25 +176,23 @@ Write a function for each web service resource that the app needs. Assume, as no
 
 #### Use the new function(s) in the service
 
-Let's do the work in a different component, "horse". We'll just push the existing content down. Open the horse component class (`horse.component.ts`) for editing. 
+Let's view the web API content in a new component. Generate it, and then configure it to participate in routing and the nav menu. Finally, open it for editing. 
 
 Import the service. 
 
-Import the view model class. Let's work with posts, so we need the Post class imported. 
+Import the view model class. Let's work with posts first, so we need the Post class imported. 
 
 Inject the service into the constructor. 
 
 Create a field to hold the content we want; it will be a Post array/collection field. 
 
-Add a function that will call the service.
+We want to call the service method when the component is loaded/initialized, so do that in the `ngOnInit()` function. 
 
-We want to call this function when the component is loaded/initialized, so do that in the ngOnInit function code. 
-
-Finally, open the HTML template (`horse.component.html`) for editing. We want to push the existing content down. So, in the panel body, add these elements to the top:
+Finally, open the markup template for editing. Add code similar to the following:
 
 {% raw %}
 ```html
-    <p>All posts:</p>
+    <h3>Typicode "Post" list</h3>
     <table class="table table-striped">
       <tr>
         <th>User ID</th>
@@ -202,37 +200,13 @@ Finally, open the HTML template (`horse.component.html`) for editing. We want to
         <th>Body</th>
       </tr>
       <tr *ngFor='let p of posts'>
-        <td>{{p.userId}}</td>
-        <td>{{p.title}}</td>
-        <td>{{p.body}}</td>
+        <td>{{ p.userId }}</td>
+        <td>{{ p.title }}</td>
+        <td>{{ p.body }}</td>
       </tr>
     </table>
     <hr>
 ```
 {% endraw %}
-
-The result should look like this:
-
-![Posts](../media/angular-services-render11.png)
-
-<br>
-
-#### Do it again
-
-Do it again, to the lizard component. Show the users resource, and push the existing content down.
-
-The result should look like this:
-
-![Users](../media/angular-services-render12.png)
-
-<br>
-
-### Summary
-
-In this document, you learned an incremental approach to creating and using a service. 
-
-We started by delivering static data that was created in the service. 
-
-Then, we got the more typical web service scenario involved, and learned a reliable and repeatable way to implement a very common scenario. 
 
 <br>
