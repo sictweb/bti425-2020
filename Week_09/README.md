@@ -8,10 +8,8 @@ npm i
 
 <br>
 
-### routing-scenarios
+### data-assoc-webapi
 
-This code example was based on the *brand new* Angular App Template version 1. You can find that project in the [Templates and solutions](../Templates_and_solutions) folder. It includes Bootstrap 3, the routing feature, a nav menu, and some getting-started components.
-
-This app shows the popular routing scenarios. We added an in-memory data service, routing with parameters, and components that do some data service operations (get and add). 
+Data files and a sample web API that works with related data. It can be considered to be an example implementation of the course notes document titled ["Data assocations or relations... document reference how-to"](https://bti425.ca/notes/data-assoc-doc-ref-how-to).
 
 <br>
