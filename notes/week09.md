@@ -44,6 +44,8 @@ Remember to frequently use the [learning resources](/resources).
 
 This week's code examples:
 1. Service and web API
+1. Web API, related data, embedded documents
+1. Web API, related data, document references
 
 There's also a new "version 2" template on the repo.
 
