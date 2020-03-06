@@ -222,7 +222,7 @@ In any component class that is using the data manager service, we extract the da
 ```js
 // Assume we have a local "this.users" property already defined,
 // and "this.m" is a reference to the data modelmanager service
-this.m.getUsers().subscribe(users => this.users = users);
+this.m.getUsers().subscribe(result => this.users = result);
 ```
 
 The result is that the stream of data - a collection of users, which comes in asynchronously - is transformed into a more familiar array object that we can immediately work with. 
@@ -232,9 +232,9 @@ Additional note... If you must do multiple tasks in the function that's passed t
 ```js
 // Assume we have a local "this.users" property already defined,
 // and "this.m" is a reference to the data modelmanager service
-this.m.getUsers().subscribe(users => {
+this.m.getUsers().subscribe(result => {
   // Save the result
-  this.users = users;
+  this.users = result;
   // Do some other task (call a function)
   doOtherTask();
   // etc. 
