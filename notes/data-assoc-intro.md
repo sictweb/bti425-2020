@@ -26,14 +26,14 @@ Over time, we'll discuss these, but to get started, we'll probably end up using 
 
 ### Embedded documents 
 
-In a Week 9 class/session, you learned about *embedded documents* as one way to compose a MongoDB-stored document that has an embedded "sub-document". For example, a "term" (word) document has a collection of "definition" sub-documents. 
+In a recent class/session, you learned about *subdocuments* (aka embedded documents) as one way to compose a MongoDB-stored document that has an embedded "subdocument". For example, a "term" (word) document has a collection of "definition" subdocuments. 
 
 This *embedded documents* organization scheme is discussed in the MongoDB documentation article:  
 [Model One-to-Many Relationships with Embedded Documents](https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/)
 
 As you would expect, the *document* will be described by a Mongoose schema in your web API. 
 
-In addition, the *sub-document* will *also* be desribed by a Mongoose schema in your web API. 
+In addition, the *subdocument* will *also* be desribed by a Mongoose schema in your web API. (Although it is possible to declare the subdocument schema inline in the hosting document schema, we enjoy some future benefits by creating a separate schema.)
 
 Use this design for the following scenarios or preferences: 
 
@@ -42,6 +42,12 @@ Use this design for the following scenarios or preferences:
 * The data in the sub-documents is typically stable and unchanging; almost archival in nature
 
 * The amount of data in the sub-documents is relatively or contextually not too large 
+
+<br>
+
+#### Can I see an example? 
+
+A [how-to document](data-assoc-subdocs-how-to) has been prepared to support this topic. 
 
 <br>
 
