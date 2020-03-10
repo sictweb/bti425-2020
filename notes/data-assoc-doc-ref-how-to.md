@@ -9,7 +9,6 @@ This document enables the reader to begin learning how to design and implement *
 
 Before continuting, ensure that you have read, analyzed, and understood the content in the [data associations or relations introduction document](data-assoc-intro).
 
-
 <br>
 
 ### Data organization and design 
@@ -108,6 +107,9 @@ Import the data generated in step 5 above, and test.
 ### Web API work
 
 For this how-to document, we will write a DEN (database, Express.js, Node.js) web API. 
+
+> Note that this was implemented in a recent code example,  
+> webapi-data-assoc-doc-ref
 
 The following is a five step procedure:
 

@@ -98,7 +98,7 @@ As suggested by this list of collections, a *term* could have zero or more *defi
 
 Each term collection will have the same data fields:
 
-![schema](media/a2-2020-schemasv2.png)
+![schema](media/a2-2020-schemasv3.png)
 
 In addition, an item in the English collection will be associated or related, in a one-to-many manner, with zero or more items in the non-English collection. It is implemented using the MongoDB "document reference" technique: In a non-English term document, it has a field (probably named "termEnglish") that stores an object identifier "reference" to the English term document. 
 
