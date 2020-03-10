@@ -137,10 +137,11 @@ The following is a five step procedure:
 1. Write a "department" Mongoose schema
 1. Write a "business" Mongoose schema
 1. At a minimum, write "get" methods for "business"
+1. Write a "post" method
 
 Then, to show that we can add another subdocument to the "departments" collection: 
 
-5. Write a "put" method to add another "department" to a specific "business" 
+6. Write a "put" method to add another "department" to a specific "business" 
 
 Here are the details:
 
@@ -211,64 +212,96 @@ let Business;
 Business = db.model("businesses", businessSchema, "businesses");
 ```
 
-#### 4. At a minimum, write "get" methods for "buisness"
+#### 4. At a minimum, write "get" methods for "business"
 
-Following the well-known pattern, add "get all" and "get one" methods, in both `server.js` and `manager.js`. For both entities. 
+Following the well-known pattern, add "get all" and "get one" (by identifier) methods, in both `server.js` and `manager.js`.  
 
 Test with Postman. 
 
-#### 5. Write a "put" method to add another "department" to a specific "business" 
+#### 5. Write a "post" method
 
-<mark>the following will be updated</mark>
+Following the well-known pattern, write "add new" methods, in both `server.js` and `manager.js`. 
 
-In step 4 above, you wrote a standard "get one" method for product. Notice that it probably returned something like this:
+How do we add a NEW "business" document that includes one (or more) embeded "department" subdocument(s)? Well, the question answers itself - when you write the JSON for the main document, *include an array of one (or more) subdocuments*. For example: 
 
 ```json
 {
-  "_id": "5e5e967dfebfae0f659875c1",
-  "name": "ASPERGILLUS FUMIGATUS",
-  "yearReleased": 1994,
-  "companyId": "5e5e66effc13ae3c5f000031"
+  "name": "Seneca College",
+  "companyType": "Postsecondary education",
+  "slogan": "our graduates are the best",
+  "city": "Toronto",
+  "country": "Canada",
+  "departments": [
+    {
+      "name": "Academic Programs",
+      "leader": "Laurel Scholen",
+      "headCount": 1800
+    }
+  ]
 }
 ```
 
-Instead of the MongoDB object identifier value of the `companyId` property, we want the *full and complete "product" object*. 
+#### 6. Write a "put" method to add another "department" to a specific "business" 
 
-We use the Mongoose `populate()` method ([doc link here](https://mongoosejs.com/docs/populate.html)). Its simplest usage or syntax accepts an arguement that's a field name string:
+In this scenario, assume that there is an existing "business" document, with one or more embedded "department" subdocuments. Now, you want to add another "department" to the collection of subdocuments. 
+
+Is this a pure "add new" or "post". No. 
+
+The hint is in the scenario - we want to modify an *existing "business" document*. As a result, it will be an "edit existing" task, so the `server.js` Express.js method will be `.put()`. 
+
+The data that we are sending *must* include the identifier for the existing "business" document, which can be part of the route/URL. And, we must send the "business" document that is to be added. 
+
+In `server.js`, the route listener function will look something like this. Notice that we will call the `manager.js` method with two arguments: 
 
 ```js
-// Find one specific document
-Product.findById(itemId)
-  .populate('companyId')
-  .exec((error, item) => {
-  if (error) {
-    // Find/match is not found
-    return reject(error.message);
-  }
-  // Check for an item
-  if (item) {
-    // Found, one object will be returned
-    return resolve(item);
-  } else {
-    return reject('Not found');
-  }
-}
+app.put("/api/businesses/:id/add-department", (req, res) => {
+  // Call the manager method
+  // Send BOTH the identifier, AND the body
+  m.businessAddDepartmentEdit(req.params.id, req.body)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});
 ```
 
-Notice that it probably returned something like this:
+The "business" document in the body will look something like this: 
 
 ```json
 {
-  "_id": "5e5e967dfebfae0f659875c1",
-  "name": "ASPERGILLUS FUMIGATUS",
-  "yearReleased": 1994,
-  "companyId": {
-    "_id": "5e5e66effc13ae3c5f000031",
-    "name": "Mylan Institutional Inc.",
-    "country": "China",
-    "ceo": "Florina Liddall"
-  }
+  "name": "Academic Programs",
+  "leader": "Laurel Scholen",
+  "headCount": 1800
 }
+```
+
+The `businessAddDepartmentEdit()` method in `manager.js` must do a few things:
+1. It must attempt to locate the existing "business" document
+2. If successful, add the new "department" subdocument and save
+3. Otherwise throw (return) an error
+
+If we use our somewhat standard coding pattern in `manager.js`, this task's code becomes ugly and complicated, and lengthy to explain. Your professors are instead suggesting that this task can be done using the relatively new `async await` feature in JavaScript. The method's code will look something like the following:
+
+```js
+// Notice the function accepts two arguments
+businessAddDepartmentEdit: async function (itemId, newItem) {
+
+  // Attempt to locate the existing document
+  let business = await Business.findById(itemId);
+
+  if (business) {
+    // Add the new subdocument and save
+    business.departments.push(newItem);
+    await business.save();
+    return business;
+  }
+  else {
+    // Uh oh, "throw" an error
+    throw "Not found";
+  }
+},
 ```
 
 Nice.
