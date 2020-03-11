@@ -136,7 +136,7 @@ For termNonEnglish items, it will be one of the others
 Below, there is a link to a downloadable file of language codes that will be supported in the app  
 
 * `image`, `imageType`, `audio`, and `audioType`  
-We will use these in a future lesson  
+We will use these in a future class/lesson  
 For now, they can be empty  
 They will hold file names (image and audio) for non-text media items for a term (e.g. a diagram or its pronounciation)  
 (imageType and audioType are internet media type strings, e.g. "image/png")  
@@ -157,29 +157,80 @@ These values are set in program code
 Do NOT get them from the app's user  
 
 * `fieldOfStudy`  
-TBA  
+Probably "computer programming" for our terms  
+The course professors foresee that this app can be used by learners in any field of study, and not just ours, so that's its purpose - to identify the term's field of study
 
-* `helpYes` and `helpNo` 
-TBA  
+* `helpYes` and `helpNo`  
+There will be a user interface (UI) item that will enable these values to be incremented  
+Obviously, with enablement by the web API  
+The idea is that we could ask the user whether the term they were looking at was hepful or not (to their learning)
 
 * `definitions`  
-TBA  
+A collection of one or more "definition" documents  
+It is always possible for someone to have an alternate or better definition than an existing one  
+It's also possible that a term (e.g. "server") could have multiple and somewhat different definitions    
 
-* For a termNonEnglish item... `termEnglish`  
-TBA
+* For a termNonEnglish document... `termEnglish`  
+Required (for a termNonEnglish document  
+It is the object identifier of the termEnglish it's related to 
+
+In the "definition" schema...
+
+* `authorName`  
+Required  
+Your name  
+
+* `dateCreated`  
+Required  
+This value is set in program code  
+Do NOT get it from the app's user  
+
+* `definition`  
+Required  
+The actual possibly-lengthy *definition* or explanation of the term  
+The plan is that the content will use the language's character set  
+
+* `quality`  
+Ignore this for now; for future use  
+(A human and/or AI-ML curator could assign a quality rating value to the definition)  
+
+* `likes`  
+There will be a user interface (UI) item that will enable this value to be incremented  
+Obviously, with enablement by the web API  
+The idea is that the user could quickly and easily indicate whether they "like" the specific definition
+
 
 <br>
 
 #### Data service tasks 
 
-For each collection, the web API will support all five familiar tasks:
-* get all 
-* get one (by identifier, and also by other fields)
-* add new
-* edit existing
-* delete item
+The data service tasks are similar for each entity (termEnglish and termNonEnglish). As you would predict, 
 
-Write the code to make this happen. Test frequently with Postman. 
+We suggest that you write the method pairs (in `server.js` and `manager.js`) for the termEnglish entity first, and thoroughly test them. Then, you will be able to essentially copy-paste-and-edit them for use for the termNonEnglish entity. The "add new" task will be slightly different in the termNonEnglish method pair, because we must use the object identifier for the related termEnglish document. 
+
+During the code-writing process, test frequently with Postman. 
+
+It is expected that the following, at a minimum, will be needed for the **termEnglish** entity:
+* get all (sorted) 
+* get one, by object identifier 
+* get one, by "wordEnglish" 
+* add new (termEnglish document, including one definition embedded subdocument) 
+* edit existing (termEnglish document), to add a *new* definition 
+* edit existing (termEnglish document), to increment the "helpYes" value
+* edit existing (termEnglish document), to increment the "helpNo" value
+* edit existing (definition document), to increment the "likes" value
+
+Time permitting, it may require another method pair to support the text editing of the definition's text. 
+
+It is expected that the following, at a minimum, will be needed for the **termNonEnglish** entity:
+* get all (sorted) (it's possible that the app won't use this)
+* get one, by object identifier 
+* get one, by "wordNonEnglish" 
+* add new (termNonEnglish document, including one definition embedded subdocument) 
+* edit existing (termNonEnglish document), to add a *new* definition 
+* edit existing (termNonEnglish document), to increment the "helpYes" value
+* edit existing (termNonEnglish document), to increment the "helpNo" value
+* edit existing (definition document), to increment the "likes" value
 
 When complete, deploy to MongoDB Atlas. 
 
