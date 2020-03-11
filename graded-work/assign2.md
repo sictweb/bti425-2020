@@ -108,6 +108,68 @@ If you need a reminder about working with the MongoDB database engine, we sugges
 
 <br>
 
+#### More explanations about some of the schema fields
+
+The two "term" schemas are almost the same, by design. We wanted to make it easier to program by enabling copy-paste. Despite this, there are a few considerations which will affect your programming later on. Here's how some of the fields will be used. 
+
+* `wordEnglish`  
+Required  
+The term, in English  
+This will be present (non-empty) in both kinds of objects, termEnglish and termNonEnglish  
+It will be unique too  
+
+* `wordNonEnglish`  
+The term, in another language  
+This will be empty in termEnglish, and present in termNonEnglish  
+
+* `wordExpanded`  
+If the wordEnglish is an acronym or initialism, this will have the expansion  
+For example, JSON and "JavaScript Object Notation"  
+Otherwise, it will be empty  
+
+* `languageCode`  
+Required  
+The ISO and *de facto* standardized codes for a language  
+For example "en" for English, or "en-ca" for English (Canada)  
+For termEnglish items, it will be one of the language codes that begin with "en"  
+For termNonEnglish items, it will be one of the others  
+Below, there is a link to a downloadable file of language codes that will be supported in the app  
+
+* `image`, `imageType`, `audio`, and `audioType`  
+We will use these in a future lesson  
+For now, they can be empty  
+They will hold file names (image and audio) for non-text media items for a term (e.g. a diagram or its pronounciation)  
+(imageType and audioType are internet media type strings, e.g. "image/png")  
+
+* `linkAuthoritative`, `linkWikipedia`, and `linkYouTube`  
+URLs to web resources for the term  
+Can be present or empty  
+The "linkAuthoritative" is a link to the term's authoritative info source  
+For example, for Node.js, it's https://nodejs.org
+
+* `authorName`  
+Required  
+Your name  
+
+* `dateCreated` and `dateRevised`  
+Required  
+These values are set in program code  
+Do NOT get them from the app's user  
+
+* `fieldOfStudy`  
+TBA  
+
+* `helpYes` and `helpNo` 
+TBA  
+
+* `definitions`  
+TBA  
+
+* For a termNonEnglish item... `termEnglish`  
+TBA
+
+<br>
+
 #### Data service tasks 
 
 For each collection, the web API will support all five familiar tasks:
