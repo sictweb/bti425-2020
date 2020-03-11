@@ -129,7 +129,7 @@ Import the data generated in step 3 above, and test.
 For this how-to document, we will write a DEN (database, Express.js, Node.js) web API. 
 
 > Note that this was implemented in a recent code example,  
-> webapi-data-assoc-embed-doc
+> webapi-data-assoc-embed-doc  
 
 The following is a five step procedure:
 
@@ -220,7 +220,7 @@ Test with Postman.
 
 #### 5. Write a "post" method
 
-Following the well-known pattern, write "add new" methods, in both `server.js` and `manager.js`. 
+Now, we must write a "post" method that will enable a new "business" to be added. Following the well-known pattern, write "add new" methods, in both `server.js` and `manager.js`. 
 
 How do we add a NEW "business" document that includes one (or more) embeded "department" subdocument(s)? Well, the question answers itself - when you write the JSON for the main document, *include an array of one (or more) subdocuments*. For example: 
 
@@ -245,13 +245,13 @@ How do we add a NEW "business" document that includes one (or more) embeded "dep
 
 In this scenario, assume that there is an existing "business" document, with one or more embedded "department" subdocuments. Now, you want to add another "department" to the collection of subdocuments. 
 
-Is this a pure "add new" or "post". No. 
+Is this a pure "add new" or "post" task? No. 
 
-The hint is in the scenario - we want to modify an *existing "business" document*. As a result, it will be an "edit existing" task, so the `server.js` Express.js method will be `.put()`. 
+The hint is in the scenario - we want to modify an *existing "business" document*. As a result, it will be an "edit existing" task, so the `server.js` Express.js method will be `put()`. 
 
-The data that we are sending *must* include the identifier for the existing "business" document, which can be part of the route/URL. And, we must send the "business" document that is to be added. 
+The data that we are sending *must* include the identifier for the existing "business" document, which can be part of the route/URL. And, we must send the "business" document that is to be added in the request body. 
 
-In `server.js`, the route listener function will look something like this. Notice that we will call the `manager.js` method with two arguments: 
+In `server.js`, the route listener function will look something like the following. Notice that we will call the `manager.js` method with two arguments: 
 
 ```js
 app.put("/api/businesses/:id/add-department", (req, res) => {
@@ -267,7 +267,7 @@ app.put("/api/businesses/:id/add-department", (req, res) => {
 });
 ```
 
-The "business" document in the body will look something like this: 
+The "business" document in the body must match the schema, and will look something like this: 
 
 ```json
 {
