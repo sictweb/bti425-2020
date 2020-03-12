@@ -234,7 +234,7 @@ How do we add a NEW "business" document that includes one (or more) embeded "dep
   "departments": [
     {
       "name": "Academic Programs",
-      "leader": "Laurel Scholen",
+      "leader": "Laurel Schollen",
       "headCount": 1800
     }
   ]
@@ -272,7 +272,7 @@ The "business" document in the body must match the schema, and will look somethi
 ```json
 {
   "name": "Academic Programs",
-  "leader": "Laurel Scholen",
+  "leader": "Laurel Schollen",
   "headCount": 1800
 }
 ```
