@@ -1,0 +1,71 @@
+<h3>Typical form elements</h3>
+<form (ngSubmit)='createDriver()' #f='ngForm'>
+
+  <div class="form-group">
+    <label class="control-label" for="name">Full Name:</label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="driverData.name" required autofocus>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="name">Password:</label>
+    <input type="password" class="form-control" name="password" [(ngModel)]="driverData.password" required autofocus>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="description">Description:</label>
+    <textarea class="form-control" name="description" [(ngModel)]="driverData.description" rows="6"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="ownedTransportation">Owned Transportation:</label>
+    <select multiple class="form-control" name="ownedTransportation" [(ngModel)]="driverData.ownedTransportation">
+      <option *ngFor="let t of transportationModes" [value]="t.value">{{ t.text }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="favouriteTransportation">Favourite Transportation:</label>
+    <select class="form-control" name="favouriteTransportation" [(ngModel)]="driverData.favouriteTransportation">
+      <option *ngFor="let t of transportationModes" [value]="t.value">{{t.text}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="driverLicence" class="control-label">Has a driver's license?</label>
+    <div class="checkbox">
+      <label class="control-label" for="driverLicence">
+        <input type="checkbox" name="driverLicence" [(ngModel)]="driverData.driverLicence" />Yes, if checked</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="skill" class="control-label">Driving skill level ({{ driverData.skillLevel }} out of 10)</label>
+    <input type="range" min="1" max="10" class="form-control" name="skill" [(ngModel)]="driverData.skillLevel"
+      [value]="driverData.skillLevel">
+  </div>
+
+  <div class="form-group">
+    <label for="" class="control-label">Vehicle usage:</label>
+    <div class="radio">
+      <label class="control-label" for="vehicleUseBusiness">
+        <input type="radio" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" value="business" /> Business
+      </label>
+    </div>
+    <div class="radio">
+      <label class="control-label" for="vehicleUsePleasure">
+        <input type="radio" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" value="pleasure" /> Pleasure
+      </label>
+    </div>
+    <div class="radio">
+      <label class="control-label" for="vehicleUseOther">
+        <input type="radio" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" value="other" /> Other
+      </label>
+    </div>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Create</button>
+
+</form>
+<br>
+<h4>Data from the form:</h4>
+<p><code>{{ driverData | json }}</code></p>

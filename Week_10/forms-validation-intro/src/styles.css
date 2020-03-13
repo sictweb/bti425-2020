@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+.img-small {
+  max-width: 4.0em;
+}
+
+/* Classes that help with template-driven forms */
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}

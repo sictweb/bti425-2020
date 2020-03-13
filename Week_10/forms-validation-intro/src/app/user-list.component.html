@@ -1,0 +1,27 @@
+<h3>List of users from the <code>&nbsp;reqres.in&nbsp;</code> web service</h3>
+<p><a class="btn btn-default" routerLink="/users/create">Add user</a></p>
+<p>&nbsp;</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Avatar</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let u of users'>
+      <td>{{ u.id }}</td>
+      <td>{{ u.first_name }}</td>
+      <td>{{ u.last_name }}</td>
+      <td><img [src]="u.avatar" alt="" class="img-rounded img-responsive img-small"></td>
+      <td>
+        <a routerLink="/users/detail/{{ u.id }}" class="btn btn-default">Detail</a>&nbsp;
+        <a routerLink="/users/edit/{{ u.id }}" class="btn btn-warning">Edit</a>&nbsp;
+        <a routerLink="/users/delete/{{ u.id }}" class="btn btn-danger">Delete</a>&nbsp;
+      </td>
+    </tr>
+  </tbody>
+</table>
