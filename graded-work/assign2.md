@@ -93,12 +93,51 @@ As suggested by this list of collections, a *term* could have zero or more *defi
 > 1. definition 
 > 2. terms in English (maybe named "termEnglish")  
 > 3. terms in other languages (maybe named termNonEnglish")  
+>  
+> Review the embedded subdocument coverage in the [introduction](/notes/data-assoc-intro) note and in the [how-to](/notes/data-assoc-subdocs-how-to) note. 
+
+<br>
 
 Each term collection will have the same data fields:
 
-![schema](media/a2-2020-schemasv4.png)
+<div style="background-color: #e9f2f8;">
+
+Assignment 2 "termEnglish" schema fields:
+* wordEnglish
+* wordNonEnglish
+* wordExpanded
+* languageCode
+* image
+* imageType
+* audio
+* audioType
+* linkAuthoritative
+* linkWikipedia
+* linkYouTube
+* authorName
+* dateCreated (date)
+* dateRevised (date)
+* fieldOfStudy
+* helpYes (integer)
+* helpNo (integer)
+* definitions (array of "definition" objects)
+
+The "termNonEnglish" schema will be the same, and it will *also* <br>have a field (probably named "termEnglishId") that will be <br>a document reference to the English term. 
+
+Assignment 2 "definition" schema fields:
+* authorName
+* dateCreated (date)
+* definition
+* quality (integer)
+* likes (integer)
+
+</div>
+
+<br>
 
 In addition, an item in the English collection will be associated or related, in a one-to-many manner, with zero or more items in the non-English collection. It is implemented using the MongoDB "document reference" technique: In a *non-English term document*, it has a field (probably named "termEnglishId") that stores an object identifier "reference" to the English term document. 
+
+> Review the document reference coverage in the [introduction](/notes/data-assoc-intro) note and in the [how-to](/notes/data-assoc-doc-ref-how-to) note. 
 
 If you need a reminder about working with the MongoDB database engine, we suggest that you do these tasks:
 * Create a database named `db-a2` (database for Assignment 2)
@@ -218,6 +257,8 @@ It is expected that the following, at a minimum, will be needed for the **termEn
 * edit existing (termEnglish document), to increment the "helpNo" value
 * edit existing (definition document), to increment the "likes" value
 
+> Reminder about the associated/related data coverage and how-to notes.
+
 Time permitting, it may require another method pair to support the text editing of the definition's text. 
 
 It is expected that the following, at a minimum, will be needed for the **termNonEnglish** entity:
@@ -238,10 +279,10 @@ As noted above, the professor version of the web API has been published here:
 
 [Professor Assignment 2 web API](https://pam-2020-a2and3webapi.herokuapp.com/api)
 
-Here's the plain text:  
+Here's the plain text URL:  
 `https://pam-2020-a2and3webapi.herokuapp.com/api`
 
-Using Postman, you can add these segments to the URL:
+Using Postman, you can add these segments to the URL, and interact with the web API:
 
 * `/terms/english`  
 All terms in English 
@@ -257,21 +298,26 @@ One non-English term, for a specific identifier
 
 In addition, you can add a new English term (with its initial definition), using this URL:
 * `/terms/english`  
-Obviously, POST, application/json, and a JSON entity body  
+Obviously POST, application/json, and a JSON entity body  
 
 And, for an *existing* English term, you can add another definition, using this URL:
 * `/terms/english/XXXXXX.../add-definition`  
-Obviously, PUT, application/json, and a JSON entity body  
+PUT, application/json, and a JSON entity body  
 
 As you would expect, you can add a new non-English term (with its initial definition), using this URL:
 * `/terms/other`  
-Obviously, POST, application/json, and a JSON entity body  
+POST, application/json, and a JSON entity body  
 
 Finally, for an *existing* non-English term, you can add another definition, using this URL:
 * `/terms/other/XXXXXX.../add-definition`  
-Obviously, PUT, application/json, and a JSON entity body  
+PUT, application/json, and a JSON entity body  
 
-To help yourself, and your fellow students, plan on adding at least one English term and one non-English term to the professor web API. We also suggest that you add another definition to a term (one English and one non-English). 
+<mark>To help yourself, and your fellow students,</mark> plan on using Postman and adding at least one English term and one non-English term to the professor web API. We also suggest that you add another definition to a term (one English and one non-English). 
+
+> Data entry tips:
+> * Send a "get one" request to get the JSON for one term  
+> * That will give you a model that you can use to copy, paste, then edit 
+> * When you are entering a non-English term, use one of the official [language codes](https://pam-2020-a2and3webapi.herokuapp.com/api/languages) (e.g. "fr-ca" or "ru" etc.)
 
 The intention is that each student will be able to get access to a substantial collection of data, because the efforts of all 100 students in the course, each creating at least two terms, should result in about 200 sharable terms. How?
 
