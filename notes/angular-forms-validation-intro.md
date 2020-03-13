@@ -168,6 +168,6 @@ Angular is managing the form. The validity of a contained element (true/false) b
 
 ### What's next?
 
-In the near future, we will learn some additional form and data validation techniques beyond this simple text input element coverage. 
+In the near future, we may learn some additional form and data validation techniques beyond this simple text input element coverage (e.g. item selection, etc.). 
 
 <br>

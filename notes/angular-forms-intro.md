@@ -141,7 +141,7 @@ It also uses the bootstrap "forms" classes, ie "form-group" and "form-control" f
 It's possible that you have written hundreds of these forms. It's a very well-understood process. 
 
 > Reference info:  
-> Review the docs about [HTML forms](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms) and [native form widgets](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets). 
+> Review the docs about [HTML forms](https://developer.mozilla.org/en-US/docs/Learn/Forms) and [native form controls](https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls). 
 
 <br>
 
@@ -229,7 +229,7 @@ To briefly explain, we define a "Driver" class that will represent the type of d
 
 ### Data binding between the *model* and *form*, introduction
 
-We have three ways to bind the data model to form elements/widgets:
+We have three ways to bind the data model to form elements/controls:
 1. One way, from *model* to *form* 
 2. One way, from *form* to *model* 
 3. Two way
@@ -243,7 +243,7 @@ This topic is covered in [more detail in the Angular docs](https://angular.io/gu
 Assume we have a property in the data model that must appear in the view. In the past, to display it *as content in an element*, you typically used *interpolation* syntax:  
 `{%raw%}{{ foo.barText }}{%endraw%}`
 
-However, to bind *to an attribute* of a form element/widget, we must use the other square-brackets format. For example, set the element's `title` attribute text:  
+However, to bind *to an attribute* of a form element/control, we must use the other square-brackets format. For example, set the element's `title` attribute text:  
 ```html
 <input [title]="foo.barText" ...
 ```
@@ -254,7 +254,7 @@ However, to bind *to an attribute* of a form element/widget, we must use the oth
 
 #### 2. One way, from *form* to *model* 
 
-Typically used to handle an event (click, change, focus, blur, etc.) that happens in a form element/widget. Use the parenthesis format. The value of the binding is typically a method in the component. For example, to detect when an element/widget has received focus:  
+Typically used to handle an event (click, change, focus, blur, etc.) that happens in a form element/control. Use the parenthesis format. The value of the binding is typically a method in the component. For example, to detect when an element/control has received focus:  
 ```html
 <input (focus)="fooStartBar() ...
 ```
@@ -263,7 +263,7 @@ Typically used to handle an event (click, change, focus, blur, etc.) that happen
 
 #### 3. Two way
 
-Typically used to bind the *value* of the form element/widget with a property in the data model. For example, this will bind an input element/widget with a property, so that changes to either will be bound and synchronized:  
+Typically used to bind the *value* of the form element/control with a property in the data model. For example, this will bind an input element/control with a property, so that changes to either will be bound and synchronized:  
 ```html
 <input [(ngModel)]="foo.barText" ...
 ```
@@ -282,7 +282,7 @@ After coding the component, we can begin to update the original "standard" HTML 
 >  
 > Angular offers a special two-way data binding syntax for this purpose, ```[(x)]```. The ```[(x)]``` syntax combines the brackets of property binding, ```[x]```, with the parentheses of event binding, ```(x)```.
 >
-> ([https://angular.io/guide/template-syntax#two-way-binding---](https://angular.io/guide/template-syntax#two-way-binding---))
+> Reference info: [Two-way binding [(...)]](https://angular.io/guide/template-syntax#two-way-binding-)
 
 <br>
 
@@ -393,7 +393,7 @@ Here, we must place identical ngModel binding on each "radio" button with the sa
 
 As a rule of thumb, whenever you would like to "read from" / "write to" a form using **two-way** binding, always bind to ngModel on a form element that would typically have a "name" property.  
 
-<br />
+<br>
 
 ### "Live" or *real time* data model updates
 
