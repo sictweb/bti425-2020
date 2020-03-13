@@ -100,8 +100,6 @@ As suggested by this list of collections, a *term* could have zero or more *defi
 
 Each term collection will have the same data fields:
 
-<div style="background-color: #e9f2f8;">
-
 Assignment 2 "termEnglish" schema fields:
 * wordEnglish
 * wordNonEnglish
@@ -130,8 +128,6 @@ Assignment 2 "definition" schema fields:
 * definition
 * quality (integer)
 * likes (integer)
-
-</div>
 
 <br>
 
