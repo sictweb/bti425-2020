@@ -88,13 +88,13 @@ For this Assignment 2, the database will include two collections:
 
 As suggested by this list of collections, a *term* could have zero or more *definitions*. This idea supports alternative or evolving definitions over time. It is implemented as a one-to-many association or relationship that uses the MongoDB "embedded document" technique: In a English term document, it has a field that stores a collection (i.e. an array) of "definition" *subdocuments*.  
 
+> Review the embedded subdocument coverage in the [introduction](/notes/data-assoc-intro) note and in the [how-to](/notes/data-assoc-subdocs-how-to) note. 
+
 > The embedded subdocument must be described by a Mongoose schema.  
 > Therefore, the web API will have three Mongoose schemas:  
 > 1. definition 
 > 2. terms in English (maybe named "termEnglish")  
 > 3. terms in other languages (maybe named termNonEnglish")  
->  
-> Review the embedded subdocument coverage in the [introduction](/notes/data-assoc-intro) note and in the [how-to](/notes/data-assoc-subdocs-how-to) note. 
 
 <br>
 
