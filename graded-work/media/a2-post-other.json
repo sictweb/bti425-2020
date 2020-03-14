@@ -1,0 +1,29 @@
+{
+  "wordEnglish": "Asynchronous",
+  "wordNonEnglish": "Asynchronisme",
+  "wordExpanded": "",
+  "languageCode": "fr",
+  "image": "https://example.com/image/123",
+  "imageType": "image/png",
+  "audio": "https://example.com/audio/123",
+  "audioType": "audio/mp4",
+  "linkAuthoritative": "",
+  "linkWikipedia": "https://fr.wikipedia.org/wiki/Asynchronisme",
+  "linkYouTube": "",
+  "authorName": "Peter McIntyre",
+  "dateCreated": "2020-02-24T00:00:00.000Z",
+  "dateRevised": "2020-02-24T00:00:00.000Z",
+  "fieldOfStudy": "computer programming",
+  "helpYes": 0,
+  "helpNo": 0,
+  "definitions": [
+    {
+      "authorName": "Peter McIntyre",
+      "dateCreated": "2020-02-24",
+      "definition": "L’asynchronisme désigne le caractère de ce qui ne se passe pas à la même vitesse, que ce soit dans le temps ou dans la vitesse proprement dite, par opposition à un phénomène synchrone. L'émergence de l'Internet et d'outils et dispositif sociotechnique de type « groupware » ont permis de nouvelles formes de relations sociales caractérisées par une asynchronie marquée, de même dans le domaine professionnel, permettant notamment de nouvelles formes d'organisation du travail et de la pensée (éventuellement collaborative et asynchrone).",
+      "quality": 0,
+      "likes": 0
+    }
+  ],
+  "termEnglishId": "5e68fad64e66bc5c92978bfc"
+}

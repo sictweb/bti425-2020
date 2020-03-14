@@ -312,8 +312,13 @@ PUT, application/json, and a JSON entity body
 
 > Data entry tips:
 > * Send a "get one" request to get the JSON for one term  
-> * That will give you a model that you can use to copy, paste, then edit 
-> * When you are entering a non-English term, use one of the official [language codes](https://pam-2020-a2and3webapi.herokuapp.com/api/languages) (e.g. "fr-ca" or "ru" etc.)
+> * That will give you a model that you can use to copy, paste, then edit  
+> * As an example, [here is the JSON](media/a2-post-english.json) that the professor used to add the "asynchronous" English term - notice how the definition is packaged  
+> 
+> * When you are entering a non-English term, use one of the official [language codes](https://pam-2020-a2and3webapi.herokuapp.com/api/languages) (e.g. "fr-ca" or "ru" etc.)  
+> * As an example, [here is the JSON](media/a2-post-other.json) that the professor used to add the "asynchronisme" French term - notice how the definition is packaged
+
+<br>
 
 The intention is that each student will be able to get access to a substantial collection of data, because the efforts of all 100 students in the course, each creating at least two terms, should result in about 200 sharable terms. How?
 

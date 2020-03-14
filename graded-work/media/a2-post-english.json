@@ -1,0 +1,28 @@
+{
+  "wordEnglish": "Asynchronous",
+  "wordNonEnglish": "",
+  "wordExpanded": "",
+  "languageCode": "en",
+  "image": "https://example.com/image/123",
+  "imageType": "image/png",
+  "audio": "https://example.com/audio/123",
+  "audioType": "audio/mp4",
+  "linkAuthoritative": "",
+  "linkWikipedia": "https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)",
+  "linkYouTube": "",
+  "authorName": "Peter McIntyre",
+  "dateCreated": "2020-02-24T00:00:00.000Z",
+  "dateRevised": "2020-02-24T00:00:00.000Z",
+  "fieldOfStudy": "computer programming",
+  "helpYes": 0,
+  "helpNo": 0,
+  "definitions": [
+    {
+      "authorName": "Peter McIntyre",
+      "dateCreated": "2020-02-24",
+      "definition": "Asynchrony, in computer programming, refers to the occurrence of events independent of the main program flow and ways to deal with such events. These may be \"outside\" events such as the arrival of signals, or actions instigated by a program that take place concurrently with program execution, without the program blocking to wait for results.[1] Asynchronous input/output is an example of the latter cause of asynchrony, and lets programs issue commands to storage or network devices that service these requests while the processor continues executing the program. Doing so provides a degree of parallelism.",
+      "quality": 0,
+      "likes": 0
+    }
+  ]
+}
