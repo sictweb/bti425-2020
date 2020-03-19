@@ -7,7 +7,7 @@ layout: default
 
 <div style="background-color: yellow; border: 1px solid black; padding: 0.5em;">
 <p><b>Notice</b></p>
-<p>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change frequently, so please refresh your viewer when consuming or reviewing content.
+<p>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change frequently, so please refresh your viewer when consuming or reviewing content.</p>
 </div>
 
 The table below has links to the daily class notes for the Winter 2020 term.  New notes are at the top. Our "week" consists of a Friday lecture, and a Tuesday computer-lab. 

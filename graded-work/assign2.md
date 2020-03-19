@@ -7,7 +7,7 @@ layout: default
 
 <div style="background-color: yellow; border: 1px solid black; padding: 0.5em;">
 <p><b>Notice</b></p>
-<p>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change frequently, so please refresh your viewer when consuming or reviewing content.
+<p>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change frequently, so please refresh your viewer when consuming or reviewing content.</p>
 </div>
 
 The purpose or objective of the assignment is to create a substantial Angular app that interacts with a web API.
