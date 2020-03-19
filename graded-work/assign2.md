@@ -250,28 +250,34 @@ We suggest that you write the method pairs (in `server.js` and `manager.js`) for
 During the code-writing process, test frequently with Postman. 
 
 It is expected that the following, at a minimum, will be needed for the **termEnglish** entity:
-* get all (sorted) 
-* get one, by object identifier 
-* get one, by "wordEnglish" 
-* add new (termEnglish document, including one definition embedded subdocument) 
-* edit existing (termEnglish document), to add a *new* definition 
-* edit existing (termEnglish document), to increment the "helpYes" value
-* edit existing (termEnglish document), to increment the "helpNo" value
-* edit existing (definition document), to increment the "likes" value
+1. get all (sorted) 
+1. get one, by object identifier 
+1. get one, by "wordEnglish" 
+1. add new (termEnglish document, including one definition embedded subdocument) 
+1. edit existing (termEnglish document), to add a *new* definition 
+1. edit existing (termEnglish document), to increment the "helpYes" value
+1. edit existing (termEnglish document), to increment the "helpNo" value
+1. edit existing (definition document), to increment the "likes" value
 
-> Reminder about the associated/related data coverage and how-to notes.
+> Reminder about the associated/related data coverage and how-to notes.  
+> The `webapi-data-assoc-embed-doc` code example shows how to approach the coding task for numbers 4 and 5.
 
 Time permitting, it may require another method pair to support the text editing of the definition's text. 
 
 It is expected that the following, at a minimum, will be needed for the **termNonEnglish** entity:
-* get all (sorted) (it's possible that the app won't need to use this)
-* get one, by object identifier 
-* get one, by "wordNonEnglish" 
-* add new (termNonEnglish document, including one definition embedded subdocument) 
-* edit existing (termNonEnglish document), to add a *new* definition 
-* edit existing (termNonEnglish document), to increment the "helpYes" value
-* edit existing (termNonEnglish document), to increment the "helpNo" value
-* edit existing (definition document), to increment the "likes" value
+1. get all (sorted) (it's possible that the app won't need to use this)
+1. get one, by object identifier 
+1. get one, by "wordNonEnglish" 
+1. add new (termNonEnglish document, including one definition embedded subdocument) 
+1. edit existing (termNonEnglish document), to add a *new* definition 
+1. edit existing (termNonEnglish document), to increment the "helpYes" value
+1. edit existing (termNonEnglish document), to increment the "helpNo" value
+1. edit existing (definition document), to increment the "likes" value
+
+> Reminder about the associated/related data coverage and how-to notes.  
+> The `webapi-data-assoc-doc-ref` code example shows how to approach the *document reference* coding task for number 4.
+
+> FYI, that code example also shows how to approach the coding task to fetch a termEnglish document which includes its associated/related termNonEnglish documents.
 
 <br>
 
