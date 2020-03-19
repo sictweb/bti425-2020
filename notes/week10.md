@@ -6,7 +6,8 @@ layout: default
 ## BTI425 Week 10 Notes
 
 > Friday, March 13 - classroom lecture  
-> Tuesday, March 17 - hands-on in the computer-lab 
+> Then we pause for a week
+> Tuesday, March 24 - real-time help from the professor 
 
 This week, we will make progress with *forms* topics.  
 
@@ -41,8 +42,12 @@ This week's code examples:
 
 ### Tuesday plan
 
-*Tuesday, March 17* 
+*Tuesday, March 24 (after the pause)* 
 
-Also this week, continue working on Assignment 2. 
+Continue working on Assignment 2. 
+
+Your professor will be available to help you online during your scheduled timeslot. Information about how this works is documented here:  
+Prof. McIntyre's sections (to be posted)  
+Prof. Alam's section (to be posted)
 
 <br>

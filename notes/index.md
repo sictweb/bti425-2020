@@ -18,7 +18,7 @@ All tests on Tuesdays. All assignments are due on Tuesdays.
 
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
-**Week 13**<br>&bull; Tue Apr 14 | No class on Good Friday, April 10<br>Assignment work | Assign 3, 10%<br>Due on Tue Apr 14 | 
+**Week 13**<br>&bull; Tue Apr 14 | No class on Good Friday holiday, April 10<br>Assignment work | Assign 3, 10%<br>Due on Tue Apr 14 | 
 **Week 12**<br>&bull; Fri Apr 3<br>&bull; Tue Apr 7 | Other topics if required<br>Assignment work | Test 3, 20%<br>on Tue Apr 7 | 
 **Week 11**<br>&bull; Fri Mar 27<br>&bull; Tue Mar 31 | Security | [Assign 2](/graded-work/assign2), 25%<br>Due on Tue Mar 31 | 
 **[Week 10 (Tue)](week10)**<br>[&bull; Tue Mar 24](week10) | Forms (continued) | | 

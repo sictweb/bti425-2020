@@ -5,6 +5,11 @@ layout: default
 
 ## BTI425 Assignment 2
 
+<div style="background-color: yellow; border: 1px solid black; padding: 0.5em;">
+<p><b>Notice</b></p>
+<p>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change frequently, so please refresh your viewer when consuming or reviewing content.
+</div>
+
 The purpose or objective of the assignment is to create a substantial Angular app that interacts with a web API.
 
 Read/skim all of this document before you begin work.
@@ -27,7 +32,7 @@ While you are doing the work, if a *specific task* is not clear, or it seems to 
 
 ### Due Date
 
-Tuesday, March 24, 2020, at 11:00pm ET
+Tuesday, March 31, 2020, at 11:00pm ET
 
 Grade value: 25% of your final course grade
 
