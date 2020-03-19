@@ -45,8 +45,8 @@ app.get("/api", (req, res) => {
   links.push({ "rel": "collection", "href": "/api/companies", "methods": "GET" });
   links.push({ "rel": "collection", "href": "/api/products", "methods": "GET" });
   const linkObject = {
-    "apiName": "data-assoc-webapi",
-    "apiDescription": "Web API with associated or related data",
+    "apiName": "webapi-data-assoc-doc-ref",
+    "apiDescription": "Web API with associated data via document reference",
     "apiVersion": "1.0",
     "apiAuthor": "Peter McIntyre",
     "links": links
@@ -68,6 +68,42 @@ app.get('/api/companies', (req, res) => {
     })
     .catch((error) => {
       res.status(500).json({ 'message': error });
+    })
+});
+
+// Get one
+app.get("/api/companies/:id", (req, res) => {
+  // Call the manager method
+  m.companyGetById(req.params.id)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});
+
+// Get one
+app.get("/api/companies/:id/with-products", (req, res) => {
+  // Call the manager method
+  m.companyGetByIdWithProducts(req.params.id)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});
+
+// Add new
+app.post("/api/companies", (req, res) => {
+  // Call the manager method
+  m.companyAdd(req.body)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      res.status(500).json({ "message": error });
     })
 });
 
@@ -106,6 +142,19 @@ app.get("/api/products/:id", (req, res) => {
     })
     .catch(() => {
       res.status(404).json({ "message": "Resource not found" });
+    })
+});
+
+// Add new
+// Must send a product entity that includes a company identifier
+app.post("/api/products", (req, res) => {
+  // Call the manager method
+  m.productAdd(req.body)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      res.status(500).json({ "message": error });
     })
 });
 

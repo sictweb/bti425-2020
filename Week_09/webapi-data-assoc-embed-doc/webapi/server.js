@@ -44,8 +44,8 @@ app.get("/api", (req, res) => {
   // This app's resources...
   links.push({ "rel": "collection", "href": "/api/businesses", "methods": "GET" });
   const linkObject = { 
-    "apiName": "Web API for Assignments 2 and 3",
-    "apiDescription": "Dictionary data for technical terms",
+    "apiName": "webapi-data-assoc-embed-doc",
+    "apiDescription": "Web API with associated embedded or subdocument data",
     "apiVersion": "1.0", 
     "apiAuthor": "Peter McIntyre",
     "links": links
@@ -75,7 +75,6 @@ app.get("/api/businesses/:id", (req, res) => {
   // Call the manager method
   m.businessGetById(req.params.id)
     .then((data) => {
-      //console.log(data.departments[0]);
       res.json(data);
     })
     .catch(() => {
@@ -85,6 +84,7 @@ app.get("/api/businesses/:id", (req, res) => {
 
 // Add new
 // This will need a "business" document with one or more embedded "department" document(s)
+// You MUST send a properly-constructed "business" document
 app.post("/api/businesses", (req, res) => {
   // Call the manager method
   m.businessAdd(req.body)
@@ -109,6 +109,9 @@ app.put("/api/businesses/:id/add-department", (req, res) => {
       res.status(404).json({ "message": "Resource not found" });
     })
 });
+
+// Other "update existing" functions will look similar to the one above
+// The "delete item" function will be similar to those in other code examples
 
 
 

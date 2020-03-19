@@ -37,10 +37,11 @@ module.exports = function () {
 
         // The following works for localhost...
         // Replace the database name with your own value
-        mongoose.connect('mongodb://localhost:27017/testing', { connectTimeoutMS: 5000, useUnifiedTopology: true });
+        mongoose.connect('mongodb://localhost:27017/DATABASE', { connectTimeoutMS: 5000, useUnifiedTopology: true });
 
         // This one works for MongoDB Atlas...
-        // (coming soon)
+        // (to be provided)
+        //mongoose.connect('mongodb+srv://USER:PASSWORD@CLUSTER.mongodb.net/DATABASE?retryWrites=true&w=majority', { connectTimeoutMS: 5000, useUnifiedTopology: true });
 
         // From https://mongoosejs.com/docs/connections.html
         // Mongoose creates a default connection when you call mongoose.connect(). 
@@ -97,6 +98,73 @@ module.exports = function () {
       });
     },
 
+    companyGetById: function (itemId) {
+      return new Promise(function (resolve, reject) {
+
+        // Find one specific document
+        Company.findById(itemId)
+          .exec((error, item) => {
+            if (error) {
+              // Find/match is not found
+              return reject(error.message);
+            }
+            // Check for an item
+            if (item) {
+              // Found, one object will be returned
+              //console.log(item);
+              return resolve(item);
+            } else {
+              return reject('Not found');
+            }
+          });
+      })
+    },
+
+    companyGetByIdWithProducts: async function(itemId) {
+
+      // We will return a custom data structure that's not defined by a Mongoose schema
+
+      // Attempt to locate the existing document
+      // .findById() normally returns an instance of a Mongoose document
+      // .lean() will skip that and return a POJO
+      let company = await Company.findById(itemId).lean();
+
+      if (company) {
+        // Then we can continue
+
+        // Attempt to fetch associated/related products
+        // .find() will return an array of objects defined by the productSchema
+        let products = await Product.find({ companyId: company._id });
+
+        // Add the result to the document
+        company.products = products;
+        return company;
+      }
+      else {
+        // Uh oh, "throw" an error
+        throw "Not found";
+      }
+    },
+
+    companyAdd: async function (newItem) {
+
+      // Attempt to create a new item
+      let company = new Company(newItem);
+
+      if (company) {
+        // Save
+        await company.save();
+        return company;
+      }
+      else {
+        // Uh oh, "throw" an error
+        throw "Not found";
+      }
+    },
+
+    // The "edit existing" and "delete item" methods will be similar
+    // to those seen in other code examples and templates
+    
 
 
     // ############################################################
@@ -153,7 +221,29 @@ module.exports = function () {
             }
           });
       })
+    },
+
+    // Must send a product entity that includes a company identifier
+    productAdd: async function(newItem) {
+
+      // Attempt to locate the existing document
+      let company = await Company.findById(newItem.companyId);
+
+      if (company) {
+        
+        // We can continue
+        let product = new Product(newItem);
+        await product.save();
+        return product;
+      }
+      else {
+        // Uh oh, "throw" an error
+        throw "Not found";
+      }
     }
+
+    // The "edit existing" and "delete item" methods will be similar
+    // to those seen in other code examples and templates
 
 
 

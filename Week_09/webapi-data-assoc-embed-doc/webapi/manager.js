@@ -45,10 +45,11 @@ module.exports = function () {
 
         // The following works for localhost...
         // Replace the database name with your own value
-        mongoose.connect('mongodb://localhost:27017/a2and3', { connectTimeoutMS: 5000, useUnifiedTopology: true });
+        mongoose.connect('mongodb://localhost:27017/DATABASE', { connectTimeoutMS: 5000, useUnifiedTopology: true });
 
         // This one works for MongoDB Atlas...
-        //mongoose.connect('mongodb+srv://dbAdmin:X6ISqSJisW7G2j7I@peterbti425winter2019-ikjae.mongodb.net/CodeExamples?retryWrites=true&w=majority', { connectTimeoutMS: 5000, useUnifiedTopology: true });
+        // (to be provided)
+        //mongoose.connect('mongodb+srv://USER:PASSWORD@CLUSTER.mongodb.net/DATABASE?retryWrites=true&w=majority', { connectTimeoutMS: 5000, useUnifiedTopology: true });
 
         // From https://mongoosejs.com/docs/connections.html
         // Mongoose creates a default connection when you call mongoose.connect(). 
@@ -159,7 +160,10 @@ module.exports = function () {
       }
     },
 
+    // Other "edit" tasks can be coded in a way that's similar to the method above
+    // Attempt to fetch the document, make changes, save
 
+    // The "delete" task works as you have seen in the past in other code examples
 
   } // return statement that encloses all the function members
 
