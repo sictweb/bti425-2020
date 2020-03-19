@@ -5,6 +5,11 @@ layout: default
 
 ## Notes
 
+<div style="background-color: yellow; border: 1px solid black; padding: 0.5em;">
+<p><b>Notice</b></p>
+<p>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change frequently, so please refresh your viewer when consuming or reviewing content.
+</div>
+
 The table below has links to the daily class notes for the Winter 2020 term.  New notes are at the top. Our "week" consists of a Friday lecture, and a Tuesday computer-lab. 
 
 All tests on Tuesdays. All assignments are due on Tuesdays. 
@@ -13,10 +18,12 @@ All tests on Tuesdays. All assignments are due on Tuesdays.
 
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
-**Week 13**<br>&bull; Fri Apr 3<br>&bull; Tue Apr 7 | Other topics if required<br>Assignment work | Assign 3, 10%<br>Due on Tue Apr 7 | 
-**Week 12**<br>&bull; Fri Mar 27<br>&bull; Tue Mar 31 | Other topics if required<br>Assignment work | Test 3, 20%<br>on Tue Mar 31 | 
-**Week 11**<br>&bull; Fri Mar 20<br>&bull; Tue Mar 24 | Security | [Assign 2](/graded-work/assign2), 25%<br>Due on Tue Mar 24 | 
-**[Week 10](week10)**<br>[&bull; Fri Mar 13<br>&bull; Tue Mar 17](week10) | Forms | | 
+**Week 13**<br>&bull; Tue Apr 14 | No class on Good Friday, April 10<br>Assignment work | Assign 3, 10%<br>Due on Tue Apr 14 | 
+**Week 12**<br>&bull; Fri Apr 3<br>&bull; Tue Apr 7 | Other topics if required<br>Assignment work | Test 3, 20%<br>on Tue Apr 7 | 
+**Week 11**<br>&bull; Fri Mar 27<br>&bull; Tue Mar 31 | Security | [Assign 2](/graded-work/assign2), 25%<br>Due on Tue Mar 31 | 
+**[Week 10 (Tue)](week10)**<br>[&bull; Tue Mar 24](week10) | Forms (continued) | | 
+**Pause**<br>Mon Mar 16 to<br>Fri Mar 20 | (no in-class sessions) | | 
+**[Week 10 (Fri)](week10)**<br>[&bull; Fri Mar 13](week10) | Forms | | 
 **[Week 9](week09)**<br>[&bull; Fri Mar 6<br>&bull; Tue Mar 10](week09) | Services | | 
 **[Week 8 (Tue)](week08)**<br>[&bull; Tue Mar 3](week08) | Test 2 is on Tuesday, March 3 | Test 2, 15%<br>on Tue Mar 3| 
 **Study week**<br>Mon Feb 24 to<br>Fri Feb 28 | (no in-class sessions) | | 
