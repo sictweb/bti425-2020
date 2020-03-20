@@ -19,7 +19,8 @@ Read/skim all of this document before you begin work.
 
 <span style="color: red;">Notice:  
 Almost done editing. The web API text is complete.  
-The work to be done in the Angular app will use the web API resources, so you can predict what the Angular app must do. After the Friday March 13 class, in which "forms" are discussed again, this document will be updated again, with an example of a sample strategy for designing and using your Angular components.</span> 
+Thanks to the students who are entering sample data for the benefit of EVERYONE.  
+The work to be done in the Angular app will use the web API resources, so you can predict what the Angular app must do. Final updates and some screen captures will come soon.</span> 
 
 <br>
 
