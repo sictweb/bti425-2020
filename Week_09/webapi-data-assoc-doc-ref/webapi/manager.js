@@ -37,7 +37,8 @@ module.exports = function () {
 
         // The following works for localhost...
         // Replace the database name with your own value
-        mongoose.connect('mongodb://localhost:27017/DATABASE', { connectTimeoutMS: 5000, useUnifiedTopology: true });
+        mongoose.connect('mongodb://localhost:27017/a2and3', { connectTimeoutMS: 5000, useUnifiedTopology: true });
+        //mongoose.connect('mongodb://localhost:27017/DATABASE', { connectTimeoutMS: 5000, useUnifiedTopology: true });
 
         // This one works for MongoDB Atlas...
         // (to be provided)
@@ -98,6 +99,28 @@ module.exports = function () {
       });
     },
 
+    companyGetByName: async function (text) {
+
+      // URL decode the incoming value
+      text = decodeURIComponent(text);
+
+      // Attempt to find in the "name" field, case-insensitive
+      let results = await Company.find({ name: { $regex: text, $options: "i" } });
+      // This will find zero or more
+      return results;
+    },
+
+    companyGetByCountry: async function (text) {
+
+      // URL decode the incoming value
+      text = decodeURIComponent(text);
+
+      // Attempt to find in the "country" field, case-insensitive
+      let results = await Company.find({ country: { $regex: text, $options: "i" } });
+      // This will find zero or more
+      return results;
+    },
+
     companyGetById: function (itemId) {
       return new Promise(function (resolve, reject) {
 
@@ -111,7 +134,6 @@ module.exports = function () {
             // Check for an item
             if (item) {
               // Found, one object will be returned
-              //console.log(item);
               return resolve(item);
             } else {
               return reject('Not found');

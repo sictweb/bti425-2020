@@ -71,7 +71,31 @@ app.get('/api/companies', (req, res) => {
     })
 });
 
-// Get one
+// Get some by name
+app.get("/api/companies/name/:text", (req, res) => {
+  // Call the manager method
+  m.companyGetByName(req.params.text)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});
+
+// Get some by country
+app.get("/api/companies/country/:text", (req, res) => {
+  // Call the manager method
+  m.companyGetByCountry(req.params.text)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});
+
+// Get one by identifier
 app.get("/api/companies/:id", (req, res) => {
   // Call the manager method
   m.companyGetById(req.params.id)
