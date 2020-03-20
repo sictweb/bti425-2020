@@ -5,7 +5,7 @@ layout: default
 
 ## BTI425 Assignment 2
 
-<div style="background-color: yellow; border: 1px solid black; padding: 0.5em;">
+<div style="background-color: lightyellow; border: 1px solid black; padding: 0.5em;">
 <p><b>Notice</b><br>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change frequently, so please refresh your viewer when consuming or reviewing content.</p>
 </div>
 
@@ -285,6 +285,9 @@ It is expected that the following, at a minimum, will be needed for the **termNo
 
 > FYI, that code example also shows how to approach the coding task to fetch a termEnglish document which includes its associated/related termNonEnglish documents.
 
+> For guidance about how to handle the "increment" tasks for numbers 6, 7, and 8, read this:  
+> [Web API - "command" technique](web-api-commands)
+
 <br>
 
 #### Get large amounts of data (eventually!)
@@ -391,7 +394,22 @@ Set up the rest of your dev environment (terminal windows, editor, browsers and 
 
 ### Doing the work, initial 
 
-(more to come)
+(coming soon)
+
+Overview...
+* We'll need a "home" component
+* Maybe it's a good idea to use the "home" component to hold the "search" functionality 
+* It should either show a list of English terms, or include a link to a dedicated component 
+* From a list of English terms, include a link to a detail component 
+* The detail component will show all of the term's data
+  * And it will include its definitions 
+  * And translations (full text or link - you decide)
+* From there, it should be possible to "add" a new definition for the displayed term 
+* And it should be possible to "add" a new non-English translation for the displayed term 
+* When displaying a term, the UI should have a control that would enable the viewer/user to easily tap "yes this helped me" or "no this didn't help me" 
+* When displaying a definition for a term, the UI should have a control that would enable the viewer/user to easily indicate that they "like" the definition 
+
+So, overall, maybe about six - plus or minus - components. 
 
 <br>
 <br>

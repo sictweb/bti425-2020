@@ -1,6 +1,6 @@
 ## BTI425 - Web Programming for Apps and Services
 
-<div style="background-color: yellow; border: 1px solid black; padding: 0.5em;">
+<div style="background-color: lightyellow; border: 1px solid black; padding: 0.5em;">
 <p><b>Notice</b><br>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change frequently, so please refresh your viewer when consuming or reviewing content.</p>
 </div>
 
