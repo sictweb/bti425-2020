@@ -37,8 +37,7 @@ module.exports = function () {
 
         // The following works for localhost...
         // Replace the database name with your own value
-        mongoose.connect('mongodb://localhost:27017/a2and3', { connectTimeoutMS: 5000, useUnifiedTopology: true });
-        //mongoose.connect('mongodb://localhost:27017/DATABASE', { connectTimeoutMS: 5000, useUnifiedTopology: true });
+        mongoose.connect('mongodb://localhost:27017/DATABASE', { connectTimeoutMS: 5000, useUnifiedTopology: true });
 
         // This one works for MongoDB Atlas...
         // (to be provided)

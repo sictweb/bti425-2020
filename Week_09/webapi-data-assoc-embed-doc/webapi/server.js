@@ -110,6 +110,34 @@ app.put("/api/businesses/:id/add-department", (req, res) => {
     })
 });
 
+// Command - change the "slogan" to upper case
+// This will need an identifier parameter, and an entity body that looks like this...
+// { "_id": "abc123etc." }
+app.put("/api/businesses/slogan-edit/:id", (req, res) => {
+  // Call the manager method
+  m.businessSloganUpperCase(req.params.id, req.body)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});
+
+// Command - change the "slogan" to upper case
+// This will need an identifier parameter, and an entity body that looks like this...
+// { "_id": "abc123etc." }
+app.put("/api/businesses/up-headcount-in-department/:id", (req, res) => {
+  // Call the manager method
+  m.businessDepartmentHeadcountUp(req.params.id, req.body)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch(() => {
+      res.status(404).json({ "message": "Resource not found" });
+    })
+});
+
 // Other "update existing" functions will look similar to the one above
 // The "delete item" function will be similar to those in other code examples
 

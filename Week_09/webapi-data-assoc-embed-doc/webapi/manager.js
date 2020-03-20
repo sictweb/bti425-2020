@@ -160,6 +160,62 @@ module.exports = function () {
       }
     },
 
+    // Command - change the "slogan" to upper case
+    // This will need an identifier parameter, and an entity body that looks like this...
+    // { "_id": "abc123etc." }
+    businessSloganUpperCase: async function (itemId, newItem) {
+
+      // Early exit, confirm that the parameter and entity body match
+      if (itemId !== newItem._id) {
+        // Uh oh, "throw" an error
+        throw "Not found";
+      }
+
+      // Attempt to locate the existing document
+      let business = await Business.findById(itemId);
+
+      if (business) {
+        // Do the task
+        business.slogan = business.slogan.toUpperCase();
+        await business.save();
+        // Send the entire document back to the requestor
+        return business;
+      }
+      else {
+        // Uh oh, "throw" an error
+        throw "Not found";
+      }
+    },
+
+    // Command - increment a department "headCount"
+    // This will need an identifier parameter, and an entity body that looks like this...
+    // { "_id": "abc123etc." }
+    businessDepartmentHeadcountUp: async function (itemId, newItem) {
+
+      // Early exit, confirm that the parameter and entity body match
+      if (itemId !== newItem._id) {
+        // Uh oh, "throw" an error
+        throw "Not found";
+      }
+
+      // Attempt to locate the existing document that has the desired department
+      let business = await Business.findOne({ "departments._id": itemId });
+
+      if (business) {
+        // Attempt to locate the department
+        let dep = business.departments.id(itemId);
+        // Increment and save
+        dep.headCount++;
+        await business.save();
+        // Send the entire document back to the requestor
+        return business;
+      }
+      else {
+        // Uh oh, "throw" an error
+        throw "Not found";
+      }
+    }
+
     // Other "edit" tasks can be coded in a way that's similar to the method above
     // Attempt to fetch the document, make changes, save
 
