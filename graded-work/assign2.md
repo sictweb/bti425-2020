@@ -252,22 +252,28 @@ During the code-writing process, test frequently with Postman.
 It is expected that the following, at a minimum, will be needed for the **termEnglish** entity:
 1. get all (sorted) 
 1. get one, by object identifier 
-1. get one, by "wordEnglish" 
+1. get one (or some), by "wordEnglish" 
 1. add new (termEnglish document, including one definition embedded subdocument) 
 1. edit existing (termEnglish document), to add a *new* definition 
 1. edit existing (termEnglish document), to increment the "helpYes" value
 1. edit existing (termEnglish document), to increment the "helpNo" value
 1. edit existing (definition document), to increment the "likes" value
 
+> For guidance about how to handle "get some" for number 3, read this:  
+> [Web API CRUD - "get some" technique](web-api-crud-get-some)
+
 > Reminder about the associated/related data coverage and how-to notes.  
 > The `webapi-data-assoc-embed-doc` code example shows how to approach the coding task for numbers 4 and 5.
+
+> For guidance about how to handle the "increment" tasks for numbers 6, 7, and 8, read this:  
+> [Web API - "command" technique](web-api-commands)
 
 Time permitting, it may require another method pair to support the text editing of the definition's text. 
 
 It is expected that the following, at a minimum, will be needed for the **termNonEnglish** entity:
 1. get all (sorted) (it's possible that the app won't need to use this)
 1. get one, by object identifier 
-1. get one, by "wordNonEnglish" 
+1. get one (or some), by "wordNonEnglish" 
 1. add new (termNonEnglish document, including one definition embedded subdocument) 
 1. edit existing (termNonEnglish document), to add a *new* definition 
 1. edit existing (termNonEnglish document), to increment the "helpYes" value
@@ -290,7 +296,7 @@ As noted above, the professor version of the web API has been published here:
 Here's the plain text URL:  
 `https://pam-2020-a2and3webapi.herokuapp.com/api`
 
-Using Postman, you can add these segments to the URL, and interact with the web API:
+Using Postman, you can add these segments to the URL, and interact with the web API. Replace "XXXXXX..." with a MongoDB object identifier:
 
 * `/terms/english`  
 All terms in English 
@@ -316,9 +322,30 @@ As you would expect, you can add a new non-English term (with its initial defini
 * `/terms/other`  
 POST, application/json, and a JSON entity body  
 
-Finally, for an *existing* non-English term, you can add another definition, using this URL:
+For an *existing* non-English term, you can add another definition, using this URL:
 * `/terms/other/XXXXXX.../add-definition`  
 PUT, application/json, and a JSON entity body  
+
+To increment a term's "helpYes" counter:
+* `/terms/english/helpyes/XXXXXX...`  
+PUT, application/json, and a JSON entity body that looks like...  
+`{ "_id": "XXXXXX..." }`  
+* Or, begin the URL with `/terms/other...` for non-English
+
+To increment a term's "helpNo" counter:
+* `/terms/english/helpno/XXXXXX...`  
+PUT, application/json, and a JSON entity body that looks like...  
+`{ "_id": "XXXXXX..." }`
+* Or, begin the URL with `/terms/other...` for non-English
+
+Finally, to increment a definition's "likes" counter: 
+* `/terms/english/definition-like/XXXXXX...`  
+PUT, application/json, and a JSON entity body that looks like...  
+`{ "_id": "XXXXXX..." }`  
+(this is the object identifier for the *definition*, not the *term*)
+* Or, begin the URL with `/terms/other...` for non-English
+
+<br>
 
 <mark>To help yourself, and your fellow students,</mark> plan on using Postman and adding at least one English term and one non-English term to the professor web API. We also suggest that you add another definition to a term (one English and one non-English). 
 

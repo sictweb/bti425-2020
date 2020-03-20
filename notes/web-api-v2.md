@@ -222,6 +222,11 @@ The project will have three (3) JavaScript source code files:
 
 Open the code example before continuing. Your professor will explain the code in class. 
 
+> The code example shows how to handle the typical queries:  
+> Get all, get one, add new, edit existing, delete item  
+> For guidance about how to handle "get some", read this:  
+> [Web API CRUD - "get some" technique](web-api-crud-get-some)
+
 <br>
 
 #### Start the database engine
