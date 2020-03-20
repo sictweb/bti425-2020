@@ -260,13 +260,13 @@ It is expected that the following, at a minimum, will be needed for the **termEn
 1. edit existing (definition document), to increment the "likes" value
 
 > For guidance about how to handle "get some" for number 3, read this:  
-> [Web API CRUD - "get some" technique](web-api-crud-get-some)
+> [Web API CRUD - "get some" technique](/notes/web-api-crud-get-some)
 
 > Reminder about the associated/related data coverage and how-to notes.  
 > The `webapi-data-assoc-embed-doc` code example shows how to approach the coding task for numbers 4 and 5.
 
 > For guidance about how to handle the "increment" tasks for numbers 6, 7, and 8, read this:  
-> [Web API - "command" technique](web-api-commands)
+> [Web API - "command" technique](/notes/web-api-commands)
 
 Time permitting, it may require another method pair to support the text editing of the definition's text. 
 
@@ -286,7 +286,7 @@ It is expected that the following, at a minimum, will be needed for the **termNo
 > FYI, that code example also shows how to approach the coding task to fetch a termEnglish document which includes its associated/related termNonEnglish documents.
 
 > For guidance about how to handle the "increment" tasks for numbers 6, 7, and 8, read this:  
-> [Web API - "command" technique](web-api-commands)
+> [Web API - "command" technique](/notes/web-api-commands)
 
 <br>
 
