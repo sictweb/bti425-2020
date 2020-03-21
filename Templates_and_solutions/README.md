@@ -10,6 +10,12 @@ npm i
 
 <br>
 
+### Angular app template version 3
+
+It adds template-driven forms handling, validation, and CRUD samples to the template version 2 (below). 
+
+<br>
+
 ### Angular app template version 2
 
 It adds a service implementation to the template version 1 (below). 
