@@ -11,6 +11,10 @@ Our "week" consists of a Friday lecture, and a Tuesday computer-lab.
 
 Please note that *the schedule may change*, and that it is your responsibility to know the current schedule.
 
+<div style="background-color: lightyellow; border: 1px solid black; padding: 0.5em;">
+<p><b>Notice</b><br>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change frequently, so please refresh your viewer when consuming or reviewing content.</p>
+</div>
+
 <br>
 
 Week number<br>and days | Topic theme and coverage | Graded work | Mark value
@@ -26,10 +30,11 @@ Week 8 (Fri)<br>&bull; Fri Feb 21 | Routing | |
 Study week<br>Feb 24 to 28 | (no in-class sessions) | |
 Week 8 (Tue)<br>&bull; Tue Mar 3 | Test 2 is on Tuesday, March 3 | Test 2 | 15%
 Week 9<br>&bull; Fri Mar 6<br>&bull; Tue Mar 10 | Services | |
-Week 10<br>&bull; Fri Mar 13<br>&bull; Tue Mar 17 <span style="color: green;">&#9752;</span> | Forms | | 
-Week 11<br>&bull; Fri Mar 20<br>&bull; Tue Mar 24 | Security | Assign 2 | 25%
-Week 12<br>&bull; Fri Mar 27<br>&bull; Tue Mar 31 | Other topics if required<br>Assignment work | Test 3 | 20%
-Week 13<br>&bull; Fri Apr 3<br>&bull; Tue Apr 7 | Other topics if required<br>Assignment work<br>Friday April 10 is the Good Friday holiday, no class | Assign 3 | 10%
-Exam week<br>Apr 13 to 17 | (end of term, no in-class sessions) | | 
+Week 10<br>&bull; Fri Mar 13 | Forms | | 
+Pause<br>Mar 16 to 20 | No classes | | 
+Week 10<br>&bull; Tue Mar 24 | Forms (continued) | | 
+Week 11<br>&bull; Fri Mar 27<br>&bull; Tue Mar 31 | Security | Assign 2 | 25%
+Week 12<br>&bull; Fri Apr 3<br>&bull; Tue Apr 7 | Other topics if required<br>Assignment work | Test 3 | 20%
+Week 13<br>&bull; Tue Apr 14 | Other topics if required<br>Assignment work<br>Friday April 10 is the Good Friday holiday, no class | Assign 3 | 10%
 
 <br>
