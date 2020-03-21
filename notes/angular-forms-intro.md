@@ -42,7 +42,7 @@ In this course, we will work only with *Template-driven Forms*.
 
 This approach takes advantage of your knowledge of, and skills with an HTML template in a component. 
 
-It builds upon your experience with one-way read-only data binding (using `{%raw%}{{ curly braces syntax }}{%endraw%}`, or its square-bracket form for element attributes, `[value]='expression`), by going further with two-way data binding. 
+It builds upon your experience with one-way read-only data binding (using curly braces syntax `{%raw%}{{ expression }}{%endraw%}`, or its square-bracket form for element attributes, `[attr]='expression'`), by going further with two-way data binding. 
 
 <br>
 
@@ -69,7 +69,7 @@ Here's a simple form, in pure HTML5, which features all of the most typical form
 * textarea
 * select (single / "multiple")
 
-It also uses the bootstrap "forms" classes, ie "form-group" and "form-control" for formatting:
+It also uses the [Bootstrap](https://getbootstrap.com/docs/3.3/) "forms" classes, ie "form-group" and "form-control" for formatting:
 
 ```html
 <form action="/path/to/handler" method="post">
