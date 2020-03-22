@@ -21,7 +21,7 @@ The Angular CLI enables us to build an app. Navigate into the app/project folder
 ng build --prod
 ```
 
-It will create a folder named `dist`, and place several static code assets in the folder. Soon, these will be copied to a Node.js + Express.js server. 
+It will create a folder named `dist`, and inside, another folder that matches the project name (for example, `PROJECTNAME`). Inside that, there are several static code assets in the folder. Soon, these files will be copied to a Node.js + Express.js server. 
 
 ![Angular build result](/media/angular-build-result.png)
 
@@ -29,9 +29,9 @@ It will create a folder named `dist`, and place several static code assets in th
 
 ### Node.js + Express.js server app
 
-Create (either from new or from a template that you have) a Node.js + Express.js server app. 
+Create a Node.js + Express.js server app, either from new or from a template that you have. 
 
-It will need a `public` folder. Copy the several static code assets from the `dist` folder into this new `public` folder. 
+It will need a new folder named `public`. Copy the several static code assets from the `dist/PROJECTNAME` folder into this new `public` folder. 
 
 It will need a git configuration. Run the `git init` command to do that. 
 
@@ -61,30 +61,45 @@ app.listen(HTTP_PORT, () => {
 });
 ```
 
-Test it locally. When you're happy, do a "git commit":
-```
-git commit -m "Your custom commit message"
-```
+Test it locally. When you're happy, commit the work by using the Source Control feature in Visual Studio Code (or do it via the command line).
 
 <br>
 
 ### Heroku hosting
 
-[For reference, here is the guidance again](http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/getting-started-with-heroku/). 
+[For reference, here is the full guidance again](https://web322.ca/getting-started-with-heroku). Here's a brief summary:
 
-We suggest that you create a new Heroku app. 
+Before continuing:
+* Confirm that `git init` was done 
+* Confirm that the git commit task was done
 
-If you do it with the Heroku command line interface - while in the app/project folder - then it will update the app/project with the name of the new Heroku app. 
+Next, login to Heroku:
+```bash
+heroku login
+```
 
-Alternatively, if you do it with the Heroku web console, then you must run a command to update the app/project with the name of the new Heroku app. The command is:
+After login, we suggest that you create a new Heroku app (obviously, replace "name-of-heroku-app" with whatever name you wish): 
+```bash
+heroku create name-of-heroku-app
+```
+
+Finally, deploy the app to Heroku:
+```bash
+git push heroku master
+```
+
+<br>
+
+#### Troubleshooting 
+
+Occasionally, it is possible that the "git push..." task will fail, and it's likely because the project folder has lost its configuration information. Or, it's because the new Heroku app was created with the Heroku web console, and not with the command line interface. 
+
+To fix this, run a command to update the project with the name of the new Heroku app. The command is:
 ```
 heroku git:remote -a name-of-heroku-app
 ```
 
-Finally, you can deploy to Heroku:
-```
-git push heroku master
-```
+Then, you can deploy to Heroku.
 
 <br>
 

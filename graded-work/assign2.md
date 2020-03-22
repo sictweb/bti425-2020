@@ -387,7 +387,11 @@ After you have these downloaded files, you can easily import them into your own 
 
 Getting started includes generating a new project, and configuring your development environment. 
 
-Make sure that your web API has been deployed to Heroku and Atlas, and make sure that you can interact with it correctly with Postman. This is important, because you must have confidence in the hosted app to make progress on the Angular app. 
+> You can create a new project with `ng new...`  
+> Or, you can use a template from the code example repo folder  
+> "Templates and solutions"
+
+Make sure that your web API has been deployed to Heroku and MongoDB Atlas, and make sure that you can interact with it correctly with Postman. This is important, because you must have confidence in the hosted app to make progress on the Angular app. 
 
 Set up the rest of your dev environment (terminal windows, editor, browsers and tools). 
 
@@ -395,16 +399,14 @@ Set up the rest of your dev environment (terminal windows, editor, browsers and 
 
 ### Doing the work, initial 
 
-(coming soon)
-
-Overview...
+The first big task is to design and plan the components needed and how the user will interact with the app. Here's an overview of how your professors thought about when making a sample solution: 
 * We'll need a "home" component
-* Maybe it's a good idea to use the "home" component to hold the "search" functionality 
 * It should either show a list of English terms, or include a link to a dedicated component 
-* From a list of English terms, include a link to a detail component 
+* Maybe it's a good idea to use the "home" component to hold the "search" functionality 
+* From the list of English terms, include an "add new" link, and for each item on the list, include a link to a detail component
 * The detail component will show all of the term's data
   * And it will include its definitions 
-  * And translations (full text or link - you decide)
+  * And translations (full text or link - to be decided)
 * From there, it should be possible to "add" a new definition for the displayed term 
 * And it should be possible to "add" a new non-English translation for the displayed term 
 * When displaying a term, the UI should have a control that would enable the viewer/user to easily tap "yes this helped me" or "no this didn't help me" 
@@ -412,14 +414,17 @@ Overview...
 
 So, overall, maybe about six - plus or minus - components. 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+
+
+
+
+
+
+
+
+
 <br>
 
 ### Testing your work
