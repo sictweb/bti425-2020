@@ -15,8 +15,6 @@ The purpose or objective of the assignment is to create a substantial Angular ap
 
 Read/skim all of this document before you begin work.
 
-<br>
-
 While you are doing the work, if a *specific task* is not clear, or it seems to require an unreasonable amount of time to complete, or it seems to require knowledge way beyond the content we've covered in the course, please don't hesistate to contact your professor. 
 
 > You should NOT have to search for or locate resources "out there" in an effort to complete this work.  
@@ -94,7 +92,7 @@ As suggested by this list of collections, a *term* could have zero or more *defi
 > Therefore, the web API will have three Mongoose schemas:  
 > 1. definition 
 > 2. terms in English (maybe named "termEnglish")  
-> 3. terms in other languages (maybe named termNonEnglish")  
+> 3. terms in other languages (maybe named "termNonEnglish")  
 
 <br>
 
@@ -381,8 +379,7 @@ After you have these downloaded files, you can easily import them into your own 
 Getting started includes generating a new project, and configuring your development environment. 
 
 > You can create a new project with `ng new...`  
-> Or, you can use a template from the code example repo folder  
-> "Templates and solutions"
+> Or, you can use a template from the code example repo folder "Templates and solutions"
 
 Make sure that your web API has been completed, and deployed to Heroku and MongoDB Atlas. Make sure that you can interact with it correctly with Postman. This is important, because you must have confidence in the hosted app to make progress on the Angular app. 
 
@@ -395,7 +392,7 @@ Set up the rest of your dev environment (terminal windows, editor, browsers and 
 We have a suggestion: As you make progress on the Angular app, feature by feature, deploy it to Heroku, and maybe use another device (your smartphone?) to connect to it and interact with it. 
 
 How-to instructions for Angular app to Heroku are here:  
-[Deploy Angular app to Heroku](angular-heroku-deploy)
+[Deploy Angular app to Heroku](/notes/angular-heroku-deploy)
 
 <br>
 
@@ -432,7 +429,7 @@ In the data manager service, write a method that will send a request to the web 
 
 #### Search for an English term
 
-Somewhere in the user interface (in an existing component or in a dedicated component), search (for an English term) should be supported. To learn one approach, read the [Angular app "search" UI and UX](angular-search-ui) document.
+Somewhere in the user interface (in an existing component or in a dedicated component), search (for an English term) should be supported. To learn one approach, read the [Angular app "search" UI and UX](/notes/angular-search-ui) document.
 
 In the professor's sample solution, it was implemented as part of the list of English terms. 
 
