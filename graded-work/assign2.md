@@ -17,13 +17,6 @@ Read/skim all of this document before you begin work.
 
 <br>
 
-<span style="color: red;">Notice:  
-Almost done editing. The web API text is complete.  
-Thanks to the students who are entering sample data for the benefit of EVERYONE.  
-The work to be done in the Angular app will use the web API resources, so you can predict what the Angular app must do. Final updates and some screen captures will come soon.</span> 
-
-<br>
-
 While you are doing the work, if a *specific task* is not clear, or it seems to require an unreasonable amount of time to complete, or it seems to require knowledge way beyond the content we've covered in the course, please don't hesistate to contact your professor. 
 
 > You should NOT have to search for or locate resources "out there" in an effort to complete this work.  
@@ -391,9 +384,18 @@ Getting started includes generating a new project, and configuring your developm
 > Or, you can use a template from the code example repo folder  
 > "Templates and solutions"
 
-Make sure that your web API has been deployed to Heroku and MongoDB Atlas, and make sure that you can interact with it correctly with Postman. This is important, because you must have confidence in the hosted app to make progress on the Angular app. 
+Make sure that your web API has been completed, and deployed to Heroku and MongoDB Atlas. Make sure that you can interact with it correctly with Postman. This is important, because you must have confidence in the hosted app to make progress on the Angular app. 
 
 Set up the rest of your dev environment (terminal windows, editor, browsers and tools). 
+
+<br>
+
+#### Suggestion - deploy to Heroku often
+
+We have a suggestion: As you make progress on the Angular app, feature by feature, deploy it to Heroku, and maybe use another device (your smartphone?) to connect to it and interact with it. 
+
+How-to instructions for Angular app to Heroku are here:  
+[Deploy Angular app to Heroku](angular-heroku-deploy)
 
 <br>
 
@@ -412,18 +414,104 @@ The first big task is to design and plan the components needed and how the user 
 * When displaying a term, the UI should have a control that would enable the viewer/user to easily tap "yes this helped me" or "no this didn't help me" 
 * When displaying a definition for a term, the UI should have a control that would enable the viewer/user to easily indicate that they "like" the definition 
 
-So, overall, maybe about six - plus or minus - components. 
+So, overall, maybe about six - plus or minus - components. Here is some commentary.
 
+<br>
 
+### List of English terms
 
+As noted above, the list of English terms can be on the home or landing component, or in a dedicated component. 
 
+Decide which fields you want to display in the list. 
 
+In the data manager service, write a method that will send a request to the web API resource. Obviously, you must write classes (in the data classes source code file) that match the shape of the web API results (definition, English term, and non-English term). 
 
+<img class="border1" src="media/a2-2020-english-term-list.png" alt="">
 
+<br>
 
+#### Search for an English term
 
+Somewhere in the user interface (in an existing component or in a dedicated component), search (for an English term) should be supported. To learn one approach, read the [Angular app "search" UI and UX](angular-search-ui) document.
 
+In the professor's sample solution, it was implemented as part of the list of English terms. 
 
+<img class="border1" src="media/a2-2020-english-term-list-search.png" alt="">
+
+<br>
+
+### Add new English term
+
+This is a classic implementation of an "add new" use case. As you have learned, it needs:
+* A component 
+* In the component template, controls are needed to gather data from the user
+* In the component code, properties for the form data and other needs, and a method to handle form submission
+* Also in the component code, a data class that matches the shape of the form data 
+* A data manager service method that sends the data to the web API
+
+Some of the data items can be set or calculated in code. In other words, it is obviously *not necessary* to gather the "create date and time" from the user. Do that programmatically. For new English terms, we also will just set its value because we know the language code.
+
+Remember that you MUST gather a definition when you are creating a new English term. (As you know, additional definitions can be added later.)
+
+> Note: Screen capture sample is coming soon.
+
+<br>
+
+### English term detail
+
+This is a classic implementation of a "get one" use case.
+
+Its visual UI design is somewhat important. For example, an English term could have one - or more - definitions. It would be nice to conveniently display, or have access to, the multiple definitions. Also, an English term could have zero - or more - translations. As above, it would be nice to display or link to them (if present). 
+
+This means that we can tolerate different visual UI designs. One choice is to render everything in one component. Another choice is to render each translation separately in its own component. 
+
+Whatever is done, one of the tasks a user may want to do after viewing an English term and its definition(s) is to *add another definition*. Enable that capability in the UI. 
+
+Another task a user may want to do after viewing an English term and its definition(s) is to *add a translation* in another language. Enable that capability in the UI. 
+
+Another task a user may want to do is to "vote" on whether the term and its definitions were helpful. (That's what the "help yes" and "help no" fields are for in the web API and database schema.) Gathering that info from the user can be done in many ways, but they all require an element that causes a method (in the component code) to run, which in turn calls a data manager service method, which sends a request to the appropriate web API resource. 
+
+Similarly, each definition should offer the ability to "like" it, again via an element > method > data manager service > web API request process. 
+
+> Note: Screen capture sample is coming soon.
+
+<br>
+
+### Add a new definition to an English term
+
+Above, we identified a possible user task is to add another definition to an English term. That will be a classic "add new" use case, which will end up sending a request to the web API method that you wrote for that purpose. 
+
+When you are composing the form, remember that the web API request will need the English term identifier, so make sure that you pass that along from the term detail component to the "add new" definition component. 
+
+> Note: Screen capture sample is coming soon.
+
+<br>
+
+### Add a new translation for an English term
+
+Like the "add new" English term above, we must enable the ability to add a *new translation* for an existing English term. 
+
+This is a classic implementation of an "add new" use case. Very similar to the one above (for an English term), but different because it targets a different web API resource, and it must include the term identifier (so make sure to pass that along).
+
+> Note: Screen capture sample is coming soon.
+
+The language code must be from the professor's sample solution for the web API. The URL is:  
+`http://pam-2020-a2and3webapi.herokuapp.com/api/languages`  
+It is OK to use that resource directly from your data manager service. You must write a data class that matches the shape of the collection's items. It is not necessary to add this to your own web API and database (but if you do want to, go ahead).
+
+Obviously, when the component loads, the code must fetch the languages collection so that they can be rendered in an item-selection control (e.g. a drop-down list or whatever). 
+
+In the `select option` element group, the visible text on the item-selection control must be the language name. The non-displayed value attribute must be the language code (that ends up getting stored in the database). 
+
+<img class="border1" src="media/a2-2020-term-add-language.png" alt="" style="max-width: 300px">
+
+<br>
+
+### Add a new definition to a translation
+
+This will be almost the same as the one described above, in the "Add a new definition to an English term" section. 
+
+> Note: Screen capture sample is coming soon.
 
 <br>
 

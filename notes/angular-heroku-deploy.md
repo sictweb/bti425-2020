@@ -21,7 +21,7 @@ The Angular CLI enables us to build an app. Navigate into the app/project folder
 ng build --prod
 ```
 
-It will create a folder named `dist`, and inside, another folder that matches the project name (for example, `PROJECTNAME`). Inside that, there are several static code assets in the folder. Soon, these files will be copied to a Node.js + Express.js server. 
+It will create a folder named `dist`, and inside, another folder that matches the project name (for example, `PROJECTNAME`). In that folder, there are several static code assets in the folder. Soon, these files will be copied to a Node.js + Express.js server. 
 
 ![Angular build result](/media/angular-build-result.png)
 
@@ -29,11 +29,11 @@ It will create a folder named `dist`, and inside, another folder that matches th
 
 ### Node.js + Express.js server app
 
-Create a Node.js + Express.js server app, either from new or from a template that you have. 
-
-It will need a new folder named `public`. Copy the several static code assets from the `dist/PROJECTNAME` folder into this new `public` folder. 
+Create a Node.js + Express.js server app, either from new (i.e. npm init, and then npm install express), or from a template that you have. It needs a server.js file too.
 
 It will need a git configuration. Run the `git init` command to do that. 
+
+It will need a new folder named `public`. Copy the several static code assets from the `dist/PROJECTNAME` folder into this new `public` folder. 
 
 The `server.js` code can be something like the following:
 
@@ -90,11 +90,29 @@ git push heroku master
 
 <br>
 
+#### Update the Angular app, and redeploy
+
+When you update the Angular app, run the build task again:
+```bash
+ng build --prod
+```
+
+Then, copy the several static code assets from the `dist/PROJECTNAME` folder into the server app's `public` folder (and overwrite/replace, obviously).
+
+Do a git commit task again, for the server app, using Visual Studio Code, or the command line.
+
+Finally, deploy the app to Heroku:
+```bash
+git push heroku master
+```
+
+<br>
+
 #### Troubleshooting 
 
 Occasionally, it is possible that the "git push..." task will fail, and it's likely because the project folder has lost its configuration information. Or, it's because the new Heroku app was created with the Heroku web console, and not with the command line interface. 
 
-To fix this, run a command to update the project with the name of the new Heroku app. The command is:
+To fix this, run this command to update the project with the name of the new Heroku app:
 ```
 heroku git:remote -a name-of-heroku-app
 ```
