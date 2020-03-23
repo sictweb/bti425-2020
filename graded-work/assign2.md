@@ -25,7 +25,7 @@ While you are doing the work, if a *specific task* is not clear, or it seems to 
 
 ### Due Date
 
-Tuesday, March 31, 2020, at 11:00pm ET
+Tuesday, April 7, 2020, at 11:00pm ET
 
 Grade value: 25% of your final course grade
 

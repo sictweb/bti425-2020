@@ -12,7 +12,7 @@ Our "week" consists of a Friday lecture, and a Tuesday computer-lab.
 Please note that *the schedule may change*, and that it is your responsibility to know the current schedule.
 
 <div style="background-color: lightyellow; border: 1px solid black; padding: 0.5em;">
-<p><b>Notice</b><br>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change frequently, so please refresh your viewer when consuming or reviewing content.</p>
+<p><b>Notice</b><br>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change, so please refresh your viewer when consuming or reviewing content.</p>
 </div>
 
 <br>
@@ -33,8 +33,8 @@ Week 9<br>&bull; Fri Mar 6<br>&bull; Tue Mar 10 | Services | |
 Week 10<br>&bull; Fri Mar 13 | Forms | | 
 Pause<br>Mar 16 to 20 | No classes | | 
 Week 10<br>&bull; Tue Mar 24 | Forms (continued) | | 
-Week 11<br>&bull; Fri Mar 27<br>&bull; Tue Mar 31 | Security | Assign 2 | 25%
-Week 12<br>&bull; Fri Apr 3<br>&bull; Tue Apr 7 | Other topics if required<br>Assignment work | Test 3 | 20%
-Week 13<br>&bull; Tue Apr 14 | Other topics if required<br>Assignment work<br>Friday April 10 is the Good Friday holiday, no class | Assign 3 | 10%
+Week 11<br>&bull; Fri Mar 27<br>&bull; Tue Mar 31 | Security | | 
+Week 12<br>&bull; Fri Apr 3<br>&bull; Tue Apr 7 | Other topics if required<br>Assignment work | Assign 2 | 25%
+Week 13<br>&bull; Tue Apr 14 | Friday April 10 is the Good Friday holiday<br>Test 3 is on Tuesday | Test 3 | 20%
 
 <br>

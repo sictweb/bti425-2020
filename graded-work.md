@@ -8,7 +8,7 @@ layout: default
 This page has details about the graded work in BTI425, for the current Winter 2020 academic term.
 
 <div style="background-color: lightyellow; border: 1px solid black; padding: 0.5em;">
-<p><b>Notice</b><br>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change frequently, so please refresh your viewer when consuming or reviewing content.</p>
+<p><b>Notice</b><br>The course delivery and its dates and times have been affected by the worldwide novel coronavirus crisis. The content on this website may change, so please refresh your viewer when consuming or reviewing content.</p>
 </div>
 
 <br>
@@ -21,7 +21,7 @@ Test | Theme | Value | Date
 --- | --- | --- | ---
 Test 1 | Web service and React topics | 15% | January 28 
 Test 2 | Forms, and Angular topics (up to Routing) | 15% | March 3 
-Test 3 | Angular topics (up to Security) | 20% | April 7
+Test 3 | Angular topics (up to Security) | 20% | April 14
 
 The duration of each test will be approximately 90 minutes. All tests will be hand-written, with no references or resources allowed. The total value of all tests will be 50% of the final course grade.
 
@@ -48,8 +48,9 @@ We have planned three (3) assignments during the term. The total value of all as
 Assignment | Theme | Value | Released | Due Date
 --- | --- | --- | --- | ---
 [Assign 1](/graded-work/assign1) | React app | 15% | January 14 | February 4 at 11:00pm 
-[Assign 2](/graded-work/assign2) | Angular app,<br>including the Forms topic | 25% | February 24 | March 31 at 11:00pm 
-Assign 3 | Angular app,<br>add security features | 10% | March 31 | April 14 at 11:00pm
+[Assign 2](/graded-work/assign2) | Angular app,<br>including the Forms topic | 25% | February 24 | April 7 at 11:00pm 
+
+Assignment 3 was cancelled.
 
 (Each app will also require a web service.)
 
@@ -79,6 +80,11 @@ If your assignment is not complete (for example, it's missing some features), yo
 
 Tests - 3 in total - 50%  
 Assignments - 3 in total - 50%  
+
+> Updated as a result of the term interruption...  
+> Tests total 50 points   
+> Assignments total 40 points  
+> Final grade will be based on (50+40) 90 points
 
 This course does NOT have a final exam. 
 
