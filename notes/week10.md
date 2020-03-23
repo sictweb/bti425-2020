@@ -47,7 +47,13 @@ This week's code examples:
 Continue working on Assignment 2. 
 
 Your professor will be available to help you online during your scheduled timeslot. Information about how this works is documented here:  
-Prof. McIntyre's sections (to be posted)  
+
+Prof. McIntyre's sections 
+* Full info is in an email 
+* Will be using the Microsoft Teams app 
+* Will be available for online real-time help during the regular Tuesday timeslots 
+* Contact is the email address, peter.mcintyre -at- senecacollege.ca
+
 Prof. Alam's section (to be posted)
 
 <br>

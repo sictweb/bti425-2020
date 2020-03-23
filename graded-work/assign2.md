@@ -346,11 +346,20 @@ PUT, application/json, and a JSON entity body that looks like...
 
 > Data entry tips:
 > * Send a "get one" request to get the JSON for one term  
+>  
 > * That will give you a model that you can use to copy, paste, then edit  
+>  
+> * Do not send `_id` values - MongoDB will generate the identifier
+>  
 > * As an example, [here is the JSON](media/a2-post-english.json) that the professor used to add the "asynchronous" English term - notice how the definition is packaged  
-> 
+>  
+> * If you want to send a double-quote character in a string, it must be "escaped" with a backslash - for example, `\"hello`
+>  
 > * When you are entering a non-English term, use one of the official [language codes](https://pam-2020-a2and3webapi.herokuapp.com/api/languages) (e.g. "fr-ca" or "ru" etc.)  
+>  
 > * As an example, [here is the JSON](media/a2-post-other.json) that the professor used to add the "asynchronisme" French term - notice how the definition is packaged
+>  
+> * If the response is "bad request", as text/html, with HTTP status 400, then the JSON in the request is malformed - make sure to use the Postman "Beautify" button/feature to check your JSON for correctness 
 
 <br>
 
