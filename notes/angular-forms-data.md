@@ -15,6 +15,8 @@ We learned in the "forms introduction" document (and specifically in [this secti
 
 The data model consists of instances of one or more custom-designed classes. Simple scenarios need a simple data model (as simple as a typed property, or a simple custom-designed class with a few properties), but typical scenarios need a more complex data model that consists of one or more custom-designed classes. 
 
+Similar to what we do when writing data model classes for the app in `data-classes.ts`, we can assign initial values for properties, if we wish, and/or write a constructor. 
+
 The goal is to define, in a data model, the *shape* of the data needed by the form, and/or expected from the form when it gets submitted. 
 
 This document has more information about this concept and development technique. 

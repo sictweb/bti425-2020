@@ -34,16 +34,23 @@ class DataForm {
 
 After the form gets submitted (or perhaps during user interaction, by handling input field changes), we must lookup the "username" to ensure there are no existing user accounts that have the same "username". We also typically validate the passwords against each other, and with a regular expression (and other programmatic supports) that holds our password rules. (And somewhere in the processing chain, the password gets encrypted and hashed.)
 
-Next, the data must be sent with the "add new user account" request. Maybe its shape is different, and looks like this:
+Next, the data must be sent with the "add new user account" request. Maybe its shape is different (and perhaps defined in the `data-classes.ts` source code file), and looks like this:
 ```ts
-class UserAccount {
+export class UserAccount {
+
+  constructor() {
+    let now = new Date();
+    this.dateCreated = now.toISOString();
+    this.accessLevel = 'member';
+  }
+
   fullname: string;
   username: string;
   password: string;
   dateCreated: string;
   accessLevel: string;
-  accountLocked: boolean;
-  accountCredits: number;
+  accountLocked: boolean = false;
+  accountCredits: number = 0;
 }
 ```
 
@@ -61,16 +68,68 @@ If the *source* object has fewer properties than the *target* object (which is t
 
 ### Object spread syntax
 
-The [official documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) has complete reference-like content for this feature. 
+The [official documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) has complete reference-like content for this feature.
 
-However, here, we present actionable advice and explanation in the context of Angular template-driven forms handling, where we are working with a web API. 
+> The specific section that interests us is  
+> [Spread in object literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals)
 
+Here, we present actionable advice and explanation in the context of Angular template-driven forms handling, where we are working with a web API. 
 
+From above, assume that we have a DataForm object instance named `userData`. We get its values from the form submission. 
+
+We must send a UserAccount object instance with the web API request. Here's how the property values would map or match up:
+
+Source property | Task to be done | Target property
+--- | --- | ---
+username | Clean the string<br>Pass it on | username
+password1 and password2 | Confirm they match<br>Validate rules<br>Other (as necessary) | password
+| | Set it (for now) as<br>an empty string | fullname
+| | Get the current date-and-time<br>Transform to ISO8601 | dateCreated
+| | Set the access level<br>(maybe to "member") | accessLevel
+| | Set it to "false" | accountLocked
+| | Set it to zero | accountCredits
 
 <br>
 
-#### Minor sub-section
+#### Sample coding plan 
 
-etc.
+Assume that the component has a property to hold the data from the form:
+
+```ts
+userData: DataForm;
+```
+
+In the form submit button handler method, we assemble the package to be sent to the web API. Remember, the package must have the UserAccount shape. 
+
+```ts
+// userData already exists in scope
+
+// Create a new mostly-empty 
+// default instance of UserAccount
+let newUserAccount = new UserAccount();
+
+// If necessary, calculate or generate more property values
+// Assume that "MakeSafePassword()" is a function that does
+// something to encrypt and hash the user-entered password
+newUserAccount.password = MakeSafePassword(userData.password1);
+
+// Do any other preparation, for example...
+userData.username = userData.username.toLowerCase().trim();
+
+// Assemble the properties 
+// The sequence is important...
+// 1. The new object
+// 2. Other known values
+// 3. The form data object
+newUserAccount = {
+  ...newUserAccount,
+  fullname: '',
+  ...userData
+}
+```
+
+<br>
+
+At this point, `newUserAccount` is ready to send in the request to the web API. 
 
 <br>

@@ -125,6 +125,27 @@ export interface Person {
 
 > Note: The question mark that follows the property name indicates that the value is optional. In other words, it can be null. 
 
+Data classes can obviously have properties. The syntax form above declares the name and type of a property. It is possible to assign an initial value to a property. In addition, data classes can include a constructor. For example:
+
+```ts
+export class UserAccount {
+
+  constructor() {
+    let now = new Date();
+    this.dateCreated = now.toISOString();
+  }
+
+  _id?: string;
+  username: string;
+  password: string = 'abc123';
+  dateCreated: string;
+}
+```
+
+<br>
+
+> Reminder - The TypeScript Class docs are [here](https://www.typescriptlang.org/docs/handbook/classes.html). 
+
 <br>
 
 #### Write a service
@@ -132,7 +153,7 @@ export interface Person {
 Use the Angular CLI to generate a service. For example:
 
 ```bash
-ng g s dataModelManager --flat -S
+ng g s DataManager --flat -S
 ```
 
 Open it for editing. Add these to the existing import statement(s):
