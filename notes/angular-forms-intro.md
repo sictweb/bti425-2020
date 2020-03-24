@@ -225,6 +225,9 @@ export class DriverComponent implements OnInit {
 
 To briefly explain, we define a "Driver" class that will represent the type of data that we will be "binding" to our form so that it can be modified.  We also define a generic "Option" class, which is simply defining what our "Options" will look like, ie ```{value: "C", text: "Car"}``` - this can be used as an "option" in an `<select>` list, or the value / label used in a radio button.
 
+> For a full discussion of data models for forms, study this:  
+> [Angular Forms Data Models](angular-forms-data)
+
 <br>
 
 ### Data binding between the *model* and *form*, introduction

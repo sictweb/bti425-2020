@@ -24,10 +24,13 @@ Recently, we were introduced to [Angular template-driven forms](angular-forms-in
 > Remember our previous coverage of  
 > [HTML Form patterns](html-form-patterns). 
 
+For best results, a form requires a data model. This document discusses the concept and development technique:  
+[Angular Forms Data Models](angular-forms-data)
+
 Then, we'll learn some techniques to improve the interaction experience users have with forms. And, we'll introduce data validation techniques. These topics are covered in this document:  
 [Introduction to Angular template-driven forms validation](angular-forms-validation-intro)
 
-The course's GitHub repo has a nice code example that covers the typical CRUD tasks. 
+The course's GitHub repo has a nice code example that covers the typical CRUD tasks, and another covers validation essentials. 
 
 Remember to frequently use the [learning resources](/resources).
 
@@ -36,7 +39,8 @@ Remember to frequently use the [learning resources](/resources).
 ### Code examples
 
 This week's code examples:
-1. Forms with CRUD and validation
+1. Forms with CRUD tasks
+1. Forms with validation essentials
 
 <br>
 

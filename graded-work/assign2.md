@@ -459,6 +459,12 @@ Some of the data items can be set or calculated in code. In other words, it is o
 
 Remember that you MUST gather a definition when you are creating a new English term. (As you know, additional definitions can be added later.)
 
+New documents:
+
+* [Angular Forms Data Models](/notes/angular-forms-data)
+
+* [JavaScript Spread and Object Mapping](/notes/js-spread-object-mapping)
+
 > Note: Screen capture sample is coming soon.
 
 <br>
