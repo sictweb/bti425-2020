@@ -83,11 +83,11 @@ Source property | Task to be done | Target property
 --- | --- | ---
 username | Clean the string<br>Pass it on | username
 password1 and password2 | Confirm they match<br>Validate rules<br>Other (as necessary) | password
-| | Set it (for now) as<br>an empty string | fullname
-| | Get the current date-and-time<br>Transform to ISO8601 | dateCreated
-| | Set the access level<br>(maybe to "member") | accessLevel
-| | Set it to "false" | accountLocked
-| | Set it to zero | accountCredits
+ | Set it (for now) as<br>an empty string | fullname
+ | Get the current date-and-time<br>Transform to ISO8601 | dateCreated
+ | Set the access level<br>(maybe to "member") | accessLevel
+ | Set it to "false" | accountLocked
+ | Set it to zero | accountCredits
 
 <br>
 
