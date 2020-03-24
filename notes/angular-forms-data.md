@@ -13,7 +13,7 @@ We learned in the "forms introduction" document (and specifically in [this secti
 >  
 > The data model's values are *made available to* the form when it is built and rendered, and *updated by* the form during user interaction and submission.
 
-The data model is one or more custom-designed classes. Simple scenarios need a simple data model (as simple as a typed property, or a simple custom-designed class with a few properties), but typical scenarios need a more complex data model that consists of one or more custom-designed classes. 
+The data model consists of instances of one or more custom-designed classes. Simple scenarios need a simple data model (as simple as a typed property, or a simple custom-designed class with a few properties), but typical scenarios need a more complex data model that consists of one or more custom-designed classes. 
 
 The goal is to define, in a data model, the *shape* of the data needed by the form, and/or expected from the form when it gets submitted. 
 
@@ -23,7 +23,7 @@ This document has more information about this concept and development technique.
 
 ### Why?
 
-Why do we create a data model? Several reasons; among them: 
+Why do we create a data model? Several reasons, among them: 
 * Data binding by definition *demands* a data model 
 * We are able to improve code quality and safety by defining input types 
 * Data can be sent to the form for rendering (e.g. for `select option` elements etc., or to support an "edit" task for an existing document) 
@@ -53,7 +53,7 @@ Below, a range of examples are presented, with design and coding approaches.
 
 #### 1. Example - simple string
 
-Assume that a component has a single `input` element that is used in a "search" task. In the component code, we simply define a property to hold the search text, and that's it, we're done:
+Assume that a component has a single `input` element that is used in a "search" task. In the component code, we define a simple property to hold the search text, and that's it, we're done:
 ```ts
 searchText: string;
 ```
@@ -94,9 +94,11 @@ The component template then binds to the property (some attributes were omitted)
 <input type="password" name="password" [(ngModel)]="user.password" required>
 ```
 
+##### Form submission, and the data from the form 
+
 After the form is submitted, the `user` property holds the data that the user entered. What can we do with the data? 
 
-Well, if it has the shape that is required by the web API, the button submit handler method can send it along to the data manager service method as-is. 
+Well, if it has the exact same shape that is required by the web API, the button submit handler method can send it along to the data manager service method as-is. 
 
 However, if the web API requires a *different* shape, perhaps requiring more properties, and/or calculated or generated values, and/or differently-named properties, then we must prepare a *new* package for the web API request, and copy over the properties from the local property. How? At least a few ways:
 1. Create an instance of the class that the web API requires, manually-assign the matching property values from the local property, and add (calculate/generate) the values for the others. 
