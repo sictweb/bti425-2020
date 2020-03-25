@@ -484,21 +484,19 @@ This is a classic implementation of an "add new" use case. As you have learned, 
 * In the component template, controls are needed to gather data from the user
 * In the component code, properties for the form data and other needs, and a method to handle form submission
 * Also in the component code, a data class that matches the shape of the form data 
-* A data manager service method that sends the data to the web API
+* In the data manager service, it needs a method that sends the data to the web API
 
-Some of the data items can be set or calculated in code. In other words, it is obviously *not necessary* to gather the "create date and time" from the user. Do that programmatically. For new English terms, we also will just set its value because we know the language code.
+Some of the data items can be set or calculated in code. In other words, it is obviously *not necessary* to gather the "create date and time" from the user. Do that programmatically. For new English terms, we also will just set its language code value because we know it's English ("en").
 
-Remember that you MUST gather a definition when you are creating a new English term. (As you know, additional definitions can be added later.)
+Remember that you MUST gather a definition's text when you are creating a new English term. (As you know, additional definitions can be added later.)
 
-Also remember that you must create a *data model class* to define the data that will be entered on the form. Then, as you know, the shape of the data package that is sent to the web API "add new" request handler must match the "termEnglish" schema. This doesn't happen automatically, as you must write code in the form submit button handler method to do the data preparation. The links below are both a reminder about the process and provide additional how-to info that will help. 
-
-How-to information:
+Also remember the best practice that says you must create a *data model class* to define the data that will be entered on the form. Then, as you know, the shape of the data package that is sent to the web API "add new" request handler must match the "termEnglish" schema. This doesn't happen automatically, as you must write code in the form submit button handler method to do the data preparation. The links below are both a reminder about the process and provide additional how-to info that will help. 
 
 * [Angular Forms Data Models](/notes/angular-forms-data)
 
 * [JavaScript Spread and Object Mapping](/notes/js-spread-object-mapping)
 
-> Note: Screen capture sample is coming soon.
+<img class="border1" src="media/a2-2020-english-term-create.png" alt="">
 
 <br>
 
@@ -518,7 +516,7 @@ Another task a user may want to do is to "vote" on whether the term and its defi
 
 Similarly, each definition should offer the ability to "like" it, again via an element > method > data manager service > web API request process. 
 
-> Note: Screen capture sample is coming soon.
+<img class="border1" src="media/a2-2020-english-term-detail.png" alt="">
 
 <br>
 
