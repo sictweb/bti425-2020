@@ -235,11 +235,13 @@ The idea is that the user could quickly and easily indicate whether they "like" 
 
 #### Data service tasks 
 
-The data service tasks are similar for each entity (termEnglish and termNonEnglish). As you would predict, 
+The data service tasks are similar for each entity (termEnglish and termNonEnglish). 
 
-We suggest that you write the method pairs (in `server.js` and `manager.js`) for the termEnglish entity first, and thoroughly test them. Then, you will be able to essentially copy-paste-and-edit them for use for the termNonEnglish entity. The "add new" task will be slightly different in the termNonEnglish method pair, because we must use the object identifier for the related termEnglish document. 
+We suggest that you write the method pairs (in `server.js` and `manager.js`) for the termEnglish entity first, and thoroughly test them. Then, you will be able to essentially copy-paste-and-edit them for use for the termNonEnglish entity. The "add new" task will be slightly different in the termNonEnglish method pair, because *we must use the object identifier for the related termEnglish document*. 
 
-During the code-writing process, test frequently with Postman. 
+During the code-writing process, test incrementally and frequently with Postman. 
+
+<br>
 
 It is expected that the following, at a minimum, will be needed for the **termEnglish** entity:
 1. get all (sorted) 
@@ -260,7 +262,7 @@ It is expected that the following, at a minimum, will be needed for the **termEn
 > For guidance about how to handle the "increment" tasks for numbers 6, 7, and 8, read this:  
 > [Web API - "command" technique](/notes/web-api-commands)
 
-Time permitting, it may require another method pair to support the text editing of the definition's text. 
+<br>
 
 It is expected that the following, at a minimum, will be needed for the **termNonEnglish** entity:
 1. get all (sorted) (it's possible that the app won't need to use this)
@@ -284,11 +286,11 @@ It is expected that the following, at a minimum, will be needed for the **termNo
 
 #### Get large amounts of data (eventually!)
 
-As noted above, the professor version of the web API has been published here:
+As noted above, the professor's version of the web API has been published here:
 
 [Professor Assignment 2 web API](https://pam-2020-a2and3webapi.herokuapp.com/api)
 
-Here's the plain text URL:  
+Here's the plain text URL for the professor's version:  
 `https://pam-2020-a2and3webapi.herokuapp.com/api`
 
 Using Postman, you can add these segments to the URL, and interact with the web API. Replace "XXXXXX..." with a MongoDB object identifier:
@@ -376,10 +378,10 @@ All non-English terms, downloaded to your computer
 After you have these downloaded files, you can easily import them into your own database collections. 
 
 > What if the import tasks does not work?  
-> Please CONTACT YOUR PROFESSOR, because it should work.  
+> Please *CONTACT YOUR PROFESSOR*, because it should work.  
 >   
 > What if some fields are missing when you query the data with YOUR web API code?  
-> It's likely a property name or type mismatch - carefully compare your Mongoose schema with the published data. 
+> It's likely a property name or type mismatch - carefully compare your schema with the schema for the published data. 
 
 <br>
 
@@ -390,18 +392,47 @@ Getting started includes generating a new project, and configuring your developm
 > You can create a new project with `ng new...`  
 > Or, you can use a template from the code example repo folder "Templates and solutions"
 
-Make sure that your web API has been completed, and deployed to Heroku and MongoDB Atlas. Make sure that you can interact with it correctly with Postman. This is important, because you must have confidence in the hosted app to make progress on the Angular app. 
+Make sure that your web API has been completed, has some data, and is deployed to Heroku and MongoDB Atlas. Make sure that you can interact with it correctly with Postman. This is important, because you must have confidence in the hosted app to make progress on the Angular app. 
 
 Set up the rest of your dev environment (terminal windows, editor, browsers and tools). 
 
 <br>
 
+#### Suggestion - use your debug tools
+
+As you make progress on the Angular app, feature by feature, make sure you watch the command line that started the app locally (i.e. by using the `ng server -o` command). If there is a compile error, as you incrementally code, it will show up there. 
+
+Also, please remember the other [debug strategies](/notes/angular-debug-intro) that you have been exposed to. 
+
+<br>
+
 #### Suggestion - deploy to Heroku often
 
-We have a suggestion: As you make progress on the Angular app, feature by feature, deploy it to Heroku, and maybe use another device (your smartphone?) to connect to it and interact with it. 
+As you make progress on the Angular app, feature by feature, deploy it to Heroku, and maybe use another device (your smartphone?) to connect to it and interact with it. 
 
 How-to instructions for Angular app to Heroku are here:  
 [Deploy Angular app to Heroku](/notes/angular-heroku-deploy)
+
+<br>
+
+### Prepare to use data
+
+One of the important initial tasks is to prepare the app to use data:
+1. Define/write data classes (as TypeScript classes)
+1. Write methods in the data manager service that send requests to your web API
+
+In the app's `data-classes.ts` source code file, define/write TypeScript classes that match the shape of the web API schema classes. A few other recommendations: 
+
+* Set a reasonable initial value for each property; do this inline, for example:  
+`  firstName: string = 'Peter';`
+
+* For date fields, we can use a `string` type, and use the JavaScript `Date` object's `toISOString()` method whenever we must convert a date into a string for use with JSON. 
+
+* Use a constructor and some code to set the initial value for the date fields to the current date-and-time (we do NOT want to gather that from the user).
+
+* In both of the "term..." classes, define an optional `_id` property. This will enable us to omit the value when we're doing an "add new" task, but it will enable receiving the value in responses that should have it. 
+
+In the app's `data-manager.service.ts` source code file, we suggest that you define/write methods incrementally as you code each component. 
 
 <br>
 
@@ -426,7 +457,7 @@ So, overall, maybe about six - plus or minus - components. Here is some commenta
 
 ### List of English terms
 
-As noted above, the list of English terms can be on the home or landing component, or in a dedicated component. 
+As noted above, the list of English terms can be on the home or landing component, or in a dedicated "list" component. 
 
 Decide which fields you want to display in the list. 
 
@@ -459,7 +490,9 @@ Some of the data items can be set or calculated in code. In other words, it is o
 
 Remember that you MUST gather a definition when you are creating a new English term. (As you know, additional definitions can be added later.)
 
-New documents:
+Also remember that you must create a *data model class* to define the data that will be entered on the form. Then, as you know, the shape of the data package that is sent to the web API "add new" request handler must match the "termEnglish" schema. This doesn't happen automatically, as you must write code in the form submit button handler method to do the data preparation. The links below are both a reminder about the process and provide additional how-to info that will help. 
+
+How-to information:
 
 * [Angular Forms Data Models](/notes/angular-forms-data)
 

@@ -102,10 +102,9 @@ userData: DataForm;
 In the form submit button handler method, we assemble the package to be sent to the web API. Remember, the package must have the UserAccount shape. 
 
 ```ts
-// userData already exists in scope
+// Assume that userData already exists in scope
 
-// Create a new mostly-empty 
-// default instance of UserAccount
+// Create a new mostly-empty default instance of UserAccount
 let newUserAccount = new UserAccount();
 
 // If necessary, calculate or generate more property values
@@ -116,20 +115,25 @@ newUserAccount.password = MakeSafePassword(userData.password1);
 // Do any other preparation, for example...
 userData.username = userData.username.toLowerCase().trim();
 
-// Assemble the properties 
-// The sequence is important...
-// 1. The new object
+// Create a new object, and assemble the properties 
+// (the sequence is important...)
+// 1. The new mostly-empty object
 // 2. Other known values
 // 3. The form data object
-newUserAccount = {
+let dataPackage = {
   ...newUserAccount,
   fullname: '',
   ...userData
 }
+
+// Do any cleanup that's needed (e.g. remove excess properties)
+// Delete the 'password1' and 'password2' properties
+delete dataPackage.password1;
+delete dataPackage.password2;
 ```
 
 <br>
 
-At this point, `newUserAccount` is ready to send in the request to the web API. 
+At this point, the `dataPackage` object is ready to send in the request to the web API. 
 
 <br>
