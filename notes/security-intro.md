@@ -8,16 +8,20 @@ layout: default
 For our purposes in this course, the *security topics* will introduce you to the security-related goals, terminology, and techniques for a web app. 
 
 > In a separate document, we will introduce infrastructure-based security topics, such as public key infrastructure and transport layer security.  
+> 
 > Those infrastructure-based topics are outside the scope of this document. 
 
 The overall goal is to protect a web app's usage and its data, making the app available for only its intended users. 
 
 > A "web app" is an app that is created with *web technologies*.  
+> 
 > It is assumed that this kind of app relies on HTTP, and is typically written in JavaScript (supported and complemented by related technologies, including HTML, CSS, JSON, etc.).  
+> 
 > And, it's assumed that an app can be designed to be deployed to one or more device platforms (including a browser, a native-code platform, a server, etc.).  
+> 
 > It is also assumed that a web app is a *distributed* app, in that it could be composed of separate parts that run on two or more devices and communicate over a network. 
 
-The security topics coverage this week and next will focus on the parts that we implement in software ourselves. We will have little or no treatment of other security topics, including physical and network security. (It is assumed that we will deploy our app on a host that supports [transport layer security](https://en.wikipedia.org/wiki/Transport_Layer_Security).)
+The security topics coverage in this course will focus on the parts that we implement in software ourselves. We will have little or no treatment of other security topics, including physical and network security. (It is assumed that we will deploy our app on a host that supports [transport layer security](https://en.wikipedia.org/wiki/Transport_Layer_Security), aka "https".)
 
 We will start by defining and studying a *security system*. 
 
@@ -44,28 +48,33 @@ Identity management is the process of defining, storing, and managing user accou
 
 Each user of an app must be uniquely identified. A "user account" implements this requirement. 
 
-The user account is an object (typically mostly data, with little behaviour) that represents a human *user* of an app. A user account includes identification and description properties, including user name, a shared secret (i.e. a password), email address, etc. It usually also includes some other properties (e.g. family name, given name, etc.), as well as metadata (e.g. active/locked status, user account creation date, etc.). 
+The user account is an object (which consists mostly of data, with little or no behaviour) that represents a human *user* of an app. A user account includes identification and description properties, including user name, a shared secret (i.e. a password), email address, etc. It usually also includes some other properties (e.g. family name, given name, etc.), as well as metadata (e.g. active/locked status, user account creation date, etc.). 
 
 All user accounts are saved in a persistent store (i.e. a database). One or more user accounts are typically designated as "user account managers", which can manage *all* user accounts (e.g. active a user account, delete a user account, etc.)
 
-Typical identity *management* tasks include the ability to register for a new user account, and enable a user to edit some properties of their user account (e.g. name, email address, etc.). For user account managers, typical tasks also include the ability to view/inspect user accounts, search for a user account, and so on. 
+Typical *identity management* tasks include the ability to register for a new user account, and enable a user to edit some properties of their user account (e.g. name, email address, etc.). For user account managers, typical tasks also include the ability to view/inspect user accounts, search for a user account, and so on. 
 
 Sometimes, identity management is a part of an app (embedded, in other words). Alternatively, it is often done as a separate app or service. In that situation, you can configure your app to "trust" the external identity management app for this aspect of a security system. 
 
-As a second-year student, should you write your own identity management app? No. You must use an existing, widely-used, feature-laden, and robust app, which is created and maintained by people who have security system expertise. (However, as an academic exercise, it is often useful to create a working prototype or minimal app. We may do part of that task in this course.)
+> This is how "Sign in with your Microsoft account" works. 
+
+As a second-year student, should you write your own identity management app? NO. You must use an existing, widely-used, feature-laden, and robust app, which is created and maintained by people who have security system expertise. (However, as an academic exercise, it is often useful to create a working prototype or minimal app. We may do part of that task in this course.)
 
 > Another term for the identity management app is *"identity authority"*.  
+> 
 > In other words, the app is designated and recognized as the *[authority](https://en.wiktionary.org/wiki/authority)* for the task of defining, storing, and managing identity (user account) information. 
 
 <br>
 
 #### 2. Authentication
 
-Authentication is the process of presenting and validating credentials. There are two process workflows. One is followed when a user has not yet authenticated, and the other is followed when a user has been recently authenticated, and requests another resource. 
+Authentication is the process of presenting and validating credentials. 
+
+There are two process workflows. One is followed when a user has not yet authenticated, and the other is followed when a user has been recently authenticated, and requests another resource. 
 
 <br>
 
-**First process workflow: Not yet authenticated**
+**First process workflow: "Not yet authenticated"**
 
 If a user has not been authenticated by the security system, then the user must present their credentials. For our purposes, this is typically done in two different ways:
 
@@ -92,11 +101,11 @@ The cookie or token includes information about the issuer, descriptive informati
 
 A browser saves or stores the cookie in a secure manner. This is done automatically as a browser feature, and the user or programmer does not need to do any extra work to save the cookie, and then use the cookie again in the future. 
 
-In contrast, when using an HTTP client/requestor, the programmer *must* do extra work to save or store the token in the app (in memory and/or persisted) in a secured manner. 
+In contrast, when using an HTTP client/requestor (e.g. an Angular app, or a React app), the programmer *must* do extra work to save or store the token in the app (in memory and/or persisted) in a secured manner. 
 
 <br>
 
-**The other process workflow: Has been recently authenticated**
+**The other process workflow: "Has been recently authenticated"**
 
 If a user was recently authenticated, and has a cookie or token that has not yet expired, then the user can present the cookie or token as their credentials. 
 
@@ -104,8 +113,8 @@ When using a browser, assume the recently-autheticated user requests a different
 
 When using an HTTP client/requestor, *the programmer* must fetch the token from the app's storage area, and include it in the header of the request. 
 
-> Angular apps can work a bit differently.  
-> You'll learn now in the next few weeks.  
+> Angular apps can work a bit differently, and help enable this for the entire app.  
+> You'll learn how do do this soon.  
 
 In both situations, the listening app will notice the cookie or token in the request headers. It will then inspect and validate its contents.
 
@@ -117,9 +126,9 @@ The programmed code that implements authentication is modular:
 
 * The "not yet authenticated" code is always a part of the identity management app. 
 
-* The "has been recently authenticated" code is always part of the identity management app. *In addition*, it can be part of *your* app. (We add code that enables your app to "trust" the identity management app, and to decode an access token.)
+* The "has been recently authenticated" code is also always part of the identity management app. *In addition*, it can be part of *your* app. (We add code that enables your app to "trust" the identity management app, and to decode an access token.)
 
-As a second-year student, should you write your own authentication app? No. As above, you must use an existing, widely-used, feature-laden, and robust app, which is created and maintained by people who have security system expertise.
+As a second-year student, should you write your own authentication app? NO. As above, you must use an existing, widely-used, feature-laden, and robust app, which is created and maintained by people who have security system expertise.
 
 <br>
 
@@ -134,7 +143,7 @@ Authorization is the process to determine whether a request for a resource can b
 How does that process work? What and where is the programmed code? The answer is that the code is (for our purposes) *always part of the framework* (or library or whatever word that we use to describe the add-on JavaScript-based components). 
 
 > In an Angular app, the [CanActivate](https://angular.io/guide/router#canactivate-requiring-authentication) route guard implements the base functionality.  
-> We also typically write our own custom guards.  
+> We also typically write our own custom "guards".  
 
 What is used to determine whether a request can succeed? The answer is *claims*. In other words, we use the *descriptive information* that is encoded into an access token. 
 
@@ -148,9 +157,17 @@ So, to recap, the simplest scenario inspects the "lifetime" claim (often coded a
 
 ### Claims, more information...
 
-There is a somewhat-official and fancy definition for claim, which is *"a statement that one subject makes about itself or another subject"*. A "statement" is descriptive information. A "subject" is a participant in the lifetime of an app, and it could be a human, a corporate body (i.e. organization), or a programmable object (e.g. a security system). 
+There is a somewhat-official and fancy definition for claim, which is:
 
-We like a much better definition for our purposes, which is "descriptive information about the user". What kind of info? 
+> *"a statement that one subject makes about itself or another subject"*. 
+
+A "statement" is descriptive information. A "subject" is a participant in the lifetime of an app, and it could be a human, a corporate body (i.e. organization), or a programmable object (e.g. a security system). 
+
+We like a much better definition for our purposes, which is: 
+
+> *"descriptive information about the user"*. 
+
+What kind of information? 
 
 * Purely *descriptive* information, such as family name, birth date, or hair colour
 
@@ -187,6 +204,8 @@ After a successful authentication, the identity authority creates a cookie or to
 
 ### Further study
 
-In Assignment 3, we will attempt to add a simplified security system to the work done for Assignment 2. You will get exposure to enough to be able to go further in future courses. 
+The now-cancelled Assignment 3 was to add a simplified security system to the work done for Assignment 2. 
+
+In the future, for your own learning only (and not for marks!), you can attempt to use the guidance and techniques in the how-to documents do do that. 
 
 <br>
