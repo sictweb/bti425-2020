@@ -51,17 +51,26 @@ The work described below has several major tasks:
 
 In our database, we must create a new collection to hold the user accounts. Typically, we will do a few tasks:
 * Decide on the design (shape) of a user account 
-* Write JSON for one or two user accounts that you can use while you write code
+* Write JSON for one or two user accounts that you can use while you write code (a "standard" account, and a "user account manager" account)
 * Import these user accounts into MongoDB
-
-> In [Assignment 3](/graded-work/assign3), we will do this in a slightly different way.  
-> The professor team has provided user account data for all student objects in Assignment 2. That's the data that we will import into MongoDB. 
 
 <br>
 
 #### Design (shape) of a user account 
 
 While there is no design standard for a user account, you probably realize that it should have properties for user name, password, role, and so on. Think about some typical and useful properties, and include them in your design. 
+
+In recent apps written by your professor team, these properties often appear in a user account schema:
+* User account name
+* Full name (together or separate first and last)
+* Password 
+* Status flag for the user account being active
+* Status flag for the user account being locked out
+* Role (for identity, or broad-based security-like tasks)
+* Claims, a collection of claim objects 
+* Date created
+
+There can be many others.
 
 <br>
 
@@ -73,19 +82,11 @@ Write JSON for one or two user accounts. One of the user accounts should be for 
 
 <br>
 
-#### Import into MongoDB
-
-Now, you're ready to import the "seed" data into MongoDB. 
-
-> See the [Assignment 3](/graded-work/assign3) specs for a reminder of the `mongoimport` process. 
-
-<br>
-
 ### Web API work, initial
 
 The goal in this section is to prepare the web API code to fetch and deliver the new user account data. 
 
-Write a new schema for the user account. 
+Write a new Mongoose schema for the user account. 
 
 One of the *important features* of the schema is that the login name - often known as the user name - must be unique within the collection. In the schema class, a unique property is defined in this way:
 
@@ -127,7 +128,7 @@ While you are still here, you should add (and test) "get one by identifier" func
 
 In this section, the goal is to add the professor-provided security code to the web API. Some is added to `manager.js`, and some to `server.js`. 
 
-Get the code from the Week 12 folder on the code example repo. 
+Get the code from the Week 11 folder on the code example repo. 
 
 <br>
 
@@ -164,7 +165,7 @@ Before we can test, we must understand the shape of the objects required by each
 }
 ```
 
-"Create" needs an object with this shape:
+"Create" needs an object with this shape (more properties may be needed if we change the requirements):
 ```
 { 
   userName: string, 

@@ -214,7 +214,7 @@ After you do so successfully, the token view will show you the contents of the t
 
 Select a component that you wish to protect. 
 
-> For example, in Assignment 2, we want to protect the student detail component. 
+> For example, from Assignment 2, we want to protect the "add new" English term component. 
 
 Next, we will add code to "protect" the route to this component with a "guard". How? Open the app module for editing. Import the guard:
 
@@ -226,7 +226,7 @@ Then, modify the route object to add a `canActivate` property:
 
 ```ts
 // other routes above
-{ path: 'students/:id/detail', component: StudentDetailComponent, canActivate: [GuardAuthService] },
+{ path: 'students/:id/detail', component: TermEnglishCreateComponent, canActivate: [GuardAuthService] },
 // other routes below
 ```
 
