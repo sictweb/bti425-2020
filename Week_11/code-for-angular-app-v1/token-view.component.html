@@ -1,0 +1,27 @@
+<div class="row">
+  <h4>View token, fetched from local storage</h4>
+  <hr>
+  <dl class="dl-horizontal">
+    <dt>Raw string value</dt>
+    <dd style="overflow-wrap:break-word;">{{ tokenRaw }}</dd>
+    <dt></dt><dd>&nbsp;</dd>
+    <dt>Decoded payload</dt>
+    <dd>{{ tokenDecoded | json }}</dd>
+    <dt></dt><dd>&nbsp;</dd>
+    <dt>User name</dt>
+    <dd>{{ tokenDecoded.userName }}</dd>
+    <dt></dt><dd>&nbsp;</dd>
+    <dt>Full name</dt>
+    <dd>{{ tokenDecoded.fullName }}</dd>
+    <dt></dt><dd>&nbsp;</dd>
+    <dt>Role</dt>
+    <dd>{{ tokenDecoded.role }}</dd>
+    <dt></dt><dd>&nbsp;</dd>
+    <dt>Issued date-and-time</dt>
+    <dd>{{ tokenIssuedTimestamp }}</dd>
+  </dl>
+  <hr>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
