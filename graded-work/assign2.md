@@ -496,6 +496,8 @@ Also remember the best practice that says you must create a *data model class* t
 
 * [JavaScript Spread and Object Mapping](/notes/js-spread-object-mapping)
 
+After the "add new" completes successfully, remember to follow the PRG pattern, and redirect (probably to the "detail" component). 
+
 <img class="border1" src="media/a2-2020-english-term-create.png" alt="">
 
 <br>
@@ -522,11 +524,19 @@ Similarly, each definition should offer the ability to "like" it, again via an e
 
 ### Add a new definition to an English term
 
-Above, we identified a possible user task is to add another definition to an English term. That will be a classic "add new" use case, which will end up sending a request to the web API method that you wrote for that purpose. 
+Above, we identified a possible user task is to add another definition to an English term. This will be a classic "edit existing" (English term) use case, which will end up sending a request to the web API method that you wrote for that purpose. 
 
 When you are composing the form, remember that the web API request will need the English term identifier, so make sure that you pass that along from the term detail component to the "add new" definition component. 
 
-> Note: Screen capture sample is coming soon.
+How should this be seen in the user interface, and supported in code? Well, there are several ways. One way is to recognize that the "English term detail" view (above) already has the existing definitions. Maybe we should just configure an "add another definition" button or a link to that view. That's what you see above in the screen capture. Obviously, we need another route. Then, for either a button or a link, it will navigate to this new component. 
+
+How must we design this new component? Well, from a component code perspective, it needs to load the current English term, so that it has all the data it needs (including identifier). And, it obviously must have a "save" handler method to process the user input. 
+
+What should its UI be? This can vary widely. One approach that your professors took in the sample solution was to recognize that context is important, so we wanted to display the current or existing definition(s) during the "add new definition" process. So essentially, the "detail" component template markup was copied to this new component's template markup, and a form was added. We only need to gather the author name and the definition text, as the other "Definition" object properties are generated in code. 
+
+After the "add new" completes successfully, remember to follow the PRG pattern, and redirect (probably to the "detail" component). 
+
+<img class="border1" src="media/a2-2020-english-term-add-defn.png" alt="">
 
 <br>
 

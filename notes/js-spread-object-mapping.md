@@ -113,7 +113,7 @@ let newUserAccount = new UserAccount();
 newUserAccount.password = MakeSafePassword(userData.password1);
 
 // Do any other preparation, for example...
-userData.username = userData.username.toLowerCase().trim();
+this.userData.username = this.userData.username.toLowerCase().trim();
 
 // Create a new object, and assemble the properties 
 // (the sequence is important...)
@@ -123,7 +123,7 @@ userData.username = userData.username.toLowerCase().trim();
 let dataPackage = {
   ...newUserAccount,
   fullname: '',
-  ...userData
+  ...this.userData
 }
 
 // Do any cleanup that's needed (e.g. remove excess properties)
