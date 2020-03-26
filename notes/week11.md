@@ -1,9 +1,9 @@
 ---
-title: BTI425 Week 10
+title: BTI425 Week 11
 layout: default
 ---
 
-## BTI425 Week 10 Notes
+## BTI425 Week 11 Notes
 
 > Friday, March 27 - online content  
 > Tuesday, March 24 - real-time help from the professor 
