@@ -586,7 +586,7 @@ Also, when the component loads, the code must fetch the languages collection so 
 
 In the `select option` element group, the visible text on the item-selection control must be the language name. The non-displayed value attribute must be the language code (which ends up getting stored in the database). 
 
-<img class="border1" src="media/a2-2020-non-english-term-create.png" alt="" style="max-width: 300px">
+<img class="border1" src="media/a2-2020-non-english-term-create.png" alt="">
 
 <br>
 
