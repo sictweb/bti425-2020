@@ -396,6 +396,13 @@ Make sure that your web API has been completed, has some data, and is deployed t
 
 Set up the rest of your dev environment (terminal windows, editor, browsers and tools). 
 
+The professor's sample solution is posted online:  
+[Sample solution](https://pam-2020-a2and3app.herokuapp.com)
+
+> Please note that you do NOT have to replicate its appearance and task flow.  
+> We are expecting your app to meet the specs below.  
+> We are NOT expecting your app to look and work exactly the same.  
+
 <br>
 
 #### Suggestion - use your debug tools
@@ -582,7 +589,7 @@ Then, when the component loads, the code will have the English term identifier, 
 
 Also, when the component loads, the code must fetch the languages collection so that they can be rendered in an item-selection control (e.g. a drop-down list or whatever). The user must be able to select the language of this specific translation. 
 
-> The language code must be from the professor's sample solution for the web API. 
+> The language code must be from the "/api/languages" resource in the professor's web API sample solution. 
 
 In the `select option` element group, the visible text on the item-selection control must be the language name. The non-displayed value attribute must be the language code (which ends up getting stored in the database). 
 
@@ -594,7 +601,7 @@ In the `select option` element group, the visible text on the item-selection con
 
 This will be almost the same as the one described above, in the "Add a new definition to an English term" section. 
 
-> Note: Screen capture sample is coming soon.
+<img class="border1" src="media/a2-2020-non-english-term-add-defn.png" alt="">
 
 <br>
 
