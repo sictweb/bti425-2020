@@ -33,8 +33,20 @@ Video - topic highlights (use the controls to view it full-size):
 For best results, a form requires a data model. This document discusses the concept and development technique:  
 [Angular Forms Data Models](angular-forms-data)
 
+Video - topic highlights (use the controls to view it full-size): 
+
+{% include youtubePlayer.html id="YUWvfpvT794" %}
+
+<br>
+
 Then, we'll learn some techniques to improve the interaction experience users have with forms. And, we'll introduce data validation techniques. These topics are covered in this document:  
 [Introduction to Angular template-driven forms validation](angular-forms-validation-intro)
+
+Video - topic highlights (use the controls to view it full-size): 
+
+{% include youtubePlayer.html id="0PttTywG7NU" %}
+
+<br>
 
 The course's GitHub repo has a nice code example that covers the typical CRUD tasks, and another covers validation essentials. 
 
