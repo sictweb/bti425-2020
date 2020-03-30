@@ -24,6 +24,12 @@ Recently, we were introduced to [Angular template-driven forms](angular-forms-in
 > Remember our previous coverage of  
 > [HTML Form patterns](html-form-patterns). 
 
+Video - topic highlights (use the controls to view it full-size): 
+
+{% include youtubePlayer.html id="9GCUlGNr_2M" %}
+
+<br>
+
 For best results, a form requires a data model. This document discusses the concept and development technique:  
 [Angular Forms Data Models](angular-forms-data)
 
