@@ -95,8 +95,28 @@ In the "old days", programmers targeted *operating systems*. We wrote *for Windo
 
 ### Value proposition of client-side front end dev
 
+There are several articles and opinions out there about the front end dev idea. Here are a few:
+
+~ ~ ~ ~ ~ 
+
+Alexandre Lombard wrote a very good article early in 2020: [Do We Really Need a Front-end Framework?](https://medium.com/swlh/do-we-really-need-a-front-end-framework-e8c8c3e4df0b) (on Medium).
+
+> And I found that, the short answer is no if you focus on the features, while the real answer is yes if you focus on the user experience (UX). Let’s see why, and see what questions you should ask yourself before choosing a front-end solution.
+
+> The choice of a front-end technology doesn’t depend on the features you want to provide to your user, but on the user experience you want him/her to have
+
+~ ~ ~ ~ ~ 
+
+In February 2020, in the Stack Overflow blog, Max Pekarsky wrote a very good lengthy article: [Does your web app need a front-end framework?](https://stackoverflow.blog/2020/02/03/is-it-time-for-a-front-end-framework/)
+
+> A few years ago, while working on a side project, ... my own front end became unwieldy. I had a loose sense that implementing a framework was the right next step, but I had little idea about what they did. [This article has] the explanation I wish had then. 
+
+Good, comprehensive treatment of what we face as modern software developers. 
+
+~ ~ ~ ~ ~ 
+
 Cory House wrote a very good article a few years ago:  
-[Here's Why Client-side Rendering Won](https://medium.freecodecamp.org/heres-why-client-side-rendering-won-46a349fadb52) (on Medium) 
+[Here's Why Client-side Rendering Won](https://medium.freecodecamp.org/heres-why-client-side-rendering-won-46a349fadb52) (on Medium).
 
 Paraphrasing and summarizing, client-side front end dev "won", because it offered these massive advantages:
 * No full page load
