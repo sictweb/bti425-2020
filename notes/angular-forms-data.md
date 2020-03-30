@@ -37,7 +37,7 @@ However, in Angular apps (and in many other library- or framework-based approach
 
 <br>
 
-### What class(es) do we need?
+### What classes do we need?
 
 We need properties for *every* bit of data going to or coming from the form. 
 
@@ -96,7 +96,7 @@ The component template then binds to the property (some attributes were omitted)
 <input type="password" name="password" [(ngModel)]="user.password" required>
 ```
 
-##### Form submission, and the data from the form 
+#### Form submission, and the data from the form 
 
 After the form is submitted, the `user` property holds the data that the user entered. What can we do with the data? 
 
