@@ -117,7 +117,7 @@ Assume that a component renders UI that enables an existing document to be edite
 The document's existing data MUST be sent to the form.  
 We will gather data from the form when it is submitted. 
 
-In the component code, we could simply properties. However, let's write a custom-designed class:
+In the component code, we could use simple properties. However, let's write a custom-designed class:
 ```ts
 class DataForm {
   _id: string;
