@@ -146,6 +146,24 @@ We interpret this as follows: If the "name" element's errors property has a "req
 
 <br>
 
+### Other validation using `pattern` and a regex 
+
+Above, you were reminded about some of the standard HTML form control validation attributes, and learned how a few of them (but not all) can be used in Angular template-driven forms. 
+
+A common task, in a form, is to validate a URL or an email address. Can that be done? Yes, using the [standard `pattern` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern). 
+
+For example, assume that you want the form user to enter a URL. Provide an input field, and a regex as suggested below (some detail has been omitted):
+
+```html
+<input id="website" name="website" [(ngModel)]="website" pattern="(http|https)://[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:/~+#()_-]*[\w@?^=%&amp;/~+#()_-])?">
+```
+
+The regex provided here must include the scheme prefix, and matches most common URLs. 
+
+If you add a template reference variable, then you can notify the form user of problems via the (for example) `website.errors?.pattern` property. 
+
+<br>
+
 ### Ensure that the whole/entire form is valid
 
 One more task must be done, and it's simple. We ensure that the whole/entire form is valid before it can be submitted. 
