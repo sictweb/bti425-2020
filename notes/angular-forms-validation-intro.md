@@ -158,7 +158,7 @@ For example, assume that you want the form user to enter a URL. Provide an input
 <input id="website" name="website" [(ngModel)]="website" pattern="(http|https)://[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:/~+#()_-]*[\w@?^=%&amp;/~+#()_-])?">
 ```
 
-The regex provided here must include the scheme prefix, and matches most common URLs. 
+The regex provided here ensures that the input data must include the scheme prefix, and that it matches most common URLs. 
 
 If you add a template reference variable, then you can notify the form user of problems via the (for example) `website.errors?.pattern` property. 
 
