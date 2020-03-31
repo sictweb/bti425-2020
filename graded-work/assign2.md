@@ -678,8 +678,11 @@ For each of these files in the MyCode folder, change the file name extension to 
 3. Inside that folder, remove (delete) the `node_modules` folder. Your professor does NOT need that folder. Also, if it has a `.git` folder, remove that too.
 
 4. Still in that folder, add a new folder named "MyCode". Copy these source code files to the "MyCode" folder:  
-**to be determined**  
-For each of these files in the MyCode folder, change the file name extension to "txt".
+**your data classes .ts file**  
+**your data manager service .ts file**  
+**your app-routing.module.ts file**  
+**each component .ts file, and .html file**  
+For each of these files in the MyCode folder, add "txt" to the file name extension. For example, "term-english-create.component.ts" will get ".txt" added to the end, to become "term-english-create.component.ts.txt". 
 
 4. Compress/zip the copied folder. Maybe the name should be something like "angularapp.zip". The zip file SHOULD be about 1MB in size. If it isn't, you haven't followed the instructions properly.
 
