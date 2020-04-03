@@ -118,7 +118,7 @@ Here's an example of this in action:
 // Command - increment a department "headCount"
 // This will need an identifier parameter, and an entity body that looks like this...
 // { "_id": "abc123etc." }
-businessDepartmentHeadcountUp: async function (itemId, newItem) {
+businessDepartmentHeadcountUp: async function (itemId) {
 
   // Early exit, confirm that the parameter and entity body match
 
