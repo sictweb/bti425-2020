@@ -6,7 +6,7 @@ layout: default
 ## BTI425 Week 11 Notes
 
 > Friday, March 27 - online content  
-> Tuesday, March 24 - real-time help from the professor 
+> Tuesday, March 31 - real-time help from the professor 
 
 This week, we will introduce *security* topics.  
 
@@ -48,12 +48,12 @@ This week's code examples:
 
 Continue working on [Assignment 2](/graded-work/assign2). 
 
-Your professor will be available to help you online during your scheduled timeslot. Information about how this works is documented here:  
+Your professor will plan to have good availablity during the week. Information about how this works is documented here:  
 
 Prof. McIntyre's sections: 
 * Full info is in a recent email 
 * Will be using the Microsoft Teams app 
-* Will be available for online real-time help during the regular Tuesday timeslots 
+* Will be available for online real-time help during daytime hours  
 * Contact is the email address, peter.mcintyre -at- senecacollege.ca
 
 Prof. Alam's section:
