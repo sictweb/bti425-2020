@@ -59,7 +59,7 @@ You can expect test questions about topics covered since the last test, all the 
 
 #### Practice academic honesty
 
-There are three sections of the BTI425 course. All sections have Test 2 on the same day. The test will be different for each section. You are *EXPECTED* to behave with academic integrity - *DO NOT* communicate, in any way, with another BTI425 student about the content of the test.
+There are three sections of the BTI425 course. All sections have Test 3 on the same day. The test will be different for each section. You are *EXPECTED* to behave with academic integrity - *DO NOT* communicate, in any way, with another BTI425 student about the content of the test.
 
 #### Getting help while you prepare for the test
 
