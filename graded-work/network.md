@@ -23,7 +23,7 @@ Open PowerShell. (Obviously, notice your location in the file system.)
 
 Start a "transcript" file (which is a plain text file):
 ```
-start-transcript -path pinglog.txt -append
+start-transcript pinglog.txt -append
 ```
 
 Identify your internet protocol (IP) address:
@@ -34,6 +34,15 @@ get-netipaddress -addressfamily ipv4
 Start the "ping" command, as follows:
 ```
 ping -t 8.8.8.8 | foreach { "{0} - {1}" -f (get-date), $_}
+```
+
+It will start running, and show content that looks like this:
+```
+2020-04-09 12:33:21 PM - Pinging 8.8.8.8 with 32 bytes of data:
+2020-04-09 12:33:21 PM - Reply from 8.8.8.8: bytes=32 time=11ms TTL=55
+2020-04-09 12:33:22 PM - Reply from 8.8.8.8: bytes=32 time=11ms TTL=55
+2020-04-09 12:33:23 PM - Reply from 8.8.8.8: bytes=32 time=8ms TTL=55
+(etc.)
 ```
 
 Switch to your browser window, and work with Blackboard as directed by your professor. 
@@ -71,8 +80,17 @@ ifconfig en0 inet
 
 Start the "ping" command, as follows:
 ```
-ping 8.8.8.8 | while read p; do echo "$(date "+%y/%m/%d - %H:%M:%S -") $p"; done
+ping 8.8.8.8 | while read p; do echo "$(date "+%y/%m/%d %H:%M:%S %r -") $p"; done
 
+```
+
+It will start running, and show content that looks like this:
+```
+20/04/09 15:35:06 03:35:06 PM - PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+20/04/09 15:35:06 03:35:06 PM - 64 bytes from 8.8.8.8: icmp_seq=1 ttl=55 time=15.9 ms
+20/04/09 15:35:07 03:35:07 PM - 64 bytes from 8.8.8.8: icmp_seq=2 ttl=55 time=11.9 ms
+20/04/09 15:35:08 03:35:08 PM - 64 bytes from 8.8.8.8: icmp_seq=3 ttl=55 time=8.79 ms
+(etc.)
 ```
 
 Switch to your browser window, and work with Blackboard as directed by your professor. 
