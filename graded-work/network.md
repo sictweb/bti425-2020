@@ -80,16 +80,15 @@ ifconfig en0 inet
 
 Start the "ping" command, as follows:
 ```
-ping 8.8.8.8 | while read p; do echo "$(date "+%y/%m/%d %H:%M:%S %r -") $p"; done
-
+ping 8.8.8.8 | while read p; do echo "$(date "+%Y/%m/%d %r -") $p"; done
 ```
 
 It will start running, and show content that looks like this:
 ```
-20/04/09 15:35:06 03:35:06 PM - PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
-20/04/09 15:35:06 03:35:06 PM - 64 bytes from 8.8.8.8: icmp_seq=1 ttl=55 time=15.9 ms
-20/04/09 15:35:07 03:35:07 PM - 64 bytes from 8.8.8.8: icmp_seq=2 ttl=55 time=11.9 ms
-20/04/09 15:35:08 03:35:08 PM - 64 bytes from 8.8.8.8: icmp_seq=3 ttl=55 time=8.79 ms
+2020/04/09 03:41:19 PM - PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+2020/04/09 03:41:19 PM - 64 bytes from 8.8.8.8: icmp_seq=1 ttl=55 time=20.0 ms
+2020/04/09 03:41:20 PM - 64 bytes from 8.8.8.8: icmp_seq=2 ttl=55 time=10.1 ms
+2020/04/09 03:41:21 PM - 64 bytes from 8.8.8.8: icmp_seq=3 ttl=55 time=10.2 ms
 (etc.)
 ```
 
