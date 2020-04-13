@@ -33,9 +33,14 @@ None this week.
 
 Test 3 is on Tuesday, April 14, 2020, and approximately 70 to 80 minutes have been alotted for the test. 
 
+<mark>You *MUST* write the test *during* your normally-scheduled class time:</mark>
+* Section NAA - 8:00am to 9:45am 
+* Section NBB - 11:40am to 1:25pm 
+* Section NCC - 1:30pm to 3:15pm 
+
 #### Test format 
 
-The test will be delivered as an editable Microsoft Word document, from a Blackboard "Assignments" link. The document will have questions, and open space for you to use to type in your answer. Each question-and-answer will be worth two marks, and therefore you will write answers for ten (10) questions. 
+The test will be delivered as an editable Microsoft Word document, from a Blackboard "Assignments" link, for your specific section (NAA, NBB, or NCC). The document will have questions, and open space for you to use to type in your answer. Each question-and-answer will be worth two marks, and therefore you will write answers for any ten (10) questions. 
 
 When writing the test, we have the same expectations as we do in class:
 1. There will be some choice in answering questions 
@@ -53,7 +58,7 @@ At the end of the timeslot, make sure that you submit to the same link on Blackb
 
 You can expect test questions about topics covered since the last test, all the way to current topics. Obviously, you must review the topics yourself, but in general, you can expect questions about:
 * Angular topics - all of them from week 6 onwards
-* Yes, including the security topics (but probably a light touch)
+* Yes, including the security topics 
 
 [This document](test-success-info) has more information about the test.
 
