@@ -33,7 +33,7 @@ None this week.
 
 Test 3 is on Tuesday, April 14, 2020, and approximately 70 to 80 minutes have been alotted for the test. 
 
-<mark>You *MUST* write the test *during* your normally-scheduled class time:</mark>
+<mark>You <em>MUST</em> write the test <em>during</em> your normally-scheduled class time:</mark>
 * Section NAA - 8:00am to 9:45am 
 * Section NBB - 11:40am to 1:25pm 
 * Section NCC - 1:30pm to 3:15pm 
