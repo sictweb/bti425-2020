@@ -166,6 +166,12 @@ app.listen(HTTP_PORT, () => {
 
 <br>
 
+### More info about routes
+
+[This document](web-api-route-design) has a summary of guidance about designing suitable routes in your web API and app. 
+
+<br>
+
 #### Edit `server.js` 
 
 Edit `server.js` so that it holds the code shown above. 

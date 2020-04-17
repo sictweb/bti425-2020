@@ -195,3 +195,9 @@ let products = this.m.getPageOfProducts(pg);
 > Note: During the viewing of the component, if it is possible that the app's user will navigate to the same component/view but with a different parameter value, then this task becomes a bit more complicated. See [this note](angular-routing-parameters-more) for a possible solution. 
 
 <br>
+
+### More info about routes
+
+[This document](web-api-route-design) has a summary of guidance about designing suitable routes in your web API and app. 
+
+<br>

@@ -327,3 +327,9 @@ Create a new Heroku app. Deploy the project to the new Heroku app. Finally, test
 > which can remind you about Heroku deployment. 
 
 <br>
+
+### (reminder) More info about routes
+
+[This document](web-api-route-design) has a summary of guidance about designing suitable routes in your web API and app. 
+
+<br>

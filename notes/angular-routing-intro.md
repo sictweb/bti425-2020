@@ -92,6 +92,12 @@ For example:
 
 <br>
 
+### More info about routes
+
+[This document](web-api-route-design) has a summary of guidance about designing suitable routes in your web API and app. 
+
+<br>
+
 ### Summary, checklist
 
 Here's a summary of the above, which can be used as a quick-start checklist.
