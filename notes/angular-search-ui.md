@@ -13,7 +13,7 @@ This approach performs searches as the user types each character. The table of r
 
 ### Before continuing
 
-The web API must have a resource that will deliver a collection of zero or more results. In other words, a "get some" resource. 
+The web API must have a resource that will deliver a collection of zero or more results. In other words, a "get some" resource (which has been discussed in the [Web API CRUD "get some" document](web-api-crud-get-some)). 
 
 <br>
 

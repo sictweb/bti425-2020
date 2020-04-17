@@ -407,7 +407,7 @@ The professor's sample solution is posted online:
 
 #### Suggestion - use your debug tools
 
-As you make progress on the Angular app, feature by feature, make sure you watch the command line that started the app locally (i.e. by using the `ng server -o` command). If there is a compile error, as you incrementally code, it will show up there. 
+As you make progress on the Angular app, feature by feature, make sure you watch the command line that started the app locally (i.e. by using the `ng serve -o` command). If there is a compile error, as you incrementally code, it will show up there. 
 
 Also, please remember the other [debug strategies](/notes/angular-debug-intro) that you have been exposed to. 
 
