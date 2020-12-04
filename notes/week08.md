@@ -15,7 +15,7 @@ This week, we cover the Angular routing topic. Similar to what you learned in th
 
 ### Friday plan
 
-*Friday, February 21* 
+*Friday, February 21*  
 
 In a recent computer-lab class, the professor [introduced *simple* routing](angular-routing-intro) for an Angular app. We return to this topic today. 
 
