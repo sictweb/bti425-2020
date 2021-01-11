@@ -70,7 +70,7 @@ During the course, the professor(s) will guide the student in the installation, 
 
 Every class/session will have notes posted on this web site.
 
-All notes will be linked from the [notes index page](https://bti425.ca/notes/). 
+All notes will be linked from the [notes index page](/bti425/notes/). 
 
 Study that page's URI to learn the naming convention for a specific weekly notes page.
 

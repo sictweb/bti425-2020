@@ -5,7 +5,7 @@ layout: default
 
 ## Angular Forms Data Models
 
-We learned in the "forms introduction" document (and specifically in [this section](https://bti425.ca/notes/angular-forms-intro#configure-a-data-model-for-the-form)) that:
+We learned in the "forms introduction" document (and specifically in [this section](/bti425/notes/angular-forms-intro#configure-a-data-model-for-the-form)) that:
 
 > ...we *always assume* that an Angular form is backed by a data model.  
 >  

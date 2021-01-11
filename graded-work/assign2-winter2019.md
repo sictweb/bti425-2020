@@ -336,7 +336,7 @@ How should we get to the cart? Should we do the following? We know that it would
 /student/cart/:id
 ```
 
-As an alternative, we are suggesting that we store the student object in the service, and use it to maintain "interaction state". This was discussed [early in the course](https://bti425.ca/notes/intro-web-services). The benefit is that we would have a simple URL like the following that does not expose any student-specific identifier/data:
+As an alternative, we are suggesting that we store the student object in the service, and use it to maintain "interaction state". This was discussed [early in the course](/bti425/notes/intro-web-services). The benefit is that we would have a simple URL like the following that does not expose any student-specific identifier/data:
 ```
 /cart
 ```
@@ -707,7 +707,7 @@ Here's some more comments on the grading procedure:
 * Each of the five interaction tasks will earn marks
   * Some tasks could be "worth" more than others
 
-Please review (again) the [information about grades](https://bti425.ca/policies#information-about-grades). To repeat one of its points, you will not earn an "A" simply for meeting a set of specifications. High grades are earned with work that is clearly better than expected (by meeting the specs). Better work includes a range of "qualitative" measures, including code quality, app and/or UI appearance, organization, content formatting, building upon foundations, and so on. 
+Please review (again) the [information about grades](/bti425/policies#information-about-grades). To repeat one of its points, you will not earn an "A" simply for meeting a set of specifications. High grades are earned with work that is clearly better than expected (by meeting the specs). Better work includes a range of "qualitative" measures, including code quality, app and/or UI appearance, organization, content formatting, building upon foundations, and so on. 
 
 <br>
 
