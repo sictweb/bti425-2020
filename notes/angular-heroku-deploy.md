@@ -23,7 +23,7 @@ ng build --prod
 
 It will create a folder named `dist`, and inside, another folder that matches the project name (for example, `PROJECTNAME`). In that folder, there are several static code assets in the folder. Soon, these files will be copied to a Node.js + Express.js server. 
 
-![Angular build result](/media/angular-build-result.png)
+![Angular build result](/bti425/media/angular-build-result.png)
 
 <br>
 

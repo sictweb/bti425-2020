@@ -50,7 +50,7 @@ Video - topic highlights (use the controls to view it full-size):
 
 The course's GitHub repo has a nice code example that covers the typical CRUD tasks, and another covers validation essentials. 
 
-Remember to frequently use the [learning resources](/resources).
+Remember to frequently use the [learning resources](/bti425/resources).
 
 <br>
 

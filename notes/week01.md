@@ -9,7 +9,7 @@ layout: default
 
 The theme for the first few classes is to transition your success in the previous course to the new topics in this course.
 
-Remember to frequently use the [learning resources](/resources).
+Remember to frequently use the [learning resources](/bti425/resources).
 
 <br>
 
@@ -32,7 +32,7 @@ We'll build on the previous course's Ajax coverage with a survey of front end de
 
 The first part of this course will ensure that you have your server-side development and deployment (hosting) environment configured correctly. We will design, program, and then install and configure one or more data-rich project on the server, which will persist resources that can be used by some of the front end apps that we create during the course. A natural result will be that you will learn more about, and write code for, a web service (also known as a web API). In summary, you'll transition from writing server code that generates and delivers HTML, to server code that generates and delivers resources that are formatted as JSON. 
 
-The weekly notes will be organized and delivered as a collection of topic-themed documents. This page - "week01" - will simply guide you throught the topics in sequence. (Read [more about this organization scheme here](/notes/about).)
+The weekly notes will be organized and delivered as a collection of topic-themed documents. This page - "week01" - will simply guide you throught the topics in sequence. (Read [more about this organization scheme here](/bti425/notes/about).)
 
 <br>
 
@@ -40,17 +40,17 @@ The weekly notes will be organized and delivered as a collection of topic-themed
 
 *Tuesday, January 7*
 
-New topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/standards#taking-notes-in-class-and-before-class-as-you-prepare). 
+New topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/bti425/standards#taking-notes-in-class-and-before-class-as-you-prepare). 
 
-* [Welcome](/notes/welcome) to the BTI425 course
+* [Welcome](/bti425/notes/welcome) to the BTI425 course
 
 * [Developer tools](dev-tools) used in this course
 
-* [Web services (re)introduction](/notes/intro-web-services)
+* [Web services (re)introduction](/bti425/notes/intro-web-services)
 
-* [Creating a web service](/notes/web-api-v1)
+* [Creating a web service](/bti425/notes/web-api-v1)
 
-* [This document](/notes/postman-intro) introduces you to Postman, and has how-to getting started info.
+* [This document](/bti425/notes/postman-intro) introduces you to Postman, and has how-to getting started info.
 
 <br>
 

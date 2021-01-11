@@ -26,7 +26,7 @@ In class this week, the professor will demonstrate a project that shows a partic
 
 [Angular component interaction](angular-components-interaction) describes how to do containment, and pass values from "parent" to "child".
 
-Remember to frequently use the [learning resources](/resources).
+Remember to frequently use the [learning resources](/bti425/resources).
 
 <br>
 

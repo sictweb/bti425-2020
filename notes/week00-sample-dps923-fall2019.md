@@ -26,7 +26,7 @@ Plan for this week:
 * Multi-entity data model and its usage
 * Location services introduction
 
-We will cover these - discuss, show-and-tell, diagram, etc. - in the Wednesday class. While some brief notes are included below, be prepared to [take your own notes](/standards#taking-notes-in-class). 
+We will cover these - discuss, show-and-tell, diagram, etc. - in the Wednesday class. While some brief notes are included below, be prepared to [take your own notes](/bti425/standards#taking-notes-in-class). 
 
 <br>
 

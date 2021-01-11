@@ -36,7 +36,7 @@ In the computer-lab class...
 
 [Angular template-driven forms introduction](angular-forms-intro) - The highlights of how to get started with forms in Angular. (Forms will be more fully covered next week.) 
 
-Remember to frequently use the [learning resources](/resources).
+Remember to frequently use the [learning resources](/bti425/resources).
 
 <br>
 

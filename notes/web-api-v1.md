@@ -192,7 +192,7 @@ Open a browser, and navigate to the root (home page).
 
 Open Postman, and interact with the resources that begin with `/api/`. 
 
-> [This document](/notes/postman-intro) introduces you to Postman, and has how-to getting started info.
+> [This document](/bti425/notes/postman-intro) introduces you to Postman, and has how-to getting started info.
 
 <br>
 
@@ -271,7 +271,7 @@ Generate some data. Make sure you configure enough fields to give you a rich var
 
 Here's a screen capture. (Right-click and then open it in a new tab/window to see it full size.) 
 
-![Mockaroo](/media/web-api-create-mock-data-v1.png)
+![Mockaroo](/bti425/media/web-api-create-mock-data-v1.png)
 
 <br>
 

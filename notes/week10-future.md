@@ -47,7 +47,7 @@ This brief section explains how to implement routing with URL parameters.
 
 #### Begin work on Assignment 2
 
-[Assignment 2](/graded-work/assign2) has been posted. 
+[Assignment 2](/bti425/graded-work/assign2) has been posted. 
 
 Before beginning work on the assignment, your professor will discuss one of the data structures that will be used in the app. The highlights:
 * There will be a "students" collection

@@ -131,7 +131,7 @@ Customize the "template" so that your name appears in the header area of the vie
 
 #### Components to support the app's purpose
 
-As suggested by the guidance in the [HTML Form patterns](/notes/html-form-patterns) document and the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example, create source code files to hold class components for each of the five kinds of interactions. 
+As suggested by the guidance in the [HTML Form patterns](/bti425/notes/html-form-patterns) document and the [React web services intro](https://github.com/sictweb/bti425/tree/master/Week_04) code example, create source code files to hold class components for each of the five kinds of interactions. 
 
 On each component, remember to include navigation links and/or buttons that enables the user to effectively use the app. 
 
@@ -158,7 +158,7 @@ In the following sub-sections, guidance will be given to enable you to iterative
 
 The following guidance assumes that your Heroku + Atlas hosted web API works, fully and completely. 
 
-> If you need some guidance to complete that task, review the [week 1](/notes/week01) and [week 2](/notes/week02) notes and code examples.  
+> If you need some guidance to complete that task, review the [week 1](/bti425/notes/week01) and [week 2](/bti425/notes/week02) notes and code examples.  
 
 In your functions that make requests to the web API, make sure that you use the Fetch API. 
 
@@ -262,7 +262,7 @@ For this assignment, there is no required external testing capability. Therefore
 
 ### Deploy the React app to Heroku
 
-[Follow the guidance in the course notes](/notes/react-heroku-deploy), and deploy the React app to a new Heroku app. 
+[Follow the guidance in the course notes](/bti425/notes/react-heroku-deploy), and deploy the React app to a new Heroku app. 
 
 > Remember to do as noted above...  
 > Update your home page component to include two standard HTML hyperlinks:  

@@ -15,7 +15,7 @@ This week, it's all about *getting started with Angular*. Then, beginning next w
 
 After that, we'll put together some apps. 
 
-Remember to frequently use the [learning resources](/resources).
+Remember to frequently use the [learning resources](/bti425/resources).
 
 <br>
 

@@ -15,6 +15,6 @@ Your professors will be available in class to answer your questions and provide 
 
 ### Assignment 3 continued
 
-This week, continue working on [Assignment 3](/graded-work/assign3). 
+This week, continue working on [Assignment 3](/bti425/graded-work/assign3). 
 
 <br>

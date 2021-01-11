@@ -22,7 +22,7 @@ For beginners, there are three important features:
 2. Request and response viewers - enables you to inspect the contents of both the request and the response
 3. List of past requests - saves all requests as a history
 
-![Postman start screen](/media/postman-start.png)
+![Postman start screen](/bti425/media/postman-start.png)
 
 <br>
 
@@ -46,7 +46,7 @@ To compose an HTTP GET request, two settings are required:
 
 Other settings may be required (e.g. security-related info, etc.), and we'll see those in the future. 
 
-![Simple GET request](/media/postman-get-simple.png)
+![Simple GET request](/bti425/media/postman-get-simple.png)
 
 <br>
 
@@ -64,13 +64,13 @@ As above, other settings may be required, but these will enable you to get start
 
 The image below shows a simple post request, with metadata for the first three settings. Notice that you must select the "Headers" tab to get to the data-entry panel. The header we want is `Content-Type`, and its value will be `application/json`, because that's what we're sending
 
-![Simple POST request](/media/postman-post-headers.png)
+![Simple POST request](/bti425/media/postman-post-headers.png)
 
 <br>
 
 The image below shows how to enter metadata for the fourth setting. Select the "Body" tab, and then select "raw". Then, in the text entry area, add the JSON that correctly defines a new item for the collection. 
 
-![Simple POST request, body](/media/postman-post-body.png)
+![Simple POST request, body](/bti425/media/postman-post-body.png)
 
 <br>
 

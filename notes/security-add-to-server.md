@@ -15,7 +15,7 @@ This document focuses on the first task, adding security features to the web ser
 
 The following is a simplified box-and-line drawing of the new and desired configuration. It shows the new security-related code assets and their relationships.
 
-![Security overview](/media/sec-app-overview.png)
+![Security overview](/bti425/media/sec-app-overview.png)
 
 There are several things to notice. 
 

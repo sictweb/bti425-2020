@@ -11,9 +11,9 @@ Get ready by visiting the [React home page](https://reactjs.org/), and read/scan
 
 On the top navigation menu, notice the [Docs](https://reactjs.org/docs/installation.html) (documentation) and [Tutorial](https://reactjs.org/tutorial/tutorial.html) items. 
 
-![React web site](/media/react-docs-topics-install.png)
+![React web site](/bti425/media/react-docs-topics-install.png)
 
-![React web site](/media/react-docs-topics-main.png)
+![React web site](/bti425/media/react-docs-topics-main.png)
 
 <br>
 

@@ -240,7 +240,7 @@ Recall: to perform an Ajax "Get" request with jQuery, we can use the following c
 $.ajax({
         url: "http://localhost:8081/employees", // This only works if the Teams API is running 
                                                 // locally - change this url to your Heroku API 
-                                                // (/employees) to use your API on Heroku
+                                                // (/bti425/employees) to use your API on Heroku
         type: "GET",
         //data: JSON.stringify({ some: "data" }), // we can also send data using the "data" option with PUT or POST
         contentType: "application/json"

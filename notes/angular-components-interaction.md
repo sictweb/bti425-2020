@@ -36,7 +36,7 @@ In the `app-component.html` template code, the "parent" element was added:
 
 Then, in the `parent-component.html` template code, the elements for each "child" were added. To make it look nice, they were contained in a Bootstrap row-and-panel structure:
 
-![Containment, version 1](/media/angular-comp-interact-contain-1.png)
+![Containment, version 1](/bti425/media/angular-comp-interact-contain-1.png)
 
 <br>
 
@@ -118,7 +118,7 @@ In the `parent.component.html` markup, pass on the enrolled students number to c
 
 If all goes well, this shows the result. The yellow-background content is the passed-in data. 
 
-![Containment, version 2](/media/angular-comp-interact-contain-2.png)
+![Containment, version 2](/bti425/media/angular-comp-interact-contain-2.png)
 
 <br>
 

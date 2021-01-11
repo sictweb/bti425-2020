@@ -40,7 +40,7 @@ We will also have a very light touch today on using [HTML Forms](react-forms-int
 
 > Full coverage of "Forms" in React apps is in [Week 5](week05)
 
-Remember to frequently use the [learning resources](/resources).
+Remember to frequently use the [learning resources](/bti425/resources).
 
 <br>
 

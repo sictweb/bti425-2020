@@ -31,7 +31,7 @@ Today, we add more coverage of this important topic:
 
 ### Assignment 2 continued
 
-As you know, [Assignment 2](/graded-work/assign2) has been posted. 
+As you know, [Assignment 2](/bti425/graded-work/assign2) has been posted. 
 
 Continue working on it. 
 

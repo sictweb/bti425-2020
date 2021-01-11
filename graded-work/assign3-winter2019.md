@@ -83,7 +83,7 @@ Back in the MongoDB Atlas console, look at your "Collections", and verify that y
 
 #### Ensure that you can fetch and deliver the data
 
-Follow the guidance in the "add security features to a web API document", in the section titled "[Web API work, initial](/notes/security-add-to-server#web-api-work-initial)". 
+Follow the guidance in the "add security features to a web API document", in the section titled "[Web API work, initial](/bti425/notes/security-add-to-server#web-api-work-initial)". 
 
 This will enable you to know that you can fetch and deliver the user account data successfully. 
 
@@ -93,7 +93,7 @@ This will enable you to know that you can fetch and deliver the user account dat
 
 ### Web API security tasks 
 
-Follow the guidance in the "add security features to a web API" document, in the section titled "[adding security components](/notes/security-add-to-server#adding-security-components)". 
+Follow the guidance in the "add security features to a web API" document, in the section titled "[adding security components](/bti425/notes/security-add-to-server#adding-security-components)". 
 
 This will enable you to add the professor provided code modules, and make edits that add the necessary security features. 
 
@@ -244,7 +244,7 @@ For this assignment, there is no required external testing capability. Therefore
 
 > Note - Above, you have already deployed the web API to Heroku and Atlas.
 
-[Follow the guidance in the course notes](/notes/angular-heroku-deploy), and deploy the Angular app to a new Heroku app. 
+[Follow the guidance in the course notes](/bti425/notes/angular-heroku-deploy), and deploy the Angular app to a new Heroku app. 
 
 > Remember to do as noted above...  
 > Update your app's home page component to include two standard HTML hyperlinks:  

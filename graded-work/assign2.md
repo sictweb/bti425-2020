@@ -86,7 +86,7 @@ For this Assignment 2, the database will include two collections:
 
 As suggested by this list of collections, a *term* could have zero or more *definitions*. This idea supports alternative or evolving definitions over time. It is implemented as a one-to-many association or relationship that uses the MongoDB "embedded document" technique: In a English term document, it has a field that stores a collection (i.e. an array) of "definition" *subdocuments*.  
 
-> Review the embedded subdocument coverage in the [introduction](/notes/data-assoc-intro) note and in the [how-to](/notes/data-assoc-subdocs-how-to) note. 
+> Review the embedded subdocument coverage in the [introduction](/bti425/notes/data-assoc-intro) note and in the [how-to](/bti425/notes/data-assoc-subdocs-how-to) note. 
 
 > The embedded subdocument must be described by a Mongoose schema.  
 > Therefore, the web API will have three Mongoose schemas:  
@@ -131,7 +131,7 @@ Assignment 2 "definition" schema fields:
 
 In addition, an item in the English collection will be associated or related, in a one-to-many manner, with zero or more items in the non-English collection. It is implemented using the MongoDB "document reference" technique: In a *non-English term document*, it has a field (probably named "termEnglishId") that stores an object identifier "reference" to the English term document. 
 
-> Review the document reference coverage in the [introduction](/notes/data-assoc-intro) note and in the [how-to](/notes/data-assoc-doc-ref-how-to) note. 
+> Review the document reference coverage in the [introduction](/bti425/notes/data-assoc-intro) note and in the [how-to](/bti425/notes/data-assoc-doc-ref-how-to) note. 
 
 If you need a reminder about working with the MongoDB database engine, we suggest that you do these tasks:
 * Create a database named `db-a2` (database for Assignment 2)
@@ -254,13 +254,13 @@ It is expected that the following, at a minimum, will be needed for the **termEn
 1. edit existing (definition document), to increment the "likes" value
 
 > For guidance about how to handle "get some" for number 3, read this:  
-> [Web API CRUD - "get some" technique](/notes/web-api-crud-get-some)
+> [Web API CRUD - "get some" technique](/bti425/notes/web-api-crud-get-some)
 
 > Reminder about the associated/related data coverage and how-to notes.  
 > The `webapi-data-assoc-embed-doc` code example shows how to approach the coding task for numbers 4 and 5.
 
 > For guidance about how to handle the "increment" tasks for numbers 6, 7, and 8, read this:  
-> [Web API - "command" technique](/notes/web-api-commands)
+> [Web API - "command" technique](/bti425/notes/web-api-commands)
 
 <br>
 
@@ -280,7 +280,7 @@ It is expected that the following, at a minimum, will be needed for the **termNo
 > FYI, that code example also shows how to approach the coding task to fetch a termEnglish document which includes its associated/related termNonEnglish documents.
 
 > For guidance about how to handle the "increment" tasks for numbers 6, 7, and 8, read this:  
-> [Web API - "command" technique](/notes/web-api-commands)
+> [Web API - "command" technique](/bti425/notes/web-api-commands)
 
 <br>
 
@@ -409,7 +409,7 @@ The professor's sample solution is posted online:
 
 As you make progress on the Angular app, feature by feature, make sure you watch the command line that started the app locally (i.e. by using the `ng serve -o` command). If there is a compile error, as you incrementally code, it will show up there. 
 
-Also, please remember the other [debug strategies](/notes/angular-debug-intro) that you have been exposed to. 
+Also, please remember the other [debug strategies](/bti425/notes/angular-debug-intro) that you have been exposed to. 
 
 <br>
 
@@ -418,7 +418,7 @@ Also, please remember the other [debug strategies](/notes/angular-debug-intro) t
 As you make progress on the Angular app, feature by feature, deploy it to Heroku, and maybe use another device (your smartphone?) to connect to it and interact with it. 
 
 How-to instructions for Angular app to Heroku are here:  
-[Deploy Angular app to Heroku](/notes/angular-heroku-deploy)
+[Deploy Angular app to Heroku](/bti425/notes/angular-heroku-deploy)
 
 <br>
 
@@ -476,7 +476,7 @@ In the data manager service, write a method that will send a request to the web 
 
 #### Search for an English term
 
-Somewhere in the user interface (in an existing component or in a dedicated component), search (for an English term) should be supported. To learn one approach, read the [Angular app "search" UI and UX](/notes/angular-search-ui) document.
+Somewhere in the user interface (in an existing component or in a dedicated component), search (for an English term) should be supported. To learn one approach, read the [Angular app "search" UI and UX](/bti425/notes/angular-search-ui) document.
 
 In the professor's sample solution, it was implemented as part of the list of English terms. 
 
@@ -499,9 +499,9 @@ Remember that you MUST gather a definition's text when you are creating a new En
 
 Also remember the best practice that says you must create a *data model class* to define the data that will be entered on the form. Then, as you know, the shape of the data package that is sent to the web API "add new" request handler must match the "termEnglish" schema. This doesn't happen automatically, as you must write code in the form submit button handler method to do the data preparation. The links below are both a reminder about the process and provide additional how-to info that will help. 
 
-* [Angular Forms Data Models](/notes/angular-forms-data)
+* [Angular Forms Data Models](/bti425/notes/angular-forms-data)
 
-* [JavaScript Spread and Object Mapping](/notes/js-spread-object-mapping)
+* [JavaScript Spread and Object Mapping](/bti425/notes/js-spread-object-mapping)
 
 After the "add new" completes successfully, remember to follow the PRG pattern, and redirect (probably to the "detail" component). 
 

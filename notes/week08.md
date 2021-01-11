@@ -26,7 +26,7 @@ Read the [official Angular.io documentation](https://angular.io/docs) for these 
 * [RouterOutlet](https://angular.io/api/router/RouterOutlet)
 * [RouterLink](https://angular.io/api/router/RouterLink)
 
-Remember to frequently use the [learning resources](/resources).
+Remember to frequently use the [learning resources](/bti425/resources).
 
 <br>
 

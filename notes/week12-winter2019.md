@@ -41,6 +41,6 @@ You can expect test questions about topics covered since the last test, all the 
 
 ### Assignment 3 is available
 
-This week, begin working on [Assignment 3](/graded-work/assign3). 
+This week, begin working on [Assignment 3](/bti425/graded-work/assign3). 
 
 <br>

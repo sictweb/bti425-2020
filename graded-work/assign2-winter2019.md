@@ -687,7 +687,7 @@ For this assignment, there is no required external testing capability. Therefore
 
 > Note - Above, you have already deployed the web API to Heroku and Atlas.
 
-[Follow the guidance in the course notes](/notes/angular-heroku-deploy), and deploy the Angular app to a new Heroku app. 
+[Follow the guidance in the course notes](/bti425/notes/angular-heroku-deploy), and deploy the Angular app to a new Heroku app. 
 
 > Remember to do as noted above...  
 > Update your app's home page component to include two standard HTML hyperlinks:  
