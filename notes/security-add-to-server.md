@@ -331,7 +331,7 @@ let isPasswordMatch =
 
 #### Access token
 
-In the [security topics introduction](https://bti425.ca/notes/security-intro.html), we learned that an access token is a package of data that includes information about the token issuer, descriptive information about the user (other than secret information), and information about the cookie or token lifetime. In other words, the package of data includes *claims*. 
+In the [security topics introduction](/notes/security-intro.html), we learned that an access token is a package of data that includes information about the token issuer, descriptive information about the user (other than secret information), and information about the cookie or token lifetime. In other words, the package of data includes *claims*. 
 
 What is the format or content of the token? In our course, we are using the [Internet-standard (RFC 7519)](https://tools.ietf.org/html/rfc7519) JSON Web Token (JWT). 
 

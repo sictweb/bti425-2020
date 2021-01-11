@@ -13,7 +13,7 @@ This week, we plan to cover some more "services" topics, and introduce "forms" t
 
 Highlights from this week's topics: 
 
-A couple of weeks ago, we had a [brief and gentle introduction to an Angular service](https://bti425.ca/notes/angular-services-intro). 
+A couple of weeks ago, we had a [brief and gentle introduction to an Angular service](/notes/angular-services-intro). 
 
 Today, we add more coverage of this important topic: 
 

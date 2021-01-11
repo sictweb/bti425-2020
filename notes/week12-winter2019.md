@@ -13,7 +13,7 @@ On Monday, we have Test 3. Then, in the other day's computer-lab session, we wil
 
 Test 3 is on Monday, April 1, 2019. 
 
-Please review the [information about tests](https://bti425.ca/notes/week04#test-info) from awhile ago. 
+Please review the [information about tests](/notes/week04#test-info) from awhile ago. 
 
 You can expect test questions about topics covered since the last test, all the way to the introduction to security topics. Obviously, you must review the topics yourself, but in general, you can expect questions about:
 * Angular platform overview
