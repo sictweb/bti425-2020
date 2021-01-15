@@ -246,7 +246,7 @@ The result will look something like the following:
 
 ### Study the code example
 
-See the ["animals" code example in the Week 7 folder](https://github.com/sictweb/bti425/tree/master/Week_07) of our BTI425 GitHub repository. 
+See the ["animals" code example in the Week 7 folder](https://github.com/sictweb/bti425-2020/tree/master/Week_07) of our BTI425 GitHub repository. 
 
 It implements the instructions in this document.
 

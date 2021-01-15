@@ -7,7 +7,7 @@ layout: default
 
 The theme for the first week or more is to transition your success in the previous course to the new topics in this course.
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/bti425-2020/resources).
 
 <br>
 
@@ -30,7 +30,7 @@ We'll build on that with a *thorough survey* of front end development techniques
 
 The first part of this course will ensure that you have your development environment configured correctly. We will install and configure a data-rich project on the server, which will persist resources that can be used by all of the front end apps that we create during the course. A natural result will be that you will learn more about, and write code for, a web service (also known as a web API). In summary, you'll transition from writing server code that generates and delivers HTML, to server code that generates and delivers resources that are formatted as JSON. 
 
-The weekly notes will be organized and delivered as a collection of topic-themed documents. This page - "week01" - will simply guide you throught the topics in sequence. (Read [more about this organization scheme here](/bti425/notes/about).)
+The weekly notes will be organized and delivered as a collection of topic-themed documents. This page - "week01" - will simply guide you throught the topics in sequence. (Read [more about this organization scheme here](/bti425-2020/notes/about).)
 
 <br>
 
@@ -40,9 +40,9 @@ This week's topics include:
 
 [Welcome](welcome) to the BTI425 course
 
-[Web services (re)introduction](/bti425/notes/intro-web-services)
+[Web services (re)introduction](/bti425-2020/notes/intro-web-services)
 
-[Setting up the back end server based web API](/bti425/notes/teams-api-setup)
+[Setting up the back end server based web API](/bti425-2020/notes/teams-api-setup)
 
 <br>
 

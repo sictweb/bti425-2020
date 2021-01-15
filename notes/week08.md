@@ -19,14 +19,14 @@ This week, we cover the Angular routing topic. Similar to what you learned in th
 
 In a recent computer-lab class, the professor [introduced *simple* routing](angular-routing-intro) for an Angular app. We return to this topic today. 
 
-[Routing and URL parameters](/bti425/notes/week07-in-class#implement-the-get-one-use-case) - this brief section explains the implementation technique.   
+[Routing and URL parameters](/bti425-2020/notes/week07-in-class#implement-the-get-one-use-case) - this brief section explains the implementation technique.   
 
 Read the [official Angular.io documentation](https://angular.io/docs) for these topics:
 * [Routing & Navigation](https://angular.io/guide/router)
 * [RouterOutlet](https://angular.io/api/router/RouterOutlet)
 * [RouterLink](https://angular.io/api/router/RouterLink)
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/bti425-2020/resources).
 
 <br>
 

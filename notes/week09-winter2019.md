@@ -13,7 +13,7 @@ This week, we plan to cover some more "services" topics, and introduce "forms" t
 
 Highlights from this week's topics: 
 
-A couple of weeks ago, we had a [brief and gentle introduction to an Angular service](/bti425/notes/angular-services-intro). 
+A couple of weeks ago, we had a [brief and gentle introduction to an Angular service](/bti425-2020/notes/angular-services-intro). 
 
 Today, we add more coverage of this important topic: 
 
@@ -31,7 +31,7 @@ Today, we add more coverage of this important topic:
 
 ### Assignment 2 continued
 
-As you know, [Assignment 2](/bti425/graded-work/assign2) has been posted. 
+As you know, [Assignment 2](/bti425-2020/graded-work/assign2) has been posted. 
 
 Continue working on it. 
 

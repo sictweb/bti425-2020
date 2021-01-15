@@ -30,7 +30,7 @@ During development, you can use debugging and inspection tools.
 
 <br>
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/bti425-2020/resources).
 
 <br>
 

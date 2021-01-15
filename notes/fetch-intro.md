@@ -167,7 +167,7 @@ fetch(url, requestOptions)
   // etc.
 ```
 
-For more information, view and use the code in the ["react-ws-intro" code example](https://github.com/sictweb/bti425/tree/master/Week_04) in the course's code example repo. 
+For more information, view and use the code in the ["react-ws-intro" code example](https://github.com/sictweb/bti425-2020/tree/master/Week_04) in the course's code example repo. 
 
 <br>
 

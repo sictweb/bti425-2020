@@ -71,7 +71,7 @@ Then, in the component's class code, `m` (for "manager") is a reference to the s
 
 #### Can I see this in action?
 
-Yes, complete the work in the Week 7 non-graded "[in-class](/bti425/notes/week07-in-class)" exercise. 
+Yes, complete the work in the Week 7 non-graded "[in-class](/bti425-2020/notes/week07-in-class)" exercise. 
 
 In a later class, we will cover services in more depth. 
 

@@ -45,7 +45,7 @@ In class (on Friday), we'll do a hands-on example [that is documented](angular-i
 
 Then, we repeat or highlight some of [the important topics and concepts](angular-architecture) from the getting started guide and tutorials. 
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/bti425-2020/resources).
 
 <br>
 

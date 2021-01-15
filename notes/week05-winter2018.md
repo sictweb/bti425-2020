@@ -9,7 +9,7 @@ The theme for the next week is to continue to develop our component-oriented web
 
 We will also learn about client-side **routing** and how we can use the [React-Router](https://www.npmjs.com/package/react-router) (react-router-dom) package to create a SPA (Single-Page Application).
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/bti425-2020/resources).
 
 <br>
 

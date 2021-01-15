@@ -121,7 +121,7 @@ We will do this work in three distinct parts, to ensure that you can make progre
 
 Above, you learned that the app needs four data-oriented views (for Overview, Projects, Teams, Employees). 
 
-[In the notes](https://sictweb.github.io/bti425/notes/react-app-design-basics), you learned that a component has a consistent and predictable code structure, as shown here:
+[In the notes](https://sictweb.github.io/bti425-2020/notes/react-app-design-basics), you learned that a component has a consistent and predictable code structure, as shown here:
 
 ```jsx
 import React, { Component } from 'react';
@@ -214,7 +214,7 @@ Now that you know its organization, do some coding. Using the code in `App.js` t
 
 <br>
 
-Recall from [the notes](https://sictweb.github.io/bti425/notes/react-app-design-basics#the-panels) and the [React documentation](https://reactjs.org/docs/jsx-in-depth.html#jsx-children) that `this.props.children` is a special property. It represents the content (elements and/or text) that are inside the tags. 
+Recall from [the notes](https://sictweb.github.io/bti425-2020/notes/react-app-design-basics#the-panels) and the [React documentation](https://reactjs.org/docs/jsx-in-depth.html#jsx-children) that `this.props.children` is a special property. It represents the content (elements and/or text) that are inside the tags. 
 
 To explain, this MainContainer component has content that is known now (the structural/layout divs, and the NavBar and SideBar components). However, it will have more content added in the future, dynamically. That's what `this.props.children` represents. 
 
@@ -284,7 +284,7 @@ Now, we can work on the `render()` method. The content will be rendered in a pan
 
 The number of days is a calculated value. Use the Moment.js library to generate an integer value. 
 
-In [the notes](https://sictweb.github.io/bti425/notes/react-app-design-basics#rendering-data-in-a-collection), you learned how to render data in a collection. That's what we will do here. Follow the guidance in the notes, and in the documentation. 
+In [the notes](https://sictweb.github.io/bti425-2020/notes/react-app-design-basics#rendering-data-in-a-collection), you learned how to render data in a collection. That's what we will do here. Follow the guidance in the notes, and in the documentation. 
 
 Edit the overview component again. Import this projects panel component. Then, replace the placeholder text with the custom element `<ProjectsPanel />`. 
 
@@ -395,7 +395,7 @@ Until now, the `App.js` render method looked something like this as you wrote co
 
 This was OK, as it helped you learn, and helped you make progress in an incremental way. Now, we must **move** the wrapper component "MainContainer" to **each** of the other components (overview, projects, teams, employees, and not found). Do that now before continuing. (It is likely that you can just replace the top-level div element with the MainContainer custom element. Remember to import that component too.) 
 
-Return to editing `App.js`. The next task is similar to what you learned in the [React routing notes](https://sictweb.github.io/bti425/notes/react-routing#appjs):
+Return to editing `App.js`. The next task is similar to what you learned in the [React routing notes](https://sictweb.github.io/bti425-2020/notes/react-routing#appjs):
 
 First, import some classes from the React Router package.
 

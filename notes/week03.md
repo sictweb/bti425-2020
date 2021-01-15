@@ -10,7 +10,7 @@ layout: default
 
 The theme for the next three weeks is to introduce you to learning and using **React**, a JavaScript library from Facebook, for building user interfaces. 
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/bti425-2020/resources).
 
 <br>
 
@@ -18,7 +18,7 @@ Remember to frequently use the [learning resources](/bti425/resources).
 
 *Friday, January 17* 
 
-A reminder - new topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/bti425/standards#taking-notes-in-class-and-before-class-as-you-prepare). 
+A reminder - new topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/bti425-2020/standards#taking-notes-in-class-and-before-class-as-you-prepare). 
 
 This week, we introduce a new way (for our students) to think about building an web app: [Component-based architecture](component-idea). 
 

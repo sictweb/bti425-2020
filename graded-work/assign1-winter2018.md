@@ -553,11 +553,11 @@ When updating a resource, we use a [HTTP PUT](https://tools.ietf.org/html/rfc723
 * A content type
 * Data, which (for our purposes, is the full/complete object that we are working with)
 
-In the Week 3 "knockout-Ajax" code example, there's an example of an HTTP PUT request, [starting on line 87](https://github.com/sictweb/bti425/blob/master/Week_03/knockout-Ajax/js/main.js#L87). 
+In the Week 3 "knockout-Ajax" code example, there's an example of an HTTP PUT request, [starting on line 87](https://github.com/sictweb/bti425-2020/blob/master/Week_03/knockout-Ajax/js/main.js#L87). 
 
 OK, good, that's helpful. In that code example, the "plainEmployee" object in line 90 is the data that is sent with the HTTP PUT request. In contrast, for our situation, we must send a "project" object.
 
-Just before we write the statement, let's look at the Teams API code. In its `server.js` source code file, [starting on line 153](https://github.com/sictweb/bti425/blob/master/Templates_and_solutions/teams-api/server.js#L153), we see the code for the function that listens for HTTP PUT requests to the `/project/:projectId` segment. 
+Just before we write the statement, let's look at the Teams API code. In its `server.js` source code file, [starting on line 153](https://github.com/sictweb/bti425-2020/blob/master/Templates_and_solutions/teams-api/server.js#L153), we see the code for the function that listens for HTTP PUT requests to the `/project/:projectId` segment. 
 
 OK, now that we know where it's going, we have all we need to construct the statement, which will look similar to the following:
 

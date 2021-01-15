@@ -31,7 +31,7 @@ Also:
 Here's how to [deploy an Angular app to Heroku](angular-heroku-deploy).  
 The process is similar to the one you used to deploy a React app.
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/bti425-2020/resources).
 
 <br>
 
@@ -46,7 +46,7 @@ This week's code examples:
 
 *Tuesday, March 31*
 
-Continue working on [Assignment 2](/bti425/graded-work/assign2). 
+Continue working on [Assignment 2](/bti425-2020/graded-work/assign2). 
 
 Your professor will plan to have good availablity during the week. Information about how this works is documented here:  
 

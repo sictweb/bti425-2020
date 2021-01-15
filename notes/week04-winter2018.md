@@ -7,7 +7,7 @@ layout: default
 
 The theme for the next two weeks is to introduce you to learning and using **React**, a JavaScript library from Facebook, for building user interfaces. 
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/bti425-2020/resources).
 
 <br>
 

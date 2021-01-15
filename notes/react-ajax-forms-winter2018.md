@@ -56,6 +56,6 @@ componentDidMount() {
 
 ### Putting it together - Example Code
 
-To see how we can put all the ideas from Week 5 together in a single React web application, we will be walking through the [Week 5 example](https://github.com/sictweb/bti425/tree/master/Week_05) from our GitHub repo.  Here, we will see how we can load / modify "Employee" data, access different routes and render Bootstrap components in a structured, component-oriented manner.
+To see how we can put all the ideas from Week 5 together in a single React web application, we will be walking through the [Week 5 example](https://github.com/sictweb/bti425-2020/tree/master/Week_05) from our GitHub repo.  Here, we will see how we can load / modify "Employee" data, access different routes and render Bootstrap components in a structured, component-oriented manner.
 
 <br>

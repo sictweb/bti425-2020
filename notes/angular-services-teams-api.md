@@ -11,7 +11,7 @@ This document has information about using the Teams API from an Angular service.
 
 ### Return types
 
-The return type information is from [USING THE API](https://github.com/sictweb/bti425/tree/master/Templates_and_solutions/teams-api#using-the-api). 
+The return type information is from [USING THE API](https://github.com/sictweb/bti425-2020/tree/master/Templates_and_solutions/teams-api#using-the-api). 
 
 All of the HTTP GET methods return a collection, which is an array. *Yes, even the "get one" methods.* 
 

@@ -20,9 +20,9 @@ The Moment library - which helps with date handling - will also be introduced.
 
 This week's topics include: 
 
-[Creating a hosted web service with a database](/bti425/notes/web-api-v2)
+[Creating a hosted web service with a database](/bti425-2020/notes/web-api-v2)
 
-[Simple apps that interact with a web service](/bti425/notes/web-api-client-apps) 
+[Simple apps that interact with a web service](/bti425-2020/notes/web-api-client-apps) 
 
 Handling Date/Time information using [Moment.js](moment)
 

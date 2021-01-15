@@ -50,7 +50,7 @@ The code with the <span style='background-color: yellow'>yellow</span> highlight
 
 The code with the <span style='background-color: lime'>green</span> highlight is the class' state property. 
 
-![React form code](/bti425/media/react-form-code.png)
+![React form code](/bti425-2020/media/react-form-code.png)
 
 <br>
 

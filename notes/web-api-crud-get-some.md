@@ -11,7 +11,7 @@ This document describes how to design and code a "get some" feature in a web API
 
 ### Typical CRUD
 
-The typical create, read, update, and delete tasks (aka CRUD) are well-understood and present in the web API [code example](https://github.com/sictweb/bti425/tree/master/Week_02/webapi-v7). 
+The typical create, read, update, and delete tasks (aka CRUD) are well-understood and present in the web API [code example](https://github.com/sictweb/bti425-2020/tree/master/Week_02/webapi-v7). 
 
 Beyond these standard tasks, we have learned how to handle additional scenarios. A popular scenario is to enable a search. 
 
@@ -59,7 +59,7 @@ How does the caller/user implement this? Well, hopefully it's obvious that just 
 
 Therefore, in our web API `manager.js` method, we will [decode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent) the data, before we search in the database. 
 
-Another consideration is searching anywhere in a field, and not as an exact match. MongoDB offers a [regular expression operator](https://docs.mongodb.com/manual/reference/operator/query/regex/) that can help with this. It also will make the search case-insensitive. For example, here is a method that will search for a company name in the [webapi-data-assoc-doc-ref](https://github.com/sictweb/bti425/tree/master/Week_09/webapi-data-assoc-doc-ref) code example:
+Another consideration is searching anywhere in a field, and not as an exact match. MongoDB offers a [regular expression operator](https://docs.mongodb.com/manual/reference/operator/query/regex/) that can help with this. It also will make the search case-insensitive. For example, here is a method that will search for a company name in the [webapi-data-assoc-doc-ref](https://github.com/sictweb/bti425-2020/tree/master/Week_09/webapi-data-assoc-doc-ref) code example:
 
 ```js
 companyGetByName: async function (text) {

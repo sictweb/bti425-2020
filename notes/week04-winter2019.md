@@ -64,6 +64,6 @@ Open the `react-ws-intro` code example as you go through the document.
 
 > Coverage of "Forms" in React apps is moved to [Week 5](week05)
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/bti425-2020/resources).
 
 <br>

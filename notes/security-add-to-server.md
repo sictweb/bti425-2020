@@ -15,7 +15,7 @@ This document focuses on the first task, adding security features to the web ser
 
 The following is a simplified box-and-line drawing of the new and desired configuration. It shows the new security-related code assets and their relationships.
 
-![Security overview](/bti425/media/sec-app-overview.png)
+![Security overview](/bti425-2020/media/sec-app-overview.png)
 
 There are several things to notice. 
 
@@ -331,7 +331,7 @@ let isPasswordMatch =
 
 #### Access token
 
-In the [security topics introduction](/bti425/notes/security-intro.html), we learned that an access token is a package of data that includes information about the token issuer, descriptive information about the user (other than secret information), and information about the cookie or token lifetime. In other words, the package of data includes *claims*. 
+In the [security topics introduction](/bti425-2020/notes/security-intro.html), we learned that an access token is a package of data that includes information about the token issuer, descriptive information about the user (other than secret information), and information about the cookie or token lifetime. In other words, the package of data includes *claims*. 
 
 What is the format or content of the token? In our course, we are using the [Internet-standard (RFC 7519)](https://tools.ietf.org/html/rfc7519) JSON Web Token (JWT). 
 

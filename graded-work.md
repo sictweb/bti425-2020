@@ -47,8 +47,8 @@ We have planned three (3) assignments during the term. The total value of all as
 
 Assignment | Theme | Value | Released | Due Date
 --- | --- | --- | --- | ---
-[Assign 1](/bti425/graded-work/assign1) | React app | 15% | January 14 | February 4 at 11:00pm 
-[Assign 2](/bti425/graded-work/assign2) | Angular app,<br>including the Forms topic | 25% | February 24 | April 7 at 11:00pm 
+[Assign 1](/bti425-2020/graded-work/assign1) | React app | 15% | January 14 | February 4 at 11:00pm 
+[Assign 2](/bti425-2020/graded-work/assign2) | Angular app,<br>including the Forms topic | 25% | February 24 | April 7 at 11:00pm 
 
 Assignment 3 was cancelled.
 

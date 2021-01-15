@@ -24,7 +24,7 @@ Another way to think about a subdocument is that it is just a multi-property obj
 
 In the MongoDB database, an example of a "business" document, with a collection of three "department" subdocuments, looks like this in the MongoDB Compass tool:
 
-![Subdocuments](/bti425/media/data-subdocs-in-mongodb-compass.png)
+![Subdocuments](/bti425-2020/media/data-subdocs-in-mongodb-compass.png)
 
 A web API will fetch the document (and its embedded subdocuments) and return the following JSON:
 

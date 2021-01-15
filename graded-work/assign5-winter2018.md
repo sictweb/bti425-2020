@@ -97,7 +97,7 @@ Include the Bootstrap CSS library in your app.
 
 Add `<meta>` tags for author and description, similar to what you've done in previous assignments. 
 
-> We have created a document that suggests [how to create the containment structure](https://github.com/sictweb/bti425/blob/master/Templates_and_solutions/containment-nav-content-footer.md) for an app that has nav, content, and footer areas. Just like this app.  
+> We have created a document that suggests [how to create the containment structure](https://github.com/sictweb/bti425-2020/blob/master/Templates_and_solutions/containment-nav-content-footer.md) for an app that has nav, content, and footer areas. Just like this app.  
 > You may find it useful for this assignment, and for future work (as is or adapted).  
 
 <br>
@@ -236,7 +236,7 @@ We will code the activity logging feature later, after we have completed the oth
 
 #### Prepare to use the Teams API
 
-In the [course notes](https://sictweb.github.io/bti425/notes/week09), the recipe for working with a web service was discussed and demonstrated. In summary, here are the key tasks in the recipe:
+In the [course notes](https://sictweb.github.io/bti425-2020/notes/week09), the recipe for working with a web service was discussed and demonstrated. In summary, here are the key tasks in the recipe:
 
 1. Open the app module for editing. Import the `HttpClientModule` symbol into the app module, and add it to its `@NgModule.imports` array.
 
@@ -796,7 +796,7 @@ Here are the distinct instruction steps that were followed. Most are done in the
 6. Run the "npm init" command
 7. Install Express.js (npm install express)
 8. Run the "git init" command
-9. In VS Code, edit "server.js", paste in the *bottom* version of the server code from the [deployment notes](https://sictweb.github.io/bti425/notes/angular-deployment-intro)
+9. In VS Code, edit "server.js", paste in the *bottom* version of the server code from the [deployment notes](https://sictweb.github.io/bti425-2020/notes/angular-deployment-intro)
 10. Still in VS Code, in the "source control" tool, enter a commit info message, and then commit
 11. Back in Terminal, login to Heroku (the "heroku login" command)
 12. Run the "heroku create" command

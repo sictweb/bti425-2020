@@ -18,7 +18,7 @@ This week, work on Assignment 2.
 
 No new topics this week. 
 
-Continue working on [Assignment 2](/bti425/graded-work/assign2). 
+Continue working on [Assignment 2](/bti425-2020/graded-work/assign2). 
 
 <br>
 
@@ -32,7 +32,7 @@ None this week.
 
 *Tuesday, April 7*
 
-Continue working on [Assignment 2](/bti425/graded-work/assign2). 
+Continue working on [Assignment 2](/bti425-2020/graded-work/assign2). 
 
 Your professor will plan to have good availablity during the week. Information about how this works is documented here:  
 

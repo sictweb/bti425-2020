@@ -13,9 +13,9 @@ Read/skim all of this document before you begin work.
 
 Quick on-page links:
 
-Beginning of the "project 1 specifications" section - [project 1](https://sictweb.github.io/bti425/graded-work/assign3#doing-the-work-project-1-web-site-convert)
+Beginning of the "project 1 specifications" section - [project 1](https://sictweb.github.io/bti425-2020/graded-work/assign3#doing-the-work-project-1-web-site-convert)
 
-Beginning of the "project 2 specifications" section - [project 2](https://sictweb.github.io/bti425/graded-work/assign3#doing-the-work-project-2-components)
+Beginning of the "project 2 specifications" section - [project 2](https://sictweb.github.io/bti425-2020/graded-work/assign3#doing-the-work-project-2-components)
 
 <br>
 
@@ -587,7 +587,7 @@ It's also a good idea to inject it into the constructor. For example, in a compo
 
 The idea here is to enable the browser user to click (select) a row in the table, and then load a separate "customer detail" component that will display all the details. 
 
-To get started, implement the solution in the first part of the [Select an item, view its details](https://sictweb.github.io/bti425/notes/angular-components-inclass#select-an-item-view-its-details) section of the recent notes. You want to add a click handler, and write the click hander method. For now, the click handler method can do a console log and output the selected customer object. 
+To get started, implement the solution in the first part of the [Select an item, view its details](https://sictweb.github.io/bti425-2020/notes/angular-components-inclass#select-an-item-view-its-details) section of the recent notes. You want to add a click handler, and write the click hander method. For now, the click handler method can do a console log and output the selected customer object. 
 
 What's different in this app, when compared to the in-class example? There, we rendered content on the same view. Here, we have implemented routing, and want to view a component that's dedicated to showing customer detail. We will pass information about the selected customer to the customer detail component. We do this by using a "route parameter" feature. 
 
@@ -716,7 +716,7 @@ How will the browser user get to this new "customer create" view? Well, if you c
 
 **Form create, appearance**
 
-One way to think about this task is to ask whether we can re-use any of our previous work. Yes, it's possible. The input form can look similar to the "customer detail" view, replacing the rendered values with input text boxes. Review the "[Prepare the app...](https://sictweb.github.io/bti425/notes/angular-components-inclass#enable-editing-version-1)" section of the recent notes (and in-class demonstration) to recall this technique. 
+One way to think about this task is to ask whether we can re-use any of our previous work. Yes, it's possible. The input form can look similar to the "customer detail" view, replacing the rendered values with input text boxes. Review the "[Prepare the app...](https://sictweb.github.io/bti425-2020/notes/angular-components-inclass#enable-editing-version-1)" section of the recent notes (and in-class demonstration) to recall this technique. 
 
 If you do this - copy-paste from the "customer detail" view, and then replace the rendered values with input text boxes, the result may look something like this:
 

@@ -12,7 +12,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     <!-- new... -->
-    <link rel="shortcut icon" type="image/x-icon" href="/bti425/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/bti425-2020/favicon.ico">
 
 </head>
 
@@ -27,20 +27,20 @@
             <!-- <p>{{ site.description | default: site.github.project_tagline }}</p> -->
 
             <p><img src="https://raw.githubusercontent.com/sictweb/resources/master/logo-sict-v1.png" alt="SICT" /></p>
-            <h1><a href="/bti425/">BTI425</a></h1>
+            <h1><a href="/bti425-2020/">BTI425</a></h1>
             <p>Web Programming for Apps and Services</p>
 
             {% assign current = page.url | downcase | split: '/' %}
 
             <!-- <p>current - {{ current[1] }}</p> -->
 
-            <a href="/bti425/notes/" {% if current[1] == 'notes' %}class='btn active'{% else %}class='btn'{% endif %}>Notes</a>
-            <a href="/bti425/weekly-schedule" {% if current[1] == 'weekly-schedule.html' %}class='btn active'{% else %}class='btn'{% endif %}>Weekly</a>
-            <a href="/bti425/resources" {% if current[1] == 'resources.html' %}class='btn active'{% else %}class='btn'{% endif %}>Resources</a>
-            <a href="/bti425/graded-work" {% if current[1] == 'graded-work.html' %}class='btn active'{% else %}class='btn'{% endif %}>Graded work</a>
-            <a href="/bti425/policies" {% if current[1] == 'policies.html' %}class='btn active'{% else %}class='btn'{% endif %}>Policies</a>
-            <a href="/bti425/standards" {% if current[1] == 'standards.html' %}class='btn active'{% else %}class='btn'{% endif %}>Standards</a>
-            <a href="/bti425/professor" {% if current[1] == 'professor.html' %}class='btn active'{% else %}class='btn'{% endif %}>Professors & addendum</a>
+            <a href="/bti425-2020/notes/" {% if current[1] == 'notes' %}class='btn active'{% else %}class='btn'{% endif %}>Notes</a>
+            <a href="/bti425-2020/weekly-schedule" {% if current[1] == 'weekly-schedule.html' %}class='btn active'{% else %}class='btn'{% endif %}>Weekly</a>
+            <a href="/bti425-2020/resources" {% if current[1] == 'resources.html' %}class='btn active'{% else %}class='btn'{% endif %}>Resources</a>
+            <a href="/bti425-2020/graded-work" {% if current[1] == 'graded-work.html' %}class='btn active'{% else %}class='btn'{% endif %}>Graded work</a>
+            <a href="/bti425-2020/policies" {% if current[1] == 'policies.html' %}class='btn active'{% else %}class='btn'{% endif %}>Policies</a>
+            <a href="/bti425-2020/standards" {% if current[1] == 'standards.html' %}class='btn active'{% else %}class='btn'{% endif %}>Standards</a>
+            <a href="/bti425-2020/professor" {% if current[1] == 'professor.html' %}class='btn active'{% else %}class='btn'{% endif %}>Professors & addendum</a>
             <a href="{{ site.github.repository_url }}" class="btn" target="_blank">Code examples</a>
 
             <!-- {% if site.github.is_project_page %}

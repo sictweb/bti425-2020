@@ -13,7 +13,7 @@ On Monday, we have Test 2. Then, in the other day's computer-lab session, we wil
 
 Test 2 is on Monday, March 4, 2019. 
 
-Please review the [information about tests](/bti425/notes/week04#test-info) from awhile ago. 
+Please review the [information about tests](/bti425-2020/notes/week04#test-info) from awhile ago. 
 
 You can expect test questions about topics covered since the last test, all the way to a small amount of questions about this week's forward-looking topics. Obviously, you must review the topics yourself, but in general, you can expect questions about:
 * React components, sequential and contained 
@@ -32,7 +32,7 @@ You can expect test questions about topics covered since the last test, all the 
 
 Highlights from the routing topic will be presented in the computer-lab class/session. 
 
-[Routing and URL parameters](/bti425/notes/week07-hands-on#implement-the-get-one-use-case)  
+[Routing and URL parameters](/bti425-2020/notes/week07-hands-on#implement-the-get-one-use-case)  
 This brief section explains how to implement routing with URL parameters.  
 
 [The official Angular.io documentation](https://angular.io/docs) for these topics:
@@ -47,7 +47,7 @@ This brief section explains how to implement routing with URL parameters.
 
 #### Begin work on Assignment 2
 
-[Assignment 2](/bti425/graded-work/assign2) has been posted. 
+[Assignment 2](/bti425-2020/graded-work/assign2) has been posted. 
 
 Before beginning work on the assignment, your professor will discuss one of the data structures that will be used in the app. The highlights:
 * There will be a "students" collection
@@ -61,7 +61,7 @@ This organization scheme is discussed in the MongoDB documentation article:
 
 > Note - that area of the documentation has other useful articles, some of which we will use during our work on Assignment 2. 
 
-Your professors will provide you with starter data that can be used in Assignment 2. Some of that data is ready now, and is located in the [week 8 folder](https://github.com/sictweb/bti425/tree/master/Week_08) of the code repo. Get the `assign-2-data-student-v1.json` data file and study it, comparing it to the description above. 
+Your professors will provide you with starter data that can be used in Assignment 2. Some of that data is ready now, and is located in the [week 8 folder](https://github.com/sictweb/bti425-2020/tree/master/Week_08) of the code repo. Get the `assign-2-data-student-v1.json` data file and study it, comparing it to the description above. 
 
 The remaining time in the class/session can be used by you to get started on Assignment 2. 
 

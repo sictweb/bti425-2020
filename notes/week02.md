@@ -14,7 +14,7 @@ Then, a small number of JavaScript-based client apps will be created, to interac
 
 The Moment library - which helps with date handling - will also be introduced. 
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/bti425-2020/resources).
 
 <br>
 
@@ -22,11 +22,11 @@ Remember to frequently use the [learning resources](/bti425/resources).
 
 *Friday, January 10* 
 
-New topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/bti425/standards#taking-notes-in-class-and-before-class-as-you-prepare). 
+New topic presentation, discussions, and demonstrations. While some brief notes are included below, be prepared to [take your own notes](/bti425-2020/standards#taking-notes-in-class-and-before-class-as-you-prepare). 
 
-* [Creating a hosted web service with a database](/bti425/notes/web-api-v2)
+* [Creating a hosted web service with a database](/bti425-2020/notes/web-api-v2)
 
-* [Simple apps that interact with a web API](/bti425/notes/web-api-client-apps) 
+* [Simple apps that interact with a web API](/bti425-2020/notes/web-api-client-apps) 
 
 * Handling Date/Time information using [Moment.js](moment)
 

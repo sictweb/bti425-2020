@@ -17,9 +17,9 @@ As you know, Monday is our classroom "lecture" day. The Family Day holiday is Mo
 
 As a result, you will have a bit more self-study and self-directed work to do this week than is usual. 
 
-If you have not yet done so, make sure you successfully complete last week's non-graded "[hands on](/bti425/notes/week06-hands-on)" exercise. 
+If you have not yet done so, make sure you successfully complete last week's non-graded "[hands on](/bti425-2020/notes/week06-hands-on)" exercise. 
 
-In this week's computer-lab in-class session, your professor will present highlights of another topic set, and then help you get started on this week's non-graded "[hands on](/bti425/notes/week07-hands-on)" exercise, which enables you to get some more practice. 
+In this week's computer-lab in-class session, your professor will present highlights of another topic set, and then help you get started on this week's non-graded "[hands on](/bti425-2020/notes/week07-hands-on)" exercise, which enables you to get some more practice. 
 
 <br>
 

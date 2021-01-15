@@ -287,7 +287,7 @@ Now, edit the "get all" template code, and add another column in the table to ho
 
 Test, and it should look something like the following. When you hover over a button, it should render a link that matches a route object:
 
-![List of items](/bti425/media/angular-week7-handson-1.png)
+![List of items](/bti425-2020/media/angular-week7-handson-1.png)
 
 <br>
 

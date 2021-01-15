@@ -99,7 +99,7 @@ Include the Bootstrap CSS library in your app.
 Add `<meta>` tags for author and description, similar to what you've done in previous assignments. 
 
 > New notice (on Fri Mar 16)...  
-> We have created a document that suggests [how to create the containment structure](https://github.com/sictweb/bti425/blob/master/Templates_and_solutions/containment-nav-content-footer.md) for an app that has nav, content, and footer areas. Just like this app.  
+> We have created a document that suggests [how to create the containment structure](https://github.com/sictweb/bti425-2020/blob/master/Templates_and_solutions/containment-nav-content-footer.md) for an app that has nav, content, and footer areas. Just like this app.  
 > You may find it useful for this assignment, and for future work (as is or adapted).  
 > You're welcome.  
 
@@ -249,7 +249,7 @@ We will code the activity logging feature later, after we have completed the oth
 
 #### Prepare to use the Teams API
 
-In the [course notes](https://sictweb.github.io/bti425/notes/week09), the recipe for working with a web service was discussed and demonstrated. In summary, here are the key tasks in the recipe:
+In the [course notes](https://sictweb.github.io/bti425-2020/notes/week09), the recipe for working with a web service was discussed and demonstrated. In summary, here are the key tasks in the recipe:
 
 1. Open the app module for editing. Import the `HttpClientModule` symbol into the app module, and add it to its `@NgModule.imports` array.
 
@@ -310,7 +310,7 @@ After completing this section, your "display all projects" view may look similar
 
 <br>
 
-> Notice that the list is sorted, and the [date has been nicely formatted](https://sictweb.github.io/bti425/notes/angular-date-pipe). 
+> Notice that the list is sorted, and the [date has been nicely formatted](https://sictweb.github.io/bti425-2020/notes/angular-date-pipe). 
 
 <br>
 
@@ -320,7 +320,7 @@ Maybe you have noticed that the previous two tasks are very similar to the "disp
 
 The good news is that the tasks for the other kinds of CRUD tasks - get one, add new, edit existing, and delete item - are also similar, no matter what the entity. (The difference is in the data, and the desired appearance etc. of the view.)
 
-As a result, you can refer to the guidance that begins in [this section](https://sictweb.github.io/bti425/graded-work/assign3#customer-detail-component-introduction) of Assignment 3 project #2 here, and in the following sections. 
+As a result, you can refer to the guidance that begins in [this section](https://sictweb.github.io/bti425-2020/graded-work/assign3#customer-detail-component-introduction) of Assignment 3 project #2 here, and in the following sections. 
 
 As stated above, the service coding and usage will be different. In the service, create a "get one" method. The method body will have to test for a success or error response.
 
@@ -346,7 +346,7 @@ After completing this section, your "display one project" view may look similar 
 
 #### Employee create component
 
-Follow the theme of the previous section. The Assignment 3 project #2 [create task](https://sictweb.github.io/bti425/graded-work/assign3#customer-create-task) enabled you to transition the work done on the "detail" component into a "create" component. That advice is still valid here. 
+Follow the theme of the previous section. The Assignment 3 project #2 [create task](https://sictweb.github.io/bti425-2020/graded-work/assign3#customer-create-task) enabled you to transition the work done on the "detail" component into a "create" component. That advice is still valid here. 
 
 > Note: As briefly discussed in the Tuesday, March 13 class session, modern browser validation does not seem to work. The reason offered was that the Angular Forms module disabled modern browser validation, so that it could replace or take over the validation job.  
 > The actual reason is a bit different and more complex than that. Let's leave the solution to our coverage of Angular Forms later in the course. For now, continue to "Specify the type of the input elements, to take advantage of modern browser features". While it won't do validation, it will still bring other benefits.  
@@ -361,7 +361,7 @@ After completing this section, your "create employee" view may look similar to t
 
 Why are we doing this project edit task? Well, of all the data in the Teams API, the project data is the messiest and the most artificial of all the entity collections. It would be a great idea to be able to edit the projects. 
 
-The Assignment 3 project #2 [edit task](https://sictweb.github.io/bti425/graded-work/assign3#edit-a-customer) enabled you to transition the work done on the "create" component (especially the form code in the template) into an "edit" component. That advice is still valid here. 
+The Assignment 3 project #2 [edit task](https://sictweb.github.io/bti425-2020/graded-work/assign3#edit-a-customer) enabled you to transition the work done on the "create" component (especially the form code in the template) into an "edit" component. That advice is still valid here. 
 
 After completing this section, your "edit project" view may look similar to the following:
 

@@ -97,7 +97,7 @@ After `router-outlet`, add these in sequence:
 
 At this point, the app should look like this:
 
-![App](/bti425/media/week06-hands-on-1.png)
+![App](/bti425-2020/media/week06-hands-on-1.png)
 
 <br>
 

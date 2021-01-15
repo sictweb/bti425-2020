@@ -9,7 +9,7 @@ In Angular, a *service* is a class that provides value and functionality to your
 
 A service can be used by *any* of your app's components. Its use promotes a layered system architecture, also known as a [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns). Enables you to write the code once, and use it in many places. 
 
-Recently, you had a [brief and gentle introduction to an Angular service](/bti425/notes/angular-services-intro). This document adds more coverage of this important topic. 
+Recently, you had a [brief and gentle introduction to an Angular service](/bti425-2020/notes/angular-services-intro). This document adds more coverage of this important topic. 
 
 <br>
 

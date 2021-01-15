@@ -28,7 +28,7 @@ As suggested above, everything else a page needs (e.g. images, code, etc.) "repo
 
 Think of the front-end browser / client / end-user experience as a company - "The DOM Company". (DOM is document object model, as you know.) Its organization chart looks like this:
 
-![The old way](/bti425/media/boss-html-v1.png)
+![The old way](/bti425-2020/media/boss-html-v1.png)
 
 <br>
 
@@ -38,13 +38,13 @@ Recently, a big change happened at The DOM Company, driven by changes in the env
 
 In essence, the "old way" has been *blown up*:
 
-![BOOM!](/bti425/media/explosion.png)
+![BOOM!](/bti425-2020/media/explosion.png)
 
 <br>
 
 Now, JavaScript is the big boss. It is now *in charge*. It runs the DOM, and deploys assets (HTML, images, more code, etc.) as determined by the user's flow through the app. The modern organization chart now looks like this:
 
-![The new way](/bti425/media/boss-js-v1.png)
+![The new way](/bti425-2020/media/boss-js-v1.png)
 
 <br>
 

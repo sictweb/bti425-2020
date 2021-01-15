@@ -24,6 +24,6 @@ The process is similar to the one you used to deploy a React app.
 
 ### Assignment 2 continued
 
-Also this week, continue working on [Assignment 2](/bti425/graded-work/assign2). 
+Also this week, continue working on [Assignment 2](/bti425-2020/graded-work/assign2). 
 
 <br>

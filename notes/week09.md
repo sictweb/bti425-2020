@@ -18,7 +18,7 @@ This week, we plan to cover some more "services" topics, and introduce "forms" t
 
 Highlights from this week's topics: 
 
-A couple of weeks ago, we had a brief and gentle introduction to an Angular service as part of a Week 7 in-class coding exercise. To supplement that introduction, here is a [formal introduction to an Angular service](/bti425/notes/angular-services-intro). 
+A couple of weeks ago, we had a brief and gentle introduction to an Angular service as part of a Week 7 in-class coding exercise. To supplement that introduction, here is a [formal introduction to an Angular service](/bti425-2020/notes/angular-services-intro). 
 
 Today, we add more coverage of this important topic: 
 
@@ -36,7 +36,7 @@ In the computer-lab class...
 
 [Angular template-driven forms introduction](angular-forms-intro) - The highlights of how to get started with forms in Angular. (Forms will be more fully covered next week.) 
 
-Remember to frequently use the [learning resources](/bti425/resources).
+Remember to frequently use the [learning resources](/bti425-2020/resources).
 
 <br>
 

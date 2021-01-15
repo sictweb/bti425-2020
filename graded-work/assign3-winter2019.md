@@ -83,7 +83,7 @@ Back in the MongoDB Atlas console, look at your "Collections", and verify that y
 
 #### Ensure that you can fetch and deliver the data
 
-Follow the guidance in the "add security features to a web API document", in the section titled "[Web API work, initial](/bti425/notes/security-add-to-server#web-api-work-initial)". 
+Follow the guidance in the "add security features to a web API document", in the section titled "[Web API work, initial](/bti425-2020/notes/security-add-to-server#web-api-work-initial)". 
 
 This will enable you to know that you can fetch and deliver the user account data successfully. 
 
@@ -93,7 +93,7 @@ This will enable you to know that you can fetch and deliver the user account dat
 
 ### Web API security tasks 
 
-Follow the guidance in the "add security features to a web API" document, in the section titled "[adding security components](/bti425/notes/security-add-to-server#adding-security-components)". 
+Follow the guidance in the "add security features to a web API" document, in the section titled "[adding security components](/bti425-2020/notes/security-add-to-server#adding-security-components)". 
 
 This will enable you to add the professor provided code modules, and make edits that add the necessary security features. 
 
@@ -132,7 +132,7 @@ Students.findOne({ email: username }, (error, item) => {
 
 ### Angular web app security starter tasks
 
-In this section, the Angular web app starter tasks, for security, are discussed. The tasks will be very similar to those in the ["add security features to an Angular app" document](/bti425/notes/security-add-to-app). 
+In this section, the Angular web app starter tasks, for security, are discussed. The tasks will be very similar to those in the ["add security features to an Angular app" document](/bti425-2020/notes/security-add-to-app). 
 
 Do those tasks now. 
 
@@ -244,7 +244,7 @@ For this assignment, there is no required external testing capability. Therefore
 
 > Note - Above, you have already deployed the web API to Heroku and Atlas.
 
-[Follow the guidance in the course notes](/bti425/notes/angular-heroku-deploy), and deploy the Angular app to a new Heroku app. 
+[Follow the guidance in the course notes](/bti425-2020/notes/angular-heroku-deploy), and deploy the Angular app to a new Heroku app. 
 
 > Remember to do as noted above...  
 > Update your app's home page component to include two standard HTML hyperlinks:  
@@ -264,7 +264,7 @@ Here's some more comments on the grading procedure:
 * Each of the five interaction tasks will earn marks
   * Some tasks could be "worth" more than others
 
-Please review (again) the [information about grades](/bti425/policies#information-about-grades). To repeat one of its points, you will not earn an "A" simply for meeting a set of specifications. High grades are earned with work that is clearly better than expected (by meeting the specs). Better work includes a range of "qualitative" measures, including code quality, app and/or UI appearance, organization, content formatting, building upon foundations, and so on. 
+Please review (again) the [information about grades](/bti425-2020/policies#information-about-grades). To repeat one of its points, you will not earn an "A" simply for meeting a set of specifications. High grades are earned with work that is clearly better than expected (by meeting the specs). Better work includes a range of "qualitative" measures, including code quality, app and/or UI appearance, organization, content formatting, building upon foundations, and so on. 
 
 <br>
 

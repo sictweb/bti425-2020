@@ -35,7 +35,7 @@ The `manager.js` characteristics include:
 
 ### Code example and technique
 
-For this code example, we'll use the [webapi-data-assoc-embed-doc](https://github.com/sictweb/bti425/tree/master/Week_09/webapi-data-assoc-embed-doc) code example. 
+For this code example, we'll use the [webapi-data-assoc-embed-doc](https://github.com/sictweb/bti425-2020/tree/master/Week_09/webapi-data-assoc-embed-doc) code example. 
 
 We will do two command scenarios:
 1. One will affect a specific document

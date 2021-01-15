@@ -105,7 +105,7 @@ On the left, a *customized* list of possible courses for that student is shown. 
 
 On the right, the selected courses appear in a timetable grid, and in a standard list format. 
 
-> Ready-to-use components for the grid and the list have been posted in the [course code repo in the Week 8 folder](https://github.com/sictweb/bti425/tree/master/Week_08) (alongside the other Assignment 2 content). 
+> Ready-to-use components for the grid and the list have been posted in the [course code repo in the Week 8 folder](https://github.com/sictweb/bti425-2020/tree/master/Week_08) (alongside the other Assignment 2 content). 
 
 <img class="border1" src="media/a2-cart-start.png" alt="">
 
@@ -260,7 +260,7 @@ In this section, the Angular web app starter tasks are discussed.
 
 #### Consistent layout 
 
-We must have a consistent and functional visual layout. Therefore, the first task is to create a layout, or a structure. You can use the guidance in the [Angular component interaction](https://github.com/sictweb/bti425/tree/master/Week_07) code example (in the repo). Customize the "template" so that your name appears in the header area of the viewport. Make sure that there is a navigation scheme. 
+We must have a consistent and functional visual layout. Therefore, the first task is to create a layout, or a structure. You can use the guidance in the [Angular component interaction](https://github.com/sictweb/bti425-2020/tree/master/Week_07) code example (in the repo). Customize the "template" so that your name appears in the header area of the viewport. Make sure that there is a navigation scheme. 
 
 Also, make sure there is a "home" component, and a "not found" component. 
 
@@ -336,7 +336,7 @@ How should we get to the cart? Should we do the following? We know that it would
 /student/cart/:id
 ```
 
-As an alternative, we are suggesting that we store the student object in the service, and use it to maintain "interaction state". This was discussed [early in the course](/bti425/notes/intro-web-services). The benefit is that we would have a simple URL like the following that does not expose any student-specific identifier/data:
+As an alternative, we are suggesting that we store the student object in the service, and use it to maintain "interaction state". This was discussed [early in the course](/bti425-2020/notes/intro-web-services). The benefit is that we would have a simple URL like the following that does not expose any student-specific identifier/data:
 ```
 /cart
 ```
@@ -541,7 +541,7 @@ Test your work, by confirming that your existing students "get all" and "get one
 
 #### Web API functions in `server.js` and `manager.js`
 
-In a [code example in the Week 2 repo](https://github.com/sictweb/bti425/tree/610d5964b03b962625d688c246c80a57a6688331/Week_02/WebAPIv2-OneEntity), and in other code that you have written since, the pattern for all five typical CRUD tasks (get all, get one, add new, edit existing, delete item) is demonstrated. 
+In a [code example in the Week 2 repo](https://github.com/sictweb/bti425-2020/tree/610d5964b03b962625d688c246c80a57a6688331/Week_02/WebAPIv2-OneEntity), and in other code that you have written since, the pattern for all five typical CRUD tasks (get all, get one, add new, edit existing, delete item) is demonstrated. 
 
 For this "save cart" task, we need a PUT handler. We will be updating a "student" document, by setting the value of its just-added "coursesSaved" property to an array (collection) of "courses selected". That array is passed in all the way from the Angular app (the component, then to the service) to the web API (first to the `server.js` function and then to this function). 
 
@@ -586,7 +586,7 @@ coursesSaved?: Course[];
 
 #### Angular app, service function/method
 
-In [code examples in the Week 10 repo](https://github.com/sictweb/bti425/tree/master/Week_10), and in other code that you have written since, the pattern for all five typical CRUD tasks (get all, get one, add new, edit existing, delete item) is demonstrated. 
+In [code examples in the Week 10 repo](https://github.com/sictweb/bti425-2020/tree/master/Week_10), and in other code that you have written since, the pattern for all five typical CRUD tasks (get all, get one, add new, edit existing, delete item) is demonstrated. 
 
 We need a service function/method that will call the web API function that was just completed above. It will be a PUT handler. It will handle the "edit existing" use case for a student. Maybe name it "studentCartSave". 
 
@@ -687,7 +687,7 @@ For this assignment, there is no required external testing capability. Therefore
 
 > Note - Above, you have already deployed the web API to Heroku and Atlas.
 
-[Follow the guidance in the course notes](/bti425/notes/angular-heroku-deploy), and deploy the Angular app to a new Heroku app. 
+[Follow the guidance in the course notes](/bti425-2020/notes/angular-heroku-deploy), and deploy the Angular app to a new Heroku app. 
 
 > Remember to do as noted above...  
 > Update your app's home page component to include two standard HTML hyperlinks:  
@@ -707,7 +707,7 @@ Here's some more comments on the grading procedure:
 * Each of the five interaction tasks will earn marks
   * Some tasks could be "worth" more than others
 
-Please review (again) the [information about grades](/bti425/policies#information-about-grades). To repeat one of its points, you will not earn an "A" simply for meeting a set of specifications. High grades are earned with work that is clearly better than expected (by meeting the specs). Better work includes a range of "qualitative" measures, including code quality, app and/or UI appearance, organization, content formatting, building upon foundations, and so on. 
+Please review (again) the [information about grades](/bti425-2020/policies#information-about-grades). To repeat one of its points, you will not earn an "A" simply for meeting a set of specifications. High grades are earned with work that is clearly better than expected (by meeting the specs). Better work includes a range of "qualitative" measures, including code quality, app and/or UI appearance, organization, content formatting, building upon foundations, and so on. 
 
 <br>
 

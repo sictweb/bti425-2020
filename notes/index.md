@@ -20,7 +20,7 @@ All tests are on Tuesdays. All assignments are due on Tuesdays.
 Week number<br>and date | Topic theme and coverage | Graded work, mark value
 --- | --- | ---
 **[Week 13](week13)**<br>[&bull; Tue Apr 14](week13) | No class on Good Friday holiday, April 10<br>Test 3 on Tuesday | Test 3, 20%<br>on Tue Apr 14 | 
-**[Week 12](week12)**<br>[&bull; Fri Apr 3<br>&bull; Tue Apr 7](week12) | Other topics if required<br>Assignment work | [Assign 2](/bti425/graded-work/assign2), 25%<br>Due on Tue Apr 7 | 
+**[Week 12](week12)**<br>[&bull; Fri Apr 3<br>&bull; Tue Apr 7](week12) | Other topics if required<br>Assignment work | [Assign 2](/bti425-2020/graded-work/assign2), 25%<br>Due on Tue Apr 7 | 
 **[Week 11](week11)**<br>[&bull; Fri Mar 27<br>&bull; Tue Mar 31](week11) | Security | | 
 **[Week 10 (Tue)](week10)**<br>[&bull; Tue Mar 24](week10) | Forms (continued) | | 
 **Pause**<br>Mon Mar 16 to<br>Fri Mar 20 | (no in-class sessions) | | 
@@ -31,7 +31,7 @@ Week number<br>and date | Topic theme and coverage | Graded work, mark value
 **[Week 8 (Fri)](week08)**<br>[&bull; Fri Feb 21](week08) | Routing | | 
 **[Week 7](week07)**<br>[&bull; Fri Feb 14 <span style="color: red;">&hearts;</span><br>&bull; Tue Feb 18](week07) | Components | | 
 **[Week 6](week06)**<br>[&bull; Fri Feb 7<br>&bull; Tue Feb 11](week06) | Angular introduction<br>Dev env setup<br>Components intro | | 
-**[Week 5](week05)**<br>[&bull; Fri Jan 31<br>&bull; Tue Feb 4](week05) | React and forms<br>App building topics | [Assign 1](/bti425/graded-work/assign1), 15%<br>Due on Tue Feb 4 | 
+**[Week 5](week05)**<br>[&bull; Fri Jan 31<br>&bull; Tue Feb 4](week05) | React and forms<br>App building topics | [Assign 1](/bti425-2020/graded-work/assign1), 15%<br>Due on Tue Feb 4 | 
 **[Week 4](week04)**<br>[&bull; Fri Jan 24<br>&bull; Tue Jan 28](week04) | React and routing<br>App building topics | Test 1, 15%<br>on Tue Jan 28 | 
 **[Week 3](week03)**<br>[&bull; Fri Jan 17<br>&bull; Tue Jan 21](week03) | Front end dev principles<br>React introduction<br>Components as an app design feature |
 **[Week 2](week02)**<br>[&bull; Fri Jan 10<br>&bull; Tue Jan 14](week02) | More web service work, using a database<br>Client apps |
@@ -44,13 +44,13 @@ Week number<br>and date | Topic theme and coverage | Graded work, mark value
 
 Assignment | Theme | Value | Released | Due Date
 --- | --- | --- | --- | ---
-[Assign 1](/bti425/graded-work/assign1) | React app | 15% | January 14 | February 4 at 11:00pm 
-[Assign 2](/bti425/graded-work/assign2) | Angular app,<br>including the Forms topic | 25% | February 24<br>(approx.) | April 7 at 11:00pm 
+[Assign 1](/bti425-2020/graded-work/assign1) | React app | 15% | January 14 | February 4 at 11:00pm 
+[Assign 2](/bti425-2020/graded-work/assign2) | Angular app,<br>including the Forms topic | 25% | February 24<br>(approx.) | April 7 at 11:00pm 
 
 <br>
 
 Assignment 3 was cancelled.
 
-For general info about the assignments, visit the [graded work page](/bti425/graded-work). 
+For general info about the assignments, visit the [graded work page](/bti425-2020/graded-work). 
 
 <br>

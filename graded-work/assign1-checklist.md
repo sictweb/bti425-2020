@@ -19,25 +19,25 @@ U1. Home page looks similar to the example, with your name, and a decent-looking
 
 U2. Local data page looks similar to the example, and clicking a row displays some details for that customer. Dates have nice formatting.
 
-![U2](https://sictweb.github.io/bti425/media/a1/localv4.png)
+![U2](https://sictweb.github.io/bti425-2020/media/a1/localv4.png)
 
 <br>
 
 U3. Fetched data page looks similar to the example, and clicking a row displays some details for that employee. Dates have nice formatting. Salary number is formatted as dollars.
 
-![U3](https://sictweb.github.io/bti425/media/a1/fetchedv3.png)
+![U3](https://sictweb.github.io/bti425-2020/media/a1/fetchedv3.png)
 
 <br>
 
 U4. Local data page, with Knockout, looks similar to the example.
 
-![U4](https://sictweb.github.io/bti425/media/a1/localkov2.png)
+![U4](https://sictweb.github.io/bti425-2020/media/a1/localkov2.png)
 
 <br>
 
 U5. Fetched data page, with Knockout, looks similar to the example. Description property is in a `<textarea>` element.
 
-![U5](https://sictweb.github.io/bti425/media/a1/fetchedkov5.png)
+![U5](https://sictweb.github.io/bti425-2020/media/a1/fetchedkov5.png)
 
 <br>
 
